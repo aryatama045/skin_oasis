@@ -76,7 +76,7 @@
                                             </span>
                                         </td>
                                         <td>
-                                            <a href="{{ \Request::root() . '/pages/' . $page->slug }}"> {{ \Request::root() . '/pages/' . $page->slug }}</a>
+                                            <a href="{{ \Request::root() . '/pages/' . $page->slug }}" target="_blank"> {{ \Request::root() . '/pages/' . $page->slug }}</a>
                                         </td>
 
                                         <td class="text-end">
