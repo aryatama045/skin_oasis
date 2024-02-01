@@ -15,9 +15,6 @@
             <div class="header-left">
                 <nav class="main-nav">
                     <ul class="menu sf-arrows">
-                        <li class="active">
-                            <a href="index.html">HOME</a>
-                        </li>
 
                         @if (!is_null(getSetting('header_menu_labels')))
                             @php
