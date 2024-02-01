@@ -18,25 +18,26 @@
                         <li class="active">
                             <a href="index.html">HOME</a>
                         </li>
-                        <li>
-                            <a href="category.html">PRODUCT</a>
-                        </li>
 
-                        <li>
-                            <a href="category.html">ABOUT US</a>
-                        </li>
+                        @if (!is_null(getSetting('header_menu_labels')))
+                            @php
+                                $labels = json_decode(getSetting('header_menu_labels')) ?? [];
+                                $menus = json_decode(getSetting('header_menu_links')) ?? [];
+                            @endphp
 
-                        <li>
-                            <a href="category.html">PARTNER</a>
-                        </li>
-
-                        <li>
-                            <a href="category.html">HALO BEAUTY</a>
-                        </li>
-
-                        <li><a href="#">BLOG</a></li>
-
-                        <li><a href="#">EUTERRIA NANO ACADEMY</a></li>
+                            @foreach ($menus as $menuKey => $menuItem)
+                                <li>
+                                    <a href="{{ $menuItem }}">{{ localize($labels[$menuKey]) }}</a>
+                                </li>
+                            @endforeach
+                        @else
+                            <li><a href="{{ route('home') }}">{{ localize('Home') }}</a></li>
+                            <li><a href="{{ route('products.index') }}">{{ localize('Products') }}</a></li>
+                            <li><a href="{{ route('home.campaigns') }}">{{ localize('Campaigns') }}</a>
+                            </li>
+                            <li><a href="{{ route('home.coupons') }}">{{ localize('Coupons') }}</a>
+                            </li>
+                        @endif
                     </ul><!-- End .menu -->
                 </nav><!-- End .main-nav -->
 
