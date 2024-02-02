@@ -1,5 +1,5 @@
 @forelse ($carts as $cart)
-    <div class="product simplebar-content @if (!$loop->first) pt-1 @endif">
+    <div class="product cart-listing @if (!$loop->first) pt-1 @endif">
         <div class="product-cart-details">
             <h4 class="product-title">
                 <a href="{{ route('products.show', $cart->product_variation->product->slug) }}">
