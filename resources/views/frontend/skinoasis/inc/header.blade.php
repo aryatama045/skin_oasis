@@ -68,7 +68,7 @@
                     </a>
 
                     <div class="dropdown-menu dropdown-menu-right">
-                        <div class="dropdown-cart-products cart-navbar-wrapper">
+                        <div class="dropdown-cart-products ">
                             <!--cart listing-->
                             @include('frontend.skinoasis.pages.partials.carts.cart-navbar', [
                                     'carts' => $carts, ])
@@ -78,7 +78,9 @@
                         <div class="dropdown-cart-total">
                             <span>{{ localize('Subtotal') }}:</span>
 
-                            <span class="cart-total-price sub-total-price">{{ formatPrice(getSubTotal($carts, false)) }}</span>
+                            <span class="cart-total-price sub-total-price">
+                                {{ formatPrice(getSubTotal($carts, false)) }}
+                            </span>
                         </div><!-- End .dropdown-cart-total -->
 
                         <div class="dropdown-cart-action">
