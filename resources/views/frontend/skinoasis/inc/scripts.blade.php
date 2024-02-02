@@ -5,7 +5,11 @@
 <script src="{{ staticAsset('frontend/skinoasis/assets/js/jquery.hoverIntent.min.js') }}"></script>
 <script src="{{ staticAsset('frontend/skinoasis/assets/js/superfish.min.js') }}"></script>
 <script src="{{ staticAsset('frontend/skinoasis/assets/js/owl.carousel.min.js') }}"></script>
+<script src="{{ staticAsset('frontend/skinoasis/assets/js/jquery.waypoints.min.js') }}"></script>
+<script src="{{ staticAsset('frontend/skinoasis/assets/js/wNumb.js') }}"></script>
+<script src="{{ staticAsset('frontend/skinoasis/assets/js/nouislider.min.js') }}"></script>
 <script src="{{ staticAsset('frontend/skinoasis/assets/js/bootstrap-input-spinner.js') }}"></script>
+
 
 <script src="{{ staticAsset('frontend/default/assets/js/vendors/swiper-bundle.min.js') }}"></script>
 <script src="{{ staticAsset('frontend/default/assets/js/vendors/jquery.magnific-popup.min.js') }}"></script>
@@ -14,7 +18,7 @@
 <script src="{{ staticAsset('frontend/default/assets/js/vendors/isotop.pkgd.min.js') }}"></script>
 <script src="{{ staticAsset('frontend/default/assets/js/vendors/countdown.min.js') }}"></script>
 <script src="{{ staticAsset('frontend/default/assets/js/vendors/range-slider.js') }}"></script>
-<script src="{{ staticAsset('frontend/default/assets/js/vendors/waypoints.js') }}"></script>
+
 <script src="{{ staticAsset('frontend/default/assets/js/vendors/counterup.min.js') }}"></script>
 <script src="{{ staticAsset('frontend/default/assets/js/vendors/clipboard.min.js') }}"></script>
 
@@ -25,7 +29,6 @@
 <!-- Main JS File -->
 <script src="{{ staticAsset('frontend/skinoasis/assets/js/main.js') }}"></script>
 <script src="{{ staticAsset('frontend/skinoasis/assets/js/demos/demo-18.js') }}"></script>
-
 
 
 <!--Start of Tawk.to Script-->

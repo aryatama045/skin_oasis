@@ -8,12 +8,14 @@
 <link rel="stylesheet" href="{{ staticAsset('frontend/skinoasis/assets/css/bootstrap.min.css') }}">
 <link rel="stylesheet" href="{{ staticAsset('frontend/skinoasis/assets/css/plugins/owl-carousel/owl.carousel.css') }}">
 <link rel="stylesheet" href="{{ staticAsset('frontend/skinoasis/assets/css/plugins/magnific-popup/magnific-popup.css') }}">
-
-<!-- Main CSS File -->
-<link rel="stylesheet" href="{{ staticAsset('frontend/skinoasis/assets/css/style.css') }}">
-<link rel="stylesheet" href="{{ staticAsset('frontend/skinoasis/assets/css/demos/demo-18.css') }}">
+<link rel="stylesheet" href="{{ staticAsset('frontend/skinoasis/assets/css/plugins/nouislider/nouislider.css') }}">
 
 <!-- 3rd party -->
 <link rel="stylesheet" href="{{ staticAsset('frontend/common/css/toastr.css') }}">
 <link rel="stylesheet" href="{{ staticAsset('frontend/common/css/select2.css') }}">
 <link rel="stylesheet" href="{{ staticAsset('frontend/common/css/custom.css') }}">
+
+<!-- Main CSS File -->
+<link rel="stylesheet" href="{{ staticAsset('frontend/skinoasis/assets/css/style.css') }}">
+<link rel="stylesheet" href="{{ staticAsset('frontend/skinoasis/assets/css/demos/demo-18.css') }}">
+
