@@ -29,7 +29,7 @@
             </a>
         </figure>
 
-        <button title="Remove Product" class="remove_cart_btn btn-remove" onclick="handleCartItem('increase', {{ $cart->id }})">
+        <button title="Remove Product" class="remove_cart_btn btn-remove" onclick="handleCartItem('delete', {{ $cart->id }})">
             <i class="icon-close"></i></button>
     </div><!-- End .product -->
 @empty
