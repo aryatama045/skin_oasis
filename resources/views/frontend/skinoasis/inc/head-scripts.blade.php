@@ -4,8 +4,7 @@
         };
         (function(d) {
             var wf = d.createElement('script'), s = d.scripts[0];
-            var url = {{ staticAsset('frontend/skinoasis') }};
-            wf.src = url + '/assets/js/webfont.js';
+            wf.src = "{{ staticAsset('frontend/skinoasis/assets/js/webfont.js') }}";
             wf.async = true;
             s.parentNode.insertBefore(wf, s);
         })(document);
