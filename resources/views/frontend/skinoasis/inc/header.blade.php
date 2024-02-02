@@ -68,7 +68,7 @@
                     </a>
 
                     <div class="dropdown-menu dropdown-menu-right">
-                        <div class="dropdown-cart-products ">
+                        <div class="dropdown-cart-products simplebar-content">
                             <!--cart listing-->
                             @include('frontend.skinoasis.pages.partials.carts.cart-navbar', [
                                     'carts' => $carts, ])
