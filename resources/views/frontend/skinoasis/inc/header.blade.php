@@ -64,11 +64,11 @@
                 <div class="dropdown cart-dropdown">
                     <a href="#" class="dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-display="static">
                         <i class="icon-shopping-cart"></i>
-                        <span class="cart-count {{ count($carts) > 0 ? '' : 'd-none' }}">{{ count($carts) }}</span>
+                        <span class="cart-counter cart-count {{ count($carts) > 0 ? '' : 'd-none' }}">{{ count($carts) }}</span>
                     </a>
 
                     <div class="dropdown-menu dropdown-menu-right">
-                        <div class="dropdown-cart-products">
+                        <div class="dropdown-cart-products cart-navbar-wrapper">
                             <!--cart listing-->
                             @include('frontend.skinoasis.pages.partials.carts.cart-navbar', [
                                     'carts' => $carts, ])
@@ -78,7 +78,7 @@
                         <div class="dropdown-cart-total">
                             <span>{{ localize('Subtotal') }}:</span>
 
-                            <span class="cart-total-price">{{ formatPrice(getSubTotal($carts, false)) }}</span>
+                            <span class="cart-total-price sub-total-price">{{ formatPrice(getSubTotal($carts, false)) }}</span>
                         </div><!-- End .dropdown-cart-total -->
 
                         <div class="dropdown-cart-action">

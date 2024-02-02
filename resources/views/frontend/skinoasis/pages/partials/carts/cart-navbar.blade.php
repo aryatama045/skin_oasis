@@ -18,7 +18,7 @@
             </h4>
 
             <span class="cart-product-info">
-                <span class="cart-product-qty">{{ $cart->qty }}</span>
+                <span class="cart-product-qty count">{{ $cart->qty }}</span>
                 x {{ formatPrice(variationDiscountedPrice($cart->product_variation->product, $cart->product_variation)) }}
             </span>
         </div><!-- End .product-cart-details -->
