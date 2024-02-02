@@ -5,9 +5,14 @@
 @endsection
 
 
+@section('breadcrumb-contents')
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="{{ route('home') }}">{{ localize('Home') }}</a></li>
+        <li class="breadcrumb-item active" aria-current="page">{{ localize('Products') }}</li>
+    </ol>
+@endsection
 
 @section('contents')
-
 
     <form class="filter-form" action="{{ Request::fullUrl() }}" method="GET">
         <!--shop grid section start-->
@@ -17,15 +22,11 @@
                 <h1 class="page-title">Grid 3 Columns<span>Shop</span></h1>
             </div><!-- End .container -->
         </div><!-- End .page-header -->
-        <nav aria-label="breadcrumb" class="breadcrumb-nav mb-2">
-            <div class="container">
-                <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                    <li class="breadcrumb-item"><a href="#">Shop</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Grid 3 Columns</li>
-                </ol>
-            </div><!-- End .container -->
-        </nav><!-- End .breadcrumb-nav -->
+
+        <!--breadcrumb-->
+        @include('frontend.skinoasis.inc.breadcrumb')
+        <!--breadcrumb-->
+
 
         <div class="page-content">
             <div class="container">

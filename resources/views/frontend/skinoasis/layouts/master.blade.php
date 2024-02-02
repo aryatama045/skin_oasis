@@ -117,6 +117,10 @@
         @endif
         <!--header section end-->
 
+        <!--breadcrumb section start-->
+        @yield('breadcrumb')
+        <!--breadcrumb section end-->
+
         <main class="main">
 
             @yield('contents')
