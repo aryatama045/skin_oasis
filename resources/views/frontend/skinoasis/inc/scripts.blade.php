@@ -1,13 +1,28 @@
 <!-- Plugins JS File -->
+<script src="{{ staticAsset('frontend/default/assets/js/vendors/jquery-3.6.4.min.js') }}"></script>
 <script src="{{ staticAsset('frontend/skinoasis/assets/js/jquery.min.js') }}"></script>
 <script src="{{ staticAsset('frontend/default/assets/js/vendors/jquery-ui.min.js') }}"></script>
 <script src="{{ staticAsset('frontend/skinoasis/assets/js/bootstrap.bundle.min.js') }}"></script>
 <script src="{{ staticAsset('frontend/skinoasis/assets/js/jquery.hoverIntent.min.js') }}"></script>
-<script src="{{ staticAsset('frontend/skinoasis/assets/js/jquery.waypoints.min.js') }}"></script>
 <script src="{{ staticAsset('frontend/skinoasis/assets/js/superfish.min.js') }}"></script>
 <script src="{{ staticAsset('frontend/skinoasis/assets/js/owl.carousel.min.js') }}"></script>
 <script src="{{ staticAsset('frontend/skinoasis/assets/js/bootstrap-input-spinner.js') }}"></script>
-<script src="{{ staticAsset('frontend/skinoasis/assets/js/jquery.magnific-popup.min.js') }}"></script>
+
+<script src="{{ staticAsset('frontend/default/assets/js/vendors/swiper-bundle.min.js') }}"></script>
+<script src="{{ staticAsset('frontend/default/assets/js/vendors/jquery.magnific-popup.min.js') }}"></script>
+<script src="{{ staticAsset('frontend/default/assets/js/vendors/simplebar.min.js') }}"></script>
+<script src="{{ staticAsset('frontend/default/assets/js/vendors/parallax-scroll.js') }}"></script>
+<script src="{{ staticAsset('frontend/default/assets/js/vendors/isotop.pkgd.min.js') }}"></script>
+<script src="{{ staticAsset('frontend/default/assets/js/vendors/countdown.min.js') }}"></script>
+<script src="{{ staticAsset('frontend/default/assets/js/vendors/range-slider.js') }}"></script>
+<script src="{{ staticAsset('frontend/default/assets/js/vendors/waypoints.js') }}"></script>
+<script src="{{ staticAsset('frontend/default/assets/js/vendors/counterup.min.js') }}"></script>
+<script src="{{ staticAsset('frontend/default/assets/js/vendors/clipboard.min.js') }}"></script>
+
+<script src="{{ staticAsset('frontend/common/js/toastr.min.js') }}"></script>
+<script src="{{ staticAsset('frontend/common/js/select2.js') }}"></script>
+<script src="{{ staticAsset('frontend/default/assets/js/app.js') }}"></script>
+
 <!-- Main JS File -->
 <script src="{{ staticAsset('frontend/skinoasis/assets/js/main.js') }}"></script>
 <script src="{{ staticAsset('frontend/skinoasis/assets/js/demos/demo-18.js') }}"></script>
