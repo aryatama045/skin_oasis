@@ -1,8 +1,10 @@
 <aside class="tt-sidebar bg-light-subtle" id="sidebar">
     <div class="tt-brand">
         <a href="{{ route('admin.dashboard') }}" class="tt-brand-link">
-            <img src="{{ uploadedAsset(getSetting('favicon')) }}" class="tt-brand-favicon ms-1" alt="favicon" />
-            <img src="{{ uploadedAsset(getSetting('admin_panel_logo')) }}" class="tt-brand-logo ms-2" alt="logo" />
+            <!-- <img src="{{ uploadedAsset(getSetting('favicon')) }}" class="tt-brand-favicon ms-1" alt="favicon" /> -->
+            <img src="{{ uploadedAsset(getSetting('admin_panel_logo')) }}" class="tt-brand-favicon ms-1" style="max-width: 90%" alt="favicon" />
+            <!-- <img src="{{ uploadedAsset(getSetting('system_title')) }}" class="tt-brand-logo ms-2" alt="logo" /> -->
+            &nbsp;<!-- <h3 style="margin-top: 10px" class="tt-brand-logo ms-2">{{getSetting('system_title') }}</h3> -->
         </a>
         <a href="javascript:void(0);" class="tt-toggle-sidebar">
             <span><i data-feather="chevron-left"></i></span>

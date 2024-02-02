@@ -12,11 +12,30 @@
         </div>
 
         <div class="col">
-            <a href="https://klbtheme.com/cosmetsy/cart/"><i class="klb-shop-bag"></i><span class="count">0</span></a>
+            @php
+                $carts = [];
+                if (Auth::check()) {
+                    $carts = App\Models\Cart::where('user_id', Auth::user()->id)
+                        ->where('location_id', session('stock_location_id'))
+                        ->get();
+                } else {
+                    if (isset($_COOKIE['guest_user_id'])) {
+                        $carts = App\Models\Cart::where('guest_user_id', (int) $_COOKIE['guest_user_id'])
+                            ->where('location_id', session('stock_location_id'))
+                            ->get();
+                    }
+                }
+            @endphp
+            <a href="{{ route('carts.index') }}">
+                <i class="klb-shop-bag"></i>
+                <span class="count">{{ count($carts) }}</span>
+            </a>
         </div>
 
         <div class="col">
-            <a href="https://klbtheme.com/cosmetsy/my-account/"><i class="klb-user-profile"></i></a>
+            <a href="{{ route('customers.dashboard') }}">
+                <i class="klb-user-profile"></i>
+            </a>
         </div>
     </div>
 </div>

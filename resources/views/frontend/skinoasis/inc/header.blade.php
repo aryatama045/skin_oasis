@@ -45,11 +45,26 @@
             </div><!-- End .header-left -->
 
             <div class="header-right">
+                @php
+                    $carts = [];
+                    if (Auth::check()) {
+                        $carts = App\Models\Cart::where('user_id', Auth::user()->id)
+                            ->where('location_id', session('stock_location_id'))
+                            ->get();
+                    } else {
+                        if (isset($_COOKIE['guest_user_id'])) {
+                            $carts = App\Models\Cart::where('guest_user_id', (int) $_COOKIE['guest_user_id'])
+                                ->where('location_id', session('stock_location_id'))
+                                ->get();
+                        }
+                    }
+                @endphp
+
 
                 <div class="dropdown cart-dropdown">
                     <a href="#" class="dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-display="static">
                         <i class="icon-shopping-cart"></i>
-                        <span class="cart-count">2</span>
+                        <span class="cart-count {{ count($carts) > 0 ? '' : 'd-none' }}">{{ count($carts) }}</span>
                     </a>
 
                     <div class="dropdown-menu dropdown-menu-right">

@@ -23,7 +23,7 @@
     <!--preloader start-->
     <div id="preloader" class="bg-light-subtle">
         <div class="preloader-wrap">
-            <img src="{{ uploadedAsset(getSetting('navbar_logo')) }}" class="img-fluid">
+            <img src="{{ staticAsset('frontend/default/assets/img/banner/logo-skinoasis.png') }}" style="width: 200px; height: 200px" class="img-fluid">
             <div class="loading-bar"></div>
         </div>
     </div>

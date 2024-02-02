@@ -4,7 +4,7 @@
         <div class="row g-3">
             <div class="col-md-6 order-last order-md-first">
                 <div class="copyright text-center text-md-start">
-                    {!! getSetting('copyright_text') !!}
+                    <!--{!! getSetting('copyright_text') !!}-->
                 </div>
             </div>
             <div class="col-md-6">
