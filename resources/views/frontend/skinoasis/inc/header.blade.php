@@ -78,7 +78,7 @@
                         <div class="dropdown-cart-total">
                             <span>{{ localize('Subtotal') }}:</span>
 
-                            <span class="cart-total-price sub-total-price">
+                            <span class="sub-total-price">
                                 {{ formatPrice(getSubTotal($carts, false)) }}
                             </span>
                         </div><!-- End .dropdown-cart-total -->
