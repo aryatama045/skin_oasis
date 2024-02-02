@@ -63,4 +63,4 @@
             productThumbnailSlider.controller.control = quickViewProductSlider;
         }
     }
-    </>
+    </script>
