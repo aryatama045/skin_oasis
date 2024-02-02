@@ -16,3 +16,4 @@
 <!-- 3rd party -->
 <link rel="stylesheet" href="{{ staticAsset('frontend/common/css/toastr.css') }}">
 <link rel="stylesheet" href="{{ staticAsset('frontend/common/css/select2.css') }}">
+<link rel="stylesheet" href="{{ staticAsset('frontend/common/css/custom.css') }}">
