@@ -1,13 +1,15 @@
 <!-- Header -->
-<header class="header @if(Route::current()->getName() == 'home') header-11  @endif">
+<header class="header @if(!empty(Route::current()->getName())) @if(Route::current()->getName() == 'home') header-11 @endif  @endif">
     <div class="header-middle ">
         <div class="container">
             <div class="header-center">
                 <a href="index.html" class="logo">
+                    @if(!empty(Route::current()->getName()))
                     @if(Route::current()->getName() == 'home')
                         <img src="{{ staticAsset('frontend/skinoasis/assets/images/logo.png') }}" alt="SKINOASIS Logo" width="200" height="25">
                     @else
                     <img src="{{ staticAsset('frontend/skinoasis/assets/images/logo-black.png') }}" alt="SKINOASIS Logo" width="200" height="25">
+                    @endif
                     @endif
                 </a>
             </div><!-- End .header-center -->
