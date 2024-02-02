@@ -94,44 +94,46 @@
                     </div><!-- End .dropdown-menu -->
                 </div><!-- End .cart-dropdown -->
 
-                <div class="dropdown wishlist-link">
+                <div class="dropdown cart-dropdown">
                     <a href="#" class="dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-display="static">
                         <i class="icon-user"></i>
                     </a>
-                @auth
-                    @if (auth()->user()->user_type == 'customer')
-                        <li><a href="{{ route('customers.dashboard') }}">
-                            <span class="me-2"><i class="fa-solid fa-user"></i></span>
-                            {{ localize('My Account') }}</a>
-                        </li>
-                        <li><a href="{{ route('customers.orderHistory') }}">
-                            <span class="me-2"><i class="fa-solid fa-tags"></i></span>
-                            {{ localize('My Orders') }}</a>
-                        </li>
-                        <li><a href="{{ route('customers.wishlist') }}">
-                            <span class="me-2"><i class="fa-solid fa-heart"></i></span>
-                            {{ localize('My Wishlist') }}</a>
-                        </li>
-                    @else
-                        <li><a href="{{ route('admin.dashboard') }}">
-                            <span class="me-2"><i class="fa-solid fa-bars"></i></span>
-                            {{ localize('Dashboard') }}</a>
-                        </li>
-                    @endif
 
-                    <li><a href="{{ route('logout') }}">
-                        <span class="me-2"><i class="fa-solid fa-arrow-right-from-bracket"></i></span>
-                        {{ localize('Sign Out') }}
-                        </a>
-                    </li>
-                @endauth
+                    <ul class="dropdown-menu dropdown-menu-right">
+                        @auth
+                        @if (auth()->user()->user_type == 'customer')
+                            <li><a href="{{ route('customers.dashboard') }}">
+                                <span class="me-2"><i class="fa-solid fa-user"></i></span>
+                                {{ localize('My Account') }}</a>
+                            </li>
+                            <li><a href="{{ route('customers.orderHistory') }}">
+                                <span class="me-2"><i class="fa-solid fa-tags"></i></span>
+                                {{ localize('My Orders') }}</a>
+                            </li>
+                            <li><a href="{{ route('customers.wishlist') }}">
+                                <span class="me-2"><i class="fa-solid fa-heart"></i></span>
+                                {{ localize('My Wishlist') }}</a>
+                            </li>
+                        @else
+                            <li><a href="{{ route('admin.dashboard') }}">
+                                <span class="me-2"><i class="fa-solid fa-bars"></i></span>
+                                {{ localize('Dashboard') }}</a>
+                            </li>
+                        @endif
 
+                        <li><a href="{{ route('logout') }}">
+                            <span class="me-2"><i class="fa-solid fa-arrow-right-from-bracket"></i></span>
+                            {{ localize('Sign Out') }}
+                            </a>
+                        </li>
+                        @endauth
 
-                @guest
-                    <li><a href="{{ route('login') }}"><span class="me-2"><i
-                                class="fa-solid fa-arrow-right-from-bracket"></i></span>{{ localize('Sign In') }}</a>
-                    </li>
-                @endguest
+                        @guest
+                            <li><a href="{{ route('login') }}"><span class="me-2"><i
+                                        class="fa-solid fa-arrow-right-from-bracket"></i></span>{{ localize('Sign In') }}</a>
+                            </li>
+                        @endguest
+                    </ul>
 
                 </div><!-- End .user-dropdown -->
 
