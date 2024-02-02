@@ -68,7 +68,7 @@
                     </a>
 
                     <div class="dropdown-menu dropdown-menu-right">
-                        <div class="dropdown-cart-products simplebar-content">
+                        <div class="dropdown-cart-products ">
                             <!--cart listing-->
                             @include('frontend.skinoasis.pages.partials.carts.cart-navbar', [
                                     'carts' => $carts, ])
@@ -90,10 +90,47 @@
                     </div><!-- End .dropdown-menu -->
                 </div><!-- End .cart-dropdown -->
 
-                <a href="wishlist.html" class="wishlist-link">
-                    <i class="icon-user"></i>
-                    <!-- <span class="wishlist-count">3</span> -->
-                </a>
+                <div class="dropdown wishlist-link">
+                    <a href="#" class="dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-display="static">
+                        <i class="icon-user"></i>
+                    </a>
+                @auth
+                    @if (auth()->user()->user_type == 'customer')
+                        <li><a href="{{ route('customers.dashboard') }}">
+                            <span class="me-2"><i class="fa-solid fa-user"></i></span>
+                            {{ localize('My Account') }}</a>
+                        </li>
+                        <li><a href="{{ route('customers.orderHistory') }}">
+                            <span class="me-2"><i class="fa-solid fa-tags"></i></span>
+                            {{ localize('My Orders') }}</a>
+                        </li>
+                        <li><a href="{{ route('customers.wishlist') }}">
+                            <span class="me-2"><i class="fa-solid fa-heart"></i></span>
+                            {{ localize('My Wishlist') }}</a>
+                        </li>
+                    @else
+                        <li><a href="{{ route('admin.dashboard') }}">
+                            <span class="me-2"><i class="fa-solid fa-bars"></i></span>
+                            {{ localize('Dashboard') }}</a>
+                        </li>
+                    @endif
+
+                    <li><a href="{{ route('logout') }}">
+                        <span class="me-2"><i class="fa-solid fa-arrow-right-from-bracket"></i></span>
+                        {{ localize('Sign Out') }}
+                        </a>
+                    </li>
+                @endauth
+
+
+                @guest
+                    <li><a href="{{ route('login') }}"><span class="me-2"><i
+                                class="fa-solid fa-arrow-right-from-bracket"></i></span>{{ localize('Sign In') }}</a>
+                    </li>
+                @endguest
+
+                </div><!-- End .user-dropdown -->
+
 
             </div><!-- End .header-right -->
         </div><!-- End .container -->
