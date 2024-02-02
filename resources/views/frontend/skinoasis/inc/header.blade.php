@@ -1,5 +1,5 @@
 <!-- Header -->
-<header class="header @if(Route::current()->getName() == 'Home') header-11 Route::current()->getName() @endif">
+<header class="header {{Route::current()->getName()}} @if(Route::current()->getName() == 'Home') header-11  @endif">
     <div class="header-middle ">
         <div class="container">
             <div class="header-center">
