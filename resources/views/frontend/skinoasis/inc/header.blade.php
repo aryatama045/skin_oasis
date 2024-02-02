@@ -4,7 +4,11 @@
         <div class="container">
             <div class="header-center">
                 <a href="index.html" class="logo">
-                    <img src="{{ staticAsset('frontend/skinoasis/assets/images/logo.png') }}" alt="SKINOASIS Logo" width="200" height="25">
+                    @if(Route::current()->getName() == 'home')
+                        <img src="{{ staticAsset('frontend/skinoasis/assets/images/logo.png') }}" alt="SKINOASIS Logo" width="200" height="25">
+                    @else
+                    <img src="{{ staticAsset('frontend/skinoasis/assets/images/logo-black.png') }}" alt="SKINOASIS Logo" width="200" height="25">
+                    @endif
                 </a>
             </div><!-- End .header-center -->
         </div><!-- End .container -->
