@@ -165,6 +165,10 @@
                                 
                             </ul>
                         </nav>
+
+                        <ul class="d-flex align-items-center gap-3 mt-7">
+                                {{ $products->appends(request()->input())->links() }}
+                            </ul>
                     </div><!-- End .col-lg-9 -->
 
                     <aside class="col-lg-3 order-lg-first d-none d-xl-block">

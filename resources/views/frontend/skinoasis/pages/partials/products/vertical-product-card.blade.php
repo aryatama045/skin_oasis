@@ -109,8 +109,8 @@
                 
             <input type="hidden" name="product_variation_id" value="{{ $product->variations[0]->id }}">
             <input type="hidden" value="1" name="quantity">
-            
-                    @if (!$isVariantProduct && $stock =< 0)
+
+                    @if (!$isVariantProduct && $stock <= 0)
                         <a href="javascript:void(0);"
                             class="btn btn-outline-secondary btn-md border-secondary d-block mt-4 w-100">{{ localize('Out of Stock') }}</a>
                     @else
