@@ -141,7 +141,7 @@
                                                     'frontend.skinoasis.pages.partials.products.vertical-product-card',
                                                     [
                                                         'product' => $product,
-                                                        'bgClass' => 'bg-gray',
+                                                        'bgClass' => 'bg-white',
                                                     ]
                                                 )
                                             </div>
