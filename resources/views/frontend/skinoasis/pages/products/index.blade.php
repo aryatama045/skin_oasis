@@ -4,7 +4,6 @@
     {{ localize('Products') }} {{ getSetting('title_separator') }} {{ getSetting('system_title') }}
 @endsection
 
-
 @section('breadcrumb-contents')
     <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="{{ route('home') }}">{{ localize('Home') }}</a></li>
@@ -22,10 +21,7 @@
         </div><!-- End .container -->
     </div><!-- End .page-header -->
 
-    <!--breadcrumb-->
     @include('frontend.skinoasis.inc.breadcrumb')
-    <!--breadcrumb-->
-
 
 
     <form class="filter-form" action="{{ Request::fullUrl() }}" method="GET">

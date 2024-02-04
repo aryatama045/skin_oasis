@@ -1,9 +1,9 @@
 {
-    "name": "Grostore",
-    "short_name": "Grostore",
+    "name": "Skinoasis",
+    "short_name": "Skinoasis",
     "start_url": "/",
     "background_color": "#6777ef",
-    "description": "Grostore",
+    "description": "Skinoasis",
     "display": "fullscreen",
     "theme_color": "#6eb356",
     "icons": [
