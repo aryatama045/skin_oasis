@@ -3,7 +3,7 @@
     <div class="header-middle ">
         <div class="container">
             <div class="header-center">
-                <a href="index.html" class="logo">
+                <a href="#" class="logo">
                     @if(!empty(Route::current()->getName()))
                     @if(Route::current()->getName() == 'home')
                         <img src="{{ staticAsset('frontend/skinoasis/assets/images/logo.png') }}" alt="SKINOASIS Logo" width="200" height="25">
