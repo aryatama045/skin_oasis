@@ -11,76 +11,38 @@
         <div class="widget widget-collapsible">
             <h3 class="widget-title">
                 <a data-toggle="collapse" href="#widget-1" role="button" aria-expanded="true" aria-controls="widget-1">
-                    Category
+                {{ localize('Categories') }}
                 </a>
             </h3><!-- End .widget-title -->
 
             <div class="collapse show" id="widget-1">
                 <div class="widget-body">
                     <div class="filter-items filter-items-count">
+                    
                         <div class="filter-item">
-                            <div class="custom-control custom-checkbox">
-                                <input type="checkbox" class="custom-control-input" id="cat-1">
-                                <label class="custom-control-label" for="cat-1">Dresses</label>
-                            </div><!-- End .custom-checkbox -->
-                            <span class="item-count">3</span>
+                            <a href="{{ route('products.index') }}">
+                            <label > ALL</label>
+                            </a>
                         </div><!-- End .filter-item -->
+                        
+                        @php
+                            $product_listing_categories = getSetting('product_listing_categories') != null ? json_decode(getSetting('product_listing_categories')) : [];
+                            $categories = \App\Models\Category::whereIn('id', $product_listing_categories)->get();
+                        @endphp
+                        @foreach ($categories as $category)
+                            @php
+                                $productsCount = \App\Models\ProductCategory::where('category_id', $category->id)->count();
+                            @endphp
+                            
+                            <div class="filter-item">
+                                <a href="{{ route('products.index') }}?&category_id={{ $category->id }}">
+                                <label >{{ $category->collectLocalization('name') }}</label>
+                                <span class="item-count">{{ $productsCount }}</span>
+                                </a>
+                            </div><!-- End .filter-item -->
+                        @endforeach
 
-                        <div class="filter-item">
-                            <div class="custom-control custom-checkbox">
-                                <input type="checkbox" class="custom-control-input" id="cat-2">
-                                <label class="custom-control-label" for="cat-2">T-shirts</label>
-                            </div><!-- End .custom-checkbox -->
-                            <span class="item-count">0</span>
-                        </div><!-- End .filter-item -->
 
-                        <div class="filter-item">
-                            <div class="custom-control custom-checkbox">
-                                <input type="checkbox" class="custom-control-input" id="cat-3">
-                                <label class="custom-control-label" for="cat-3">Bags</label>
-                            </div><!-- End .custom-checkbox -->
-                            <span class="item-count">4</span>
-                        </div><!-- End .filter-item -->
-
-                        <div class="filter-item">
-                            <div class="custom-control custom-checkbox">
-                                <input type="checkbox" class="custom-control-input" id="cat-4">
-                                <label class="custom-control-label" for="cat-4">Jackets</label>
-                            </div><!-- End .custom-checkbox -->
-                            <span class="item-count">2</span>
-                        </div><!-- End .filter-item -->
-
-                        <div class="filter-item">
-                            <div class="custom-control custom-checkbox">
-                                <input type="checkbox" class="custom-control-input" id="cat-5">
-                                <label class="custom-control-label" for="cat-5">Shoes</label>
-                            </div><!-- End .custom-checkbox -->
-                            <span class="item-count">2</span>
-                        </div><!-- End .filter-item -->
-
-                        <div class="filter-item">
-                            <div class="custom-control custom-checkbox">
-                                <input type="checkbox" class="custom-control-input" id="cat-6">
-                                <label class="custom-control-label" for="cat-6">Jumpers</label>
-                            </div><!-- End .custom-checkbox -->
-                            <span class="item-count">1</span>
-                        </div><!-- End .filter-item -->
-
-                        <div class="filter-item">
-                            <div class="custom-control custom-checkbox">
-                                <input type="checkbox" class="custom-control-input" id="cat-7">
-                                <label class="custom-control-label" for="cat-7">Jeans</label>
-                            </div><!-- End .custom-checkbox -->
-                            <span class="item-count">1</span>
-                        </div><!-- End .filter-item -->
-
-                        <div class="filter-item">
-                            <div class="custom-control custom-checkbox">
-                                <input type="checkbox" class="custom-control-input" id="cat-8">
-                                <label class="custom-control-label" for="cat-8">Sportwear</label>
-                            </div><!-- End .custom-checkbox -->
-                            <span class="item-count">0</span>
-                        </div><!-- End .filter-item -->
                     </div><!-- End .filter-items -->
                 </div><!-- End .widget-body -->
             </div><!-- End .collapse -->
@@ -155,20 +117,32 @@
         <div class="widget widget-collapsible">
             <h3 class="widget-title">
                 <a data-toggle="collapse" href="#widget-5" role="button" aria-expanded="true" aria-controls="widget-5">
-                    Price
+                    {{ localize('Filter by Price') }}
                 </a>
             </h3><!-- End .widget-title -->
 
             <div class="collapse show" id="widget-5">
                 <div class="widget-body">
                     <div class="filter-price">
-                        <div class="filter-price-text">
-                            Price Range:
-                            <span id="filter-price-range"></span>
-                        </div><!-- End .filter-price-text -->
+                        <form class="range-slider-form">
+                            <div class="price-filter-range"></div>
+                            <div class="d-flex align-items-center mt-3">
+                                <input type="number" min="0" oninput="validity.valid||(value='0');"
+                                    class="form-control min_price price-range-field price-input price-input-min" name="min_price"
+                                    data-value="{{ $min_value }}" data-min-range="0">
+                                <span class="d-inline-block ms-2 me-2 fw-bold">-</span>
 
-                        <div id="price-slider"></div><!-- End #price-slider -->
+                                <input type="number" max="{{ $max_range }}"
+                                    oninput="validity.valid||(value='{{ $max_range }}');"
+                                    class="form-control max_price price-range-field price-input price-input-max" name="max_price"
+                                    data-value="{{ $max_value }}" data-max-range="{{ $max_range }}">
+
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-sm mt-3">{{ localize('Filter') }}</button>
+                        </form>
                     </div><!-- End .filter-price -->
+
+                    
                 </div><!-- End .widget-body -->
             </div><!-- End .collapse -->
         </div><!-- End .widget -->
