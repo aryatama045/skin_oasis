@@ -17,6 +17,26 @@ class StocksController extends Controller
         $this->middleware(['permission:add_stock'])->only(['create', 'store']);
     }
 
+    
+    # Index form
+    public function monitoring(Request $request)
+    {
+        $searchKey = null;
+        $is_published = null;
+
+        $stocknya = Product::select('products.name', 'locations.name as namalokasi', 'product_variation_stocks.stock_qty', 'product_variation_stocks.created_at')
+                    ->leftJoin('product_variation_stocks', 'product_variation_stocks.product_variation_id', '=', 'products.id')
+                    ->leftJoin('locations', 'locations.id', '=', 'product_variation_stocks.location_id')
+                    ->latest();
+        if ($request->search != null) {
+            $stocknya = $stocknya->where('products.name', 'like', '%' . $request->search . '%');
+            $searchKey = $request->search;
+        }
+
+        $stocknya = $stocknya->paginate(paginationNumber());
+        return view('backend.pages.stocks.index', compact('stocknya', 'searchKey', 'is_published'));
+    }
+
     # add stock form
     public function create()
     {

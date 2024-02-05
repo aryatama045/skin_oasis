@@ -48,6 +48,12 @@ class HeroController extends Controller
                 $newSlider->image       = $request->image ? $request->image : '';
                 $newSlider->link        = $request->link ? $request->link : '';
 
+                // Section
+                $newSlider->section1_homepage        = $request->section1_homepage ? $request->section1_homepage : '';
+                $newSlider->section2_homepage        = $request->section2_homepage ? $request->section2_homepage : '';
+                $newSlider->section3_homepage        = $request->section3_homepage ? $request->section3_homepage : '';
+                $newSlider->section4_homepage        = $request->section4_homepage ? $request->section4_homepage : '';
+
                 array_push($sliders, $newSlider);
                 $sliderImage->value = json_encode($sliders);
                 $sliderImage->save();
@@ -60,6 +66,11 @@ class HeroController extends Controller
                 $newSlider->text        = $request->text ? $request->text : '';
                 $newSlider->image       = $request->image ? $request->image : '';
                 $newSlider->link        = $request->link ? $request->link : '';
+
+                $newSlider->section1_homepage        = $request->section1_homepage ? $request->section1_homepage : '';
+                $newSlider->section2_homepage        = $request->section2_homepage ? $request->section2_homepage : '';
+                $newSlider->section3_homepage        = $request->section3_homepage ? $request->section3_homepage : '';
+                $newSlider->section4_homepage        = $request->section4_homepage ? $request->section4_homepage : '';
 
                 array_push($value, $newSlider);
                 $sliderImage->value = json_encode($value);
@@ -77,6 +88,11 @@ class HeroController extends Controller
             $newSlider->text        = $request->text ? $request->text : '';
             $newSlider->image       = $request->image ? $request->image : '';
             $newSlider->link        = $request->link ? $request->link : '';
+
+            $newSlider->section1_homepage        = $request->section1_homepage ? $request->section1_homepage : '';
+            $newSlider->section2_homepage        = $request->section2_homepage ? $request->section2_homepage : '';
+            $newSlider->section3_homepage        = $request->section3_homepage ? $request->section3_homepage : '';
+            $newSlider->section4_homepage        = $request->section4_homepage ? $request->section4_homepage : '';
 
             array_push($value, $newSlider);
             $sliderImage->value = json_encode($value);
@@ -109,6 +125,10 @@ class HeroController extends Controller
                 $slider->text       = $request->text;
                 $slider->image      = $request->image;
                 $slider->link       = $request->link;
+                $slider->section1_homepage       = $request->section1_homepage;
+                $slider->section2_homepage       = $request->section2_homepage;
+                $slider->section3_homepage       = $request->section3_homepage;
+                $slider->section4_homepage       = $request->section4_homepage;
                 array_push($tempSliders, $slider);
             } else {
                 array_push($tempSliders, $slider);

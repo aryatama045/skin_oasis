@@ -12,7 +12,7 @@
                     <div class="card tt-page-header">
                         <div class="card-body d-lg-flex align-items-center justify-content-lg-between">
                             <div class="tt-page-title">
-                                <h2 class="h5 mb-lg-0">{{ localize('Update Slider') }}</h2>
+                                <h2 class="h5 mb-lg-0">Edit - Home Configuration & Section</h2>
                             </div>
                         </div>
                     </div>
@@ -86,6 +86,31 @@
                                         </div>
                                         <!-- choose media -->
                                     </div>
+                                </div>
+
+                                <h5 class="mb-4">Section</h5>
+
+                                <div class="mb-4">
+                                    <label for="section1_homepage" class="form-label">Section 1</label>
+                                    <input type="text" name="section1_homepage" id="section1_homepage"
+                                        placeholder="Masukkan Section 1 - Home Page" class="form-control" value="{{ $slider->section1_homepage }}">
+                                </div>
+
+                                <div class="mb-4">
+                                    <label for="section1_homepage" class="form-label">Section 2</label>
+                                    <input type="text" name="section2_homepage" id="section1_homepage"
+                                        placeholder="Masukkan Section 2 - Home Page" class="form-control" value="{{ $slider->section2_homepage }}">
+                                </div>
+
+                                <div class="mb-4">
+                                    <label class="form-label">Section 3</label>
+                                    <textarea class="form-control editor" name="section3_homepage" id="section3_homepage" rows="4">{{ $slider->section3_homepage }}</textarea>
+                                </div>
+
+                                <div class="mb-4">
+                                    <label for="section1_homepage" class="form-label">Section 4</label>
+                                    <input type="text" name="section4_homepage" id="section4_homepage"
+                                        placeholder="Masukkan Section 4 - Home Page" class="form-control" value="{{ $slider->section4_homepage }}">
                                 </div>
                             </div>
                         </div>
