@@ -17,7 +17,6 @@
     <div class="container">
         <div class="banner-group my-md-n5 mt-1">
             <div class="row no-gutters">
-
                 <div class="col-xl-6">
                     <div class="ab-left position-relative">
                         <img src="{{ uploadedAsset(getSetting('about_intro_image')) }}" alt="" class="img-fluid">

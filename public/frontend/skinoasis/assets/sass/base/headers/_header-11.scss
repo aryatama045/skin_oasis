@@ -102,6 +102,12 @@
 		z-index: 2;
 		background-color: white;
 		padding-top: 3rem;
+
+		.no-gutters {
+			margin-left: 0;
+			margin-right: 0;
+		}
+
     }
 }
 
