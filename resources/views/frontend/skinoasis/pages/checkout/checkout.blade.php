@@ -1,4 +1,4 @@
-@extends('frontend.default.layouts.master')
+@extends('frontend.skinoasis.layouts.master')
 
 @section('title')
     {{ localize('Checkout') }} {{ getSetting('title_separator') }} {{ getSetting('system_title') }}
@@ -22,7 +22,7 @@
     </div><!-- End .page-header -->
 
     <!--breadcrumb-->
-    @include('frontend.default.inc.breadcrumb')
+    @include('frontend.skinoasis.inc.breadcrumb')
     <!--breadcrumb-->
 
     <!--checkout form start-->
