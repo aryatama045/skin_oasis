@@ -34,6 +34,6 @@
 
 
     <!--add address modal start-->
-    @include('frontend.skinoasisi.inc.addressForm', ['countries' => $countries])
+    @include('frontend.skinoasis.inc.addressForm', ['countries' => $countries])
     <!--add address modal end-->
 @endsection
