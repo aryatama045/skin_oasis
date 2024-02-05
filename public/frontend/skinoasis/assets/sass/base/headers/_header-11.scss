@@ -83,14 +83,7 @@
 	}
 }
 
-.about-text-header {
-	margin-top: -9rem!important;
-	margin-bottom: 5rem!important;
-	position: relative;
-	z-index: 2;
-	background-color: white;
-	padding-top: 3rem;
-}
+
 
 @include mq('sm', 'max') {
 	.header-11 .cart-dropdown, 
