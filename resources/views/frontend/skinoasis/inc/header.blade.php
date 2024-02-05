@@ -3,13 +3,13 @@
     <div class="header-middle ">
         <div class="container">
             <div class="header-center">
-                <a href="#" class="logo">
+                <a href="{{ route('home') }}" class="logo">
                     @if(!empty(Route::current()->getName()))
-                    @if(Route::current()->getName() == 'home')
-                        <img src="{{ staticAsset('frontend/skinoasis/assets/images/logo.png') }}" alt="SKINOASIS Logo" width="200" height="25">
-                    @else
-                    <img src="{{ staticAsset('frontend/skinoasis/assets/images/logo-black.png') }}" alt="SKINOASIS Logo" width="200" height="25">
-                    @endif
+                        @if(Route::current()->getName() == 'home')
+                            <img src="{{ staticAsset('frontend/skinoasis/assets/images/logo.png') }}" alt="SKINOASIS Logo" width="200" height="25">
+                        @else
+                        <img src="{{ staticAsset('frontend/skinoasis/assets/images/logo-black.png') }}" alt="SKINOASIS Logo" width="200" height="25">
+                        @endif
                     @endif
                 </a>
             </div><!-- End .header-center -->
