@@ -94,6 +94,15 @@
 	}
 }
 
+@include mq('md') {
+    .my-md-n5 {
+        margin-top: -5rem !important;
+        margin-bottom: -5rem !important;
+        position: relative;
+        z-index: 2;
+    }
+}
+
 @include mq('xl') {
 	.header-11 {
 		.menu > li:not(:last-child) {
