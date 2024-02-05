@@ -124,7 +124,7 @@ class HomeController extends Controller
             $sliders = json_decode(getSetting('hero_sliders'));
         }
 
-        return getView('pages.quickLinks.aboutUs', ['features' => $features, 'why_choose_us' => $why_choose_us, '$sliders' => $sliders]);
+        return getView('pages.quickLinks.aboutUs', ['features' => $features, 'why_choose_us' => $why_choose_us, 'sliders' => $sliders]);
     }
 
     # contact us page
