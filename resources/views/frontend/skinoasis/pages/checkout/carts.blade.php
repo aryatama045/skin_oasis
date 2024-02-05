@@ -52,12 +52,29 @@
 
                         <div class="cart-bottom">
                             <div class="cart-discount">
-                                <form action="#">
+                                <form action="#" class="coupon-form">
+                                    <input type="hidden" name="_token" value="{{ csrf_token() }}">
                                     <div class="input-group">
-                                        <input type="text" class="form-control" required placeholder="coupon code">
-                                        <div class="input-group-append">
-                                            <button class="btn btn-outline-primary-2" type="submit"><i class="icon-long-arrow-right"></i></button>
-                                        </div><!-- .End .input-group-append -->
+                                        <input type="text" class="form-control theme-input w-100 coupon-input"
+                                                name="code" placeholder="{{ localize('Enter Your Coupon Code') }}"
+                                                @if (isset($_COOKIE['coupon_code'])) value="{{ $_COOKIE['coupon_code'] }}" disabled @endif
+                                                required>
+                                        @if (isset($_COOKIE['coupon_code']))
+                                            <div class="input-group-append">
+                                                <button type="submit"
+                                                    class="btn btn-secondary btn-outline-primary-2 flex-shrink-0 apply-coupon-btn d-none px-4">{{ localize('Apply Coupon') }}</button>
+                                                <button type="button" class="btn btn-secondary btn-outline-primary-2 flex-shrink-0 clear-coupon-btn"><i
+                                                    class="fas fa-close"></i></button>
+                                            </div><!-- .End .input-group-append -->
+                                        @else
+                                            <div class="input-group-append">
+                                                <button type="submit"
+                                                    class="btn btn-secondary btn-outline-primary-2 flex-shrink-0 apply-coupon-btn px-4">{{ localize('Apply Coupon') }}</button>
+                                                <button type="button" class="btn btn-secondary btn-outline-primary-2 flex-shrink-0 clear-coupon-btn d-none"><i
+                                                        class="fas fa-close"></i></button>
+                                            </div><!-- .End .input-group-append -->
+                                        @endif
+
                                     </div><!-- End .input-group -->
                                 </form>
                             </div><!-- End .cart-discount -->
@@ -65,6 +82,7 @@
                             <a href="#" class="btn btn-outline-dark-2"><span>UPDATE CART</span><i class="icon-refresh"></i></a>
                         </div><!-- End .cart-bottom -->
                     </div><!-- End .col-lg-9 -->
+
                     <aside class="col-lg-3">
                         <div class="summary summary-cart">
                             <h3 class="summary-title">Cart Total</h3><!-- End .summary-title -->
