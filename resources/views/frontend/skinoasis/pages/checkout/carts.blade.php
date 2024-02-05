@@ -90,48 +90,20 @@
                             <table class="table table-summary">
                                 <tbody>
                                     <tr class="summary-subtotal">
-                                        <td>Subtotal:</td>
-                                        <td>$160.00</td>
+                                        <td>{{ localize('Subtotal') }}</td>
+                                        <td><h5 class="mb-0 text-end sub-total-price">
+                                            {{ formatPrice(getSubTotal($carts, false)) }}</h5></td>
                                     </tr><!-- End .summary-subtotal -->
-                                    <tr class="summary-shipping">
-                                        <td>Shipping:</td>
-                                        <td>&nbsp;</td>
+
+                                    <tr class="coupon-discount-wrapper {{ getCoupon() == '' ? 'd-none' : '' }}">
+                                        <td class="py-3">
+                                            <h5 class="mb-0 fw-medium">{{ localize('Coupon Discount') }}</h5>
+                                        </td>
+                                        <td class="py-3">
+                                            <h5 class="mb-0 text-end coupon-discount-price">
+                                                {{ formatPrice(getCouponDiscount(getSubTotal($carts, false), getCoupon())) }}</h5>
+                                        </td>
                                     </tr>
-
-                                    <tr class="summary-shipping-row">
-                                        <td>
-                                            <div class="custom-control custom-radio">
-                                                <input type="radio" id="free-shipping" name="shipping" class="custom-control-input">
-                                                <label class="custom-control-label" for="free-shipping">Free Shipping</label>
-                                            </div><!-- End .custom-control -->
-                                        </td>
-                                        <td>$0.00</td>
-                                    </tr><!-- End .summary-shipping-row -->
-
-                                    <tr class="summary-shipping-row">
-                                        <td>
-                                            <div class="custom-control custom-radio">
-                                                <input type="radio" id="standart-shipping" name="shipping" class="custom-control-input">
-                                                <label class="custom-control-label" for="standart-shipping">Standart:</label>
-                                            </div><!-- End .custom-control -->
-                                        </td>
-                                        <td>$10.00</td>
-                                    </tr><!-- End .summary-shipping-row -->
-
-                                    <tr class="summary-shipping-row">
-                                        <td>
-                                            <div class="custom-control custom-radio">
-                                                <input type="radio" id="express-shipping" name="shipping" class="custom-control-input">
-                                                <label class="custom-control-label" for="express-shipping">Express:</label>
-                                            </div><!-- End .custom-control -->
-                                        </td>
-                                        <td>$20.00</td>
-                                    </tr><!-- End .summary-shipping-row -->
-
-                                    <tr class="summary-shipping-estimate">
-                                        <td>Estimate for Your Country<br> <a href="dashboard.html">Change address</a></td>
-                                        <td>&nbsp;</td>
-                                    </tr><!-- End .summary-shipping-estimate -->
 
                                     <tr class="summary-total">
                                         <td>Total:</td>
@@ -140,10 +112,17 @@
                                 </tbody>
                             </table><!-- End .table table-summary -->
 
-                            <a href="checkout.html" class="btn btn-outline-primary-2 btn-order btn-block">PROCEED TO CHECKOUT</a>
+                            <p class="mb-5 mt-2">{{ localize('Shipping options will be updated during checkout.') }}</p>
+
+                            <!-- Btn Checkout -->
+                            <a href="{{ route('checkout.proceed') }}" type="submit"
+                                class="btn btn-outline-primary-2 btn-order btn-block btn-md rounded-1">{{ localize('Checkout') }}</a>
+
                         </div><!-- End .summary -->
 
-                        <a href="category.html" class="btn btn-outline-dark-2 btn-block mb-3"><span>CONTINUE SHOPPING</span><i class="icon-refresh"></i></a>
+                        <!-- Btn Contunie -->
+                        <a href="{{ route('home') }}" class="btn btn-outline-dark-2 btn-block mb-3"><span> {{ localize('Continue Shopping') }}</span><i class="icon-refresh"></i></a>
+
                     </aside><!-- End .col-lg-3 -->
                 </div><!-- End .row -->
             </div><!-- End .container -->
