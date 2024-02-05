@@ -9,9 +9,9 @@
 @section('contents')
 
     <!--hero section start-->
-    @include('frontend.skinoasis.pages.partials.home.1hero'[
-                                    'sliders' => $sliders,
-                                ])
+    @include('frontend.skinoasis.pages.partials.home.1hero',[
+                'sliders' => $sliders,
+            ])
     <!--hero section end-->
 
     <!--about section start-->
