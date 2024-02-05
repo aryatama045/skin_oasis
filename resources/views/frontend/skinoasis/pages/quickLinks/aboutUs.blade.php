@@ -14,7 +14,7 @@
             ])
     <!--hero section end-->
 
-    <div class="container">
+    <div class="container bg-white">
         <div class="row">
             <div class="col-lg-10 offset-lg-1">
                 <div class="about-text text-center mt-3">
