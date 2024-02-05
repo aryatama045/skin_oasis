@@ -106,45 +106,6 @@
     </section>
     <!--brands section end-->
 
-    <!--feature section start-->
-    <section class="about-section bg-shade position-relative z-1">
-        <img src="{{ staticAsset('frontend/default/assets/img/shapes/bg-shape-5.png') }}" alt="bg shape"
-            class="position-absolute start-0 bottom-0 z--1 w-100">
-        <img src="{{ staticAsset('frontend/default/assets/img/shapes/roll-color.png') }}" alt="roll"
-            class="position-absolute roll-color z--1" data-parallax='{"y": -50}'>
-        <img src="{{ staticAsset('frontend/default/assets/img/shapes/roll-color-curve.png') }}" alt="roll"
-            class="position-absolute roll-color-curve z--1" data-parallax='{"y": 50}'>
-        <img src="{{ staticAsset('frontend/default/assets/img/shapes/onion-color.png') }}" alt="onion"
-            class="position-absolute onion-color z--1" data-parallax='{"x": -30}'>
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-xl-6">
-                    <div class="section-title text-center">
-                        <h2 class="mb-3">{{ getSetting('about_features_title') }}</h2>
-                        <p class="mb-0">{{ getSetting('about_features_sub_title') }}</p>
-                    </div>
-                </div>
-            </div>
-            <div class="row g-4 mt-4">
-                @foreach ($features as $feature)
-                    <div class="col-xl-3 col-lg-4 col-sm-6">
-                        <div class="horizontal-counter d-flex align-items-center gap-3 bg-white rounded p-4">
-                            <span
-                                class="icon-wrapper d-inline-flex align-items-center justify-content-center rounded-2 flex-shrink-0">
-                                <img src="{{ uploadedAsset($feature->image) }}" alt="icon" class="img-fluid">
-                            </span>
-                            <div>
-                                <h3 class="mb-1">{{ $feature->title }}</h3>
-                                <h6 class="mb-0 text-gray fs-sm">{{ $feature->text }}</h6>
-                            </div>
-                        </div>
-                    </div>
-                @endforeach
-
-            </div>
-        </div>
-    </section>
-    <!--feature section end-->
 
     <!--about us section-->
     <section class="about-us-section ptb-120">
