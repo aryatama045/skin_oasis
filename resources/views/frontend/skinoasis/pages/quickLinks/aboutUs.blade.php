@@ -70,85 +70,75 @@
                 </div>
             </div>
         </div>
+
+        <div class="brand-wrapper px-5 rounded-4">
+            <h4 class="section-title mb-0">{{ localize('The Most Popular Brands') }}</h4>
+            <div class="brands-slider swiper px-2 pt-4 pb-7">
+                @php
+                    $about_popular_brand_ids = getSetting('about_popular_brand_ids') != null ? json_decode(getSetting('about_popular_brand_ids')) : [];
+                    $brands = \App\Models\Brand::whereIn('id', $about_popular_brand_ids)->get();
+                @endphp
+                <div class="swiper-wrapper">
+                    @foreach ($brands as $brand)
+                        <div class="swiper-slide brand-item rounded">
+                            <img src="{{ uploadedAsset($brand->collectLocalization('brand_image')) }}" alt=""
+                                class="img-fluid">
+                        </div>
+                    @endforeach
+                </div>
+            </div>
+        </div>
+
+        <div class="row g-4 align-items-center">
+            <div class="col-xl-5">
+                <div class="about-us-left position-relative">
+                    <img src="{{ uploadedAsset(getSetting('about_why_choose_banner')) }}" alt=""
+                        class="img-fluid w-100">
+                </div>
+            </div>
+            <div class="col-xl-7">
+                <div class="about-us-right">
+                    <div class="section-title-mx mb-6">
+                        <div class="d-flex align-items-center gap-2 flex-wrap mb-2">
+                            <h6 class="mb-0 gshop-subtitle text-secondary">
+                                {{ getSetting('about_why_choose_sub_title') }}</h6>
+                            <span>
+                                <svg width="58" height="10" viewBox="0 0 58 10" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <line x1="-6.99382e-08" y1="5.2" x2="52" y2="5.2"
+                                        stroke="#FF7C08" stroke-width="1.6" />
+                                    <path d="M58 5L50.5 9.33013L50.5 0.669872L58 5Z" fill="#FF7C08" />
+                                </svg>
+                            </span>
+                        </div>
+                        <h2 class="mb-3">{!! getSetting('about_why_choose_title') !!}</h2>
+                        <p class="mb-0">{{ getSetting('about_why_choose_text') }}</p>
+                    </div>
+                    <div class="row g-3">
+                        @foreach ($why_choose_us as $each_why_choose_us)
+                            <div class="col-md-6">
+                                <div
+                                    class="horizontal-icon-box d-flex align-items-center gap-4 bg-white rounded p-4 hover-shadow flex-wrap flex-xxl-nowrap">
+                                    <span class="icon-wrapper position-relative flex-shrink-0">
+                                        <img src="{{ uploadedAsset($each_why_choose_us->image) }}" alt=""
+                                            class="img-fluid">
+                                    </span>
+                                    <div class="content-right">
+                                        <h5 class="mb-3">{{ $each_why_choose_us->title }}</h5>
+                                        <p class="mb-0">{{ $each_why_choose_us->text }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        @endforeach
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
     </div>
 
-            <!--brands section start-->
-            <section class="brands-section ptb-120 position-relative z-1 overflow-hidden service-section">
-                <img src="{{ staticAsset('frontend/default/assets/img/shapes/bg-shape-4.png') }}" alt="bg shape"
-                    class="position-absolute start-0 bottom-0 w-100 z--1 bg-shape">
-                <div class="container">
-                    <div class="brand-wrapper px-5 rounded-4">
-                        <h4 class="section-title mb-0">{{ localize('The Most Popular Brands') }}</h4>
-                        <div class="brands-slider swiper px-2 pt-4 pb-7">
-                            @php
-                                $about_popular_brand_ids = getSetting('about_popular_brand_ids') != null ? json_decode(getSetting('about_popular_brand_ids')) : [];
-                                $brands = \App\Models\Brand::whereIn('id', $about_popular_brand_ids)->get();
-                            @endphp
-                            <div class="swiper-wrapper">
-                                @foreach ($brands as $brand)
-                                    <div class="swiper-slide brand-item rounded">
-                                        <img src="{{ uploadedAsset($brand->collectLocalization('brand_image')) }}" alt=""
-                                            class="img-fluid">
-                                    </div>
-                                @endforeach
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <!--brands section end-->
 
-            <!--about us section-->
-            <section class="about-us-section ptb-120">
-                <div class="container">
-                    <div class="row g-4 align-items-center">
-                        <div class="col-xl-5">
-                            <div class="about-us-left position-relative">
-                                <img src="{{ uploadedAsset(getSetting('about_why_choose_banner')) }}" alt=""
-                                    class="img-fluid w-100">
-                            </div>
-                        </div>
-                        <div class="col-xl-7">
-                            <div class="about-us-right">
-                                <div class="section-title-mx mb-6">
-                                    <div class="d-flex align-items-center gap-2 flex-wrap mb-2">
-                                        <h6 class="mb-0 gshop-subtitle text-secondary">
-                                            {{ getSetting('about_why_choose_sub_title') }}</h6>
-                                        <span>
-                                            <svg width="58" height="10" viewBox="0 0 58 10" fill="none"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <line x1="-6.99382e-08" y1="5.2" x2="52" y2="5.2"
-                                                    stroke="#FF7C08" stroke-width="1.6" />
-                                                <path d="M58 5L50.5 9.33013L50.5 0.669872L58 5Z" fill="#FF7C08" />
-                                            </svg>
-                                        </span>
-                                    </div>
-                                    <h2 class="mb-3">{!! getSetting('about_why_choose_title') !!}</h2>
-                                    <p class="mb-0">{{ getSetting('about_why_choose_text') }}</p>
-                                </div>
-                                <div class="row g-3">
-                                    @foreach ($why_choose_us as $each_why_choose_us)
-                                        <div class="col-md-6">
-                                            <div
-                                                class="horizontal-icon-box d-flex align-items-center gap-4 bg-white rounded p-4 hover-shadow flex-wrap flex-xxl-nowrap">
-                                                <span class="icon-wrapper position-relative flex-shrink-0">
-                                                    <img src="{{ uploadedAsset($each_why_choose_us->image) }}" alt=""
-                                                        class="img-fluid">
-                                                </span>
-                                                <div class="content-right">
-                                                    <h5 class="mb-3">{{ $each_why_choose_us->title }}</h5>
-                                                    <p class="mb-0">{{ $each_why_choose_us->text }}</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    @endforeach
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <!--about us section end-->
 
 
 @endsection
