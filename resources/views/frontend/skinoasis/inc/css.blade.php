@@ -17,5 +17,6 @@
 
 <!-- Main CSS File -->
 <link rel="stylesheet" href="{{ staticAsset('frontend/skinoasis/assets/css/style.css') }}">
+<link rel="stylesheet" href="{{ staticAsset('frontend/default/assets/css/main.css') }}">
 <link rel="stylesheet" href="{{ staticAsset('frontend/skinoasis/assets/css/demos/demo-18.css') }}">
 
