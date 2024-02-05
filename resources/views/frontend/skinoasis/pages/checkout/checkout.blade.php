@@ -220,7 +220,7 @@
 
                                 <!-- payment methods -->
                                 <h4 class="mt-7">{{ localize('Payment Method') }}</h4>
-                                @include('frontend.default.pages.checkout.inc.paymentMethods')
+                                @include('frontend.skinoasis.pages.checkout.inc.paymentMethods')
                                 <!-- payment methods -->
                             </div>
                         </div>
@@ -229,7 +229,7 @@
                         <!-- order summary -->
                         <div class="col-xl-4">
                             <div class="checkout-sidebar">
-                                @include('frontend.default.pages.partials.checkout.orderSummary', [
+                                @include('frontend.skinoasis.pages.partials.checkout.orderSummary', [
                                     'carts' => $carts,
                                 ])
                             </div>
