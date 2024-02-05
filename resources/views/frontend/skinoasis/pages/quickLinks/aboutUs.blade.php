@@ -4,19 +4,13 @@
     {{ localize('About Us') }} {{ getSetting('title_separator') }} {{ getSetting('system_title') }}
 @endsection
 
-@section('breadcrumb-contents')
-    <ol class="breadcrumb justify-content-center">
-        <li class="breadcrumb-item fw-bold" aria-current="page"><a
-                href="{{ route('home') }}">{{ localize('Home') }}</a></li>
-        <li class="breadcrumb-item fw-bold" aria-current="page">{{ localize('Pages') }}</li>
-        <li class="breadcrumb-item fw-bold" aria-current="page">{{ localize('About') }}</li>
-    </ol>
-@endsection
+
 
 @section('contents')
-    <!--breadcrumb-->
-    @include('frontend.skinoasis.inc.breadcrumb')
-    <!--breadcrumb-->
+
+    <!--hero section start-->
+    @include('frontend.skinoasis.pages.partials.home.1hero')
+    <!--hero section end-->
 
     <!--about section start-->
     <section class="pt-120 ab-about-section position-relative z-1 overflow-hidden">
