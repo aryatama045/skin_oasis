@@ -237,6 +237,7 @@ Route::group(
         Route::group(['prefix' => 'stocks'], function () {
             # stocks 
             Route::get('/add', [StocksController::class, 'create'])->name('admin.stocks.create');
+            Route::get('/monitoring', [StocksController::class, 'monitoring'])->name('admin.stocks.monitoring');
             Route::post('/get-variation-stocks', [StocksController::class, 'getVariationStocks'])->name('admin.stocks.getVariationStocks');
             Route::post('/add', [StocksController::class, 'store'])->name('admin.stocks.store');
 

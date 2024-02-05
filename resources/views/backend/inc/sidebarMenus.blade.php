@@ -134,6 +134,10 @@
                             <a href="{{ route('admin.stocks.create') }}"
                                 class="{{ areActiveRoutes(['admin.stocks.create']) }}">{{ localize('Add Stock') }}</a>
                         </li>
+                        <li class="{{ areActiveRoutes(['admin.stocks.monitoring'], 'tt-menu-item-active') }}">
+                            <a href="{{ route('admin.stocks.monitoring') }}"
+                                class="{{ areActiveRoutes(['admin.stocks.monitoring']) }}">Monitoring Stock</a>
+                        </li>
                     @endcan
 
                     @can('show_locations')
