@@ -54,7 +54,7 @@
                                                 <label for="shipping-{{ $address->id }}"
                                                     class="tt-address-info bg-white rounded p-4 position-relative">
                                                     <!-- address -->
-                                                    @include('frontend.default.inc.address', [
+                                                    @include('frontend.skinoasis.inc.address', [
                                                         'address' => $address,
                                                     ])
                                                     <!-- address -->
@@ -94,7 +94,7 @@
                                                     <label for="billing-{{ $address->id }}"
                                                         class="tt-address-info bg-white rounded p-4 position-relative">
                                                         <!-- address -->
-                                                        @include('frontend.default.inc.address', [
+                                                        @include('frontend.skinoasis.inc.address', [
                                                             'address' => $address,
                                                         ])
                                                         <!-- address -->
