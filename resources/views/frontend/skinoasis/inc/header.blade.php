@@ -51,30 +51,29 @@
             </div><!-- End .header-left -->
 
             <div class="header-right">
-                @php
-                    $carts = [];
-                    if (Auth::check()) {
-                        $carts = App\Models\Cart::where('user_id', Auth::user()->id)
-                            ->where('location_id', session('stock_location_id'))
-                            ->get();
-                    } else {
-                        if (isset($_COOKIE['guest_user_id'])) {
-                            $carts = App\Models\Cart::where('guest_user_id', (int) $_COOKIE['guest_user_id'])
+
+                <div class="dropdown cart-dropdown gshop-header-cart">
+                    @php
+                        $carts = [];
+                        if (Auth::check()) {
+                            $carts = App\Models\Cart::where('user_id', Auth::user()->id)
                                 ->where('location_id', session('stock_location_id'))
                                 ->get();
+                        } else {
+                            if (isset($_COOKIE['guest_user_id'])) {
+                                $carts = App\Models\Cart::where('guest_user_id', (int) $_COOKIE['guest_user_id'])
+                                    ->where('location_id', session('stock_location_id'))
+                                    ->get();
+                            }
                         }
-                    }
-                @endphp
-
-
-                <div class="dropdown cart-dropdown">
+                    @endphp
                     <a href="#" class="dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-display="static">
                         <i class="icon-shopping-cart"></i>
                         <span class="cart-counter cart-count {{ count($carts) > 0 ? '' : 'd-none' }}">{{ count($carts) }}</span>
                     </a>
 
                     <div class="dropdown-menu dropdown-menu-right">
-                        <div class="dropdown-cart-products cart-navbar-wrapper">
+                        <div class="dropdown-cart-products apt_cart_box theme-scrollbar ">
                             <!--cart listing-->
                             @include('frontend.default.pages.partials.carts.cart-navbar', [
                                     'carts' => $carts, ])
