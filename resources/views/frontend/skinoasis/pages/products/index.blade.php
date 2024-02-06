@@ -63,7 +63,7 @@
                                 <div class="listing-top-right text-end d-inline-flex align-items-center gap-3 flex-wrap">
                                     <div class="number-count-filter d-flex align-items-center gap-3">
                                         <label
-                                            class="fw-bold fs-xs text-dark flex-shrink-0">{{ localize('Show') }}:</label>
+                                            class="fw-bold text-dark flex-shrink-0">{{ localize('Show') }}:</label>
                                         <input type="number"
                                             @isset($per_page)
                                         value="{{ $per_page }}"
@@ -74,7 +74,7 @@
                                     </div>
                                     <div class="select-filter d-inline-flex align-items-center gap-3">
                                         <label
-                                            class="fw-bold fs-xs text-dark flex-shrink-0">{{ localize('Sort by') }}:</label>
+                                            class="fw-bold text-dark flex-shrink-0">{{ localize('Sort by') }}:</label>
                                         <select name="sort_by"
                                             class="sort_by form-select fs-xxs fw-medium theme-select select-sm">
                                             <option value="new"

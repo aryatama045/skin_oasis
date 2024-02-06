@@ -399,7 +399,8 @@ if (!function_exists('formatPrice')) {
             } else {
                 // decimals
                 if (getSetting('no_of_decimals') > 0) {
-                    $price = number_format($price, getSetting('no_of_decimals'));
+                    $price = number_format($price);
+                    // $price = number_format($price, getSetting('no_of_decimals'));
                 } else {
                     $price = number_format($price, getSetting('no_of_decimals'), '.', ',');
                 }
