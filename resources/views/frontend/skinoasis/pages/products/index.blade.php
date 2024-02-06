@@ -62,34 +62,40 @@
                                     {{ $products->total() }} {{ localize('results') }}</p>
                                 <div class="listing-top-right text-end d-inline-flex align-items-center gap-3 flex-wrap">
                                     <div class="number-count-filter d-flex align-items-center gap-3">
-                                        <label
-                                            class="fw-bold text-dark flex-shrink-0">{{ localize('Show') }}:</label>
-                                        <input type="number"
+                                        <label class="fw-bold text-dark flex-shrink-0">{{ localize('Show') }}:</label>
+                                        <select name="per_page" class="form-select fw-medium theme-select select-sm product-listing-pagination">
+                                            <option selected value="9"> 9</option>
                                             @isset($per_page)
-                                        value="{{ $per_page }}"
-                                        @else
-                                        value="9" 
-                                        @endisset
-                                            name="per_page" class="form-control product-listing-pagination">
+                                                @if ($per_page == '20')
+                                                    <option selected value="20">20</option>
+                                                @endif
+                                                @if ($per_page == '50')
+                                                    <option selected value="50">50</option>
+                                                @endif
+                                                @if ($per_page == '100')
+                                                    <option selected value="100">100</option>
+                                                @endif
+                                            @endisset>
+                                        </select>
                                     </div>
                                     <div class="select-filter d-inline-flex align-items-center gap-3">
                                         <label
                                             class="fw-bold text-dark flex-shrink-0">{{ localize('Sort by') }}:</label>
                                         <select name="sort_by"
-                                            class="sort_by form-select fs-xxs fw-medium theme-select select-sm">
+                                            class="sort_by form-select fw-medium theme-select select-sm">
                                             <option value="new"
                                                 @isset($sort_by)
-                                                @if ($sort_by == 'new')
-                                                selected
-                                                @endif
-                                            @endisset>
+                                                    @if ($sort_by == 'new')
+                                                        selected
+                                                    @endif
+                                                @endisset>
                                                 {{ localize('Newest First') }}</option>
                                             <option value="best_selling"
                                                 @isset($sort_by)
-                                            @if ($sort_by == 'best_selling')
-                                            selected
-                                            @endif
-                                        @endisset>
+                                                    @if ($sort_by == 'best_selling')
+                                                    selected
+                                                    @endif
+                                                @endisset>
                                                 {{ localize('Best Selling') }}</option>
                                         </select>
                                     </div>
