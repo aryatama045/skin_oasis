@@ -142,7 +142,9 @@
                                                 <button type="button" class="increase">+</button>
                                             </div>
                                         </div>
+                                    </div>
 
+                                    <div class="d-flex align-items-center gap-3 flex-wrap mt-5">
                                         <div class="product-details-action">
                                             <button type="submit" class="btn-product btn-cart add-to-cart-btn"
                                                 @if (!$isVariantProduct && $stock < 1) disabled @endif>
