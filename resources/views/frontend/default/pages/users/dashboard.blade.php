@@ -8,11 +8,11 @@
     <section class="my-account pt-6 pb-120">
         <div class="container">
 
-            @include('frontend.default.pages.users.partials.customerHero')
+            @include('frontend.skinoasis.pages.users.partials.customerHero')
 
             <div class="row g-4">
                 <div class="col-xl-3">
-                    @include('frontend.default.pages.users.partials.customerSidebar')
+                    @include('frontend.skinoasis.pages.users.partials.customerSidebar')
                 </div>
 
                 <div class="col-xl-9">
