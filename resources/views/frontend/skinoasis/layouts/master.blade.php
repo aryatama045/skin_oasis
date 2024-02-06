@@ -143,6 +143,10 @@
 
     </div><!-- End .page-wrapper -->
 
+    <!-- modals -->
+    @include('frontend.skinoasis.pages.partials.products.quickViewModal')
+    <!-- modals -->
+
 
     <button id="scroll-top" title="Back to Top"><i class="icon-arrow-up"></i></button>
 
