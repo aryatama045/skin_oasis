@@ -169,6 +169,7 @@ class ProductsController extends Controller
         $product->size_guide        = $request->size_guide;
 
         $product->description       = $request->description;
+        $product->additional_info       = $request->additional_info;
         $product->short_description = $request->short_description;
 
         # min-max price
@@ -330,6 +331,7 @@ class ProductsController extends Controller
             $product->name              = $request->name;
             $product->slug              = (!is_null($request->slug)) ? Str::slug($request->slug, '-') : Str::slug($request->name, '-') . '-' . strtolower(Str::random(5));
             $product->description       = $request->description;
+            $product->additional_info       = $request->additional_info;
             $product->sell_target       = $request->sell_target;
             $product->brand_id          = $request->brand_id;
             $product->unit_id           = $request->unit_id;
