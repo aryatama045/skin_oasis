@@ -65,6 +65,12 @@
                                     </select>
                                 </div>
 
+                                <div class="mb-3">
+                                    <label for="visimisi" class="form-label">Visi dan Misi</label>
+                                    <input type="hidden" name="types[]" value="visimisi">
+                                    <textarea name="visimisi" id="visimisi" class="editor form-control">{{ getSetting('visimisi') }}</textarea>
+                                </div>
+
 
                                 <div class="mb-3">
                                     <label for="copyright_text" class="form-label">{{ localize('Copyright Text') }}</label>
