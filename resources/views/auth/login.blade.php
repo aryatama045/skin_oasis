@@ -17,12 +17,14 @@
                         id="login-form">
                         @csrf
                         {!! RecaptchaV3::field('recaptcha_token') !!}
-                        <div class="mb-7">
+                        <div class="mb-10">
                             <a href="{{ route('home') }}">
                                 <img src="{{ uploadedAsset(getSetting('admin_panel_logo')) }}" alt="logo" width="250">
                             </a>
                         </div>
-                        <h2 class="mb-4 h3">{{ localize('Hey there!') }}</h2>
+                        <h2 class="mb-4 h3">
+                            {{ localize('Hey there!') }}
+                        </h2>
 
                         <div class="row g-3">
                             <div class="col-sm-12">
@@ -34,11 +36,6 @@
                                         <input type="email" id="email" name="email"
                                             placeholder="{{ localize('Enter your email') }}" class="theme-input mb-1"
                                             value="{{ old('email') }}" required>
-                                        <small class="">
-                                            <a href="javascript:void(0);" class="fs-sm login-with-phone-btn"
-                                                onclick="handleLoginWithPhone()">
-                                                {{ localize('Login with phone?') }}</a>
-                                        </small>
                                     </span>
 
                                     <span class="login-phone @if (old('login_with') == 'email' || old('login_with') == '') d-none @endif">
