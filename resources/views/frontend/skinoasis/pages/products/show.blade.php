@@ -240,13 +240,15 @@
                                     @endforeach
                                 </td>
                             </tr>
-                            @empty
-                                <tr>
-                                    <td class="text-dark text-center" colspan="2">{{ localize('Not Available') }}
-                                    </td>
-                                </tr>
                             @endforelse
                         </table>
+
+                        @if ($product->additional_info)
+                            {!! $product->additional_info !!}
+                        @else
+                            <div class="text-dark text-center border py-2">{{ localize('Not Available') }}
+                            </div>
+                        @endif
                     </div><!-- End .product-desc-content -->
                 </div><!-- .End .tab-pane -->
 
