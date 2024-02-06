@@ -75,7 +75,7 @@
             <h6 class="mb-0">{{ localize('Tags') }}</h6>
             <span class="hr-line w-100 position-relative d-block align-self-end ms-1"></span>
         </div>
-        <div class="mt-4 d-flex gap-2 flex-wrap">
+        <div class="tt-category-tag mt-4 mt-4 d-flex gap-2 flex-wrap">
             @foreach ($tags as $tag)
                 <a href="{{ route('products.index') }}?&tag_id={{ $tag->id }}"
                     class="text-muted fs-xxs">{{ $tag->name }}</a>
