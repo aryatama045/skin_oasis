@@ -96,6 +96,7 @@
                                     <th data-breakpoints="xs sm">{{ localize('Categories') }}</th>
                                     <th data-breakpoints="xs sm">{{ localize('Price') }}</th>
                                     <th data-breakpoints="xs sm md">{{ localize('Published') }}</th>
+                                    <th data-breakpoints="xs sm md">Popular</th>
                                     <th data-breakpoints="xs sm md" class="text-end">{{ localize('Action') }}</th>
                                 </tr>
                             </thead>
@@ -152,6 +153,14 @@
                                                 </div>
                                             @endcan
 
+                                        </td>
+                                        <td>
+                                            <div class="form-check form-switch">
+                                                <input type="checkbox" onchange="updatePopularStatus(this)"
+                                                    class="form-check-input"
+                                                    @if ($product->is_popular) checked @endif
+                                                    value="{{ $product->id }}">
+                                            </div>
                                         </td>
                                         <td class="text-end">
                                             <div class="dropdown tt-tb-dropdown">
@@ -230,6 +239,26 @@
                 var status = 0;
             }
             $.post('{{ route('admin.products.updatePublishedStatus') }}', {
+                    _token: '{{ csrf_token() }}',
+                    id: el.value,
+                    status: status
+                },
+                function(data) {
+                    if (data == 1) {
+                        notifyMe('success', '{{ localize('Status updated successfully') }}');
+                    } else {
+                        notifyMe('danger', '{{ localize('Something went wrong') }}');
+                    }
+                });
+        }
+
+        function updatePopularStatus(el) {
+            if (el.checked) {
+                var status = 1;
+            } else {
+                var status = 0;
+            }
+            $.post('{{ route('admin.products.updatePopularStatus') }}', {
                     _token: '{{ csrf_token() }}',
                     id: el.value,
                     status: status

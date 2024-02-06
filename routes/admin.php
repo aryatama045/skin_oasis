@@ -155,6 +155,7 @@ Route::group(
             Route::post('/update-product', [ProductsController::class, 'update'])->name('admin.products.update');
             Route::post('/update-featured-product', [ProductsController::class, 'updateFeatured'])->name('admin.products.updateFeatureStatus');
             Route::post('/update-published-product', [ProductsController::class, 'updatePublishedStatus'])->name('admin.products.updatePublishedStatus');
+            Route::post('/update-popular-product', [ProductsController::class, 'updatePopularStatus'])->name('admin.products.updatePopularStatus');
             Route::get('/delete-product/{id}', [ProductsController::class, 'delete'])->name('admin.products.delete');
 
             # categories 
@@ -288,7 +289,9 @@ Route::group(
         # customers
         Route::group(['prefix' => 'customers'], function () {
             Route::get('/', [CustomersController::class, 'index'])->name('admin.customers.index');
+            Route::get('/testimoni', [CustomersController::class, 'testimoni'])->name('admin.customers.testimoni');
             Route::post('/update-banned-customer', [CustomersController::class, 'updateBanStatus'])->name('admin.customers.updateBanStatus');
+            Route::post('/update-banned-testimoni', [CustomersController::class, 'updateBanTestiStatus'])->name('admin.customers.updateBanTestiStatus');
         });
 
         # tags

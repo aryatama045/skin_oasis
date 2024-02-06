@@ -521,6 +521,19 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="col-lg-6">
+                                <div class="card mb-4">
+                                    <div class="card-body">
+                                        <h5 class="mb-4">Popular Status</h5>
+                                        <div class="tt-select-brand">
+                                            <select class="select2 form-control" id="is_popular" name="is_popular">
+                                                <option value="1">Enabled</option>
+                                                <option value="0">Disabled</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <!--product sell target & status end-->
 

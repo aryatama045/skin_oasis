@@ -251,6 +251,12 @@
                 <span class="tt-nav-link-text">{{ localize('Customers') }}</span>
             </a>
         </li>
+        <li class="side-nav-item nav-item">
+            <a href="{{ route('admin.customers.testimoni') }}" class="side-nav-link">
+                <span class="tt-nav-link-icon"> <i data-feather="users"></i></span>
+                <span class="tt-nav-link-text">Testimoni</span>
+            </a>
+        </li>
     @endcan
 
     <!-- staffs -->
