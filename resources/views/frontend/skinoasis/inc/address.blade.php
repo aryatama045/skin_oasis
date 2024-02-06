@@ -1,11 +1,12 @@
 <address class="fs-sm mb-0">
-    <strong>{{ $address->address?? None }}</strong>
+    {{ dd($address) }}
+    <strong> </strong>
 </address>
 
-<strong> {{ localize('City') }}: </strong>{{ $address->city->name?? None }}
+<strong> {{ localize('City') }}: </strong> 
 <br>
 
-<strong>{{ localize('State') }}: </strong>{{ $address->state->name?? None }}
+<strong>{{ localize('State') }}: </strong> 
 
 <br>
-<strong>{{ localize('Country') }}: </strong> {{ $address->country->name?? None }}
+<strong>{{ localize('Country') }}: </strong> 
