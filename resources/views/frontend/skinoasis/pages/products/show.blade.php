@@ -77,7 +77,7 @@
     <div class="container">
         <div class="product-details-top">
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-md-4">
                     <div class="gstore-product-quick-view bg-white rounded-3 py-6 px-4">
                         <div class="row g-4">
                             <!-- sliders -->
@@ -87,7 +87,7 @@
                     </div>
                 </div><!-- End .col-md-6 -->
 
-                <div class="col-md-6">
+                <div class="col-md-8">
                     <div class="gstore-product-quick-view bg-white rounded-3 py-6 px-4">
                         <div class="row g-4">
                             <div class="product-details">
