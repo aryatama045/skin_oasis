@@ -28243,3 +28243,10 @@ blockquote::before {
         border-radius: 4px;
     }
 }
+
+
+.product-desc-content {
+    font-size: 1.4rem;
+    font-weight: 300;
+    text-align: justify;
+}
