@@ -19,7 +19,7 @@
                         {!! RecaptchaV3::field('recaptcha_token') !!}
                         <div class="mb-10">
                             <a href="{{ route('home') }}">
-                                <img src="{{ uploadedAsset(getSetting('admin_panel_logo')) }}" alt="logo" width="250">
+                                <img src="{{ uploadedAsset(getSetting('admin_panel_logo')) }}" alt="logo" width="181">
                             </a>
                         </div>
                         <h2 class="mb-4 h3">
