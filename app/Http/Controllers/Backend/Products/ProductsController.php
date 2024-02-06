@@ -37,6 +37,7 @@ class ProductsController extends Controller
         $searchKey = null;
         $brand_id = null;
         $is_published = null;
+        $is_popular = null;
 
         $products = Product::shop()->latest();
         if ($request->search != null) {
@@ -54,9 +55,14 @@ class ProductsController extends Controller
             $is_published    = $request->is_published;
         }
 
+        if ($request->is_popular != null) {
+            $products = $products->where('is_popular', $request->is_popular);
+            $is_popular    = $request->is_popular;
+        }
+
         $brands = Brand::latest()->get();
         $products = $products->paginate(paginationNumber());
-        return view('backend.pages.products.products.index', compact('products', 'brands', 'searchKey', 'brand_id', 'is_published'));
+        return view('backend.pages.products.products.index', compact('products', 'brands', 'searchKey', 'brand_id', 'is_published', 'is_popular'));
     }
 
     # return view of create form
@@ -193,6 +199,7 @@ class ProductsController extends Controller
         $product->stock_qty   = ($request->has('is_variant') && $request->has('variations')) ? max(array_column($request->variations, 'stock')) : $request->stock;
 
         $product->is_published         = $request->is_published;
+        $product->is_popular         = $request->is_popular;
         $product->has_variation        = ($request->has('is_variant') && $request->has('variations')) ? 1 : 0;
 
         # shipping info
@@ -526,6 +533,16 @@ class ProductsController extends Controller
     {
         $product = Product::findOrFail($request->id);
         $product->is_published = $request->status;
+        if ($product->save()) {
+            return 1;
+        }
+        return 0;
+    }
+
+    public function updatePopularStatus(Request $request)
+    {
+        $product = Product::findOrFail($request->id);
+        $product->is_popular = $request->status;
         if ($product->save()) {
             return 1;
         }
