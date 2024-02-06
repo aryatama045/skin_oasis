@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Blog;
 use App\Models\Campaign;
 use App\Models\Page;
+use App\Models\Brand;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -27,6 +28,9 @@ class HomeController extends Controller
             $sliders = json_decode(getSetting('hero_sliders'));
         }
 
+        $brands = Brand::get();
+        // dd($brands);
+
         $banner_section_one_banners = [];
         if (getSetting('banner_section_one_banners') != null) {
             $banner_section_one_banners = json_decode(getSetting('banner_section_one_banners'));
@@ -38,7 +42,7 @@ class HomeController extends Controller
         }
 
 
-        return getView('pages.home', ['blogs' => $blogs, 'sliders' => $sliders, 'banner_section_one_banners' => $banner_section_one_banners, 'client_feedback' => $client_feedback]);
+        return getView('pages.home', ['blogs' => $blogs, 'sliders' => $sliders, 'brands' => $brands, 'banner_section_one_banners' => $banner_section_one_banners, 'client_feedback' => $client_feedback]);
     }
 
     # all brands

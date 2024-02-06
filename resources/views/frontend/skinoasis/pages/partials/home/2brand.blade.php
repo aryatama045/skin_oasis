@@ -25,28 +25,9 @@
         }
     }'>
 
-    <a href="#" class="brand">
-        <img src="{{ staticAsset('frontend/skinoasis/assets/images/brands/1.png') }}" alt="Brand Name">
-    </a>
-
-    <a href="#" class="brand">
-        <img src="{{ staticAsset('frontend/skinoasis/assets/images/brands/2.png') }}" alt="Brand Name">
-    </a>
-
-    <a href="#" class="brand">
-        <img src="{{ staticAsset('frontend/skinoasis/assets/images/brands/3.png') }}" alt="Brand Name">
-    </a>
-
-    <a href="#" class="brand">
-        <img src="{{ staticAsset('frontend/skinoasis/assets/images/brands/4.png') }}" alt="Brand Name">
-    </a>
-
-    <a href="#" class="brand">
-        <img src="{{ staticAsset('frontend/skinoasis/assets/images/brands/5.png') }}" alt="Brand Name">
-    </a>
-
-    <a href="#" class="brand">
-        <img src="{{ staticAsset('frontend/skinoasis/assets/images/brands/6.png') }}" alt="Brand Name">
-    </a>
-
+    @foreach($brands as $brandPrd)
+        <a href="#" class="brand">
+            <img src="{{ uploadedAsset($brandPrd->brand_image) }}" alt="Brand Name">
+        </a>
+    @endforeach
 </div><!-- End .owl-carousel -->
