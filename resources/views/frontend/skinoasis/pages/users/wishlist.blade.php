@@ -1,4 +1,4 @@
-@extends('frontend.default.layouts.master')
+@extends('frontend.skinoasis.layouts.master')
 
 @section('breadcrumb-contents')
     <div class="breadcrumb-content">
@@ -15,7 +15,7 @@
 
 @section('contents')
     <!--breadcrumb-->
-    @include('frontend.default.inc.breadcrumb')
+    @include('frontend.skinoasis.inc.breadcrumb')
     <!--breadcrumb-->
 
     <!--wishlist section start-->
@@ -45,7 +45,7 @@
                                 <td>
                                     <span class="text-dark fw-bold me-2 d-lg-none">{{ localize('Unit Price') }}:</span>
                                     <span class="text-dark fw-bold">
-                                        @include('frontend.default.pages.partials.products.pricing', [
+                                        @include('frontend.skinoasis.pages.partials.products.pricing', [
                                             'product' => $item->product,
                                             'br' => true,
                                         ])
