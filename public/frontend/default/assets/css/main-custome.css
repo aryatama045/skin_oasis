@@ -14176,11 +14176,7 @@ fieldset:disabled .btn {
     background-color: rgba(0, 0, 0, 0);
     border-color: rgba(0, 0, 0, 0);
 }
-.nav-pills .nav-link.active,
-.nav-pills .show > .nav-link {
-    color: var(--bs-nav-pills-link-active-color);
-    background-color: var(--bs-nav-pills-link-active-bg);
-}
+
 .nav-fill > .nav-link,
 .nav-fill .nav-item {
     -webkit-box-flex: 1;
