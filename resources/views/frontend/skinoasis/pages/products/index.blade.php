@@ -66,15 +66,17 @@
                                         <select name="per_page" class="form-select fw-medium theme-select select-sm product-listing-pagination">
                                             <option selected value="9"> 9</option>
                                             @isset($per_page)
-                                                @if ($per_page == '20')
-                                                    <option selected value="20">20</option>
-                                                @endif
-                                                @if ($per_page == '50')
-                                                    <option selected value="50">50</option>
-                                                @endif
-                                                @if ($per_page == '100')
-                                                    <option selected value="100">100</option>
-                                                @endif
+                                                <option
+                                                    @if ($per_page == '20')
+                                                        selected
+                                                    @endif
+                                                    value="20">20</option>
+
+                                                <option
+                                                    @if ($per_page == '50')
+                                                        selected
+                                                    @endif
+                                                    value="50">50</option>
                                             @endisset>
                                         </select>
                                     </div>
