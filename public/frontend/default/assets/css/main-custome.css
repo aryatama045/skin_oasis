@@ -19199,10 +19199,7 @@ fieldset:disabled .btn {
 }
 .bg-primary {
     --bs-bg-opacity: 1;
-    background-color: rgba(
-        var(--bs-primary-rgb),
-        var(--bs-bg-opacity)
-    ) !important;
+    background-color: #c96!important;
 }
 .bg-accent {
     --bs-bg-opacity: 1;
