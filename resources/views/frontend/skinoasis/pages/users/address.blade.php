@@ -30,7 +30,7 @@
                                         class="tt-address-content border p-3 rounded address-book-content pe-md-4 position-relative">
                                         <div class="address tt-address-info position-relative">
                                             <!-- address -->
-                                            @include('frontend.default.inc.address', [
+                                            @include('frontend.skinoasis.inc.address', [
                                                 'address' => $address,
                                             ])
                                             <!-- address -->
