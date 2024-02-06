@@ -21,7 +21,7 @@
                         {!! RecaptchaV3::field('recaptcha_token') !!}
                         <div class="mb-7">
                             <a href="{{ route('home') }}">
-                                <img src="{{ uploadedAsset(getSetting('navbar_logo')) }}" alt="logo">
+                            <img src="{{ uploadedAsset(getSetting('admin_panel_logo')) }}" alt="logo" width="250">
                             </a>
                         </div>
                         <h2 class="mb-4 h3">{{ localize('Hey there!') }}

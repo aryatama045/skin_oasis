@@ -83,6 +83,8 @@
 	}
 }
 
+
+
 @include mq('sm', 'max') {
 	.header-11 .cart-dropdown, 
 	.header-11 .compare-dropdown {
@@ -92,6 +94,24 @@
 	.header-11 .wishlist-link {
 		margin-left: 1.4rem;
 	}
+}
+
+@include mq('md') {
+    .my-md-n5 {
+		margin-top: -9rem!important;
+		margin-bottom: -5rem!important;
+		position: relative;
+		z-index: 2;
+		background-color: white;
+		padding-top: 3rem;
+
+		.no-gutters {
+			margin-left: 0;
+			margin-right: 0;
+		}
+
+    }
+
 }
 
 @include mq('xl') {
