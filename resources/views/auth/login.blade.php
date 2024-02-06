@@ -7,7 +7,7 @@
 
 
 @section('contents')
-    <section class="login-section py-5">
+    <section class="login-section py-5" style="background-color: #c96">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-5 col-12 tt-login-img"
