@@ -169,19 +169,19 @@
                                         @endif
                                     </div>
 
-                                    <!--product category start-->
-                                    @if ($product->categories()->count() > 0)
-                                        <div class="tt-category-tag mt-4 mt-4">
-                                            @foreach ($product->categories as $category)
-                                                <a href="{{ route('products.index') }}?&category_id={{ $category->id }}"
-                                                    class="text-muted fs-xxs">{{ $category->collectLocalization('name') }}</a>
-                                            @endforeach
-                                        </div>
-                                    @endif
-                                    <!--product category end-->
-                                </form>
-
                                 <div class="product-details-footer">
+                                        <!--product category start-->
+                                        @if ($product->categories()->count() > 0)
+                                            <div class="tt-category-tag mt-4 mt-4">
+                                                @foreach ($product->categories as $category)
+                                                    <a href="{{ route('products.index') }}?&category_id={{ $category->id }}"
+                                                        class="text-muted fs-xxs">{{ $category->collectLocalization('name') }}</a>
+                                                @endforeach
+                                            </div>
+                                        @endif
+                                        <!--product category end-->
+                                    </form>
+
                                     <div class="social-icons social-icons-sm">
                                         <span class="social-label">Share:</span>
                                         <a href="#" class="social-icon" title="Facebook" target="_blank"><i class="icon-facebook-f"></i></a>
