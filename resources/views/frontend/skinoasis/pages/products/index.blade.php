@@ -25,7 +25,7 @@
     <form class="filter-form" action="{{ Request::fullUrl() }}" method="GET">
 
 
-        <div class="page-content">
+        <div class="gshop-gshop-grid ptb-120">
             <div class="container">
                 <div class="row g-4">
 
