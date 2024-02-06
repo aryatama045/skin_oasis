@@ -77,7 +77,7 @@
                             fill="#5D6374" />
                     </svg>
                     <span
-                        class="cart-counter badge bg-primary rounded-circle p-0 {{ count($carts) > 0 ? '' : 'd-none' }}">{{ count($carts) }}</span>
+                        class="cart-counter badge bg-primary rounded-circle p-2 {{ count($carts) > 0 ? '' : 'd-none' }}">{{ count($carts) }}</span>
                 </button>
                 <div class="cart-box-wrapper">
                     <div class="apt_cart_box theme-scrollbar">
