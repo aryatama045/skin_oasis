@@ -52,7 +52,7 @@
 
             <div class="header-right">
 
-                <div class="dropdown cart-dropdown gshop-header-cart">
+                <div class="dropdown cart-dropdown gshop-header-cart position-relative">
                     @php
                         $carts = [];
                         if (Auth::check()) {
@@ -72,12 +72,14 @@
                         <span class="cart-counter cart-count {{ count($carts) > 0 ? '' : 'd-none' }}">{{ count($carts) }}</span>
                     </a>
 
-                    <div class="dropdown-menu dropdown-menu-right">
-                        <div class="dropdown-cart-products apt_cart_box theme-scrollbar ">
+                    <div class="dropdown-menu dropdown-menu-right cart-box-wrapper">
+                        <div class="dropdown-cart-products apt_cart_box theme-scrollbar">
+                            <ul class="at_scrollbar scrollbar cart-navbar-wrapper">
                             <!--cart listing-->
                             @include('frontend.default.pages.partials.carts.cart-navbar', [
                                     'carts' => $carts, ])
                             <!--cart listing-->
+                            </ul>
                         </div><!-- End .cart-product -->
 
                         <div class="dropdown-cart-total">
