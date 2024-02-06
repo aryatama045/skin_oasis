@@ -161,7 +161,6 @@
                                             <div class="details-action-wrapper">
                                                 <button type="button" class="btn-product btn-wishlist" title="Wishlist"
                                                     onclick="addToWishlist({{ $product->id }})">
-                                                    <i class="fa-solid fa-heart"></i>
                                                     <span>Add to Wishlist</span>
                                                 </button>
                                             </div>
