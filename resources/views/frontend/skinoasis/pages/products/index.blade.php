@@ -70,7 +70,7 @@
                                         @else
                                         value="9" 
                                         @endisset
-                                            name="per_page" class="product-listing-pagination">
+                                            name="per_page" class="form-control product-listing-pagination">
                                     </div>
                                     <div class="select-filter d-inline-flex align-items-center gap-3">
                                         <label
