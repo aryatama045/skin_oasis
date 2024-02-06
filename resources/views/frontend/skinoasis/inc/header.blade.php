@@ -76,7 +76,7 @@
                     <div class="dropdown-menu dropdown-menu-right">
                         <div class="dropdown-cart-products cart-navbar-wrapper">
                             <!--cart listing-->
-                            @include('frontend.skinoasis.pages.partials.carts.cart-navbar', [
+                            @include('frontend.default.pages.partials.carts.cart-navbar', [
                                     'carts' => $carts, ])
                             <!--cart listing-->
                         </div><!-- End .cart-product -->
