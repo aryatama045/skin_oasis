@@ -52,7 +52,7 @@
 
             <div class="header-right">
 
-            <div class="gshop-header-cart position-relative">
+            <div class="cart-dropdown gshop-header-cart position-relative">
                 @php
                     $carts = [];
                     if (Auth::check()) {
