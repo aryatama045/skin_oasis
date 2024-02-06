@@ -27671,6 +27671,7 @@ blockquote::before {
     display: block;
     padding: 8px 24px;
     color: #5d6374;
+    font-size: 1.5rem;
 }
 .account-nav-menu li a svg path {
     fill: #5d6374;
