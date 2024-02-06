@@ -77,70 +77,78 @@
     <div class="container">
         <div class="product-details-top">
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-md-4">
                     <div class="gstore-product-quick-view bg-white rounded-3 py-6 px-4">
                         <div class="row g-4">
-                            <div class="col-xl-6 align-self-end">
-                                <!-- sliders -->
-                                @include('frontend.default.pages.partials.products.sliders', compact('product'))
-                                <!-- sliders -->
-                            </div>
-                            <div class="col-xl-6">
-                                <div class="product-info">
-                                    <h3 class="mt-1 mb-3 h5">{{ $product->collectLocalization('name') }}</h3>
+                            <!-- sliders -->
+                            @include('frontend.default.pages.partials.products.sliders', compact('product'))
+                            <!-- sliders -->
+                        </div>
+                    </div>
+                </div><!-- End .col-md-6 -->
 
-                                    <!-- pricing -->
-                                    <div class="pricing all-pricing mt-2">
-                                        @include('frontend.default.pages.partials.products.pricing', compact('product'))
-                                    </div>
-                                    <!-- pricing -->
+                <div class="col-md-8">
+                    <div class="gstore-product-quick-view bg-white rounded-3 py-6 px-4">
+                        <div class="row g-4">
+                            <div class="product-details">
+                                <h1 class="product-title">{{ $product->collectLocalization('name') }}</h1><!-- End .product-title -->
 
-                                    <!-- selected variation pricing -->
-                                    <div class="pricing variation-pricing mt-2 d-none">
+                                <div class="ratings-container">
+                                    <div class="ratings">
+                                        <div class="ratings-val" style="width: 80%;"></div><!-- End .ratings-val -->
+                                    </div><!-- End .ratings -->
+                                    <a class="ratings-text" href="#product-review-link" id="review-link">( 2 Reviews )</a>
+                                </div><!-- End .rating-container -->
 
-                                    </div>
-                                    <!-- selected variation pricing -->
+                                <div class="product-price">
+                                    @include('frontend.default.pages.partials.products.pricing', compact('product'))
+                                </div><!-- End .product-price -->
 
-                                    <div class="widget-title d-flex mt-4">
-                                        <h6 class="mb-1 flex-shrink-0">{{ localize('Description') }}</h6>
-                                        <span class="hr-line w-100 position-relative d-block align-self-end ms-1"></span>
-                                    </div>
-                                    <p class="mb-3">
-                                        {{ $product->collectLocalization('short_description') }}
-                                    </p>
+                                <!-- selected variation pricing -->
+                                <div class="pricing variation-pricing mt-2 d-none">
+                                </div>
+                                <!-- selected variation pricing -->
 
-                                    <form action="" class="add-to-cart-form">
-                                        @php
-                                            $isVariantProduct = 0;
-                                            $stock = 0;
-                                            if ($product->variations()->count() > 1) {
-                                                $isVariantProduct = 1;
-                                            } else {
-                                                $stock = $product->variations[0]->product_variation_stock ? $product->variations[0]->product_variation_stock->stock_qty : 0;
-                                            }
-                                        @endphp
+                                <div class="product-content">
+                                    <p>{{ $product->collectLocalization('short_description') }}</p>
+                                </div><!-- End .product-content -->
 
-                                        <input type="hidden" name="_token" value="{{ csrf_token() }}">
-                                        <input type="hidden" name="product_variation_id"
-                                            @if (!$isVariantProduct) value="{{ $product->variations[0]->id }}" @endif>
 
-                                        <!-- variations -->
-                                        @include('frontend.default.pages.partials.products.variations', compact('product'))
-                                        <!-- variations -->
+                                <form action="" class="add-to-cart-form">
+                                    @php
+                                        $isVariantProduct = 0;
+                                        $stock = 0;
+                                        if ($product->variations()->count() > 1) {
+                                            $isVariantProduct = 1;
+                                        } else {
+                                            $stock = $product->variations[0]->product_variation_stock ? $product->variations[0]->product_variation_stock->stock_qty : 0;
+                                        }
+                                    @endphp
 
-                                        <div class="d-flex align-items-center gap-3 flex-wrap mt-5">
+                                    <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                                    <input type="hidden" name="product_variation_id"
+                                        @if (!$isVariantProduct) value="{{ $product->variations[0]->id }}" @endif>
+
+                                    <!-- variations -->
+                                    @include('frontend.default.pages.partials.products.variations', compact('product'))
+                                    <!-- variations -->
+
+                                    <div class="d-flex align-items-center gap-3 flex-wrap mt-5">
+                                        <div class="product-details-quantity">
                                             <div class="product-qty qty-increase-decrease d-flex align-items-center">
                                                 <button type="button" class="decrease">-</button>
                                                 <input type="text" readonly value="1" name="quantity" min="1"
                                                     @if (!$isVariantProduct) max="{{ $stock }}" @endif>
                                                 <button type="button" class="increase">+</button>
                                             </div>
+                                        </div>
+                                    </div>
 
-                                            <button type="submit" class="btn btn-secondary btn-md add-to-cart-btn"
+                                    <div class="d-flex align-items-center gap-3 flex-wrap mt-5">
+                                        <div class="product-details-action">
+                                            <button type="submit" class="btn-product btn-cart add-to-cart-btn"
                                                 @if (!$isVariantProduct && $stock < 1) disabled @endif>
-                                                <span class="me-2">
-                                                    <i class="fa-solid fa-bag-shopping"></i>
-                                                </span>
+
                                                 <span class="add-to-cart-text">
                                                     @if (!$isVariantProduct && $stock < 1)
                                                         {{ localize('Out of Stock') }}
@@ -150,23 +158,27 @@
                                                 </span>
                                             </button>
 
-                                            <button type="button" class="btn btn-primary btn-md"
-                                                onclick="addToWishlist({{ $product->id }})">
-                                                <i class="fa-solid fa-heart"></i>
-                                            </button>
-
-                                            <div class="flex-grow-1"></div>
-                                            @if (getSetting('enable_reward_points') == 1)
-                                                <span class="fw-bold" data-bs-toggle="tooltip" data-bs-placement="top"
-                                                    data-bs-title="{{ localize('Reward Points') }}">
-                                                    <i class="fas fa-medal"></i> {{ $product->reward_points }}
-                                                </span>
-                                            @endif
+                                            <div class="details-action-wrapper">
+                                                <button type="button" class="btn-product btn-wishlist" title="Wishlist"
+                                                    onclick="addToWishlist({{ $product->id }})">
+                                                    <span>Add to Wishlist</span>
+                                                </button>
+                                            </div>
                                         </div>
 
+                                        <div class="flex-grow-1"></div>
+                                        @if (getSetting('enable_reward_points') == 1)
+                                            <span class="fw-bold" data-bs-toggle="tooltip" data-bs-placement="top"
+                                                data-bs-title="{{ localize('Reward Points') }}">
+                                                <i class="fas fa-medal"></i> {{ $product->reward_points }}
+                                            </span>
+                                        @endif
+                                    </div>
+
+                                <div class="product-details-footer">
                                         <!--product category start-->
                                         @if ($product->categories()->count() > 0)
-                                            <div class="tt-category-tag mt-4">
+                                            <div class="tt-category-tag mt-4 mt-4">
                                                 @foreach ($product->categories as $category)
                                                     <a href="{{ route('products.index') }}?&category_id={{ $category->id }}"
                                                         class="text-muted fs-xxs">{{ $category->collectLocalization('name') }}</a>
@@ -176,92 +188,17 @@
                                         <!--product category end-->
                                     </form>
 
-                                </div>
-                            </div>
+                                    <div class="social-icons social-icons-sm">
+                                        <span class="social-label">Share:</span>
+                                        <a href="#" class="social-icon" title="Facebook" target="_blank"><i class="icon-facebook-f"></i></a>
+                                        <a href="#" class="social-icon" title="Twitter" target="_blank"><i class="icon-twitter"></i></a>
+                                        <a href="#" class="social-icon" title="Instagram" target="_blank"><i class="icon-instagram"></i></a>
+                                        <a href="#" class="social-icon" title="Pinterest" target="_blank"><i class="icon-pinterest"></i></a>
+                                    </div>
+                                </div><!-- End .product-details-footer -->
+                            </div><!-- End .product-details -->
                         </div>
                     </div>
-                </div><!-- End .col-md-6 -->
-
-                <div class="col-md-6">
-                    <div class="product-details">
-                        <h1 class="product-title">Dark yellow lace cut out swing dress</h1><!-- End .product-title -->
-
-                        <div class="ratings-container">
-                            <div class="ratings">
-                                <div class="ratings-val" style="width: 80%;"></div><!-- End .ratings-val -->
-                            </div><!-- End .ratings -->
-                            <a class="ratings-text" href="#product-review-link" id="review-link">( 2 Reviews )</a>
-                        </div><!-- End .rating-container -->
-
-                        <div class="product-price">
-                            $84.00
-                        </div><!-- End .product-price -->
-
-                        <div class="product-content">
-                            <p>Sed egestas, ante et vulputate volutpat, eros pede semper est, vitae luctus metus libero eu augue. Morbi purus libero, faucibus adipiscing. Sed lectus. </p>
-                        </div><!-- End .product-content -->
-
-                        <div class="details-filter-row details-row-size">
-                            <label>Color:</label>
-
-                            <div class="product-nav product-nav-thumbs">
-                                <a href="#" class="active">
-                                    <img src="{{ staticAsset('frontend/skinoasis/assets/images/products/single/1-thumb.jpg') }}" alt="product desc">
-                                </a>
-                                <a href="#">
-                                    <img src="{{ staticAsset('frontend/skinoasis/assets/images/products/single/2-thumb.jpg') }}" alt="product desc">
-                                </a>
-                            </div><!-- End .product-nav -->
-                        </div><!-- End .details-filter-row -->
-
-                        <div class="details-filter-row details-row-size">
-                            <label for="size">Size:</label>
-                            <div class="select-custom">
-                                <select name="size" id="size" class="form-control">
-                                    <option value="#" selected="selected">Select a size</option>
-                                    <option value="s">Small</option>
-                                    <option value="m">Medium</option>
-                                    <option value="l">Large</option>
-                                    <option value="xl">Extra Large</option>
-                                </select>
-                            </div><!-- End .select-custom -->
-
-                            <a href="#" class="size-guide"><i class="icon-th-list"></i>size guide</a>
-                        </div><!-- End .details-filter-row -->
-
-                        <div class="details-filter-row details-row-size">
-                            <label for="qty">Qty:</label>
-                            <div class="product-details-quantity">
-                                <input type="number" id="qty" class="form-control" value="1" min="1" max="10" step="1" data-decimals="0" required>
-                            </div><!-- End .product-details-quantity -->
-                        </div><!-- End .details-filter-row -->
-
-                        <div class="product-details-action">
-                            <a href="#" class="btn-product btn-cart"><span>add to cart</span></a>
-
-                            <div class="details-action-wrapper">
-                                <a href="#" class="btn-product btn-wishlist" title="Wishlist"><span>Add to Wishlist</span></a>
-                                <a href="#" class="btn-product btn-compare" title="Compare"><span>Add to Compare</span></a>
-                            </div><!-- End .details-action-wrapper -->
-                        </div><!-- End .product-details-action -->
-
-                        <div class="product-details-footer">
-                            <div class="product-cat">
-                                <span>Category:</span>
-                                <a href="#">Women</a>,
-                                <a href="#">Dresses</a>,
-                                <a href="#">Yellow</a>
-                            </div><!-- End .product-cat -->
-
-                            <div class="social-icons social-icons-sm">
-                                <span class="social-label">Share:</span>
-                                <a href="#" class="social-icon" title="Facebook" target="_blank"><i class="icon-facebook-f"></i></a>
-                                <a href="#" class="social-icon" title="Twitter" target="_blank"><i class="icon-twitter"></i></a>
-                                <a href="#" class="social-icon" title="Instagram" target="_blank"><i class="icon-instagram"></i></a>
-                                <a href="#" class="social-icon" title="Pinterest" target="_blank"><i class="icon-pinterest"></i></a>
-                            </div>
-                        </div><!-- End .product-details-footer -->
-                    </div><!-- End .product-details -->
                 </div><!-- End .col-md-6 -->
             </div><!-- End .row -->
         </div><!-- End .product-details-top -->
