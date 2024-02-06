@@ -228,8 +228,8 @@
                 <div class="tab-pane fade" id="product-info-tab" role="tabpanel" aria-labelledby="product-info-link">
                     <div class="product-desc-content">
                         <h6 class="mb-2">{{ localize('Additional Information') }}:</h6>
-                        @if (generateVariationOptions($product->variation_combinations) as $variation)
                         <table class="w-100 product-info-table">
+                            @foreach (generateVariationOptions($product->variation_combinations) as $variation)
                             <tr>
                                 <td class="text-dark fw-semibold">{{ $variation['name'] }}</td>
                                 <td>
@@ -240,8 +240,8 @@
                                     @endforeach
                                 </td>
                             </tr>
+                            @endforeach
                         </table>
-                        @endif
 
                         @if ($product->additional_info)
                             {!! $product->additional_info !!}
