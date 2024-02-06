@@ -1,15 +1,15 @@
 @if (productBasePrice($product) == discountedProductBasePrice($product))
     @if (productBasePrice($product) == productMaxPrice($product))
-        <h3 class="fw-bold text-danger">{{ formatPrice(productBasePrice($product)) }}</h3>
+        <h4 class="fw-bold text-danger">{{ formatPrice(productBasePrice($product)) }}</h4>
     @else
-        <h3 class="fw-bold text-danger">{{ formatPrice(productBasePrice($product)) }} - {{ formatPrice(productMaxPrice($product)) }}</h3>
+        <h4 class="fw-bold text-danger">{{ formatPrice(productBasePrice($product)) }} - {{ formatPrice(productMaxPrice($product)) }}</h4>
 
     @endif
 @else
     @if (discountedProductBasePrice($product) == discountedProductMaxPrice($product))
-        <h3 class="fw-bold text-danger">{{ formatPrice(discountedProductBasePrice($product)) }}</h3>
+        <h4 class="fw-bold text-danger">{{ formatPrice(discountedProductBasePrice($product)) }}</h4>
     @else
-        <h3 class="fw-bold text-danger">{{ formatPrice(discountedProductBasePrice($product)) }} - {{ formatPrice(discountedProductMaxPrice($product)) }}</h3>
+        <h4 class="fw-bold text-danger">{{ formatPrice(discountedProductBasePrice($product)) }} - {{ formatPrice(discountedProductMaxPrice($product)) }}</h4>
     @endif
 
     @if (isset($br))
@@ -18,10 +18,10 @@
 
     @if (!isset($onlyPrice) || $onlyPrice == false)
         @if (productBasePrice($product) == productMaxPrice($product))
-            <h3
-                class="fw-bold deleted text-muted {{ isset($br) ? '' : 'ms-1' }}">{{ formatPrice(productBasePrice($product)) }}</h3>
+            <h4
+                class="fw-bold deleted text-muted {{ isset($br) ? '' : 'ms-1' }}">{{ formatPrice(productBasePrice($product)) }}</h4>
         @else
-            <h3 class="fw-bold deleted text-muted {{ isset($br) ? '' : 'ms-1' }}">{{ formatPrice(productBasePrice($product)) }} - {{ formatPrice(productMaxPrice($product)) }}</h3>
+            <h4 class="fw-bold deleted text-muted {{ isset($br) ? '' : 'ms-1' }}">{{ formatPrice(productBasePrice($product)) }} - {{ formatPrice(productMaxPrice($product)) }}</h4>
 
         @endif
     @endif
