@@ -69,7 +69,7 @@
                 @endphp
 
 
-                <button type="button" class="header-icon">
+                <button type="button" class="header-icon dropdown-toggle">
                     <i class="icon-shopping-cart"></i>
                     <span
                         class="cart-counter badge bg-primary rounded-circle p-2 {{ count($carts) > 0 ? '' : 'd-none' }}">{{ count($carts) }}</span>
