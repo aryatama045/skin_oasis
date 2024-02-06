@@ -1,4 +1,4 @@
-@extends('frontend.default.layouts.master')
+@extends('frontend.skinoasis.layouts.master')
 
 @section('title')
     {{ localize('Customer Dashboard') }} {{ getSetting('title_separator') }} {{ getSetting('system_title') }}
