@@ -27704,6 +27704,7 @@ blockquote::before {
 .order-history-table tr th,
 .order-history-table tr td {
     padding: 8px 24px;
+    font-size: 1.4rem;
 }
 .order-history-table tr .thumbnail img {
     width: 40px;
