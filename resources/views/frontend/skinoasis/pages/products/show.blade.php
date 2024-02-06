@@ -243,6 +243,7 @@
                             @endforeach
                         </table>
 
+                        <br><br>
                         @if ($product->additional_info)
                             {!! $product->additional_info !!}
                         @else
