@@ -158,10 +158,13 @@
                                                 </span>
                                             </button>
 
-                                            <button type="button" class="btn btn-primary btn-md"
-                                                onclick="addToWishlist({{ $product->id }})">
-                                                <i class="fa-solid fa-heart"></i>
-                                            </button>
+                                            <div class="details-action-wrapper">
+                                                <button type="button" class="btn-product btn-wishlist" title="Wishlist"
+                                                    onclick="addToWishlist({{ $product->id }})">
+                                                    <i class="fa-solid fa-heart"></i>
+                                                    <span>Add to Wishlist</span>
+                                                </button>
+                                            </div>
                                         </div>
 
                                         <div class="flex-grow-1"></div>
