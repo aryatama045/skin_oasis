@@ -1,4 +1,4 @@
-@extends('frontend.default.layouts.master')
+@extends('frontend.skinoasis.layouts.master')
 
 @section('title')
     {{ localize('Customer Addresses') }} {{ getSetting('title_separator') }} {{ getSetting('system_title') }}
@@ -8,11 +8,11 @@
     <section class="my-account pt-6 pb-120">
         <div class="container">
 
-            @include('frontend.default.pages.users.partials.customerHero')
+            @include('frontend.skinoasis.pages.users.partials.customerHero')
 
             <div class="row g-4">
                 <div class="col-xl-3">
-                    @include('frontend.default.pages.users.partials.customerSidebar')
+                    @include('frontend.skinoasis.pages.users.partials.customerSidebar')
                 </div>
 
                 <div class="col-xl-9">
@@ -30,7 +30,7 @@
                                         class="tt-address-content border p-3 rounded address-book-content pe-md-4 position-relative">
                                         <div class="address tt-address-info position-relative">
                                             <!-- address -->
-                                            @include('frontend.default.inc.address', [
+                                            @include('frontend.skinoasis.inc.address', [
                                                 'address' => $address,
                                             ])
                                             <!-- address -->
@@ -57,7 +57,7 @@
 
 
         <!--add address modal start-->
-        @include('frontend.default.inc.addressForm', ['countries' => $countries])
+        @include('frontend.skinoasis.inc.addressForm', ['countries' => $countries])
         <!--add address modal end-->
 
     </section>
