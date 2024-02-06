@@ -78,7 +78,7 @@
         <div class="mt-4 d-flex gap-2 flex-wrap">
             @foreach ($tags as $tag)
                 <a href="{{ route('products.index') }}?&tag_id={{ $tag->id }}"
-                    class="btn btn-outline btn-sm">{{ $tag->name }}</a>
+                    class="text-muted fs-xxs">{{ $tag->name }}</a>
             @endforeach
         </div>
     </div>
