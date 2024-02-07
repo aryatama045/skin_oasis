@@ -15,10 +15,10 @@
 
 @section('contents')
 
-    <!--breadcrumb-->
+    <!--pageHeader-->
     @include('frontend.skinoasis.inc.pageHeader',
             ['title' => 'Blogs'])
-    <!--breadcrumb-->
+    <!--pageHeader-->
 
     <!--breadcrumb-->
     @include('frontend.skinoasis.inc.breadcrumb')
