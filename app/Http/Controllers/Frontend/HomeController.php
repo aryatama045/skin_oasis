@@ -153,13 +153,13 @@ class HomeController extends Controller
     }
 
     # halo beauty page
-    public function haloBeauty()
+    public function halloBeauty()
     {
         $sliders = [];
         if (getSetting('hero_sliders') != null) {
             $sliders = json_decode(getSetting('hero_sliders'));
         }
-        return getView('pages.haloBeauty.index', ['sliders' => $sliders]);
+        return getView('pages.halloBeauty.index', ['sliders' => $sliders]);
     }
 
     # euterria nano academy page
