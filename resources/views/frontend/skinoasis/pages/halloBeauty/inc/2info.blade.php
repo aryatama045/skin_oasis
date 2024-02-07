@@ -20,8 +20,8 @@
                     </span>
 
                     <div class="icon-box-content">
-                        <h3 class="icon-box-title">Free Returns</h3><!-- End .icon-box-title -->
-                        <p>within 30 days</p>
+                        <h3 class="icon-box-title">PASIEN DILAYANI</h3><!-- End .icon-box-title -->
+                        <!-- <p>within 30 days</p> -->
                     </div><!-- End .icon-box-content -->
                 </div><!-- End .icon-box -->
             </div><!-- End .col-sm-4 col-lg-4 -->
@@ -33,8 +33,8 @@
                     </span>
 
                     <div class="icon-box-content">
-                        <h3 class="icon-box-title">Get 20% Off 1 Item</h3><!-- End .icon-box-title -->
-                        <p>When you sign up</p>
+                        <h3 class="icon-box-title">MITRA ASURANSI</h3><!-- End .icon-box-title -->
+                        <!-- <p>When you sign up</p> -->
                     </div><!-- End .icon-box-content -->
                 </div><!-- End .icon-box -->
             </div><!-- End .col-sm-4 col-lg-4 -->
