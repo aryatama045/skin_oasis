@@ -5,7 +5,7 @@
             <div class="row">
                 <div class="col-sm-6 col-lg-6">
                     <div class="widget widget-about">
-                        <img src="{{ staticAsset('frontend/skinoasis/assets/images/logo-black.png') }}" class="footer-logo" alt="Footer Logo" width="200" height="25">
+                        <img src="{{ uploadedAsset(getSetting('footer_logo')) }}" class="footer-logo" alt="Footer Logo" width="200" height="25">
                         <p>
                             <ol class="footer-about">
                                 <li> We take the doubt out of whether you need by provide a safe, high quality, high efficacy products</li>
@@ -54,12 +54,13 @@
 
     <div class="footer-bottom mb-5">
         <div class="container">
-            <p class="footer-copyright">Copyright © {{ date('Y') }} Skinoasis.</p><!-- End .footer-copyright -->
+            <p class="footer-copyright">Copyrightc{{ date('Y') }} ©{!! getSetting('copyright_text') !!}.</p><!-- End .footer-copyright -->
             <ul class="footer-menu">
                 <li><a href="https://skinoasis.solusiitkreasi.com/pages/kebijakan-privasi">Kebijakan Privasi</a></li>
                 <li><a href="https://skinoasis.solusiitkreasi.com/pages/terms-conditions">Syarat & Ketentuan</a></li>
                 <li>
-                    <img src="https://scarlettwhitening.com/_next/static/media/bank_transfer.df4f2d18.svg">
+                    <img src="{{ uploadedAsset(getSetting('accepted_payment_banner')) }}">
+                    <!-- <img src="https://scarlettwhitening.com/_next/static/media/bank_transfer.df4f2d18.svg"> -->
                 </li>
             </ul><!-- End .footer-menu -->
 
