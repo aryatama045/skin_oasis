@@ -17,7 +17,7 @@
 
     <!--pageHeader-->
     @include('frontend.skinoasis.inc.pageHeader',
-            ['title' => {{ optional($blog->blog_category)->name }}])
+            ['title' => optional($blog->blog_category)->name])
     <!--pageHeader-->
 
     <!--breadcrumb-->
