@@ -5,10 +5,10 @@
 @endsection
 
 @section('breadcrumb-contents')
-    <ol class="breadcrumb ">
-        <li class="breadcrumb-item fw-bold" aria-current="page"><a
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a
                 href="{{ route('home') }}">{{ localize('Home') }}</a></li>
-        <li class="breadcrumb-item fw-bold" aria-current="page">Partner</li>
+        <li class="breadcrumb-item">Partner</li>
     </ol>
 @endsection
 
