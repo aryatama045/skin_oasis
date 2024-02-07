@@ -17,7 +17,7 @@
 
     <!--pageHeader-->
     @include('frontend.skinoasis.inc.pageHeader',
-            ['title' => getSetting('system_title')])
+            ['title' => {{ optional($blog->blog_category)->name }}])
     <!--pageHeader-->
 
     <!--breadcrumb-->
@@ -25,7 +25,7 @@
     <!--breadcrumb-->
 
     <!--blog details start-->
-    <section class="blog-details ptb-120">
+    <section class="blog-details ptb-20">
         <div class="container">
             <div class="row g-4">
                 <div class="col-xl-8">
