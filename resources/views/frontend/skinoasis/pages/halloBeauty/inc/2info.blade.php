@@ -1,4 +1,4 @@
-<div class="icon-boxes-hello-beauty">
+<div class="icon-box icon-boxes-hello-beauty">
     <div class="container">
         <div class="row">
             <div class="col-sm-4 col-lg-4">

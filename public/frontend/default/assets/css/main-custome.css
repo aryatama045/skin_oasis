@@ -28253,8 +28253,8 @@ blockquote::before {
     text-align: justify;
 }
 
-.icon-boxes-hallo-beauty {
-    background-color: #FBE18A;
+.icon-boxes-container {
+    background-color: #FBE18A !important;
     padding-top: 2.8rem;
     padding-bottom: 2.8rem;
     margin-bottom: 0;
