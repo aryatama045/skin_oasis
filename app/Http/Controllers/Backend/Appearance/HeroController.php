@@ -42,6 +42,7 @@ class HeroController extends Controller
                 $sliders            = json_decode($sliderImage->value);
                 $newSlider          = new MediaManager; //temp obj
                 $newSlider->id      = rand(100000, 999999);
+                $newSlider->display_on = $request->display_on ?  $request->display_on : '';
                 $newSlider->sub_title   = $request->sub_title ? $request->sub_title : '';
                 $newSlider->title       = $request->title ? $request->title : '';
                 $newSlider->text        = $request->text ? $request->text : '';
@@ -61,6 +62,7 @@ class HeroController extends Controller
                 $value                  = [];
                 $newSlider              = new MediaManager; //temp obj
                 $newSlider->id          = rand(100000, 999999);
+                $newSlider->display_on = $request->display_on ?  $request->display_on : '';
                 $newSlider->sub_title   = $request->sub_title ? $request->sub_title : '';
                 $newSlider->title       = $request->title ? $request->title : '';
                 $newSlider->text        = $request->text ? $request->text : '';
@@ -83,6 +85,7 @@ class HeroController extends Controller
             $value              = [];
             $newSlider          = new MediaManager; //temp obj
             $newSlider->id      = rand(100000, 999999);
+            $newSlider->display_on = $request->display_on ?  $request->display_on : '';
             $newSlider->sub_title   = $request->sub_title ? $request->sub_title : '';
             $newSlider->title       = $request->title ? $request->title : '';
             $newSlider->text        = $request->text ? $request->text : '';
@@ -120,6 +123,7 @@ class HeroController extends Controller
 
         foreach ($sliders as $slider) {
             if ($slider->id == $request->id) {
+                $slider->display_on = $request->display_on ?  $request->display_on : '';
                 $slider->sub_title  = $request->sub_title;
                 $slider->title      = $request->title;
                 $slider->text       = $request->text;

@@ -41,6 +41,20 @@
                         <div class="card mb-4">
                             <div class="card-body">
                                 <div class="mb-4">
+                                    <label for="sub_title" class="form-label">Banner akan ditampilkan di?</label>
+                                    <select class="select2 form-control" name="display_on" required>
+                                        <option value="{{ $slider->display_on }}"
+                                            {{ $slider->display_on ? 'selected' : '' }}>
+                                            {{ $slider->display_on == 1 ? 'Home Page' : 'Halo Beauty' }}
+                                        </option>
+                                        <option value="0">-- Akan ditampilkan di? --</option>
+                                        <option value="1">Home Page</option>
+                                        <option value="2">Halo Beauty</option>
+                                        <!-- <option value="3">Lainnya</option> -->
+                                    </select>
+                                </div>
+
+                                <div class="mb-4">
                                     <label for="sub_title" class="form-label">{{ localize('Sub Title') }}</label>
                                     <input type="text" name="sub_title" id="sub_title"
                                         placeholder="{{ localize('Type sub title') }}" class="form-control"
