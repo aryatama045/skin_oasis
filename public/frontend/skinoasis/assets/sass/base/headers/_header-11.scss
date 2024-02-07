@@ -92,7 +92,7 @@
 	background-color: transparent;
 
 	.header-middle {
-		border-bottom-color: rgba(#fafafa, .2);
+		border-bottom-color: rgb(250 250 250 / 0%);
 	}
 
 	.header-left,
@@ -210,13 +210,13 @@
 @include mq('xl') {
 	.header-11 {
 		.menu > li:not(:last-child) {
-		margin-right: 3rem;
+		margin-right: 1.2rem;
 		}
 	}
 
 	.header-hallo-beauty {
 		.menu > li:not(:last-child) {
-		margin-right: 3rem;
+		margin-right: 1.2rem;
 		}
 	}
 }
