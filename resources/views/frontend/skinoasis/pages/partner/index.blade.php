@@ -16,7 +16,7 @@
 
     <!--pageheader-->
     @include('frontend.skinoasis.inc.pageHeader',
-            ['title'=> getSetting('system_title')])
+            ['title'=> 'Partner'])
     <!--pageheader-->
 
     <!--breadcrumb-->
