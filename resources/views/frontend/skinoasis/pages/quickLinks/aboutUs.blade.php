@@ -14,7 +14,7 @@
             ])
     <!--hero section end-->
 
-    <div class="container bg-white">
+    <div class="container bg-white mb-10">
         <div class="row">
             <div class="col-lg-10 offset-lg-1">
                 <div class="about-text-header ">
@@ -26,7 +26,7 @@
         <div class="row justify-content-center">
             <div class="col-lg-6 col-sm-12">
                 <div class="clearfix">
-                    <img src="{{ staticAsset('frontend/skinoasis/assets/images/banner1.png') }}" class="col-md-6 float-md-end mb-3 ms-md-3" alt="...">
+                    <img src="{{ staticAsset('frontend/skinoasis/assets/images/banner1.png') }}" class="col-md-6 float-md-start mb-3 ms-md-3" alt="...">
 
                     <p>
                         A paragraph of placeholder text. We're using it here to show the use of the clearfix class. We're adding quite a few meaningless phrases here to demonstrate how the columns interact here with the floated image.
