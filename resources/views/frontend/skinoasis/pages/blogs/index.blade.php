@@ -28,10 +28,10 @@
     <section class="blog-listing-section ptb-20">
         <div class="container">
             <div class="row g-4">
-                <div class="col-xl-4 col-xl-pull-8">
+                <div class="col-xl-4 col-xl-push-8">
                     @include('frontend.skinoasis.pages.partials.blogs.blogSidebar')
                 </div>
-                <div class="col-xl-8 col-xl-push-4">
+                <div class="col-xl-8 col-xl-pull-4">
                     <div class="blog-listing">
 
                         @foreach ($blogs as $blog)
