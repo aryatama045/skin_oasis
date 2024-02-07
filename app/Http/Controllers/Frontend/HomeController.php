@@ -159,7 +159,7 @@ class HomeController extends Controller
         if (getSetting('hero_sliders') != null) {
             $sliders = json_decode(getSetting('hero_sliders'));
         }
-        return getView('pages.quickLinks.haloBeauty', ['sliders' => $sliders]);
+        return getView('pages.haloBeauty.index', ['sliders' => $sliders]);
     }
 
     # euterria nano academy page
