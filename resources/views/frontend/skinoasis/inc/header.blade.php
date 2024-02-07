@@ -1,5 +1,10 @@
 <!-- Header -->
-<header class="header @if(!empty(Route::current()->getName())) @if(Route::current()->getName() == 'home') header-11 @endif  @endif">
+<header class="header
+    @if(!empty(Route::current()->getName()))
+        @if(Route::current()->getName() == 'home' || Route::current()->getName() == 'home.pages.halloBeauty' )
+            header-11
+        @endif
+    @endif">
     <div class="header-middle ">
         <div class="container">
             <div class="header-center">
