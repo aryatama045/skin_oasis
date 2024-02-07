@@ -26,7 +26,7 @@
     }'>
 
     @foreach($brands as $brandPrd)
-        <a href="#" class="brand">
+        <a class="brand" href="{{ route('products.index') }}?&brand_id={{ $brandPrd->id }}">
             <img src="{{ uploadedAsset($brandPrd->brand_image) }}" alt="Brand Name">
         </a>
     @endforeach

@@ -2,8 +2,7 @@
     <!--Filter by search-->
     <div class="sidebar-widget search-widget bg-white py-5 px-4">
         <div class="widget-title d-flex">
-            <h6 class="mb-0 flex-shrink-0">{{ localize('Search Now') }}</h6>
-            <span class="hr-line w-100 position-relative d-block align-self-end ms-1"></span>
+            <h4 class="mb-0 flex-shrink-0">{{ localize('Search Now') }}</h4>
         </div>
         <div class="search-form d-flex align-items-center mt-4">
             <input type="hidden" name="view" value="{{ request()->view }}">
@@ -18,10 +17,9 @@
     </div>
     <!--Filter by search-->
     <!--Filter by Categories-->
-    <div class="sidebar-widget category-widget bg-white py-5 px-4 border-top mobile-menu-wrapper scrollbar h-400px">
+    <div class="sidebar-widget category-widget bg-white py-5 px-4 border-top mobile-menu-wrapper scrollbar h-200px">
         <div class="widget-title d-flex">
-            <h6 class="mb-0 flex-shrink-0">{{ localize('Categories') }}</h6>
-            <span class="hr-line w-100 position-relative d-block align-self-end ms-1"></span>
+            <h4 class="mb-0 flex-shrink-0">{{ localize('Categories') }}</h4>
         </div>
         <ul class="widget-nav mt-4">
 
@@ -42,11 +40,32 @@
     </div>
     <!--Filter by Categories-->
 
+    <!--Filter by Brand-->
+    <div class="sidebar-widget category-widget bg-white py-5 px-4 border-top mobile-menu-wrapper scrollbar h-200px">
+        <div class="widget-title d-flex">
+            <h4 class="mb-0 flex-shrink-0">Brand</h4>
+        </div>
+        <ul class="widget-nav mt-4">
+
+            @php
+                $brands = \App\Models\Brand::get();
+            @endphp
+            @foreach ($brands as $merk)
+                <li>
+                    <a href="{{ route('products.index') }}?&brand_id={{ $merk->id }}"
+                        class="d-flex justify-content-between align-items-center">{{ $merk->collectLocalization('name') }}
+                    </a>
+                </li>
+            @endforeach
+
+        </ul>
+    </div>
+    <!--Filter by Brand-->
+
     <!--Filter by Price-->
     <div class="sidebar-widget price-filter-widget bg-white py-5 px-4 border-top">
         <div class="widget-title d-flex">
-            <h6 class="mb-0 flex-shrink-0">{{ localize('Filter by Price') }}</h6>
-            <span class="hr-line w-100 position-relative d-block align-self-end ms-1"></span>
+            <h4 class="mb-0 flex-shrink-0">{{ localize('Filter by Price') }}</h4>
         </div>
         <div class="at-pricing-range mt-4">
             <form class="range-slider-form">
@@ -72,13 +91,11 @@
     <!--Filter by Tags-->
     <div class="sidebar-widget tags-widget py-5 px-4 bg-white">
         <div class="widget-title d-flex">
-            <h6 class="mb-0">{{ localize('Tags') }}</h6>
-            <span class="hr-line w-100 position-relative d-block align-self-end ms-1"></span>
+            <h4 class="mb-0">{{ localize('Tags') }}</h4>
         </div>
         <div class="tt-category-tag mt-4 mt-4 d-flex gap-2 flex-wrap">
             @foreach ($tags as $tag)
-                <a href="{{ route('products.index') }}?&tag_id={{ $tag->id }}"
-                    class="text-muted fs-xxs">{{ $tag->name }}</a>
+                <a href="{{ route('products.index') }}?&tag_id={{ $tag->id }}" style="color: black;">{{ $tag->name }}</a>
             @endforeach
         </div>
     </div>

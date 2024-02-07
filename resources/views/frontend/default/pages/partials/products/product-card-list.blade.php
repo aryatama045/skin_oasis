@@ -5,7 +5,7 @@
     @endphp
 
     @if ($discountPercentage > 0)
-        <span class="offer-badge text-white fw-bold fs-xxs bg-danger position-absolute start-0 top-0">
+        <span class="offer-badge text-white fw-bold fs-xs bg-danger position-absolute start-0 top-0">
             -{{ discountPercentage($product) }}% <span class="text-uppercase">{{ localize('Off') }}</span>
         </span>
     @endif
