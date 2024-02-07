@@ -115,7 +115,7 @@
 
 		&:not(:hover):not(.show) {
 			.dropdown-toggle {
-				color: #070707;
+				color: #201e1e;
 			}
 		}
 
@@ -136,7 +136,7 @@
 	.wishlist-link:not(:hover):not(:focus),
 	.menu > li:not(:hover):not(.active):not(.show) > a,
 	.mobile-menu-toggler {
-		color: #fff;
+		color: #201e1e;
 	}
 
 	.logo {
