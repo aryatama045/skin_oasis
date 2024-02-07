@@ -54,10 +54,13 @@
 
     <div class="footer-bottom mb-5">
         <div class="container">
-            <p class="footer-copyright">Copyright © {{ date('Y') }} Skinoasis. All Rights Reserved.</p><!-- End .footer-copyright -->
+            <p class="footer-copyright">Copyright © {{ date('Y') }} Skinoasis.</p><!-- End .footer-copyright -->
             <ul class="footer-menu">
-                <li><a href="#">Terms Of Use</a></li>
-                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="https://skinoasis.solusiitkreasi.com/pages/kebijakan-privasi">Kebijakan Privasi</a></li>
+                <li><a href="https://skinoasis.solusiitkreasi.com/pages/terms-conditions">Syarat & Ketentuan</a></li>
+                <li>
+                    <img src="https://scarlettwhitening.com/_next/static/media/bank_transfer.df4f2d18.svg">
+                </li>
             </ul><!-- End .footer-menu -->
 
             <div class="social-icons social-icons-color">
