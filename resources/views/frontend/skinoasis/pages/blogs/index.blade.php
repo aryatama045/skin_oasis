@@ -25,7 +25,7 @@
     <!--breadcrumb-->
 
     <!--blog details start-->
-    <section class="blog-listing-section ptb-120">
+    <section class="blog-listing-section ptb-20">
         <div class="container">
             <div class="row g-4">
                 <div class="col-xl-8">
