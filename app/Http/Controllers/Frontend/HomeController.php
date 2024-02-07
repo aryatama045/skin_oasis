@@ -131,6 +131,47 @@ class HomeController extends Controller
         return getView('pages.quickLinks.aboutUs', ['features' => $features, 'why_choose_us' => $why_choose_us, 'sliders' => $sliders]);
     }
 
+    # partner page
+    public function partner()
+    {
+        $features = [];
+        if (getSetting('about_us_features') != null) {
+            $features = json_decode(getSetting('about_us_features'));
+        }
+
+        $why_choose_us = [];
+        if (getSetting('about_us_why_choose_us') != null) {
+            $why_choose_us = json_decode(getSetting('about_us_why_choose_us'));
+        }
+
+        $sliders = [];
+        if (getSetting('hero_sliders') != null) {
+            $sliders = json_decode(getSetting('hero_sliders'));
+        }
+
+        return getView('pages.partner.index', ['features' => $features, 'why_choose_us' => $why_choose_us, 'sliders' => $sliders]);
+    }
+
+    # halo beauty page
+    public function haloBeauty()
+    {
+        $sliders = [];
+        if (getSetting('hero_sliders') != null) {
+            $sliders = json_decode(getSetting('hero_sliders'));
+        }
+        return getView('pages.quickLinks.haloBeauty', ['sliders' => $sliders]);
+    }
+
+    # euterria nano academy page
+    public function euterriaNanoAcademy()
+    {
+        $sliders = [];
+        if (getSetting('hero_sliders') != null) {
+            $sliders = json_decode(getSetting('hero_sliders'));
+        }
+        return getView('pages.quickLinks.euterriaNanoAcademy', ['sliders' => $sliders]);
+    }
+
     # contact us page
     public function contactUs()
     {
