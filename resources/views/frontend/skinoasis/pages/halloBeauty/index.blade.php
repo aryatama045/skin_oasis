@@ -6,19 +6,19 @@
 
 @section('contents')
     <!--hero section start-->
-    @include('frontend.skinoasis.pages.haloBeauty.inc.1hero')
+    @include('frontend.skinoasis.pages.halloBeauty.inc.1hero')
     <!--hero section end-->
 
     <!--brand section start-->
-    @include('frontend.skinoasis.pages.haloBeauty.inc.2info')
+    @include('frontend.skinoasis.pages.halloBeauty.inc.2info')
     <!--brand section end-->
 
     <!--banner section start-->
-    @include('frontend.skinoasis.pages.haloBeauty.inc.3welcome')
+    @include('frontend.skinoasis.pages.halloBeauty.inc.3welcome')
     <!--banner section end-->
 
     <!--bestdeal section start-->
-    @include('frontend.skinoasis.pages.haloBeauty.inc.4banner')
+    @include('frontend.skinoasis.pages.halloBeauty.inc.4banner')
     <!--bestdeal section end-->
 
 @endsection
