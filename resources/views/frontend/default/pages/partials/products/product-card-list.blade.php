@@ -52,16 +52,6 @@
             ])
         </h6>
 
-
-        {{-- @isset($showSold) --}}
-        <div class="card-progressbar mt-3 mb-2 rounded-pill">
-            <span class="card-progress bg-primary" data-progress="{{ sellCountPercentage($product) }}%"
-                style="width: {{ sellCountPercentage($product) }}%;"></span>
-        </div>
-        <p class="mb-0 fw-semibold">{{ localize('Total Sold') }}: <span
-                class="fw-bold text-secondary">{{ $product->total_sale_count }}/{{ $product->sell_target }}</span></p>
-        {{-- @endisset --}}
-
         @php
             $isVariantProduct = 0;
             $stock = 0;
