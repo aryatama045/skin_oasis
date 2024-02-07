@@ -14,52 +14,56 @@
 @endsection
 
 @section('contents')
+
+    <!--pageHeader-->
+    @include('frontend.skinoasis.inc.pageHeader',
+            ['title' => getSetting('system_title')])
+    <!--pageHeader-->
+
     <!--breadcrumb-->
     @include('frontend.skinoasis.inc.breadcrumb')
     <!--breadcrumb-->
 
     <!--blog details start-->
-    <section class="blog-listing-section ptb-120">
+    <section class="blog-details ptb-120">
         <div class="container">
             <div class="row g-4">
                 <div class="col-xl-8">
-                    <div class="blog-listing">
+                    <div class="blog-details-content bg-white rounded-2 py-6 px-5">
+                        <div class="thumbnail rounded-2 overflow-hidden">
+                            <img src="{{ uploadedAsset($blog->banner) }}" alt="{{ $blog->collectLocalization('title') }}"
+                                class="img-fluid">
+                        </div>
+                        <div class="blog-meta d-flex align-items-center gap-3 flex-wrap mt-5">
+                            <span class="fs-xs fw-medium"><i
+                                    class="fa-solid fa-tags me-1"></i>{{ optional($blog->blog_category)->name }}</span>
+                            <span class="fs-xs fw-medium"><i
+                                    class="fa-regular fa-clock me-1"></i>{{ date('M d, Y', strtotime($blog->created_at)) }}</span>
 
-                        @foreach ($blogs as $blog)
-                            <article class="blog-card rounded-2 overflow-hidden bg-white p-5">
-                                <div class="thumbnail overflow-hidden">
-                                    <a href="{{ route('home.blogs.show', $blog->slug) }}">
-                                        <img src="{{ uploadedAsset($blog->banner) }}"
-                                            alt="{{ $blog->collectLocalization('title') }}" class="img-fluid rounded-top">
-                                    </a>
-                                </div>
-                                <div class="blog-card-content p-0 mt-4">
-                                    <div class="blog-meta d-flex align-items-center gap-3 mb-2">
-                                        <span class="fs-xs fw-medium"><i
-                                                class="fa-solid fa-tags me-1"></i>{{ optional($blog->blog_category)->name }}</span>
-                                        <span class="fs-xs fw-medium"><i
-                                                class="fa-regular fa-clock me-1"></i>{{ date('M d, Y', strtotime($blog->created_at)) }}</span>
-                                    </div>
-                                    <a href="{{ route('home.blogs.show', $blog->slug) }}">
-                                        <h2 class="h4 mb-3">{{ $blog->collectLocalization('title') }}</h2>
-                                    </a>
-                                    <p class="mb-0 mb-5">
-                                        {{ $blog->short_description }}
-                                    </p>
-                                    <a href="{{ route('home.blogs.show', $blog->slug) }}"
-                                        class="btn btn-outline-primary btn-md">{{ localize('Explore More') }}<span
-                                            class="ms-2"><i class="fas fa-arrow-right"></i></span></a>
-                                </div>
-                            </article>
-                        @endforeach
+                        </div>
+                        <span class="hr-line w-100 position-relative d-block my-4"></span>
 
-                        <div class="mt-5">
-                            {{ $blogs->appends(request()->input())->links() }}
+                        {!! $blog->collectLocalization('description') !!}
+
+                        <div class="tags-social d-flex align-items-center justify-content-between flex-wrap gap-4 mt-6">
+                            <div class="tags-list d-flex align-items-center gap-2 flex-wrap">
+                                <span class="title text-secondary fw-bold me-2">Tags:</span>
+
+                                @foreach ($blog->tags as $tag)
+                                    <a href="javacript:void(0);">{{ $tag->name }}</a>
+                                @endforeach
+                            </div>
+                            <div class="bs_social_share d-none">
+                                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fab fa-behance"></i></a>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-xl-4">
-                    @include('frontend.skinoasis.pages.partials.blogs.blogSidebar')
+                    @include('frontend.default.pages.partials.blogs.blogSidebar')
                 </div>
             </div>
 
