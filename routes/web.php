@@ -89,6 +89,9 @@ Route::get('/coupons', [HomeController::class, 'allCoupons'])->name('home.coupon
 
 # pages
 Route::get('/pages/about-us', [HomeController::class, 'aboutUs'])->name('home.pages.aboutUs');
+Route::get('/pages/partner', [HomeController::class, 'partner'])->name('home.pages.partner');
+Route::get('/pages/hallo-beauty', [HomeController::class, 'halloBeauty'])->name('home.pages.halloBeauty');
+Route::get('/pages/euterria-nano-academy', [HomeController::class, 'euterriaNanoAcademy'])->name('home.pages.euterriaNanoAcademy');
 Route::get('/pages/contact-us', [HomeController::class, 'contactUs'])->name('home.pages.contactUs');
 Route::get('/pages/{slug}', [HomeController::class, 'showPage'])->name('home.pages.show');
 
