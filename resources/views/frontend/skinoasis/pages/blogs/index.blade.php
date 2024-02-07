@@ -14,6 +14,12 @@
 @endsection
 
 @section('contents')
+
+    <!--breadcrumb-->
+    @include('frontend.skinoasis.inc.pageHeader',
+            ['title' => 'Blogs'])
+    <!--breadcrumb-->
+
     <!--breadcrumb-->
     @include('frontend.skinoasis.inc.breadcrumb')
     <!--breadcrumb-->
