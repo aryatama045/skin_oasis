@@ -1,5 +1,5 @@
 <!-- Slider -->
-<div class="intro-slider-container mb-3 mb-lg-5">
+<div class="intro-slider-container">
     <div class="intro-slider owl-carousel owl-theme owl-nav-inside owl-light" data-toggle="owl" data-owl-options='{"dots": true, "nav": false}'>
 
     @foreach ($sliders as $slider)
