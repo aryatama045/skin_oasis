@@ -1,7 +1,7 @@
 <!-- Header -->
 <header class="header
     @if(!empty(Route::current()->getName()))
-        @if(Route::current()->getName() == 'home' || Route::current()->getName() == 'home.pages.halloBeauty' )
+        @if(Route::current()->getName() == 'home' || Route::current()->getName() == 'home.pages.halloBeauty' || Route::current()->getName() == 'home.pages.aboutUs')
             header-11
         @endif
     @endif">
@@ -10,7 +10,7 @@
             <div class="header-center">
                 <a href="{{ route('home') }}" class="logo">
                     @if(!empty(Route::current()->getName()))
-                        @if(Route::current()->getName() == 'home')
+                        @if(Route::current()->getName() == 'home' || Route::current()->getName() == 'home.pages.halloBeauty' || Route::current()->getName() == 'home.pages.aboutUs')
                             <img src="{{ staticAsset('frontend/skinoasis/assets/images/logo.png') }}" alt="SKINOASIS Logo" width="200" height="25">
                         @else
                         <img src="{{ staticAsset('frontend/skinoasis/assets/images/logo-black.png') }}" alt="SKINOASIS Logo" width="200" height="25">
