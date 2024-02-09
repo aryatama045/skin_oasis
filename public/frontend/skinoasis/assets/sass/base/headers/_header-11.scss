@@ -176,8 +176,8 @@
     background-repeat: no-repeat;
 
     .banner-content {
-        left: 27.6%;
-        margin-top: 1.7rem;
+        left: 2rem;
+        margin-top: -5rem;
         max-width: 390px;
         font-size: 1rem;
     }
@@ -185,13 +185,16 @@
     .banner-subtitle {
         margin-bottom: .7rem;
         font-size: 1.6rem;
+		.text-secondary{
+			color: #151616 !important;
+		}
     }
 
     .banner-title {
-        max-width: 320px;
         margin: 0 auto;
-        font-size: 6em;
         line-height: 6rem;
+		font-size: 4rem;
+		font-weight: 700;
     }
 
     .wave-img {
