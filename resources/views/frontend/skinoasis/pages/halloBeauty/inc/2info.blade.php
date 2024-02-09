@@ -1,7 +1,7 @@
 <div class="icon-boxes-container">
     <div class="container">
         <div class="row">
-            <div class="col-sm-4 col-lg-4">
+            <div class="col-xs-4 col-sm-4 col-lg-4">
                 <div class="icon-box-hb icon-box-side">
                     <span class="icon-box-icon text-dark">
                         <i class="icon-rocket"></i>
@@ -11,9 +11,9 @@
                         <!-- <p>orders $50 or more</p> -->
                     </div><!-- End .icon-box-content -->
                 </div><!-- End .icon-box -->
-            </div><!-- End .col-sm-4 col-lg-4 -->
+            </div><!-- End .col-xs-4 col-sm-4 col-lg-4 -->
 
-            <div class="col-sm-4 col-lg-4">
+            <div class="col-xs-4 col-sm-4 col-lg-4">
                 <div class="icon-box-hb icon-box-side">
                     <span class="icon-box-icon text-dark">
                         <i class="icon-rotate-left"></i>
@@ -24,9 +24,9 @@
                         <!-- <p>within 30 days</p> -->
                     </div><!-- End .icon-box-content -->
                 </div><!-- End .icon-box -->
-            </div><!-- End .col-sm-4 col-lg-4 -->
+            </div><!-- End .col-xs-4 col-sm-4 col-lg-4 -->
 
-            <div class="col-sm-4 col-lg-4">
+            <div class="col-xs-4 col-sm-4 col-lg-4">
                 <div class="icon-box-hb icon-box-side">
                     <span class="icon-box-icon text-dark">
                         <i class="icon-info-circle"></i>
@@ -37,7 +37,7 @@
                         <!-- <p>When you sign up</p> -->
                     </div><!-- End .icon-box-content -->
                 </div><!-- End .icon-box -->
-            </div><!-- End .col-sm-4 col-lg-4 -->
+            </div><!-- End .col-xs-4 col-sm-4 col-lg-4 -->
 
         </div><!-- End .row -->
     </div><!-- End .container -->
