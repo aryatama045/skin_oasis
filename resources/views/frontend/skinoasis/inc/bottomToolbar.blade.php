@@ -1,8 +1,9 @@
 <div class="mobile-toolbar d-block d-md-none d-lg-none">
     <div class="d-table table-layout-fixed w-100">
-        <a class="d-table-cell mobile-toolbar-item  mobile-menu-toggle">
-            <span class="mobile-toolbar-icon"><i class="fas fa-bars"></i></span><span
-                class="mobile-toolbar-label">{{ localize('Category') }}
+        <a href="{{ route('home') }}" class="d-table-cell mobile-toolbar-item  mobile-menu-toggle">
+            <span class="mobile-toolbar-icon"><i class="fas fa-home"></i></span>
+            <span class="mobile-toolbar-label">
+                {{ localize('Home') }}
             </span>
         </a>
         <div class="gshop-header-search dropdown d-table-cell mobile-toolbar-item">
