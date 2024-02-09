@@ -167,7 +167,60 @@
 	}
 }
 
+//banner-big
+.banner-big {
+    position: relative;
+    height: 700px;
+    background-position: -.7rem center;
+    background-size: cover;
+    background-repeat: no-repeat;
 
+    .banner-content {
+        left: 27.6%;
+        margin-top: 1.7rem;
+        max-width: 390px;
+        font-size: 1rem;
+    }
+
+    .banner-subtitle {
+        margin-bottom: .7rem;
+        font-size: 1.6rem;
+    }
+
+    .banner-title {
+        max-width: 320px;
+        margin: 0 auto;
+        font-size: 6em;
+        line-height: 6rem;
+    }
+
+    .wave-img {
+        padding-top: .3rem;
+    }
+
+    p:last-of-type {    
+        margin-bottom: 3.1rem;
+        font-family: inherit;
+        font-size: 1.8em;
+        line-height: 3rem;
+        color: #222;
+    }
+
+    img {
+        margin: 0 auto;
+    }
+
+    .btn {
+        min-width: 20rem;
+        padding-top: 1.1rem;
+        padding-bottom: 1.1rem;
+
+        &:hover,
+        &:focus {
+            text-decoration: none;
+        }
+    }
+}
 
 @include mq('sm', 'max') {
 	.header-11 .cart-dropdown,
