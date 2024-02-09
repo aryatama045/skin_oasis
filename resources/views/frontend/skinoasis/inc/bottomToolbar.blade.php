@@ -73,32 +73,4 @@
         </a>
     </div>
 </div>
-<div class="offcanvas-left-menu position-fixed">
-    <div class="mobile-menu">
-        <button class="offcanvas-close"><i class="fa-solid fa-xmark"></i></button>
-        <a href="{{ route('home') }}" class="d-inline-block mb-5"><img
-                src="{{ uploadedAsset(getSetting('navbar_logo')) }}" alt="logo"></a>
-        <nav class="mobile-menu-wrapper scrollbar">
-            <ul>
-                @php
-                    $categories = [];
-                    if (getSetting('navbar_categories') != null) {
-                        $categories = \App\Models\Category::whereIn('id', json_decode(getSetting('navbar_categories')))->get();
-                    }
-                @endphp
-                @foreach ($categories as $navbarCat)
-                    <li>
-                        <a href="{{ route('products.index') }}?&category_id={{ $navbarCat->id }}"
-                            class="d-flex align-items-center">
-                            <div class="me-2 avatar-icon">
-                                <img src="{{ uploadedAsset($navbarCat->collectLocalization('thumbnail_image')) }}"
-                                    alt="" class="rounded-circle h-100 w-100">
-                            </div>
-                            <span>{{ $navbarCat->collectLocalization('name') }}</span>
-                        </a>
-                    </li>
-                @endforeach
-            </ul>
-        </nav>
-    </div>
-</div>
+
