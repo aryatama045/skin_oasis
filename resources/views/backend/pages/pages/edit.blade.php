@@ -68,7 +68,7 @@
 
                                 <div class="mb-4">
                                     <label for="content" class="form-label">{{ localize('Page Description') }}</label>
-                                    <textarea class="form-control editor" id="content" name="content">{{ $page->collectLocalization('content', $lang_key) }}</textarea>
+                                    <textarea class="form-control " id="myTextarea" name="content">{{ $page->collectLocalization('content', $lang_key) }}</textarea>
                                 </div>
                             </div>
                         </div>
