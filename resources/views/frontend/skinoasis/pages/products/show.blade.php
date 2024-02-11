@@ -86,115 +86,115 @@
                 </div><!-- End .col-md-6 -->
 
                 <div class="col-md-8">
-                        <div class="row g-4">
-                            <div class="product-details">
-                                <h1 class="product-title">{{ $product->collectLocalization('name') }}</h1><!-- End .product-title -->
+                    <div class="row g-4">
+                        <div class="product-details">
+                            <h1 class="product-title">{{ $product->collectLocalization('name') }}</h1><!-- End .product-title -->
 
-                                <div class="ratings-container">
-                                    <div class="ratings">
-                                        <div class="ratings-val" style="width: 80%;"></div><!-- End .ratings-val -->
-                                    </div><!-- End .ratings -->
-                                    <a class="ratings-text" href="#product-review-link" id="review-link">( 2 Reviews )</a>
-                                </div><!-- End .rating-container -->
+                            <div class="ratings-container">
+                                <div class="ratings">
+                                    <div class="ratings-val" style="width: 80%;"></div><!-- End .ratings-val -->
+                                </div><!-- End .ratings -->
+                                <a class="ratings-text" href="#product-review-link" id="review-link">( 2 Reviews )</a>
+                            </div><!-- End .rating-container -->
 
-                                <div class="product-price">
-                                    @include('frontend.default.pages.partials.products.pricing', compact('product'))
-                                </div><!-- End .product-price -->
+                            <div class="product-price">
+                                @include('frontend.default.pages.partials.products.pricing', compact('product'))
+                            </div><!-- End .product-price -->
 
-                                <!-- selected variation pricing -->
-                                <div class="pricing variation-pricing mt-2 d-none">
+                            <!-- selected variation pricing -->
+                            <div class="pricing variation-pricing mt-2 d-none">
+                            </div>
+                            <!-- selected variation pricing -->
+
+                            <div class="product-content">
+                                <p>{{ $product->collectLocalization('short_description') }}</p>
+                            </div><!-- End .product-content -->
+
+
+                            <form action="" class="add-to-cart-form">
+                                @php
+                                    $isVariantProduct = 0;
+                                    $stock = 0;
+                                    if ($product->variations()->count() > 1) {
+                                        $isVariantProduct = 1;
+                                    } else {
+                                        $stock = $product->variations[0]->product_variation_stock ? $product->variations[0]->product_variation_stock->stock_qty : 0;
+                                    }
+                                @endphp
+
+                                <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                                <input type="hidden" name="product_variation_id"
+                                    @if (!$isVariantProduct) value="{{ $product->variations[0]->id }}" @endif>
+
+                                <!-- variations -->
+                                @include('frontend.default.pages.partials.products.variations', compact('product'))
+                                <!-- variations -->
+
+                                <div class="d-flex align-items-center gap-3 flex-wrap mt-5">
+                                    <div class="product-details-quantity">
+                                        <div class="product-qty qty-increase-decrease d-flex align-items-center">
+                                            <button type="button" class="decrease">-</button>
+                                            <input type="text" readonly value="1" name="quantity" min="1"
+                                                @if (!$isVariantProduct) max="{{ $stock }}" @endif>
+                                            <button type="button" class="increase">+</button>
+                                        </div>
+                                    </div>
                                 </div>
-                                <!-- selected variation pricing -->
 
-                                <div class="product-content">
-                                    <p>{{ $product->collectLocalization('short_description') }}</p>
-                                </div><!-- End .product-content -->
+                                <div class="d-flex align-items-center gap-3 flex-wrap mt-5">
+                                    <div class="product-details-action">
+                                        <button type="submit" class="btn-product btn-cart add-to-cart-btn"
+                                            @if (!$isVariantProduct && $stock < 1) disabled @endif>
 
-
-                                <form action="" class="add-to-cart-form">
-                                    @php
-                                        $isVariantProduct = 0;
-                                        $stock = 0;
-                                        if ($product->variations()->count() > 1) {
-                                            $isVariantProduct = 1;
-                                        } else {
-                                            $stock = $product->variations[0]->product_variation_stock ? $product->variations[0]->product_variation_stock->stock_qty : 0;
-                                        }
-                                    @endphp
-
-                                    <input type="hidden" name="_token" value="{{ csrf_token() }}">
-                                    <input type="hidden" name="product_variation_id"
-                                        @if (!$isVariantProduct) value="{{ $product->variations[0]->id }}" @endif>
-
-                                    <!-- variations -->
-                                    @include('frontend.default.pages.partials.products.variations', compact('product'))
-                                    <!-- variations -->
-
-                                    <div class="d-flex align-items-center gap-3 flex-wrap mt-5">
-                                        <div class="product-details-quantity">
-                                            <div class="product-qty qty-increase-decrease d-flex align-items-center">
-                                                <button type="button" class="decrease">-</button>
-                                                <input type="text" readonly value="1" name="quantity" min="1"
-                                                    @if (!$isVariantProduct) max="{{ $stock }}" @endif>
-                                                <button type="button" class="increase">+</button>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="d-flex align-items-center gap-3 flex-wrap mt-5">
-                                        <div class="product-details-action">
-                                            <button type="submit" class="btn-product btn-cart add-to-cart-btn"
-                                                @if (!$isVariantProduct && $stock < 1) disabled @endif>
-
-                                                <span class="add-to-cart-text">
-                                                    @if (!$isVariantProduct && $stock < 1)
-                                                        {{ localize('Out of Stock') }}
-                                                    @else
-                                                        {{ localize('Add to Cart') }}
-                                                    @endif
-                                                </span>
-                                            </button>
-
-                                            <div class="details-action-wrapper">
-                                                <button type="button" class="btn-product btn-wishlist" title="Wishlist"
-                                                    onclick="addToWishlist({{ $product->id }})">
-                                                    <span>Add to Wishlist</span>
-                                                </button>
-                                            </div>
-                                        </div>
-
-                                        <div class="flex-grow-1"></div>
-                                        @if (getSetting('enable_reward_points') == 1)
-                                            <span class="fw-bold" data-bs-toggle="tooltip" data-bs-placement="top"
-                                                data-bs-title="{{ localize('Reward Points') }}">
-                                                <i class="fas fa-medal"></i> {{ $product->reward_points }}
+                                            <span class="add-to-cart-text">
+                                                @if (!$isVariantProduct && $stock < 1)
+                                                    {{ localize('Out of Stock') }}
+                                                @else
+                                                    {{ localize('Add to Cart') }}
+                                                @endif
                                             </span>
-                                        @endif
+                                        </button>
+
+                                        <div class="details-action-wrapper">
+                                            <button type="button" class="btn-product btn-wishlist" title="Wishlist"
+                                                onclick="addToWishlist({{ $product->id }})">
+                                                <span>Add to Wishlist</span>
+                                            </button>
+                                        </div>
                                     </div>
 
-                                <div class="product-details-footer">
-                                        <!--product category start-->
-                                        @if ($product->categories()->count() > 0)
-                                            <div class="tt-category-tag mt-4 mt-4">
-                                                @foreach ($product->categories as $category)
-                                                    <a href="{{ route('products.index') }}?&category_id={{ $category->id }}"
-                                                        class="text-muted fs-xxs">{{ $category->collectLocalization('name') }}</a>
-                                                @endforeach
-                                            </div>
-                                        @endif
-                                        <!--product category end-->
-                                    </form>
+                                    <div class="flex-grow-1"></div>
+                                    @if (getSetting('enable_reward_points') == 1)
+                                        <span class="fw-bold" data-bs-toggle="tooltip" data-bs-placement="top"
+                                            data-bs-title="{{ localize('Reward Points') }}">
+                                            <i class="fas fa-medal"></i> {{ $product->reward_points }}
+                                        </span>
+                                    @endif
+                                </div>
 
-                                    <div class="social-icons social-icons-sm">
-                                        <span class="social-label">Share:</span>
-                                        <a href="#" class="social-icon" title="Facebook" target="_blank"><i class="icon-facebook-f"></i></a>
-                                        <a href="#" class="social-icon" title="Twitter" target="_blank"><i class="icon-twitter"></i></a>
-                                        <a href="#" class="social-icon" title="Instagram" target="_blank"><i class="icon-instagram"></i></a>
-                                        <a href="#" class="social-icon" title="Pinterest" target="_blank"><i class="icon-pinterest"></i></a>
-                                    </div>
-                                </div><!-- End .product-details-footer -->
-                            </div><!-- End .product-details -->
-                        </div>
+                            <div class="product-details-footer">
+                                    <!--product category start-->
+                                    @if ($product->categories()->count() > 0)
+                                        <div class="tt-category-tag mt-4 mt-4">
+                                            @foreach ($product->categories as $category)
+                                                <a href="{{ route('products.index') }}?&category_id={{ $category->id }}"
+                                                    class="text-muted fs-xxs">{{ $category->collectLocalization('name') }}</a>
+                                            @endforeach
+                                        </div>
+                                    @endif
+                                    <!--product category end-->
+                                </form>
+
+                                <div class="social-icons social-icons-sm">
+                                    <span class="social-label">Share:</span>
+                                    <a href="#" class="social-icon" title="Facebook" target="_blank"><i class="icon-facebook-f"></i></a>
+                                    <a href="#" class="social-icon" title="Twitter" target="_blank"><i class="icon-twitter"></i></a>
+                                    <a href="#" class="social-icon" title="Instagram" target="_blank"><i class="icon-instagram"></i></a>
+                                    <a href="#" class="social-icon" title="Pinterest" target="_blank"><i class="icon-pinterest"></i></a>
+                                </div>
+                            </div><!-- End .product-details-footer -->
+                        </div><!-- End .product-details -->
+                    </div>
                 </div><!-- End .col-md-6 -->
             </div><!-- End .row -->
         </div><!-- End .product-details-top -->
@@ -254,51 +254,47 @@
                     <div class="reviews">
 
                         <h3>Reviews ({{ $review->count() }})</h3>
-
+                        
+                        @if (count($review) >  0)
                         <div class="review">
+                            @foreach ($review as $testimoni)           
+                            <div class="row no-gutters">
+                                <div class="col-auto">
+                                    <h4><a href="#">{{$testimoni->name_user }}</a></h4>
+                                    <div class="ratings-container">
+                                        <div class="ratings">
+                                            <div class="ratings-val" 
 
-                            @if (count($review) >  0)
-
-                                @foreach ($review as $testimoni)           
-                                <div class="row no-gutters">
-                                    <div class="col-auto">
-                                        <h4><a href="#">{{$testimoni->name_user }}</a></h4>
-                                        <div class="ratings-container">
-                                            <div class="ratings">
-                                                <div class="ratings-val" 
-
-                                                    @if ($testimoni->rating==1)
-                                                        style="width: 20%;"
-                                                    @elseif ($testimoni->rating==2)
-                                                        style="width: 40%;"
-                                                    @elseif ($testimoni->rating==3)
-                                                        style="width: 60%;"
-                                                    @elseif ($testimoni->rating==4)
-                                                        style="width: 80%;"
-                                                    @elseif ($testimoni->rating==5)
-                                                        style="width: 100%;"
-                                                    @endif
-                                                >
-                                                </div><!-- End .ratings-val -->
-                                            </div><!-- End .ratings -->
-                                        </div><!-- End .rating-container -->
-                                        <span class="review-date">{{ getTimeAgo($testimoni->tanggal) }}</span>
-                                    </div><!-- End .col -->
-                                    <div class="col">
-                                        <h4>{!! $testimoni->title !!}</h4>
-                                        <div class="review-content">
-                                            <p>{!! $testimoni->comment !!} </p>
-                                        </div><!-- End .review-content -->
-                                    </div><!-- End .col-auto -->
-                                </div><!-- End .row -->
-                                @endforeach
-                            
-                            @else
-                                <div class="text-dark text-center border py-2">{{ localize('Not Available') }}
-                                </div>
-                            @endif
-
+                                                @if ($testimoni->rating==1)
+                                                    style="width: 20%;"
+                                                @elseif ($testimoni->rating==2)
+                                                    style="width: 40%;"
+                                                @elseif ($testimoni->rating==3)
+                                                    style="width: 60%;"
+                                                @elseif ($testimoni->rating==4)
+                                                    style="width: 80%;"
+                                                @elseif ($testimoni->rating==5)
+                                                    style="width: 100%;"
+                                                @endif
+                                            >
+                                            </div><!-- End .ratings-val -->
+                                        </div><!-- End .ratings -->
+                                    </div><!-- End .rating-container -->
+                                    <span class="review-date">{{ getTimeAgo($testimoni->tanggal) }}</span>
+                                </div><!-- End .col -->
+                                <div class="col">
+                                    <h4>{!! $testimoni->title !!}</h4>
+                                    <div class="review-content">
+                                        <p>{!! $testimoni->comment !!} </p>
+                                    </div><!-- End .review-content -->
+                                </div><!-- End .col-auto -->
+                            </div><!-- End .row -->
+                            @endforeach
                         </div><!-- End .review -->
+                        @else
+                            <div class="text-dark text-center border py-2">{{ localize('Not Available') }}
+                            </div>
+                        @endif
 
                     </div><!-- End .reviews -->
                 </div><!-- .End .tab-pane -->
