@@ -282,7 +282,7 @@
                                                 </div><!-- End .ratings-val -->
                                             </div><!-- End .ratings -->
                                         </div><!-- End .rating-container -->
-                                        <span class="review-date">{{$testimoni->tanggal}}</span>
+                                        <span class="review-date">{{ getTimeAgo($testimoni->tanggal) }}</span>
                                     </div><!-- End .col -->
                                     <div class="col">
                                         <h4>{!! $testimoni->title !!}</h4>

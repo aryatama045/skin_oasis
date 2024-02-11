@@ -1067,3 +1067,26 @@ if (!function_exists('recaptchaValidation')) {
         return $score;
     }
 }
+
+if (!function_exists('getTimeAgo')) {
+    function getTimeAgo($datetime)
+    {
+        $now = new \DateTime();
+        $ago = new \DateTime($datetime);
+        $diff = $now->diff($ago);
+        $interval = $diff->format('%a');
+        if ($interval == 0) {
+            return 'today';
+        } elseif ($interval == 1) {
+            return 'yesterday';
+        } elseif ($interval < 7) {
+            return $diff->format('%a days ago');
+        } elseif ($interval < 30) {
+            return $diff->format('%W weeks ago');
+        } elseif ($interval < 365) {
+            return $diff->format('%M months ago');
+        } else {
+            return $diff->format('%Y years ago');
+        }
+    }
+}
