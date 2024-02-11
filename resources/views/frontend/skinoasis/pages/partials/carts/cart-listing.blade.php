@@ -43,9 +43,9 @@
         </td>
         <td>
             <span class="text-dark fw-bold me-2 d-lg-none">{{ localize('Delete') }}:</span>
-            <span class="text-dark fw-bold"><button type="button" class="close-btn ms-3"
-                    onclick="handleCartItem('delete', {{ $cart->id }})"><i
-                        class="fas fa-close"></i></button></span>
+            <span class="text-red fw-bold"><button type="button" class="close-btn text-danger ms-3"
+                    onclick="handleCartItem('delete', {{ $cart->id }})">
+                    <i  class="fas fa-trash"></i></button></span>
         </td>
     </tr>
 @empty
