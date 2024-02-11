@@ -30,88 +30,110 @@
                     <div class="product-details-tab">
                         <ul class="nav nav-pills justify-content-center" role="tablist">
                             <li class="nav-item">
-                                <a class="nav-link active" id="product-desc-link" data-toggle="tab" href="#product-desc-tab" role="tab" aria-controls="product-desc-tab" aria-selected="true">
+                                <a class="nav-link active" id="partner-benefit-tab" data-toggle="tab" href="#partner-benefit" role="tab" aria-controls="partner-benefit" aria-selected="true">
                                 BENEFIT</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" id="product-info-link" data-toggle="tab" href="#product-info-tab" role="tab" aria-controls="product-info-tab" aria-selected="false">
+                                <a class="nav-link" id="partner-program-tab" data-toggle="tab" href="#partner-program" role="tab" aria-controls="partner-program" aria-selected="false">
                                 PROGRAM</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" id="product-review-link" data-toggle="tab" href="#product-review-tab" role="tab" aria-controls="product-review-tab" aria-selected="false">
+                                <a class="nav-link" id="partner-list-clinic-tab" data-toggle="tab" href="#partner-list-clinic" role="tab" aria-controls="partner-list-clinic" aria-selected="false">
                                 LIST CLINIC</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" id="product-review-link" data-toggle="tab" href="#product-review-tab" role="tab" aria-controls="product-review-tab" aria-selected="false">
+                                <a class="nav-link" id="partner-list-influencer-tab" data-toggle="tab" href="#partner-list-influencer" role="tab" aria-controls="partner-list-influencer" aria-selected="false">
                                 LIST INFLUENCER</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" id="product-review-link" data-toggle="tab" href="#product-review-tab" role="tab" aria-controls="product-review-tab" aria-selected="false">
+                                <a class="nav-link" id="partner-list-community-tab" data-toggle="tab" href="#partner-list-community" role="tab" aria-controls="partner-list-community" aria-selected="false">
                                 LIST COMMUNITY</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" id="product-review-link" data-toggle="tab" href="#product-review-tab" role="tab" aria-controls="product-review-tab" aria-selected="false">
+                                <a class="nav-link" id="partner-join-our-influencer-tab" data-toggle="tab" href="#partner-join-our-influencer" role="tab" aria-controls="partner-join-our-influencer" aria-selected="false">
                                 JOIN OUR INFLUENCER</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" id="product-review-link" data-toggle="tab" href="#product-review-tab" role="tab" aria-controls="product-review-tab" aria-selected="false">
+                                <a class="nav-link" id="partner-join-our-partner-tab" data-toggle="tab" href="#partner-join-our-partner" role="tab" aria-controls="partner-join-our-partner" aria-selected="false">
                                 JOIN OUR PARTNER</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" id="product-review-link" data-toggle="tab" href="#product-review-tab" role="tab" aria-controls="product-review-tab" aria-selected="false">
+                                <a class="nav-link" id="partner-join-our-community-tab" data-toggle="tab" href="#partner-join-our-community" role="tab" aria-controls="partner-join-our-community" aria-selected="false">
                                 JOIN OUR COMMUNITY</a>
                             </li>
                         </ul>
 
                         <div class="tab-content">
 
-                            <div class="tab-pane fade show active" id="product-desc-tab" role="tabpanel" aria-labelledby="product-desc-link">
+                            <div class="tab-pane fade show active" id="partner-benefit" role="tabpanel" aria-labelledby="partner-benefit">
                                 <div class="product-desc-content">
-                                    <h3>Delivery & returns</h3>
+                                    <h3>Benefit</h3>
                                     <p>We deliver to over 100 countries around the world. For full details of the delivery options we offer, please view our <a href="#">Delivery information</a><br>
                                     We hope you’ll love every purchase, but if you ever need to return an item you can do so within a month of receipt. For full details of how to make a return, please view our <a href="#">Returns information</a></p>
                                 </div>
                             </div><!-- .End .tab-pane -->
 
-                            <div class="tab-pane fade" id="product-info-tab" role="tabpanel" aria-labelledby="product-info-link">
+                            <div class="tab-pane fade" id="partner-program" role="tabpanel" aria-labelledby="partner-program">
                                 <div class="product-desc-content">
-                                    <h3>Delivery & returns</h3>
+                                    <h3>Program</h3>
                                     <p>We deliver to over 100 countries around the world. For full details of the delivery options we offer, please view our <a href="#">Delivery information</a><br>
                                     We hope you’ll love every purchase, but if you ever need to return an item you can do so within a month of receipt. For full details of how to make a return, please view our <a href="#">Returns information</a></p>
                                 </div>
                             </div><!-- .End .tab-pane -->
 
-                            <div class="tab-pane fade" id="product-review-tab" role="tabpanel" aria-labelledby="product-review-link">
-                                <div class="reviews">
-
-                                    <h3>Reviews (2)</h3>
-
-                                    <div class="review">
-                                        <div class="row no-gutters">
-
-                                            <div class="col-auto">
-                                                <h4><a href="#">Samanta J.</a></h4>
-                                                <div class="ratings-container">
-                                                    <div class="ratings">
-                                                        <div class="ratings-val" style="width: 80%;"></div><!-- End .ratings-val -->
-                                                    </div><!-- End .ratings -->
-                                                </div><!-- End .rating-container -->
-                                                <span class="review-date">6 days ago</span>
-                                            </div><!-- End .col -->
-
-                                            <div class="col">
-                                                <h4>Good, perfect size</h4>
-                                                <div class="review-content">
-                                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus cum dolores assumenda asperiores facilis porro reprehenderit animi culpa atque blanditiis commodi perspiciatis doloremque, possimus, explicabo, autem fugit beatae quae voluptas!</p>
-                                                </div><!-- End .review-content -->
-
-                                            </div><!-- End .col-auto -->
-                                        </div><!-- End .row -->
-                                    </div><!-- End .review -->
-
-
-                                </div><!-- End .reviews -->
+                            <div class="tab-pane fade" id="partner-list-clinic" role="tabpanel" aria-labelledby="partner-list-clinic">
+                                <div class="product-desc-content">
+                                    <h3>List Clinic</h3>
+                                    <p>We deliver to over 100 countries around the world. For full details of the delivery options we offer, please view our <a href="#">Delivery information</a><br>
+                                    We hope you’ll love every purchase, but if you ever need to return an item you can do so within a month of receipt. For full details of how to make a return, please view our <a href="#">Returns information</a></p>
+                                </div>
                             </div><!-- .End .tab-pane -->
+
+                            <div class="tab-pane fade" id="partner-list-influencer" role="tabpanel" aria-labelledby="partner-list-influencer">
+                                <div class="product-desc-content">
+                                    <h3>List Influencer</h3>
+                                    <p>We deliver to over 100 countries around the world. For full details of the delivery options we offer, please view our <a href="#">Delivery information</a><br>
+                                    We hope you’ll love every purchase, but if you ever need to return an item you can do so within a month of receipt. For full details of how to make a return, please view our <a href="#">Returns information</a></p>
+                                </div>
+                            </div><!-- .End .tab-pane -->
+
+                            <div class="tab-pane fade" id="partner-list-community" role="tabpanel" aria-labelledby="partner-list-community">
+                                <div class="product-desc-content">
+                                    <h3>List Community</h3>
+                                    <p>We deliver to over 100 countries around the world. For full details of the delivery options we offer, please view our <a href="#">Delivery information</a><br>
+                                    We hope you’ll love every purchase, but if you ever need to return an item you can do so within a month of receipt. For full details of how to make a return, please view our <a href="#">Returns information</a></p>
+                                </div>
+                            </div><!-- .End .tab-pane -->
+
+
+
+
+                            <div class="tab-pane fade" id="partner-join-our-influencer" role="tabpanel" aria-labelledby="partner-join-our-influencer">
+                                <div class="product-desc-content">
+                                    <h3>Join Our Influencer</h3>
+                                    
+                                    <div class="container">
+                                        
+                                    </div>
+                                </div>
+                            </div><!-- .End .tab-pane -->
+
+                            <div class="tab-pane fade" id="partner-join-our-partner" role="tabpanel" aria-labelledby="partner-join-our-partner">
+                                <div class="product-desc-content">
+                                    <h3>Join Our Partner</h3>
+                                    <p>We deliver to over 100 countries around the world. For full details of the delivery options we offer, please view our <a href="#">Delivery information</a><br>
+                                    We hope you’ll love every purchase, but if you ever need to return an item you can do so within a month of receipt. For full details of how to make a return, please view our <a href="#">Returns information</a></p>
+                                </div>
+                            </div><!-- .End .tab-pane -->
+
+                            <div class="tab-pane fade" id="partner-join-our-community" role="tabpanel" aria-labelledby="partner-join-our-community">
+                                <div class="product-desc-content">
+                                    <h3>Join Our Community</h3>
+                                    <p>We deliver to over 100 countries around the world. For full details of the delivery options we offer, please view our <a href="#">Delivery information</a><br>
+                                    We hope you’ll love every purchase, but if you ever need to return an item you can do so within a month of receipt. For full details of how to make a return, please view our <a href="#">Returns information</a></p>
+                                </div>
+                            </div><!-- .End .tab-pane -->
+
 
                         </div><!-- End .tab-content -->
                     </div><!-- End .product-details-tab -->
