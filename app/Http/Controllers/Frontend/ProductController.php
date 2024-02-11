@@ -9,6 +9,7 @@ use App\Models\ProductCategory;
 use App\Models\ProductTag;
 use App\Models\ProductVariation;
 use App\Models\Tag;
+use App\Models\Testimoni;
 use Illuminate\Http\Request;
 
 class ProductController extends Controller
@@ -109,12 +110,18 @@ class ProductController extends Controller
 
         $relatedProducts                = Product::whereIn('id', $productIdsWithTheseCategories)->get();
 
+        $review     = Testimoni::leftJoin('users', 'product_testimoni.customer_id', '=', 'users.id' )
+                        ->where('product_testimoni.product_id', '=', $product->id)
+                        ->where('product_testimoni.is_banned', '!=', '1')
+                        ->select('users.name as name_user', 'product_testimoni.title', 'product_testimoni.rating', 'product_testimoni.comment', 'product_testimoni.created_at as tanggal')
+                        ->get();
+
         $product_page_widgets = [];
         if (getSetting('product_page_widgets') != null) {
             $product_page_widgets = json_decode(getSetting('product_page_widgets'));
         }
 
-        return getView('pages.products.show', ['product' => $product, 'relatedProducts' => $relatedProducts, 'product_page_widgets' => $product_page_widgets]);
+        return getView('pages.products.show', ['review' => $review , 'product' => $product, 'relatedProducts' => $relatedProducts, 'product_page_widgets' => $product_page_widgets]);
     }
 
     # product info
