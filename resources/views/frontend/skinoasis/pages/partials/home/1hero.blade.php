@@ -3,6 +3,7 @@
     <div class="intro-slider owl-carousel owl-theme owl-nav-inside owl-light" data-toggle="owl" data-owl-options='{"dots": true, "nav": false}'>
 
     @foreach ($sliders as $slider)
+        @if ($slider->display_on == 1)
         <div class="intro-slide" style="background-image: url({{ uploadedAsset($slider->image) }});">
             <div class="container">
                 <div class="intro-content text-center">
@@ -19,6 +20,7 @@
                 </div>
             </div><!-- End .intro-content -->
         </div><!-- End .intro-slide -->
+        @endif
     @endforeach
     </div><!-- End .intro-slider owl-carousel owl-simple -->
 
