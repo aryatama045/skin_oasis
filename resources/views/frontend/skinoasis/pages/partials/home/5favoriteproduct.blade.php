@@ -4,7 +4,7 @@
         <div class="row align-items-center">
             <div class="col-xl-5">
                 <div class="section-title text-center text-xl-start">
-                    <h3 class="mb-0">{{ localize('Top Trending Products') }}</h3>
+                    <h3 class="mb-0">{{ localize('Products Favorite') }}</h3>
                 </div>
             </div>
             <div class="col-xl-7">
