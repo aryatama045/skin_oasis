@@ -29,38 +29,38 @@
                 @endphp
 
                 @foreach ($products as $product)
-                    <div class="filter_item
-                            @php if($product->categories()->count() > 0){
-                                foreach ($product->categories as $category) {
-                                    echo $category->id .' ';
-                                }
-                            } @endphp">
-                        <div class="owl-carousel  carousel-equal-height owl-simple carousel-with-shadow row cols-lg-4 cols-md-3 cols-2" data-toggle="owl"
-                            data-owl-options='{
-                                "nav": false,
-                                "dots": true,
-                                "margin": 20,
-                                "loop": false,
-                                "responsive": {
-                                    "0": {
-                                        "items": 2
-                                    },
-                                    "768": {
-                                        "items": 3
-                                    },
-                                    "992": {
-                                        "items": 4,
-                                        "nav": true
-                                    }
-                                }
-                            }'>
-                            @include('frontend.default.pages.partials.products.trending-product-card', [
-                                'product' => $product,
-                            ])
-                        </div>
-                    </div>
-                @endforeach
 
+                <div class="owl-carousel carousel-equal-height owl-simple carousel-with-shadow
+                        row cols-lg-4 cols-md-3 cols-2 filter_item
+                        @php if($product->categories()->count() > 0){
+                            foreach ($product->categories as $category) {
+                                echo $category->id .' ';
+                            }
+                        } @endphp"
+                    data-toggle="owl"
+                    data-owl-options='{
+                        "nav": false,
+                        "dots": true,
+                        "margin": 20,
+                        "loop": false,
+                        "responsive": {
+                            "0": {
+                                "items": 2
+                            },
+                            "768": {
+                                "items": 3
+                            },
+                            "992": {
+                                "items": 4,
+                                "nav": true
+                            }
+                        }
+                    }'>
+                        @include('frontend.default.pages.partials.products.trending-product-card', [
+                            'product' => $product,
+                        ])
+                </div>
+                @endforeach
         </div>
     </div>
 </section>
