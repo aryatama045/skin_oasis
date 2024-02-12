@@ -29,30 +29,32 @@
             </div>
         </div>
 
-        <!-- Address -->
-            <div class="col-sm-6">
-                <div class="label-input-field">
-                    <label>{{ localize('City') }}</label>
-                    <input type="tesxt" name="city" placeholder="{{ localize('You city') }}"
-                        required>
-                </div>
-            </div>
+        <hr>
 
-            <div class="col-sm-6">
-                <div class="label-input-field">
-                    <label>{{ localize('Regency') }}</label>
-                    <input type="text" name="regency" placeholder="{{ localize('You regency') }}"
-                        required>
-                </div>
+        <div class="col-sm-4">
+            <div class="label-input-field">
+                <label>{{ localize('Country') }}</label>
+                <input type="text" name="country" placeholder="{{ localize('You country') }}"
+                    required>
             </div>
+        </div>
 
-            <div class="col-sm-6">
-                <div class="label-input-field">
-                    <label>{{ localize('District') }}</label>
-                    <input type="text" name="district" placeholder="{{ localize('You district') }}"
-                        required>
-                </div>
+        <div class="col-sm-4">
+            <div class="label-input-field">
+                <label>{{ localize('Province') }}</label>
+                <input type="text" name="province" placeholder="{{ localize('You province') }}"
+                    required>
             </div>
+        </div>
+
+        <div class="col-sm-4">
+            <div class="label-input-field">
+                <label>{{ localize('City') }}</label>
+                <input type="text" name="city" placeholder="{{ localize('You city') }}"
+                    required>
+            </div>
+        </div>
+
 
         <div class="col-sm-12">
             <div class="label-input-field">
@@ -62,20 +64,32 @@
             </div>
         </div>
 
-        <div class="col-sm-12">
+        <hr>
+
+        <div class="col-sm-4">
             <div class="label-input-field">
-                <label>{{ localize('Address') }}</label>
-                <input type="text" name="address" placeholder="{{ localize('Your address') }}"
+                <label> RT/RW</label>
+                <input type="text" name="city" placeholder="{{ localize('You city') }}"
                     required>
             </div>
         </div>
 
-        <div class="col-12">
+        <div class="col-sm-4">
             <div class="label-input-field">
-                <label>{{ localize('Messages') }}</label>
-                <textarea name="message" placeholder="{{ localize('Write your message') }}" rows="6" required></textarea>
+                <label>Blok</label>
+                <input type="text" name="regency" placeholder="{{ localize('You regency') }}"
+                    required>
             </div>
         </div>
+
+        <div class="col-sm-4">
+            <div class="label-input-field">
+                <label>Kode Pos</label>
+                <input type="text" name="district" placeholder="{{ localize('You district') }}"
+                    required>
+            </div>
+        </div>
+
     </div>
     <button type="submit"
         class="btn btn-primary btn-md rounded-1 mt-6">{{ localize('Send Message') }}</button>
