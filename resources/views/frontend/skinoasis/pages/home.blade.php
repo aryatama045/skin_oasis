@@ -25,17 +25,17 @@
     @include('frontend.skinoasis.pages.partials.home.5favoriteproduct')
     <!--favoriteproduct products end-->
 
-    <!--banner 2 section start-->
+    <!--6bannerstwo section start-->
     @include('frontend.skinoasis.pages.partials.home.6bannerstwo')
-    <!--banner 2 section end-->
+    <!--6bannerstwo section end-->
 
     <!--featured products start-->
     @include('frontend.skinoasis.pages.partials.home.7featuredproducts')
     <!--featured products end-->
 
-    <!--banner 3 section start-->
+    <!--8bannersthree section start-->
     @include('frontend.skinoasis.pages.partials.home.8bannersthree')
-    <!--banner 3 section end-->
+    <!--8bannersthree section end-->
 
     <!--infoUpdate section start-->
     @include('frontend.skinoasis.pages.partials.home.9infoupdate')
