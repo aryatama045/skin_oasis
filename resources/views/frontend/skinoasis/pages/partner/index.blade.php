@@ -111,26 +111,28 @@
                             <div class="tab-pane fade" id="partner-join-our-influencer" role="tabpanel" aria-labelledby="partner-join-our-influencer">
                                 <div class="product-desc-content">
                                     <h3>Join Our Influencer</h3>
-                                    
-                                    <div class="container">
-                                        
-                                    </div>
+                                    <!-- form influencer -->
+                                    @include('frontend.skinoasis.pages.partner.inc.joinOurInfluencer')
+                                    <!-- form influencer -->
+
                                 </div>
                             </div><!-- .End .tab-pane -->
 
                             <div class="tab-pane fade" id="partner-join-our-partner" role="tabpanel" aria-labelledby="partner-join-our-partner">
                                 <div class="product-desc-content">
                                     <h3>Join Our Partner</h3>
-                                    <p>We deliver to over 100 countries around the world. For full details of the delivery options we offer, please view our <a href="#">Delivery information</a><br>
-                                    We hope you’ll love every purchase, but if you ever need to return an item you can do so within a month of receipt. For full details of how to make a return, please view our <a href="#">Returns information</a></p>
+                                    <!-- form Partner -->
+                                    @include('frontend.skinoasis.pages.partner.inc.joinOurPartner')
+                                    <!-- form Partner -->
                                 </div>
                             </div><!-- .End .tab-pane -->
 
                             <div class="tab-pane fade" id="partner-join-our-community" role="tabpanel" aria-labelledby="partner-join-our-community">
                                 <div class="product-desc-content">
                                     <h3>Join Our Community</h3>
-                                    <p>We deliver to over 100 countries around the world. For full details of the delivery options we offer, please view our <a href="#">Delivery information</a><br>
-                                    We hope you’ll love every purchase, but if you ever need to return an item you can do so within a month of receipt. For full details of how to make a return, please view our <a href="#">Returns information</a></p>
+                                    <!-- form Community -->
+                                    @include('frontend.skinoasis.pages.partner.inc.joinOurCommunity')
+                                    <!-- form Community -->
                                 </div>
                             </div><!-- .End .tab-pane -->
 
