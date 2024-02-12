@@ -49,7 +49,7 @@
 
                 @foreach ($products as $product)
                     <div
-                        class="col-xxl-3 col-lg-4 col-md-6 col-sm-10 filter_item
+                        class="filter_item
                         @php if($product->categories()->count() > 0){
                                 foreach ($product->categories as $category) {
                                     echo $category->id .' ';
