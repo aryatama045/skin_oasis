@@ -52,7 +52,6 @@
     <meta property="fb:app_id" content="{{ env('FACEBOOK_PIXEL_ID') }}">
 @endsection
 
-
 @section('breadcrumb-contents')
     <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="{{ route('home') }}">{{ localize('Home') }}</a></li>
@@ -72,7 +71,6 @@
     <!--breadcrumb-->
     @include('frontend.skinoasis.inc.breadcrumb')
     <!--breadcrumb-->
-
 
     <div class="container">
         <div class="product-details-top gstore-product-quick-view bg-white rounded-3 py-6 px-4">
@@ -198,7 +196,6 @@
                 </div><!-- End .col-md-6 -->
             </div><!-- End .row -->
         </div><!-- End .product-details-top -->
-
         <div class="product-details-tab">
             <ul class="nav nav-pills justify-content-center" role="tablist">
                 <li class="nav-item">
@@ -249,22 +246,18 @@
                         @endif
                     </div><!-- End .product-desc-content -->
                 </div><!-- .End .tab-pane -->
-
                 <div class="tab-pane fade" id="product-review-tab" role="tabpanel" aria-labelledby="product-review-link">
                     <div class="reviews">
-
                         <h3>Reviews ({{ $review->count() }})</h3>
-                        
                         @if (count($review) >  0)
                         <div class="review">
-                            @foreach ($review as $testimoni)           
+                            @foreach ($review as $testimoni)
                             <div class="row no-gutters">
                                 <div class="col-auto">
                                     <h4><a href="#">{{$testimoni->name_user }}</a></h4>
                                     <div class="ratings-container">
                                         <div class="ratings">
-                                            <div class="ratings-val" 
-
+                                            <div class="ratings-val"
                                                 @if ($testimoni->rating==1)
                                                     style="width: 20%;"
                                                 @elseif ($testimoni->rating==2)
@@ -295,20 +288,14 @@
                             <div class="text-dark text-center border py-2">{{ localize('Not Available') }}
                             </div>
                         @endif
-
                     </div><!-- End .reviews -->
                 </div><!-- .End .tab-pane -->
             </div><!-- End .tab-content -->
         </div><!-- End .product-details-tab -->
-
         <!--related product slider start -->
         @include('frontend.skinoasis.pages.partials.products.related-products', [
             'relatedProducts' => $relatedProducts,
         ])
         <!--related products slider end-->
-        
     </div><!-- End .container -->
-
-    
-
 @endsection
