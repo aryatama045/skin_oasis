@@ -94,13 +94,13 @@
             @foreach ($categories as $category)
 
             <div class="tab-pane p-0 fade filter-item" role="tabpanel" id="@php
-                        foreach ($products as $key => $product)
+                        foreach ($products as $key => $product){
                             if($product->categories()->count() > 0){
                                 foreach ($product->categories as $category) {
                                     echo 'fav-'.$category->id .' ';
                                 }
                             }
-                        @endforeach
+                        }
                         @endphp">
 
                 <div class="owl-carousel  carousel-equal-height owl-simple carousel-with-shadow row cols-lg-4 cols-md-3 cols-2" data-toggle="owl"
