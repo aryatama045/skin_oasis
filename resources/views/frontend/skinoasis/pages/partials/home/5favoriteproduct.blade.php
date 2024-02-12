@@ -22,25 +22,45 @@
             </div>
         </div>
         <div class="row justify-content-center g-4 mt-5 filter_group">
-
-            @php
-                $trending_products = getSetting('top_trending_products') != null ? json_decode(getSetting('top_trending_products')) : [];
-                $products = \App\Models\Product::whereIn('id', $trending_products)->get();
-            @endphp
-
-            @foreach ($products as $product)
-                <div
-                    class="col-xxl-3 col-lg-4 col-md-6 col-sm-10 filter_item
-                    @php if($product->categories()->count() > 0){
-                            foreach ($product->categories as $category) {
-                                echo $category->id .' ';
+            <div class="tab-content tab-content-carousel">
+                <div class="owl-carousel  carousel-equal-height owl-simple carousel-with-shadow row cols-lg-4 cols-md-3 cols-2" data-toggle="owl"
+                    data-owl-options='{
+                        "nav": false,
+                        "dots": true,
+                        "margin": 20,
+                        "loop": false,
+                        "responsive": {
+                            "0": {
+                                "items": 2
+                            },
+                            "768": {
+                                "items": 3
+                            },
+                            "992": {
+                                "items": 4,
+                                "nav": true
                             }
-                        } @endphp">
-                    @include('frontend.default.pages.partials.products.trending-product-card', [
-                        'product' => $product,
-                    ])
+                        }
+                    }'>
+                @php
+                    $trending_products = getSetting('top_trending_products') != null ? json_decode(getSetting('top_trending_products')) : [];
+                    $products = \App\Models\Product::whereIn('id', $trending_products)->get();
+                @endphp
+
+                @foreach ($products as $product)
+                    <div
+                        class="col-xxl-3 col-lg-4 col-md-6 col-sm-10 filter_item
+                        @php if($product->categories()->count() > 0){
+                                foreach ($product->categories as $category) {
+                                    echo $category->id .' ';
+                                }
+                            } @endphp">
+                        @include('frontend.default.pages.partials.products.trending-product-card', [
+                            'product' => $product,
+                        ])
+                    </div>
+                @endforeach
                 </div>
-            @endforeach
         </div>
     </div>
 </section>
@@ -71,12 +91,17 @@
                 $products = \App\Models\Product::whereIn('id', $trending_products)->get();
             @endphp
 
-            @foreach ($products as $key => $product)
-            <div class="tab-pane p-0 fade filter-item" role="tabpanel" id="@php if($product->categories()->count() > 0){
-                            foreach ($product->categories as $category) {
-                                echo 'fav-'.$category->id .' ';
+            @foreach ($categories as $category)
+
+            <div class="tab-pane p-0 fade filter-item" role="tabpanel" id="@php
+                        foreach ($products as $key => $product)
+                            if($product->categories()->count() > 0){
+                                foreach ($product->categories as $category) {
+                                    echo 'fav-'.$category->id .' ';
+                                }
                             }
-                        } @endphp">
+                        @endforeach
+                        @endphp">
 
                 <div class="owl-carousel  carousel-equal-height owl-simple carousel-with-shadow row cols-lg-4 cols-md-3 cols-2" data-toggle="owl"
                     data-owl-options='{
@@ -97,7 +122,7 @@
                             }
                         }
                     }'>
-                    @foreach ($key as $product)
+                    @foreach ($products as $key => $product)
                     <div class="product bg-white shadow-none">
                         @include('frontend.skinoasis.pages.partials.products.trending-product-card', [
                             'product' => $product,
