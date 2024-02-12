@@ -110,7 +110,7 @@
 
                             <div class="tab-pane fade" id="partner-join-our-influencer" role="tabpanel" aria-labelledby="partner-join-our-influencer">
                                 <div class="product-desc-content">
-                                    <h3>Join Our Influencer</h3>
+                                    <h3 class="text-center mt-6 mb-5">Join Our Influencer</h3>
                                     <!-- form influencer -->
                                     @include('frontend.skinoasis.pages.partner.inc.joinOurInfluencer')
                                     <!-- form influencer -->
@@ -120,7 +120,7 @@
 
                             <div class="tab-pane fade" id="partner-join-our-partner" role="tabpanel" aria-labelledby="partner-join-our-partner">
                                 <div class="product-desc-content">
-                                    <h3>Join Our Partner</h3>
+                                    <h3 class="text-center">Join Our Partner</h3>
                                     <!-- form Partner -->
                                     @include('frontend.skinoasis.pages.partner.inc.joinOurPartner')
                                     <!-- form Partner -->
@@ -129,7 +129,7 @@
 
                             <div class="tab-pane fade" id="partner-join-our-community" role="tabpanel" aria-labelledby="partner-join-our-community">
                                 <div class="product-desc-content">
-                                    <h3>Join Our Community</h3>
+                                    <h3 class="text-center">Join Our Community</h3>
                                     <!-- form Community -->
                                     @include('frontend.skinoasis.pages.partner.inc.joinOurCommunity')
                                     <!-- form Community -->

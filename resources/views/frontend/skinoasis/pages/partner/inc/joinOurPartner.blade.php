@@ -3,7 +3,6 @@
     @csrf
 
     {!! RecaptchaV3::field('recaptcha_token') !!}
-    <h3 class="mb-6">{{ localize('Need Help? Send Message') }}</h3>
     <div class="row g-4">
 
         <div class="col-sm-12">
@@ -30,31 +29,47 @@
             </div>
         </div>
 
-        <div class="col-12">
-            <div class="checkbox-fields d-flex align-items-center gap-3 flex-wrap my-2">
-                <div class="single-field d-inline-flex align-items-center gap-2">
-                    <div class="theme-checkbox">
-                        <input type="radio" name="support_for" value="delivery_problem" checked>
-                        <span class="checkbox-field"><i class="fas fa-check"></i></span>
-                    </div>
-                    <label class="text-dark fw-semibold">{{ localize('Delivery Problem') }}</label>
-                </div>
-                <div class="single-field d-inline-flex align-items-center gap-2">
-                    <div class="theme-checkbox">
-                        <input type="radio" name="support_for" value="customer_service">
-                        <span class="checkbox-field"><i class="fas fa-check"></i></span>
-                    </div>
-                    <label class="text-dark fw-semibold">{{ localize('Customer Service') }}</label>
-                </div>
-                <div class="single-field d-inline-flex align-items-center gap-2">
-                    <div class="theme-checkbox">
-                        <input type="radio" name="support_for" value="other_service">
-                        <span class="checkbox-field"><i class="fas fa-check"></i></span>
-                    </div>
-                    <label class="text-dark fw-semibold">{{ localize('Others Service') }}</label>
+        <!-- Address -->
+            <div class="col-sm-6">
+                <div class="label-input-field">
+                    <label>{{ localize('City') }}</label>
+                    <input type="tesxt" name="city" placeholder="{{ localize('You city') }}"
+                        required>
                 </div>
             </div>
+
+            <div class="col-sm-6">
+                <div class="label-input-field">
+                    <label>{{ localize('Regency') }}</label>
+                    <input type="text" name="regency" placeholder="{{ localize('You regency') }}"
+                        required>
+                </div>
+            </div>
+
+            <div class="col-sm-6">
+                <div class="label-input-field">
+                    <label>{{ localize('District') }}</label>
+                    <input type="text" name="district" placeholder="{{ localize('You district') }}"
+                        required>
+                </div>
+            </div>
+
+        <div class="col-sm-12">
+            <div class="label-input-field">
+                <label>{{ localize('Address') }}</label>
+                <input type="text" name="address" placeholder="{{ localize('Your address') }}"
+                    required>
+            </div>
         </div>
+
+        <div class="col-sm-12">
+            <div class="label-input-field">
+                <label>{{ localize('Address') }}</label>
+                <input type="text" name="address" placeholder="{{ localize('Your address') }}"
+                    required>
+            </div>
+        </div>
+
         <div class="col-12">
             <div class="label-input-field">
                 <label>{{ localize('Messages') }}</label>
