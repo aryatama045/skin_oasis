@@ -92,5 +92,5 @@
 
     </div>
     <button type="submit"
-        class="btn btn-primary btn-md rounded-1 mt-6">{{ localize('Send Message') }}</button>
+        class="btn btn-primary btn-md rounded-1 mt-6">{{ localize('Gabung Sekarang') }}</button>
 </form>
