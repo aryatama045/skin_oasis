@@ -64,7 +64,7 @@
             </div>
 
             @foreach ($categories as $category)
-                <div class="tab-pane p-0 fade show active" id="fav-{{ $category->id }}" role="tabpanel">
+                <div class="tab-pane p-0 fade " id="fav-{{ $category->id }}" role="tabpanel">
                     <div class="owl-carousel  carousel-equal-height owl-simple carousel-with-shadow row cols-lg-4 cols-md-3 cols-2" data-toggle="owl"
                         data-owl-options='{
                             "nav": false,
@@ -85,10 +85,8 @@
                             }
                         }'>
                         @php
-                            $cat_id = $category->id;
                             $trending_products = getSetting('top_trending_products') != null ? json_decode(getSetting('top_trending_products')) : [];
-                            $products = \App\Models\Product::leftJoin('product_categories AS pc', 'pc.product_id','=', 'products.id')
-                                        ->where->('pc.category_id', $cat_id)->whereIn('products.id', $trending_products)->get();
+                            $products = \App\Models\Product::whereIn('id', $trending_products)->get();
                         @endphp
 
                         @foreach ($products as $product)
