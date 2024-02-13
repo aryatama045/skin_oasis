@@ -94,7 +94,7 @@ Route::group(
 
                 # withdraw
                 Route::get('/withdraw-requests', [WithdrawRequestsController::class, 'index'])->name('affiliate.withdraw.index');
-                Route::post('/withdraw-requests', [WithdrawRequestsController::class, 'store'])->name('affiliate.withdraw.store');
+                Route::post('/withdraw-store', [WithdrawRequestsController::class, 'store'])->name('affiliate.withdraw.store');
                 Route::post('/update-requests', [WithdrawRequestsController::class, 'update'])->name('affiliate.withdraw.update');
             }
         );
