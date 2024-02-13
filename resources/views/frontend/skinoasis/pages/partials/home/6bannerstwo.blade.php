@@ -1,4 +1,4 @@
-<section class="gallery pt-15 pb-xs-15" >
+<section class="gallery bg-white pt-15 pb-xs-15" >
     <div class="container mb-3">
         <div class="row">
             <div class="col-md-8">
