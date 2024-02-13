@@ -85,9 +85,10 @@
                             }
                         }'>
                         @php
+                            $cat_id = $category->id;
                             $trending_products = getSetting('top_trending_products') != null ? json_decode(getSetting('top_trending_products')) : [];
                             $products = \App\Models\Product::leftJoin('product_categories AS pc', 'pc.product_id','=', 'products.id')
-                                        ->where->('pc.category_id', $category->id)->whereIn('id', $trending_products)->get();
+                                        ->where->('pc.category_id', $cat_id)->whereIn('id', $trending_products)->get();
                         @endphp
 
                         @foreach ($products as $product)
