@@ -1,5 +1,5 @@
 <section class="gallery bg-white position-relative overflow-hidden z-1">
-    <div class="video-banner video-banner-poster text-left mt-10">
+    <div class="video-banner video-banner-poster text-left ">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-md-6">
@@ -24,7 +24,7 @@
         </div><!-- End .container -->
     </div>
 
-    <div class="video-banner video-banner-poster text-left">
+    <div class="video-banner video-banner-poster text-left mt-10">
         <div class="container">
             <div class="row ">
                 <div class="col-md-4 mb-3 mb-md-0">
