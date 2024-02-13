@@ -315,6 +315,7 @@
 .banner-set-products .product-body {
   padding-right: 0;
   padding-bottom: 0;
+  background-color: #fff !important;
 }
 .banner-set-products .product-price {
   -webkit-box-align: center;
