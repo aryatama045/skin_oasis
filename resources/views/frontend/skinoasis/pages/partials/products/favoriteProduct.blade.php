@@ -1,6 +1,6 @@
 
 
-    <div class="product bg-white shadow-none">
+    <div class="product shadow-none">
 
         @php
             $discountPercentage = discountPercentage($product);
@@ -29,7 +29,7 @@
                     onclick="showProductDetailsModal({{ $product->id }})" alt="Preview"></a>
             </div>
         </figure>
-        <div class="product-body text-center">
+        <div class="product-body text-center bg-light-2">
             @if (getSetting('enable_reward_points') == 1)
                 <span class="fs-xxs fw-bold" data-bs-toggle="tooltip" data-bs-placement="top"
                     data-bs-title="{{ localize('Reward Points') }}">
@@ -61,6 +61,7 @@
                     ])
                 </h6>
             </div>
+
             <div class="product-footer justify-content-center d-block">
                 @php
                     $isVariantProduct = 0;
