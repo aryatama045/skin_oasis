@@ -6,7 +6,7 @@
                     <div class="heading mt-3">
                         <h2 class="title-banner-2 mb-2">The ultimate dream of SKINOASIS is make people beauty, healthy and happy</h2>
                             <img class="col-md-8 float-md-end mb-3 ms-md-3"
-                            src="{{ staticAsset('frontend/skinoasis/assets/images/demos/demo-30/banners/banner-2.jpg') }}"  alt="Banner">
+                            src="{{ staticAsset('frontend/skinoasis/assets/images/banners/banner2.png') }}"  alt="Banner">
                     </div>
                     <p class="content mb-6">
                         skin is our asset, and skincare is our investment. Now, the dream of having a truly healthy skin is not just a wishful thinking, through science, collaboration with experts, and our love & burning enthusiasm to create a finely-effective product and be an oasis for people who search a right skincare products for their skin,   could bring us closer to our ultimate dream
@@ -17,7 +17,7 @@
             <div class="col-md-4 p-md-0">
                 <div class="content-right">
                     <figure class="mb-md-12">
-                        <img src="{{ staticAsset('frontend/skinoasis/assets/images/demos/demo-30/banners/banner-3.jpg') }}" alt="Banner">
+                        <img src="{{ staticAsset('frontend/skinoasis/assets/images/banners/banner3.png') }}" alt="Banner">
                     </figure>
                 </div>
                 <div class="owl-carousel owl-theme owl-testimonials" data-toggle="owl"
