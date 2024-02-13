@@ -12,10 +12,9 @@
             </span>
         @endif
         <figure class="product-media">
-            <a href="#">
+
                 <img src="{{ uploadedAsset($product->thumbnail_image) }}" alt="{{ $product->collectLocalization('name') }}" width="277" height="377" class="product-image" />
                 <img src="{{ uploadedAsset($product->thumbnail_image) }}" alt="{{ $product->collectLocalization('name') }}" width="277" height="377" class="product-image-hover" />
-            </a>
             <div class="product-action-vertical">
                 @if (Auth::check() && Auth::user()->user_type == 'customer')
                     <a href="javascript:void(0);" class="btn-product-icon btn-wishlist"
