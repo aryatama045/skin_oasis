@@ -1,52 +1,96 @@
 
-<div class="owl-carousel  carousel-equal-height owl-simple carousel-with-shadow row cols-lg-4 cols-md-3 cols-2" data-toggle="owl"
-data-owl-options='{
-    "nav": false,
-    "dots": true,
-    "margin": 20,
-    "loop": false,
-    "responsive": {
-        "0": {
-            "items": 2
-        },
-        "768": {
-            "items": 3
-        },
-        "992": {
-            "items": 4,
-            "nav": true
-        }
-    }
-}'>
+
     <div class="product bg-white shadow-none">
-        <span class="product-label letter-spacing-large p-2 bg-dark text-white">SALE</span>
+
+        @php
+            $discountPercentage = discountPercentage($product);
+        @endphp
+
+        @if ($discountPercentage > 0)
+            <span class="product-label letter-spacing-large p-2 bg-dark text-white">
+                -{{ discountPercentage($product) }}% <span class="text-uppercase">{{ localize('Off') }}</span>
+            </span>
+        @endif
         <figure class="product-media">
             <a href="#">
-                <img src="assets/images/demos/demo-25/product/product-6.jpg" alt="Product image" width="277" height="377" class="product-image" />
-                <img src="assets/images/demos/demo-25/product/product-6-2.jpg" alt="Product image" width="277" height="377" class="product-image-hover" />
+                <img src="{{ uploadedAsset($product->thumbnail_image) }}" alt="{{ $product->collectLocalization('name') }}" width="277" height="377" class="product-image" />
+                <img src="{{ uploadedAsset($product->thumbnail_image) }}" alt="{{ $product->collectLocalization('name') }}" width="277" height="377" class="product-image-hover" />
             </a>
             <div class="product-action-vertical">
                 <a href="#" class="btn-product-icon btn-wishlist"><span>add to wishlist</span></a>
+
+                @if (Auth::check() && Auth::user()->user_type == 'customer')
+                    <a href="javascript:void(0);" class="btn-product-icon btn-wishlist"
+                        onclick="addToWishlist({{ $product->id }})"></a>
+                @elseif(!Auth::check())
+                    <a href="javascript:void(0);" class="btn-product-icon btn-wishlist"
+                        onclick="addToWishlist({{ $product->id }})"></a>
+                @endif
+
+                <a href="javascript:void(0);" class="rounded-btn" onclick="showProductDetailsModal({{ $product->id }})"><i
+                        class="fa-regular fa-eye"></i></a>
             </div>
         </figure>
         <div class="product-body text-center">
-            <h3 class="product-title font-size-normal">Sterling Silver Tassel Drop Earrings</h3>
+            @if (getSetting('enable_reward_points') == 1)
+                <span class="fs-xxs fw-bold" data-bs-toggle="tooltip" data-bs-placement="top"
+                    data-bs-title="{{ localize('Reward Points') }}">
+                    <i class="fas fa-medal"></i> {{ $product->reward_points }}
+                </span>
+            @endif
+            <div class="mb-2 tt-category tt-line-clamp tt-clamp-1">
+                @if ($product->categories()->count() > 0)
+                    @foreach ($product->categories as $category)
+                        <a href="{{ route('products.index') }}?&category_id={{ $category->id }}"
+                            class="d-inline-block text-muted fs-xxs">{{ $category->collectLocalization('name') }}
+                            @if (!$loop->last)
+                                ,
+                            @endif
+                        </a>
+                    @endforeach
+                @endif
+            </div>
+
+            <a href="{{ route('products.show', $product->slug) }}">
+                <h3 class="product-title font-size-normal">{{ $product->collectLocalization('name') }}</h3>
+            </a>
+
             <div class="product-price font-size-normal mb-0 text-dark justify-content-center">
-                <div class="old-price mx-3">$424.00</div>
-                <span>Now $355.00</span>
+                <h6 class="price">
+                    @include('frontend.default.pages.partials.products.pricing', [
+                        'product' => $product,
+                        'onlyPrice' => true,
+                    ])
+                </h6>
             </div>
             <div class="product-footer justify-content-center d-block">
-                <div class="ratings-container justify-content-center">
-                    <div class="ratings">
-                        <div class="ratings-val" style="width: 60%;"></div><!-- End .ratings-val -->
-                    </div><!-- End .ratings -->
-                    <span class="ratings-text">( 4 Reviews )</span>
-                </div>
-                <a href="#" class="btn font-size-normal letter-spacing-large btn-dark">
-                    <i class="icon-cart-plus"></i>
-                    <span>ADD TO CART</span>
-                </a>
+                @php
+                    $isVariantProduct = 0;
+                    $stock = 0;
+                    if ($product->variations()->count() > 1) {
+                        $isVariantProduct = 1;
+                    } else {
+                        $stock = $product->variations[0]->product_variation_stock ? $product->variations[0]->product_variation_stock->stock_qty : 0;
+                    }
+                @endphp
+                @if ($isVariantProduct)
+                    <a href="javascript:void(0);" class="btn btn-secondary d-block btn-md rounded-1"
+                        onclick="showProductDetailsModal({{ $product->id }})">{{ localize('Add to Cart') }}</a>
+                @else
+                    <form action="" class="direct-add-to-cart-form">
+                        <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                        <input type="hidden" name="product_variation_id" value="{{ $product->variations[0]->id }}">
+                        <input type="hidden" value="1" name="quantity">
+
+                        @if (!$isVariantProduct && $stock < 1)
+                            <a href="javascript:void(0);" class="btn btn-secondary d-block btn-md rounded-1 w-100">
+                                {{ localize('Out of Stock') }}</a>
+                        @else
+                            <a href="javascript:void(0);" onclick="directAddToCartFormSubmit(this)"
+                                class="btn btn-secondary d-block btn-md rounded-1 w-100 direct-add-to-cart-btn add-to-cart-text">{{ localize('Add to Cart') }}</a>
+                        @endif
+                    </form>
+                @endif
             </div>
         </div>
     </div>
-</div>

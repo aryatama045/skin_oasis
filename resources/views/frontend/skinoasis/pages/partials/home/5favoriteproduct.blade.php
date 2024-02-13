@@ -54,7 +54,7 @@
                                         echo $category->id .' ';
                                     }
                                 } @endphp">
-                            @include('frontend.default.pages.partials.products.trending-product-card', [
+                            @include('frontend.default.pages.partials.products.favoriteProduct', [
                                 'product' => $product,
                             ])
                         </div>
