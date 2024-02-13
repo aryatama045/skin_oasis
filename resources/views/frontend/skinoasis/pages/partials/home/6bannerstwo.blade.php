@@ -68,11 +68,11 @@
             <div class="row align-items-center">
                 <div class="col-md-6 mb-3 mb-md-0">
                     <h3 class="video-banner-title fw-bold h3">
-                        <span class="fw-light">New Video</span>
-                        Womens New Arrivals
+                        <span class="fw-light">TRENDING</span>
+                        Always Make Room for a Little Beauty in Your Life
                     </h3><!-- End .video-banner-title -->
                     <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper ...</p>
-                    <a href="#" class="btn btn-outline-primary"><span>Click Here</span><i class="icon-long-arrow-right"></i></a>
+                    <a href="#" class="btn btn-outline"><span>Click Here</span><i class="icon-long-arrow-right"></i></a>
                 </div><!-- End .col-md-6 -->
 
                 <div class="col-md-6">
