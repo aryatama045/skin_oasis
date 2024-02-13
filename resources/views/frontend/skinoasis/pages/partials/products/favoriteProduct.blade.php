@@ -85,7 +85,8 @@
                                 {{ localize('Out of Stock') }}</a>
                         @else
                             <a href="javascript:void(0);" onclick="directAddToCartFormSubmit(this)"
-                                class="btn font-size-normal letter-spacing-large btn-dark w-100 direct-add-to-cart-btn add-to-cart-text">{{ localize('Add to Cart') }}</a>
+                                class="btn font-size-normal letter-spacing-large btn-dark w-100 direct-add-to-cart-btn add-to-cart-text">
+                                {{ localize('Add to Cart') }}</a>
                         @endif
                     </form>
                 @endif
