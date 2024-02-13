@@ -20,9 +20,9 @@
                         <img src="{{ staticAsset('frontend/skinoasis/assets/images/demos/demo-30/banners/banner-3.jpg') }}" alt="Banner">
                     </figure>
                 </div>
-                <div class="owl-carousel owl-theme owl-testimonials" data-toggle="owl" 
+                <div class="owl-carousel owl-theme owl-testimonials" data-toggle="owl"
                     data-owl-options='{
-                        "nav": false, 
+                        "nav": false,
                         "dots": true,
                         "margin": 20,
                         "loop": true,
