@@ -2,19 +2,7 @@
 <div class="arrival pt-8 pb-100 position-relative overflow-hidden z-1 featured-product-area">
     <div class="container">
 
-        <div class="heading-fav">
-            <img class="img-fluid text-left d-inline p-2 mb-2" src="https://skinoasis.solusiitkreasi.com/public/uploads/media/0szep88MhwsQEGt367sGBWvjDSTF99mm4XryAZAb.png" width="200" height="25">
-            <h2 class="entry-title d-inline">
-                backed-up with high knowledge in natural ingredients and headmost technologies,
-            </h2><!-- End .entry-title -->
-
-            <div class="entry-content  mt-4">
-                <p>We present you the list of extremely powerful effect but also delicate products.</p>
-            </div><!-- End .entry-content -->
-        </div>
-
         <div class="heading-fav heading-center mb-5">
-            <h4 class="subtitle text-uppercase mb-4">{{ localize('Products Favorite') }}</h4>
             <ul class="nav nav-pills justify-content-center" role="tablist">
                 <li class="nav-item">
                     <a href="#arrival-all" class="nav-link font-size-normal letter-spacing-large active" data-toggle="tab" role="tab">All</a>
