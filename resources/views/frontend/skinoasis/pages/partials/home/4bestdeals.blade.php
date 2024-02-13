@@ -1,5 +1,5 @@
 <!-- Best Deals -->
-<div class="bg-green deal-container pt-5 pb-3 mb-5">
+<div class="bg-green deal-container pt-5">
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
