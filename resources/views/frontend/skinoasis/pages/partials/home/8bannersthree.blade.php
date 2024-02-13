@@ -24,10 +24,9 @@
         </div><!-- End .container -->
     </div>
 
-    <div class="video-banner video-banner-poster text-left mt-10">
+    <div class="video-banner video-banner-poster text-left">
         <div class="container">
             <div class="row ">
-
                 <div class="col-md-4 mb-3 mb-md-0">
                     <h3 class="video-banner-title fw-bold h3">
                         <span class="fw-light">TRENDING</span>
@@ -41,10 +40,49 @@
                 <div class="col-md-4">
                     <div class="video-poster">
                         <img style="border-radius: 0 !important;" src="{{ staticAsset('frontend/skinoasis/assets/images/banners/banner3-1.png') }}" alt="poster">
-                        <div class="video-poster-content">
-                            <a href="https://www.youtube.com/watch?v=vBPgmASQ1A0" class="btn-video btn-iframe"><i class="icon-play"></i></a>
-                        </div><!-- End .video-poster-content -->
                     </div><!-- End .video-poster -->
+                </div><!-- End .col-md-4 -->
+
+                <div class="col-md-4">
+                    <div class="owl-carousel owl-theme owl-testimonials" data-toggle="owl"
+                        data-owl-options='{
+                            "nav": false,
+                            "dots": true,
+                            "margin": 20,
+                            "loop": true,
+                            "responsive": {
+                                "1200": {
+                                    "nav": false
+                                }
+                            }
+                        }'>
+                        <blockquote class="testimonial text-center">
+                            <p>“ Lorem ipsum dolor sit amet, consectetuer adipiscing elit. nisi neque, aliquet vel,  pretium, ligula ullam mollis. Ut justo. Suspendisse potenti. ”</p>
+
+                            <cite>
+                                Jenson Gregory
+                                <span>Customer</span>
+                            </cite>
+                        </blockquote><!-- End .testimonial -->
+
+                        <blockquote class="testimonial text-center">
+                            <p>“ Impedit, ratione sequi, sunt incidunt magnam et.  exercitationem, vel unde obcaecati impedit eveniet non. ”</p>
+
+                            <cite>
+                                Damon Stone
+                                <span>Customer</span>
+                            </cite>
+                        </blockquote><!-- End .testimonial -->
+
+                        <blockquote class="testimonial text-center">
+                            <p>“ Molestias animi illo natus ut quod neque ad accusamus praesentium fuga! animi tempora eget Suspendisse potenti. ”</p>
+
+                            <cite>
+                                John Smith
+                                <span>Customer</span>
+                            </cite>
+                        </blockquote><!-- End .testimonial -->
+                    </div><!-- End .testimonials-slider owl-carousel -->
                 </div><!-- End .col-md-4 -->
 
 
