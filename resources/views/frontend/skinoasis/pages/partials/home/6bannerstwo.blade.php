@@ -4,7 +4,6 @@
             <div class="col-md-8">
                 <div class="clearfix">
                     <div class="heading mt-3">
-                        <h3 class="">Material &amp; Design</h3>
                         <h2 class="title-banner-2 mb-2">The ultimate dream of SKINOASIS is make people beauty, healthy and happy</h2>
                             <img class="col-md-8 float-md-end mb-3 ms-md-3"
                             src="{{ staticAsset('frontend/skinoasis/assets/images/demos/demo-30/banners/banner-2.jpg') }}"  alt="Banner">
