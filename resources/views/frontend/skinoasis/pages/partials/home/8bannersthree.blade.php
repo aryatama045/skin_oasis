@@ -35,7 +35,7 @@
                     </h3><!-- End .video-banner-title -->
                     <p>Our beauty box is a set of best full-size products that are top sellers in out online shop.
                         We want you to be able to try everything at once and make sure that our selection of products is about quality.</p>
-                    <a href="#" class="btn btn-outline"><span>Click Here</span><i class="icon-long-arrow-right"></i></a>
+                    <a href="#" class="btn btn-outline btn-bottom-c"><span>Click Here</span><i class="icon-long-arrow-right"></i></a>
                 </div><!-- End .col-md-4 -->
 
                 <div class="col-md-4">
