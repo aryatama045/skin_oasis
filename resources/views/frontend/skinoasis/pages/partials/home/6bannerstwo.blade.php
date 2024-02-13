@@ -8,11 +8,9 @@
                             <img class="col-md-8 float-md-end mb-3 ms-md-3"
                             src="{{ staticAsset('frontend/skinoasis/assets/images/demos/demo-30/banners/banner-2.jpg') }}"  alt="Banner">
                     </div>
-                        <p class="content mb-6">
-                            skin is our asset, and skincare is our investment. Now, the dream of having a truly healthy skin is not just a wishful thinking, through science, collaboration with experts, and our love & burning enthusiasm to create a finely-effective product and be an oasis for people who search a right skincare products for their skin,   could bring us closer to our ultimate dream
-                        </p>
-
-                    
+                    <p class="content mb-6">
+                        skin is our asset, and skincare is our investment. Now, the dream of having a truly healthy skin is not just a wishful thinking, through science, collaboration with experts, and our love & burning enthusiasm to create a finely-effective product and be an oasis for people who search a right skincare products for their skin,   could bring us closer to our ultimate dream
+                    </p>
                 </div>
             </div>
 
@@ -22,6 +20,45 @@
                         <img src="{{ staticAsset('frontend/skinoasis/assets/images/demos/demo-30/banners/banner-3.jpg') }}" alt="Banner">
                     </figure>
                 </div>
+                <div class="owl-carousel owl-theme owl-testimonials" data-toggle="owl" 
+                    data-owl-options='{
+                        "nav": false, 
+                        "dots": true,
+                        "margin": 20,
+                        "loop": true,
+                        "responsive": {
+                            "1200": {
+                                "nav": true
+                            }
+                        }
+                    }'>
+                    <blockquote class="testimonial testimonial-icon text-center">
+                        <p>“ Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti. ”</p>
+
+                        <cite>
+                            Jenson Gregory
+                            <span>Customer</span>
+                        </cite>
+                    </blockquote><!-- End .testimonial -->
+
+                    <blockquote class="testimonial testimonial-icon text-center">
+                        <p>“ Impedit, ratione sequi, sunt incidunt magnam et. Delectus obcaecati optio eius error libero perferendis nesciunt atque dolores magni recusandae! Doloremque quidem error eum quis similique doloribus natus qui ut ipsum.Velit quos ipsa exercitationem, vel unde obcaecati impedit eveniet non. ”</p>
+
+                        <cite>
+                            Damon Stone
+                            <span>Customer</span>
+                        </cite>
+                    </blockquote><!-- End .testimonial -->
+
+                    <blockquote class="testimonial testimonial-icon text-center">
+                        <p>“ Molestias animi illo natus ut quod neque ad accusamus praesentium fuga! Dolores odio alias sapiente odit delectus quasi, explicabo a, modi voluptatibus. Perferendis perspiciatis, voluptate, distinctio earum veritatis animi tempora eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti. ”</p>
+
+                        <cite>
+                            John Smith
+                            <span>Customer</span>
+                        </cite>
+                    </blockquote><!-- End .testimonial -->
+                </div><!-- End .testimonials-slider owl-carousel -->
             </div>
         </div>
     </div>
@@ -35,6 +72,7 @@
                         Womens New Arrivals
                     </h3><!-- End .video-banner-title -->
                     <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper ...</p>
+                    <a href="#" class="btn btn-outline-primary"><span>Click Here</span><i class="icon-long-arrow-right"></i></a>
                 </div><!-- End .col-md-6 -->
 
                 <div class="col-md-6">
