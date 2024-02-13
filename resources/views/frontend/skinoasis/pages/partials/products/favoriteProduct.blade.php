@@ -17,18 +17,16 @@
                 <img src="{{ uploadedAsset($product->thumbnail_image) }}" alt="{{ $product->collectLocalization('name') }}" width="277" height="377" class="product-image-hover" />
             </a>
             <div class="product-action-vertical">
-                <a href="#" class="btn-product-icon btn-wishlist"><span>add to wishlist</span></a>
-
                 @if (Auth::check() && Auth::user()->user_type == 'customer')
                     <a href="javascript:void(0);" class="btn-product-icon btn-wishlist"
-                        onclick="addToWishlist({{ $product->id }})"></a>
+                        onclick="addToWishlist({{ $product->id }})" alt="Add Wishlist"></a>
                 @elseif(!Auth::check())
                     <a href="javascript:void(0);" class="btn-product-icon btn-wishlist"
-                        onclick="addToWishlist({{ $product->id }})"></a>
+                        onclick="addToWishlist({{ $product->id }})" alt="Add Wishlist"></a>
                 @endif
 
-                <a href="javascript:void(0);" class="rounded-btn" onclick="showProductDetailsModal({{ $product->id }})"><i
-                        class="fa-regular fa-eye"></i></a>
+                <a href="javascript:void(0);" class="btn-product-icon btn-quickview"
+                    onclick="showProductDetailsModal({{ $product->id }})" alt="Preview"></a>
             </div>
         </figure>
         <div class="product-body text-center">
