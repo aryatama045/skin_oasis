@@ -26,7 +26,7 @@
 
     <div class="video-banner video-banner-poster text-left mt-10">
         <div class="container">
-            <div class="row align-items-center">
+            <div class="row ">
 
                 <div class="col-md-4 mb-3 mb-md-0">
                     <h3 class="video-banner-title fw-bold h3">

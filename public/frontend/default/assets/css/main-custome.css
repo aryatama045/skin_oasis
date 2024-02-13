@@ -28279,3 +28279,9 @@ img.col-md-8.float-md-end.mb-3.ms-md-3 {
 .featured-product-area {
     background-color: #E0E9CC;
 }
+
+a.btn.btn-outline.btn-bottom-c {
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+}
