@@ -9,7 +9,7 @@
         </div><!-- End .col-md-6 -->
         <div class="col-md-6">
             <div class="video-poster">
-                <img src="{{ staticAsset('frontend/skinoasis/assets/images/banners/banner3.png') }}" alt="poster">
+                <img src="{{ staticAsset('frontend/skinoasis/assets/images/banners/banner3-1.png') }}" alt="poster">
 
                 <div class="video-poster-content">
                     <a href="https://www.youtube.com/watch?v=vBPgmASQ1A0" class="btn-video btn-iframe"><i class="icon-play"></i></a>
