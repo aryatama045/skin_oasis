@@ -28,7 +28,7 @@
                         "loop": true,
                         "responsive": {
                             "1200": {
-                                "nav": true
+                                "nav": false
                             }
                         }
                     }'>
