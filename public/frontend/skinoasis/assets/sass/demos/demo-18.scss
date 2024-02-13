@@ -1098,6 +1098,7 @@
 		color: #222;
 		margin: 0;
 		margin-left: -24rem;
+		z-index: 1;
 
 		@media (max-width: 575.98px){
 			margin-left: 0rem;
@@ -1120,7 +1121,6 @@
 		line-height: 1;
 		letter-spacing: -.025em;
 		color: #222;
-		z-index: 2;
 	}
 
 	.content {

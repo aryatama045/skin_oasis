@@ -1014,6 +1014,7 @@
   color: #222;
   margin: 0;
   margin-left: -24rem;
+  z-index: 1;
 }
 @media (max-width: 575.98px) {
   .heading .subtitle {
@@ -1035,7 +1036,6 @@
   line-height: 1;
   letter-spacing: -0.025em;
   color: #222;
-  z-index: 2;
 }
 .heading .content {
   font-size: 1.6rem;
