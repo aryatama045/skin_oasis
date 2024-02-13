@@ -15,7 +15,7 @@
                         </div>
                         <figure>
                             <img class="col-md-6 float-md-end mb-3 ms-md-3"
-                                src="{{ staticAsset('frontend/skinoasis/assets/images/demos/demo-30/banners/banner-3.jpg') }}"  alt="Banner">
+                                src="{{ staticAsset('frontend/skinoasis/assets/images/demos/demo-30/banners/banner-2.jpg') }}"  alt="Banner">
                         </figure>
                     </div>
                 </div>
@@ -24,14 +24,14 @@
             <div class="col-md-4 p-md-0">
                 <div class="content-right">
                     <figure class="mb-md-12">
-                        <img src="{{ staticAsset('frontend/skinoasis/assets/images/demos/demo-30/banners/banner-2.jpg') }}" alt="Banner">
+                        <img src="{{ staticAsset('frontend/skinoasis/assets/images/demos/demo-30/banners/banner-3.jpg') }}" alt="Banner">
                     </figure>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="video-banner video-banner-poster text-center">
+    <div class="video-banner video-banner-poster text-center mt-10">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-md-6 mb-3 mb-md-0">
