@@ -27055,7 +27055,6 @@ blockquote::before {
     top: 0;
     width: 4px;
     height: 100%;
-    background-color: #ffaf4b;
     border-radius: 0 10px 10px 0;
 }
 .tags-list a {
