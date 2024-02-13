@@ -3,12 +3,12 @@
     <div class="container">
 
         <div class="heading-fav">
-            <img class="img-fluid text-left d-inline" src="https://skinoasis.solusiitkreasi.com/public/uploads/media/0szep88MhwsQEGt367sGBWvjDSTF99mm4XryAZAb.png" width="200" height="25">
+            <img class="img-fluid text-left d-inline p-2 mb-2" src="https://skinoasis.solusiitkreasi.com/public/uploads/media/0szep88MhwsQEGt367sGBWvjDSTF99mm4XryAZAb.png" width="200" height="25">
             <h2 class="entry-title d-inline">
                 backed-up with high knowledge in natural ingredients and headmost technologies,
             </h2><!-- End .entry-title -->
 
-            <div class="entry-content">
+            <div class="entry-content  mt-4">
                 <p>We present you the list of extremely powerful effect but also delicate products.</p>
             </div><!-- End .entry-content -->
         </div>
