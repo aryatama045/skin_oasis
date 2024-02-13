@@ -24,7 +24,7 @@
         </div><!-- End .container -->
     </div>
 
-    <div class="video-banner video-banner-poster text-left mt-10">
+    <div class="video-banner video-banner-poster text-left mt-10 pb-5">
         <div class="container">
             <div class="row ">
                 <div class="col-md-4 mb-3 mb-md-0">
