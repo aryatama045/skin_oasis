@@ -3,10 +3,8 @@
     <div class="container">
 
         <div class="entry-body">
-            <!-- End .entry-meta -->
-
-            <h2 class="entry-title">
-                <img src="https://skinoasis.solusiitkreasi.com/public/uploads/media/0szep88MhwsQEGt367sGBWvjDSTF99mm4XryAZAb.png" width="200" height="25">
+            <img src="https://skinoasis.solusiitkreasi.com/public/uploads/media/0szep88MhwsQEGt367sGBWvjDSTF99mm4XryAZAb.png" width="200" height="25">
+            <h2 class="entry-title d-inline">
                 backed-up with high knowledge in natural ingredients and headmost technologies,
             </h2><!-- End .entry-title -->
 
