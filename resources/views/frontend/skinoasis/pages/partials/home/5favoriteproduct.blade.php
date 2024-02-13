@@ -15,7 +15,7 @@
 
         <div class="heading-fav heading-center mb-5">
             <h4 class="subtitle text-uppercase mb-4">{{ localize('Products Favorite') }}</h4>
-            <ul class="nav nav-pills justify-content-center hidden" role="tablist">
+            <ul class="nav nav-pills justify-content-center" style="display:none;" role="tablist">
                 <li class="nav-item">
                     <a href="#arrival-all" class="nav-link font-size-normal letter-spacing-large active" data-toggle="tab" role="tab">All</a>
                 </li>
