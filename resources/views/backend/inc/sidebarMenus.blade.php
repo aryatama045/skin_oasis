@@ -238,10 +238,13 @@
         </li>
     @endcan
 
+
+    @canany(['customers', 'staffs'])
     <!-- Users -->
     <li class="side-nav-title side-nav-item nav-item mt-3">
         <span class="tt-nav-title-text">{{ localize('Users') }}</span>
     </li>
+    @endcan
 
     <!-- customers -->
     @can('customers')
@@ -270,10 +273,13 @@
         </li>
     @endcan
 
+
     <!-- Contents -->
+    @canany(['tags', 'pages', 'blogs', 'blog_categories', 'media_manager'])
     <li class="side-nav-title side-nav-item nav-item mt-3">
         <span class="tt-nav-title-text">{{ localize('Contents') }}</span>
     </li>
+    @endcan
 
     <!-- tags -->
     @php
@@ -300,7 +306,6 @@
             </a>
         </li>
     @endcan
-
 
     <!-- Blog Systems -->
     @php
@@ -346,9 +351,12 @@
     @endcan
 
     <!-- Promotions -->
+    @canany(['newsletters', 'subscribers','coupons','campaigns'])
     <li class="side-nav-title side-nav-item nav-item mt-3">
         <span class="tt-nav-title-text">{{ localize('Promotions') }}</span>
     </li>
+    @endcan
+
     <!-- newsletter -->
     @php
         $newsletterActiveRoutes = ['admin.newsletters.index', 'admin.subscribers.index'];
@@ -405,10 +413,13 @@
         </li>
     @endcan
 
+    @canany(['logistics', 'shipping_zones'])
     <!-- Fulfillment -->
     <li class="side-nav-title side-nav-item nav-item mt-3">
         <span class="tt-nav-title-text">{{ localize('Fulfillment') }}</span>
     </li>
+    @endcan
+
     <!-- Logistics -->
     @can('logistics')
         <li
@@ -434,10 +445,13 @@
         </li>
     @endcan
 
+    @canany(['order_reports', 'product_sale_reports', 'category_sale_reports', 'sales_amount_reports',
+        'delivery_status_reports', ])
     <!-- Reports -->
     <li class="side-nav-title side-nav-item nav-item mt-3">
         <span class="tt-nav-title-text">{{ localize('Reports') }}</span>
     </li>
+    @endcan
 
     <!-- reports -->
     @php
@@ -497,9 +511,11 @@
 
 
     <!-- Support -->
+    @canany(['contact_us_messages'])
     <li class="side-nav-title side-nav-item nav-item mt-3">
         <span class="tt-nav-title-text">{{ localize('Support') }}</span>
     </li>
+    @endcan
 
     @can('contact_us_messages')
         <li class="side-nav-item nav-item {{ areActiveRoutes(['admin.queries.index'], 'tt-menu-item-active') }}">
@@ -528,7 +544,7 @@
 
 
     <!-- affiliateSystem -->
-    {{-- @php
+    @php
         $affiliateSystemActiveRoutes = ['admin.newsletters.aasd'];
     @endphp
     @canany(['newsletters', 'subscribers'])
@@ -563,14 +579,12 @@
                 </ul>
             </div>
         </li>
-    @endcan --}}
+    @endcan
 
     <!-- Appearance -->
     @php
         $appearanceActiveRoutes = ['admin.appearance.header', 'admin.appearance.homepage.hero', 'admin.appearance.homepage.editHero', 'admin.appearance.homepage.topCategories', 'admin.appearance.homepage.topTrendingProducts', 'admin.appearance.homepage.featuredProducts', 'admin.appearance.homepage.bannerOne', 'admin.appearance.homepage.editBannerOne', 'admin.appearance.homepage.bestDeals', 'admin.appearance.homepage.bannerTwo', 'admin.appearance.homepage.clientFeedback', 'admin.appearance.homepage.editClientFeedback', 'admin.appearance.homepage.bestSelling', 'admin.appearance.homepage.customProductsSection', 'admin.appearance.products.index', 'admin.appearance.products.details', 'admin.appearance.products.details.editWidget', 'admin.appearance.about-us.popularBrands', 'admin.appearance.about-us.features', 'admin.appearance.about-us.editFeatures', 'admin.appearance.about-us.whyChooseUs', 'admin.appearance.about-us.editWhyChooseUs'];
-        
         $homepageActiveRoutes = ['admin.appearance.homepage.hero', 'admin.appearance.homepage.editHero', 'admin.appearance.homepage.topCategories', 'admin.appearance.homepage.topTrendingProducts', 'admin.appearance.homepage.featuredProducts', 'admin.appearance.homepage.bannerOne', 'admin.appearance.homepage.editBannerOne', 'admin.appearance.homepage.bestDeals', 'admin.appearance.homepage.bannerTwo', 'admin.appearance.homepage.clientFeedback', 'admin.appearance.homepage.editClientFeedback', 'admin.appearance.homepage.bestSelling', 'admin.appearance.homepage.customProductsSection'];
-        
     @endphp
 
     @canany(['homepage', 'product_page', 'product_details_page', 'about_us_page', 'header', 'footer'])
