@@ -79,7 +79,7 @@
                         }'>
                         @php
                             $trending_products = getSetting('top_trending_products') != null ? json_decode(getSetting('top_trending_products')) : [];
-                            $products = \App\Models\Product::leftJoin('product_categories','products.id','=','product_categories.product_id')->whereIn('id', $trending_products)->get();
+                            $products = \App\Models\Product::leftJoin('product_categories','products.id','=','product_categories.product_id')->whereIn('products.id', $trending_products)->get();
                         @endphp
 
                         @foreach ($products as $product)
