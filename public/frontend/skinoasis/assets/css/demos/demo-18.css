@@ -1006,6 +1006,9 @@
   }
 }
 
+.heading {
+  z-index: 1;
+}
 .heading .subtitle {
   font-size: 2.6rem;
   font-weight: 700;
@@ -1014,7 +1017,6 @@
   color: #222;
   margin: 0;
   margin-left: -24rem;
-  z-index: 1;
 }
 @media (max-width: 575.98px) {
   .heading .subtitle {

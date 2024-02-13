@@ -1098,8 +1098,6 @@
 		color: #222;
 		margin: 0;
 		margin-left: -24rem;
-		z-index: 1;
-
 		@media (max-width: 575.98px){
 			margin-left: 0rem;
 			font-size: 1.5rem;
@@ -1129,6 +1127,8 @@
 		line-height: 1.9;
 		letter-spacing: -.01em;
 	}
+
+	z-index: 1;
 }
 
 .footer-copyright {
