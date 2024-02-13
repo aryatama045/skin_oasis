@@ -49,16 +49,9 @@
                     @endphp
 
                     @foreach ($products as $product)
-                        <div class="filter_item
-                            @php if($product->categories()->count() > 0){
-                                    foreach ($product->categories as $category) {
-                                        echo $category->id .' ';
-                                    }
-                                } @endphp">
                             @include('frontend.skinoasis.pages.partials.products.favoriteProduct', [
                                 'product' => $product,
                             ])
-                        </div>
                     @endforeach
                 </div>
             </div>
