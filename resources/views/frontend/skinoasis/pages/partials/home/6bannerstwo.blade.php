@@ -6,7 +6,7 @@
                     <div class="clearfix">
                         <div class="heading mt-3">
                             <h3 class="">Material &amp; Design</h3>
-                            <h2 class="title mb-2">Product <br>Gallery</h2>
+                            <h2 class="title mb-2">Product <br> Gallery</h2>
                             <p class="content mb-6">
                                 Donec nec justo eget felis facilisis fermentum. Aliquam <br>
                                 porttitor mauris sit amet orci. Aenean dignissim <br>
