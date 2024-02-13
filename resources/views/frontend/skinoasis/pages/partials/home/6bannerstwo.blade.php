@@ -12,7 +12,9 @@
                             pellentesque felis.
                         </p>
                     </div>
-
+                    <figure>
+                        <img src="{{ staticAsset('frontend/skinoasis/assets/images/demos/demo-30/banners/banner-3.jpg') }}" alt="Banner">
+                    </figure>
                 </div>
             </div>
 
@@ -20,14 +22,12 @@
                 <figure>
                     <img src="{{ staticAsset('frontend/skinoasis/assets/images/demos/demo-30/banners/banner-1.jpg') }}" alt="Banner">
                 </figure>
+
             </div>
             <div class="col-md-4 p-md-0">
                 <div class="content-right">
                     <figure class="mb-md-12">
                         <img src="{{ staticAsset('frontend/skinoasis/assets/images/demos/demo-30/banners/banner-2.jpg') }}" alt="Banner">
-                    </figure>
-                    <figure>
-                        <img src="{{ staticAsset('frontend/skinoasis/assets/images/demos/demo-30/banners/banner-3.jpg') }}" alt="Banner">
                     </figure>
                 </div>
             </div>
