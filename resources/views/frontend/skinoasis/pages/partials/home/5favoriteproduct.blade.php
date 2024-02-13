@@ -1,5 +1,5 @@
 <!-- Product Favorite -->
-<div class="arrival pt-8 pb-100 bg-white position-relative overflow-hidden z-1 trending-products-area">
+<div class="arrival pt-8 pb-100 position-relative overflow-hidden z-1 trending-products-area">
     <div class="container">
 
         <div class="heading-fav">
