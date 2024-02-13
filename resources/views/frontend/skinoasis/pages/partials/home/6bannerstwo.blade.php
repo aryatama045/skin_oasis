@@ -33,7 +33,7 @@
                         }
                     }'>
                     <blockquote class="testimonial text-center">
-                        <p>“ Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti. ”</p>
+                        <p>“ Lorem ipsum dolor sit amet, consectetuer adipiscing elit. nisi neque, aliquet vel,  pretium, ligula ullam mollis. Ut justo. Suspendisse potenti. ”</p>
 
                         <cite>
                             Jenson Gregory
@@ -42,7 +42,7 @@
                     </blockquote><!-- End .testimonial -->
 
                     <blockquote class="testimonial text-center">
-                        <p>“ Impedit, ratione sequi, sunt incidunt magnam et. Delectus obcaecati optio eius error libero perferendis nesciunt atque dolores magni recusandae! Doloremque quidem error eum quis similique doloribus natus qui ut ipsum.Velit quos ipsa exercitationem, vel unde obcaecati impedit eveniet non. ”</p>
+                        <p>“ Impedit, ratione sequi, sunt incidunt magnam et.  exercitationem, vel unde obcaecati impedit eveniet non. ”</p>
 
                         <cite>
                             Damon Stone
@@ -51,7 +51,7 @@
                     </blockquote><!-- End .testimonial -->
 
                     <blockquote class="testimonial text-center">
-                        <p>“ Molestias animi illo natus ut quod neque ad accusamus praesentium fuga! Dolores odio alias sapiente odit delectus quasi, explicabo a, modi voluptatibus. Perferendis perspiciatis, voluptate, distinctio earum veritatis animi tempora eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti. ”</p>
+                        <p>“ Molestias animi illo natus ut quod neque ad accusamus praesentium fuga! animi tempora eget Suspendisse potenti. ”</p>
 
                         <cite>
                             John Smith
