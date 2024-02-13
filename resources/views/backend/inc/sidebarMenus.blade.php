@@ -547,38 +547,39 @@
     @php
         $affiliateSystemActiveRoutes = ['affiliate.withdraw.index'];
     @endphp
-    @canany(['newsletters', 'subscribers'])
-        <li class="side-nav-item nav-item {{ areActiveRoutes($affiliateSystemActiveRoutes, 'tt-menu-item-active') }}">
-            <a data-bs-toggle="collapse" href="#affiliateSystem"
-                aria-expanded="{{ areActiveRoutes($affiliateSystemActiveRoutes, 'true') }}"
-                aria-controls="affiliateSystem" class="side-nav-link tt-menu-toggle">
-                <span class="tt-nav-link-icon"><i data-feather="percent"></i></span>
-                <span class="tt-nav-link-text">{{ localize('Affiliate System') }}</span>
-            </a>
-            <div class="collapse {{ areActiveRoutes($affiliateSystemActiveRoutes, 'show') }}" id="affiliateSystem">
-                <ul class="side-nav-second-level">
-                    <li class="{{ areActiveRoutes(['admin.affiliate.configurations'], 'tt-menu-item-active') }}">
-                        <a href="{{ route('admin.affiliate.configurations') }}"
-                            class="{{ areActiveRoutes(['admin.affiliate.configurations']) }}">{{ localize('Configurations') }}</a>
-                    </li>
 
-                    <li class="{{ areActiveRoutes(['admin.subscribers.index'], 'tt-menu-item-active') }}">
-                        <a href="{{ route('admin.subscribers.index') }}"
-                            lass="{{ areActiveRoutes(['admin.newsletters.index']) }}">{{ localize('Withdraw Request') }}</a>
-                    </li>
+    <li class="side-nav-item nav-item {{ areActiveRoutes($affiliateSystemActiveRoutes, 'tt-menu-item-active') }}">
+        <a data-bs-toggle="collapse" href="#affiliateSystem"
+            aria-expanded="{{ areActiveRoutes($affiliateSystemActiveRoutes, 'true') }}"
+            aria-controls="affiliateSystem" class="side-nav-link tt-menu-toggle">
+            <span class="tt-nav-link-icon"><i data-feather="percent"></i></span>
+            <span class="tt-nav-link-text">{{ localize('Affiliate System') }}</span>
+        </a>
+        <div class="collapse {{ areActiveRoutes($affiliateSystemActiveRoutes, 'show') }}" id="affiliateSystem">
+            <ul class="side-nav-second-level">
+                <li class="{{ areActiveRoutes(['admin.affiliate.configurations'], 'tt-menu-item-active') }}">
+                    <a href="{{ route('admin.affiliate.configurations') }}"
+                        class="{{ areActiveRoutes(['admin.affiliate.configurations']) }}">{{ localize('Configurations') }}</a>
+                </li>
 
-                    <li class="{{ areActiveRoutes(['admin.subscribers.index'], 'tt-menu-item-active') }}">
-                        <a href="{{ route('admin.subscribers.index') }}"
-                            lass="{{ areActiveRoutes(['admin.newsletters.index']) }}">{{ localize('Earning Histories') }}</a>
-                    </li>
+                <li class="{{ areActiveRoutes(['admin.subscribers.index'], 'tt-menu-item-active') }}">
+                    <a href="{{ route('admin.subscribers.index') }}"
+                        lass="{{ areActiveRoutes(['admin.newsletters.index']) }}">{{ localize('Withdraw Request') }}</a>
+                </li>
 
-                    <li class="{{ areActiveRoutes(['admin.subscribers.index'], 'tt-menu-item-active') }}">
-                        <a href="{{ route('admin.subscribers.index') }}"
-                            lass="{{ areActiveRoutes(['admin.newsletters.index']) }}">{{ localize('Payment Histories') }}</a>
-                    </li>
-                </ul>
-            </div>
-        </li>
+                <li class="{{ areActiveRoutes(['admin.subscribers.index'], 'tt-menu-item-active') }}">
+                    <a href="{{ route('admin.subscribers.index') }}"
+                        lass="{{ areActiveRoutes(['admin.newsletters.index']) }}">{{ localize('Earning Histories') }}</a>
+                </li>
+
+                <li class="{{ areActiveRoutes(['admin.subscribers.index'], 'tt-menu-item-active') }}">
+                    <a href="{{ route('admin.subscribers.index') }}"
+                        lass="{{ areActiveRoutes(['admin.newsletters.index']) }}">{{ localize('Payment Histories') }}</a>
+                </li>
+            </ul>
+        </div>
+    </li>
+
 
     <!-- Appearance -->
     @php
