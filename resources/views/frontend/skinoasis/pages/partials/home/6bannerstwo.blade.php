@@ -26,11 +26,14 @@
         </div>
     </div>
 
-    <div class="video-banner video-banner-poster text-center mt-10">
+    <div class="video-banner video-banner-poster text-left mt-10">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-md-6 mb-3 mb-md-0">
-                    <h3 class="video-banner-title h3"><span class="text-primary">New Video</span>Womens New Arrivals</h3><!-- End .video-banner-title -->
+                    <h3 class="video-banner-title fw-bold h3">
+                        <span class="fw-light">New Video</span>
+                        Womens New Arrivals
+                    </h3><!-- End .video-banner-title -->
                     <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper ...</p>
                 </div><!-- End .col-md-6 -->
 
