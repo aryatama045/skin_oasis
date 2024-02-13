@@ -1,5 +1,5 @@
 <section class="gallery pt-15 pb-15" style="background-image: url({{ staticAsset('frontend/skinoasis/assets/images/demos/demo-30/bg-3.png') }})">
-    <div class="container">
+    <div class="container mb-3">
         <div class="row">
             <div class="col-md-4">
                 <div class="content-left">
