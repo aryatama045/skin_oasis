@@ -2,7 +2,7 @@
 <div class="arrival pt-8 pb-100 bg-white position-relative overflow-hidden z-1 trending-products-area">
     <div class="container">
 
-        <div class="entry-body">
+        <div class="heading-fav">
             <img class="img-fluid text-left d-inline" src="https://skinoasis.solusiitkreasi.com/public/uploads/media/0szep88MhwsQEGt367sGBWvjDSTF99mm4XryAZAb.png" width="200" height="25">
             <h2 class="entry-title d-inline">
                 backed-up with high knowledge in natural ingredients and headmost technologies,
@@ -13,7 +13,7 @@
             </div><!-- End .entry-content -->
         </div>
 
-        <div class="heading heading-center mb-5">
+        <div class="heading-fav heading-center mb-5">
             <h4 class="title text-uppercase mb-4">{{ localize('Products Favorite') }}</h4>
             <ul class="nav nav-pills justify-content-center" role="tablist">
                 <li class="nav-item">
