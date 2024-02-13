@@ -350,6 +350,10 @@
 	}
 }
 
+.trending-products-area{
+	background-color: #E9E5CC;
+}
+
 
 @include mq('xs', 'max') {
     .ratings-container {
