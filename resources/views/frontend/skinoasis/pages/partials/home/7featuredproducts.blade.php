@@ -5,7 +5,7 @@
         <div class="heading-fav heading-center mb-5">
             <ul class="nav nav-pills justify-content-center" role="tablist">
                 <li class="nav-item">
-                    <a href="#arrival-all" class="nav-link font-size-normal letter-spacing-large active" data-toggle="tab" role="tab">All</a>
+                    <a href="#featured-all" class="nav-link font-size-normal letter-spacing-large active" data-toggle="tab" role="tab">All</a>
                 </li>
 
                 @php
@@ -14,7 +14,7 @@
                 @endphp
                 @foreach ($categories as $category)
                 <li class="nav-item">
-                    <a href="#fav-{{ $category->id }}" class="nav-link font-size-normal letter-spacing-large" data-toggle="tab" role="tab">{{ $category->collectLocalization('name') }}</a>
+                    <a href="#featured-{{ $category->id }}" class="nav-link font-size-normal letter-spacing-large" data-toggle="tab" role="tab">{{ $category->collectLocalization('name') }}</a>
                 </li>
                 @endforeach
 
@@ -22,7 +22,7 @@
         </div>
 
         <div class="tab-content tab-content-carousel">
-            <div class="tab-pane p-0 fade show active" id="arrival-all" role="tabpanel">
+            <div class="tab-pane p-0 fade show active" id="featured-all" role="tabpanel">
                 <div class="owl-carousel  carousel-equal-height owl-simple carousel-with-shadow row cols-lg-4 cols-md-3 cols-2" data-toggle="owl"
                     data-owl-options='{
                         "nav": false,
@@ -56,7 +56,7 @@
             </div>
 
             @foreach ($categories as $category)
-                <div class="tab-pane p-0 fade " id="fav-{{ $category->id }}" role="tabpanel">
+                <div class="tab-pane p-0 fade " id="featured-{{ $category->id }}" role="tabpanel">
                     <div class="owl-carousel  carousel-equal-height owl-simple carousel-with-shadow row cols-lg-4 cols-md-3 cols-2" data-toggle="owl"
                         data-owl-options='{
                             "nav": false,
