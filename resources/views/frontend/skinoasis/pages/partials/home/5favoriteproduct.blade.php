@@ -86,21 +86,23 @@
                         }'>
                         @php
                             $trending_products = getSetting('top_trending_products') != null ? json_decode(getSetting('top_trending_products')) : [];
-                            $products = \App\Models\Product::leftJoin('product_categories as pc', 'products.id','=', 'pc.product_id')
+                            $products = \App\Models\Product::leftJoin('product_categories AS pc', 'pc.product_id','=', 'products.id')
                                         ->where->('pc.category_id', $category->id)->whereIn('id', $trending_products)->get();
                         @endphp
 
                         @foreach ($products as $product)
-                            <div class="filter_item
-                                @php if($product->categories()->count() > 0){
-                                        foreach ($product->categories as $category) {
-                                            echo $category->id .' ';
-                                        }
-                                    } @endphp">
-                                @include('frontend.skinoasis.pages.partials.products.favoriteProduct', [
-                                    'product' => $product,
-                                ])
-                            </div>
+
+                            <?php
+                                if($product->categories()->count() > 0){
+                                    foreach ($product->categories as $category) {
+                                        echo $category->id .' ';
+                                    }
+                                }
+                            ?>
+
+                            @include('frontend.skinoasis.pages.partials.products.favoriteProduct', [
+                                'product' => $product,
+                            ])
                         @endforeach
                     </div>
                 </div>
