@@ -545,7 +545,7 @@
 
     <!-- affiliateSystem -->
     @php
-        $affiliateSystemActiveRoutes = ['affiliate.withdraw.index'];
+        $affiliateSystemActiveRoutes = ['affiliate'];
     @endphp
 
     <li class="side-nav-item nav-item {{ areActiveRoutes($affiliateSystemActiveRoutes, 'tt-menu-item-active') }}">
@@ -562,19 +562,19 @@
                         class="{{ areActiveRoutes(['admin.affiliate.configurations']) }}">{{ localize('Configurations') }}</a>
                 </li>
 
-                <li class="{{ areActiveRoutes(['admin.subscribers.index'], 'tt-menu-item-active') }}">
-                    <a href="{{ route('admin.subscribers.index') }}"
-                        lass="{{ areActiveRoutes(['admin.newsletters.index']) }}">{{ localize('Withdraw Request') }}</a>
+                <li class="{{ areActiveRoutes(['affiliate.withdraw.index'], 'tt-menu-item-active') }}">
+                    <a href="{{ route('affiliate.withdraw.index') }}"
+                        lass="{{ areActiveRoutes(['affiliate.withdraw.index']) }}">{{ localize('Withdraw Request') }}</a>
                 </li>
 
-                <li class="{{ areActiveRoutes(['admin.subscribers.index'], 'tt-menu-item-active') }}">
-                    <a href="{{ route('admin.subscribers.index') }}"
-                        lass="{{ areActiveRoutes(['admin.newsletters.index']) }}">{{ localize('Earning Histories') }}</a>
+                <li class="{{ areActiveRoutes(['affiliate.withdraw.store'], 'tt-menu-item-active') }}">
+                    <a href="{{ route('affiliate.withdraw.store') }}"
+                        lass="{{ areActiveRoutes(['affiliate.withdraw.store']) }}">{{ localize('Earning Histories') }}</a>
                 </li>
 
-                <li class="{{ areActiveRoutes(['admin.subscribers.index'], 'tt-menu-item-active') }}">
-                    <a href="{{ route('admin.subscribers.index') }}"
-                        lass="{{ areActiveRoutes(['admin.newsletters.index']) }}">{{ localize('Payment Histories') }}</a>
+                <li class="{{ areActiveRoutes(['affiliate.withdraw.update'], 'tt-menu-item-active') }}">
+                    <a href="{{ route('affiliate.withdraw.update') }}"
+                        lass="{{ areActiveRoutes(['affiliate.withdraw.update']) }}">{{ localize('Payment Histories') }}</a>
                 </li>
             </ul>
         </div>
