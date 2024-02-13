@@ -338,9 +338,6 @@
 .heading-fav {
 	margin-bottom: 4.2rem;
 	position: relative;
-	.title {
-		margin-bottom: .9rem;
-	}
 
 	.title {
 		font-size: 3rem;
@@ -348,6 +345,8 @@
 		line-height: 1;
 		letter-spacing: -.025em;
 		color: #222;
+		margin-bottom: .9rem;
+		text-align: center;
 	}
 }
 
