@@ -545,7 +545,7 @@
 
     <!-- affiliateSystem -->
     @php
-        $affiliateSystemActiveRoutes = ['admin.newsletters.aasd'];
+        $affiliateSystemActiveRoutes = ['affiliate.withdraw.index'];
     @endphp
     @canany(['newsletters', 'subscribers'])
         <li class="side-nav-item nav-item {{ areActiveRoutes($affiliateSystemActiveRoutes, 'tt-menu-item-active') }}">
@@ -579,7 +579,6 @@
                 </ul>
             </div>
         </li>
-    @endcan
 
     <!-- Appearance -->
     @php

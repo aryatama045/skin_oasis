@@ -88,16 +88,16 @@ Route::group(
         Route::get('/', [DashboardController::class, 'index'])->name('admin.dashboard');
         Route::get('/profile', [DashboardController::class, 'profile'])->name('admin.profile');
         Route::post('/profile', [DashboardController::class, 'updateProfile'])->name('admin.profile.update');
-        // Route::group(['prefix' => 'affiliate'], function () {
-        //         # affiliate
-        //         Route::get('/configurations', [AffiliateConfigurationsController::class, 'index'])->name('admin.affiliate.configurations');
+        Route::group(['prefix' => 'affiliate'], function () {
+                # affiliate
+                Route::get('/configurations', [AffiliateConfigurationsController::class, 'index'])->name('admin.affiliate.configurations');
 
-        //         # withdraw
-        //         Route::get('/withdraw-requests', [WithdrawRequestsController::class, 'index'])->name('affiliate.withdraw.index');
-        //         Route::post('/withdraw-requests', [WithdrawRequestsController::class, 'store'])->name('affiliate.withdraw.store');
-        //         Route::post('/update-requests', [WithdrawRequestsController::class, 'update'])->name('affiliate.withdraw.update');
-        //     }
-        // );
+                # withdraw
+                Route::get('/withdraw-requests', [WithdrawRequestsController::class, 'index'])->name('affiliate.withdraw.index');
+                Route::post('/withdraw-requests', [WithdrawRequestsController::class, 'store'])->name('affiliate.withdraw.store');
+                Route::post('/update-requests', [WithdrawRequestsController::class, 'update'])->name('affiliate.withdraw.update');
+            }
+        );
         # auth settings 
         Route::get('/settings/auth', [SettingsController::class, 'authSettings'])->name('admin.settings.authSettings');
 
@@ -466,12 +466,12 @@ Route::group(
             Route::post('/homepage/client-feedback/update', [ClientFeedbackController::class, 'update'])->name('admin.appearance.homepage.updateClientFeedback');
             Route::get('/homepage/client-feedback/delete/{id}', [ClientFeedbackController::class, 'delete'])->name('admin.appearance.homepage.deleteClientFeedback');
 
-            # homepage - best selling products 
+            # homepage - best selling products
             Route::get('/homepage/best-selling-products', [BestSellingProductsController::class, 'index'])->name('admin.appearance.homepage.bestSelling');
 
-            # homepage - best selling products 
+            # homepage - best selling products
             Route::get('/homepage/custom-products-section', [BestSellingProductsController::class, 'customProductsSection'])->name('admin.appearance.homepage.customProductsSection');
-            
+
             # products - listing
             Route::get('/homepage/products', [ProductsPageController::class, 'index'])->name('admin.appearance.products.index');
 
