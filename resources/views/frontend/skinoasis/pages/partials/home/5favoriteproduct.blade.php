@@ -4,7 +4,7 @@
 
         <div class="heading-fav">
             <img class="img-fluid text-left d-inline p-2 mb-2" src="https://skinoasis.solusiitkreasi.com/public/uploads/media/0szep88MhwsQEGt367sGBWvjDSTF99mm4XryAZAb.png" width="200" height="25">
-            <h2 class="entry-title d-inline">
+            <h2 class="title d-inline">
                 backed-up with high knowledge in natural ingredients and headmost technologies,
             </h2><!-- End .entry-title -->
 
