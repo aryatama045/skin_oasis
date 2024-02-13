@@ -27,6 +27,7 @@
     <div class="video-banner video-banner-poster text-left mt-10 pb-5">
         <div class="container">
             <div class="row ">
+
                 <div class="col-md-4 mb-3 mb-md-0">
                     <h3 class="video-banner-title fw-bold h3">
                         <span class="fw-light">TRENDING</span>
@@ -56,7 +57,7 @@
                                 }
                             }
                         }'>
-                        <blockquote class="testimonial text-center">
+                        <blockquote class="testimonial text-center bg-white">
                             <p>“ Lorem ipsum dolor sit amet, consectetuer adipiscing elit. nisi neque, aliquet vel,  pretium, ligula ullam mollis. Ut justo. Suspendisse potenti. ”</p>
 
                             <cite>
@@ -65,7 +66,7 @@
                             </cite>
                         </blockquote><!-- End .testimonial -->
 
-                        <blockquote class="testimonial text-center">
+                        <blockquote class="testimonial text-center bg-white">
                             <p>“ Impedit, ratione sequi, sunt incidunt magnam et.  exercitationem, vel unde obcaecati impedit eveniet non. ”</p>
 
                             <cite>
@@ -74,7 +75,7 @@
                             </cite>
                         </blockquote><!-- End .testimonial -->
 
-                        <blockquote class="testimonial text-center">
+                        <blockquote class="testimonial text-center bg-white">
                             <p>“ Molestias animi illo natus ut quod neque ad accusamus praesentium fuga! animi tempora eget Suspendisse potenti. ”</p>
 
                             <cite>
