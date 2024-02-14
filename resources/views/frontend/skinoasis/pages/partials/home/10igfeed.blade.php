@@ -8,49 +8,71 @@
 
         <div class="row">
 
+            <div class="col-sm-3 col-xs-6">
+                <div class="banner-sm-div">
+                    <div class="banner-sm instagram-feed">
+                        <img src="{{ staticAsset('frontend/skinoasis/assets/images/demos/demo-21/instagramStore/banner-1.jpg') }}">
+                        <div class="instagram-feed-content">
+                            <a href="#"><i class="icon-heart-o"></i>280</a>
+                            <a href="#"><i class="icon-comments"></i>22</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
 
-            <div class="banner-sm-div">
-                <div class="col-sm-3 col-xs-6 banner-sm instagram-feed">
-                    <img src="{{ staticAsset('frontend/skinoasis/assets/images/demos/demo-21/instagramStore/banner-1.jpg') }}">
-                    <div class="instagram-feed-content">
-                        <a href="#"><i class="icon-heart-o"></i>280</a>
-                        <a href="#"><i class="icon-comments"></i>22</a>
+            <div class="col-sm-3 col-xs-6">
+                <div class="banner-sm-div">
+                    <div class="banner-sm instagram-feed">
+                        <img src="{{ staticAsset('frontend/skinoasis/assets/images/demos/demo-21/instagramStore/banner-1.jpg') }}">
+                        <div class="instagram-feed-content">
+                            <a href="#"><i class="icon-heart-o"></i>280</a>
+                            <a href="#"><i class="icon-comments"></i>22</a>
+                        </div>
                     </div>
                 </div>
-
-                <div class="col-sm-3 col-xs-6 banner-sm instagram-feed">
-                    <img src="{{ staticAsset('frontend/skinoasis/assets/images/demos/demo-21/instagramStore/banner-1.jpg') }}">
-                    <div class="instagram-feed-content">
-                        <a href="#"><i class="icon-heart-o"></i>280</a>
-                        <a href="#"><i class="icon-comments"></i>22</a>
+            </div>
+            <div class="col-sm-3 col-xs-6">
+                <div class="banner-sm-div">
+                    <div class="banner-sm instagram-feed">
+                        <img src="{{ staticAsset('frontend/skinoasis/assets/images/demos/demo-21/instagramStore/banner-1.jpg') }}">
+                        <div class="instagram-feed-content">
+                            <a href="#"><i class="icon-heart-o"></i>280</a>
+                            <a href="#"><i class="icon-comments"></i>22</a>
+                        </div>
                     </div>
                 </div>
-                <div class="col-sm-3 col-xs-6 banner-sm instagram-feed">
-                    <img src="{{ staticAsset('frontend/skinoasis/assets/images/demos/demo-21/instagramStore/banner-1.jpg') }}">
-                    <div class="instagram-feed-content">
-                        <a href="#"><i class="icon-heart-o"></i>280</a>
-                        <a href="#"><i class="icon-comments"></i>22</a>
+            </div>
+            <div class="col-sm-3 col-xs-6">
+                <div class="banner-sm-div">
+                    <div class="banner-sm instagram-feed">
+                        <img src="{{ staticAsset('frontend/skinoasis/assets/images/demos/demo-21/instagramStore/banner-1.jpg') }}">
+                        <div class="instagram-feed-content">
+                            <a href="#"><i class="icon-heart-o"></i>280</a>
+                            <a href="#"><i class="icon-comments"></i>22</a>
+                        </div>
                     </div>
                 </div>
-                <div class="col-sm-3 col-xs-6 banner-sm instagram-feed">
-                    <img src="{{ staticAsset('frontend/skinoasis/assets/images/demos/demo-21/instagramStore/banner-1.jpg') }}">
-                    <div class="instagram-feed-content">
-                        <a href="#"><i class="icon-heart-o"></i>280</a>
-                        <a href="#"><i class="icon-comments"></i>22</a>
+            </div>
+            <div class="col-sm-3 col-xs-6">
+                <div class="banner-sm-div">
+                    <div class="banner-sm instagram-feed">
+                        <img src="{{ staticAsset('frontend/skinoasis/assets/images/demos/demo-21/instagramStore/banner-1.jpg') }}">
+                        <div class="instagram-feed-content">
+                            <a href="#"><i class="icon-heart-o"></i>280</a>
+                            <a href="#"><i class="icon-comments"></i>22</a>
+                        </div>
                     </div>
                 </div>
-                <div class="col-sm-3 col-xs-6 banner-sm instagram-feed">
-                    <img src="{{ staticAsset('frontend/skinoasis/assets/images/demos/demo-21/instagramStore/banner-1.jpg') }}">
-                    <div class="instagram-feed-content">
-                        <a href="#"><i class="icon-heart-o"></i>280</a>
-                        <a href="#"><i class="icon-comments"></i>22</a>
-                    </div>
-                </div>
-                <div class="col-sm-3 col-xs-6 banner-sm instagram-feed">
-                    <img src="{{ staticAsset('frontend/skinoasis/assets/images/demos/demo-21/instagramStore/banner-1.jpg') }}">
-                    <div class="instagram-feed-content">
-                        <a href="#"><i class="icon-heart-o"></i>280</a>
-                        <a href="#"><i class="icon-comments"></i>22</a>
+            </div>
+            <div class="col-sm-3 col-xs-6">
+                <div class="banner-sm-div">
+                    <div class="banner-sm instagram-feed">
+                        <img src="{{ staticAsset('frontend/skinoasis/assets/images/demos/demo-21/instagramStore/banner-1.jpg') }}">
+                        <div class="instagram-feed-content">
+                            <a href="#"><i class="icon-heart-o"></i>280</a>
+                            <a href="#"><i class="icon-comments"></i>22</a>
+                        </div>
                     </div>
                 </div>
             </div>
