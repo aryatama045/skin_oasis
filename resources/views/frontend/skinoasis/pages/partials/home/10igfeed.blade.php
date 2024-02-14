@@ -87,7 +87,7 @@
         </div>
 
         <div class="more-container text-center">
-            <a href="#" class="btn btn-outline-primary-2 btn-more">@Molla Instagram</a>
+            <a href="#" class="btn btn-outline-primary-2 btn-more">@Skinoasis Instagram</a>
         </div><!-- End .more-container -->
     </div><!-- End .container -->
 </div><!-- End .bg-lighter pt-5 pb-5 -->
