@@ -28297,6 +28297,11 @@ a.btn.btn-outline.btn-bottom-c {
     padding-bottom: 1rem;
     transition: all .35s ease;
 }
+.btn-product.btn-cart:hover {
+    color: #fff;
+    border-color: #c96;
+    background-color: #c96;
+}
 
 .btn-outline-green-skin {
     background-color: rgba(93, 80, 5, 0.5);
