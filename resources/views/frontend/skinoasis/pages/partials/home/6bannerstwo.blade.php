@@ -69,7 +69,7 @@
 
                 <div class="col-md-6">
                     <div class="video-poster">
-                        <img src="{{ staticAsset('frontend/skinoasis/assets/images/video/poster-1.jpg') }}" alt="poster">
+                        <img src="{{ staticAsset('frontend/skinoasis/assets/images/banners/banner2.png') }}" alt="poster">
 
                         <div class="video-poster-content">
                             <a href="https://www.youtube.com/watch?v=vBPgmASQ1A0" class="btn-video btn-iframe"><i class="icon-play"></i></a>
