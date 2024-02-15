@@ -52,7 +52,7 @@
                 <h3 class="product-title fw-bold font-size-normal tt-line-clamp tt-clamp-1">{{ $product->collectLocalization('name') }}</h3>
             </a>
 
-            <div class="product-price font-size-normal mt-2 mb-0 text-dark text-left">
+            <div class="product-price font-size-normal mt-lg-8 mb-0 text-dark text-left">
                 <h6 class="price">
                     @include('frontend.skinoasis.pages.partials.products.pricing', [
                         'product' => $product,
