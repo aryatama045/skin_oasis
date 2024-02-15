@@ -28280,7 +28280,7 @@ img.col-md-8.float-md-end.mb-3.ms-md-3 {
     background-color: #E0E9CC;
 }
 
-a.btn.btn-outline.btn-bottom-c {
+.btn-bottom-c {
     position: absolute;
     z-index: 1;
     bottom: 0;
@@ -28358,7 +28358,7 @@ a.btn.btn-outline.btn-bottom-c {
         height: 250px;
     }
 
-    a.btn.btn-outline.btn-bottom-c {
+    .btn-bottom-c {
         position: relative;
     }
 
