@@ -86,14 +86,14 @@
                 <div class="col-md-8">
                     <div class="row g-4">
                         <div class="product-details">
-                            <h1 class="product-title">{{ $product->collectLocalization('name') }}</h1><!-- End .product-title -->
+                            <h1 class="product-title mt-xs-3">{{ $product->collectLocalization('name') }}</h1><!-- End .product-title -->
 
-                            <div class="ratings-container">
+                            <!-- <div class="ratings-container">
                                 <div class="ratings">
-                                    <div class="ratings-val" style="width: 80%;"></div><!-- End .ratings-val -->
-                                </div><!-- End .ratings -->
+                                    <div class="ratings-val" style="width: 80%;"></div>
+                                </div>
                                 <a class="ratings-text" href="#product-review-link" id="review-link">( 2 Reviews )</a>
-                            </div><!-- End .rating-container -->
+                            </div> -->
 
                             <div class="product-price">
                                 @include('frontend.default.pages.partials.products.pricing', compact('product'))
