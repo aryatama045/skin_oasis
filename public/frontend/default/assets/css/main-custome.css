@@ -28291,6 +28291,10 @@ a.btn.btn-outline.btn-bottom-c {
     color: white !important;
 }
 
+.bg-transparant {
+    background-color: transparent !important;
+}
+
 .product.shadow-none {
     background-color: transparent !important;
 }
