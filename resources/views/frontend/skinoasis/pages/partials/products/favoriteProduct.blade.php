@@ -39,7 +39,7 @@
                 @if ($product->categories()->count() > 0)
                     @foreach ($product->categories as $category)
                         <a href="{{ route('products.index') }}?&category_id={{ $category->id }}"
-                            class="d-inline-block text-muted fs-xxs">{{ $category->collectLocalization('name') }}
+                            class="d-inline-block text-muted">{{ $category->collectLocalization('name') }}
                             @if (!$loop->last)
                                 ,
                             @endif
@@ -49,10 +49,10 @@
             </div>
 
             <a href="{{ route('products.show', $product->slug) }}">
-                <h3 class="product-title font-size-normal tt-line-clamp tt-clamp-1">{{ $product->collectLocalization('name') }}</h3>
+                <h3 class="product-title fw-bold font-size-normal tt-line-clamp tt-clamp-1">{{ $product->collectLocalization('name') }}</h3>
             </a>
 
-            <div class="product-price font-size-normal mb-0 text-dark justify-content-center">
+            <div class="product-price font-size-normal mb-0 text-dark text-left">
                 <h6 class="price">
                     @include('frontend.default.pages.partials.products.pricing', [
                         'product' => $product,
