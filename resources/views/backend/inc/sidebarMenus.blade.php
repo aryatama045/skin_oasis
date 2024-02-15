@@ -238,10 +238,13 @@
         </li>
     @endcan
 
+
+    @canany(['customers', 'staffs'])
     <!-- Users -->
     <li class="side-nav-title side-nav-item nav-item mt-3">
         <span class="tt-nav-title-text">{{ localize('Users') }}</span>
     </li>
+    @endcan
 
     <!-- customers -->
     @can('customers')
@@ -270,10 +273,13 @@
         </li>
     @endcan
 
+
     <!-- Contents -->
+    @canany(['tags', 'pages', 'blogs', 'blog_categories', 'media_manager'])
     <li class="side-nav-title side-nav-item nav-item mt-3">
         <span class="tt-nav-title-text">{{ localize('Contents') }}</span>
     </li>
+    @endcan
 
     <!-- tags -->
     @php
@@ -300,7 +306,6 @@
             </a>
         </li>
     @endcan
-
 
     <!-- Blog Systems -->
     @php
@@ -346,9 +351,12 @@
     @endcan
 
     <!-- Promotions -->
+    @canany(['newsletters', 'subscribers','coupons','campaigns'])
     <li class="side-nav-title side-nav-item nav-item mt-3">
         <span class="tt-nav-title-text">{{ localize('Promotions') }}</span>
     </li>
+    @endcan
+
     <!-- newsletter -->
     @php
         $newsletterActiveRoutes = ['admin.newsletters.index', 'admin.subscribers.index'];
@@ -405,10 +413,13 @@
         </li>
     @endcan
 
+    @canany(['logistics', 'shipping_zones'])
     <!-- Fulfillment -->
     <li class="side-nav-title side-nav-item nav-item mt-3">
         <span class="tt-nav-title-text">{{ localize('Fulfillment') }}</span>
     </li>
+    @endcan
+
     <!-- Logistics -->
     @can('logistics')
         <li
@@ -434,10 +445,13 @@
         </li>
     @endcan
 
+    @canany(['order_reports', 'product_sale_reports', 'category_sale_reports', 'sales_amount_reports',
+        'delivery_status_reports', ])
     <!-- Reports -->
     <li class="side-nav-title side-nav-item nav-item mt-3">
         <span class="tt-nav-title-text">{{ localize('Reports') }}</span>
     </li>
+    @endcan
 
     <!-- reports -->
     @php
@@ -497,9 +511,11 @@
 
 
     <!-- Support -->
+    @canany(['contact_us_messages'])
     <li class="side-nav-title side-nav-item nav-item mt-3">
         <span class="tt-nav-title-text">{{ localize('Support') }}</span>
     </li>
+    @endcan
 
     @can('contact_us_messages')
         <li class="side-nav-item nav-item {{ areActiveRoutes(['admin.queries.index'], 'tt-menu-item-active') }}">
@@ -528,49 +544,47 @@
 
 
     <!-- affiliateSystem -->
-    {{-- @php
-        $affiliateSystemActiveRoutes = ['admin.newsletters.aasd'];
+    @php
+        $affiliateSystemActiveRoutes = ['affiliate'];
     @endphp
-    @canany(['newsletters', 'subscribers'])
-        <li class="side-nav-item nav-item {{ areActiveRoutes($affiliateSystemActiveRoutes, 'tt-menu-item-active') }}">
-            <a data-bs-toggle="collapse" href="#affiliateSystem"
-                aria-expanded="{{ areActiveRoutes($affiliateSystemActiveRoutes, 'true') }}"
-                aria-controls="affiliateSystem" class="side-nav-link tt-menu-toggle">
-                <span class="tt-nav-link-icon"><i data-feather="percent"></i></span>
-                <span class="tt-nav-link-text">{{ localize('Affiliate System') }}</span>
-            </a>
-            <div class="collapse {{ areActiveRoutes($affiliateSystemActiveRoutes, 'show') }}" id="affiliateSystem">
-                <ul class="side-nav-second-level">
-                    <li class="{{ areActiveRoutes(['admin.affiliate.configurations'], 'tt-menu-item-active') }}">
-                        <a href="{{ route('admin.affiliate.configurations') }}"
-                            class="{{ areActiveRoutes(['admin.affiliate.configurations']) }}">{{ localize('Configurations') }}</a>
-                    </li>
 
-                    <li class="{{ areActiveRoutes(['admin.subscribers.index'], 'tt-menu-item-active') }}">
-                        <a href="{{ route('admin.subscribers.index') }}"
-                            lass="{{ areActiveRoutes(['admin.newsletters.index']) }}">{{ localize('Withdraw Request') }}</a>
-                    </li>
+    <li class="side-nav-item nav-item {{ areActiveRoutes($affiliateSystemActiveRoutes, 'tt-menu-item-active') }}">
+        <a data-bs-toggle="collapse" href="#affiliateSystem"
+            aria-expanded="{{ areActiveRoutes($affiliateSystemActiveRoutes, 'true') }}"
+            aria-controls="affiliateSystem" class="side-nav-link tt-menu-toggle">
+            <span class="tt-nav-link-icon"><i data-feather="percent"></i></span>
+            <span class="tt-nav-link-text">{{ localize('Affiliate System') }}</span>
+        </a>
+        <div class="collapse {{ areActiveRoutes($affiliateSystemActiveRoutes, 'show') }}" id="affiliateSystem">
+            <ul class="side-nav-second-level">
+                <li class="{{ areActiveRoutes(['admin.affiliate.configurations'], 'tt-menu-item-active') }}">
+                    <a href="{{ route('admin.affiliate.configurations') }}"
+                        class="{{ areActiveRoutes(['admin.affiliate.configurations']) }}">{{ localize('Configurations') }}</a>
+                </li>
 
-                    <li class="{{ areActiveRoutes(['admin.subscribers.index'], 'tt-menu-item-active') }}">
-                        <a href="{{ route('admin.subscribers.index') }}"
-                            lass="{{ areActiveRoutes(['admin.newsletters.index']) }}">{{ localize('Earning Histories') }}</a>
-                    </li>
+                <li class="{{ areActiveRoutes(['affiliate.withdraw.index'], 'tt-menu-item-active') }}">
+                    <a href="{{ route('affiliate.withdraw.index') }}"
+                        lass="{{ areActiveRoutes(['affiliate.withdraw.index']) }}">{{ localize('Withdraw Request') }}</a>
+                </li>
 
-                    <li class="{{ areActiveRoutes(['admin.subscribers.index'], 'tt-menu-item-active') }}">
-                        <a href="{{ route('admin.subscribers.index') }}"
-                            lass="{{ areActiveRoutes(['admin.newsletters.index']) }}">{{ localize('Payment Histories') }}</a>
-                    </li>
-                </ul>
-            </div>
-        </li>
-    @endcan --}}
+                <li class="{{ areActiveRoutes(['affiliate.withdraw.index'], 'tt-menu-item-active') }}">
+                    <a href="{{ route('affiliate.withdraw.index') }}"
+                        lass="{{ areActiveRoutes(['affiliate.withdraw.index']) }}">{{ localize('Earning Histories') }}</a>
+                </li>
+
+                <li class="{{ areActiveRoutes(['affiliate.withdraw.index'], 'tt-menu-item-active') }}">
+                    <a href="{{ route('affiliate.withdraw.index') }}"
+                        lass="{{ areActiveRoutes(['affiliate.withdraw.index']) }}">{{ localize('Payment Histories') }}</a>
+                </li>
+            </ul>
+        </div>
+    </li>
+
 
     <!-- Appearance -->
     @php
         $appearanceActiveRoutes = ['admin.appearance.header', 'admin.appearance.homepage.hero', 'admin.appearance.homepage.editHero', 'admin.appearance.homepage.topCategories', 'admin.appearance.homepage.topTrendingProducts', 'admin.appearance.homepage.featuredProducts', 'admin.appearance.homepage.bannerOne', 'admin.appearance.homepage.editBannerOne', 'admin.appearance.homepage.bestDeals', 'admin.appearance.homepage.bannerTwo', 'admin.appearance.homepage.clientFeedback', 'admin.appearance.homepage.editClientFeedback', 'admin.appearance.homepage.bestSelling', 'admin.appearance.homepage.customProductsSection', 'admin.appearance.products.index', 'admin.appearance.products.details', 'admin.appearance.products.details.editWidget', 'admin.appearance.about-us.popularBrands', 'admin.appearance.about-us.features', 'admin.appearance.about-us.editFeatures', 'admin.appearance.about-us.whyChooseUs', 'admin.appearance.about-us.editWhyChooseUs'];
-        
         $homepageActiveRoutes = ['admin.appearance.homepage.hero', 'admin.appearance.homepage.editHero', 'admin.appearance.homepage.topCategories', 'admin.appearance.homepage.topTrendingProducts', 'admin.appearance.homepage.featuredProducts', 'admin.appearance.homepage.bannerOne', 'admin.appearance.homepage.editBannerOne', 'admin.appearance.homepage.bestDeals', 'admin.appearance.homepage.bannerTwo', 'admin.appearance.homepage.clientFeedback', 'admin.appearance.homepage.editClientFeedback', 'admin.appearance.homepage.bestSelling', 'admin.appearance.homepage.customProductsSection'];
-        
     @endphp
 
     @canany(['homepage', 'product_page', 'product_details_page', 'about_us_page', 'header', 'footer'])

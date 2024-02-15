@@ -4,7 +4,7 @@
 
         <div class="heading-fav">
             <img class="img-fluid text-left d-inline p-2 mb-2" src="https://skinoasis.solusiitkreasi.com/public/uploads/media/0szep88MhwsQEGt367sGBWvjDSTF99mm4XryAZAb.png" width="200" height="25">
-            <h2 class="entry-title d-inline">
+            <h2 class="title d-inline">
                 backed-up with high knowledge in natural ingredients and headmost technologies,
             </h2><!-- End .entry-title -->
 
@@ -15,7 +15,7 @@
 
         <div class="heading-fav heading-center mb-5">
             <h4 class="subtitle text-uppercase mb-4">{{ localize('Products Favorite') }}</h4>
-            <ul class="nav nav-pills justify-content-center" role="tablist">
+            <ul class="nav nav-pills justify-content-center" style="display:none;" role="tablist">
                 <li class="nav-item">
                     <a href="#arrival-all" class="nav-link font-size-normal letter-spacing-large active" data-toggle="tab" role="tab">All</a>
                 </li>
@@ -35,7 +35,7 @@
 
         <div class="tab-content tab-content-carousel">
             <div class="tab-pane p-0 fade show active" id="arrival-all" role="tabpanel">
-                <div class="owl-carousel  carousel-equal-height owl-simple carousel-with-shadow row cols-lg-4 cols-md-3 cols-2" data-toggle="owl"
+                <div class="owl-carousel  carousel-equal-height owl-simple carousel-with-shadow  cols-lg-4 cols-md-3 cols-2" data-toggle="owl"
                     data-owl-options='{
                         "nav": false,
                         "dots": true,
@@ -69,7 +69,7 @@
 
             @foreach ($categories as $category)
                 <div class="tab-pane p-0 fade " id="fav-{{ $category->id }}" role="tabpanel">
-                    <div class="owl-carousel  carousel-equal-height owl-simple carousel-with-shadow row cols-lg-4 cols-md-3 cols-2" data-toggle="owl"
+                    <div class="owl-carousel  carousel-equal-height owl-simple carousel-with-shadow cols-lg-4 cols-md-3 cols-2" data-toggle="owl"
                         data-owl-options='{
                             "nav": false,
                             "dots": true,

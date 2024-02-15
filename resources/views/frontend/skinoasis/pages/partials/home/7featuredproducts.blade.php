@@ -1,76 +1,98 @@
-<div class="pt-6 pb-6" style="background-color: #fff;">
+<!-- Product Favorite -->
+<div class="arrival pt-8 pb-100 position-relative overflow-hidden z-1 featured-product-area">
     <div class="container">
-        <div class="banner-set">
-            <div class="row">
 
-                <div class="col-lg-6">
-                    <div class="banner-set-image banner-border-hover">
-                        <a href="#">
-                            <img src="{{ staticAsset('frontend/skinoasis/assets/images/demos/demo-5/banners/banner-4.jpg') }}" alt="banner">
-                        </a>
-                        <div class="banner-content">
-                            <h3 class="banner-title"><a href="#"><span>Casual basics and<br>trendy key pieces.</span></a></h3><!-- End .banner-title -->
-                            <h4 class="banner-subtitle">in this look</h4>
-                            <!-- End .banner-subtitle -->
-                            <h4 class="banner-detail">• Rib-knit cardigan <br>• Linen-blend paper bag trousers</h4>
-                            <h4 class="banner-price">$19.99 - $48.00</h4>
-                            <a href="#" class="btn btn-outline-primary-2 banner-link">buy all</a>
-                        </div><!-- End .banner-content -->
-                    </div><!-- End .banner-set-image -->
-                </div><!-- End .col-lg-6 -->
+        <div class="heading-fav heading-center mb-5">
+            <ul class="nav nav-pills justify-content-center" role="tablist">
+                <li class="nav-item">
+                    <a href="#featured-all" class="nav-link font-size-normal letter-spacing-large active" data-toggle="tab" role="tab">All</a>
+                </li>
 
-                <div class="col-lg-6">
-                    <div class="banner-set-content text-center">
-                        <div class="set-content-wrapper">
-                            <h4>Special</h4>
-                            <h2>Refine Your Style.</h2>
+                @php
+                    $trending_product_categories = getSetting('trending_product_categories') != null ? json_decode(getSetting('trending_product_categories')) : [];
+                    $categories = \App\Models\Category::whereIn('id', $trending_product_categories)->get();
+                @endphp
+                @foreach ($categories as $category)
+                <li class="nav-item">
+                    <a href="#featured-{{ $category->id }}" class="nav-link font-size-normal letter-spacing-large" data-toggle="tab" role="tab">{{ $category->collectLocalization('name') }}</a>
+                </li>
+                @endforeach
 
-                            <p>Get on our exclusive email list and be the first to hear about sales, coupons, new arrivals and more! </p>
+            </ul>
+        </div>
 
-                            <div class="banner-set-products">
-                                <div class="row">
-                                    <div class="products">
-                                        <div class="col-6">
-                                            <div class="product product-2 text-center">
-                                                <figure class="product-media">
-                                                    <a href="#">
-                                                        <img src="{{ staticAsset('frontend/skinoasis/assets/images/demos/demo-5/products/product-13.jpg') }}" alt="Product image" class="product-image">
-                                                    </a>
-                                                </figure><!-- End .product-media -->
+        <div class="tab-content tab-content-carousel">
+            <div class="tab-pane p-0 fade show active" id="featured-all" role="tabpanel">
+                <div class="owl-carousel  carousel-equal-height owl-simple carousel-with-shadow cols-lg-4 cols-md-3 cols-2" data-toggle="owl"
+                    data-owl-options='{
+                        "nav": false,
+                        "dots": true,
+                        "margin": 20,
+                        "loop": false,
+                        "responsive": {
+                            "0": {
+                                "items": 2
+                            },
+                            "768": {
+                                "items": 3
+                            },
+                            "992": {
+                                "items": 4,
+                                "nav": true
+                            }
+                        }
+                    }'>
+                    @php
+                        $trending_products = getSetting('top_trending_products') != null ? json_decode(getSetting('top_trending_products')) : [];
+                        $products = \App\Models\Product::whereIn('id', $trending_products)->get();
+                    @endphp
 
-                                                <div class="product-body">
-                                                    <h3 class="product-title"><a href="#">Rib-knit cardigan</a></h3><!-- End .product-title -->
-                                                    <div class="product-price">
-                                                        $24.99
-                                                    </div><!-- End .product-price -->
-                                                </div><!-- End .product-body -->
-                                            </div><!-- End .product -->
-                                        </div><!-- End .col-sm-6 -->
+                    @foreach ($products as $product)
+                            @include('frontend.skinoasis.pages.partials.products.favoriteProduct', [
+                                'product' => $product,
+                            ])
+                    @endforeach
+                </div>
+            </div>
 
-                                        <div class="col-6">
-                                            <div class="product product-2 text-center">
-                                                <figure class="product-media">
-                                                    <a href="#">
-                                                        <img src="{{ staticAsset('frontend/skinoasis/assets/images/demos/demo-5/products/product-14.jpg') }}" alt="Product image" class="product-image">
-                                                    </a>
-                                                </figure><!-- End .product-media -->
+            @foreach ($categories as $category)
+                <div class="tab-pane p-0 fade " id="featured-{{ $category->id }}" role="tabpanel">
+                    <div class="owl-carousel  carousel-equal-height owl-simple carousel-with-shadow cols-lg-4 cols-md-3 cols-2" data-toggle="owl"
+                        data-owl-options='{
+                            "nav": false,
+                            "dots": true,
+                            "margin": 20,
+                            "loop": false,
+                            "responsive": {
+                                "0": {
+                                    "items": 2
+                                },
+                                "768": {
+                                    "items": 3
+                                },
+                                "992": {
+                                    "items": 4,
+                                    "nav": true
+                                }
+                            }
+                        }'>
+                        @php
+                            $cat_id =$category->id;
+                            $trending_products = getSetting('top_trending_products') != null ? json_decode(getSetting('top_trending_products')) : [];
+                            $products = \App\Models\Product::leftJoin('product_categories','products.id','=','product_categories.product_id')->where('product_categories.category_id',$cat_id)->whereIn('products.id', $trending_products)->get();
+                        @endphp
 
-                                                <div class="product-body">
-                                                    <h3 class="product-title"><a href="#">Linen-blend trousers</a></h3><!-- End .product-title -->
-                                                    <div class="product-price">
-                                                        $19.99
-                                                    </div><!-- End .product-price -->
-                                                </div><!-- End .product-body -->
-                                            </div><!-- End .product -->
-                                        </div><!-- End .col-sm-6 -->
-                                    </div>
-                                </div><!-- End .row -->
-                            </div><!-- End .banner-set-products -->
-                        </div><!-- End .set-content-wrapper -->
-                    </div><!-- End .banner-set-content -->
-                </div><!-- End .col-lg-6 -->
+                        @foreach ($products as $product)
 
-            </div><!-- End .row -->
-        </div><!-- End .banner-set -->
-    </div><!-- End .container -->
-</div><!-- End .bg-lighter pt6 pb-6 -->
+                            @include('frontend.skinoasis.pages.partials.products.favoriteProduct', [
+                                'product' => $product,
+                            ])
+
+                        @endforeach
+                    </div>
+                </div>
+            @endforeach
+        </div>
+
+    </div>
+</div>

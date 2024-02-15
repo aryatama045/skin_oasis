@@ -11,11 +11,10 @@
                 -{{ discountPercentage($product) }}% <span class="text-uppercase">{{ localize('Off') }}</span>
             </span>
         @endif
-        <figure class="product-media">
-            <a href="#">
-                <img src="{{ uploadedAsset($product->thumbnail_image) }}" alt="{{ $product->collectLocalization('name') }}" width="277" height="377" class="product-image" />
-                <img src="{{ uploadedAsset($product->thumbnail_image) }}" alt="{{ $product->collectLocalization('name') }}" width="277" height="377" class="product-image-hover" />
-            </a>
+        <figure class="product-media bg-transparant">
+
+                <img src="{{ uploadedAsset($product->thumbnail_image) }}" alt="{{ $product->collectLocalization('name') }}" class="product-image fit-cover" />
+                <!-- <img src="{{ uploadedAsset($product->thumbnail_image) }}" alt="{{ $product->collectLocalization('name') }}" class="product-image-hover" /> -->
             <div class="product-action-vertical">
                 @if (Auth::check() && Auth::user()->user_type == 'customer')
                     <a href="javascript:void(0);" class="btn-product-icon btn-wishlist"
@@ -29,7 +28,7 @@
                     onclick="showProductDetailsModal({{ $product->id }})" alt="Preview"></a>
             </div>
         </figure>
-        <div class="product-body text-center bg-light-2">
+        <div class="product-body text-left bg-transparant">
             @if (getSetting('enable_reward_points') == 1)
                 <span class="fs-xxs fw-bold" data-bs-toggle="tooltip" data-bs-placement="top"
                     data-bs-title="{{ localize('Reward Points') }}">
@@ -40,7 +39,7 @@
                 @if ($product->categories()->count() > 0)
                     @foreach ($product->categories as $category)
                         <a href="{{ route('products.index') }}?&category_id={{ $category->id }}"
-                            class="d-inline-block text-muted fs-xxs">{{ $category->collectLocalization('name') }}
+                            class="d-inline-block text-dark">{{ $category->collectLocalization('name') }}
                             @if (!$loop->last)
                                 ,
                             @endif
@@ -50,19 +49,19 @@
             </div>
 
             <a href="{{ route('products.show', $product->slug) }}">
-                <h3 class="product-title font-size-normal">{{ $product->collectLocalization('name') }}</h3>
+                <h3 class="product-title fw-bold font-size-normal tt-line-clamp tt-clamp-1">{{ $product->collectLocalization('name') }}</h3>
             </a>
 
-            <div class="product-price font-size-normal mb-0 text-dark justify-content-center">
+            <div class="product-price font-size-normal mt-lg-2 mb-0 text-dark text-left">
                 <h6 class="price">
-                    @include('frontend.default.pages.partials.products.pricing', [
+                    @include('frontend.skinoasis.pages.partials.products.pricing', [
                         'product' => $product,
                         'onlyPrice' => true,
                     ])
                 </h6>
             </div>
 
-            <div class="product-footer justify-content-center d-block">
+            <div class="text-left d-block mt-lg-5">
                 @php
                     $isVariantProduct = 0;
                     $stock = 0;
@@ -73,7 +72,7 @@
                     }
                 @endphp
                 @if ($isVariantProduct)
-                    <a href="javascript:void(0);" class="btn font-size-normal letter-spacing-large btn-dark-fav w-100"
+                    <a href="javascript:void(0);" class="font-size-normal fw-bold text-danger text-uppercase letter-spacing-large w-100"
                         onclick="showProductDetailsModal({{ $product->id }})">{{ localize('Add to Cart') }}</a>
                 @else
                     <form action="" class="direct-add-to-cart-form">
@@ -82,11 +81,11 @@
                         <input type="hidden" value="1" name="quantity">
 
                         @if (!$isVariantProduct && $stock < 1)
-                            <a href="javascript:void(0);" class="btn font-size-normal letter-spacing-large btn-dark-fav w-100">
+                            <a href="javascript:void(0);" class="font-size-normal fw-bold text-danger text-uppercase letter-spacing-large w-100">
                                 {{ localize('Out of Stock') }}</a>
                         @else
                             <a href="javascript:void(0);" onclick="directAddToCartFormSubmit(this)"
-                                class="btn font-size-normal letter-spacing-large btn-dark-fav w-100 direct-add-to-cart-btn add-to-cart-text">
+                                class="font-size-normal fw-bold text-danger text-uppercase letter-spacing-large w-100 direct-add-to-cart-btn add-to-cart-text">
                                 {{ localize('Add to Cart') }}</a>
                         @endif
                     </form>

@@ -1,64 +1,86 @@
-<div class="product product-7 text-center">
-    <figure class="product-media">
-        @php
-            $discountPercentage = discountPercentage($product);
-        @endphp
+<div class="vertical-product-card shadow-none rounded-2 position-relative d-md-flex align-items-center bg-white hr-product">
 
-        @if ($discountPercentage > 0)
-            <span class="offer-badge text-white fw-bold fs-xxs bg-danger position-absolute start-0 top-0">
-                -{{ discountPercentage($product) }}% <span class="text-uppercase">{{ localize('Off') }}</span>
-            </span>
-        @endif
-        
-        
+    @php
+        $discountPercentage = discountPercentage($product);
+    @endphp
+
+    @if ($discountPercentage > 0)
+        <span class="offer-badge text-white fw-bold fs-xs bg-danger position-absolute start-0 top-0">
+            -{{ discountPercentage($product) }}% <span class="text-uppercase">{{ localize('Off') }}</span>
+        </span>
+    @endif
+
+
+    <div class="thumbnail position-relative text-center p-4 flex-shrink-0">
+        <img src="{{ uploadedAsset($product->thumbnail_image) }}" alt="{{ $product->collectLocalization('name') }}"
+            class="img-fluid fit-cover">
+    </div>
+    <div class="card-content w-100">
 
         @if (getSetting('enable_reward_points') == 1)
-
-            <span class="product-label label-new" data-bs-toggle="tooltip" data-bs-placement="top"
-                data-bs-title="{{ localize('Reward Points') }}" > {{ $product->reward_points }}</span>
+            <span class="fs-xxs fw-bold" data-bs-toggle="tooltip" data-bs-placement="top"
+                data-bs-title="{{ localize('Reward Points') }}">
+                <i class="fas fa-medal"></i> {{ $product->reward_points }}
+            </span>
         @endif
 
-        <a href="product.html">
-            <img src="assets/images/products/product-4.jpg" alt="Product image" class="product-image">
-        </a>
+        <!--product category start-->
+        <div class="mb-2 tt-category tt-line-clamp tt-clamp-1">
+            @if ($product->categories()->count() > 0)
+                @foreach ($product->categories as $category)
+                    <a href="{{ route('products.index') }}?&category_id={{ $category->id }}"
+                        class="d-inline-block text-muted fs-xxs">{{ $category->collectLocalization('name') }}
+                        @if (!$loop->last)
+                            ,
+                        @endif
+                    </a>
+                @endforeach
+            @endif
+        </div>
+        <!--product category end-->
 
-        <div class="product-action-vertical">
-            <a href="#" class="btn-product-icon btn-wishlist btn-expandable"><span>add to wishlist</span></a>
-            <a href="popup/quickView.html" class="btn-product-icon btn-quickview" title="Quick view"><span>Quick view</span></a>
-            <a href="#" class="btn-product-icon btn-compare" title="Compare"><span>Compare</span></a>
-        </div><!-- End .product-action-vertical -->
-
-        <div class="product-action">
-            <a href="#" class="btn-product btn-cart"><span>add to cart</span></a>
-        </div><!-- End .product-action -->
-    </figure><!-- End .product-media -->
-
-    <div class="product-body">
-        <div class="product-cat">
-            <a href="#">Women</a>
-        </div><!-- End .product-cat -->
-        <h3 class="product-title"><a href="product.html">Brown paperbag waist pencil skirt</a></h3><!-- End .product-title -->
-        <div class="product-price">
-            $60.00
-        </div><!-- End .product-price -->
-        <div class="ratings-container">
-            <div class="ratings">
-                <div class="ratings-val" style="width: 20%;"></div><!-- End .ratings-val -->
-            </div><!-- End .ratings -->
-            <span class="ratings-text">( 2 Reviews )</span>
-        </div><!-- End .rating-container -->
-
-        <div class="product-nav product-nav-thumbs">
-            <a href="#" class="active">
-                <img src="assets/images/products/product-4-thumb.jpg" alt="product desc">
+        <h3 class="h5 mb-2">
+            <a href="{{ route('products.show', $product->slug) }}"
+                class="card-title fw-semibold mb-2 tt-line-clamp tt-clamp-1">{{ $product->collectLocalization('name') }}
             </a>
-            <a href="#">
-                <img src="assets/images/products/product-4-2-thumb.jpg" alt="product desc">
-            </a>
+        </h3>
 
-            <a href="#">
-                <img src="assets/images/products/product-4-3-thumb.jpg" alt="product desc">
-            </a>
-        </div><!-- End .product-nav -->
-    </div><!-- End .product-body -->
-</div><!-- End .product -->
+        <h6 class="price">
+            @include('frontend.skinoasis.pages.partials.products.pricing', [
+                'product' => $product,
+                'br' => true,
+            ])
+        </h6>
+
+        @php
+            $isVariantProduct = 0;
+            $stock = 0;
+            if ($product->variations()->count() > 1) {
+                $isVariantProduct = 1;
+            } else {
+                $stock = $product->variations[0]->product_variation_stock ? $product->variations[0]->product_variation_stock->stock_qty : 0;
+            }
+        @endphp
+
+        @if ($isVariantProduct)
+            <a href="javascript:void(0);" class="btn-product btn-cart mt-4 w-100"
+                onclick="showProductDetailsModal({{ $product->id }})">{{ localize('Add to Cart') }}</a>
+        @else
+            <form action="" class="direct-add-to-cart-form">
+                <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                <input type="hidden" name="product_variation_id" value="{{ $product->variations[0]->id }}">
+                <input type="hidden" value="1" name="quantity">
+
+                @if (!$isVariantProduct && $stock < 1)
+                    <a href="javascript:void(0);" class="btn-product btn-cart mt-4 w-100">
+                        {{ localize('Out of Stock') }}</a>
+                @else
+                    <a href="javascript:void(0);" onclick="directAddToCartFormSubmit(this)"
+                        class="btn-product btn-cart mt-4 direct-add-to-cart-btn add-to-cart-text">{{ localize('Add to Cart') }}</a>
+                @endif
+            </form>
+        @endif
+
+
+    </div>
+</div>

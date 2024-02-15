@@ -2,8 +2,7 @@
 <div class="bg-lime pt-5 pb-5">
     <div class="container">
         <div class="heading-ig text-center">
-            <h4>Follow us on Instagram</h4><!-- End .title -->
-            <img src="{{ staticAsset('frontend/skinoasis/assets/images/logo-hashtag.png') }}" alt="Logo Hastag" width="50" class="logo-hashtag">
+            <h4>FIND UPDATE INFORMATION ABOUT <img src="{{ staticAsset('frontend/skinoasis/assets/images/logo-hashtag.png') }}" alt="Logo Hastag" width="50" class="logo-hashtag"> HERE!</h4><!-- End .title -->
         </div><!-- End .heading -->
 
         <div class="owl-carousel owl-simple mb-3" data-toggle="owl"
@@ -76,7 +75,7 @@
         </div><!-- End .owl-carousel -->
 
         <div class="more-container text-center">
-            <a href="#" class="btn btn-outline-primary-2 btn-more">@Molla Instagram</a>
+            <a href="#" class="btn btn-outline-primary-2 btn-outline-green-skin btn-more"> Lihat Lainnya</a>
         </div><!-- End .more-container -->
     </div><!-- End .container -->
 </div><!-- End .bg-lighter pt-5 pb-5 -->
