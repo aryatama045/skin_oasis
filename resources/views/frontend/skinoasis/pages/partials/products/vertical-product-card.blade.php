@@ -54,22 +54,12 @@
         </a>
 
         <h6 class="price">
-            @include('frontend.default.pages.partials.products.pricing', [
+            @include('frontend.skinoasis.pages.partials.products.pricing', [
                 'product' => $product,
                 'onlyPrice' => true,
             ])
         </h6>
 
-
-        @isset($showSold)
-            <div class="card-progressbar mb-2 mt-3 rounded-pill">
-                <span class="card-progress bg-primary" data-progress="{{ sellCountPercentage($product) }}%"
-                    style="width: {{ sellCountPercentage($product) }}%;"></span>
-            </div>
-            <p class="mb-0 fw-semibold">{{ localize('Total Sold') }}: <span
-                    class="fw-bold text-secondary">{{ $product->total_sale_count }}/{{ $product->sell_target }}</span>
-            </p>
-        @endisset
 
 
         @php

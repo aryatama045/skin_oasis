@@ -46,7 +46,7 @@
         </h3>
 
         <h6 class="price">
-            @include('frontend.default.pages.partials.products.pricing', [
+            @include('frontend.skinoasis.pages.partials.products.pricing', [
                 'product' => $product,
                 'br' => true,
             ])
@@ -63,7 +63,7 @@
         @endphp
 
         @if ($isVariantProduct)
-            <a href="javascript:void(0);" class="btn btn-outline-secondary btn-sm border-secondary mt-4"
+            <a href="javascript:void(0);" class="btn-product btn-cart mt-4"
                 onclick="showProductDetailsModal({{ $product->id }})">{{ localize('Add to Cart') }}</a>
         @else
             <form action="" class="direct-add-to-cart-form">
@@ -72,11 +72,11 @@
                 <input type="hidden" value="1" name="quantity">
 
                 @if (!$isVariantProduct && $stock < 1)
-                    <a href="javascript:void(0);" class="btn btn-outline-secondary btn-sm border-secondary mt-4">
+                    <a href="javascript:void(0);" class="btn-product btn-cart mt-4">
                         {{ localize('Out of Stock') }}</a>
                 @else
                     <a href="javascript:void(0);" onclick="directAddToCartFormSubmit(this)"
-                        class="btn btn-outline-secondary btn-sm border-secondary mt-4 direct-add-to-cart-btn add-to-cart-text">{{ localize('Add to Cart') }}</a>
+                        class="btn-product btn-cart mt-4 direct-add-to-cart-btn add-to-cart-text">{{ localize('Add to Cart') }}</a>
                 @endif
             </form>
         @endif
