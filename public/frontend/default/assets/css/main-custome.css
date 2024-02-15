@@ -28303,14 +28303,29 @@ a.btn.btn-outline.btn-bottom-c {
     background-color: #c96;
 }
 
+
+
 .btn-outline-green-skin {
     background-color: rgba(93, 80, 5, 0.5);
     color: white !important;
 }
 
-.btn-outline-green-skin {
+.btn-outline-green-skin:hover {
+    background-color: #4C6346;
+    color: #fff;
+    border-color: #a4aba3;
+}
+
+
+.btn-outline-green-dark {
     background-color: #4C6346;
     color: white !important;
+}
+
+.btn-outline-green-dark:hover {
+    background-color: rgba(93, 80, 5, 0.5);
+    color: white !important;
+    border-color: #a4aba3;
 }
 
 .bg-transparant {
