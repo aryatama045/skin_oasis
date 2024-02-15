@@ -63,8 +63,8 @@
         @endphp
 
         @if ($isVariantProduct)
-            <a href="javascript:void(0);" class="btn btn-outline btn-product btn-cart mt-4 w-100"
-                onclick="showProductDetailsModal({{ $product->id }})">{{ localize('Add to Cart') }}</a>
+            <a href="javascript:void(0);" class="btn-product btn-cart mt-4 w-100"
+                onclick="showProductDetailsModal({{ $product->id }})"><span>{{ localize('Add to Cart') }}</span></a>
         @else
             <form action="" class="direct-add-to-cart-form">
                 <input type="hidden" name="_token" value="{{ csrf_token() }}">
@@ -72,11 +72,12 @@
                 <input type="hidden" value="1" name="quantity">
 
                 @if (!$isVariantProduct && $stock < 1)
-                    <a href="javascript:void(0);" class="btn btn-outline btn-product btn-cart mt-4 w-100">
-                        {{ localize('Out of Stock') }}</a>
+                    <a href="javascript:void(0);" class="btn-product btn-cart mt-4 w-100">
+                        <span>{{ localize('Out of Stock') }}</span></a>
                 @else
                     <a href="javascript:void(0);" onclick="directAddToCartFormSubmit(this)"
-                        class="btn btn-outline btn-product btn-cart mt-4 direct-add-to-cart-btn add-to-cart-text">{{ localize('Add to Cart') }}</a>
+                        class="btn-product btn-cart mt-4 direct-add-to-cart-btn add-to-cart-text">
+                        <span>{{ localize('Add to Cart') }}</span></a>
                 @endif
             </form>
         @endif
