@@ -12,7 +12,7 @@
 
     <div class="thumbnail position-relative text-center p-4">
         <img src="{{ uploadedAsset($product->thumbnail_image) }}" alt="{{ $product->collectLocalization('name') }}"
-            class="img-fluid">
+            class="img-fluid fit-cover">
         <div class="product-btns position-absolute d-flex gap-2 flex-column">
             @if (Auth::check() && Auth::user()->user_type == 'customer')
                 <a href="javascript:void(0);" class="rounded-btn"><i class="fa-regular fa-heart"

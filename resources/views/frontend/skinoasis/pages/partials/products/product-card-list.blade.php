@@ -13,7 +13,7 @@
 
     <div class="thumbnail position-relative text-center p-4 flex-shrink-0">
         <img src="{{ uploadedAsset($product->thumbnail_image) }}" alt="{{ $product->collectLocalization('name') }}"
-            class="img-fluid">
+            class="img-fluid fit-cover">
     </div>
     <div class="card-content w-100">
 
