@@ -61,7 +61,7 @@
                 </h6>
             </div>
 
-            <div class="product-footer justify-content-center d-block">
+            <div class="text-left d-block">
                 @php
                     $isVariantProduct = 0;
                     $stock = 0;
