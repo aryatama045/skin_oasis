@@ -11,7 +11,7 @@
                 -{{ discountPercentage($product) }}% <span class="text-uppercase">{{ localize('Off') }}</span>
             </span>
         @endif
-        <figure class="product-media">
+        <figure class="product-media bg-transparant">
 
                 <img src="{{ uploadedAsset($product->thumbnail_image) }}" alt="{{ $product->collectLocalization('name') }}" width="277" height="377" class="product-image" />
                 <img src="{{ uploadedAsset($product->thumbnail_image) }}" alt="{{ $product->collectLocalization('name') }}" width="277" height="377" class="product-image-hover" />
@@ -28,7 +28,7 @@
                     onclick="showProductDetailsModal({{ $product->id }})" alt="Preview"></a>
             </div>
         </figure>
-        <div class="product-body text-center">
+        <div class="product-body text-center bg-transparant">
             @if (getSetting('enable_reward_points') == 1)
                 <span class="fs-xxs fw-bold" data-bs-toggle="tooltip" data-bs-placement="top"
                     data-bs-title="{{ localize('Reward Points') }}">

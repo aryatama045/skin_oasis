@@ -28290,3 +28290,7 @@ a.btn.btn-outline.btn-bottom-c {
     background-color: rgba(93, 80, 5, 0.5);
     color: white !important;
 }
+
+.product-body.bg-transparant {
+    background-color: transparent !important;
+}
