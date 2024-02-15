@@ -13,8 +13,8 @@
         @endif
         <figure class="product-media bg-transparant">
 
-                <img src="{{ uploadedAsset($product->thumbnail_image) }}" alt="{{ $product->collectLocalization('name') }}" width="277" height="377" class="product-image" />
-                <img src="{{ uploadedAsset($product->thumbnail_image) }}" alt="{{ $product->collectLocalization('name') }}" width="277" height="377" class="product-image-hover" />
+                <img src="{{ uploadedAsset($product->thumbnail_image) }}" alt="{{ $product->collectLocalization('name') }}" class="product-image fit-cover" />
+                <img src="{{ uploadedAsset($product->thumbnail_image) }}" alt="{{ $product->collectLocalization('name') }}" class="product-image-hover" />
             <div class="product-action-vertical">
                 @if (Auth::check() && Auth::user()->user_type == 'customer')
                     <a href="javascript:void(0);" class="btn-product-icon btn-wishlist"
