@@ -283,7 +283,7 @@
     @can('partner_pages')
         <li class="side-nav-item nav-item">
             <a href="{{ route('admin.customers.index') }}" class="side-nav-link">
-                <span class="tt-nav-link-icon"> <i data-feather="users"></i></span>
+                <span class="tt-nav-link-icon"> <i data-feather="file-text"></i></span>
                 <span class="tt-nav-link-text">{{ localize('Partner Pages') }}</span>
             </a>
         </li>
@@ -295,13 +295,13 @@
     @endphp
     @canany(['join_influencer', 'join_partner','join_community'])
         <li class="side-nav-item nav-item {{ areActiveRoutes($joinUsActiveRoutes, 'tt-menu-item-active') }}">
-            <a data-bs-toggle="collapse" href="#blogSystem"
-                aria-expanded="{{ areActiveRoutes($joinUsActiveRoutes, 'true') }}" aria-controls="blogSystem"
+            <a data-bs-toggle="collapse" href="#partnerSystem"
+                aria-expanded="{{ areActiveRoutes($joinUsActiveRoutes, 'true') }}" aria-controls="partnerSystem"
                 class="side-nav-link tt-menu-toggle">
-                <span class="tt-nav-link-icon"><i data-feather="file-text"></i></span>
+                <span class="tt-nav-link-icon"><i data-feather="users"></i></span>
                 <span class="tt-nav-link-text">{{ localize('Join Us') }}</span>
             </a>
-            <div class="collapse {{ areActiveRoutes($joinUsActiveRoutes, 'show') }}" id="blogSystem">
+            <div class="collapse {{ areActiveRoutes($joinUsActiveRoutes, 'show') }}" id="partnerSystem">
                 <ul class="side-nav-second-level">
                     @can('join_influencer')
                         <li
