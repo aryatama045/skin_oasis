@@ -32,8 +32,8 @@
                             <h5 class="mb-4">{{ localize('Basic Information') }}</h5>
 
                             <div class="mb-4">
-                                <label for="name" class="form-label">{{ localize('Staff Name') }}<span class="text-danger ms-1">*</span></label>
-                                <input class="form-control" type="text" id="name" placeholder="{{ localize('Type staff name') }}" name="name" value="{{old('name')}}">
+                                <label for="name" class="form-label">Nama Lengkap<span class="text-danger ms-1">*</span></label>
+                                <input class="form-control" type="text" id="name" placeholder="Masukan Nama Lengkap" name="name" value="{{old('name')}}">
                                 @if ($errors->has('name'))
                                 <span class="text-danger">{{ $errors->first('name') }}</span>
                                 @endif
@@ -41,8 +41,8 @@
 
 
                             <div class="mb-4">
-                                <label for="email" class="form-label">{{ localize('Staff Email') }}<span class="text-danger ms-1">*</span></label>
-                                <input class="form-control" type="email" id="email" placeholder="{{ localize('Type staff email') }}" name="email" value="{{old('email')}}">
+                                <label for="email" class="form-label">Email<span class="text-danger ms-1">*</span></label>
+                                <input class="form-control" type="email" id="email" placeholder="Email" name="email" value="{{old('email')}}">
                                 @if ($errors->has('email'))
                                 <span class="text-danger">{{ $errors->first('email') }}</span>
                                 @endif
@@ -50,25 +50,25 @@
 
 
                             <div class="mb-4">
-                                <label class="form-label">{{ localize('Staff Role') }}<span class="text-danger ms-1">*</span></label>
+                                <label class="form-label">Role<span class="text-danger ms-1">*</span></label>
                                 <select class="select2 form-control" data-toggle="select2" name="role_id">
+                                    <option value="0">-- Pilih Role --</option>
                                     @foreach ($roles as $role)
                                     <option value="{{ $role->id }}">
                                         {{ $role->name }}
                                     </option>
                                     @endforeach
                                 </select>
-                                @if ($errors->has('role_id'))
-                                <span class="text-danger">{{ $errors->first('role_id') }}</span>
-                                @endif
                             </div>
 
                             <div class="mb-4">
-                                <label for="phone" class="form-label">{{ localize('Staff Phone') }}<span class="text-danger ms-1">{{ @getSetting('registration_with') == 'email_and_phone' ? '*' : '' }}</span></label>
-                                <input class="form-control" type="text" id="phone" placeholder="{{ localize('Type staff phone') }}" name="phone" value="{{old('phone')}}" {{ @getSetting('registration_with') == 'email_and_phone' ? 'required' : '' }}>
-                                @if ($errors->has('phone'))
-                                <span class="text-danger">{{ $errors->first('phone') }}</span>
-                                @endif
+                                <label for="phone" class="form-label">Nomor Handphone</label>
+                                <input class="form-control" type="text" id="phone" placeholder="Nomor Handphone" name="phone" value="{{old('phone')}}">
+                            </div>
+
+                            <div class="mb-4">
+                                <label for="name" class="form-label">Alamat Lengkap<span class="text-danger ms-1">*</span></label>
+                                <textarea class="form-control" type="text" id="alamat" placeholder="Masukan Alamat Lengkap" name="name"></textarea>
                             </div>
 
                             <div class="mb-4">
@@ -77,6 +77,33 @@
                                 @if ($errors->has('password'))
                                 <span class="text-danger">{{ $errors->first('password') }}</span>
                                 @endif
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="mb-4">Informasi Lainnya</h5>
+
+                            <div class="mb-4">
+                                <label class="form-label">Foto</label>
+                                <div class="tt-image-drop rounded">
+                                    <span class="fw-semibold">Pilih Foto</span>
+                                    <!-- choose media -->
+                                    <div class="tt-product-thumb show-selected-files mt-3">
+                                        <div class="avatar avatar-xl cursor-pointer choose-media"
+                                            data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom"
+                                            onclick="showMediaManager(this)" data-selection="single">
+                                            <input type="hidden" name="image">
+                                            <div class="no-avatar rounded-circle">
+                                                <span><i data-feather="plus"></i></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- choose media -->
+                                </div>
+                            </div>
+
+                            <div class="mb-4">
+                                <label for="name" class="form-label">Curriculum Vitae, Certificate, Education & Experience<span class="text-danger ms-1">*</span></label>
+                                <textarea class="editor" id="infolain" name="infolain"></textarea>
                             </div>
                         </div>
                     </div>

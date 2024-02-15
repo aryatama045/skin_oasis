@@ -31,7 +31,7 @@
 
                     <div class="col-xl-3">
                         <div class="d-none d-xl-block">
-                            @include('frontend.default.pages.products.inc.productSidebar')
+                            @include('frontend.skinoasis.pages.products.inc.productSidebar')
                         </div>
 
                         <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasProductFilter"

@@ -1,85 +1,109 @@
+<div class="gshop-sidebar bg-white rounded-2 overflow-hidden">
+    <!--Filter by search-->
+    <div class="sidebar-widget search-widget bg-white py-5 px-4">
+        <div class="widget-title d-flex">
+            <h4 class="mb-0 flex-shrink-0">{{ localize('Search Now') }}</h4>
+        </div>
+        <div class="search-form d-flex align-items-center mt-4">
+            <input type="hidden" name="view" value="{{ request()->view }}">
+            <input type="text" id="search" name="search"
+                @isset($searchKey)
+       value="{{ $searchKey }}"
+       @endisset
+                placeholder="{{ localize('Search') }}">
+            <button type="submit" class="submit-icon-btn-secondary"><i
+                    class="fa-solid fa-magnifying-glass"></i></button>
+        </div>
+    </div>
+    <!--Filter by search-->
+    <!--Filter by Categories-->
+    <div class="sidebar-widget category-widget bg-white py-5 px-4 border-top mobile-menu-wrapper scrollbar h-200px">
+        <div class="widget-title d-flex">
+            <h4 class="mb-0 flex-shrink-0">{{ localize('Categories') }}</h4>
+        </div>
+        <ul class="widget-nav mt-4">
 
-    <div class="sidebar sidebar-shop">
+            @php
+                $product_listing_categories = getSetting('product_listing_categories') != null ? json_decode(getSetting('product_listing_categories')) : [];
+                $categories = \App\Models\Category::whereIn('id', $product_listing_categories)->get();
+            @endphp
+            @foreach ($categories as $category)
+                @php
+                    $productsCount = \App\Models\ProductCategory::where('category_id', $category->id)->count();
+                @endphp
+                <li>
+                    <a href="{{ route('products.index') }}?&category_id={{ $category->id }}"
+                        class="d-flex justify-content-between align-items-center">
+                        {{ $category->collectLocalization('name') }}
+                        <h5 class="fw-bold total-count">
+                            {{ $productsCount }}
+                        </h5>
+                    </a>
+                </li>
+            @endforeach
 
-        <!-- Filter Clear -->
-        <div class="widget widget-clean">
-            <label>Filters:</label>
-            <a href="{{ route('products.index') }}" class="sidebar-filter-clear">Clean All</a>
-        </div><!-- End .widget widget-clean -->
+        </ul>
+    </div>
+    <!--Filter by Categories-->
 
-        <!-- Category -->
-        <div class="widget widget-collapsible">
-            <h3 class="widget-title">
-                <a data-toggle="collapse" href="#widget-{{ localize('Categories') }}" role="button" aria-expanded="true" aria-controls="widget-{{ localize('Categories') }}">
-                {{ localize('Categories') }}
-                </a>
-            </h3><!-- End .widget-title -->
+    <!--Filter by Brand-->
+    <div class="sidebar-widget category-widget bg-white py-5 px-4 border-top mobile-menu-wrapper scrollbar h-200px">
+        <div class="widget-title d-flex">
+            <h4 class="mb-0 flex-shrink-0">Brand</h4>
+        </div>
+        <ul class="widget-nav mt-4">
 
-            <div class="collapse show" id="widget-{{ localize('Categories') }}">
-                <div class="widget-body">
-                    <div class="filter-items filter-items-count">
-                    
-                        <div class="filter-item">
-                            <a href="{{ route('products.index') }}">
-                            <label > ALL</label>
-                            </a>
-                        </div><!-- End .filter-item -->
-                        
-                        @php
-                            $product_listing_categories = getSetting('product_listing_categories') != null ? json_decode(getSetting('product_listing_categories')) : [];
-                            $categories = \App\Models\Category::whereIn('id', $product_listing_categories)->get();
-                        @endphp
-                        @foreach ($categories as $category)
-                            @php
-                                $productsCount = \App\Models\ProductCategory::where('category_id', $category->id)->count();
-                            @endphp
-                            
-                            <div class="filter-item">
-                                <a href="{{ route('products.index') }}?&category_id={{ $category->id }}">
-                                <label >{{ $category->collectLocalization('name') }}</label>
-                                <span class="item-count">{{ $productsCount }}</span>
-                                </a>
-                            </div><!-- End .filter-item -->
-                        @endforeach
+            @php
+                $brands = \App\Models\Brand::get();
+            @endphp
+            @foreach ($brands as $merk)
+                <li>
+                    <a href="{{ route('products.index') }}?&brand_id={{ $merk->id }}"
+                        class="d-flex justify-content-between align-items-center">{{ $merk->collectLocalization('name') }}
+                    </a>
+                </li>
+            @endforeach
 
+        </ul>
+    </div>
+    <!--Filter by Brand-->
 
-                    </div><!-- End .filter-items -->
-                </div><!-- End .widget-body -->
-            </div><!-- End .collapse -->
-        </div><!-- End .widget -->
+    <!--Filter by Price-->
+    <div class="sidebar-widget price-filter-widget bg-white py-5 px-4 border-top">
+        <div class="widget-title d-flex">
+            <h4 class="mb-0 flex-shrink-0">{{ localize('Filter by Price') }}</h4>
+        </div>
+        <div class="at-pricing-range mt-4">
+            <form class="range-slider-form">
+                <div class="price-filter-range"></div>
+                <div class="d-flex align-items-center mt-3">
+                    <input type="number" min="0" oninput="validity.valid||(value='0');"
+                        class="min_price price-range-field price-input price-input-min" name="min_price"
+                        data-value="{{ $min_value }}" data-min-range="0">
+                    <span class="d-inline-block ms-2 me-2 fw-bold">-</span>
 
+                    <input type="number" max="{{ $max_range }}"
+                        oninput="validity.valid||(value='{{ $max_range }}');"
+                        class="max_price price-range-field price-input price-input-max" name="max_price"
+                        data-value="{{ $max_value }}" data-max-range="{{ $max_range }}">
 
-        <!-- Price -->
-        <div class="widget widget-collapsible">
-            <h3 class="widget-title">
-                <a data-toggle="collapse" href="#widget-5" role="button" aria-expanded="true" aria-controls="widget-5">
-                    {{ localize('Filter by Price') }}
-                </a>
-            </h3><!-- End .widget-title -->
+                </div>
+                <button type="submit" class="btn btn-primary btn-sm mt-3">{{ localize('Filter') }}</button>
+            </form>
+        </div>
+    </div>
+    <!--Filter by Price-->
 
-            <div class="collapse show" id="widget-5">
-                <div class="widget-body">
-                    <div class="filter-price">
-                        <form class="range-slider-form">
-                            <div class="price-filter-range"></div>
-                            <div class="d-flex align-items-center mt-3">
-                                <input type="number" min="0" oninput="validity.valid||(value='0');"
-                                    class="form-control min_price price-range-field price-input price-input-min" name="min_price"
-                                    data-value="{{ $min_value }}" data-min-range="0">
-                                <span class="d-inline-block ms-2 me-2 fw-bold">-</span>
-
-                                <input type="number" max="{{ $max_range }}"
-                                    oninput="validity.valid||(value='{{ $max_range }}');"
-                                    class="form-control max_price price-range-field price-input price-input-max" name="max_price"
-                                    data-value="{{ $max_value }}" data-max-range="{{ $max_range }}">
-
-                            </div>
-                            <button type="submit" class="btn btn-primary btn-sm mt-3">{{ localize('Filter') }}</button>
-                        </form>
-                    </div><!-- End .filter-price -->
-
-                    
-                </div><!-- End .widget-body -->
-            </div><!-- End .collapse -->
-        </div><!-- End .widget -->
-    </div><!-- End .sidebar sidebar-shop -->
+    <!--Filter by Tags-->
+    <div class="sidebar-widget tags-widget py-5 px-4 bg-white">
+        <div class="widget-title d-flex">
+            <h4 class="mb-0">{{ localize('Tags') }}</h4>
+        </div>
+        <div class="tt-category-tag mt-4 mt-4 d-flex gap-2 flex-wrap">
+            @foreach ($tags as $tag)
+                <a href="{{ route('products.index') }}?&tag_id={{ $tag->id }}" style="color: black;">{{ $tag->name }}</a>
+            @endforeach
+        </div>
+    </div>
+    <!--Filter by Tags-->
+</div>
