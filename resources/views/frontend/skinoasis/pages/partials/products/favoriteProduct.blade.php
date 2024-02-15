@@ -54,7 +54,7 @@
 
             <div class="product-price font-size-normal mb-0 text-dark text-left">
                 <h6 class="price">
-                    @include('frontend.default.pages.partials.products.pricing', [
+                    @include('frontend.skinoasis.pages.partials.products.pricing', [
                         'product' => $product,
                         'onlyPrice' => true,
                     ])
