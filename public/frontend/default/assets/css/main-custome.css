@@ -28286,6 +28286,18 @@ a.btn.btn-outline.btn-bottom-c {
     bottom: 0;
 }
 
+.btn-product.btn-cart {
+    color: #c96;
+    border: 0.1rem solid #c96;
+    flex: 1 1 100%;
+    max-width: 100%;
+    text-transform: uppercase;
+    line-height: 1;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    transition: all .35s ease;
+}
+
 .btn-outline-green-skin {
     background-color: rgba(93, 80, 5, 0.5);
     color: white !important;
