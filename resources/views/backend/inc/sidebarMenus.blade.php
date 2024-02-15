@@ -284,7 +284,7 @@
         <li class="side-nav-item nav-item">
             <a href="{{ route('admin.customers.index') }}" class="side-nav-link">
                 <span class="tt-nav-link-icon"> <i data-feather="users"></i></span>
-                <span class="tt-nav-link-text">{{ localize('Partner Page's') }}</span>
+                <span class="tt-nav-link-text">{{ localize('Partner Pages') }}</span>
             </a>
         </li>
     @endcan
