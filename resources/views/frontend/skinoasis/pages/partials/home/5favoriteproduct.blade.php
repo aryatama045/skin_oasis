@@ -35,7 +35,7 @@
 
         <div class="tab-content tab-content-carousel">
             <div class="tab-pane p-0 fade show active" id="arrival-all" role="tabpanel">
-                <div class="owl-carousel  carousel-equal-height owl-simple carousel-with-shadow row cols-lg-4 cols-md-3 cols-2" data-toggle="owl"
+                <div class="owl-carousel  carousel-equal-height owl-simple carousel-with-shadow  cols-lg-4 cols-md-3 cols-2" data-toggle="owl"
                     data-owl-options='{
                         "nav": false,
                         "dots": true,
