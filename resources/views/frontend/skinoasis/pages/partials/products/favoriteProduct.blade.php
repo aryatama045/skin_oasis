@@ -49,7 +49,7 @@
             </div>
 
             <a href="{{ route('products.show', $product->slug) }}">
-                <h3 class="product-title font-size-normal">{{ $product->collectLocalization('name') }}</h3>
+                <h3 class="product-title font-size-normal tt-line-clamp tt-clamp-1">{{ $product->collectLocalization('name') }}</h3>
             </a>
 
             <div class="product-price font-size-normal mb-0 text-dark justify-content-center">
