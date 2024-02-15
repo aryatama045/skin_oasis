@@ -28308,6 +28308,11 @@ a.btn.btn-outline.btn-bottom-c {
     color: white !important;
 }
 
+.btn-outline-green-skin {
+    background-color: #4C6346;
+    color: white !important;
+}
+
 .bg-transparant {
     background-color: transparent !important;
 }
