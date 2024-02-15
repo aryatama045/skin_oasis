@@ -1,18 +1,15 @@
 @if (productBasePrice($product) == discountedProductBasePrice($product))
     @if (productBasePrice($product) == productMaxPrice($product))
-        <span class="fw-semibold h4">{{ formatPrice(productBasePrice($product)) }}</span>
+        <h4 class="fw-bold ">{{ formatPrice(productBasePrice($product)) }}</h4>
     @else
-        <span class="fw-semibold h4">{{ formatPrice(productBasePrice($product)) }}</span>
-        -
-        <span class="fw-semibold h4">{{ formatPrice(productMaxPrice($product)) }}</span>
+        <h4 class="fw-bold ">{{ formatPrice(productBasePrice($product)) }} - {{ formatPrice(productMaxPrice($product)) }}</h4>
+
     @endif
 @else
     @if (discountedProductBasePrice($product) == discountedProductMaxPrice($product))
-        <span class="fw-semibold h4">{{ formatPrice(discountedProductBasePrice($product)) }}</span>
+        <h4 class="fw-bold ">{{ formatPrice(discountedProductBasePrice($product)) }}</h4>
     @else
-        <span class="fw-semibold h4">{{ formatPrice(discountedProductBasePrice($product)) }}</span>
-        -
-        <span class="fw-semibold h4">{{ formatPrice(discountedProductMaxPrice($product)) }}</span>
+        <h4 class="fw-bold ">{{ formatPrice(discountedProductBasePrice($product)) }} - {{ formatPrice(discountedProductMaxPrice($product)) }}</h4>
     @endif
 
     @if (isset($br))
@@ -21,13 +18,11 @@
 
     @if (!isset($onlyPrice) || $onlyPrice == false)
         @if (productBasePrice($product) == productMaxPrice($product))
-            <span
-                class="fw-bold h4 deleted text-muted {{ isset($br) ? '' : 'ms-1' }}">{{ formatPrice(productBasePrice($product)) }}</span>
+            <h4
+                class="fw-bold deleted text-muted {{ isset($br) ? '' : 'ms-1' }}">{{ formatPrice(productBasePrice($product)) }}</h4>
         @else
-            <span
-                class="fw-bold h4 deleted text-muted {{ isset($br) ? '' : 'ms-1' }}">{{ formatPrice(productBasePrice($product)) }}</span>
-            -
-            <span class="fw-bold h4 deleted text-muted ms-1">{{ formatPrice(productMaxPrice($product)) }}</span>
+            <h4 class="fw-bold deleted text-muted {{ isset($br) ? '' : 'ms-1' }}">{{ formatPrice(productBasePrice($product)) }} - {{ formatPrice(productMaxPrice($product)) }}</h4>
+
         @endif
     @endif
 @endif
