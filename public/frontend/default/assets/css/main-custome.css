@@ -28357,4 +28357,9 @@ a.btn.btn-outline.btn-bottom-c {
     .banner2-cover-bottom {
         height: 250px;
     }
+
+    a.btn.btn-outline.btn-bottom-c {
+        position: relative;
+    }
+
 }
