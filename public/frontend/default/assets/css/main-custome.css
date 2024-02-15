@@ -28344,3 +28344,17 @@ a.btn.btn-outline.btn-bottom-c {
     height: 300px !important;
     object-fit: cover;
 }
+
+.banner2-cover-bottom {
+    display: block;
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+}
+
+
+@media (max-width: 575.98px) {
+    .banner2-cover-bottom {
+        height: 250px;
+    }
+}

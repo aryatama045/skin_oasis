@@ -68,7 +68,7 @@
                 </div><!-- End .col-md-6 -->
 
                 <div class="col-md-6">
-                    <div class="video-poster">
+                    <div class="banner2-cover-bottom">
                         <img src="{{ staticAsset('frontend/skinoasis/assets/images/banners/banner2.png') }}" alt="poster">
 
                         <div class="video-poster-content">
