@@ -52,7 +52,7 @@
                 <h3 class="product-title fw-bold font-size-normal tt-line-clamp tt-clamp-1">{{ $product->collectLocalization('name') }}</h3>
             </a>
 
-            <div class="product-price font-size-normal mt-lg-8 mb-0 text-dark text-left">
+            <div class="product-price font-size-normal mt-lg-2 mb-0 text-dark text-left">
                 <h6 class="price">
                     @include('frontend.skinoasis.pages.partials.products.pricing', [
                         'product' => $product,
@@ -61,7 +61,7 @@
                 </h6>
             </div>
 
-            <div class="text-left d-block">
+            <div class="text-left d-block mt-lg-5">
                 @php
                     $isVariantProduct = 0;
                     $stock = 0;
@@ -72,7 +72,7 @@
                     }
                 @endphp
                 @if ($isVariantProduct)
-                    <a href="javascript:void(0);" class="font-size-large fw-bold mt-xl-5 text-danger text-uppercase letter-spacing-large w-100"
+                    <a href="javascript:void(0);" class="font-size-normal fw-bold text-danger text-uppercase letter-spacing-large w-100"
                         onclick="showProductDetailsModal({{ $product->id }})">{{ localize('Add to Cart') }}</a>
                 @else
                     <form action="" class="direct-add-to-cart-form">
@@ -81,11 +81,11 @@
                         <input type="hidden" value="1" name="quantity">
 
                         @if (!$isVariantProduct && $stock < 1)
-                            <a href="javascript:void(0);" class="font-size-large fw-bold mt-xl-5 text-danger text-uppercase letter-spacing-large w-100">
+                            <a href="javascript:void(0);" class="font-size-normal fw-bold text-danger text-uppercase letter-spacing-large w-100">
                                 {{ localize('Out of Stock') }}</a>
                         @else
                             <a href="javascript:void(0);" onclick="directAddToCartFormSubmit(this)"
-                                class="font-size-large fw-bold mt-xl-5 text-danger text-uppercase letter-spacing-large w-100 direct-add-to-cart-btn add-to-cart-text">
+                                class="font-size-normal fw-bold text-danger text-uppercase letter-spacing-large w-100 direct-add-to-cart-btn add-to-cart-text">
                                 {{ localize('Add to Cart') }}</a>
                         @endif
                     </form>
