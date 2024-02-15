@@ -34,13 +34,17 @@
                     }'>
                     @foreach ($client_feedback as $feedback)
                     <blockquote class="testimonial bg-white text-center">
+                        <cite>
+                            <span>
+                                <ul class="star-rating fs-sm d-inline-flex align-items-center text-warning">
+                                    {{ renderStarRatingFront($feedback->rating) }}
+                                </ul>
+                            </span>
+                        </cite>
                         <p>“ {{ $feedback->review }} ”</p>
 
                         <cite>
                             {{ $feedback->name }}
-                            <ul class="star-rating fs-sm d-inline-flex align-items-center text-warning">
-                                {{ renderStarRatingFront($feedback->rating) }}
-                            </ul>
                         </cite>
                     </blockquote><!-- End .testimonial -->
                     @endforeach
