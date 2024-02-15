@@ -33,7 +33,7 @@
                         }
                     }'>
                     @foreach ($client_feedback as $feedback)
-                    <blockquote class="testimonial text-center">
+                    <blockquote class="testimonial bg-white text-center">
                         <p>“ {{ $feedback->review }} ”</p>
 
                         <cite>
