@@ -25,7 +25,7 @@
     <form class="filter-form" action="{{ Request::fullUrl() }}" method="GET">
 
 
-        <div class="page-content gshop-gshop-grid">
+        <div class="page-content gshop-gshop-grid bg-white">
             <div class="container">
                 <div class="row g-4">
 
@@ -150,7 +150,7 @@
                                         @foreach ($products as $product)
                                             <div class="col-xl-12">
                                                 @include(
-                                                    'frontend.default.pages.partials.products.product-card-list',
+                                                    'frontend.skinoasis.pages.partials.products.product-card-list',
                                                     [
                                                         'product' => $product,
                                                     ]
@@ -161,7 +161,7 @@
                                         @foreach ($products as $product)
                                             <div class="col-lg-4 col-md-6 col-sm-10">
                                                 @include(
-                                                    'frontend.default.pages.partials.products.vertical-product-card',
+                                                    'frontend.skinoasis.pages.partials.products.vertical-product-card',
                                                     [
                                                         'product' => $product,
                                                         'bgClass' => 'bg-white',
