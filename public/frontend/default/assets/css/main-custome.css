@@ -28341,12 +28341,16 @@ img.col-md-8.float-md-end.mb-3.ms-md-3 {
 }
 
 
-.add-to-cart-text {
+.add-to-cart-text-fav {
     color: black;
     text-transform: uppercase;
     font-size: 1.3rem;
     font-weight: 600;
     font-family: 'avenir lt pro';
+}
+
+.add-to-cart-text-fav:hover {
+    color: #d70d20;
 }
 
 .fit-cover {
