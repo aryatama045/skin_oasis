@@ -28363,3 +28363,19 @@ img.col-md-8.float-md-end.mb-3.ms-md-3 {
     }
 
 }
+
+
+@media screen and (min-width: 65rem){
+    .module.space {
+        display: block;
+        -webkit-transform: translateY(-70%);
+        transform: translateY(-70%);
+        margin-bottom: -4%;
+    }
+}
+.module.space {
+    position: relative;
+    display: none;
+    height: 120px;
+    z-index: 1;
+}
