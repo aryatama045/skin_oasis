@@ -89,19 +89,25 @@
                             <figure class="product-main-image">
 
                                 @foreach ($galleryImages as $galleryImage)
+                                @if ($loop->first)
                                 <img id="product-zoom" src="{{ uploadedAsset($galleryImage) }}?thumb"
                                         data-zoom-image="{{ uploadedAsset($galleryImage) }}?thumb" alt="{{ $product->collectLocalization('name') }}">
 
                                 <a href="#" id="btn-product-gallery" class="btn-product-gallery">
                                     <i class="icon-arrows"></i>
                                 </a>
+                                @endif
                                 @endforeach
 
                             </figure><!-- End .product-main-image -->
 
                             <div id="product-zoom-gallery" class="product-image-gallery">
                                 @foreach ($galleryImages as $galleryImage)
-                                <a class="product-gallery-item" href="#" data-image="{{ uploadedAsset($galleryImage) }}" data-zoom-image="{{ uploadedAsset($galleryImage) }}">
+                                <a class="product-gallery-item
+                                @if ($loop->first)
+                                    active
+                                @endif
+                                " href="#" data-image="{{ uploadedAsset($galleryImage) }}" data-zoom-image="{{ uploadedAsset($galleryImage) }}">
                                     <img src="{{ uploadedAsset($galleryImage) }}" alt="product side">
                                 </a>
                                 @endforeach
