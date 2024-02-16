@@ -31,7 +31,7 @@
 	}
 	.header-middle {
 		border-bottom: none;
-		margin-bottom: -30px;
+		margin-bottom: -12px;
 		.menu > li > a {
 			font-weight: 400;
 			letter-spacing: -.01em;
@@ -392,7 +392,7 @@
 	letter-spacing: .01em;
 	margin-top: 1rem;
 	margin-bottom: 1.3rem;
-	text-transform: uppercase;
+	text-transform: capitalize;
 }
 
 .intro-text {

@@ -1,5 +1,10 @@
 @import "https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap";
 @import "https://fonts.googleapis.com/css2?family=Oleo+Script&display=swap";
+
+@import url('https://fonts.cdnfonts.com/css/avenir-lt-pro');
+
+@import url('https://fonts.cdnfonts.com/css/avenir');
+
 .bg-primary-light {
     background-color: rgba(151, 129, 54, 0.1);
 }
@@ -26,7 +31,7 @@
  * Copyright 2022 Fonticons, Inc.
  */
 .fa {
-    font-family: var(--fa-style-family, "Font Awesome 6 Free");
+    font-family: var(--fa-style-family, "avenir");
     font-weight: var(--fa-style, 900);
 }
 .fa,

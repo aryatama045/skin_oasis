@@ -23,7 +23,7 @@
 }
 
 body {
-  font-family: "Avenir", sans-serif;
+  font-family: "avenir";
   font-weight: 400;
 }
 
@@ -64,13 +64,13 @@ body {
   min-width: 20rem;
   padding-top: 1.45rem;
   padding-bottom: 1.45rem;
-  font-family: "Avenir", sans-serif;
+  font-family: "avenir";
   font-size: 1.5rem;
 }
 
 .intro-title {
   margin-bottom: 0.7rem;
-  font-family: "Avenir LT Pro", sans-serif;
+  font-family: "avenir lt pro";
   font-size: 8em;
   letter-spacing: 0;
 }
@@ -142,13 +142,13 @@ body {
   width: 90%;
 }
 .banner-content .btn {
-  font-family: "Avenir", sans-serif;
+  font-family: "avenir";
   font-size: 1.5rem;
   color: #fff;
 }
 
 .banner-title {
-  font-family: "Avenir LT Pro", sans-serif;
+  font-family: "avenir lt pro";
   font-weight: 700;
   font-size: 4rem;
   letter-spacing: -0.025em;
@@ -187,7 +187,7 @@ body {
 }
 .banner-group-1 .banner-1 p {
   margin-bottom: 0.5rem;
-  font-family: "Avenir", sans-serif;
+  font-family: "avenir";
   font-weight: inherit;
   font-size: 1.3rem;
 }
@@ -251,7 +251,7 @@ body {
   background-color: #c96;
 }
 .btn-product-icon span {
-  font-family: "Avenir", sans-serif;
+  font-family: "avenir";
 }
 
 .owl-products {
@@ -265,7 +265,7 @@ body {
 }
 .owl-products .product-action .btn-product span {
   margin-bottom: -0.3rem;
-  font-family: "Avenir", sans-serif;
+  font-family: "avenir";
   font-size: 1.5rem;
   color: inherit;
 }
@@ -496,7 +496,7 @@ body {
 
 .newsletter-heading .newsletter-title {
   margin: 0.1rem 0 0.2rem;
-  font-family: "Avenir LT Pro", sans-serif;
+  font-family: "avenir lt pro";
   font-weight: 700;
   font-size: 5rem;
   letter-spacing: -0.025em;
