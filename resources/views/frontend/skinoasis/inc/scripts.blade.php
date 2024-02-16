@@ -1,5 +1,4 @@
 <!-- Plugins JS File -->
-<script src="{{ staticAsset('frontend/default/assets/js/vendors/jquery-3.6.4.min.js') }}"></script>
 
 <script src="{{ staticAsset('frontend/skinoasis/assets/js/jquery.min.js') }}"></script>
 <script src="{{ staticAsset('frontend/default/assets/js/vendors/jquery-ui.min.js') }}"></script>
