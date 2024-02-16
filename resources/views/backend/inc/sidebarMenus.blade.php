@@ -273,6 +273,62 @@
         </li>
     @endcan
 
+    @canany(['partner'])
+    <!-- Partner -->
+    <li class="side-nav-title side-nav-item nav-item mt-3">
+        <span class="tt-nav-title-text">{{ localize('Partners') }}</span>
+    </li>
+    @endcan
+    <!-- Pages -->
+    @can('partner_pages')
+        <li class="side-nav-item nav-item">
+            <a href="{{ route('admin.customers.index') }}" class="side-nav-link">
+                <span class="tt-nav-link-icon"> <i data-feather="file-text"></i></span>
+                <span class="tt-nav-link-text">{{ localize('Partner Pages') }}</span>
+            </a>
+        </li>
+    @endcan
+
+    <!-- Join Us -->
+    @php
+        $joinUsActiveRoutes = ['admin.blogs.index', 'admin.blogs.create', 'admin.blogs.edit', 'admin.blogCategories.index', 'admin.blogCategories.edit'];
+    @endphp
+    @canany(['join_influencer', 'join_partner','join_community'])
+        <li class="side-nav-item nav-item {{ areActiveRoutes($joinUsActiveRoutes, 'tt-menu-item-active') }}">
+            <a data-bs-toggle="collapse" href="#partnerSystem"
+                aria-expanded="{{ areActiveRoutes($joinUsActiveRoutes, 'true') }}" aria-controls="partnerSystem"
+                class="side-nav-link tt-menu-toggle">
+                <span class="tt-nav-link-icon"><i data-feather="users"></i></span>
+                <span class="tt-nav-link-text">{{ localize('Join Us') }}</span>
+            </a>
+            <div class="collapse {{ areActiveRoutes($joinUsActiveRoutes, 'show') }}" id="partnerSystem">
+                <ul class="side-nav-second-level">
+                    @can('join_influencer')
+                        <li
+                            class="{{ areActiveRoutes(['admin.blogs.index', 'admin.blogs.create', 'admin.blogs.edit'], 'tt-menu-item-active') }}">
+                            <a href="{{ route('admin.blogs.index') }}"
+                                class="{{ areActiveRoutes(['admin.blogs.index', 'admin.blogs.create', 'admin.blogs.edit']) }}">{{ localize('Join Influencer') }}</a>
+                        </li>
+                    @endcan
+
+                    @can('join_partner')
+                        <li
+                            class="{{ areActiveRoutes(['admin.blogCategories.index', 'admin.blogCategories.edit'], 'tt-menu-item-active') }}">
+                            <a href="{{ route('admin.blogCategories.index') }}">{{ localize('Join Partner') }}</a>
+                        </li>
+                    @endcan
+
+                    @can('join_community')
+                        <li
+                            class="{{ areActiveRoutes(['admin.blogCategories.index', 'admin.blogCategories.edit'], 'tt-menu-item-active') }}">
+                            <a href="{{ route('admin.blogCategories.index') }}">{{ localize('Join Community') }}</a>
+                        </li>
+                    @endcan
+                </ul>
+            </div>
+        </li>
+    @endcan
+
 
     <!-- Contents -->
     @canany(['tags', 'pages', 'blogs', 'blog_categories', 'media_manager'])
