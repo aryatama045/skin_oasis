@@ -185,7 +185,7 @@
                                             </span>
                                         </button>
 
-                                        <div class="details-action-wrapper">
+                                        <div class="">
                                             <button type="button" class="btn-product btn-wishlist" title="Wishlist"
                                                 onclick="addToWishlist({{ $product->id }})">
                                                 <span>Add to Wishlist</span>
