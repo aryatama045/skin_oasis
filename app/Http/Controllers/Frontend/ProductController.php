@@ -9,6 +9,7 @@ use App\Models\ProductCategory;
 use App\Models\ProductTag;
 use App\Models\ProductVariation;
 use App\Models\Tag;
+use App\Models\Category;
 use App\Models\Testimoni;
 use Illuminate\Http\Request;
 
@@ -20,13 +21,11 @@ class ProductController extends Controller
         $searchKey = null;
         $limit = 8;
 
-        $products = ProductVariation::leftJoin('products as b', 'product_variations.product_id', '=', 'b.id')
-                    ->leftJoin('product_variation_stocks as c', 'product_variations.id', '=', 'c.product_variation_id')
-                    ->where('is_popular', 1)->limit($limit)->get();
-        // dd($products);
+        $kategori = Category::orderBy('sorting_order_level', 'desc')->get();
+        // dd($kategori);
         $tags = Tag::all();
         return getView('pages.products.index', [
-            'products'      => $products,
+            'kategori'      => $kategori,
             'tags'          => $tags,
         ]);
     }
