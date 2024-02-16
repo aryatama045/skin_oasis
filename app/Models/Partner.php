@@ -17,7 +17,6 @@ class Partner extends Model
         'category',
         'content',
         'meta_title',
-        'meta_image',
         'meta_description'
     ];
 }
