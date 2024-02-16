@@ -90,8 +90,8 @@
 
                                 @foreach ($galleryImages as $galleryImage)
                                 @if ($loop->first)
-                                <img id="product-zoom" src="{{ uploadedAsset($galleryImage) }}?thumb"
-                                        data-zoom-image="{{ uploadedAsset($galleryImage) }}?thumb" alt="{{ $product->collectLocalization('name') }}">
+                                <img id="product-zoom" src="{{ uploadedAsset($galleryImage) }}"
+                                        data-zoom-image="{{ uploadedAsset($galleryImage) }}" alt="{{ $product->collectLocalization('name') }}">
 
                                 <a href="#" id="btn-product-gallery" class="btn-product-gallery">
                                     <i class="icon-arrows"></i>
