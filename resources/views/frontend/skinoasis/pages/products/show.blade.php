@@ -103,11 +103,9 @@
 
                             <div id="product-zoom-gallery" class="product-image-gallery">
                                 @foreach ($galleryImages as $galleryImage)
-                                <a class="product-gallery-item
-                                @if ($loop->first)
-                                    active
-                                @endif
-                                " href="#" data-image="{{ uploadedAsset($galleryImage) }}" data-zoom-image="{{ uploadedAsset($galleryImage) }}">
+                                <a class="product-gallery-item <?php if ($loop->first) { ?>active<?php } ?>"
+                                    href="#" data-image="{{ uploadedAsset($galleryImage) }}"
+                                    data-zoom-image="{{ uploadedAsset($galleryImage) }}">
                                     <img src="{{ uploadedAsset($galleryImage) }}" alt="product side">
                                 </a>
                                 @endforeach
