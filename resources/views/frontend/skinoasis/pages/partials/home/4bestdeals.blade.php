@@ -3,7 +3,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
-                <div class="deal">
+                <div class="deal align-items-center">
                     <div class="deal-content">
                         <h4>Vegetology Sun Screen</h4>
                         <h2>Rp. 100.000</h2>
