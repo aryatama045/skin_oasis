@@ -20,19 +20,20 @@
 <script src="{{ staticAsset('frontend/default/assets/js/vendors/countdown.min.js') }}"></script>
 <script src="{{ staticAsset('frontend/default/assets/js/vendors/range-slider.js') }}"></script>
 
-<script src="{{ staticAsset('frontend/default/assets/js/vendors/counterup.min.js') }}"></script>
-<script src="{{ staticAsset('frontend/default/assets/js/vendors/clipboard.min.js') }}"></script>
-
-<script src="{{ staticAsset('frontend/common/js/toastr.min.js') }}"></script>
-<script src="{{ staticAsset('frontend/common/js/select2.js') }}"></script>
-<script src="{{ staticAsset('frontend/default/assets/js/app.js') }}"></script>
 
 <!-- Main JS File -->
 <script src="{{ staticAsset('frontend/skinoasis/assets/js/main.js') }}"></script>
 <script src="{{ staticAsset('frontend/skinoasis/assets/js/main.min.js') }}"></script>
 
-<script src="{{ staticAsset('frontend/skinoasis/assets/main.js') }}"></script>
-<script src="{{ staticAsset('frontend/skinoasis/assets/main.min.js') }}"></script>
+
+<script src="{{ staticAsset('frontend/default/assets/js/vendors/counterup.min.js') }}"></script>
+<script src="{{ staticAsset('frontend/default/assets/js/vendors/clipboard.min.js') }}"></script>
+
+
+<script src="{{ staticAsset('frontend/common/js/toastr.min.js') }}"></script>
+<script src="{{ staticAsset('frontend/common/js/select2.js') }}"></script>
+<script src="{{ staticAsset('frontend/default/assets/js/app.js') }}"></script>
+
 <script src="{{ staticAsset('frontend/skinoasis/assets/js/demos/demo-18.js') }}"></script>
 
 
