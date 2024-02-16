@@ -33,9 +33,10 @@
   margin-bottom: -12px;
 }
 .header.header-11 .header-middle .menu > li > a {
-  font-weight: 400;
-  letter-spacing: -0.01em;
+  font-weight: 100;
+  letter-spacing: -0.08em;
   padding-right: 2rem;
+  font-family: "avenir lt pro";
 }
 .header.header-11 .wishlist-link .wishlist-count,
 .header.header-11 .cart-dropdown .cart-count {
@@ -389,7 +390,8 @@
 
 .intro-title {
   font-size: 3.5rem;
-  font-weight: 300;
+  font-family: "avenir lt pro";
+  font-weight: 100 !important;
   line-height: 1;
   letter-spacing: 0.01em;
   margin-top: 1rem;
@@ -399,10 +401,11 @@
 
 .intro-text {
   font-weight: 400;
-  font-size: 1.4rem;
+  font-size: 1.7rem;
   line-height: 1.2;
   letter-spacing: 0.01em;
   text-transform: capitalize;
+  font-family: "avenir lt pro";
 }
 
 .owl-theme .owl-nav [class*=owl-] {
