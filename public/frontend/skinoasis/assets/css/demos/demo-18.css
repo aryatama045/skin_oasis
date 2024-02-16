@@ -526,6 +526,7 @@
           flex: 0 0 100%;
   max-width: 100%;
   padding: 3.5rem 0 2rem;
+  font-family: "avenir lt pro";
 }
 .deal-content .btn {
   padding-top: 0.85rem;
@@ -541,31 +542,31 @@
   background-color: #cc9966;
 }
 .deal-content h4 {
-  color: #fff;
-  font-weight: 400;
-  font-size: 1.4rem;
+  font-size: 2rem;
+  color: #ffffff;
+  font-weight: bold;
   line-height: 1.3;
   letter-spacing: -0.01em;
   margin-bottom: 0.5rem;
 }
 .deal-content h2 {
-  color: #fff;
-  font-weight: 600;
-  font-size: 4rem;
-  line-height: 1.1;
-  letter-spacing: -0.05em;
+  font-size: 5rem;
+  color: #ffffff;
+  line-height: 1.2em;
+  letter-spacing: 0.08em;
   margin-bottom: 3.6rem;
 }
 .deal-content .product-title {
-  font-weight: 600;
-  font-size: 2rem;
-  letter-spacing: -0.01em;
+  font-weight: 800;
+  font-size: 3rem !important;
+  letter-spacing: 0.2em;
   margin-bottom: 0.7rem;
 }
 .deal-content .product-price {
-  font-weight: 300;
-  font-size: 2rem;
+  font-weight: bold;
+  font-size: 3rem !important;
   margin-bottom: 2.4rem;
+  letter-spacing: 0.1rem;
 }
 .deal-content .new-price {
   font-weight: 600;
@@ -654,10 +655,10 @@
     padding-bottom: 1rem;
   }
   .deal-image {
-    -ms-flex: 0 0 64%;
+    -ms-flex: 0 0 70%;
     -webkit-box-flex: 0;
-            flex: 0 0 64%;
-    max-width: 64%;
+            flex: 0 0 70%;
+    max-width: 70%;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -980,7 +981,7 @@
   color: #666666;
 }
 .gallery .content-left {
-  padding: 0 14% 0 17.3%;
+  padding: 0 8% 0 7.3%;
 }
 .gallery .content-left .scan-here {
   text-align: center;
@@ -989,12 +990,13 @@
   line-height: 1.9;
   letter-spacing: 0.14em;
   color: #222222;
+  font-family: "avenir lt pro";
 }
 .gallery .content-left .barcode {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 50%;
+  width: 35%;
 }
 .gallery .content-right {
   margin-left: -8rem;
@@ -1030,11 +1032,14 @@
   }
 }
 .heading .title {
-  font-size: 6rem;
-  font-weight: 700;
-  line-height: 1;
-  letter-spacing: -0.025em;
+  font-size: 4.3rem;
+  font-weight: 800;
+  line-height: 1.2;
+  letter-spacing: 0.1em;
   color: #222;
+  margin: 0;
+  margin-left: -13rem;
+  font-family: "avenir lt pro";
 }
 .heading .title-banner-2 {
   font-size: 4rem;
