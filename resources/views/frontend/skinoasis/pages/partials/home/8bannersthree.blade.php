@@ -35,7 +35,7 @@
                     </h3><!-- End .video-banner-title -->
                     <p>Our beauty box is a set of best full-size products that are top sellers in out online shop.
                         We want you to be able to try everything at once and make sure that our selection of products is about quality.</p>
-                    <a href="#" class="btn btn-rounded btn-outline-green-dark btn-bottom-c"> Shop Now</a>
+                    <a href="#" class="btn btn-rounded btn-sm btn-outline-green-dark btn-bottom-c"> Shop Now</a>
                 </div><!-- End .col-md-4 -->
 
                 <div class="col-md-4">
@@ -57,32 +57,32 @@
                                 }
                             }
                         }'>
-                        <blockquote class="testimonial text-center bg-white">
+                        <div class="testimonial text-center bg-white">
                             <p>“ Lorem ipsum dolor sit amet, consectetuer adipiscing elit. nisi neque, aliquet vel,  pretium, ligula ullam mollis. Ut justo. Suspendisse potenti. ”</p>
 
                             <cite>
                                 Jenson Gregory
                                 <span>Customer</span>
                             </cite>
-                        </blockquote><!-- End .testimonial -->
+                        </div><!-- End .testimonial -->
 
-                        <blockquote class="testimonial text-center bg-white">
+                        <div class="testimonial text-center bg-white">
                             <p>“ Impedit, ratione sequi, sunt incidunt magnam et.  exercitationem, vel unde obcaecati impedit eveniet non. ”</p>
 
                             <cite>
                                 Damon Stone
                                 <span>Customer</span>
                             </cite>
-                        </blockquote><!-- End .testimonial -->
+                        </div><!-- End .testimonial -->
 
-                        <blockquote class="testimonial text-center bg-white">
+                        <div class="testimonial text-center bg-white">
                             <p>“ Molestias animi illo natus ut quod neque ad accusamus praesentium fuga! animi tempora eget Suspendisse potenti. ”</p>
 
                             <cite>
                                 John Smith
                                 <span>Customer</span>
                             </cite>
-                        </blockquote><!-- End .testimonial -->
+                        </div><!-- End .testimonial -->
                     </div><!-- End .testimonials-slider owl-carousel -->
                 </div><!-- End .col-md-4 -->
 
