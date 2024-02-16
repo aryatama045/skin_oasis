@@ -75,7 +75,7 @@
         </div><!-- End .owl-carousel -->
 
         <div class="more-container text-center">
-            <a href="#" class="btn btn-sm btn-outline-primary-2 btn-outline-green-skin btn-more"> Lihat Lainnya</a>
+            <a href="#" class="btn btn-sm btn-outline-primary-2 btn-outline-green-skin"> Lihat Lainnya</a>
         </div><!-- End .more-container -->
     </div><!-- End .container -->
 </div><!-- End .bg-lighter pt-5 pb-5 -->
