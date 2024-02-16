@@ -1094,13 +1094,15 @@
 
 .heading {
 	.subtitle {
-		font-size: 2.6rem;
-		font-weight: 700;
-		line-height: 1.3;
+		font-size: 3.6rem;
+		font-weight: 800;
+		line-height: 1.2;
 		letter-spacing: 0.2em;
 		color: #222;
 		margin: 0;
-		margin-left: -24rem;
+		margin-left: -22rem;
+		font-family: 'avenir lt pro';
+
 		@media (max-width: 575.98px){
 			margin-left: 0rem;
 			font-size: 1.5rem;

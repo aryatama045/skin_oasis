@@ -14,8 +14,9 @@
             <div class="col-md-6 p-md-0">
                 <div class="content-left">
                     <div class="heading mt-3">
-                        <h4 class="subtitle mt-4">Discover all your skin needs through time-efficient skin check system. Try it now!</h4>
-                        <p class="scan-here mt-4 mb-2">
+                        <h4 class="title mt-4">Discover all your skin needs through time-efficient skin check system. Try it now!</h4>
+
+                        <p class="scan-here mt-lg-10 mb-2">
                             Scan Here
                         </p>
                         <img class="barcode" src="{{ staticAsset('frontend/skinoasis/assets/images/barcode.png') }}" alt="Banner" width="50" height="20">
