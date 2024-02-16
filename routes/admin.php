@@ -35,6 +35,8 @@ use App\Http\Controllers\Backend\Pages\PagesController;
 use App\Http\Controllers\Backend\BlogSystem\TagsController;
 use App\Http\Controllers\Backend\BlogSystem\BlogCategoriesController;
 use App\Http\Controllers\Backend\BlogSystem\BlogsController;
+use App\Http\Controllers\Backend\Partner\PartnerController;
+use App\Http\Controllers\Backend\Partner\JoinController;
 use App\Http\Controllers\Backend\Contacts\ContactUsMessagesController;
 use App\Http\Controllers\Backend\Logistics\LogisticsController;
 use App\Http\Controllers\Backend\Logistics\LogisticZonesController;
@@ -98,10 +100,10 @@ Route::group(
                 Route::post('/update-requests', [WithdrawRequestsController::class, 'update'])->name('affiliate.withdraw.update');
             }
         );
-        # auth settings 
+        # auth settings
         Route::get('/settings/auth', [SettingsController::class, 'authSettings'])->name('admin.settings.authSettings');
 
-        # otp settings 
+        # otp settings
         Route::get('/settings/otp', [SettingsController::class, 'otpSettings'])->name('admin.settings.otpSettings');
 
         # settings
@@ -111,7 +113,7 @@ Route::group(
         Route::post('/settings/test/smtp', [SettingsController::class, 'testEmail'])->name('admin.test.smtp');
         Route::post('/settings/update', [SettingsController::class, 'update'])->name('admin.settings.update');
 
-        #payment methods 
+        #payment methods
         Route::get('/settings/payment-methods', [SettingsController::class, 'paymentMethods'])->name('admin.settings.paymentMethods');
         Route::post('/settings/update-payment-methods', [SettingsController::class, 'updatePaymentMethods'])->name('admin.settings.updatePaymentMethods');
 
@@ -126,14 +128,14 @@ Route::group(
         Route::get('/settings/social-media-login', [SettingsController::class, 'socialLogin'])->name('admin.settings.socialLogin');
         Route::post('/settings/activation', [SettingsController::class, 'updateActivation'])->name('admin.settings.activation');
 
-        # currencies  
+        # currencies
         Route::get('/settings/currencies', [CurrenciesController::class, 'index'])->name('admin.currencies.index');
         Route::post('/settings/store-currency', [CurrenciesController::class, 'store'])->name('admin.currencies.store');
         Route::get('/settings/currencies/edit/{id}', [CurrenciesController::class, 'edit'])->name('admin.currencies.edit');
         Route::post('/settings/update-currency', [CurrenciesController::class, 'update'])->name('admin.currencies.update');
         Route::post('/settings/update-currency-status', [CurrenciesController::class, 'updateStatus'])->name('admin.currencies.updateStatus');
 
-        # languages  
+        # languages
         Route::get('/settings/languages', [LanguageController::class, 'index'])->name('admin.languages.index');
         Route::post('/settings/store-language', [LanguageController::class, 'store'])->name('admin.languages.store');
         Route::get('/settings/languages/edit/{id}', [LanguageController::class, 'edit'])->name('admin.languages.edit');
@@ -147,7 +149,7 @@ Route::group(
 
         # products
         Route::group(['prefix' => 'products'], function () {
-            # products 
+            # products
             Route::get('/', [ProductsController::class, 'index'])->name('admin.products.index');
             Route::get('/add-product', [ProductsController::class, 'create'])->name('admin.products.create');
             Route::post('/product', [ProductsController::class, 'store'])->name('admin.products.store');
@@ -209,7 +211,7 @@ Route::group(
             Route::get('/taxes/delete/{id}', [TaxesController::class, 'delete'])->name('admin.taxes.delete');
         });
 
-        #pos 
+        #pos
         Route::get('/pos', [PosController::class, 'index'])->name('admin.pos.index');
         Route::post('/pos-products', [PosController::class, 'products'])->name('admin.pos.products');
         Route::post('/pos-customers', [PosController::class, 'customers'])->name('admin.pos.customers');
@@ -321,7 +323,40 @@ Route::group(
             Route::get('/categories/delete/{id}', [BlogCategoriesController::class, 'delete'])->name('admin.blogCategories.delete');
         });
 
-        # media manager 
+        # partner pages
+        Route::group(['prefix' => 'partner'], function () {
+            Route::get('/', [PartnerController::class, 'index'])->name('admin.partner.index');
+            Route::get('/add-partner', [PartnerController::class, 'create'])->name('admin.partner.create');
+            Route::post('/add-partner', [PartnerController::class, 'store'])->name('admin.partner.store');
+            Route::get('/edit/{id}', [PartnerController::class, 'edit'])->name('admin.partner.edit');
+            Route::get('/delete/{id}', [PartnerController::class, 'delete'])->name('admin.partner.delete');
+        });
+
+        # join
+        Route::group(['prefix' => 'join'], function () {
+            #join influencer
+            Route::get('/join/influencer', [JoinController::class, 'index'])->name('admin.join.influencer');
+            Route::get('/join/influencer/add', [JoinController::class, 'create'])->name('admin.join.influencer_create');
+            Route::post('/join/influencer/add', [JoinController::class, 'store'])->name('admin.join.influencer_store');
+            Route::get('/join/influencer/edit/{id}', [JoinController::class, 'edit'])->name('admin.join.influencer_edit');
+            Route::get('/join/influencer/delete/{id}', [JoinController::class, 'delete'])->name('admin.join.influencerdelete');
+
+            # join partner
+            Route::get('/join/partner', [JoinController::class, 'index_partner'])->name('admin.join.partner');
+            Route::get('/join/partner/add', [JoinController::class, 'create_partner'])->name('admin.join.partner_create');
+            Route::post('/join/partner/add', [JoinController::class, 'store_partner'])->name('admin.join.partner_store');
+            Route::get('/join/partner/edit/{id}', [JoinController::class, 'edit_partner'])->name('admin.join.partner_edit');
+            Route::get('/join/partner/delete/{id}', [JoinController::class, 'delete'])->name('admin.join.partner_delete');
+
+            # join community
+            Route::get('/join/community', [JoinController::class, 'index_community'])->name('admin.join.community');
+            Route::get('/join/community/add', [JoinController::class, 'create_community'])->name('admin.join.community_create');
+            Route::post('/join/community/add', [JoinController::class, 'store_community'])->name('admin.join.community_store');
+            Route::get('/join/community/edit/{id}', [JoinController::class, 'edit_community'])->name('admin.join.community_edit');
+            Route::get('/join/community/delete/{id}', [JoinController::class, 'delete'])->name('admin.join.community_delete');
+        });
+
+        # media manager
         Route::get('/media-manager', [MediaManagerController::class, 'index'])->name('admin.mediaManager.index');
 
         # bulk-emails

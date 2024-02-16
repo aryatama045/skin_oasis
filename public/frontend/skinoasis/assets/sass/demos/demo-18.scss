@@ -31,10 +31,10 @@
 	}
 	.header-middle {
 		border-bottom: none;
-		margin-bottom: -30px;
+		margin-bottom: 5px;
 		.menu > li > a {
-			font-weight: 400;
-			letter-spacing: -.01em;
+			font-weight: 100;
+			letter-spacing: 0.16em;
 			padding-right: 2rem;
 		}
 	}
@@ -386,21 +386,24 @@
 
 
 .intro-title {
-	font-size: 3rem;
-	font-weight: 300;
+	font-size: 3.5rem;
+    font-family: 'avenir lt pro';
+    font-weight: 100 !important;
 	line-height: 1;
 	letter-spacing: .01em;
 	margin-top: 1rem;
 	margin-bottom: 1.3rem;
-	text-transform: uppercase;
+	text-transform: capitalize;
+	
 }
 
 .intro-text {
 	font-weight: 400;
-	font-size: 1.4rem;
+	font-size: 1.7rem;
 	line-height: 1.2;
 	letter-spacing: .01em;
-	text-transform: uppercase;
+	text-transform: capitalize;
+	font-family: 'avenir lt pro';
 }
 
 .owl-theme .owl-nav [class*='owl-'] {
@@ -1317,6 +1320,7 @@
 	.intro-title {
 		font-size: 3rem;
 		font-weight: 300;
+		line-height: 1.3em;
 	}
 
 	.intro-text {
@@ -1416,7 +1420,7 @@
 	}
 
 	.intro-title {
-		font-size: 3rem;
+		font-size: 3.5rem;
 		font-weight: 300;
 	}
 
