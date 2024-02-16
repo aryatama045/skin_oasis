@@ -530,7 +530,7 @@
 	flex: 0 0 100%;
 	max-width: 100%;
 	padding: 3.5rem 0 2rem;
-
+	font-family: 'avenir lt pro';
 	.btn {
 		padding-top: .85rem;
 		padding-bottom: .85rem;
@@ -548,34 +548,34 @@
 	}
 
 	h4 {
-		color: #fff;
-		font-weight: 400;
-		font-size: 1.4rem;
+		font-size: 2rem;
+		color: #ffffff;
+		font-weight: bold;
 		line-height: 1.3;
 		letter-spacing: -.01em;
 		margin-bottom: .5rem;
 	}
 
 	h2 {
-		color: #fff;
-		font-weight: 600;
-		font-size: 4rem;
-		line-height: 1.1;
-		letter-spacing: -.05em;
+		font-size: 5rem;
+		color: #ffffff;
+		line-height: 1.2em;
+		letter-spacing: 0.08em;
 		margin-bottom: 3.6rem;
 	}
 
 	.product-title {
-		font-weight: 600;
-		font-size: 2rem;
-		letter-spacing: -.01em;
-		margin-bottom: .7rem;
+		font-weight: 800;
+		font-size: 3rem !important;
+		letter-spacing: .2em;
+		margin-bottom: 0.7rem;
 	}
 
 	.product-price {
-		font-weight: 300;
-		font-size: 2rem;
+		font-weight: bold;
+		font-size: 3rem !important;
 		margin-bottom: 2.4rem;
+		letter-spacing: .1rem;
 	}
 
 	.new-price {
