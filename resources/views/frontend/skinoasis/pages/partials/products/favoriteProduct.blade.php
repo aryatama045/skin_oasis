@@ -39,7 +39,7 @@
                 @if ($product->categories()->count() > 0)
                     @foreach ($product->categories as $category)
                         <a href="{{ route('products.index') }}?&category_id={{ $category->id }}"
-                            class="d-inline-block text-dark">{{ $category->collectLocalization('name') }}
+                            class="d-inline-block text-brown">{{ $category->collectLocalization('name') }}
                             @if (!$loop->last)
                                 ,
                             @endif

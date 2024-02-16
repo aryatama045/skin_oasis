@@ -28287,6 +28287,10 @@ img.col-md-8.float-md-end.mb-3.ms-md-3 {
     bottom: 0;
 }
 
+.text-brown {
+    color: #5D5005 !important;
+}
+
 .btn-product.btn-cart {
     color: #c96;
     border: 0.1rem solid #c96;
