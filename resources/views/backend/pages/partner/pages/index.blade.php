@@ -71,7 +71,7 @@
 
                                         <td>
                                             <h6 class="fs-sm mb-0 ms-2">
-                                                {{ $page->collectLocalization('title') }}
+                                                {{ $page->title }}
                                             </h6>
                                         </td>
 
