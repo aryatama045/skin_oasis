@@ -280,9 +280,13 @@
     </li>
     @endcan
     <!-- Pages -->
+    @php
+        $partnerPagesActiveRoutes = ['admin.partner.index','admin.partner.create','admin.partner.edit'];
+    @endphp
     @can('partner_pages')
         <li class="side-nav-item nav-item">
-            <a href="{{ route('admin.partner.index') }}" class="side-nav-link">
+            <a href="{{ route('admin.partner.index') }}"
+                class="{{ areActiveRoutes($partnerPagesActiveRoutes, 'tt-menu-item-active') }}">
                 <span class="tt-nav-link-icon"> <i data-feather="file-text"></i></span>
                 <span class="tt-nav-link-text">{{ localize('Partner Pages') }}</span>
             </a>
@@ -293,7 +297,6 @@
     @php
         $joinUsActiveRoutes = ['admin.join.influencer','admin.join.partner','admin.join.community'];
     @endphp
-
     @canany(['join_influencer', 'join_partner','join_community'])
         <li class="side-nav-item nav-item {{ areActiveRoutes($joinUsActiveRoutes, 'tt-menu-item-active') }}">
             <a data-bs-toggle="collapse" href="#partnerSystem"
