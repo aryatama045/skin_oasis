@@ -29,6 +29,7 @@
 
 <!-- Main JS File -->
 <script src="{{ staticAsset('frontend/skinoasis/assets/js/main.js') }}"></script>
+<script src="{{ staticAsset('frontend/skinoasis/assets/js/main.min.js') }}"></script>
 <script src="{{ staticAsset('frontend/skinoasis/assets/js/demos/demo-18.js') }}"></script>
 
 
