@@ -3,7 +3,7 @@
     <div class="container">
         <div class="row">
 
-            <div class="col-md-6">
+            <div class="col-md-5">
                 <div class="content-right">
                     <figure class="mb-md-12">
                         <img src="{{ staticAsset('frontend/skinoasis/assets/images/banner1.png') }}" alt="Banner">
@@ -11,10 +11,10 @@
                 </div>
             </div>
 
-            <div class="col-md-6 p-md-0">
+            <div class="col-md-7 p-md-0">
                 <div class="content-left">
                     <div class="heading mt-3">
-                        <h4 class="title mt-4">Discover all your skin needs through time-efficient skin check system. Try it now!</h4>
+                        <h4 class="title mt-lg-6">Discover all your skin needs through time-efficient skin check system. Try it now!</h4>
 
                         <p class="scan-here mt-lg-10 mb-2">
                             Scan Here
