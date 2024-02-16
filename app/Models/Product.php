@@ -22,6 +22,11 @@ class Product extends Model
         return $query->where('is_published', 1);
     }
 
+    public function scopeIsPopular($query)
+    {
+        return $query->where('is_popular', 1);
+    }
+
     protected $with = ['product_localizations'];
 
     public function product_localizations()

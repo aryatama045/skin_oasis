@@ -18,6 +18,22 @@ class ProductController extends Controller
     public function index(Request $request)
     {
         $searchKey = null;
+        $limit = 8;
+
+        $products = ProductVariation::leftJoin('products as b', 'product_variations.product_id', '=', 'b.id')
+                    ->leftJoin('product_variation_stocks as c', 'product_variations.id', '=', 'c.product_variation_id')
+                    ->where('is_popular', 1)->limit($limit)->get();
+        // dd($products);
+        $tags = Tag::all();
+        return getView('pages.products.index', [
+            'products'      => $products,
+            'tags'          => $tags,
+        ]);
+    }
+
+    public function allProduct(Request $request)
+    {
+        $searchKey = null;
         $per_page = 9;
         $sort_by = $request->sort_by ? $request->sort_by : "new";
         $maxRange = Product::max('max_price');
@@ -79,7 +95,7 @@ class ProductController extends Controller
         $products = $products->paginate(paginationNumber($per_page));
 
         $tags = Tag::all();
-        return getView('pages.products.index', [
+        return getView('pages.products.allproduct', [
             'products'      => $products,
             'searchKey'     => $searchKey,
             'per_page'      => $per_page,
