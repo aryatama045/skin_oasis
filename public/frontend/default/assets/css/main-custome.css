@@ -28309,6 +28309,7 @@ img.col-md-8.float-md-end.mb-3.ms-md-3 {
 .btn-outline-green-skin {
     background-color: rgba(93, 80, 5, 0.5);
     color: white !important;
+
 }
 
 .btn-outline-green-skin:hover {
@@ -28321,6 +28322,9 @@ img.col-md-8.float-md-end.mb-3.ms-md-3 {
 .btn-outline-green-dark {
     background-color: #4C6346;
     color: white !important;
+    font-size: 1.3rem !important;
+    font-weight: 100;
+    --bs-btn-border-radius: 0.6rem;
 }
 
 .btn-outline-green-dark:hover {
