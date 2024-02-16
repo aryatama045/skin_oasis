@@ -121,7 +121,7 @@
         @yield('breadcrumb')
         <!--breadcrumb section end-->
 
-        <main class="main">
+        <main class="main bg-white">
 
             @yield('contents')
 
