@@ -90,8 +90,8 @@
 
                                 @foreach ($galleryImages as $galleryImage)
                                 @if ($loop->first)
-                                <img id="product-zoom" src="{{ uploadedAsset($galleryImage) }}"
-                                        data-zoom-image="{{ uploadedAsset($galleryImage) }}" alt="{{ $product->collectLocalization('name') }}">
+                                <img id="product-zoom" src="{{ uploadedAsset($galleryImage) }}?thumb"
+                                        data-zoom-image="{{ uploadedAsset($galleryImage) }}?thumb" alt="{{ $product->collectLocalization('name') }}">
 
                                 <a href="#" id="btn-product-gallery" class="btn-product-gallery">
                                     <i class="icon-arrows"></i>
@@ -137,14 +137,6 @@
                         <div class="details-filter-row details-row-size">
                             <label>Color:</label>
 
-                            <div class="product-nav product-nav-thumbs">
-                                <a href="#" class="active">
-                                    <img src="assets/images/products/single/1-thumb.jpg" alt="product desc">
-                                </a>
-                                <a href="#">
-                                    <img src="assets/images/products/single/2-thumb.jpg" alt="product desc">
-                                </a>
-                            </div><!-- End .product-nav -->
                         </div><!-- End .details-filter-row -->
 
                         <div class="details-filter-row details-row-size">
