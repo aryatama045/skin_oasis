@@ -323,34 +323,5 @@
     </div><!-- End .container -->
 </div>
 
-<button id="scroll-top" title="Back to Top" class="show"><i class="icon-arrow-up"></i></button>
 
-<div class="sticky-bar">
-    <div class="container">
-        <div class="row">
-            <div class="col-6">
-                <figure class="product-media">
-                    <a href="product.html">
-                        <img src="assets/images/products/sticky/product-1.jpg" alt="Product image">
-                    </a>
-                </figure><!-- End .product-media -->
-                <h4 class="product-title"><a href="product.html">Dark yellow lace cut out swing dress</a></h4><!-- End .product-title -->
-            </div><!-- End .col-6 -->
-
-            <div class="col-6 justify-content-end">
-                <div class="product-price">
-                    $84.00
-                </div><!-- End .product-price -->
-                <div class="product-details-quantity">
-                    <input type="number" id="sticky-cart-qty" class="form-control" value="1" min="1" max="10" step="1" data-decimals="0" required="" style="display: none;"><div class="input-group  input-spinner"><div class="input-group-prepend"><button style="min-width: 26px" class="btn btn-decrement btn-spinner" type="button"><i class="icon-minus"></i></button></div><input type="text" style="text-align: center" class="form-control " required="" placeholder=""><div class="input-group-append"><button style="min-width: 26px" class="btn btn-increment btn-spinner" type="button"><i class="icon-plus"></i></button></div></div>
-                </div><!-- End .product-details-quantity -->
-
-                <div class="product-details-action">
-                    <a href="#" class="btn-product btn-cart"><span>add to cart</span></a>
-                    <a href="#" class="btn-product btn-wishlist" title="Wishlist"><span>Add to Wishlist</span></a>
-                </div><!-- End .product-details-action -->
-            </div><!-- End .col-6 -->
-        </div><!-- End .row -->
-    </div><!-- End .container -->
-</div>
 @endsection
