@@ -654,10 +654,10 @@
     padding-bottom: 1rem;
   }
   .deal-image {
-    -ms-flex: 0 0 64%;
+    -ms-flex: 0 0 70%;
     -webkit-box-flex: 0;
-            flex: 0 0 64%;
-    max-width: 64%;
+            flex: 0 0 70%;
+    max-width: 70%;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -989,12 +989,13 @@
   line-height: 1.9;
   letter-spacing: 0.14em;
   color: #222222;
+  font-family: "avenir lt pro";
 }
 .gallery .content-left .barcode {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 50%;
+  width: 35%;
 }
 .gallery .content-right {
   margin-left: -8rem;

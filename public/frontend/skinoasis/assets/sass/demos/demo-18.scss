@@ -668,9 +668,9 @@
 	}
 
 	.deal-image {
-		-ms-flex: 0 0 64%;
-		flex: 0 0 64%;
-		max-width: 64%;
+		-ms-flex: 0 0 70%;
+		flex: 0 0 70%;
+		max-width: 70%;
 	}
 }
 
@@ -1070,13 +1070,14 @@
 			line-height: 1.9;
 			letter-spacing: 0.14em;
 			color: #222222;
+			font-family: 'avenir lt pro';
 		}
 
 		.barcode{
 			display: block;
 			margin-left: auto;
 			margin-right: auto;
-			width: 50%;
+			width: 35%;
 		}
 	}
 

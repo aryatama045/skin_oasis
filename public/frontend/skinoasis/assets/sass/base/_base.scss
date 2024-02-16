@@ -7,7 +7,7 @@ html {
 }
 
 body {
-  font: normal 300 #{$font-size}/1.86 $font-family;
+  font-family: normal 300 #{$font-size}/1.86 $font-family;
   color: $body-text;
   background-color: #fff;
   -webkit-font-smoothing: antialiased;
