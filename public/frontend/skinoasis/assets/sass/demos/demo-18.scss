@@ -386,7 +386,7 @@
 
 
 .intro-title {
-	font-size: 3rem;
+	font-size: 3.5rem;
 	font-weight: 300;
 	line-height: 1;
 	letter-spacing: .01em;
@@ -400,7 +400,7 @@
 	font-size: 1.4rem;
 	line-height: 1.2;
 	letter-spacing: .01em;
-	text-transform: uppercase;
+	text-transform: capitalize;
 }
 
 .owl-theme .owl-nav [class*='owl-'] {
