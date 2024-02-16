@@ -28340,6 +28340,15 @@ img.col-md-8.float-md-end.mb-3.ms-md-3 {
     background-color: transparent !important;
 }
 
+
+.add-to-cart-text {
+    color: black;
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    font-weight: 600;
+    font-family: 'avenir lt pro';
+}
+
 .fit-cover {
     width: 100% !important;
     height: 300px !important;
@@ -28352,6 +28361,7 @@ img.col-md-8.float-md-end.mb-3.ms-md-3 {
     height: 450px;
     object-fit: cover;
 }
+
 
 
 @media (max-width: 575.98px) {
@@ -28380,3 +28390,5 @@ img.col-md-8.float-md-end.mb-3.ms-md-3 {
     height: 120px;
     z-index: 1;
 }
+
+
