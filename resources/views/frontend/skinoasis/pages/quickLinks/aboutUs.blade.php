@@ -94,9 +94,9 @@
             <div class="col-md-12">
                 <div class="heading">
                     <div class="heading subtitle-about">
-                        <div class="fw-bolder">
+                        <span class="fw-bolder">
                             <a href="#">SKINOASIS</a>
-                        </div>
+                        </span>
                         <span class="title-separator">|</span>
                         PION TECH
                         <span class="title-separator">|</span>
