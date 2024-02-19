@@ -33,7 +33,6 @@
 
                                 <div class="col-md-6 mb-3  mb-md-0">
                                     <h3 class="video-banner-title fw-bold h3">
-                                        <span class="fw-light">TRENDING</span>
                                         Always Make Room for a Little Beauty in Your Life
                                     </h3>
 
