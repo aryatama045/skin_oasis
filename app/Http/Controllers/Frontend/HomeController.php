@@ -194,7 +194,7 @@ class HomeController extends Controller
         $page = Page::where('slug', $slug)->first();
 
         if(!empty($page)){
-            if($page->slug == 'vegetology' || $page->slug == 'pino-tech' || $page->slug == 'pino-tech' ||
+            if($page->slug == 'vegetology' || $page->slug == 'pion-tech' || $page->slug == 'pino-tech' ||
                 $page->slug == 'shinsiaview' || $page->slug == 'leaf-coco' || $page->slug == 'bain-co'
                 )
             {
