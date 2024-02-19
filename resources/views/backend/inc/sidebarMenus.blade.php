@@ -286,7 +286,7 @@
     @can('partner_pages')
         <li class="side-nav-item nav-item">
             <a href="{{ route('admin.partner.index') }}"
-                class="{{ areActiveRoutes($partnerPagesActiveRoutes, 'tt-menu-item-active') }}">
+                class="side-nav-link {{ areActiveRoutes($partnerPagesActiveRoutes, 'tt-menu-item-active') }}">
                 <span class="tt-nav-link-icon"> <i data-feather="file-text"></i></span>
                 <span class="tt-nav-link-text">{{ localize('Partner Pages') }}</span>
             </a>
