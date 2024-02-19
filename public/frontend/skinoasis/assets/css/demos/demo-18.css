@@ -910,6 +910,12 @@
   margin-top: 1rem;
 }
 
+.entry-content p {
+  margin-bottom: 1.3rem;
+  color: #1b1a1a;
+  font-size: 1.7rem;
+}
+
 .footer .icon-boxes-container {
   padding-top: 0;
   padding-bottom: 0;
