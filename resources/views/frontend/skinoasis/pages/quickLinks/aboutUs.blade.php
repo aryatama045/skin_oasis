@@ -19,7 +19,7 @@
             <div class="col-lg-12">
                 <div class="about-text-header entry-content">
                     <h2 class="title text-center mb-2">{!! getSetting('about_intro_title') !!}</h2>
-                    <p align="justify">{{ getSetting('about_intro_text') }}</p>
+                    <p class="text-justify">{{ getSetting('about_intro_text') }}</p>
 
                     <div class="video-banner video-banner-poster text-left mt-10 pb-5">
                         <div class="container">
@@ -33,10 +33,10 @@
 
                                 <div class="col-md-6 mb-3  mb-md-0">
                                     <h3 class="video-banner-title fw-bold h3">
-                                    {{ getSetting('about_intro_quote_by') }}
+                                        {{ getSetting('about_intro_quote_by') }}
                                     </h3>
 
-                                    <p>{{ getSetting('about_intro_quote') }}</p>
+                                    <p class="text-justify">{{ getSetting('about_intro_quote') }}</p>
 
                                 </div>
 
