@@ -62,11 +62,17 @@
 
 @section('contents')
 
-    <div class="page-header text-center" style="background-image: url('{{ staticAsset('frontend/skinoasis/assets/images/page-header-bg.jpg') }}')">
+    <!-- <div class="page-header text-center" style="background-image: url('{{ staticAsset('frontend/skinoasis/assets/images/page-header-bg.jpg') }}')">
         <div class="container">
             <h1 class="page-title"> <span> @yield('title', getSetting('system_title'))</span></h1>
         </div>
-    </div><!-- End .page-header -->
+    </div> -->
+    <br>
+    <center>
+        <div>
+            <img src="{{ staticAsset('frontend/skinoasis/assets/images/page-header-bg.png') }}" style="max-width: 83%">
+        </div>
+    </center><br><br>
 
     <!--breadcrumb-->
     @include('frontend.skinoasis.inc.breadcrumb')
