@@ -49,7 +49,7 @@
             </div>
         </div>
 
-        <div class="row justify-content-center">
+        <!-- <div class="row justify-content-center">
             <div class="col-lg-6 col-sm-12">
                 <div class="clearfix">
                     <img src="{{ staticAsset('frontend/skinoasis/assets/images/banner1.png') }}" class="col-md-6 float-md-start mb-3 ms-md-3" alt="...">
@@ -79,7 +79,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
 
         <div class="row mt-6 justify-content-center">
             <div class="col-md-12">
