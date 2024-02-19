@@ -92,18 +92,20 @@
 
         <div class="row justify-content-center">
             <div class="col-12">
-                <div class="text-center">
-                    <h2 class="title">SKINOASIS</h2>
-                    <span class="title-separator">|</span>
-                    PION TECH
-                    <span class="title-separator">|</span>
-                    VEGETOLOGY
-                    <span class="title-separator">|</span>
-                    SHINSIAVIEW
-                    <span class="title-separator">|</span>
-                    LEAF&COCO
-                    <span class="title-separator">|</span>
-                    BAIN&CO
+                <div class="heading text-center">
+                    <div class="heading">
+                        <h2 class="title">SKINOASIS</h2>
+                        <span class="title-separator">|</span>
+                        PION TECH
+                        <span class="title-separator">|</span>
+                        VEGETOLOGY
+                        <span class="title-separator">|</span>
+                        SHINSIAVIEW
+                        <span class="title-separator">|</span>
+                        LEAF&COCO
+                        <span class="title-separator">|</span>
+                        BAIN&CO
+                    </div>
                 </div>
             </div>
         </div>
