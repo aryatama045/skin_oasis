@@ -90,11 +90,13 @@
             </div>
         </div>
 
-        <div class="row justify-content-center">
-            <div class="col-12">
-                <div class="heading text-center">
-                    <div class="heading">
-                        <h2 class="title">SKINOASIS</h2>
+        <div class="row mt-6 justify-content-center">
+            <div class="col-md-12">
+                <div class="heading">
+                    <div class="heading subtitle-about">
+                        <div class="fw-bolder">
+                            <a href="#">SKINOASIS</a>
+                        </div>
                         <span class="title-separator">|</span>
                         PION TECH
                         <span class="title-separator">|</span>
@@ -102,9 +104,9 @@
                         <span class="title-separator">|</span>
                         SHINSIAVIEW
                         <span class="title-separator">|</span>
-                        LEAF&COCO
+                        LEAF&amp;COCO
                         <span class="title-separator">|</span>
-                        BAIN&CO
+                        BAIN&amp;CO
                     </div>
                 </div>
             </div>
