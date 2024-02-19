@@ -185,12 +185,10 @@
                                             </span>
                                         </button>
 
-                                        <div class="mt-2">
-                                            <button type="button" class="btn btn-rounded btn-sm text-uppercase btn-outline-green-dark btn-product btn-wishlist" title="Wishlist"
-                                                onclick="addToWishlist({{ $product->id }})">
-                                                Add to Wishlist
-                                            </button>
-                                        </div>
+                                        <button type="button" class="mt-xs-2 btn btn-rounded btn-sm text-uppercase btn-outline-green-dark btn-product btn-wishlist" title="Wishlist"
+                                            onclick="addToWishlist({{ $product->id }})">
+                                            Add to Wishlist
+                                        </button>
                                     </div>
 
                                     <div class="flex-grow-1"></div>

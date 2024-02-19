@@ -28300,6 +28300,7 @@ img.col-md-8.float-md-end.mb-3.ms-md-3 {
     line-height: 1;
     padding-top: 1rem;
     padding-bottom: 1rem;
+    margin: 5px;
     transition: all .35s ease;
 }
 .btn-product.btn-cart:hover {
