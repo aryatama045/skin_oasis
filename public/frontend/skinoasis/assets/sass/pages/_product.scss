@@ -28,11 +28,11 @@
 	text-align: center;
 	width: 4rem;
 	height: 4rem;
-	color: #fcfbfb;
+	color: #222121;
 	font-weight: normal;
 	font-size: 2rem;
 	line-height: 1;
-	background-color: #fff;
+	background-color: #ffffff59;
 	box-shadow: 2px 6px 16px rgba(51, 51, 51, .05);
 	transition: all .35s ease;
 
@@ -40,7 +40,6 @@
 	&:focus {
 		color: #fff;
 		background-color: $primary-color;
-		text-decoration: none;
 	}
 }
 
