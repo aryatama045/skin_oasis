@@ -45,7 +45,7 @@
                 </div><!-- End .col-md-4 -->
 
                 <div class="col-md-4">
-                    <div class="owl-carousel owl-theme owl-testimonials" data-toggle="owl"
+                    <div class="owl-carousel owl-theme owl-testimonials mt-lg-8" data-toggle="owl"
                         data-owl-options='{
                             "nav": false,
                             "dots": true,
@@ -74,7 +74,7 @@
                         @endforeach
                     </div><!-- End .testimonials-slider owl-carousel -->
 
-                    <div class="owl-carousel owl-theme owl-testimonials mt-lg-20" data-toggle="owl"
+                    <div class="owl-carousel owl-theme owl-testimonials mt-lg-15" data-toggle="owl"
                         data-owl-options='{
                             "nav": false,
                             "dots": true,
