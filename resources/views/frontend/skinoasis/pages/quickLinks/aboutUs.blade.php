@@ -27,7 +27,7 @@
 
                                 <div class="col-md-6">
                                     <div class="video-poster">
-                                        <img style="border-radius: 0 !important;" src="{{ staticAsset('frontend/skinoasis/assets/images/banners/about-s.png') }}" alt="poster">
+                                        <img style="border-radius: 0 !important;" src="{{ uploadedAsset(getSetting('about_intro_image')) }}" alt="poster">
                                     </div>
                                 </div>
 
