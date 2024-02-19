@@ -173,7 +173,7 @@
 
                                 <div class="d-flex align-items-center gap-3 flex-wrap mt-5">
                                     <div class="product-details-action">
-                                        <button type="submit" class="btn btn-sm text-capitalize btn-outline-green-skin btn-product btn-cart add-to-cart-btn"
+                                        <button type="submit" class="btn btn-sm text-capitalize btn-outline-green-skin btn-cart add-to-cart-btn"
                                             @if (!$isVariantProduct && $stock < 1) disabled @endif>
 
                                             <span class="add-to-cart-text">
@@ -186,7 +186,7 @@
                                         </button>
 
                                         <div class="mt-2">
-                                            <button type="button" class="btn btn-sm text-capitalize btn-outline-green-skin btn-product btn-wishlist" title="Wishlist"
+                                            <button type="button" class="btn btn-sm text-capitalize btn-outline-green-skin btn-wishlist" title="Wishlist"
                                                 onclick="addToWishlist({{ $product->id }})">
                                                 <span>Add to Wishlist</span>
                                             </button>
