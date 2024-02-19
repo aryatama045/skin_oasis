@@ -196,7 +196,11 @@ class HomeController extends Controller
             $page->slug == 'shinsiaview' || $page->slug == 'leaf-coco' || $page->slug == 'bain-co'
             )
         {
-            return getView('pages.quickLinks.aboutPages', ['page' => $page]);
+            $sliders = [];
+            if (getSetting('hero_sliders') != null) {
+                $sliders = json_decode(getSetting('hero_sliders'));
+            }
+            return getView('pages.quickLinks.aboutPages', ['page' => $page, 'sliders' => $sliders]);
         }else{
             return getView('pages.quickLinks.index', ['page' => $page]);
         }
