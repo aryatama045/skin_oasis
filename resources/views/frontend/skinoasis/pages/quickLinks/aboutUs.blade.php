@@ -17,13 +17,13 @@
     <div class="container bg-white mb-10">
         <div class="row">
             <div class="col-lg-12">
-                <div class="about-text-header ">
+                <div class="about-text-header entry-content">
                     <h2 class="title text-center mb-2"> SKINOASIS</h2>
                     <p align="justify">Skinoasis is a special platform which provides beauty solutions, packed with great knowledge and integrity to become an oasis for everyone who is looking for excellent beauty products. Established in 2023 with years' experience in the beauty industry. Skinoasis also a collaborative platform to bring together an experts, doctors, scientist, products and beloved customer for discovering  a great beauty experience.</p>
 
-                    <div class="video-banner video-banner-poster text-center mt-10 pb-5">
+                    <div class="video-banner video-banner-poster text-left mt-10 pb-5">
                         <div class="container">
-                            <div class="row ">
+                            <div class="row align-items-center">
 
                                 <div class="col-md-6">
                                     <div class="video-poster">
@@ -31,15 +31,14 @@
                                     </div>
                                 </div>
 
-                                <div class="col-md-6 mb-3 align-items-center mb-md-0">
+                                <div class="col-md-6 mb-3  mb-md-0">
                                     <h3 class="video-banner-title fw-bold h3">
-                                        <span class="fw-light">TRENDING</span>
                                         Always Make Room for a Little Beauty in Your Life
                                     </h3>
 
                                     <p>Our beauty box is a set of best full-size products that are top sellers in out online shop.
                                         We want you to be able to try everything at once and make sure that our selection of products is about quality.</p>
-                                    <a href="#" class="btn btn-rounded btn-sm text-uppercase btn-outline-green-dark btn-bottom-c"> Shop Now</a>
+
                                 </div>
 
                             </div>
@@ -50,7 +49,7 @@
             </div>
         </div>
 
-        <div class="row justify-content-center">
+        <!-- <div class="row justify-content-center">
             <div class="col-lg-6 col-sm-12">
                 <div class="clearfix">
                     <img src="{{ staticAsset('frontend/skinoasis/assets/images/banner1.png') }}" class="col-md-6 float-md-start mb-3 ms-md-3" alt="...">
@@ -80,7 +79,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
 
         <div class="row mt-6 justify-content-center">
             <div class="col-md-12">
