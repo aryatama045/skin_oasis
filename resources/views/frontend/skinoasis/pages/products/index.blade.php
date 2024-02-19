@@ -27,7 +27,7 @@
                                 <a href="#">
                                     <img src="{{ uploadedAsset($category->collectLocalization('thumbnail_image')) }}" alt="Banner" width="688" height="400" style="background-color: #fff;">
                                 </a>
-        
+
                                 <div class="banner-content banner-content-center">
                                     <h1 class="banner-subtitle text-black fw-bold">{{$category->name}}</h1>
                                 </div><!-- End .banner-content -->
@@ -39,7 +39,7 @@
         </div><!-- End .page-content -->
     </form>
     <center>
-        <a href="{{ route('products.allproduct') }}" class="btn btn-rounded btn-outline-green-dark"> OUR PRODUCT</a>
+        <a href="{{ route('products.allproduct') }}" class="btn btn-rounded btn-sm text-uppercase btn-outline-green-dark"> OUR PRODUCT</a>
     </center>
 @endsection
 
