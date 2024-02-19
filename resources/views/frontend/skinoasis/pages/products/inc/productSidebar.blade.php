@@ -32,7 +32,7 @@
                     $productsCount = \App\Models\ProductCategory::where('category_id', $category->id)->count();
                 @endphp
                 <li>
-                    <a href="{{ route('products.index') }}?&category_id={{ $category->id }}"
+                    <a href="{{ route('products.allproduct') }}?&category_id={{ $category->id }}"
                         class="d-flex justify-content-between align-items-center">
                         {{ $category->collectLocalization('name') }}
                         <h5 class="fw-bold total-count">
