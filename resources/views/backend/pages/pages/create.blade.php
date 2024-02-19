@@ -39,7 +39,7 @@
 
                                 <div class="mb-4">
                                     <label for="content" class="form-label">{{ localize('Page Description') }}</label>
-                                    <textarea class="form-control editor" id="myTextarea" name="content"></textarea>
+                                    <textarea class="form-control " id="myTextarea" name="content"></textarea>
                                 </div>
                             </div>
                         </div>
