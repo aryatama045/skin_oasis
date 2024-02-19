@@ -39,7 +39,7 @@
 
                                     <p>Our beauty box is a set of best full-size products that are top sellers in out online shop.
                                         We want you to be able to try everything at once and make sure that our selection of products is about quality.</p>
-                                    <a href="#" class="btn btn-rounded btn-sm text-uppercase btn-outline-green-dark btn-bottom-c"> Shop Now</a>
+
                                 </div>
 
                             </div>
