@@ -33,7 +33,8 @@
                         }
                     }'>
                     @foreach ($client_feedback as $feedback)
-                    <blockquote class="testimonial bg-white text-center">
+
+                    <div class="testimonial text-center bg-white">
                         <cite>
                             <span>
                                 <ul class="star-rating fs-sm d-inline-flex align-items-center text-warning">
@@ -41,12 +42,13 @@
                                 </ul>
                             </span>
                         </cite>
-                        <p>“ {{ $feedback->review }} ”</p>
+
+                        <p>“{{ $feedback->review }}”</p>
 
                         <cite>
                             {{ $feedback->name }}
                         </cite>
-                    </blockquote><!-- End .testimonial -->
+                    </div><!-- End .testimonial -->
                     @endforeach
 
                 </div><!-- End .testimonials-slider owl-carousel -->
