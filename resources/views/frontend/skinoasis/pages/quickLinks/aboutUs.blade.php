@@ -16,7 +16,7 @@
 
     <div class="container bg-white mb-10">
         <div class="row">
-            <div class="col-lg-10 offset-lg-1">
+            <div class="col-lg-12">
                 <div class="about-text-header ">
                     <h2 class="title text-center mb-2"> SKINOASIS</h2><!-- End .title text-center mb-2 -->
                     <p align="justify">Skinoasis is a special platform which provides beauty solutions, packed with great knowledge and integrity to become an oasis for everyone who is looking for excellent beauty products. Established in 2023 with years' experience in the beauty industry. Skinoasis also a collaborative platform to bring together an experts, doctors, scientist, products and beloved customer for discovering  a great beauty experience.</p>

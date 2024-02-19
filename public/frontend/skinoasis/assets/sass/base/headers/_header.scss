@@ -1069,16 +1069,6 @@
 	}
 }
 
-@include mq('md') {
-	.about-text-header {
-		margin-top: -9rem!important;
-		margin-bottom: 1rem!important;
-		position: relative;
-		z-index: 2;
-		background-color: white;
-		padding: 3rem 2rem 4em;
-	}
-}
 
 @include mq('lg') {
 	.mobile-menu-toggler {

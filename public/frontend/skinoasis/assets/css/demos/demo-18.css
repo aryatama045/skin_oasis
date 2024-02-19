@@ -892,7 +892,9 @@
   letter-spacing: -0.01em;
 }
 .widget-posts .entry-content p {
-  margin-bottom: 0.6rem;
+  margin-bottom: 1.3rem;
+  color: #3e3b3b;
+  font-size: 1.7rem;
 }
 .widget-posts .read-more {
   font-size: 1.4rem;
