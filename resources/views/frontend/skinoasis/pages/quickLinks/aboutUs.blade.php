@@ -18,7 +18,7 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="about-text-header ">
-                    <h2 class="title text-center mb-2"> SKINOASIS</h2><!-- End .title text-center mb-2 -->
+                    <h2 class="title text-center mb-2"> SKINOASIS</h2>
                     <p align="justify">Skinoasis is a special platform which provides beauty solutions, packed with great knowledge and integrity to become an oasis for everyone who is looking for excellent beauty products. Established in 2023 with years' experience in the beauty industry. Skinoasis also a collaborative platform to bring together an experts, doctors, scientist, products and beloved customer for discovering  a great beauty experience.</p>
 
                     <div class="row justify-content-center">
@@ -38,7 +38,7 @@
                                     And yet, here you are, still persevering in reading this placeholder text, hoping for some more insights, or some hidden easter egg of content. A joke, perhaps. Unfortunately, there's none of that here.
                                 </p>
                             </div>
-                        </div><!-- End .col-lg-6 col-sm-12 -->
+                        </div>
 
                         <div class="col-lg-6 col-sm-12">
                             <div class="icon-box icon-box-sm text-center">
@@ -46,19 +46,18 @@
                                     <i class="icon-life-ring"></i>
                                 </span>
                                 <div class="icon-box-content">
-                                    <h3 class="icon-box-title">Professional Support</h3><!-- End .icon-box-title -->
+                                    <h3 class="icon-box-title">Professional Support</h3>
                                     <p>Praesent dapibus, neque id cursus faucibus, <br>tortor neque egestas augue, eu vulputate <br>magna eros eu erat. </p>
-                                </div><!-- End .icon-box-content -->
-                            </div><!-- End .icon-box -->
-                        </div><!-- End .col-lg-4 col-sm-6 -->
+                                </div>
+                            </div>
+                        </div>
 
 
-                    </div><!-- End .row -->
-                </div><!-- End .about-text -->
-            </div><!-- End .col-lg-10 offset-1 -->
+                    </div>
+                </div>
+            </div>
+        </div>
 
-
-        </div><!-- End .row -->
         <div class="row justify-content-center">
             <div class="col-lg-6 col-sm-12">
                 <div class="clearfix">
@@ -76,7 +75,7 @@
                         And yet, here you are, still persevering in reading this placeholder text, hoping for some more insights, or some hidden easter egg of content. A joke, perhaps. Unfortunately, there's none of that here.
                     </p>
                 </div>
-            </div><!-- End .col-lg-6 col-sm-12 -->
+            </div>
 
             <div class="col-lg-6 col-sm-12">
                 <div class="icon-box icon-box-sm text-center">
@@ -84,17 +83,35 @@
                         <i class="icon-life-ring"></i>
                     </span>
                     <div class="icon-box-content">
-                        <h3 class="icon-box-title">Professional Support</h3><!-- End .icon-box-title -->
+                        <h3 class="icon-box-title">Professional Support</h3>
                         <p>Praesent dapibus, neque id cursus faucibus, <br>tortor neque egestas augue, eu vulputate <br>magna eros eu erat. </p>
-                    </div><!-- End .icon-box-content -->
-                </div><!-- End .icon-box -->
-            </div><!-- End .col-lg-4 col-sm-6 -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-12">
+                <div class="text-center">
+                    <h2 class="title">SKINOASIS</h2>
+                    <span class="title-separator">|</span>
+                    PION TECH
+                    <span class="title-separator">|</span>
+                    VEGETOLOGY
+                    <span class="title-separator">|</span>
+                    SHINSIAVIEW
+                    <span class="title-separator">|</span>
+                    LEAF&COCO
+                    <span class="title-separator">|</span>
+                    BAIN&CO
+                </div>
+            </div>
+        </div>
 
 
-        </div><!-- End .row -->
-    </div><!-- End .container -->
+    </div>
 
-    <div class="mb-2"></div><!-- End .mb-2 -->
+    <div class="mb-2"></div>
 
 
 
