@@ -95,7 +95,7 @@
                 <div class="heading">
                     <div class="heading subtitle-about">
                         <span class="fw-bolder">
-                            <a href="#">SKINOASIS</a>
+                            <a class="text-dark" href="#">SKINOASIS</a>
                         </span>
                         <span class="title-separator">|</span>
                         PION TECH
