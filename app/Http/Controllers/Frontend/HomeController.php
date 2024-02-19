@@ -192,8 +192,8 @@ class HomeController extends Controller
     {
         $page = Page::where('slug', $slug)->first();
 
-        if($page->slug() == 'vegatology' || $page->slug() == 'pino-tech' || $page->slug() == 'pino-tech' ||
-            $page->slug() == 'shinsiaview' || $page->slug() == 'leaf-coco' || $page->slug() == 'bain-co'
+        if($page->slug == 'vegatology' || $page->slug == 'pino-tech' || $page->slug == 'pino-tech' ||
+            $page->slug == 'shinsiaview' || $page->slug == 'leaf-coco' || $page->slug == 'bain-co'
             )
         {
             return getView('pages.quickLinks.aboutPages', ['page' => $page]);
