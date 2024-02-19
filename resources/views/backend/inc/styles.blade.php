@@ -27,7 +27,7 @@
       menubar: 'favs file edit view insert format tools table help',
       content_css: 'css/content.css',
       content_style:"
-        @import url('https://fonts.cdnfonts.com/css/avenir-lt-pro')",
+        @import url('https://fonts.cdnfonts.com/css/avenir-lt-pro'); body { font-family: Avenir Lt Pro; }",
     });
   </script>
 <style>
