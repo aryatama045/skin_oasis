@@ -190,7 +190,7 @@ class HomeController extends Controller
     # quick link / dynamic pages
     public function showPage($slug)
     {
-        
+
         $page = Page::where('slug', $slug)->first();
 
         if(!empty($page)){
