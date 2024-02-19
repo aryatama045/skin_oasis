@@ -163,13 +163,22 @@ class HomeController extends Controller
     }
 
     # euterria nano academy page
-    public function euterriaNanoAcademy()
+    public function euterriaNanoAcademy(Request $request)
     {
-        $sliders = [];
-        if (getSetting('hero_sliders') != null) {
-            $sliders = json_decode(getSetting('hero_sliders'));
+        $searchKey  = null;
+        $blogs = Blog::isActive()->latest();
+
+        if ($request->search != null) {
+            $blogs = $blogs->where('title', 'like', '%' . $request->search . '%');
+            $searchKey = $request->search;
         }
-        return getView('pages.quickLinks.euterriaNanoAcademy', ['sliders' => $sliders]);
+
+        if ($request->category_id != null) {
+            $blogs = $blogs->where('blog_category_id', $request->category_id);
+        }
+
+        $blogs = $blogs->paginate(paginationNumber(5));
+        return getView('pages.euterria-nano-academy.index', ['blogs' => $blogs, 'searchKey' => $searchKey]);
     }
 
     # contact us page
