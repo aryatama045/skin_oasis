@@ -191,6 +191,13 @@ class HomeController extends Controller
     public function showPage($slug)
     {
         $page = Page::where('slug', $slug)->first();
-        return getView('pages.quickLinks.index', ['page' => $page]);
+
+        dd($page);
+
+        if($page->slug() == 'vegatology'){
+            return getView('pages.quickLinks.aboutPages', ['page' => $page]);
+        }else{
+            return getView('pages.quickLinks.index', ['page' => $page]);
+        }
     }
 }
