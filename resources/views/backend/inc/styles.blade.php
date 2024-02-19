@@ -4,6 +4,12 @@
 <style>
 @import url('https://fonts.cdnfonts.com/css/avenir-lt-pro');
 </style>
+<style>
+.checked {
+  color: orange;
+}
+</style>
+
   <script
     type="text/javascript"
     src='https://cdn.tiny.cloud/1/juez0wz1dbg4x999k32xos1vj0ve1zher33qw3r6dru9npry/tinymce/5/tinymce.min.js'
@@ -77,9 +83,3 @@
       },
     });
   </script>
-<style>
-
-.checked {
-  color: orange;
-}
-</style>
