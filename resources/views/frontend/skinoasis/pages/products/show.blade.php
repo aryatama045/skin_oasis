@@ -188,7 +188,7 @@
                                         <div class="mt-2">
                                             <button type="button" class="btn btn-rounded btn-sm text-uppercase btn-outline-green-dark btn-product btn-wishlist" title="Wishlist"
                                                 onclick="addToWishlist({{ $product->id }})">
-                                                <span>Add to Wishlist</span>
+                                                Add to Wishlist
                                             </button>
                                         </div>
                                     </div>
