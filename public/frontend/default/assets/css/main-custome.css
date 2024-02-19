@@ -28294,7 +28294,7 @@ img.col-md-8.float-md-end.mb-3.ms-md-3 {
 .btn-product.btn-cart {
     color: #c96;
     border: 0.1rem solid #fff0;
-    flex: 1 1 100%;
+    /* flex: 1 1 100%; */
     max-width: 100%;
     text-transform: capitalize;
     line-height: 1;
