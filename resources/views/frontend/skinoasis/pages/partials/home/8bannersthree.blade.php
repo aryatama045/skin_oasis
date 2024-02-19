@@ -57,32 +57,50 @@
                                 }
                             }
                         }'>
-                        <div class="testimonial text-center bg-white">
-                            <p>“ Lorem ipsum dolor sit amet, consectetuer adipiscing elit. nisi neque, aliquet vel,  pretium, ligula ullam mollis. Ut justo. Suspendisse potenti. ”</p>
+                        @foreach ($client_feedback as $feedback)
+                            <div class="testimonial text-center bg-white">
+                                <cite>
+                                    <span>
+                                        <ul class="star-rating fs-sm d-inline-flex align-items-center text-warning">
+                                            {{ renderStarRatingFront($feedback->rating) }}
+                                        </ul>
+                                    </span>
+                                </cite>
+                                <p>“{{ $feedback->review }}”</p>
+                                <cite>
+                                    {{ $feedback->name }}
+                                </cite>
+                            </div><!-- End .testimonial -->
+                        @endforeach
+                    </div><!-- End .testimonials-slider owl-carousel -->
 
-                            <cite>
-                                Jenson Gregory
-                                <span>Customer</span>
-                            </cite>
-                        </div><!-- End .testimonial -->
-
-                        <div class="testimonial text-center bg-white">
-                            <p>“ Impedit, ratione sequi, sunt incidunt magnam et.  exercitationem, vel unde obcaecati impedit eveniet non. ”</p>
-
-                            <cite>
-                                Damon Stone
-                                <span>Customer</span>
-                            </cite>
-                        </div><!-- End .testimonial -->
-
-                        <div class="testimonial text-center bg-white">
-                            <p>“ Molestias animi illo natus ut quod neque ad accusamus praesentium fuga! animi tempora eget Suspendisse potenti. ”</p>
-
-                            <cite>
-                                John Smith
-                                <span>Customer</span>
-                            </cite>
-                        </div><!-- End .testimonial -->
+                    <div class="owl-carousel owl-theme owl-testimonials mt-lg-20" data-toggle="owl"
+                        data-owl-options='{
+                            "nav": false,
+                            "dots": true,
+                            "margin": 20,
+                            "loop": true,
+                            "responsive": {
+                                "1200": {
+                                    "nav": false
+                                }
+                            }
+                        }'>
+                        @foreach ($client_feedback as $feedback)
+                            <div class="testimonial text-center bg-white">
+                                <cite>
+                                    <span>
+                                        <ul class="star-rating fs-sm d-inline-flex align-items-center text-warning">
+                                            {{ renderStarRatingFront($feedback->rating) }}
+                                        </ul>
+                                    </span>
+                                </cite>
+                                <p>“{{ $feedback->review }}”</p>
+                                <cite>
+                                    {{ $feedback->name }}
+                                </cite>
+                            </div><!-- End .testimonial -->
+                        @endforeach
                     </div><!-- End .testimonials-slider owl-carousel -->
                 </div><!-- End .col-md-4 -->
 
