@@ -29,7 +29,7 @@
                 <div class="col-12">
                     <div class="product-details-tab">
                         <ul class="nav nav-pills justify-content-center" role="tablist">
-                            @foreach ($page as $p)
+                            @foreach ($pages as $page)
                                 <li class="nav-item text-uppercase">
                                     <a class="nav-link <?php if($loop->first){ ?>active <?php } ?>"
                                     id="{{ $page->title }}-{{ $page->slug }}-tab" href="#{{ $page->title }}-{{ $page->slug }}" aria-controls="{{ $page->title }}-{{ $page->slug }}"

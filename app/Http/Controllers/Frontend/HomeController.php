@@ -135,9 +135,9 @@ class HomeController extends Controller
     # partner page
     public function partner()
     {
-        $page = Partner::orderBy('id','ASC')->get();
+        $pages = Partner::orderBy('id','ASC')->get();
 
-        return getView('pages.partner.index', ['page' => $page, ]);
+        return getView('pages.partner.index', ['pages' => $pages ]);
     }
 
     # halo beauty page
