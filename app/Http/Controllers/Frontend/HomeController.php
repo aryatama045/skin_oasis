@@ -149,6 +149,8 @@ class HomeController extends Controller
             $sliders = json_decode(getSetting('hero_sliders'));
         }
 
+        // $page = Page::where('slug', $slug)->first();
+
         return getView('pages.partner.index', ['features' => $features, 'why_choose_us' => $why_choose_us, 'sliders' => $sliders]);
     }
 
