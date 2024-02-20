@@ -99,8 +99,6 @@ class PartnerController extends Controller
     {
         $partner = Partner::findOrFail($request->id);
 
-        dd($partner);
-
         if ($request->lang_key == env("DEFAULT_LANGUAGE")) {
             $partner->title = $request->title;
             $partner->slug = (!is_null($request->slug)) ? Str::slug($request->slug, '-') : Str::slug($request->name, '-') . '-' . strtolower(Str::random(5));
