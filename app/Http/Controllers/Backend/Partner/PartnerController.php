@@ -97,39 +97,26 @@ class PartnerController extends Controller
     # update partner
     public function update(Request $request)
     {
-        $blog = Blog::findOrFail($request->id);
+        $partner = Partner::findOrFail($request->id);
+
+        dd($partner);
 
         if ($request->lang_key == env("DEFAULT_LANGUAGE")) {
-            $blog->title = $request->title;
-            $blog->slug = (!is_null($request->slug)) ? Str::slug($request->slug, '-') : Str::slug($request->name, '-') . '-' . strtolower(Str::random(5));
-            $blog->blog_category_id = $request->category_id;
+            $partner->title = $request->title;
+            $partner->slug = (!is_null($request->slug)) ? Str::slug($request->slug, '-') : Str::slug($request->name, '-') . '-' . strtolower(Str::random(5));
 
-            $blog->thumbnail_image = $request->image;
-            $blog->banner = $request->banner;
-            $blog->meta_img = $request->meta_image;
+            $partner->content = $request->content;
 
-            $blog->short_description = $request->short_description;
-            $blog->description = $request->description;
+            $partner->meta_title = $request->meta_title;
+            $partner->meta_description = $request->meta_description;
 
-            $blog->video_link = $request->video_link;
-
-
-            $blog->meta_title = $request->meta_title;
-            $blog->meta_description = $request->meta_description;
-
-            $blog->save();
-            $blog->tags()->sync($request->tag_ids);
+            $partner->save();
         }
 
-        $blogLocalization = BlogLocalization::firstOrNew(['lang_key' => $request->lang_key, 'blog_id' => $blog->id]);
-        $blogLocalization->title = $request->title;
-        $blogLocalization->short_description = $request->short_description;
-        $blogLocalization->description = $request->description;
 
-        $blog->save();
-        $blogLocalization->save();
+        $partner->save();
 
-        flash(localize('Blog has been updated successfully'))->success();
+        flash(localize('Has been updated successfully'))->success();
         return back();
     }
 

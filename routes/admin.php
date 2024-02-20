@@ -329,6 +329,7 @@ Route::group(
             Route::get('/add-partner', [PartnerController::class, 'create'])->name('admin.partner.create');
             Route::post('/add-partner', [PartnerController::class, 'store'])->name('admin.partner.store');
             Route::get('/edit/{id}', [PartnerController::class, 'edit'])->name('admin.partner.edit');
+            Route::post('/update', [PartnerController::class, 'update'])->name('admin.partner.update');
             Route::get('/delete/{id}', [PartnerController::class, 'delete'])->name('admin.partner.delete');
         });
 
