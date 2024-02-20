@@ -23,7 +23,7 @@ class PartnerController extends Controller
         $searchKey = null;
         $is_published = null;
 
-        $pages = Partner::orderBy('id', 'DESC')->get();
+        $pages = Partner::all();
         if ($request->search != null) {
             $pages = $pages->where('title', 'like', '%' . $request->search . '%');
             $searchKey = $request->search;
