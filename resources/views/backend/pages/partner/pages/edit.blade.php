@@ -43,7 +43,7 @@
                                     <label for="name" class="form-label">{{ localize('Title') }}</label>
                                     <input type="text" name="title" id="title"
                                         placeholder="{{ localize('Type title') }}" class="form-control" required
-                                        value="{{ $partner->collectLocalization('title', $lang_key) }}">
+                                        value="{{ $partner->title }}">
                                 </div>
 
 
@@ -51,14 +51,14 @@
                                     <div class="mb-4">
                                         <label for="slug" class="form-label">{{ localize('Slug') }}</label>
                                         <input type="text" name="slug" id="slug"
-                                            placeholder="{{ localize('Type blog slug') }}" class="form-control" required
+                                            placeholder="{{ localize('Type slug') }}" class="form-control" required
                                             value="{{ $partner->slug }}">
                                     </div>
                                 @endif
 
                                 <div class="mb-4">
                                     <label class="form-label">{{ localize('Description') }}</label>
-                                    <textarea class="form-control " name="content" id="myTextarea" rows="4">{{ $partner->collectLocalization('content', $lang_key) }}</textarea>
+                                    <textarea class="form-control " name="content" id="myTextarea" rows="4">{{ $partner->content }}</textarea>
                                 </div>
                             </div>
                         </div>
