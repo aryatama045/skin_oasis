@@ -54,11 +54,12 @@
 
                         <div class="tab-content">
 
-                            @foreach ($pages as $page)
-                                <div class="tab-pane fade <?php if($loop->first){ ?>show active<?php } ?>" id="{{ $page->title }}-{{ $page->slug }}" role="tabpanel" aria-labelledby="{{ $page->title }}-{{ $page->slug }}">
+                            @foreach ($pagesContent as $pageC)
+
+                                <div class="tab-pane fade <?php if($loop->first){ ?>show active<?php } ?>" id="{{ $pageC->title }}-{{ $pageC->slug }}" role="tabpanel" aria-labelledby="{{ $pageC->title }}-{{ $pageC->slug }}">
                                     <div class="product-desc-content">
-                                        <h3>{{ $page->title }}</h3>
-                                        <p>{{ $page->content }}</p>
+                                        <h3>{!! $pageC->title !!}</h3>
+                                        <p>{!! $pageC->content !!}</p>
                                     </div>
                                 </div><!-- .End .tab-pane -->
                             @endforeach
