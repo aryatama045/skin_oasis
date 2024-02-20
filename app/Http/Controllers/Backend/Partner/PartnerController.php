@@ -82,12 +82,16 @@ class PartnerController extends Controller
     # edit partner
     public function edit(Request $request, $id)
     {
+        $lang_key = $request->lang_key;
+        $language = Language::isActive()->where('code', $lang_key)->first();
+        if (!$language) {
+            flash(localize('Language you are trying to translate is not available or not active'))->error();
+            return redirect()->route('admin.partner.index');
+        }
 
         $partner = Partner::findOrFail($id);
 
-        dd($partner);
-
-        return view('backend.pages.partner.pages.edit', compact('partner', 'categories', 'tags', 'lang_key'));
+        return view('backend.pages.partner.pages.edit', compact('partner', 'lang_key'));
     }
 
     # update partner
