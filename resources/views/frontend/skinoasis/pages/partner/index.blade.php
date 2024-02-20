@@ -37,6 +37,34 @@
                                     {{ $page->title }}</a>
                                 </li>
                             @endforeach
+                            <!-- <li class="nav-item">
+                                <a class="nav-link" id="partner-program-tab" data-toggle="tab" href="#partner-program" role="tab" aria-controls="partner-program" aria-selected="false">
+                                PROGRAM</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="partner-list-clinic-tab" data-toggle="tab" href="#partner-list-clinic" role="tab" aria-controls="partner-list-clinic" aria-selected="false">
+                                LIST CLINIC</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="partner-list-influencer-tab" data-toggle="tab" href="#partner-list-influencer" role="tab" aria-controls="partner-list-influencer" aria-selected="false">
+                                LIST INFLUENCER</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="partner-list-community-tab" data-toggle="tab" href="#partner-list-community" role="tab" aria-controls="partner-list-community" aria-selected="false">
+                                LIST COMMUNITY</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="partner-join-our-influencer-tab" data-toggle="tab" href="#partner-join-our-influencer" role="tab" aria-controls="partner-join-our-influencer" aria-selected="false">
+                                JOIN OUR INFLUENCER</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="partner-join-our-partner-tab" data-toggle="tab" href="#partner-join-our-partner" role="tab" aria-controls="partner-join-our-partner" aria-selected="false">
+                                JOIN OUR PARTNER</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="partner-join-our-community-tab" data-toggle="tab" href="#partner-join-our-community" role="tab" aria-controls="partner-join-our-community" aria-selected="false">
+                                JOIN OUR COMMUNITY</a>
+                            </li> -->
                         </ul>
 
                         <div class="tab-content">
