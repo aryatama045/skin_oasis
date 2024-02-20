@@ -30,7 +30,7 @@
 
                 <!--left sidebar-->
                 <div class="col-xl-9 order-2 order-md-2 order-lg-2 order-xl-1">
-                    <form action="{{ route('admin.blogs.update') }}" method="POST" class="pb-650">
+                    <form action="{{ route('admin.partner.update') }}" method="POST" class="pb-650">
                         @csrf
                         <input type="hidden" name="id" value="{{ $blog->id }}">
                         <input type="hidden" name="lang_key" value="{{ $lang_key }}">
