@@ -37,22 +37,7 @@
                                     {{ $page->title }}</a>
                                 </li>
                             @endforeach
-                            <!-- <li class="nav-item">
-                                <a class="nav-link" id="partner-program-tab" data-toggle="tab" href="#partner-program" role="tab" aria-controls="partner-program" aria-selected="false">
-                                PROGRAM</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" id="partner-list-clinic-tab" data-toggle="tab" href="#partner-list-clinic" role="tab" aria-controls="partner-list-clinic" aria-selected="false">
-                                LIST CLINIC</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" id="partner-list-influencer-tab" data-toggle="tab" href="#partner-list-influencer" role="tab" aria-controls="partner-list-influencer" aria-selected="false">
-                                LIST INFLUENCER</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" id="partner-list-community-tab" data-toggle="tab" href="#partner-list-community" role="tab" aria-controls="partner-list-community" aria-selected="false">
-                                LIST COMMUNITY</a>
-                            </li>
+
                             <li class="nav-item">
                                 <a class="nav-link" id="partner-join-our-influencer-tab" data-toggle="tab" href="#partner-join-our-influencer" role="tab" aria-controls="partner-join-our-influencer" aria-selected="false">
                                 JOIN OUR INFLUENCER</a>
@@ -64,52 +49,19 @@
                             <li class="nav-item">
                                 <a class="nav-link" id="partner-join-our-community-tab" data-toggle="tab" href="#partner-join-our-community" role="tab" aria-controls="partner-join-our-community" aria-selected="false">
                                 JOIN OUR COMMUNITY</a>
-                            </li> -->
+                            </li>
                         </ul>
 
                         <div class="tab-content">
 
-                            <div class="tab-pane fade show active" id="partner-benefit" role="tabpanel" aria-labelledby="partner-benefit">
-                                <div class="product-desc-content">
-                                    <h3>Benefit</h3>
-                                    <p>We deliver to over 100 countries around the world. For full details of the delivery options we offer, please view our <a href="#">Delivery information</a><br>
-                                    We hope you’ll love every purchase, but if you ever need to return an item you can do so within a month of receipt. For full details of how to make a return, please view our <a href="#">Returns information</a></p>
-                                </div>
-                            </div><!-- .End .tab-pane -->
-
-                            <div class="tab-pane fade" id="partner-program" role="tabpanel" aria-labelledby="partner-program">
-                                <div class="product-desc-content">
-                                    <h3>Program</h3>
-                                    <p>We deliver to over 100 countries around the world. For full details of the delivery options we offer, please view our <a href="#">Delivery information</a><br>
-                                    We hope you’ll love every purchase, but if you ever need to return an item you can do so within a month of receipt. For full details of how to make a return, please view our <a href="#">Returns information</a></p>
-                                </div>
-                            </div><!-- .End .tab-pane -->
-
-                            <div class="tab-pane fade" id="partner-list-clinic" role="tabpanel" aria-labelledby="partner-list-clinic">
-                                <div class="product-desc-content">
-                                    <h3>List Clinic</h3>
-                                    <p>We deliver to over 100 countries around the world. For full details of the delivery options we offer, please view our <a href="#">Delivery information</a><br>
-                                    We hope you’ll love every purchase, but if you ever need to return an item you can do so within a month of receipt. For full details of how to make a return, please view our <a href="#">Returns information</a></p>
-                                </div>
-                            </div><!-- .End .tab-pane -->
-
-                            <div class="tab-pane fade" id="partner-list-influencer" role="tabpanel" aria-labelledby="partner-list-influencer">
-                                <div class="product-desc-content">
-                                    <h3>List Influencer</h3>
-                                    <p>We deliver to over 100 countries around the world. For full details of the delivery options we offer, please view our <a href="#">Delivery information</a><br>
-                                    We hope you’ll love every purchase, but if you ever need to return an item you can do so within a month of receipt. For full details of how to make a return, please view our <a href="#">Returns information</a></p>
-                                </div>
-                            </div><!-- .End .tab-pane -->
-
-                            <div class="tab-pane fade" id="partner-list-community" role="tabpanel" aria-labelledby="partner-list-community">
-                                <div class="product-desc-content">
-                                    <h3>List Community</h3>
-                                    <p>We deliver to over 100 countries around the world. For full details of the delivery options we offer, please view our <a href="#">Delivery information</a><br>
-                                    We hope you’ll love every purchase, but if you ever need to return an item you can do so within a month of receipt. For full details of how to make a return, please view our <a href="#">Returns information</a></p>
-                                </div>
-                            </div><!-- .End .tab-pane -->
-
-
+                            @foreach ($pages as $page)
+                                <div class="tab-pane fade <?php if($loop->first){ ?>show active<?php } ?>" id="{{ $page->title }}-{{ $page->slug }}" role="tabpanel" aria-labelledby="{{ $page->title }}-{{ $page->slug }}">
+                                    <div class="product-desc-content">
+                                        <h3>{{ $page->title }}</h3>
+                                        <p>{{ $page->content }}</p>
+                                    </div>
+                                </div><!-- .End .tab-pane -->
+                            @endforeach
 
 
                             <div class="tab-pane fade" id="partner-join-our-influencer" role="tabpanel" aria-labelledby="partner-join-our-influencer">

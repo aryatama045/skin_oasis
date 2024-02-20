@@ -137,7 +137,9 @@ class HomeController extends Controller
     {
         $pages = Partner::orderBy('id','ASC')->groupBy('title')->get();
 
-        return getView('pages.partner.index', ['pages' => $pages ]);
+        $pagesContent = Partner::orderBy('id','ASC')->groupBy('title')->get();
+
+        return getView('pages.partner.index', ['pages' => $pages, 'pagesContent' => $pagesContent ]);
     }
 
     # halo beauty page
