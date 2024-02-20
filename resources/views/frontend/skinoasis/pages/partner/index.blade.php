@@ -58,7 +58,7 @@
 
                                 <div class="tab-pane fade <?php if($loop->first){ ?>show active<?php } ?>" id="{{ $pageC->id }}-{{ $pageC->slug }}" role="tabpanel" aria-labelledby="{{ $pageC->id }}-{{ $pageC->slug }}">
                                     <div class="product-desc-content">
-                                        <h3>{!! $pageC->title !!}</h3>
+                                        <h3 class="text-center mt-6 mb-5">{!! $pageC->title !!}</h3>
                                         <p>{!! $pageC->content !!}</p>
                                     </div>
                                 </div><!-- .End .tab-pane -->
