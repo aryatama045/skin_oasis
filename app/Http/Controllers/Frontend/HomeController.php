@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Blog;
 use App\Models\Campaign;
 use App\Models\Page;
+use App\Models\Partner;
 use App\Models\Brand;
 use Illuminate\Http\Request;
 
@@ -134,24 +135,9 @@ class HomeController extends Controller
     # partner page
     public function partner()
     {
-        $features = [];
-        if (getSetting('about_us_features') != null) {
-            $features = json_decode(getSetting('about_us_features'));
-        }
+        $page = Partner::orderBy('id','ASC');
 
-        $why_choose_us = [];
-        if (getSetting('about_us_why_choose_us') != null) {
-            $why_choose_us = json_decode(getSetting('about_us_why_choose_us'));
-        }
-
-        $sliders = [];
-        if (getSetting('hero_sliders') != null) {
-            $sliders = json_decode(getSetting('hero_sliders'));
-        }
-
-        // $page = Page::where('slug', $slug)->first();
-
-        return getView('pages.partner.index', ['features' => $features, 'why_choose_us' => $why_choose_us, 'sliders' => $sliders]);
+        return getView('pages.partner.index', ['page' => $page, ]);
     }
 
     # halo beauty page

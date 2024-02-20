@@ -29,11 +29,15 @@
                 <div class="col-12">
                     <div class="product-details-tab">
                         <ul class="nav nav-pills justify-content-center" role="tablist">
-                            <li class="nav-item">
-                                <a class="nav-link active" id="partner-benefit-tab" data-toggle="tab" href="#partner-benefit" role="tab" aria-controls="partner-benefit" aria-selected="true">
-                                BENEFIT</a>
-                            </li>
-                            <li class="nav-item">
+                            @foreach ($page as $p)
+                                <li class="nav-item">
+                                    <a class="nav-link @if($loop->first)active@endif"
+                                    id="partner-benefit-tab" href="#partner-benefit" aria-controls="partner-benefit"
+                                    data-toggle="tab" role="tab" aria-selected="true">
+                                    BENEFIT</a>
+                                </li>
+                            @endforeach
+                            <!-- <li class="nav-item">
                                 <a class="nav-link" id="partner-program-tab" data-toggle="tab" href="#partner-program" role="tab" aria-controls="partner-program" aria-selected="false">
                                 PROGRAM</a>
                             </li>
@@ -60,7 +64,7 @@
                             <li class="nav-item">
                                 <a class="nav-link" id="partner-join-our-community-tab" data-toggle="tab" href="#partner-join-our-community" role="tab" aria-controls="partner-join-our-community" aria-selected="false">
                                 JOIN OUR COMMUNITY</a>
-                            </li>
+                            </li> -->
                         </ul>
 
                         <div class="tab-content">
