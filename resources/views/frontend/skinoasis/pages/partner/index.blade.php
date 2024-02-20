@@ -32,8 +32,8 @@
                             @foreach ($pages as $page)
                                 <li class="nav-item">
                                     <a class="text-uppercase nav-link <?php if($loop->first){ ?>active <?php } ?>"
-                                    id="{{ $page->id }}-{{ $page->slug }}-tab" href="#{{ $page->id }}-{{ $page->slug }}" aria-controls="{{ $page->id }}-{{ $page->slug }}"
-                                    data-toggle="tab" role="tab" aria-selected="true">
+                                    id="partner-{{ $page->slug }}-tab" data-toggle="tab" href="#partner-{{ $page->slug }}"
+                                    role="tab" aria-controls="partner-{{ $page->slug }}" aria-selected="<?php if($loop->first){ ?>true<?php }else{ ?>false <?php } ?>">
                                     {{ $page->title }}</a>
                                 </li>
                             @endforeach
@@ -56,7 +56,7 @@
 
                             @foreach ($pagesContent as $pageC)
 
-                                <div class="tab-pane fade <?php if($loop->first){ ?>show active<?php } ?>" id="{{ $pageC->id }}-{{ $pageC->slug }}" role="tabpanel" aria-labelledby="{{ $pageC->id }}-{{ $pageC->slug }}">
+                                <div class="tab-pane fade <?php if($loop->first){ ?>show active<?php } ?>" id="partner-{{ $pageC->slug }}" role="tabpanel" aria-labelledby="partner-{{ $pageC->slug }}">
                                     <div class="product-desc-content">
                                         <h3 class="text-center mt-6 mb-5">{!! $pageC->title !!}</h3>
                                         <p>{!! $pageC->content !!}</p>
