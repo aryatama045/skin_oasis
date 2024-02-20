@@ -28,7 +28,7 @@ class JoinController extends Controller
 
 
         $pages = $pages->paginate(paginationNumber());
-        return view('backend.pages.partner.pages.index', compact('pages', 'searchKey'));
+        return view('backend.pages.partner.join.influencer.index', compact('pages', 'searchKey'));
     }
 
     public function index_partner(Request $request){
@@ -43,7 +43,7 @@ class JoinController extends Controller
 
 
         $pages = $pages->paginate(paginationNumber());
-        return view('backend.pages.partner.pages.index', compact('pages', 'searchKey'));
+        return view('backend.pages.partner.join.partner.index', compact('pages', 'searchKey'));
     }
 
     public function index_community(Request $request){
@@ -58,6 +58,6 @@ class JoinController extends Controller
 
 
         $pages = $pages->paginate(paginationNumber());
-        return view('backend.pages.partner.pages.index', compact('pages', 'searchKey'));
+        return view('backend.pages.partner.join.community.index', compact('pages', 'searchKey'));
     }
 }
