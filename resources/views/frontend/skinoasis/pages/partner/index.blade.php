@@ -31,7 +31,7 @@
                         <ul class="nav nav-pills justify-content-center" role="tablist">
                             @foreach ($page as $p)
                                 <li class="nav-item">
-                                    <a class="nav-link @if($loop->first)active@endif"
+                                    <a class="nav-link <?php if($loop->first){ ?>active <?php } ?>"
                                     id="partner-benefit-tab" href="#partner-benefit" aria-controls="partner-benefit"
                                     data-toggle="tab" role="tab" aria-selected="true">
                                     BENEFIT</a>
