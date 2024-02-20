@@ -336,25 +336,25 @@ Route::group(
         # join
         Route::group(['prefix' => 'join'], function () {
             #join influencer
-            Route::get('/join/influencer', [JoinController::class, 'index'])->name('admin.join.influencer');
-            Route::get('/join/influencer/add', [JoinController::class, 'create'])->name('admin.join.influencer_create');
-            Route::post('/join/influencer/add', [JoinController::class, 'store'])->name('admin.join.influencer_store');
-            Route::get('/join/influencer/edit/{id}', [JoinController::class, 'edit'])->name('admin.join.influencer_edit');
-            Route::get('/join/influencer/delete/{id}', [JoinController::class, 'delete'])->name('admin.join.influencerdelete');
+            Route::get('/influencer', [JoinController::class, 'index'])->name('admin.join.influencer');
+            Route::get('/influencer/add', [JoinController::class, 'create'])->name('admin.join.influencer_create');
+            Route::post('/influencer/add', [JoinController::class, 'store'])->name('admin.join.influencer_store');
+            Route::get('/influencer/edit/{id}', [JoinController::class, 'edit'])->name('admin.join.influencer_edit');
+            Route::get('/influencer/delete/{id}', [JoinController::class, 'delete'])->name('admin.join.influencerdelete');
 
             # join partner
-            Route::get('/join/partner', [JoinController::class, 'index_partner'])->name('admin.join.partner');
-            Route::get('/join/partner/add', [JoinController::class, 'create_partner'])->name('admin.join.partner_create');
-            Route::post('/join/partner/add', [JoinController::class, 'store_partner'])->name('admin.join.partner_store');
-            Route::get('/join/partner/edit/{id}', [JoinController::class, 'edit_partner'])->name('admin.join.partner_edit');
-            Route::get('/join/partner/delete/{id}', [JoinController::class, 'delete'])->name('admin.join.partner_delete');
+            Route::get('/partner', [JoinController::class, 'index_partner'])->name('admin.join.partner');
+            Route::get('/partner/add', [JoinController::class, 'create_partner'])->name('admin.join.partner_create');
+            Route::post('/partner/add', [JoinController::class, 'store_partner'])->name('admin.join.partner_store');
+            Route::get('/partner/edit/{id}', [JoinController::class, 'edit_partner'])->name('admin.join.partner_edit');
+            Route::get('/partner/delete/{id}', [JoinController::class, 'delete'])->name('admin.join.partner_delete');
 
             # join community
-            Route::get('/join/community', [JoinController::class, 'index_community'])->name('admin.join.community');
-            Route::get('/join/community/add', [JoinController::class, 'create_community'])->name('admin.join.community_create');
-            Route::post('/join/community/add', [JoinController::class, 'store_community'])->name('admin.join.community_store');
-            Route::get('/join/community/edit/{id}', [JoinController::class, 'edit_community'])->name('admin.join.community_edit');
-            Route::get('/join/community/delete/{id}', [JoinController::class, 'delete'])->name('admin.join.community_delete');
+            Route::get('/community', [JoinController::class, 'index_community'])->name('admin.join.community');
+            Route::get('/community/add', [JoinController::class, 'create_community'])->name('admin.join.community_create');
+            Route::post('/community/add', [JoinController::class, 'store_community'])->name('admin.join.community_store');
+            Route::get('/community/edit/{id}', [JoinController::class, 'edit_community'])->name('admin.join.community_edit');
+            Route::get('/community/delete/{id}', [JoinController::class, 'delete'])->name('admin.join.community_delete');
         });
 
         # media manager
