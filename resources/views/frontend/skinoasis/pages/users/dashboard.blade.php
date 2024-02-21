@@ -15,6 +15,10 @@
         margin-left: 8rem;
         top: 4rem;
     }
+    .media-body {
+        top: 6rem !important;
+        position: relative;
+    }
 </style>
 <section class="my-account pb-120">
 
@@ -24,24 +28,16 @@
                 <div class="media align-items-end profile-header">
                     <div class="profile mt-5 mr-8">
                         <img src="https://bootstrapious.com/i/snippets/sn-profile/teacher.jpg" alt="..." width="180" class="rounded-cirlce mb-2 img-thumbnail">
-                        <a href="#" class="btn btn-dark btn-sm btn-block">Edit profile</a>
                     </div>
-                    <div class="media-body ml-5 mb-5 text-white">
+                    <div class="media-body ml-5 mb-5 ">
                         <h2 class="mt-0 mb-0">Manuella Tarly</h2>
-                        <h4 class="mb-4">Sahabat Skin Oasis</h4>
+                        <h4 class="mt-2 mb-4">Sahabat Skin Oasis</h4>
                     </div>
                 </div>
             </div>
 
             <div class="bg-light p-4 d-flex justify-content-end text-center">
-                <ul class="list-inline mb-0">
-                    <li class="list-inline-item">
-                        <h5 class="font-weight-bold mb-0 d-block">241</h5><small class="text-muted"> <i class="fa fa-picture-o mr-1"></i>Photos</small>
-                    </li>
-                    <li class="list-inline-item">
-                        <h5 class="font-weight-bold mb-0 d-block">84K</h5><small class="text-muted"> <i class="fa fa-user-circle-o mr-1"></i>Followers</small>
-                    </li>
-                </ul>
+                <a href="#" class="btn btn-dark btn-sm btn-block">Edit profile</a>
             </div>
 
             <div class="py-4 px-4">
