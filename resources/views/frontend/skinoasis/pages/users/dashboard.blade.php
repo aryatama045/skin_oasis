@@ -37,7 +37,14 @@
             </div>
 
             <div class="bg-light p-4 d-flex justify-content-end text-center">
-                <a href="#" class="btn btn-dark btn-sm btn-block">Edit profile</a>
+                <ul class="list-inline mb-0">
+                    <li class="list-inline-item">
+                        <a href="#" class="btn btn-dark btn-sm btn-block">Edit profile</a>
+                    </li>
+                    <li class="list-inline-item">
+                        <h5 class="font-weight-bold mb-0 d-block">84K</h5><small class="text-muted"> <i class="fa fa-user-circle-o mr-1"></i>Followers</small>
+                    </li>
+                </ul>
             </div>
 
             <div class="py-4 px-4">
