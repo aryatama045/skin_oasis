@@ -6,6 +6,11 @@
 
 @section('contents')
 
+<style>
+    .profile-header {
+    transform: translateY(5rem);
+}
+</style>
 <section class="my-account pt-6 pb-120">
         <div class="container">
             <!-- Profile widget -->
