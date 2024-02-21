@@ -49,6 +49,8 @@
                         <small class="text-muted"> <i class="fa fa-user-circle-o mr-1"></i> Wishlist</small>
                     </li>
 
+                    <li class="list-inline-item"></li>
+
                     <li class="list-inline-item">
                         <a href="#" class="btn btn-dark btn-sm btn-block">Edit profile</a>
                     </li>
