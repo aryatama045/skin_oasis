@@ -9,15 +9,23 @@
 <style>
     .profile-header {
     transform: translateY(5rem);
-}
+    }
+    .profile {
+        position: relative;
+        margin-left: 8rem;
+        top: 4rem;
+    }
 </style>
 <section class="my-account pt-6 pb-120">
         <div class="container">
             <!-- Profile widget -->
-            <div class="bg-white shadow rounded overflow-hidden">
+            <div class="bg-white shadow overflow-hidden">
                 <div class="px-4 pt-0 pb-4 bg-dark">
                     <div class="media align-items-end profile-header">
-                        <div class="profile mr-3"><img src="https://bootstrapious.com/i/snippets/sn-profile/teacher.jpg" alt="..." width="130" class="rounded mb-2 img-thumbnail"><a href="#" class="btn btn-dark btn-sm btn-block">Edit profile</a></div>
+                        <div class="profile mt-5 mr-8">
+                            <img src="https://bootstrapious.com/i/snippets/sn-profile/teacher.jpg" alt="..." width="180" class="rounded-cirlce mb-2 img-thumbnail">
+                            <a href="#" class="btn btn-dark btn-sm btn-block">Edit profile</a>
+                        </div>
                         <div class="media-body mb-5 text-white">
                             <h4 class="mt-0 mb-0">Manuella Tarly</h4>
                             <p class="small mb-4"> <i class="fa fa-map-marker mr-2"></i>San Farcisco</p>
