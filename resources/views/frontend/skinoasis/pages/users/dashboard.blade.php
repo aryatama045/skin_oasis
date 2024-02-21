@@ -28,7 +28,7 @@
                         </div>
                         <div class="media-body ml-5 mb-5 text-white">
                             <h2 class="mt-0 mb-0">Manuella Tarly</h2>
-                            <h4>Sahabat Skin Oasis</h4>
+                            <h4 class="mb-4">Sahabat Skin Oasis</h4>
                         </div>
                     </div>
                 </div>
