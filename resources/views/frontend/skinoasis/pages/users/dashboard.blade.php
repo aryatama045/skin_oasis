@@ -27,7 +27,7 @@
             <div class="px-4 pt-0 pb-4 bg-dark">
                 <div class="media align-items-end profile-header">
                     <div class="profile mt-5 mr-8">
-                        <img src="https://bootstrapious.com/i/snippets/sn-profile/teacher.jpg" alt="..." width="180" class="rounded-cirlce mb-2 img-thumbnail">
+                        <img src="https://bootstrapious.com/i/snippets/sn-profile/teacher.jpg" alt="..." width="180" class="rounded-circle mb-2 img-thumbnail">
                     </div>
                     <div class="media-body ml-5 mb-5 ">
                         <h2 class="mt-0 mb-0">Manuella Tarly</h2>
