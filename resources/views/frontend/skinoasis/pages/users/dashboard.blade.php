@@ -19,6 +19,15 @@
         top: 6rem !important;
         position: relative;
     }
+    .img-profile{
+        padding: 0.25rem;
+        background-color: #fafafa;
+        border: 1px solid var(--bs-border-color);
+        border-radius: 0.375rem;
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+    }
 </style>
 
 
@@ -37,7 +46,7 @@
             <div class="px-4 pt-0 pb-4 bg-dark">
                 <div class="media align-items-end profile-header">
                     <div class="profile mt-5 mr-8">
-                        <img src="{{$avatar}}" alt="..." width="180" class="rounded-circle mb-2 img-thumbnail">
+                        <img src="{{$avatar}}" alt="..." width="180" class="rounded-circle mb-2 img-profile">
                     </div>
                     <div class="media-body ml-5 mb-5 ">
                         <h2 class="mt-0 mb-0">{{ $user->name }}</h2>
