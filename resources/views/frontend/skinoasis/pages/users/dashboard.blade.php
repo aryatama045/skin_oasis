@@ -26,9 +26,9 @@
                             <img src="https://bootstrapious.com/i/snippets/sn-profile/teacher.jpg" alt="..." width="180" class="rounded-cirlce mb-2 img-thumbnail">
                             <a href="#" class="btn btn-dark btn-sm btn-block">Edit profile</a>
                         </div>
-                        <div class="media-body mb-5 text-white">
-                            <h4 class="mt-0 mb-0">Manuella Tarly</h4>
-                            <p class="small mb-4"> <i class="fa fa-map-marker mr-2"></i>San Farcisco</p>
+                        <div class="media-body ml-5 mb-5 text-white">
+                            <h2 class="mt-0 mb-0">Manuella Tarly</h2>
+                            <h4>Sahabat Skin Oasis</h4>
                         </div>
                     </div>
                 </div>
