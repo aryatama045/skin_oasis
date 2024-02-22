@@ -90,15 +90,11 @@
 
     #sticky {
         position:relative;
-        padding: 0.5ex;
-        font-size: 2em;
-        text-align:center;
     }
     #sticky.stick {
         position: fixed;
-        top: 0;
-        left:0;
-        right:0;
+        top: 7rem;
+        right: 1rem;
         z-index: 10000;
     }
 </style>
