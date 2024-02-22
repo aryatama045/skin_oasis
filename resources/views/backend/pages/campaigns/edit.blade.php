@@ -39,6 +39,27 @@
                                                 value="{{ $campaign->title }}">
                                         </div>
                                     </div>
+
+                                    <div class="col-lg-6">
+                                        <div class="">
+                                            <label for="subtitle" class="form-label">{{ localize('Subtitle') }}</label>
+                                            <input class="form-control" type="text" id="subtitle"
+                                                placeholder="{{ localize('Type campaign subtitle') }}" name="subtitle" required
+                                                value="{{ $campaign->subtitle }}">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row mb-4">
+                                    <div class="col-lg-6">
+                                        <div class="">
+                                            <label for="harga_promo" class="form-label">{{ localize('Harga Promo') }}</label>
+                                            <input class="form-control" type="text" id="harga_promo"
+                                                placeholder="{{ localize('Type campaign harga_promo') }}" name="harga_promo" required
+                                                value="{{ $campaign->harga_promo }}">
+                                        </div>
+                                    </div>
+
                                     <div class="col-lg-6">
 
                                         @php
@@ -54,17 +75,6 @@
                                                     data-startdate="'{{ $start_date }}'"
                                                     data-enddate="'{{ $end_date }}'">
                                             </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="row mb-4">
-                                    <div class="col-lg-6">
-                                        <div class="">
-                                            <label for="subtitle" class="form-label">{{ localize('Subsubtitle') }}</label>
-                                            <input class="form-control" type="text" id="subtitle"
-                                                placeholder="{{ localize('Type campaign subtitle') }}" name="subtitle" required
-                                                value="{{ $campaign->subtitle }}">
                                         </div>
                                     </div>
                                 </div>
