@@ -36,6 +36,21 @@
     .user-content {
         height: 40em;
     }
+
+    .nav-pills {
+        --bs-nav-pills-border-radius: 0.375rem;
+        --bs-nav-pills-link-active-color: #fff;
+        --bs-nav-pills-link-active-bg: #d5976a;
+        border-bottom: 1px solid;
+    }
+
+    .nav.nav-pills .nav-item .nav-link.active, .nav.nav-pills .nav-item.show .nav-link
+    {
+        color: rgba(93, 80, 5, 1);
+        border-color: #d7d7d7;
+        border-bottom-color: rgba(93, 80, 5, 1);
+        font-weight: 600;
+    }
 </style>
 
 
