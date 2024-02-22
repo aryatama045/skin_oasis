@@ -127,10 +127,10 @@
 
             <div class="col-lg-4">
                 <div class="icondiv rounded shadow-box bg-white ">
-                    <div class="p-4 ">
+                    <img src="https://www.w3schools.com/css/pineapple.jpg" alt="Pineapple" class="icon-img">
+                    <div class="p-4 icon-content">
                         <h5 class="mb-3">INVITE YOUR FRIENDS</h5>
                         <p class="font-italic mb-0">
-                            <img src="https://www.w3schools.com/css/pineapple.jpg" alt="Pineapple" class="icon-img">
                             Bagikan link referral ke temanmu via media sosial, kontak, atau email.
                         </p>
                         <ul class="list-inline small text-muted mt-3 mb-0">
