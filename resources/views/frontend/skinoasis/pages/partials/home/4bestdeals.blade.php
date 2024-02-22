@@ -1,9 +1,8 @@
 @php
     $campaigns = \App\Models\Campaign::where('end_date', '>=', strtotime(date('Y-m-d')))
         ->where('is_published', 1)
-        ->latest();
+        ->latest()->get()->first();
 
-    dd($campaigns);
 @endphp
 
 <!-- Best Deals -->
@@ -13,7 +12,7 @@
             <div class="col-lg-12">
                 <div class="deal align-items-center">
                     <div class="deal-content">
-                        <h4>Vegetology Sun Screen</h4>
+                        <h4>{{$campaigns->title}}</h4>
                         <h2>Rp. 100.000</h2>
 
                         <h3 class="product-title">25-26 Dec 2023</h3><!-- End .product-title -->
