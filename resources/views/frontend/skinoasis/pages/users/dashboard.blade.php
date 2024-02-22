@@ -187,7 +187,37 @@
             </div>
         </div>
 
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="cta bg-image rounded shadow-box bg-white p-4" style="background-image: url(assets/images/backgrounds/cta/bg-3.jpg);background-position: center right;">
+                    <div class="cta-wrapper cta-text text-center">
+                        <h3 class="cta-title">Morbi in sem quis dui placerat pellentesque felis.</h3><!-- End .cta-title -->
+                        <p class="cta-desc">Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci. </p><!-- End .cta-desc -->
+                        <a href="#" class="btn btn-primary btn-rounded"><span>Click Here</span><i class="icon-long-arrow-right"></i></a>
+                    </div><!-- End .cta-wrapper -->
+                </div><!-- End .cta -->
+            </div><!-- End .col-lg-6 -->
+
+            <div class="col-lg-6">
+                <div class="cta bg-image rounded shadow-box bg-white p-4" style="background-image: url(assets/images/backgrounds/cta/bg-4.jpg);background-position: center right;">
+                    <div class="cta-wrapper text-center">
+                        <h3 class="cta-title">Join Our Newsletter</h3><!-- End .cta-title -->
+                        <p class="cta-desc">Lorem ipsum dolor sit amet adipiscing.</p><!-- End .cta-desc -->
+                        <form action="#">
+                            <input type="email" class="form-control form-control-rounded" placeholder="Enter your Email Address" aria-label="Email Adress" required="">
+                            <button class="btn btn-primary" type="submit"><span>Subscribe</span><i class="icon-long-arrow-right"></i></button>
+                        </form>
+                    </div><!-- End .cta-wrapper -->
+                </div><!-- End .cta -->
+            </div><!-- End .col-lg-6 -->
+        </div>
+
+        <hr class="mt-3 mb-5">
+        <h3 class="title text-center text-uppercase mb-5">Syarat & Ketentuan</h3>
+
     </div>
+
+
 
 </section>
 
