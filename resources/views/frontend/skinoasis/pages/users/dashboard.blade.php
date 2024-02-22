@@ -54,6 +54,7 @@
 
     .img-icon {
         float: left;
+        width: 100px;
     }
 </style>
 
