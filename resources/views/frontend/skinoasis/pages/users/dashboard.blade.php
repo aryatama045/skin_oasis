@@ -84,7 +84,7 @@
 
         </div><!-- End profile widget -->
 
-        <div class="container">
+        <div class="container mt-10">
             <div class="row">
                 <div class="col-lg-9">
                     <div class="rounded shadow-box bg-white py-5">
