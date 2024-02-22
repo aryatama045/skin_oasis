@@ -58,7 +58,7 @@
 
         @include('frontend.skinoasis.pages.users.partials.profile')
 
-        <div class="container mt-10">
+        <div class="container mt-8">
             <div class="row">
                 <div class="col-lg-8">
                     <div class="rounded shadow-box bg-white py-5">

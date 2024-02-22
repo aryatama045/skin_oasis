@@ -14,14 +14,14 @@
                 <img src="{{$avatar}}" alt="..." width="180" class="rounded-circle mb-2 img-profile">
             </div>
             <div class="media-body ml-5 mb-5 ">
-                <h2 class="mt-0 mb-0">{{ $user->name }}</h2>
-                <h4 class="mt-2 mb-4">Sahabat Skin Oasis</h4>
+                <h2 class="text-capitalize mt-0 mb-0">{{ $user->name }}</h2>
+                <h4 class="text-capitalize mt-2 mb-4">Sahabat Skin Oasis</h4>
             </div>
         </div>
     </div>
 
-    <div class="bg-light p-4 d-flex justify-content-end text-center">
-        <div class="profile-achievements d-flex align-items-center flex-wrap mt-6">
+    <div class="bg-light d-flex justify-content-end text-center">
+        <div class="profile-achievements p-4 d-flex align-items-center flex-wrap ">
             <div class="achievement-box d-flex align-items-center gap-3">
                 <span
                     class="icon d-inline-flex align-items-center justify-content-center flex-shrink-0 bg-color-1 rounded-3">
@@ -132,7 +132,7 @@
             </div>
 
         </div>
-        <ul class="list-inline mb-0">
+        <ul class="list-inline p-5">
 
             <li class="list-inline-item">
                 <a href="#" class="btn btn-dark btn-sm btn-block">Edit profile</a>
