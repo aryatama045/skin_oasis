@@ -20,7 +20,7 @@
                                 $start_date = date('d m', $campaign->start_date);
                                 $end_date = date('d m Y', $campaign->end_date);
                             @endphp
-                            {{$start_date}}-26 Dec 2023
+                            {{$start_date}} - {{ $end_date}}
                         </h3><!-- End .product-title -->
 
                         <div class="product-price">
