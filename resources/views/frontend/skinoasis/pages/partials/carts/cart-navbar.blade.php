@@ -35,7 +35,11 @@
     </li>
 @empty
     <li>
-        <img src="{{ staticAsset('frontend/default/assets/img/empty-cart.svg') }}" alt="" srcset=""
-            class="img-fluid">
+        <!-- <img src="{{ staticAsset('frontend/default/assets/img/empty-cart.svg') }}" alt="" srcset=""
+            class="img-fluid"> -->
+        <center class="mt-3">
+            <h3>- Keranjang kosong -</h3>
+            <i><p>Temukan produk yang kamu cari <a href="{{ route('products.allproduct') }}">disini</a><p></i>
+        </center>
     </li>
 @endforelse
