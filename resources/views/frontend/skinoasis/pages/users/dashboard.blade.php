@@ -193,20 +193,6 @@
                 <ul class="list-inline mb-0">
 
                     <li class="list-inline-item">
-                        <h5 class="font-weight-bold mb-0 d-block">{{ $user->orders()->isProcessing()->count() }}</h5>
-                        <small class="text-muted"> <i class="fa fa-user-circle-o mr-1"></i> Order Proses</small>
-                    </li>
-
-                    <li class="list-inline-item">
-                        <h5 class="font-weight-bold mb-0 d-block">{{ $user->orders()->isPlacedOrPending()->count() }}</h5>
-                        <small class="text-muted">
-                        <i class="fa fa-chart-bar"></i>
-                        New Order</small>
-                    </li>
-
-                    <li class="list-inline-item"></li>
-
-                    <li class="list-inline-item">
                         <a href="#" class="btn btn-dark btn-sm btn-block">Edit profile</a>
                     </li>
                 </ul>
