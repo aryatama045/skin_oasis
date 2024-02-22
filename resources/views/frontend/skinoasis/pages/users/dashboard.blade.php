@@ -189,7 +189,7 @@
 
         <div class="row">
             <div class="col-lg-6">
-                <div class="cta bg-image rounded shadow-box bg-white p-4" style="background-image: url(assets/images/backgrounds/cta/bg-3.jpg);background-position: center right;">
+                <div class="cta bg-image rounded shadow-box bg-white p-4">
                     <div class="cta-wrapper cta-text text-center">
                         <h3 class="cta-title">Morbi in sem quis dui placerat pellentesque felis.</h3><!-- End .cta-title -->
                         <p class="cta-desc">Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci. </p><!-- End .cta-desc -->
@@ -199,7 +199,7 @@
             </div><!-- End .col-lg-6 -->
 
             <div class="col-lg-6">
-                <div class="cta bg-image rounded shadow-box bg-white p-4" style="background-image: url(assets/images/backgrounds/cta/bg-4.jpg);background-position: center right;">
+                <div class="cta bg-image rounded shadow-box bg-white p-4">
                     <div class="cta-wrapper text-center">
                         <h3 class="cta-title">Join Our Newsletter</h3><!-- End .cta-title -->
                         <p class="cta-desc">Lorem ipsum dolor sit amet adipiscing.</p><!-- End .cta-desc -->
