@@ -32,7 +32,7 @@
 
                     </div><!-- End .deal-content -->
                     <div class="deal-image">
-                            <img src="{{ staticAsset('frontend/skinoasis/assets/images/best-deal.png') }}" alt="image">
+                            <img src="{{ uploadedAsset($campaign->banner) }}" alt="image">
                     </div><!-- End .deal-image -->
                 </div><!-- End .deal -->
             </div><!-- End .col-lg-12 -->
