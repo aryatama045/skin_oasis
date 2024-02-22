@@ -8,7 +8,7 @@
 
 <style>
     .profile-header {
-    transform: translateY(5rem);
+        transform: translateY(5rem);
     }
     .profile {
         position: relative;
