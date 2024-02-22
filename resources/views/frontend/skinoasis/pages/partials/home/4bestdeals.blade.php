@@ -17,8 +17,8 @@
 
                         <h3 class="product-title">
                             @php
-                                $start_date = date('d m', $campaign->start_date);
-                                $end_date = date('d m Y', $campaign->end_date);
+                                $start_date = date('d m', $campaigns->start_date);
+                                $end_date = date('d m Y', $campaigns->end_date);
                             @endphp
                             {{$start_date}} - {{ $end_date}}
                         </h3><!-- End .product-title -->
@@ -32,7 +32,7 @@
 
                     </div><!-- End .deal-content -->
                     <div class="deal-image">
-                            <img src="{{ uploadedAsset($campaign->banner) }}" alt="image">
+                            <img src="{{ uploadedAsset($campaigns->banner) }}" alt="image">
                     </div><!-- End .deal-image -->
                 </div><!-- End .deal -->
             </div><!-- End .col-lg-12 -->
