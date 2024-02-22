@@ -29,7 +29,7 @@
                             <!-- <span class="old-price">Was $240.00</span> -->
                         </div><!-- End .product-price -->
 
-                        <a href="{{ route('home.campaigns.show', $campaign->slug) }}"
+                        <a href="{{ route('home.campaigns.show', $campaigns->slug) }}"
                             class="btn btn-rounded btn-sm text-uppercase btn-outline-green-dark mt-5">{{ localize('Shop Now') }}</a>
 
                     </div><!-- End .deal-content -->
