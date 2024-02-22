@@ -95,16 +95,16 @@
                         <div class="p-4 ">
                             <ul class="nav nav-pills justify-content-center" id="tabs-6" role="tablist">
                                 <li class="nav-item">
-                                    <a class="nav-link active" id="tab-21-tab" data-toggle="tab" href="#tab-21" role="tab" aria-controls="tab-21" aria-selected="true">Tab 1</a>
+                                    <a class="nav-link active" id="tab-21-tab" data-toggle="tab" href="#tab-21" role="tab" aria-controls="tab-21" aria-selected="true">ARTICLE</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" id="tab-22-tab" data-toggle="tab" href="#tab-22" role="tab" aria-controls="tab-22" aria-selected="false">Tab 2</a>
+                                    <a class="nav-link" id="tab-22-tab" data-toggle="tab" href="#tab-22" role="tab" aria-controls="tab-22" aria-selected="false">VIDEO</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" id="tab-23-tab" data-toggle="tab" href="#tab-23" role="tab" aria-controls="tab-23" aria-selected="false">Tab 3</a>
+                                    <a class="nav-link" id="tab-23-tab" data-toggle="tab" href="#tab-23" role="tab" aria-controls="tab-23" aria-selected="false">REVIEW</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" id="tab-24-tab" data-toggle="tab" href="#tab-24" role="tab" aria-controls="tab-24" aria-selected="false">Tab 4</a>
+                                    <a class="nav-link" id="tab-24-tab" data-toggle="tab" href="#tab-24" role="tab" aria-controls="tab-24" aria-selected="false">PHOTO</a>
                                 </li>
                             </ul>
                             <div class="tab-content" id="tab-content-6">
