@@ -164,7 +164,7 @@
             </div>
         </div>
 
-        <div class="cta cta-horizontal mb-3">
+        <div class="cta cta-horizontal rounded shadow-box bg-white mt-3 mb-3">
             <div class="row align-items-center">
                 <div class="col-lg-4 col-xl-3 offset-xl-1">
                     <h3 class="cta-title">Join Our Newsletter</h3><!-- End .cta-title -->
@@ -183,6 +183,7 @@
                 </div><!-- End .col-xl-7 -->
             </div><!-- End .row -->
         </div>
+
     </div>
 
 </section>
