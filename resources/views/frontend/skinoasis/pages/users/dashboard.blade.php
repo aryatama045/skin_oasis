@@ -75,6 +75,10 @@
         overflow: hidden;
         padding: 2rem;
     }
+
+    .icon-content h5 {
+        color: rgba(93, 80, 5, 1);
+    }
     .clearfix {
         clear: both;
     }
@@ -127,7 +131,7 @@
                     <img src="https://www.w3schools.com/css/pineapple.jpg" alt="icon" class="icon-img">
                     <div class="icon-content">
                         <h5 class="mb-3">INVITE YOUR FRIENDS</h5>
-                        <p class="font-italic mb-0">
+                        <p class="text-dark mb-0">
                             Bagikan link referral ke temanmu via media sosial, kontak, atau email.
                         </p>
                         <ul class="list-inline small text-muted mt-3 mb-0">
@@ -142,7 +146,7 @@
                     <img src="https://www.w3schools.com/css/pineapple.jpg" alt="icon" class="icon-img">
                     <div class="icon-content">
                         <h5 class="mb-3">REGISTRATION & VERIFICATION</h5>
-                        <p class="font-italic mb-0">
+                        <p class="text-dark mb-0">
                             Setelah berhasil mendaftarkan diri melalui link referral, memverifikasi nomor HP, dan melengkapi Profile, temanmu akan mendapatkan voucher 20% untuk belanja cantik pertamanya di SKINOASIS
                         </p>
                         <ul class="list-inline small text-muted mt-3 mb-0">
