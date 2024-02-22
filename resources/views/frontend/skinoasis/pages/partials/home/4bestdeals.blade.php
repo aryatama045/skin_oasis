@@ -5,6 +5,7 @@
 
 @endphp
 
+@if(!empty($campaigns))
 <!-- Best Deals -->
 <div class="bg-green deal-container pt-5">
     <div class="container">
@@ -40,3 +41,4 @@
         </div><!-- End .row -->
     </div><!-- End .container -->
 </div><!-- End .bg-light -->
+@endif
