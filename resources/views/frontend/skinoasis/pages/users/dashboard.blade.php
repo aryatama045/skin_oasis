@@ -59,9 +59,6 @@
     }
 
     .icondiv{
-        border: 1px solid black;
-        background-color: #f9f9f9;
-        margin-top: 48px;
         display: inline-block;
         margin: 0 auto;
         width: auto;
@@ -142,7 +139,7 @@
                 </div>
 
                 <div class="icondiv rounded shadow-box bg-white mt-5">
-                    <img src="https://www.w3schools.com/css/pineapple.jpg" alt="icon" class="img-icon">
+                    <img src="https://www.w3schools.com/css/pineapple.jpg" alt="icon" class="icon-img">
                     <div class="icon-content">
                         <h5 class="mb-3">REGISTRATION & VERIFICATION</h5>
                         <p class="font-italic mb-0">
