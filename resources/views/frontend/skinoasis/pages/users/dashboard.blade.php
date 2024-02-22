@@ -57,6 +57,30 @@
         padding-right:10px;
         width:75;
     }
+
+    .icondiv{
+        border: 1px solid black;
+        background-color: #f9f9f9;
+        margin-top: 48px;
+        display: inline-block;
+        margin: 0 auto;
+        width: auto;
+    }
+    .icon-img {
+        max-width: 192px;
+        float: left;
+        display: block;
+        margin: 0 auto;
+        box-align: middle;
+        margin-right: 12px;
+    }
+    .icon-content {
+        max-height: 192px;
+        overflow: hidden;
+    }
+    .clearfix {
+        clear: both;
+    }
 </style>
 
 
@@ -102,11 +126,11 @@
             </div>
 
             <div class="col-lg-4">
-                <div class="rounded shadow-box bg-white ">
+                <div class="icondiv rounded shadow-box bg-white ">
                     <div class="p-4 ">
                         <h5 class="mb-3">INVITE YOUR FRIENDS</h5>
                         <p class="font-italic mb-0">
-                            <img src="https://www.w3schools.com/css/pineapple.jpg" alt="Pineapple" class="img-icon">
+                            <img src="https://www.w3schools.com/css/pineapple.jpg" alt="Pineapple" class="icon-img">
                             Bagikan link referral ke temanmu via media sosial, kontak, atau email.
                         </p>
                         <ul class="list-inline small text-muted mt-3 mb-0">
@@ -114,6 +138,7 @@
                             <li class="list-inline-item"><i class="fa fa-heart-o mr-2"></i>200 Likes</li>
                         </ul>
                     </div>
+                    <div class="clearfix"></div>
                 </div>
 
                 <div class="rounded shadow-box bg-white mt-5">
