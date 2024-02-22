@@ -14,7 +14,7 @@
                 <div class="deal align-items-center">
                     <div class="deal-content">
                         <h4>{{$campaigns->title}}</h4>
-                        <h2>Rp. {{$campaigns->harga_promo}}</h2>
+                        <h2>Rp.{{$campaigns->harga_promo}}</h2>
 
                         <h3 class="product-title">
                             @php
