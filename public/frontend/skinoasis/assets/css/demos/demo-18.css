@@ -530,15 +530,13 @@
 .deal-content .btn {
   padding-top: 0.85rem;
   padding-bottom: 0.85rem;
-  font-weight: 500;
   color: #ffffff;
   background-color: transparent;
   border: 0.1rem solid #ebebeb;
 }
 .deal-content .btn:hover, .deal-content .btn:focus {
   color: #fff;
-  border-color: #cc9966;
-  background-color: #cc9966;
+  color: white !important;
 }
 .deal-content h4 {
   font-size: 2rem;
