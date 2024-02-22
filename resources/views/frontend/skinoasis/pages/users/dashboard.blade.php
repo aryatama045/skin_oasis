@@ -32,6 +32,10 @@
     .shadow-box {
         box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
     }
+
+    .user-content {
+        height: 40em;
+    }
 </style>
 
 
@@ -86,7 +90,7 @@
 
         <div class="container mt-10">
             <div class="row">
-                <div class="col-lg-9">
+                <div class="col-lg-8">
                     <div class="rounded shadow-box bg-white py-5">
                         <div class="p-4 ">
                             <h5 class="mb-3">INVITE YOUR FRIENDS</h5>
@@ -99,7 +103,7 @@
                     </div>
                 </div>
 
-                <div class="col-lg-3">
+                <div class="col-lg-4">
                     <div class="rounded shadow-box bg-white ">
                         <div class="p-4 ">
                             <h5 class="mb-3">INVITE YOUR FRIENDS</h5>
