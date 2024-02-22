@@ -83,13 +83,13 @@
 
         <div class="px-4 py-4 mt-5">
             <div class="col-xl-9">
-                <div class="recent-orders bg-white rounded py-5">
+                <div class="recent-orders shadow bg-white rounded py-5">
 
                 </div>
             </div>
 
             <div class="col-xl-3">
-                <div class="recent-orders bg-white rounded py-5">
+                <div class="recent-orders shadow bg-white rounded py-5">
 
                 </div>
             </div>
