@@ -9,6 +9,7 @@ use App\Mail\EmailManager;
 use App\Models\Currency;
 use Artisan;
 use Mail;
+use DB;
 
 class SettingsController extends Controller
 {
@@ -151,7 +152,8 @@ class SettingsController extends Controller
     # admin payment Methods settings
     public function paymentMethods()
     {
-        return view('backend.pages.systemSettings.paymentMethods');
+        $paymenthod = DB::table('payment_methods')->get();
+        return view('backend.pages.systemSettings.paymentMethods', compact('paymenthod'));
     }
 
     # update payment methods
