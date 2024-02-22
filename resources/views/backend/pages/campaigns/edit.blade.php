@@ -58,6 +58,17 @@
                                     </div>
                                 </div>
 
+                                <div class="row mb-4">
+                                    <div class="col-lg-6">
+                                        <div class="">
+                                            <label for="subtitle" class="form-label">{{ localize('Subsubtitle') }}</label>
+                                            <input class="form-control" type="text" id="subtitle"
+                                                placeholder="{{ localize('Type campaign subtitle') }}" name="subtitle" required
+                                                value="{{ $campaign->subtitle }}">
+                                        </div>
+                                    </div>
+                                </div>
+
                                 <div class="mb-4">
                                     <label class="form-label">{{ localize('Banner') }}</label>
                                     <div class="tt-image-drop rounded">
