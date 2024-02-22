@@ -30,52 +30,21 @@
                     }
                 }
             }'>
+
+            @foreach ($blogs as $blog)
             <div class="instagram-feed">
-                <img src="{{ staticAsset('frontend/skinoasis/assets/images/demos/demo-18/instagram/1.jpg') }}" alt="img">
-
+                <img src="{{ uploadedAsset($blog->thumbnail_image) }}" alt="img">
                 <div class="instagram-feed-content">
-                    <a href="#"><i class="icon-heart-o"></i>466</a>
-                    <a href="#"><i class="icon-comments"></i>65</a>
-                </div><!-- End .instagram-feed-content -->
-            </div><!-- End .instagram-feed -->
-
-            <div class="instagram-feed">
-                <img src="{{ staticAsset('frontend/skinoasis/assets/images/demos/demo-18/instagram/2.jpg') }}" alt="img">
-
-                <div class="instagram-feed-content">
-                    <a href="#"><i class="icon-heart-o"></i>280</a>
-                    <a href="#"><i class="icon-comments"></i>22</a>
-                </div><!-- End .instagram-feed-content -->
-            </div><!-- End .instagram-feed -->
-
-            <div class="instagram-feed">
-                <img src="{{ staticAsset('frontend/skinoasis/assets/images/demos/demo-18/instagram/3.jpg') }}" alt="img">
-
-                <div class="instagram-feed-content">
-                    <a href="#"><i class="icon-heart-o"></i>123</a>
-                    <a href="#"><i class="icon-comments"></i>10</a>
-                </div><!-- End .instagram-feed-content -->
-            </div><!-- End .instagram-feed -->
-            <div class="instagram-feed">
-                <img src="{{ staticAsset('frontend/skinoasis/assets/images/demos/demo-18/instagram/4.jpg') }}" alt="img">
-
-                <div class="instagram-feed-content">
-                    <a href="#"><i class="icon-heart-o"></i>290</a>
-                    <a href="#"><i class="icon-comments"></i>0</a>
-                </div><!-- End .instagram-feed-content -->
-            </div><!-- End .instagram-feed -->
-            <div class="instagram-feed">
-                <img src="{{ staticAsset('frontend/skinoasis/assets/images/demos/demo-18/instagram/5.jpg') }}" alt="img">
-
-                <div class="instagram-feed-content">
-                    <a href="#"><i class="icon-heart-o"></i>582</a>
-                    <a href="#"><i class="icon-comments"></i>98</a>
-                </div><!-- End .instagram-feed-content -->
-            </div><!-- End .instagram-feed -->
+                    <a href="{{ route('home.blogs.show', $blog->slug) }}">
+                        <i class="icon-eye-o"></i> Read More</a>
+                </div>
+                <p class="text-dark fw-bolder"> {{ optional($blog->blog_category)->name }} </p>
+            </div>
+            @endforeach
         </div><!-- End .owl-carousel -->
 
         <div class="more-container text-center">
-            <a href="#" class="btn btn-sm text-capitalize btn-outline-primary-2 btn-outline-green-skin"> Lihat Lainnya</a>
-        </div><!-- End .more-container -->
+            <a href="{{ route('home.blogs') }}" class="btn btn-sm text-capitalize btn-outline-primary-2 btn-outline-green-skin"> Lihat Lainnya</a>
+        </div>
     </div><!-- End .container -->
 </div><!-- End .bg-lighter pt-5 pb-5 -->
