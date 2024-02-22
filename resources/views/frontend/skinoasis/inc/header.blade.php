@@ -87,7 +87,7 @@
                     <div class="apt_cart_box theme-scrollbar">
                         <ul class="at_scrollbar scrollbar cart-navbar-wrapper">
                             <!--cart listing-->
-                            @include('frontend.default.pages.partials.carts.cart-navbar', [
+                            @include('frontend.skinoasis.pages.partials.carts.cart-navbar', [
                                 'carts' => $carts,
                             ])
                             <!--cart listing-->
@@ -101,14 +101,14 @@
                         <div class="row align-items-center justify-content-between">
                             <div class="col-6">
                                 <a href="{{ route('carts.index') }}"
-                                    class="btn btn-secondary btn-md mt-4 w-100"><span
+                                    class="btn btn-rounded btn-sm btn-outline-green-dark btn-md mt-4 w-100"><span
                                         class="me-2"><i
-                                            class="fa-solid fa-shopping-bag"></i></span>{{ localize('View Cart') }}</a>
+                                            class="fa-solid fa-eye"></i></span>Lihat Keranjang</a>
                             </div>
                             <div class="col-6">
                                 <a href="{{ route('checkout.proceed') }}"
-                                    class="btn btn-primary btn-md mt-4 w-100"><span class="me-2"><i
-                                            class="fa-solid fa-credit-card"></i></span>{{ localize('Checkout') }}</a>
+                                    class="btn btn-rounded btn-sm btn-primary btn-md mt-4 w-100"><span class="me-2"><i
+                                            class="fa-solid fa-credit-card"></i></span>Checkout</a>
                             </div>
 
 

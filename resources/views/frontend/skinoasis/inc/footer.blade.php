@@ -24,11 +24,44 @@
                         <h4 class="widget-title">Head Office</h4><!-- End .widget-title -->
 
                         <ul class="widget-list">
-                            <li><a href="about.html">About Skinoasis</a></li>
-                            <li><a href="#">How to shop on Skinoasis</a></li>
-                            <li><a href="#">FAQ</a></li>
-                            <li><a href="contact.html">Contact us</a></li>
-                            <li><a href="login.html">Log in</a></li>
+                            <li>
+                                <div class="row">
+                                    <div class="col-2">
+                                        <img src="{{staticAsset('frontend/skinoasis/assets/svg/lokasi.png')}}" style="width: 100px">
+                                    </div>
+                                  
+                                    <div class="col-10">
+                                        Jl. Mesjid Bendungan 1 No.10, RW.7, Cawang, Kec. Kramat jati, Kota Jakarta Timur, DKI Jakarta 13630 
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="row">
+                                    <div class="col-2">
+                                        <img src="{{staticAsset('frontend/skinoasis/assets/svg/telpon.png')}}" style="width: 100px">
+                                    </div>
+                                  
+                                    <div class="col-10" style="padding-top: 8px;">081211801703, (021) 8091787</div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="row">
+                                    <div class="col-2">
+                                        <img src="{{staticAsset('frontend/skinoasis/assets/svg/fax.png')}}" style="width: 100px">
+                                    </div>
+                                  
+                                    <div class="col-10" style="padding-top: 8px;">(021) 8091787</div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="row">
+                                    <div class="col-2">
+                                        <img src="{{staticAsset('frontend/skinoasis/assets/svg/mail.png')}}" style="width: 100px">
+                                    </div>
+                                  
+                                    <div class="col-10" style="padding-top: 8px;">cs@stmorita.com</div>
+                                </div>
+                            </li>
                         </ul><!-- End .widget-list -->
                     </div><!-- End .widget -->
                 </div><!-- End .col-sm-6 col-lg-4 -->
@@ -38,12 +71,46 @@
                         <h4 class="widget-title">Factory</h4><!-- End .widget-title -->
 
                         <ul class="widget-list">
-                            <li><a href="#">Payment Methods</a></li>
-                            <li><a href="#">Money-back guarantee!</a></li>
-                            <li><a href="#">Returns</a></li>
-                            <li><a href="#">Shipping</a></li>
-                            <li><a href="#">Terms and conditions</a></li>
-                            <li><a href="#">Privacy Policy</a></li>
+                            <ul class="widget-list">
+                            <li>
+                                <div class="row">
+                                    <div class="col-2">
+                                        <img src="{{staticAsset('frontend/skinoasis/assets/svg/lokasi.png')}}" style="width: 100px">
+                                    </div>
+                                  
+                                    <div class="col-10">
+                                        Jl. Pinang F16 No.21 Delta Silicon 3 Cikarang Pusat, Indonesia
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="row">
+                                    <div class="col-2">
+                                        <img src="{{staticAsset('frontend/skinoasis/assets/svg/telpon.png')}}" style="width: 100px">
+                                    </div>
+                                  
+                                    <div class="col-10" style="padding-top: 8px;">081211801703, (021) 8091787</div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="row">
+                                    <div class="col-2">
+                                        <img src="{{staticAsset('frontend/skinoasis/assets/svg/fax.png')}}" style="width: 100px">
+                                    </div>
+                                  
+                                    <div class="col-10" style="padding-top: 8px;">(021) 8091787</div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="row">
+                                    <div class="col-2">
+                                        <img src="{{staticAsset('frontend/skinoasis/assets/svg/mail.png')}}" style="width: 100px">
+                                    </div>
+                                  
+                                    <div class="col-10" style="padding-top: 8px;">cs@stmorita.com</div>
+                                </div>
+                            </li>
+                        </ul>
                         </ul><!-- End .widget-list -->
                     </div><!-- End .widget -->
                 </div><!-- End .col-sm-6 col-lg-4 -->
