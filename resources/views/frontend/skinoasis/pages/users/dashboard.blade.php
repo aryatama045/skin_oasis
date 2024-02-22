@@ -87,6 +87,20 @@
     .clearfix {
         clear: both;
     }
+
+    #sticky {
+        position:relative;
+        padding: 0.5ex;
+        font-size: 2em;
+        text-align:center;
+    }
+    #sticky.stick {
+        position: fixed;
+        top: 0;
+        left:0;
+        right:0;
+        z-index: 10000;
+    }
 </style>
 
 
