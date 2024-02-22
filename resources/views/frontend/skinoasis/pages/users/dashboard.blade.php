@@ -7,6 +7,14 @@
 @section('contents')
 
 <style>
+
+    @media (min-width: 1200px){
+        .container {
+            max-width: 95%;
+        }
+    }
+
+
     .profile-header {
         transform: translateY(5rem);
     }
