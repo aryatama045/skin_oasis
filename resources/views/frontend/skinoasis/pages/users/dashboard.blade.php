@@ -128,7 +128,7 @@
 
             <div class="col-lg-4">
                 <div class="icondiv rounded shadow-box bg-white ">
-                    <img src="https://www.w3schools.com/css/pineapple.jpg" alt="icon" class="icon-img">
+                    <img src="{{ staticAsset('frontend/skinoasis/assets/images/icons/icon-send.JPG') }}" alt="icon" class="icon-img">
                     <div class="icon-content">
                         <h5 class="mb-3">INVITE YOUR FRIENDS</h5>
                         <p class="text-dark mb-0">
@@ -143,7 +143,7 @@
                 </div>
 
                 <div class="icondiv rounded shadow-box bg-white mt-5">
-                    <img src="https://www.w3schools.com/css/pineapple.jpg" alt="icon" class="icon-img">
+                    <img src="{{ staticAsset('frontend/skinoasis/assets/images/icons/icon-form.JPG') }}" alt="icon" class="icon-img">
                     <div class="icon-content">
                         <h5 class="mb-3">REGISTRATION & VERIFICATION</h5>
                         <p class="text-dark mb-0">
