@@ -5,16 +5,11 @@
 @endsection
 
 @section('breadcrumb-contents')
-    <div class="breadcrumb-content">
-        <h2 class="mb-2 text-center">{{ localize('All Campaigns') }}</h2>
-        <nav>
-            <ol class="breadcrumb justify-content-center">
-                <li class="breadcrumb-item fw-bold" aria-current="page"><a
-                        href="{{ route('home') }}">{{ localize('Home') }}</a></li>
-                <li class="breadcrumb-item fw-bold" aria-current="page">{{ localize('Campaigns') }}</li>
-            </ol>
-        </nav>
-    </div>
+    <ol class="breadcrumb justify-content-center">
+        <li class="breadcrumb-item fw-bold" aria-current="page"><a
+                href="{{ route('home') }}">{{ localize('Home') }}</a></li>
+        <li class="breadcrumb-item fw-bold" aria-current="page">{{ localize('Campaigns') }}</li>
+    </ol>
 @endsection
 
 @section('contents')
@@ -38,8 +33,8 @@
                     <div class="col-lg-6 col-md-6">
                         <div class="card shadow-sm border-0 tt-single-campaign tt-gradient-right"
                             style="background:
-          url('{{ uploadedAsset($campaign->banner) }}')no-repeat center
-          center / cover">
+                            url('{{ uploadedAsset($campaign->banner) }}')no-repeat center
+                            center / cover">
                             <div class="card-body p-5 w-75">
                                 <h3 class="h5 text-light">{{ $campaign->title }}</h3>
                                 <ul class="timing-countdown countdown-timer d-flex align-items-center gap-2 mt-3"

@@ -1,3 +1,11 @@
+@php
+    $campaigns = \App\Models\Campaign::where('end_date', '>=', strtotime(date('Y-m-d')))
+        ->where('is_published', 1)
+        ->latest();
+
+    dd($campaigns);
+@endphp
+
 <!-- Best Deals -->
 <div class="bg-green deal-container pt-5">
     <div class="container">
