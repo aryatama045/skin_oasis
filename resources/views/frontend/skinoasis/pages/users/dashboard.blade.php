@@ -67,16 +67,16 @@
         width: auto;
     }
     .icon-img {
-        max-width: 192px;
+        max-width: 14rem;
         float: left;
         display: block;
         margin: 0 auto;
         box-align: middle;
-        margin-right: 12px;
+        padding: 2rem;
     }
     .icon-content {
-        max-height: 192px;
         overflow: hidden;
+        padding: 2rem;
     }
     .clearfix {
         clear: both;
@@ -127,8 +127,8 @@
 
             <div class="col-lg-4">
                 <div class="icondiv rounded shadow-box bg-white ">
-                    <img src="https://www.w3schools.com/css/pineapple.jpg" alt="Pineapple" class="icon-img">
-                    <div class="p-4 icon-content">
+                    <img src="https://www.w3schools.com/css/pineapple.jpg" alt="icon" class="icon-img">
+                    <div class="icon-content">
                         <h5 class="mb-3">INVITE YOUR FRIENDS</h5>
                         <p class="font-italic mb-0">
                             Bagikan link referral ke temanmu via media sosial, kontak, atau email.
@@ -141,11 +141,11 @@
                     <div class="clearfix"></div>
                 </div>
 
-                <div class="rounded shadow-box bg-white mt-5">
-                    <div class="p-4 ">
+                <div class="icondiv rounded shadow-box bg-white mt-5">
+                    <img src="https://www.w3schools.com/css/pineapple.jpg" alt="icon" class="img-icon">
+                    <div class="icon-content">
                         <h5 class="mb-3">REGISTRATION & VERIFICATION</h5>
                         <p class="font-italic mb-0">
-                            <img src="https://www.w3schools.com/css/pineapple.jpg" alt="Pineapple" class="img-icon">
                             Setelah berhasil mendaftarkan diri melalui link referral, memverifikasi nomor HP, dan melengkapi Profile, temanmu akan mendapatkan voucher 20% untuk belanja cantik pertamanya di SKINOASIS
                         </p>
                         <ul class="list-inline small text-muted mt-3 mb-0">
