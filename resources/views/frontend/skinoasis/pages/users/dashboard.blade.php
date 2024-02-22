@@ -79,6 +79,11 @@
     .icon-content h5 {
         color: rgba(93, 80, 5, 1);
     }
+
+    .icon-content p {
+        font-weight: 400;
+        font-family: 'avenir lt pro';
+    }
     .clearfix {
         clear: both;
     }
