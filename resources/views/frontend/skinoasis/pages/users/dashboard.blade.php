@@ -105,7 +105,8 @@
                         <h5 class="mb-3">INVITE YOUR FRIENDS</h5>
                         <p class="font-italic mb-0">
                             <img src="https://www.w3schools.com/css/pineapple.jpg" alt="Pineapple" class="img-icon">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                            Bagikan link referral ke temanmu via media sosial, kontak, atau email.
+                        </p>
                         <ul class="list-inline small text-muted mt-3 mb-0">
                             <li class="list-inline-item"><i class="fa fa-comment-o mr-2"></i>12 Comments</li>
                             <li class="list-inline-item"><i class="fa fa-heart-o mr-2"></i>200 Likes</li>
@@ -118,7 +119,8 @@
                         <h5 class="mb-3">REGISTRATION & VERIFICATION</h5>
                         <p class="font-italic mb-0">
                             <img src="https://www.w3schools.com/css/pineapple.jpg" alt="Pineapple" class="img-icon">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                            Setelah berhasil mendaftarkan diri melalui link referral, memverifikasi nomor HP, dan melengkapi Profile, temanmu akan mendapatkan voucher 20% untuk belanja cantik pertamanya di SKINOASIS
+                        </p>
                         <ul class="list-inline small text-muted mt-3 mb-0">
                             <li class="list-inline-item"><i class="fa fa-comment-o mr-2"></i>12 Comments</li>
                             <li class="list-inline-item"><i class="fa fa-heart-o mr-2"></i>200 Likes</li>
