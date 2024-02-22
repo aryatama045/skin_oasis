@@ -28,6 +28,10 @@
         height: 180px;
         object-fit: cover;
     }
+
+    .shadow-box {
+        box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
+    }
 </style>
 
 
@@ -83,13 +87,20 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-9">
-                    <div class="shadow bg-white rounded py-5">
-
+                    <div class="rounded shadow-box bg-white py-5">
+                        <div class="p-4 ">
+                            <h5 class="mb-3">INVITE YOUR FRIENDS</h5>
+                            <p class="font-italic mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                            <ul class="list-inline small text-muted mt-3 mb-0">
+                                <li class="list-inline-item"><i class="fa fa-comment-o mr-2"></i>12 Comments</li>
+                                <li class="list-inline-item"><i class="fa fa-heart-o mr-2"></i>200 Likes</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
 
                 <div class="col-lg-3">
-                    <div class="rounded shadow bg-white ">
+                    <div class="rounded shadow-box bg-white ">
                         <div class="p-4 ">
                             <h5 class="mb-3">INVITE YOUR FRIENDS</h5>
                             <p class="font-italic mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
@@ -100,7 +111,7 @@
                         </div>
                     </div>
 
-                    <div class="rounded shadow bg-white mt-5">
+                    <div class="rounded shadow-box bg-white mt-5">
                         <div class="p-4 ">
                             <h5 class="mb-3">REGISTRATION & VERIFICATION</h5>
                             <p class="font-italic mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
