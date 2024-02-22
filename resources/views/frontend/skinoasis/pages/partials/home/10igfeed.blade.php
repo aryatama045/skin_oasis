@@ -10,7 +10,7 @@
 
             <div class="col-sm-3 col-6">
                 <div class="instagram-feed">
-                    <img src="{{ staticAsset('frontend/skinoasis/assets/images/demos/demo-21/instagramStore/banner-1.jpg') }}">
+                    <img src="{{ staticAsset('frontend/skinoasis/assets/images/igfeed/1.jpg') }}">
                     <div class="instagram-feed-content">
                         <a href="#"><i class="icon-heart-o"></i>280</a>
                         <a href="#"><i class="icon-comments"></i>22</a>
@@ -20,7 +20,7 @@
 
             <div class="col-sm-3 col-6">
                 <div class="instagram-feed">
-                    <img src="{{ staticAsset('frontend/skinoasis/assets/images/demos/demo-21/instagramStore/banner-1.jpg') }}">
+                    <img src="{{ staticAsset('frontend/skinoasis/assets/images/igfeed/2.jpg') }}">
                     <div class="instagram-feed-content">
                         <a href="#"><i class="icon-heart-o"></i>280</a>
                         <a href="#"><i class="icon-comments"></i>22</a>
@@ -30,7 +30,7 @@
 
             <div class="col-sm-3 col-6">
                 <div class="instagram-feed">
-                    <img src="{{ staticAsset('frontend/skinoasis/assets/images/demos/demo-21/instagramStore/banner-1.jpg') }}">
+                    <img src="{{ staticAsset('frontend/skinoasis/assets/images/igfeed/1.jpg') }}">
                     <div class="instagram-feed-content">
                         <a href="#"><i class="icon-heart-o"></i>280</a>
                         <a href="#"><i class="icon-comments"></i>22</a>
@@ -39,7 +39,7 @@
             </div>
             <div class="col-sm-3 col-6">
                 <div class="instagram-feed">
-                    <img src="{{ staticAsset('frontend/skinoasis/assets/images/demos/demo-21/instagramStore/banner-1.jpg') }}">
+                    <img src="{{ staticAsset('frontend/skinoasis/assets/images/igfeed/2.jpg') }}">
                     <div class="instagram-feed-content">
                         <a href="#"><i class="icon-heart-o"></i>280</a>
                         <a href="#"><i class="icon-comments"></i>22</a>
@@ -48,7 +48,7 @@
             </div>
             <div class="col-sm-3 col-6">
                 <div class="instagram-feed">
-                    <img src="{{ staticAsset('frontend/skinoasis/assets/images/demos/demo-21/instagramStore/banner-1.jpg') }}">
+                    <img src="{{ staticAsset('frontend/skinoasis/assets/images/igfeed/1.jpg') }}">
                     <div class="instagram-feed-content">
                         <a href="#"><i class="icon-heart-o"></i>280</a>
                         <a href="#"><i class="icon-comments"></i>22</a>
@@ -57,7 +57,7 @@
             </div>
             <div class="col-sm-3 col-6">
                 <div class="instagram-feed">
-                    <img src="{{ staticAsset('frontend/skinoasis/assets/images/demos/demo-21/instagramStore/banner-1.jpg') }}">
+                    <img src="{{ staticAsset('frontend/skinoasis/assets/images/igfeed/2.jpg') }}">
                     <div class="instagram-feed-content">
                         <a href="#"><i class="icon-heart-o"></i>280</a>
                         <a href="#"><i class="icon-comments"></i>22</a>
@@ -66,7 +66,7 @@
             </div>
             <div class="col-sm-3 col-6">
                 <div class="instagram-feed">
-                    <img src="{{ staticAsset('frontend/skinoasis/assets/images/demos/demo-21/instagramStore/banner-1.jpg') }}">
+                    <img src="{{ staticAsset('frontend/skinoasis/assets/images/igfeed/1.jpg') }}">
                     <div class="instagram-feed-content">
                         <a href="#"><i class="icon-heart-o"></i>280</a>
                         <a href="#"><i class="icon-comments"></i>22</a>
@@ -75,15 +75,14 @@
             </div>
             <div class="col-sm-3 col-6">
                 <div class="instagram-feed">
-                    <img src="{{ staticAsset('frontend/skinoasis/assets/images/demos/demo-21/instagramStore/banner-1.jpg') }}">
+                    <img src="{{ staticAsset('frontend/skinoasis/assets/images/igfeed/2.jpg') }}">
                     <div class="instagram-feed-content">
                         <a href="#"><i class="icon-heart-o"></i>280</a>
                         <a href="#"><i class="icon-comments"></i>22</a>
                     </div>
                 </div>
             </div>
-            
-            
+
         </div>
 
         <div class="more-container text-center">
