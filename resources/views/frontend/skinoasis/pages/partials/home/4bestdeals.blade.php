@@ -13,12 +13,18 @@
                 <div class="deal align-items-center">
                     <div class="deal-content">
                         <h4>{{$campaigns->title}}</h4>
-                        <h2>Rp. 100.000</h2>
+                        <h2>Rp. {{$campaigns->harga_promo}}</h2>
 
-                        <h3 class="product-title">25-26 Dec 2023</h3><!-- End .product-title -->
+                        <h3 class="product-title">
+                            @php
+                                $start_date = date('d m', $campaign->start_date);
+                                $end_date = date('d m Y', $campaign->end_date);
+                            @endphp
+                            {{$start_date}}-26 Dec 2023
+                        </h3><!-- End .product-title -->
 
                         <div class="product-price">
-                            <span class="new-price">only 100pcs</span>
+                            <span class="new-price">{{$campaigns->subtitle}}</span>
                             <!-- <span class="old-price">Was $240.00</span> -->
                         </div><!-- End .product-price -->
 
@@ -26,9 +32,7 @@
 
                     </div><!-- End .deal-content -->
                     <div class="deal-image">
-                        <a href="#">
                             <img src="{{ staticAsset('frontend/skinoasis/assets/images/best-deal.png') }}" alt="image">
-                        </a>
                     </div><!-- End .deal-image -->
                 </div><!-- End .deal -->
             </div><!-- End .col-lg-12 -->
