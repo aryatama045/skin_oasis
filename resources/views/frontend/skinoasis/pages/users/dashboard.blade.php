@@ -34,7 +34,7 @@
     }
 
     .user-content {
-        height: 40em;
+        height: 60em;
     }
 
     .nav-pills {
@@ -96,8 +96,8 @@
 
     <div class="container mt-8">
         <div class="row">
-            <div class="col-lg-8">
-                <div class="user-content rounded shadow-box bg-white py-5">
+            <div class="col-lg-8" id="sticky-anchor">
+                <div class="user-content rounded shadow-box bg-white py-5 mb-3">
                     <div class="p-4 ">
                         <ul class="nav nav-pills justify-content-center" id="tabs-6" role="tablist">
                             <li class="nav-item">
@@ -131,7 +131,7 @@
                 </div>
             </div>
 
-            <div class="col-lg-4">
+            <div class="col-lg-4" id="sticky">
                 <div class="icondiv rounded shadow-box bg-white ">
                     <img src="{{ staticAsset('frontend/skinoasis/assets/images/icons/icon-send.JPG') }}" alt="icon" class="icon-img">
                     <div class="icon-content">
@@ -166,4 +166,20 @@
 
 </section>
 
+<script>
+    function sticky_relocate() {
+        var window_top = $(window).scrollTop();
+        var div_top = $('#sticky-anchor').offset().top;
+        if (window_top > div_top) {
+            $('#sticky').addClass('stick');
+        } else {
+            $('#sticky').removeClass('stick');
+        }
+    }
+
+    $(function() {
+        $(window).scroll(sticky_relocate);
+        sticky_relocate();
+    });
+</script>
 @endsection
