@@ -171,7 +171,7 @@
         <div class="cta cta-horizontal mt-lg-7 mb-3 rounded shadow-box bg-white p-4">
             <div class="row align-items-center">
                 <div class="col-lg-4 col-xl-3 offset-xl-1">
-                    <h3 class="cta-title text-green">INVITE VIA EMAIL </h3>
+                    <h3 class="cta-title text-green text-capitalize">INVITE VIA EMAIL </h3>
                 </div>
 
                 <div class="col-lg-8 col-xl-7">
@@ -179,7 +179,7 @@
                         <div class="input-group">
                             <input type="email" class="form-control" placeholder="Enter your Email Address" aria-label="Email Adress" required="">
                             <div class="input-group-append">
-                                <button class="btn btn-primary btn-rounded" type="submit"><span class="text-capitalize"> kirim email</span><i class="icon-long-arrow-right"></i></button>
+                                <button class="btn btn-rounded btn-sm text-uppercase btn-outline-green-dark" type="submit"><span class="text-capitalize"> kirim email</span><i class="icon-long-arrow-right"></i></button>
                             </div>
                         </div>
                     </form>
