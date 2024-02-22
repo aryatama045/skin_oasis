@@ -18,8 +18,8 @@
 
                         <h3 class="product-title">
                             @php
-                                $start_date = date('d m', $campaigns->start_date);
-                                $end_date = date('d m Y', $campaigns->end_date);
+                                $start_date = date('d ', $campaigns->start_date);
+                                $end_date = date('d M Y', $campaigns->end_date);
                             @endphp
                             {{$start_date}} - {{ $end_date}}
                         </h3><!-- End .product-title -->
