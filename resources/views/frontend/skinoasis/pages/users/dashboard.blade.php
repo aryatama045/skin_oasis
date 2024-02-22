@@ -53,8 +53,9 @@
     }
 
     .img-icon {
-        float: left;
-        width: 100px;
+        display:inline-block;
+        padding-right:10px;
+        width:75;
     }
 </style>
 
