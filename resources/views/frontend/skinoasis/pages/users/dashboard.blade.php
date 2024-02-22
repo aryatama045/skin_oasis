@@ -88,15 +88,6 @@
         clear: both;
     }
 
-    #sticky {
-        position:relative;
-    }
-    #sticky.stick {
-        position: fixed;
-        top: 7rem;
-        right: 1rem;
-        z-index: 10000;
-    }
 </style>
 
 
@@ -106,7 +97,7 @@
 
     <div class="container mt-8">
         <div class="row">
-            <div class="col-lg-8" id="sticky-anchor">
+            <div class="col-lg-8" >
                 <div class="user-content rounded shadow-box bg-white py-5 mb-3">
                     <div class="p-4 ">
                         <ul class="nav nav-pills justify-content-center" id="tabs-6" role="tablist">
@@ -141,7 +132,7 @@
                 </div>
             </div>
 
-            <div class="col-lg-4" id="sticky">
+            <div class="col-lg-4" >
                 <div class="icondiv rounded shadow-box bg-white ">
                     <img src="{{ staticAsset('frontend/skinoasis/assets/images/icons/icon-send.JPG') }}" alt="icon" class="icon-img">
                     <div class="icon-content">
@@ -171,6 +162,26 @@
                     </div>
                 </div>
             </div>
+        </div>
+
+        <div class="cta cta-horizontal mb-3">
+            <div class="row align-items-center">
+                <div class="col-lg-4 col-xl-3 offset-xl-1">
+                    <h3 class="cta-title">Join Our Newsletter</h3><!-- End .cta-title -->
+                    <p class="cta-desc">Lorem ipsum dolor sit amet adipiscing.</p><!-- End .cta-desc -->
+                </div><!-- End .col-xl-3 -->
+
+                <div class="col-lg-8 col-xl-7">
+                    <form action="#">
+                        <div class="input-group">
+                            <input type="email" class="form-control" placeholder="Enter your Email Address" aria-label="Email Adress" required="">
+                            <div class="input-group-append">
+                                <button class="btn btn-primary btn-rounded" type="submit"><span>Subscribe</span><i class="icon-long-arrow-right"></i></button>
+                            </div><!-- .End .input-group-append -->
+                        </div><!-- .End .input-group -->
+                    </form>
+                </div><!-- End .col-xl-7 -->
+            </div><!-- End .row -->
         </div>
     </div>
 
