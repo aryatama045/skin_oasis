@@ -560,6 +560,7 @@
   font-size: 3rem !important;
   letter-spacing: 0.2em;
   margin-bottom: 0.7rem;
+  color: white !important;
 }
 .deal-content .product-price {
   font-weight: bold;
@@ -1055,6 +1056,14 @@
   margin: 0;
   margin-left: -13rem;
   font-family: "avenir lt pro";
+}
+@media (max-width: 575.98px) {
+  .heading .title {
+    margin-left: 0rem;
+    font-size: 2.8rem;
+    text-align: center;
+    margin-bottom: 3rem;
+  }
 }
 .heading .title-banner-2 {
   font-size: 4rem;
