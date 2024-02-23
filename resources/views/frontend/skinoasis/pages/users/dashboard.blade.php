@@ -42,7 +42,8 @@
     }
 
     .user-content {
-        height: 60em;
+        min-height: 60em;
+        height: auto;
     }
 
     .nav-pills {
