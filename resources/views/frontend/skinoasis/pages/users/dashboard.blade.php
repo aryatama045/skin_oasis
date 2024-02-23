@@ -198,7 +198,7 @@
         <div class="row">
             <div class="col-lg-6">
                 <div class="rounded shadow-box bg-white p-4">
-                    <div class="icondiv rounded shadow-box bg-white ">
+                    <div class="icondiv">
                         <img src="{{ staticAsset('frontend/skinoasis/assets/images/icons/icon-send.JPG') }}" alt="icon" class="icon-img">
                         <div class="icon-content">
                             <h5 class="mb-3">Share QR Code</h5>
@@ -221,7 +221,7 @@
 
             <div class="col-lg-6">
                 <div class="mt-sm-5 rounded shadow-box bg-white p-4">
-                    <div class="icondiv rounded shadow-box bg-white ">
+                    <div class="icondiv">
                         <img src="{{ staticAsset('frontend/skinoasis/assets/images/icons/icon-send.JPG') }}" alt="icon" class="icon-img">
                         <div class="icon-content">
                             <h5 class="mb-3">Share QR Code</h5>
