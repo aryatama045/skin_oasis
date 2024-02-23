@@ -405,7 +405,7 @@ p {
 
 .intro-text {
   font-weight: 400;
-  font-size: 1.7rem;
+  font-size: 18px;
   line-height: 1.2;
   letter-spacing: 0.01em;
   text-transform: capitalize;
@@ -1296,7 +1296,7 @@ p {
     font-weight: 300;
   }
   .intro-text {
-    font-size: 1.8rem;
+    font-size: 18px;
   }
 }
 @media screen and (min-width: 576px) {
