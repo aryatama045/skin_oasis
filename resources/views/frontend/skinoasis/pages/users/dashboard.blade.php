@@ -129,7 +129,7 @@
                         <div class="tab-content" id="tab-content-6">
                             <div class="tab-pane fade active show" id="tab-21" role="tabpanel" aria-labelledby="tab-21-tab">
                                 <!-- Article -->
-                                @include('frontend.skinoasis.pages.users.content.profile')
+                                @include('frontend.skinoasis.pages.users.content.articleList')
                             </div>
 
                             <div class="tab-pane fade" id="tab-22" role="tabpanel" aria-labelledby="tab-22-tab">
