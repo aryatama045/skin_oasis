@@ -130,7 +130,7 @@
                                     <span class="me-2"><i class="fa-solid fa-user"></i></span>
                                     {{ localize('Profile') }}
                                 </a>
-                                <ul >
+                                <ul>
                                     <li><a href="{{ route('customers.dashboard') }}">About 01</a></li>
                                     <li><a href="about-2.html">About 02</a></li>
                                 </ul>
