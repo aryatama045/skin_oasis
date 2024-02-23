@@ -3,7 +3,7 @@
         <article class="entry entry-grid text-center">
             <figure class="entry-media">
                 <a href="single.html">
-                    <img src="assets/images/blog/masonry/3cols/post-1.jpg" alt="image desc">
+                    <img src="{{staticAsset('frontend/skinoasis/assets/images/blog/masonry/3cols/post-1.jpg')}}" alt="image desc">
                 </a>
             </figure><!-- End .entry-media -->
 
@@ -34,7 +34,7 @@
         <article class="entry entry-grid text-center">
             <figure class="entry-media">
                 <a href="single.html">
-                    <img src="assets/images/blog/masonry/3cols/post-2.jpg" alt="image desc">
+                    <img src="{{staticAsset('frontend/skinoasis/assets/images/blog/masonry/3cols/post-2.jpg')}}" alt="image desc">
                 </a>
             </figure><!-- End .entry-media -->
 
@@ -65,10 +65,10 @@
             <figure class="entry-media">
                 <div class="owl-carousel owl-simple owl-light owl-nav-inside" data-toggle="owl">
                     <a href="single.html">
-                        <img src="assets/images/blog/masonry/3cols/post-3.jpg" alt="image desc">
+                        <img src="{{staticAsset('frontend/skinoasis/assets/images/blog/masonry/3cols/post-3.jpg')}}" alt="image desc">
                     </a>
                     <a href="single.html">
-                        <img src="assets/images/blog/masonry/3cols/post-3-2.jpg" alt="image desc">
+                        <img src="{{staticAsset('frontend/skinoasis/assets/images/blog/masonry/3cols/post-3-2.jpg')}}" alt="image desc">
                     </a>
                 </div><!-- End .owl-carousel -->
             </figure><!-- End .entry-media -->
@@ -100,7 +100,7 @@
         <article class="entry entry-grid text-center">
             <figure class="entry-media entry-video">
                 <a href="single.html">
-                    <img src="assets/images/blog/masonry/3cols/post-4.jpg" alt="image desc">
+                    <img src="{{staticAsset('frontend/skinoasis/assets/images/blog/masonry/3cols/post-4.jpg')}}" alt="image desc">
                 </a>
             </figure><!-- End .entry-media -->
 
@@ -130,7 +130,7 @@
         <article class="entry entry-grid text-center">
             <figure class="entry-media">
                 <a href="single.html">
-                    <img src="assets/images/blog/masonry/3cols/post-5.jpg" alt="image desc">
+                    <img src="{{staticAsset('frontend/skinoasis/assets/images/blog/masonry/3cols/post-5.jpg')}}" alt="image desc">
                 </a>
             </figure><!-- End .entry-media -->
 
@@ -161,7 +161,7 @@
         <article class="entry entry-grid text-center">
             <figure class="entry-media">
                 <a href="single.html">
-                    <img src="assets/images/blog/masonry/3cols/post-6.jpg" alt="image desc">
+                    <img src="{{staticAsset('frontend/skinoasis/assets/images/blog/masonry/3cols/post-6.jpg')}}" alt="image desc">
                 </a>
             </figure><!-- End .entry-media -->
 
@@ -191,7 +191,7 @@
         <article class="entry entry-grid text-center">
             <figure class="entry-media">
                 <a href="single.html">
-                    <img src="assets/images/blog/masonry/3cols/post-7.jpg" alt="image desc">
+                    <img src="{{staticAsset('frontend/skinoasis/assets/images/blog/masonry/3cols/post-7.jpg')}}" alt="image desc">
                 </a>
             </figure><!-- End .entry-media -->
 
@@ -221,7 +221,7 @@
         <article class="entry entry-grid text-center">
             <figure class="entry-media">
                 <a href="single.html">
-                    <img src="assets/images/blog/masonry/3cols/post-8.jpg" alt="image desc">
+                    <img src="{{staticAsset('frontend/skinoasis/assets/images/blog/masonry/3cols/post-8.jpg')}}" alt="image desc">
                 </a>
             </figure><!-- End .entry-media -->
 
@@ -252,10 +252,10 @@
             <figure class="entry-media">
                 <div class="owl-carousel owl-simple owl-light owl-nav-inside" data-toggle="owl">
                     <a href="single.html">
-                        <img src="assets/images/blog/masonry/3cols/post-9.jpg" alt="image desc">
+                        <img src="{{staticAsset('frontend/skinoasis/assets/images/blog/masonry/3cols/post-9.jpg')}}" alt="image desc">
                     </a>
                     <a href="single.html">
-                        <img src="assets/images/blog/masonry/3cols/post-9-2.jpg" alt="image desc">
+                        <img src="{{staticAsset('frontend/skinoasis/assets/images/blog/masonry/3cols/post-9-2.jpg')}}" alt="image desc">
                     </a>
                 </div><!-- End .owl-carousel -->
             </figure><!-- End .entry-media -->
