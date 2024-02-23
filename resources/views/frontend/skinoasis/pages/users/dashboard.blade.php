@@ -197,27 +197,50 @@
 
         <div class="row">
             <div class="col-lg-6">
-                <div class="cta bg-image rounded shadow-box bg-white p-4">
-                    <div class="cta-wrapper cta-text text-center">
-                        <h3 class="cta-title">Morbi in sem quis dui placerat pellentesque felis.</h3><!-- End .cta-title -->
-                        <p class="cta-desc">Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci. </p><!-- End .cta-desc -->
-                        <a href="#" class="btn btn-primary btn-rounded"><span>Click Here</span><i class="icon-long-arrow-right"></i></a>
-                    </div><!-- End .cta-wrapper -->
-                </div><!-- End .cta -->
-            </div><!-- End .col-lg-6 -->
+                <div class="rounded shadow-box bg-white p-4">
+                    <div class="icondiv rounded shadow-box bg-white ">
+                        <img src="{{ staticAsset('frontend/skinoasis/assets/images/icons/icon-send.JPG') }}" alt="icon" class="icon-img">
+                        <div class="icon-content">
+                            <h5 class="mb-3">Share QR Code</h5>
+                            <p class="text-dark mb-2">
+                                Bagikan link referral ke temanmu via media sosial, kontak, atau email.
+                            </p>
+                            <button class="btn btn-rounded btn-sm text-uppercase btn-outline-green-dark" >
+                                <span class="text-capitalize"> Share Image</span>
+                                <i class="icon-long-arrow-right"></i>
+                            </button>
+                            <!-- <ul class="list-inline small text-muted mt-3 mb-0">
+                                <li class="list-inline-item"><i class="fa fa-comment-o mr-2"></i>12 Comments</li>
+                                <li class="list-inline-item"><i class="fa fa-heart-o mr-2"></i>200 Likes</li>
+                            </ul> -->
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+            </div>
 
             <div class="col-lg-6">
-                <div class="cta bg-image rounded shadow-box bg-white p-4">
-                    <div class="cta-wrapper text-center">
-                        <h3 class="cta-title">Join Our Newsletter</h3><!-- End .cta-title -->
-                        <p class="cta-desc">Lorem ipsum dolor sit amet adipiscing.</p><!-- End .cta-desc -->
-                        <form action="#">
-                            <input type="email" class="form-control form-control-rounded" placeholder="Enter your Email Address" aria-label="Email Adress" required="">
-                            <button class="btn btn-primary" type="submit"><span>Subscribe</span><i class="icon-long-arrow-right"></i></button>
-                        </form>
-                    </div><!-- End .cta-wrapper -->
-                </div><!-- End .cta -->
-            </div><!-- End .col-lg-6 -->
+                <div class="mt-sm-5 rounded shadow-box bg-white p-4">
+                    <div class="icondiv rounded shadow-box bg-white ">
+                        <img src="{{ staticAsset('frontend/skinoasis/assets/images/icons/icon-send.JPG') }}" alt="icon" class="icon-img">
+                        <div class="icon-content">
+                            <h5 class="mb-3">Share QR Code</h5>
+                            <p class="text-dark mb-2">
+                                Bagikan link referral ke temanmu via media sosial, kontak, atau email.
+                            </p>
+
+                            <div class="social-icons social-icons-color">
+                                <a href="#" class="social-icon text-green" title="Whatsapp" target="_blank"><i class="icon-whatsapp"></i></a>
+                                <a href="#" class="social-icon social-twitter" title="Twitter" target="_blank"><i class="icon-twitter"></i></a>
+                                <a href="#" class="social-icon social-facebook" title="Facebook" target="_blank"><i class="icon-facebook"></i></a>
+                                <a href="#" class="social-icon social-instagram" title="Instagram" target="_blank"><i class="icon-instagram"></i></a>
+                                <a href="#" class="social-icon social-youtube" title="Youtube" target="_blank"><i class="icon-youtube"></i></a>
+                            </div>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <hr class="mt-3 mb-5">
