@@ -121,7 +121,7 @@
 
     <div class="footer-bottom mb-5">
         <div class="container">
-            <p class="footer-copyright">Copyright {{ date('Y') }} © {!! getSetting('copyright_text') !!}.</p><!-- End .footer-copyright -->
+            <p class="footer-copyright">Copyright.</p><!-- End .footer-copyright -->
             <ul class="footer-menu">
                 <li><a href="https://skinoasis.solusiitkreasi.com/pages/kebijakan-privasi">Kebijakan Privasi</a></li>
                 <li><a href="https://skinoasis.solusiitkreasi.com/pages/terms-conditions">Syarat & Ketentuan</a></li>
