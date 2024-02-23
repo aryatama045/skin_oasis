@@ -115,6 +115,7 @@ Route::group(['prefix' => '', 'middleware' => ['customer', 'verified', 'isBanned
     Route::get('/customer-profile', [CustomerController::class, 'profile'])->name('customers.profile');
     Route::post('/customer-profile', [CustomerController::class, 'updateProfile'])->name('customers.updateProfile');
 
+    Route::get('/customer-article', [CustomerController::class, 'article'])->name('customers.article');
     Route::get('/customer-photo', [CustomerController::class, 'photo'])->name('customers.photo');
     Route::get('/customer-video', [CustomerController::class, 'video'])->name('customers.video');
     Route::get('/customer-review', [CustomerController::class, 'review'])->name('customers.review');

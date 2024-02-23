@@ -96,6 +96,9 @@ class CustomerController extends Controller
         }
     }
 
+    public function article()
+    {}
+
     public function photo()
     {}
 
