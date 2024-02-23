@@ -201,7 +201,7 @@
                     <div class="icondiv">
                         <img src="{{ staticAsset('frontend/skinoasis/assets/images/icons/icon-send.JPG') }}" alt="icon" class="icon-img">
                         <div class="icon-content">
-                            <h5 class="mb-3">Share QR Code</h5>
+                            <h5 class="mb-3">SHARE QR CODE</h5>
                             <p class="text-dark mb-2">
                                 Bagikan kode QR untuk ajak temanmu
                             </p>
@@ -220,7 +220,7 @@
                     <div class="icondiv">
                         <img src="{{ staticAsset('frontend/skinoasis/assets/images/icons/icon-send.JPG') }}" alt="icon" class="icon-img">
                         <div class="icon-content">
-                            <h5 class="mb-3">Share QR Code</h5>
+                            <h5 class="mb-3">SHARE LINK</h5>
                             <p class="text-dark mb-2">
                                 Bagikan Referral Anda via media Social
                             </p>
