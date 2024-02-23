@@ -2,7 +2,6 @@
 /* Demo 17 Homepage 17 */ /* Fonts */
 @import url("https://fonts.cdnfonts.com/css/avenir-lt-pro");
 @import url("https://fonts.cdnfonts.com/css/avenir");
-/* font-family: 'Poppins', sans-serif; */
 .header-middle .row > div:first-child {
   display: -webkit-box;
   display: -ms-flexbox;

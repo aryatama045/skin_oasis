@@ -1,7 +1,6 @@
 /* Demo 3 Homepage 3 */ /* Fonts */
 @import url("https://fonts.cdnfonts.com/css/avenir-lt-pro");
 @import url("https://fonts.cdnfonts.com/css/avenir");
-/* font-family: 'Poppins', sans-serif; */
 .sticky-header.fixed.header-middle .menu > li > a {
   padding-top: 4rem;
   padding-bottom: 3.1rem;

@@ -1,7 +1,6 @@
 /* Demo 5 Homepage 5 */ /* Fonts */
 @import url("https://fonts.cdnfonts.com/css/avenir-lt-pro");
 @import url("https://fonts.cdnfonts.com/css/avenir");
-/* font-family: 'Poppins', sans-serif; */
 @font-face {
   font-family: "flamingregular";
   src: url("../../fonts/flaming/flaming-webfont.woff2") format("woff2"), url("../../fonts/flaming/flaming-webfont.woff") format("woff");
