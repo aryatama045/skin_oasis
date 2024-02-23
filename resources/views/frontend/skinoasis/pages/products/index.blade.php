@@ -25,7 +25,7 @@
                         <div class="col-md-3">
                             <a href="{{ route('products.allproduct') }}?&category_id={{ $category->id }}">
                                 <div class="banner banner-1">
-                                    <img src="{{ uploadedAsset($category->collectLocalization('thumbnail_image')) }}" alt="Banner" width="688" height="400" style="background-color: #fff;">
+                                    <img src="{{ uploadedAsset($category->collectLocalization('thumbnail_image')) }}" alt="Banner" width="688" height="400" style="background-color: #fff; opacity: 0.7;">
 
                                     <div class="banner-content banner-content-center">
                                         <h1 class="banner-subtitle text-black fw-bold">{{$category->name}}</h1>
