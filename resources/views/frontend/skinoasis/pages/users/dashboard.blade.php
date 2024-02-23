@@ -128,17 +128,22 @@
                         </ul>
                         <div class="tab-content" id="tab-content-6">
                             <div class="tab-pane fade active show" id="tab-21" role="tabpanel" aria-labelledby="tab-21-tab">
-                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede. Donec nec justo eget felis facilisis fermentum. </p>
-                            </div><!-- .End .tab-pane -->
+                                <!-- Article -->
+                                @include('frontend.skinoasis.pages.users.content.profile')
+                            </div>
+
                             <div class="tab-pane fade" id="tab-22" role="tabpanel" aria-labelledby="tab-22-tab">
-                                <p>Nobis perspiciatis natus cum, sint dolore earum rerum tempora aspernatur numquam velit tempore omnis, delectus repellat facere voluptatibus nemo non fugiat consequatur repellendus! Enim, commodi, veniam ipsa voluptates quis amet.</p>
-                            </div><!-- .End .tab-pane -->
+                                <!-- Video -->
+                            </div>
+
                             <div class="tab-pane fade" id="tab-23" role="tabpanel" aria-labelledby="tab-23-tab">
-                                <p>Perspiciatis quis nobis, adipisci quae aspernatur, nulla suscipit eum. Dolorum, earum. Consectetur pariatur repellat distinctio atque alias excepturi aspernatur nisi accusamus sed molestias ipsa numquam eius, iusto, aliquid, quis aut.</p>
-                            </div><!-- .End .tab-pane -->
+                                <!-- Review -->
+                            </div>
+
                             <div class="tab-pane fade" id="tab-24" role="tabpanel" aria-labelledby="tab-24-tab">
-                                <p>Quis nobis, adipisci quae aspernatur, nulla suscipit eum. Dolorum, earum. Consectetur pariatur repellat distinctio atque alias excepturi aspernatur nisi accusamus sed molestias ipsa numquam eius, iusto, aliquid, quis aut.</p>
-                            </div><!-- .End .tab-pane -->
+                                <!-- Photo -->
+                            </div>
+
                         </div><!-- End .tab-content -->
                     </div>
                 </div>
