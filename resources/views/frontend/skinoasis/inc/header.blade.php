@@ -122,12 +122,11 @@
                         <i class="icon-user"></i>
                     </a>
 
-                    <ul class="dropdown-menu dropdown-menu-right menu">
+                    <ul class="dropdown-menu dropdown-menu-right ">
                         @auth
                         @if (auth()->user()->user_type == 'customer')
-                            <li>
-                                <div class="dropdown">
-                                    <a href="#" class="dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-display="static">
+                            <li class="sf-arrows">
+                                    <a href="#" class="sf-with-ul" >
                                         <span class="me-2"><i class="fa-solid fa-user"></i></span>
                                         {{ localize('Profile') }}
                                     </a>
@@ -135,7 +134,6 @@
                                         <li><a href="{{ route('customers.dashboard') }}">About 01</a></li>
                                         <li><a href="about-2.html">About 02</a></li>
                                     </ul>
-                                </div>
                             </li>
                             <li><a class="text-dark" href="{{ route('customers.orderHistory') }}">
                                 <span class="me-2"><i class="fa-solid fa-tags"></i></span>
