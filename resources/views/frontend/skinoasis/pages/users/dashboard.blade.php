@@ -142,7 +142,9 @@
 
                             <div class="tab-pane fade" id="tab-24" role="tabpanel" aria-labelledby="tab-24-tab">
                                 <!-- Photo -->
-                                @include('frontend.skinoasis.pages.users.content.feedPhoto')
+                                <div class="container">
+                                    @include('frontend.skinoasis.pages.users.content.feedPhoto')
+                                </div>
                             </div>
 
                         </div><!-- End .tab-content -->
