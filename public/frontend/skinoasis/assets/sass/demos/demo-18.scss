@@ -662,6 +662,8 @@ p {
 	}
 }
 
+
+
 @include mq('md') {
 	.deal {
 		flex-direction: row;
@@ -702,7 +704,7 @@ p {
 		}
 
 		.product-title {
-			font-size: 2.4rem !important;
+			font-size: 16px !important;
 			color: #ffffff;
 		}
 
@@ -747,7 +749,7 @@ p {
 }
 
 .product-title {
-	font-size: 20px;
+	font-size: 16px;
 	letter-spacing: 0;
 }
 
@@ -956,7 +958,7 @@ p {
 	.entry-content p {
 		margin-bottom: 1.3rem;
 		color: #3e3b3b;
-		font-size: 1.7rem;
+		font-size: 16px;
 
 	}
 
@@ -981,7 +983,7 @@ p {
 .entry-content p {
 	margin-bottom: 1.3rem;
 	color: #1b1a1a;
-	font-size: 1.8rem;
+	font-size: 16px;
 
 }
 
@@ -1348,6 +1350,17 @@ p {
 
 .footer-fix-nav {
 	display: none;
+}
+
+.testimonial {
+    padding: 37px;
+    margin-left: 4em;
+	text-align: left !important;
+	font-size: 16px;
+	color: black;
+	p{
+		color: black;
+	}
 }
 
 
