@@ -61,61 +61,61 @@
 
             <div class="header-right">
 
-            <div class="cart-dropdown gshop-header-cart position-relative">
-                @php
-                    $carts = [];
-                    if (Auth::check()) {
-                        $carts = App\Models\Cart::where('user_id', Auth::user()->id)
-                            ->where('location_id', session('stock_location_id'))
-                            ->get();
-                    } else {
-                        if (isset($_COOKIE['guest_user_id'])) {
-                            $carts = App\Models\Cart::where('guest_user_id', (int) $_COOKIE['guest_user_id'])
+                <div class="cart-dropdown gshop-header-cart position-relative">
+                    @php
+                        $carts = [];
+                        if (Auth::check()) {
+                            $carts = App\Models\Cart::where('user_id', Auth::user()->id)
                                 ->where('location_id', session('stock_location_id'))
                                 ->get();
+                        } else {
+                            if (isset($_COOKIE['guest_user_id'])) {
+                                $carts = App\Models\Cart::where('guest_user_id', (int) $_COOKIE['guest_user_id'])
+                                    ->where('location_id', session('stock_location_id'))
+                                    ->get();
+                            }
                         }
-                    }
-                @endphp
+                    @endphp
 
 
-                <button type="button" class="dropdown-toggle">
-                    <i class="icon-shopping-cart"></i>
-                    <span
-                        class="cart-count cart-counter {{ count($carts) > 0 ? '' : 'd-none' }}">{{ count($carts) }}</span>
-                </button>
-                <div class="cart-box-wrapper">
-                    <div class="apt_cart_box theme-scrollbar">
-                        <ul class="at_scrollbar scrollbar cart-navbar-wrapper">
-                            <!--cart listing-->
-                            @include('frontend.skinoasis.pages.partials.carts.cart-navbar', [
-                                'carts' => $carts,
-                            ])
-                            <!--cart listing-->
+                    <button type="button" class="dropdown-toggle">
+                        <i class="icon-shopping-cart"></i>
+                        <span
+                            class="cart-count cart-counter {{ count($carts) > 0 ? '' : 'd-none' }}">{{ count($carts) }}</span>
+                    </button>
+                    <div class="cart-box-wrapper">
+                        <div class="apt_cart_box theme-scrollbar">
+                            <ul class="at_scrollbar scrollbar cart-navbar-wrapper">
+                                <!--cart listing-->
+                                @include('frontend.skinoasis.pages.partials.carts.cart-navbar', [
+                                    'carts' => $carts,
+                                ])
+                                <!--cart listing-->
 
-                        </ul>
-                        <div class="d-flex align-items-center justify-content-between mt-3">
-                            <h6 class="mb-0">{{ localize('Subtotal') }}:</h6>
-                            <span
-                                class="fw-semibold text-secondary sub-total-price">{{ formatPrice(getSubTotal($carts, false)) }}</span>
-                        </div>
-                        <div class="row align-items-center justify-content-between">
-                            <div class="col-6">
-                                <a href="{{ route('carts.index') }}"
-                                    class="btn btn-rounded btn-sm btn-outline-green-dark btn-md mt-4 w-100"><span
-                                        class="me-2"><i
-                                            class="fa-solid fa-eye"></i></span>Lihat Keranjang</a>
+                            </ul>
+                            <div class="d-flex align-items-center justify-content-between mt-3">
+                                <h6 class="mb-0">{{ localize('Subtotal') }}:</h6>
+                                <span
+                                    class="fw-semibold text-secondary sub-total-price">{{ formatPrice(getSubTotal($carts, false)) }}</span>
                             </div>
-                            <div class="col-6">
-                                <a href="{{ route('checkout.proceed') }}"
-                                    class="btn btn-rounded btn-sm btn-primary btn-md mt-4 w-100"><span class="me-2"><i
-                                            class="fa-solid fa-credit-card"></i></span>Checkout</a>
+                            <div class="row align-items-center justify-content-between">
+                                <div class="col-6">
+                                    <a href="{{ route('carts.index') }}"
+                                        class="btn btn-rounded btn-sm btn-outline-green-dark btn-md mt-4 w-100"><span
+                                            class="me-2"><i
+                                                class="fa-solid fa-eye"></i></span>Lihat Keranjang</a>
+                                </div>
+                                <div class="col-6">
+                                    <a href="{{ route('checkout.proceed') }}"
+                                        class="btn btn-rounded btn-sm btn-primary btn-md mt-4 w-100"><span class="me-2"><i
+                                                class="fa-solid fa-credit-card"></i></span>Checkout</a>
+                                </div>
+
+
                             </div>
-
-
                         </div>
                     </div>
                 </div>
-            </div>
 
                 <div class="dropdown cart-dropdown">
                     <a href="#" class="dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-display="static">
@@ -131,7 +131,7 @@
                                         <span class="me-2"><i class="fa-solid fa-user"></i></span>
                                         {{ localize('Profile') }}
                                     </a>
-                                    <ul class="dropdown-menu dropdown-menu-right menu">
+                                    <ul>
                                         <li><a href="{{ route('customers.dashboard') }}">About 01</a></li>
                                         <li><a href="about-2.html">About 02</a></li>
                                     </ul>
@@ -167,7 +167,6 @@
                     </ul>
 
                 </div><!-- End .user-dropdown -->
-
 
             </div><!-- End .header-right -->
         </div><!-- End .container -->
