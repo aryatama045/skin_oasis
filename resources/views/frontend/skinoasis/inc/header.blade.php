@@ -169,7 +169,7 @@
                             </li class="mt-2 mb-2">
 
                             <li class="mt-2 mb-2"><a href="#" class=" fw-bolder text-dark" >
-                                <span class="me-1"><i class="fa-tag"></i></span>
+                                <span class="me-1"><i class="fa-solid fa-tag"></i></span>
                                 {{ localize('Event') }}</a>
                                 <ul class="pl-4">
                                     <li><a class="text-dark" href="{{ route('customers.event') }}">Event List</a></li>
