@@ -126,10 +126,10 @@
                         @auth
                         @if (auth()->user()->user_type == 'customer')
                             <li>
-                                <div  class="sf-with-ul">
+                                <a href="#" class="sf-with-ul">
                                     <span class="me-2"><i class="fa-solid fa-user"></i></span>
                                     {{ localize('Profile') }}
-                                </div>
+                                </a>
                                 <ul >
                                     <li><a href="{{ route('customers.dashboard') }}">About 01</a></li>
                                     <li><a href="about-2.html">About 02</a></li>
