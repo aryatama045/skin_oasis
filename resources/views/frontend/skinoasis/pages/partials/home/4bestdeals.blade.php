@@ -16,7 +16,7 @@
                         <h4>{{$campaigns->title}}</h4>
                         <h2>Rp.{{$campaigns->harga_promo}}</h2>
 
-                        <h3 class="product-title">
+                        <h3 class="product-tanggal">
                             @php
                                 $start_date = date('d ', $campaigns->start_date);
                                 $end_date = date('d M Y', $campaigns->end_date);

@@ -568,6 +568,14 @@ p {
   color: white !important;
   font-family: "avenir lt pro";
 }
+.deal-content .product-tanggal {
+  font-weight: 800;
+  font-size: 28px !important;
+  letter-spacing: 0.2em;
+  margin-bottom: 0.7rem;
+  color: white !important;
+  font-family: "avenir lt pro";
+}
 .deal-content .product-price {
   font-weight: bold;
   font-size: 18px !important;
@@ -1260,6 +1268,17 @@ p {
   color: black;
 }
 .testimonial p {
+  color: black;
+}
+
+.testimonial2 {
+  padding: 10px;
+  margin-left: 4em;
+  text-align: left !important;
+  font-size: 16px;
+  color: black;
+}
+.testimonial2 p {
   color: black;
 }
 

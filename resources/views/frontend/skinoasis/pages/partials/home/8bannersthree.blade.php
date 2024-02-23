@@ -45,7 +45,7 @@
                 </div><!-- End .col-md-4 -->
 
                 <div class="col-md-4">
-                    <div class="owl-carousel owl-theme owl-testimonials mt-lg-3" data-toggle="owl"
+                    <div class="owl-carousel owl-theme owl-testimonials mt-lg-1" data-toggle="owl"
                         data-owl-options='{
                             "nav": false,
                             "dots": true,
@@ -58,7 +58,7 @@
                             }
                         }'>
                         @foreach ($client_feedback as $feedback)
-                            <div class="testimonial text-center bg-white">
+                            <div class="testimonial-two text-center bg-white">
                                 <cite>
                                     <span>
                                         <ul class="star-rating fs-sm d-inline-flex align-items-center text-warning">
@@ -74,7 +74,7 @@
                         @endforeach
                     </div><!-- End .testimonials-slider owl-carousel -->
 
-                    <div class="owl-carousel owl-theme owl-testimonials mt-lg-8" data-toggle="owl"
+                    <div class="owl-carousel owl-theme owl-testimonials mt-lg-9 mt-sm-5" data-toggle="owl"
                         data-owl-options='{
                             "nav": false,
                             "dots": true,
@@ -87,7 +87,7 @@
                             }
                         }'>
                         @foreach ($client_feedback as $feedback)
-                            <div class="testimonial text-center bg-white">
+                            <div class="testimonial-two text-center bg-white">
                                 <cite>
                                     <span>
                                         <ul class="star-rating fs-sm d-inline-flex align-items-center text-warning">
