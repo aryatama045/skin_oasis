@@ -244,7 +244,7 @@
         </div>
 
         <hr class="mt-3 mb-5">
-        <h3 class="title text-center text-uppercase mb-5">Syarat & Ketentuan</h3>
+        <h3 class="title text-center text-uppercase text-green mb-5">Syarat & Ketentuan</h3>
 
     </div>
 
