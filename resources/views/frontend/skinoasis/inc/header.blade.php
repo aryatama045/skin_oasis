@@ -126,23 +126,23 @@
                         @auth
                         @if (auth()->user()->user_type == 'customer')
 
-                            <li><a href="{{ route('customers.dashboard') }}" class=" fw-bolder text-dark" >
-                                <span class="me-2"><i class="fa-solid fa-home"></i></span>
+                            <li class="mt-2 mb-2"><a href="{{ route('customers.dashboard') }}" class=" fw-bolder text-dark" >
+                                <span class="me-1"><i class="fa-solid fa-home"></i></span>
                                 {{ localize('Dashboard') }}</a>
                             </li>
 
-                            <li><a href="#" class=" fw-bolder text-dark" >
-                                <span class="me-2"><i class="fa-solid fa-user"></i></span>
+                            <li class="mt-2 mb-2"><a href="#" class=" fw-bolder text-dark" >
+                                <span class="me-1"><i class="fa-solid fa-user"></i></span>
                                 {{ localize('Profile') }}</a>
-                                <ul class="me-2 pl-4">
+                                <ul class="pl-4">
                                     <li><a class="text-dark" href="{{ route('customers.dashboard') }}">Profile Detail</a></li>
                                 </ul>
                             </li>
 
-                            <li><a class=" fw-bolder text-dark" href="#">
-                                <span class="me-2"><i class="fa-solid fa-shopping-cart"></i></span>
+                            <li class="mt-2 mb-2"><a class=" fw-bolder text-dark" href="#">
+                                <span class="me-1"><i class="fa-solid fa-shopping-cart"></i></span>
                                 {{ localize('My Shopping') }}</a>
-                                <ul class="me-2 pl-4">
+                                <ul class="pl-4">
                                     <li><a class="text-dark" href="{{ route('customers.orderHistory') }}">
                                         {{ localize('My Orders') }}</a></li>
                                     <li><a class="text-dark" href="{{ route('customers.address') }}">
@@ -153,10 +153,10 @@
                                 </ul>
                             </li>
 
-                            <li><a class=" fw-bolder text-dark" href="#">
-                                <span class="me-2"><i class="fa-solid fa-journal-whills"></i></span>
+                            <li class="mt-2 mb-2"><a class=" fw-bolder text-dark" href="#">
+                                <span class="me-1"><i class="fa-solid fa-journal-whills"></i></span>
                                 {{ localize('My Journal') }}</a>
-                                <ul class="me-2 pl-4">
+                                <ul class="pl-4">
                                     <li><a class="text-dark" href="{{ route('customers.article') }}">
                                         {{ localize('Article') }}</a></li>
                                     <li><a class="text-dark" href="{{ route('customers.photo') }}">
@@ -166,31 +166,31 @@
                                     <li><a class="text-dark" href="{{ route('customers.review') }}">
                                         {{ localize('Review') }}</a></li>
                                 </ul>
-                            </li>
+                            </li class="mt-2 mb-2">
 
-                            <li><a href="#" class=" fw-bolder text-dark" >
-                                <span class="me-2"><i class="fa-tag"></i></span>
+                            <li class="mt-2 mb-2"><a href="#" class=" fw-bolder text-dark" >
+                                <span class="me-1"><i class="fa-tag"></i></span>
                                 {{ localize('Event') }}</a>
-                                <ul class="me-2 pl-4">
+                                <ul class="pl-4">
                                     <li><a class="text-dark" href="{{ route('customers.event') }}">Event List</a></li>
                                 </ul>
                             </li>
                         @else
-                            <li><a class="text-dark" href="{{ route('admin.dashboard') }}">
-                                <span class="me-2"><i class="fa-solid fa-bars"></i></span>
+                            <li class="mt-2 mb-2"><a class="text-dark" href="{{ route('admin.dashboard') }}">
+                                <span class="me-1"><i class="fa-solid fa-bars"></i></span>
                                 {{ localize('Dashboard') }}</a>
                             </li>
                         @endif
 
-                        <li><a class="text-dark" href="{{ route('logout') }}">
-                            <span class="me-2"><i class="fa-solid fa-arrow-right-from-bracket"></i></span>
+                        <li class="mt-2 mb-2"><a class="text-dark" href="{{ route('logout') }}">
+                            <span class="me-1"><i class="fa-solid fa-arrow-right-from-bracket"></i></span>
                             {{ localize('Sign Out') }}
                             </a>
                         </li>
                         @endauth
 
                         @guest
-                            <li><a class="text-dark" href="{{ route('login') }}"><span class="me-2"><i
+                            <li class="mt-2 mb-2"><a class="text-dark" href="{{ route('login') }}"><span class="me-2"><i
                                         class="fa-solid fa-arrow-right-from-bracket"></i></span>{{ localize('Sign In') }}</a>
                             </li>
                         @endguest
