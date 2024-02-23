@@ -122,26 +122,58 @@
                         <i class="icon-user"></i>
                     </a>
 
-                    <ul class="dropdown-menu dropdown-menu-right ">
+                    <ul class="dropdown-menu dropdown-menu-right sf-arrows">
                         @auth
                         @if (auth()->user()->user_type == 'customer')
-                            <li class="sf-arrows">
-                                    <a href="#" class="sf-with-ul" >
-                                        <span class="me-2"><i class="fa-solid fa-user"></i></span>
-                                        {{ localize('Profile') }}
-                                    </a>
-                                    <ul>
-                                        <li><a href="{{ route('customers.dashboard') }}">About 01</a></li>
-                                        <li><a href="about-2.html">About 02</a></li>
-                                    </ul>
+
+                            <li><a href="{{ route('customers.dashboard') }}" class=" fw-bolder text-dark" >
+                                <span class="me-2"><i class="fa-solid fa-home"></i></span>
+                                {{ localize('Dashboard') }}</a>
                             </li>
-                            <li><a class="text-dark" href="{{ route('customers.orderHistory') }}">
-                                <span class="me-2"><i class="fa-solid fa-tags"></i></span>
-                                {{ localize('My Orders') }}</a>
+
+                            <li><a href="#" class=" fw-bolder text-dark" >
+                                <span class="me-2"><i class="fa-solid fa-user"></i></span>
+                                {{ localize('Profile') }}</a>
+                                <ul class="me-2 pl-4">
+                                    <li><a class="text-dark" href="{{ route('customers.dashboard') }}">Profile Detail</a></li>
+                                </ul>
                             </li>
-                            <li><a class="text-dark" href="{{ route('customers.wishlist') }}">
-                                <span class="me-2"><i class="fa-solid fa-heart"></i></span>
-                                {{ localize('My Wishlist') }}</a>
+
+                            <li><a class=" fw-bolder text-dark" href="#">
+                                <span class="me-2"><i class="fa-solid fa-shopping-cart"></i></span>
+                                {{ localize('My Shopping') }}</a>
+                                <ul class="me-2 pl-4">
+                                    <li><a class="text-dark" href="{{ route('customers.orderHistory') }}">
+                                        {{ localize('My Orders') }}</a></li>
+                                    <li><a class="text-dark" href="{{ route('customers.address') }}">
+                                        {{ localize('Shipping Address') }}</a></li>
+                                    <li><a class="text-dark" href="{{ route('customers.wishlist') }}">
+                                        {{ localize('Saved Product') }}</a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li><a class=" fw-bolder text-dark" href="#">
+                                <span class="me-2"><i class="fa-solid fa-journal-whills"></i></span>
+                                {{ localize('My Journal') }}</a>
+                                <ul class="me-2 pl-4">
+                                    <li><a class="text-dark" href="{{ route('customers.article') }}">
+                                        {{ localize('Article') }}</a></li>
+                                    <li><a class="text-dark" href="{{ route('customers.photo') }}">
+                                        {{ localize('Photo') }}</a></li>
+                                    <li><a class="text-dark" href="{{ route('customers.video') }}">
+                                        {{ localize('Video') }}</a></li>
+                                    <li><a class="text-dark" href="{{ route('customers.review') }}">
+                                        {{ localize('Review') }}</a></li>
+                                </ul>
+                            </li>
+
+                            <li><a href="#" class=" fw-bolder text-dark" >
+                                <span class="me-2"><i class="fa-tag"></i></span>
+                                {{ localize('Event') }}</a>
+                                <ul class="me-2 pl-4">
+                                    <li><a class="text-dark" href="{{ route('customers.event') }}">Event List</a></li>
+                                </ul>
                             </li>
                         @else
                             <li><a class="text-dark" href="{{ route('admin.dashboard') }}">
