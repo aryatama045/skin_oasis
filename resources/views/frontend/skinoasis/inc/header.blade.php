@@ -125,26 +125,30 @@
                     <ul class="dropdown-menu dropdown-menu-right">
                         @auth
                         @if (auth()->user()->user_type == 'customer')
-                            <li><a href="{{ route('customers.dashboard') }}">
+                            <li>
                                 <span class="me-2"><i class="fa-solid fa-user"></i></span>
-                                {{ localize('My Account') }}</a>
+                                {{ localize('Profile') }}
+                                <ul>
+                                    <li><a href="{{ route('customers.dashboard') }}">About 01</a></li>
+                                    <li><a href="about-2.html">About 02</a></li>
+                                </ul>
                             </li>
-                            <li><a href="{{ route('customers.orderHistory') }}">
+                            <li><a class="text-dark" href="{{ route('customers.orderHistory') }}">
                                 <span class="me-2"><i class="fa-solid fa-tags"></i></span>
                                 {{ localize('My Orders') }}</a>
                             </li>
-                            <li><a href="{{ route('customers.wishlist') }}">
+                            <li><a class="text-dark" href="{{ route('customers.wishlist') }}">
                                 <span class="me-2"><i class="fa-solid fa-heart"></i></span>
                                 {{ localize('My Wishlist') }}</a>
                             </li>
                         @else
-                            <li><a href="{{ route('admin.dashboard') }}">
+                            <li><a class="text-dark" href="{{ route('admin.dashboard') }}">
                                 <span class="me-2"><i class="fa-solid fa-bars"></i></span>
                                 {{ localize('Dashboard') }}</a>
                             </li>
                         @endif
 
-                        <li><a href="{{ route('logout') }}">
+                        <li><a class="text-dark" href="{{ route('logout') }}">
                             <span class="me-2"><i class="fa-solid fa-arrow-right-from-bracket"></i></span>
                             {{ localize('Sign Out') }}
                             </a>
@@ -152,7 +156,7 @@
                         @endauth
 
                         @guest
-                            <li><a href="{{ route('login') }}"><span class="me-2"><i
+                            <li><a class="text-dark" href="{{ route('login') }}"><span class="me-2"><i
                                         class="fa-solid fa-arrow-right-from-bracket"></i></span>{{ localize('Sign In') }}</a>
                             </li>
                         @endguest
