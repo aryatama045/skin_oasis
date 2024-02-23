@@ -126,7 +126,7 @@
                         @auth
                         @if (auth()->user()->user_type == 'customer')
                             <li>
-                                <div class="dropdown cart-dropdown">
+                                <div class="dropdown">
                                     <a href="#" class="dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-display="static">
                                         <span class="me-2"><i class="fa-solid fa-user"></i></span>
                                         {{ localize('Profile') }}
