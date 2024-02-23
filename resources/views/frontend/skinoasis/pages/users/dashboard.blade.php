@@ -89,8 +89,8 @@
     }
 
     .icon-content p {
-        font-weight: 400;
-        font-family: 'avenir lt pro';
+        font-family: 'avenir lt pro' !important;
+        font-size: 16px;
     }
     .clearfix {
         clear: both;
