@@ -95,4 +95,16 @@ class CustomerController extends Controller
             return back();
         }
     }
+
+    public function photo()
+    {}
+
+    public function video()
+    {}
+
+    public function review()
+    {}
+
+    public function event()
+    {}
 }

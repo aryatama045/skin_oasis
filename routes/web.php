@@ -115,6 +115,11 @@ Route::group(['prefix' => '', 'middleware' => ['customer', 'verified', 'isBanned
     Route::get('/customer-profile', [CustomerController::class, 'profile'])->name('customers.profile');
     Route::post('/customer-profile', [CustomerController::class, 'updateProfile'])->name('customers.updateProfile');
 
+    Route::get('/customer-photo', [CustomerController::class, 'photo'])->name('customers.photo');
+    Route::get('/customer-video', [CustomerController::class, 'video'])->name('customers.video');
+    Route::get('/customer-review', [CustomerController::class, 'review'])->name('customers.review');
+    Route::get('/customer-event', [CustomerController::class, 'event'])->name('customers.event');
+
     # wishlist
     Route::get('/wishlist', [WishlistController::class, 'index'])->name('customers.wishlist');
     Route::post('/add-to-wishlist', [WishlistController::class, 'store'])->name('customers.wishlist.store');
