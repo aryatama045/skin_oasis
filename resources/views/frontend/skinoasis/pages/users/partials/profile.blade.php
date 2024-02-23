@@ -21,7 +21,7 @@
     </div>
 
     <div class="bg-light d-flex justify-content-end text-center">
-        <div class="profile-achievements p-4 d-flex align-items-center flex-wrap ">
+        <!-- <div class="profile-achievements p-4 d-flex align-items-center flex-wrap ">
             <div class="achievement-box d-flex align-items-center gap-3">
                 <span
                     class="icon d-inline-flex align-items-center justify-content-center flex-shrink-0 bg-color-1 rounded-3">
@@ -131,7 +131,7 @@
                 </div>
             </div>
 
-        </div>
+        </div> -->
         <ul class="list-inline p-5">
 
             <li class="list-inline-item">
