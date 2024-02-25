@@ -28,13 +28,6 @@
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
 
-<!-- Main JS File -->
-
-<script src="{{ staticAsset('frontend/skinoasis/assets/main.js') }}"></script>
-
-<script src="{{ staticAsset('frontend/skinoasis/assets/js/main.js') }}"></script>
-<script src="{{ staticAsset('frontend/skinoasis/assets/js/main.min.js') }}"></script>
-
 <script src="{{ staticAsset('frontend/default/assets/js/vendors/counterup.min.js') }}"></script>
 <script src="{{ staticAsset('frontend/default/assets/js/vendors/clipboard.min.js') }}"></script>
 
@@ -44,6 +37,12 @@
 <script src="{{ staticAsset('frontend/default/assets/js/app.js') }}"></script>
 
 
+<!-- Main JS File -->
+
+<script src="{{ staticAsset('frontend/skinoasis/assets/main.js') }}"></script>
+
+<script src="{{ staticAsset('frontend/skinoasis/assets/js/main.js') }}"></script>
+<script src="{{ staticAsset('frontend/skinoasis/assets/js/main.min.js') }}"></script>
 <script src="{{ staticAsset('frontend/skinoasis/assets/js/demos/demo-18.js') }}"></script>
 
 
