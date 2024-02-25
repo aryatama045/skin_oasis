@@ -1,6 +1,6 @@
 <section class="gallery bg-white position-relative overflow-hidden z-1">
     <div class="video-banner video-banner-poster text-left 
-    animate__animated animate__fadeUp animate__slow">
+    animate__animated animate__fadeInUp animate__delay-9s">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-md-6">
@@ -26,7 +26,7 @@
     </div>
 
     <div class="video-banner video-banner-poster text-left mt-10 pb-5
-    animate__animated animate__fadeUp animate__slow">
+    animate__animated animate__fadeInUp animate__delay-10s">
         <div class="container">
             <div class="row ">
 

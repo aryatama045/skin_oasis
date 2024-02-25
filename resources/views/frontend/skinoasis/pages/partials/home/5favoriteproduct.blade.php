@@ -2,7 +2,7 @@
 <div class="arrival pt-8 pb-100 position-relative overflow-hidden z-1 trending-products-area">
     <div class="container">
 
-        <div class="heading-fav animate__animated animate__fadeUp animate__slow">
+        <div class="heading-fav animate__animated animate__fadeInUp animate__delay-5s">
 
             <h2 class="title d-inline">
                 <img class="img-fluid text-left d-inline p-2 mb-lg-2" src="https://skinoasis.solusiitkreasi.com/public/uploads/media/0szep88MhwsQEGt367sGBWvjDSTF99mm4XryAZAb.png" width="220">
@@ -14,7 +14,7 @@
             </div><!-- End .entry-content -->
         </div>
 
-        <div class="heading-fav heading-center mb-5 animate__animated animate__fadeUp animate__slow">
+        <div class="heading-fav heading-center mb-5 animate__animated animate__fadeInUp animate__delay-6s">
             <h4 class="subtitle text-uppercase mb-4">{{ localize('Products Favorite') }}</h4>
             <ul class="nav nav-pills justify-content-center" style="display:none;" role="tablist">
                 <li class="nav-item">
@@ -34,7 +34,7 @@
             </ul>
         </div>
 
-        <div class="tab-content tab-content-carousel animate__animated animate__fadeUp animate__slow">
+        <div class="tab-content tab-content-carousel animate__animated animate__fadeInUp animate__delay-7s">
             <div class="tab-pane p-0 fade show active" id="arrival-all" role="tabpanel">
                 <div class="owl-carousel  carousel-equal-height owl-simple carousel-with-shadow  cols-lg-4 cols-md-3 cols-2" data-toggle="owl"
                     data-owl-options='{

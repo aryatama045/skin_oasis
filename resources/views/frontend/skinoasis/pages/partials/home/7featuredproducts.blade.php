@@ -1,6 +1,6 @@
 <!-- Product Favorite -->
 <div class="arrival pt-8 pb-100 position-relative overflow-hidden z-1 featured-product-area
-animate__animated animate__fadeUp animate__slow">
+animate__animated animate__fadeInUp animate__delay-8s">
     <div class="container">
 
         <div class="heading-fav heading-center mb-5 ">
