@@ -1,7 +1,7 @@
 /* Demo 3 Homepage 3 */
 /* Fonts */
-@import url("https://fonts.googleapis.com/css?family=Poppins:200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800");
-/* font-family: 'Poppins', sans-serif; */
+@import url("https://fonts.cdnfonts.com/css/avenir-lt-pro");
+@import url("https://fonts.cdnfonts.com/css/avenir");
 .bg-light {
   background-color: #f4f7ff !important;
 }
@@ -20,11 +20,15 @@
 
 @media screen and (min-width: 1200px) {
   .intro-section .col-lg-4 {
-    flex: 0 0 32.77%;
+    -ms-flex: 0 0 32.77%;
+    -webkit-box-flex: 0;
+            flex: 0 0 32.77%;
     max-width: 32.77%;
   }
   .intro-section .col-lg-8 {
-    flex: 0 0 67.23%;
+    -ms-flex: 0 0 67.23%;
+    -webkit-box-flex: 0;
+            flex: 0 0 67.23%;
     max-width: 67.23%;
   }
 }
@@ -254,14 +258,23 @@
 }
 
 .deal-col {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: stretch;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
 }
 
 .deal {
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: row wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
   padding: 3.6rem 4rem 4.8rem;
   background-color: #fff;
   background-size: cover;
@@ -305,11 +318,14 @@
 }
 
 .deal-content {
-  align-self: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 
 .deal-bottom {
-  align-self: flex-end;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
 }
 
 .btn.btn-outline-dark-2 {
@@ -352,7 +368,8 @@
   margin-left: 6px;
   margin-top: -1px;
   top: 50%;
-  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
   -ms-transform: translateY(-50%);
 }
 .deal-countdown .countdown-period {
@@ -450,7 +467,9 @@
 }
 
 .cta-border .cta-text {
-  flex-grow: 0.5;
+  -webkit-box-flex: 0.5;
+      -ms-flex-positive: 0.5;
+          flex-grow: 0.5;
   margin-right: 0;
 }
 .cta-border .cta-text p {
@@ -486,13 +505,20 @@
   width: 100%;
   height: 0.1rem;
   background-color: #fcb941;
-  transform-origin: right center;
-  transform: scale(0, 1);
+  -webkit-transform-origin: right center;
+          transform-origin: right center;
+  -webkit-transform: scale(0, 1);
+          transform: scale(0, 1);
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
   transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
 }
 .widget-list a:hover:before, .widget-list a:focus:before {
-  transform-origin: left center;
-  transform: scale(1, 1);
+  -webkit-transform-origin: left center;
+          transform-origin: left center;
+  -webkit-transform: scale(1, 1);
+          transform: scale(1, 1);
 }
 
 .widget-about p:last-of-type {
@@ -516,7 +542,8 @@
   position: absolute;
   left: 2rem;
   top: 50%;
-  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
   -ms-transform: translateY(-50%);
 }
 .widget-call a {
@@ -527,7 +554,8 @@
 }
 .widget-call a:hover, .widget-call a:focus {
   color: #fcb941;
-  box-shadow: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 .footer-bottom .container {
@@ -569,7 +597,9 @@
 }
 @media screen and (min-width: 992px) {
   .cta-border .cta-heading {
-    flex: 0 0 26.5%;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 26.5%;
+            flex: 0 0 26.5%;
     max-width: 26.5%;
   }
 }
@@ -605,9 +635,15 @@
 }
 @media screen and (max-width: 575px) {
   .cta .cta-wrapper .input-group {
-    flex-direction: row;
-    align-items: center;
-    flex-wrap: nowrap;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
   }
   .cta .cta-wrapper .input-group .form-control {
     width: 1%;
@@ -616,4 +652,4 @@
   .cta .cta-wrapper .input-group .btn {
     margin-top: 0;
   }
-}/*# sourceMappingURL=demo-3.css.map */
+}

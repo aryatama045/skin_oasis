@@ -1,7 +1,7 @@
 /* Demo 21 Homepage 21 */
 /* Fonts */
-@import url("https://fonts.googleapis.com/css?family=Poppins:200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800");
-/* font-family: 'Poppins', sans-serif; */
+@import url("https://fonts.cdnfonts.com/css/avenir-lt-pro");
+@import url("https://fonts.cdnfonts.com/css/avenir");
 /* Header 30 */
 .header {
   position: relative;
@@ -35,14 +35,22 @@
 }
 .header-middle .header-left,
 .header-middle .header-right {
-  flex: 1 1 0;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 0px;
+          flex: 1 1 0;
 }
 .header-middle .header-center {
-  flex: 0 1 auto;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 auto;
+          flex: 0 1 auto;
 }
 .header-middle .header-right {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: flex-end;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 .header-middle .menu > li:not(:hover):not(.active):not(.show) > a {
   color: white;
@@ -91,8 +99,12 @@
 
 .notification {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding: 1.3rem 0;
 }
 .notification .notify-content h3 {
@@ -163,7 +175,8 @@
   letter-spacing: -0.025em;
   text-decoration: none !important;
   padding: 0.8rem 4.9rem !important;
-  box-shadow: 0 15px 30px rgba(23, 43, 104, 0.2) !important;
+  -webkit-box-shadow: 0 15px 30px rgba(23, 43, 104, 0.2) !important;
+          box-shadow: 0 15px 30px rgba(23, 43, 104, 0.2) !important;
 }
 .btn-cart:before {
   font-family: "molla";
@@ -187,8 +200,11 @@
   line-height: 1.5;
 }
 .intro-section .banner-action {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: wrap;
+  -ms-flex-flow: wrap;
+      flex-flow: wrap;
 }
 .intro-section .banner-action .btn {
   font-weight: 600;
@@ -239,7 +255,8 @@
 .sound-section .banner .banner-content {
   position: static;
   padding: 17% 14% 26.8% 18%;
-  transform: none;
+  -webkit-transform: none;
+          transform: none;
 }
 .sound-section .banner .banner-text {
   color: #999999;
@@ -264,15 +281,23 @@
 }
 
 .info-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   text-align: center;
   width: 9.8rem;
   height: 10rem;
   border: 1px dashed #1e1f20;
   border-radius: 6px;
   color: #222;
+  -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
 .info-box p {
@@ -368,7 +393,8 @@
 .owl-simple .owl-nav [class*=owl-]:not(.disabled):hover {
   color: #333333;
   background-color: white;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .owl-simple .owl-dots {
@@ -395,7 +421,8 @@
 }
 .owl-simple .owl-dots .owl-dot.active span, .owl-simple .owl-dots .owl-dot:hover span {
   width: 24px;
-  box-shadow: 0 0 0 1px #ccc;
+  -webkit-box-shadow: 0 0 0 1px #ccc;
+          box-shadow: 0 0 0 1px #ccc;
   border-color: white;
 }
 .owl-simple .owl-dots .owl-dot.active span:after {
@@ -404,7 +431,8 @@
   position: absolute;
   left: 50%;
   top: 50%;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   color: white;
   font-size: 1.1rem;
 }
@@ -447,10 +475,14 @@
   padding-top: 7.5rem;
   border: 1px solid #e1e1e1;
   border-radius: 5px;
+  -webkit-transition: -webkit-box-shadow 0.35s ease;
+  transition: -webkit-box-shadow 0.35s ease;
   transition: box-shadow 0.35s ease;
+  transition: box-shadow 0.35s ease, -webkit-box-shadow 0.35s ease;
 }
 .testimonials-box:hover {
-  box-shadow: 0 7px 12px 5px rgba(0, 0, 0, 0.05);
+  -webkit-box-shadow: 0 7px 12px 5px rgba(0, 0, 0, 0.05);
+          box-shadow: 0 7px 12px 5px rgba(0, 0, 0, 0.05);
 }
 
 .testimonials {
@@ -462,7 +494,8 @@
   left: 50%;
   top: 0;
   z-index: 100;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 .testimonials .ratings, .testimonials .ratings-val {
   color: #6666ff;
@@ -530,7 +563,8 @@
 }
 .overview .banner-content {
   position: relative;
-  transform: none;
+  -webkit-transform: none;
+          transform: none;
   left: 16%;
   top: 0;
 }
@@ -540,6 +574,8 @@
   letter-spacing: -0.01em;
 }
 .overview .info-list > li {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 .overview .info-icon i::before {
@@ -560,17 +596,21 @@
   background: transparent;
   border: 2px solid white;
   border-radius: 50%;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-left: auto;
   margin-right: auto;
   color: white;
   font-size: 3.8rem;
+  -webkit-transition: 0.3s;
   transition: 0.3s;
 }
 .video-banner .btn-iframe:hover {
   background-color: #6666ff;
   border-color: #6666ff;
-  box-shadow: 0 0 0 10px rgba(255, 255, 255, 0.2);
+  -webkit-box-shadow: 0 0 0 10px rgba(255, 255, 255, 0.2);
+          box-shadow: 0 0 0 10px rgba(255, 255, 255, 0.2);
 }
 
 .newsletter {
@@ -689,9 +729,16 @@
 }
 
 .footer-bottom .container {
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding-top: 5.1rem;
   padding-bottom: 5.9rem;
 }
@@ -731,7 +778,8 @@
   }
   .sound-section .banner .banner-img, .overview .banner .banner-img {
     position: static;
-    transform: none;
+    -webkit-transform: none;
+            transform: none;
   }
   .sound-section {
     background-position: bottom center;
@@ -798,7 +846,9 @@
     padding-right: 1rem;
   }
   .notification {
-    justify-content: flex-start;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
   }
   .notification .notify-content h3 {
     padding-left: 1rem;
@@ -852,4 +902,4 @@
   .intro-section .banner-text {
     font-size: 1.4rem;
   }
-}/*# sourceMappingURL=demo-30.css.map */
+}

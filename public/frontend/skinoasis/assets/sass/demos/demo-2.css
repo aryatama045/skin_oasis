@@ -1,7 +1,7 @@
 /* Demo 2 Homepage 2 */
 /* Fonts */
-@import url("https://fonts.googleapis.com/css?family=Poppins:200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800");
-/* font-family: 'Poppins', sans-serif; */
+@import url("https://fonts.cdnfonts.com/css/avenir-lt-pro");
+@import url("https://fonts.cdnfonts.com/css/avenir");
 .intro-slider-container,
 .intro-slide {
   height: 360px;
@@ -9,8 +9,12 @@
 }
 
 .intro-slide {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background-size: cover;
   background-position: center center;
 }
@@ -28,7 +32,8 @@
   position: static;
   left: auto;
   top: auto;
-  transform: translateY(0);
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
   -ms-transform: translateY(0);
 }
 
@@ -76,22 +81,29 @@
 }
 @media screen and (min-width: 992px) {
   .banner-group .col-lg-3 {
-    flex: 0 0 26.05%;
+    -ms-flex: 0 0 26.05%;
+    -webkit-box-flex: 0;
+            flex: 0 0 26.05%;
     max-width: 26.05%;
   }
   .banner-group .col-lg-4 {
-    flex: 0 0 32.77%;
+    -ms-flex: 0 0 32.77%;
+    -webkit-box-flex: 0;
+            flex: 0 0 32.77%;
     max-width: 32.77%;
   }
   .banner-group .col-lg-5 {
-    flex: 0 0 41.18%;
+    -ms-flex: 0 0 41.18%;
+    -webkit-box-flex: 0;
+            flex: 0 0 41.18%;
     max-width: 41.18%;
   }
 }
 
 .banner-content.banner-content-top {
   top: 2.6rem;
-  transform: translateY(0);
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
   -ms-transform: translateY(0);
 }
 .banner-content.banner-content-bottom {
@@ -207,15 +219,22 @@
 }
 
 .deal {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column-reverse;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
   padding: 2rem;
   background-color: #fff;
   margin-bottom: 2rem;
 }
 
 .deal-content {
-  flex: 0 0 100%;
+  -ms-flex: 0 0 100%;
+  -webkit-box-flex: 0;
+          flex: 0 0 100%;
   max-width: 100%;
   padding: 3.5rem 0 2rem;
 }
@@ -263,7 +282,9 @@
 }
 
 .deal-image {
-  flex: 0 0 100%;
+  -ms-flex: 0 0 100%;
+  -webkit-box-flex: 0;
+          flex: 0 0 100%;
   max-width: 100%;
 }
 .deal-image > a {
@@ -300,7 +321,8 @@
   margin-left: 9px;
   margin-top: -1px;
   top: 50%;
-  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
   -ms-transform: translateY(-50%);
 }
 .deal-countdown .countdown-period {
@@ -339,16 +361,23 @@
 
 @media screen and (min-width: 768px) {
   .deal {
-    flex-direction: row;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
   }
   .deal-content {
-    flex: 0 0 47.8%;
+    -ms-flex: 0 0 47.8%;
+    -webkit-box-flex: 0;
+            flex: 0 0 47.8%;
     max-width: 47.8%;
     padding-top: 1rem;
     padding-bottom: 1rem;
   }
   .deal-image {
-    flex: 0 0 52.2%;
+    -ms-flex: 0 0 52.2%;
+    -webkit-box-flex: 0;
+            flex: 0 0 52.2%;
     max-width: 52.2%;
   }
 }
@@ -403,8 +432,13 @@
 }
 
 .footer-newsletter .input-group {
-  flex-direction: column;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .footer-newsletter .form-control {
   width: 100%;
@@ -431,8 +465,13 @@
     height: 400px;
   }
   .footer-newsletter .input-group {
-    flex-direction: row;
-    align-items: stretch;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
   }
   .footer-newsletter .form-control {
     width: auto;
@@ -495,4 +534,4 @@
   .intro-title {
     margin-bottom: 2.5rem;
   }
-}/*# sourceMappingURL=demo-2.css.map */
+}

@@ -1,14 +1,19 @@
 /* Demo 23 Homepage 23 */
 /* Fonts */
-@import url("https://fonts.googleapis.com/css?family=Poppins:200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800");
-/* font-family: 'Poppins', sans-serif; */
+@import url("https://fonts.cdnfonts.com/css/avenir-lt-pro");
+@import url("https://fonts.cdnfonts.com/css/avenir");
 /* Header */
 .header {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
 .header.sidebar {
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   position: fixed;
   width: calc(16.66% - 35px);
   height: 100vh;
@@ -33,15 +38,26 @@
 }
 
 .menu.sf-arrows {
-  align-items: flex-start;
-  flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 .menu.sf-arrows > li {
   position: static;
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 .menu.sf-arrows > li > a {
   padding: 1.5rem 0 1.3rem 0;
@@ -83,14 +99,21 @@
 }
 
 .demo-list {
-  flex-direction: column;
-  align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   margin: 0;
 }
 
 .demo-item {
   margin-bottom: 2rem;
-  flex: unset;
+  -webkit-box-flex: unset;
+      -ms-flex: unset;
+          flex: unset;
   max-width: unset;
   padding: 0;
   text-align: left;
@@ -100,7 +123,9 @@
   font-size: 1.3rem;
   border: none;
   padding-left: 0;
-  justify-content: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   min-width: unset;
   color: #cc9966;
 }
@@ -132,7 +157,8 @@ ul.sub-menu {
   display: block;
   margin-top: 8rem;
   margin-bottom: 5rem;
-  flex-shrink: 0;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
   min-height: 25px;
 }
 .logo img {
@@ -150,8 +176,12 @@ ul.sub-menu {
   font-size: 1.3rem;
   letter-spacing: -0.01em;
   border: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
 }
 
 .social-icon + .social-icon {
@@ -194,7 +224,9 @@ ul.sub-menu {
 }
 
 .header-right {
-  justify-content: flex-end;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   margin-right: 0;
 }
 
@@ -203,11 +235,15 @@ ul.sub-menu {
   margin: 0;
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
-  flex: 1;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
 
 .sticky-wrapper {
-  flex: 0 0 100%;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 100%;
+          flex: 0 0 100%;
   max-width: 100%;
   z-index: 1100;
 }
@@ -252,7 +288,8 @@ ul.sub-menu {
   font-size: 2.2rem;
   left: 0.7rem;
   top: 50%;
-  transform: translateY(-55%);
+  -webkit-transform: translateY(-55%);
+          transform: translateY(-55%);
 }
 
 p {
@@ -269,9 +306,15 @@ p {
 }
 
 .wishlist .wishlist-count {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   border-radius: 50%;
   font-weight: 400;
   font-size: 1rem;
@@ -310,9 +353,15 @@ p {
 }
 .header-right .wishlist a {
   font-size: 2.8rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .header-right .cart-dropdown a.dropdown-toggle {
   font-size: 3.2rem;
@@ -407,8 +456,11 @@ p {
 }
 
 .page-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .side-div, .page-content-div {
@@ -416,14 +468,18 @@ p {
 }
 
 .side-div {
-  flex: 0 0 calc((100% + 20px) / 6);
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 calc((100% + 20px) / 6);
+          flex: 0 0 calc((100% + 20px) / 6);
   max-width: calc((100% + 20px) / 6);
   height: 100vh;
   z-index: 1001;
 }
 
 .page-content-div {
-  flex: 0 0 calc((100% + 20px) / 1.2 - 20px);
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 calc((100% + 20px) / 1.2 - 20px);
+          flex: 0 0 calc((100% + 20px) / 1.2 - 20px);
   max-width: calc((100% + 20px) / 1.2 - 20px);
   z-index: 1;
 }
@@ -460,6 +516,7 @@ p {
   letter-spacing: 0.1em;
   color: #fff;
   text-transform: uppercase;
+  -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
 .intro .action a:hover, .intro .action a:focus {
@@ -467,9 +524,15 @@ p {
 }
 
 .intro-slide {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .intro-slide .intro {
   padding: 4.5rem 3.5rem 3.5rem 3.5rem;
@@ -483,11 +546,16 @@ p {
 }
 
 .service {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   margin-bottom: 2.5rem;
 }
 .service > [class*=col-] {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
@@ -497,8 +565,12 @@ p {
 }
 
 .icon-box-side {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 .icon-box-side .icon-box-title {
   font-size: 1.3rem;
@@ -523,8 +595,11 @@ p {
 }
 
 .products {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .product {
@@ -598,13 +673,19 @@ p {
 }
 
 .testimonials {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin-top: 7rem;
 }
 
 .testimonials-content {
-  flex: 0 0 40%;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 40%;
+          flex: 0 0 40%;
   max-width: 40%;
   text-align: center;
 }
@@ -639,8 +720,11 @@ p {
 }
 
 .banner-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 .banner-section .intro {
   position: absolute;
@@ -688,7 +772,8 @@ p {
 .banner-section .banner-sm .intro {
   left: 50%;
   top: 50%;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 .banner-section .banner-sm .title h3 {
   font-weight: 400;
@@ -776,17 +861,28 @@ p {
   margin-bottom: 2.5rem;
 }
 .brands .brands-content {
-  flex: 0 0 60%;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 60%;
+          flex: 0 0 60%;
   max-width: 60%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   margin-left: auto;
   margin-right: auto;
 }
 .brands .brands-content > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 .brands a.brand {
   padding-top: 2rem;
@@ -805,8 +901,11 @@ section.instagram .heading-title {
   margin-bottom: 0.5rem;
 }
 section.instagram .instagram-images {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 section.instagram .instagram-images > div {
   padding: 0;
@@ -831,20 +930,25 @@ section.instagram .instagram-images > div {
   margin-bottom: 0;
 }
 .subscribe form {
-  flex: 0 0 calc(40% - 10px);
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 calc(40% - 10px);
+          flex: 0 0 calc(40% - 10px);
   max-width: calc(40% - 10px);
   margin-left: auto;
   margin-right: auto;
 }
 .subscribe .input-group {
-  flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
 }
 .subscribe input {
   border: 0.1rem solid #fff;
   border-right-width: 0;
   padding: 0.95rem 0 0.95rem 2.2rem;
   min-width: 0;
-  flex: 1 1 auto;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
   font-size: 1.3rem;
   font-weight: 500;
   letter-spacing: 0.01em;
@@ -859,6 +963,7 @@ section.instagram .instagram-images > div {
   color: #cc9966;
   border: 0.1rem solid #fff;
   border-left-width: 0;
+  -webkit-transition: all 0.3s;
   transition: all 0.3s;
   text-transform: uppercase;
   font-size: 1.3rem;
@@ -897,12 +1002,17 @@ section.instagram .instagram-images > div {
   position: relative;
   padding-top: 7rem;
   padding-bottom: 5rem;
-  flex: 0 0 calc((100% + 20px) * 0.8 + 20px);
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 calc((100% + 20px) * 0.8 + 20px);
+          flex: 0 0 calc((100% + 20px) * 0.8 + 20px);
   max-width: calc((100% + 20px) * 0.8 + 20px);
   margin-left: auto;
   margin-right: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 .footer-bottom > div:first-child {
   padding: 0;
@@ -919,55 +1029,74 @@ section.instagram .instagram-images > div {
 
 .mmenu-active .mobile-menu-container {
   visibility: visible;
-  transform: translateX(100%);
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
 }
 
 @media screen and (max-width: 1400px) {
   .banner-section .banner-lg .intro {
     top: 50%;
-    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
   }
 }
 @media screen and (min-width: 1200px) {
   .col-xl-8-3col {
-    flex: 0 0 37.5%;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 37.5%;
+            flex: 0 0 37.5%;
     max-width: 37.5%;
   }
   .col-xl-8-2col {
-    flex: 0 0 25%;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 25%;
+            flex: 0 0 25%;
     max-width: 25%;
   }
   .col-xl-8-1col {
-    flex: 0 0 12.5%;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 12.5%;
+            flex: 0 0 12.5%;
     max-width: 12.5%;
   }
 }
 @media screen and (max-width: 1200px) {
   .subscribe form {
-    flex: 0 0 60%;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 60%;
+            flex: 0 0 60%;
     max-width: 60%;
   }
 }
 @media screen and (max-width: 992px) {
   .icon-box-side {
-    justify-content: flex-start;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
   }
   .side-div {
     display: none;
   }
   .page-content-div {
-    flex: 0 0 100%;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
     max-width: 100%;
   }
   .banner-section .banner-lg .intro {
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
   }
   .new-women,
   .new-men {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   .banner-lg .intro {
     left: 3rem;
@@ -991,7 +1120,9 @@ section.instagram .instagram-images > div {
   }
   .new-men .banner {
     padding-left: 1rem;
-    order: -1;
+    -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+            order: -1;
   }
   .new-men .products {
     padding-right: 0;
@@ -1002,4 +1133,4 @@ section.instagram .instagram-images > div {
     left: 0;
     right: 0;
   }
-}/*# sourceMappingURL=demo-23.css.map */
+}
