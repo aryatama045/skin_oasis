@@ -28402,4 +28402,10 @@ img.col-md-8.float-md-end.mb-3.ms-md-3 {
     z-index: 1;
 }
 
+.thumb-info-update {
+    width: 25rem;
+    height: 25rem;
+    object-fit: cover;
+}
+
 

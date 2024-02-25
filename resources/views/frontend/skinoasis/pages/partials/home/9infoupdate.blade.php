@@ -33,7 +33,7 @@
 
             @foreach ($blogs as $blog)
             <div class="instagram-feed">
-                <img src="{{ uploadedAsset($blog->thumbnail_image) }}" alt="img">
+                <img class="thumb-info" src="{{ uploadedAsset($blog->thumbnail_image) }}" alt="img">
                 <div class="instagram-feed-content">
                     <a href="{{ route('home.blogs.show', $blog->slug) }}">
                         <i class="icon-eye-o"></i> Read More</a>
