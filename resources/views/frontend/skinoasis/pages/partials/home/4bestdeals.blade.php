@@ -11,8 +11,8 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
-                <div class="deal align-items-center animate__animated animate__fadeInUp animate__delay-4s">
-                    <div class="deal-content">
+                <div class="deal align-items-center ">
+                    <div class="deal-content wow animate__animated animate__fadeInUp" data-wow-delay=".0s">
                         <h4>{{$campaigns->title}}</h4>
                         <h2>Rp.{{$campaigns->harga_promo}}</h2>
 
@@ -33,7 +33,7 @@
                             class="btn btn-rounded btn-sm text-uppercase btn-outline-green-dark mt-5">{{ localize('Shop Now') }}</a>
 
                     </div><!-- End .deal-content -->
-                    <div class="deal-image">
+                    <div class="deal-image wow animate__animated animate__fadeInLeft" data-wow-delay=".0s">
                             <img src="{{ uploadedAsset($campaigns->banner) }}" alt="image">
                     </div><!-- End .deal-image -->
                 </div><!-- End .deal -->

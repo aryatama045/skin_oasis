@@ -4,7 +4,7 @@
     <h2 class="title text-center brands wow animate__animated animate__fadeInUp" data-wow-delay=".0s">
         “Skin Oasis product is a high-tech and newest product from Korea”
     </h2>
-    <div class="brands-border owl-carousel owl-simple mb-5 wow animate__animated animate__fadeInUp" data-wow-delay=".0s" data-toggle="owl"
+    <div class="brands-border owl-carousel owl-simple mb-5 wow animate__animated animate__fadeInUp" data-wow-delay=".1s" data-toggle="owl"
         data-owl-options='{
             "nav": false,
             "dots": false,
