@@ -1,10 +1,10 @@
 <!-- Slider -->
-<div class="intro-slider-container animate__animated animate__fadeInUp animate__delay-1s">
+<div class="intro-slider-container ">
     <div class="intro-slider owl-carousel owl-theme owl-nav-inside owl-light" data-toggle="owl" data-owl-options='{"dots": true, "nav": false}'>
 
     @foreach ($sliders as $slider)
         @if ($slider->display_on == 1)
-        <div class="intro-slide" style="background-image: url({{ uploadedAsset($slider->image) }});">
+        <div class="intro-slide animate__animated animate__fadeInUp animate__delay-1s" style="background-image: url({{ uploadedAsset($slider->image) }});">
             <div class="container">
                 <div class="intro-content text-center">
                     <!-- <h3 class="intro-subtitle cross-txt text-primary">{{ $slider->sub_title }}</h3> -->
