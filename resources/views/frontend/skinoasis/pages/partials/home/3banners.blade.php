@@ -4,7 +4,7 @@
         <div class="row">
 
             <div class="col-md-5">
-                <div class="content-right">
+                <div class="content-right animate__animated animate__fadeInLeft animate__delay-2s">
                     <figure class="mb-md-12">
                         <img src="{{ staticAsset('frontend/skinoasis/assets/images/banner1.png') }}" alt="Banner">
                     </figure>
@@ -12,7 +12,7 @@
             </div>
 
             <div class="col-md-7 p-md-0">
-                <div class="content-left">
+                <div class="content-left animate__animated animate__fadeInRight animate__delay-3s">
                     <div class="heading mt-3">
                         <h4 class="title mt-lg-6">Discover all your skin needs through time-efficient skin check system. Try it now!</h4>
 
