@@ -158,7 +158,7 @@
                                         @endforeach
                                     @else
                                         @foreach ($products as $product)
-                                            <div class="col-lg-4 col-md-6 col-sm-10 animate__animated animate__fadeInUp animate__delay-2s">
+                                            <div class="col-lg-4 col-md-6 col-sm-10 ">
                                                 @include(
                                                     'frontend.skinoasis.pages.partials.products.vertical-product-card',
                                                     [

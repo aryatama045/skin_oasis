@@ -1,4 +1,5 @@
-<div class="vertical-product-card shadow-none rounded-2 position-relative swiper-slide {{ isset($bgClass) ? $bgClass : '' }}">
+<div class="vertical-product-card shadow-none rounded-2 position-relative swiper-slide {{ isset($bgClass) ? $bgClass : '' }}
+animate__animated animate__fadeInUp animate__delay-2s">
 
     @php
         $discountPercentage = discountPercentage($product);
