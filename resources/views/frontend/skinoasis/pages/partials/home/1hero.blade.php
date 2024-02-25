@@ -6,7 +6,7 @@
         @if ($slider->display_on == 1)
         <div class="intro-slide " style="background-image: url({{ uploadedAsset($slider->image) }});">
             <div class="container">
-                <div class="intro-content text-center animate__animated animate__fadeInUp animate__delay-1s">
+                <div class="intro-content text-center wow animate__animated animate__fadeInUp" data-wow-delay=".0s">
                     <!-- <h3 class="intro-subtitle cross-txt text-primary">{{ $slider->sub_title }}</h3> -->
                     <h1 class="intro-title text-white">{{ $slider->title }}</h1><!-- End .intro-title -->
                     <div class="intro-text text-white">{{ $slider->text }}</div><!-- End .intro-text -->
