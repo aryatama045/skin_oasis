@@ -1,64 +1,68 @@
 @extends('frontend.skinoasis.layouts.master')
 
 @section('title')
-    {{ localize('Customer Addresses') }} {{ getSetting('title_separator') }} {{ getSetting('system_title') }}
+    {{ localize('Customer Dashboard') }} {{ getSetting('title_separator') }} {{ getSetting('system_title') }}
 @endsection
 
 @section('contents')
-    <section class="my-account pt-6 pb-120">
-        <div class="container">
 
-            @include('frontend.skinoasis.pages.users.partials.customerHero')
 
-            <div class="row g-4">
-                <div class="col-xl-3">
-                    @include('frontend.skinoasis.pages.users.partials.customerSidebar')
-                </div>
+@include('frontend.skinoasis.pages.users.partials.cssUser')
 
-                <div class="col-xl-9">
-                    <div class="address-book bg-white rounded p-5">
+<section class="my-account pb-120">
 
-                        <div class="d-flex justify-content-between">
-                            <h4 class="mb-5">{{ localize('Address Book') }}</h4>
-                            <a href="javascript:void(0);" onclick="addNewAddress()" class="fw-semibold"><i
-                                    class="fas fa-plus me-1"></i> {{ localize('Add Address') }}</a>
-                        </div>
-                        <div class="row g-4">
-                            @forelse ($addresses as $address)
-                                <div class="col-md-6">
-                                    <div
-                                        class="tt-address-content border p-3 rounded address-book-content pe-md-4 position-relative">
-                                        <div class="address tt-address-info position-relative">
-                                            <!-- address -->
-                                            @include('frontend.skinoasis.inc.address', [
-                                                'address' => $address,
-                                            ])
-                                            <!-- address -->
+    @include('frontend.skinoasis.pages.users.partials.profileWidget')
 
-                                            <div class="tt-edit-address position-absolute">
-                                                <a href="javascript:void(0);" onclick="editAddress({{ $address->id }})"
-                                                    class="pe-1">{{ localize('Edit') }}</a>
+    <div class="container mt-8">
+        <div class="row">
 
-                                                <a href="javascript:void(0);"
-                                                    data-url="{{ route('address.delete', $address->id) }}"
-                                                    onclick="deleteAddress(this)"
-                                                    class="text-danger">{{ localize('Delete') }}</a>
-                                            </div>
+            <div class="col-md-8 offset-md-2 rounded shadow-box bg-white p-4">
+                
+                <div class="address-book bg-white rounded p-5">
+
+                    <div class="d-flex justify-content-between">
+                        <h4 class="mb-5">{{ localize('Address Book') }}</h4>
+                        <a href="javascript:void(0);" onclick="addNewAddress()" class="fw-semibold"><i
+                                class="fas fa-plus me-1"></i> {{ localize('Add Address') }}</a>
+                    </div>
+                    <div class="row g-4">
+                        @forelse ($addresses as $address)
+                            <div class="col-md-6">
+                                <div
+                                    class="tt-address-content border p-3 rounded address-book-content pe-md-4 position-relative">
+                                    <div class="address tt-address-info position-relative">
+                                        <!-- address -->
+                                        @include('frontend.skinoasis.inc.address', [
+                                            'address' => $address,
+                                        ])
+                                        <!-- address -->
+
+                                        <div class="tt-edit-address position-absolute">
+                                            <a href="javascript:void(0);" onclick="editAddress({{ $address->id }})"
+                                                class="pe-1">{{ localize('Edit') }}</a>
+
+                                            <a href="javascript:void(0);"
+                                                data-url="{{ route('address.delete', $address->id) }}"
+                                                onclick="deleteAddress(this)"
+                                                class="text-danger">{{ localize('Delete') }}</a>
                                         </div>
                                     </div>
                                 </div>
-                            @empty
-                            @endforelse
-                        </div>
+                            </div>
+                        @empty
+                        @endforelse
                     </div>
                 </div>
+            
             </div>
+
         </div>
+    </div>
 
 
-        <!--add address modal start-->
-        @include('frontend.skinoasis.inc.addressForm', ['countries' => $countries])
-        <!--add address modal end-->
+    <!--add address modal start-->
+    @include('frontend.skinoasis.inc.addressForm', ['countries' => $countries])
+    <!--add address modal end-->
 
     </section>
 @endsection
