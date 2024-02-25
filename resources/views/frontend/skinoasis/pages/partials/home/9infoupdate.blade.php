@@ -1,5 +1,5 @@
 <!-- Info Update -->
-<div class="bg-lime pt-5 pb-5 wow animate__animated animate__fadeInUp" data-wow-delay=".0s">
+<div class="bg-lime pt-5 pb-5" data-aos="fade-up">
     <div class="container">
         <div class="heading-ig text-center">
             <h4>FIND UPDATE INFORMATION ABOUT <img src="{{ staticAsset('frontend/skinoasis/assets/images/logo-hashtag.png') }}" alt="Logo Hastag" width="50" class="logo-hashtag"> HERE!</h4><!-- End .title -->

@@ -4,17 +4,17 @@
 
         <div class="heading-fav">
 
-            <h2 class="title d-inline wow animate__animated animate__fadeInUp" data-wow-delay=".0s">
+            <h2 class="title d-inline" data-aos="fade-up">
                 <img class="img-fluid text-left d-inline p-2 mb-lg-2" src="https://skinoasis.solusiitkreasi.com/public/uploads/media/0szep88MhwsQEGt367sGBWvjDSTF99mm4XryAZAb.png" width="220">
                 backed-up with high knowledge in natural ingredients and headmost technologies,
             </h2><!-- End .entry-title -->
 
-            <div class="entry-content mt-lg-6 wow animate__animated animate__fadeInUp" data-wow-delay=".0s">
+            <div class="entry-content mt-lg-6" data-aos="fade-up">
                 <p>We present you the list of extremely powerful effect but also delicate products.</p>
             </div><!-- End .entry-content -->
         </div>
 
-        <div class="heading-fav heading-center mb-5  wow animate__animated animate__fadeInUp" data-wow-delay=".0s">
+        <div class="heading-fav heading-center mb-5 " data-aos="fade-up">
             <h4 class="subtitle text-uppercase mb-4">
                 {{ localize('Products Favorite') }}
             </h4>
@@ -36,7 +36,7 @@
             </ul>
         </div>
 
-        <div class="tab-content tab-content-carousel  wow animate__animated animate__fadeInUp" data-wow-delay=".0s">
+        <div class="tab-content tab-content-carousel " data-aos="fade-up">
             <div class="tab-pane p-0 fade show active" id="arrival-all" role="tabpanel">
                 <div class="owl-carousel  carousel-equal-height owl-simple carousel-with-shadow  cols-lg-4 cols-md-3 cols-2" data-toggle="owl"
                     data-owl-options='{

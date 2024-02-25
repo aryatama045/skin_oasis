@@ -15,7 +15,7 @@
 <link rel="stylesheet" href="{{ staticAsset('frontend/common/css/select2.css') }}">
 <link rel="stylesheet" href="{{ staticAsset('frontend/common/css/custom.css') }}">
 
-<link rel="stylesheet" href="{{ staticAsset('frontend/common/css/animate.min.css') }}"/>
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
 <!-- Main CSS File -->
 <link rel="stylesheet" href="{{ staticAsset('frontend/skinoasis/assets/css/style.css') }}">

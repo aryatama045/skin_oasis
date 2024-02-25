@@ -25,6 +25,8 @@
 <script src="{{ staticAsset('frontend/default/assets/js/vendors/countdown.min.js') }}"></script>
 <script src="{{ staticAsset('frontend/default/assets/js/vendors/range-slider.js') }}"></script>
 
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
 
 <!-- Main JS File -->
 
@@ -40,6 +42,7 @@
 <script src="{{ staticAsset('frontend/common/js/toastr.min.js') }}"></script>
 <script src="{{ staticAsset('frontend/common/js/select2.js') }}"></script>
 <script src="{{ staticAsset('frontend/default/assets/js/app.js') }}"></script>
+
 
 <script src="{{ staticAsset('frontend/skinoasis/assets/js/demos/demo-18.js') }}"></script>
 
@@ -64,6 +67,8 @@
     // runs when the document is ready
     $(document).ready(function() {
         initIsotop();
+
+        AOS.init();
 
         // zoom
         if ( $.fn.elevateZoom ) {

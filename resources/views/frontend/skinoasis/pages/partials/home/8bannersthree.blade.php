@@ -1,6 +1,5 @@
 <section class="gallery bg-white position-relative overflow-hidden z-1">
-    <div class="video-banner video-banner-poster text-left 
-    wow animate__animated animate__fadeInUp" data-wow-delay=".0s">
+    <div class="video-banner video-banner-poster text-left" data-aos="fade-up">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-md-6">
@@ -25,8 +24,7 @@
         </div><!-- End .container -->
     </div>
 
-    <div class="video-banner video-banner-poster text-left mt-10 pb-5
-    wow animate__animated animate__fadeInUp" data-wow-delay=".0s">
+    <div class="video-banner video-banner-poster text-left mt-10 pb-5" data-aos="fade-up">
         <div class="container">
             <div class="row ">
 
