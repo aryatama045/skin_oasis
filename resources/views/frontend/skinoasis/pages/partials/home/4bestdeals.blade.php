@@ -11,7 +11,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
-                <div class="deal align-items-center">
+                <div class="deal align-items-center animate__animated animate__fadeIn">
                     <div class="deal-content">
                         <h4>{{$campaigns->title}}</h4>
                         <h2>Rp.{{$campaigns->harga_promo}}</h2>
