@@ -135,7 +135,7 @@
         <ul class="list-inline p-5">
 
             <li class="list-inline-item">
-                <a href="#" class="btn btn-dark btn-sm btn-block">Edit profile</a>
+                <a href="#" class="btn btn-dark btn-block">Edit profile</a>
             </li>
         </ul>
     </div>

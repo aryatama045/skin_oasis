@@ -106,7 +106,7 @@
 
 <section class="my-account pb-120">
 
-    @include('frontend.skinoasis.pages.users.partials.profile')
+    @include('frontend.skinoasis.pages.users.partials.profileWidget')
 
     <div class="container mt-8">
         <div class="row">
