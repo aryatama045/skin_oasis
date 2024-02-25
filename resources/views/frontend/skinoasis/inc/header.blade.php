@@ -38,7 +38,7 @@
                             @endphp
 
                             @foreach ($menus as $menuKey => $menuItem)
-                                <li <?php if(Request::url()===$menuItem){ 'class="active"'; } ?> >
+                                <li class="<?php if($menuItem==Request::url()){ 'active'; } ?>" >
                                     <a href="{{ $menuItem }}">{{ localize($labels[$menuKey]) }}</a>
                                 </li>
                             @endforeach
