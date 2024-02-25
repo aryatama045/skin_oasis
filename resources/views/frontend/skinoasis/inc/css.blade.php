@@ -15,6 +15,8 @@
 <link rel="stylesheet" href="{{ staticAsset('frontend/common/css/select2.css') }}">
 <link rel="stylesheet" href="{{ staticAsset('frontend/common/css/custom.css') }}">
 
+<link rel="stylesheet" href="{{ staticAsset('frontend/common/css/animate.css') }}"/>
+
 <!-- Main CSS File -->
 <link rel="stylesheet" href="{{ staticAsset('frontend/skinoasis/assets/css/style.css') }}">
 <link rel="stylesheet" href="{{ staticAsset('frontend/default/assets/css/main-custome.css') }}">
