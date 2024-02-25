@@ -82,9 +82,10 @@
 	}
 
 	&.active .page-link {
-		color: $primary-color;
-		background-color: transparent;
+		color: #546d53;
+		background-color: #cbd7cb;
 		border-color: #ebebeb;
+		font-weight: bold;
 	}
 
 	&.disabled .page-link {
