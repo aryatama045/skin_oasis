@@ -38,7 +38,7 @@
                             @endphp
 
                             @foreach ($menus as $menuKey => $menuItem)
-                                <li class="<?php if($menuItem==localize($labels[$menuKey])){ "active"; } ?>" >
+                                <li class="<?php if($menuItem==url()->current()){ "active"; } ?>" >
                                     <a href="{{ $menuItem }}">{{ localize($labels[$menuKey]) }}</a>
                                 </li>
                             @endforeach
@@ -126,7 +126,7 @@
                         @auth
                         @if (auth()->user()->user_type == 'customer')
 
-                            <li class="mt-2 mb-2"><a href="{{ route('customers.dashboard') }}" class=" fw-bolder text-dark" >
+                            <li class="mt-2 mb-2 {{ areActiveRoutes(['customers.dashboard'], 'active') }}"><a href="{{ route('customers.dashboard') }}" class=" fw-bolder text-dark" >
                                 <span class="me-1"><i class="fa-solid fa-home"></i></span>
                                 {{ localize('Dashboard') }}</a>
                             </li>
@@ -135,7 +135,7 @@
                                 <span class="me-1"><i class="fa-solid fa-user"></i></span>
                                 {{ localize('Profile') }}</a>
                                 <ul class="pl-4">
-                                    <li><a class="text-dark" href="{{ route('customers.profile') }}">Profile Detail</a></li>
+                                    <li><a class="{{ areActiveRoutes(['customers.profile'], 'active') }}" href="{{ route('customers.profile') }}">Profile Detail</a></li>
                                 </ul>
                             </li>
 
@@ -143,11 +143,11 @@
                                 <span class="me-1"><i class="fa-solid fa-shopping-cart"></i></span>
                                 {{ localize('My Shopping') }}</a>
                                 <ul class="pl-4">
-                                    <li><a class="text-dark" href="{{ route('customers.orderHistory') }}">
+                                    <li><a class="{{ areActiveRoutes(['customers.orderHistory'], 'active') }}" href="{{ route('customers.orderHistory') }}">
                                         {{ localize('My Orders') }}</a></li>
-                                    <li><a class="text-dark" href="{{ route('customers.address') }}">
+                                    <li><a class=" " href="{{ route('customers.address') }}">
                                         {{ localize('Shipping Address') }}</a></li>
-                                    <li><a class="text-dark" href="{{ route('customers.wishlist') }}">
+                                    <li><a class=" " href="{{ route('customers.wishlist') }}">
                                         {{ localize('Saved Product') }}</a>
                                     </li>
                                 </ul>
@@ -157,13 +157,13 @@
                                 <span class="me-1"><i class="fa-solid fa-journal-whills"></i></span>
                                 {{ localize('My Journal') }}</a>
                                 <ul class="pl-4">
-                                    <li><a class="text-dark" href="{{ route('customers.article') }}">
+                                    <li><a class="{{ areActiveRoutes(['customers.article'], 'active') }}" href="{{ route('customers.article') }}">
                                         {{ localize('Article') }}</a></li>
-                                    <li><a class="text-dark" href="{{ route('customers.photo') }}">
+                                    <li><a class="{{ areActiveRoutes(['customers.photo'], 'active') }}" href="{{ route('customers.photo') }}">
                                         {{ localize('Photo') }}</a></li>
-                                    <li><a class="text-dark" href="{{ route('customers.video') }}">
+                                    <li><a class=" {{ areActiveRoutes(['customers.video'], 'active') }}" href="{{ route('customers.video') }}">
                                         {{ localize('Video') }}</a></li>
-                                    <li><a class="text-dark" href="{{ route('customers.review') }}">
+                                    <li><a class=" {{ areActiveRoutes(['customers.review'], 'active') }}" href="{{ route('customers.review') }}">
                                         {{ localize('Review') }}</a></li>
                                 </ul>
                             </li class="mt-2 mb-2">
@@ -172,7 +172,7 @@
                                 <span class="me-1"><i class="fa-solid fa-tag"></i></span>
                                 {{ localize('Event') }}</a>
                                 <ul class="pl-4">
-                                    <li><a class="text-dark" href="{{ route('customers.event') }}">Event List</a></li>
+                                    <li><a class=" {{ areActiveRoutes(['customers.event'], 'active') }}" href="{{ route('customers.event') }}">Event List</a></li>
                                 </ul>
                             </li>
                         @else
