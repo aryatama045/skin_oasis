@@ -37,8 +37,8 @@
                                 $menus = json_decode(getSetting('header_menu_links')) ?? [];
                             @endphp
 
-                            @foreach ($menus as $menuKey => $menuItem)
-                                <li <?php if(request()->is($menuItem)) { 'class="active"'; } ?> >
+                            @foreach ($menus as $menuKey => $menuItem) dd($menuItem)
+                                <li <?php if($menuItem == url()->current() ){ 'class="active"'; } ?> >
                                     <a href="{{ $menuItem }}">{{ localize($labels[$menuKey]) }}</a>
                                 </li>
                             @endforeach
