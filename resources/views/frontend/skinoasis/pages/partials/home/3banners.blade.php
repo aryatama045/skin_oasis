@@ -12,7 +12,7 @@
             </div>
 
             <div class="col-md-7 p-md-0">
-                <div class="content-left wow animate__animated animate__fadeInLeft" data-wow-delay=".1s">
+                <div class="content-left wow animate__animated animate__fadeInLeft" data-wow-delay=".0s">
                     <div class="heading mt-3">
                         <h4 class="title mt-lg-6">Discover all your skin needs through time-efficient skin check system. Try it now!</h4>
 

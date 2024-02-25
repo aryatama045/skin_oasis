@@ -9,12 +9,12 @@
                 backed-up with high knowledge in natural ingredients and headmost technologies,
             </h2><!-- End .entry-title -->
 
-            <div class="entry-content mt-lg-6 wow animate__animated animate__fadeInUp" data-wow-delay=".1s">
+            <div class="entry-content mt-lg-6 wow animate__animated animate__fadeInUp" data-wow-delay=".0s">
                 <p>We present you the list of extremely powerful effect but also delicate products.</p>
             </div><!-- End .entry-content -->
         </div>
 
-        <div class="heading-fav heading-center mb-5  wow animate__animated animate__fadeInUp" data-wow-delay=".2s">
+        <div class="heading-fav heading-center mb-5  wow animate__animated animate__fadeInUp" data-wow-delay=".0s">
             <h4 class="subtitle text-uppercase mb-4">
                 {{ localize('Products Favorite') }}
             </h4>
@@ -36,7 +36,7 @@
             </ul>
         </div>
 
-        <div class="tab-content tab-content-carousel  wow animate__animated animate__fadeInUp" data-wow-delay=".2s">
+        <div class="tab-content tab-content-carousel  wow animate__animated animate__fadeInUp" data-wow-delay=".0s">
             <div class="tab-pane p-0 fade show active" id="arrival-all" role="tabpanel">
                 <div class="owl-carousel  carousel-equal-height owl-simple carousel-with-shadow  cols-lg-4 cols-md-3 cols-2" data-toggle="owl"
                     data-owl-options='{

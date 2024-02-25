@@ -1,5 +1,5 @@
 <!-- IG Feed -->
-<div class="bg-lighter pt-5 pb-5 animate__animated animate__fadeUp animate__slow">
+<div class="bg-lighter pt-5 pb-5 wow animate__animated animate__fadeInUp" data-wow-delay=".0s">
     <div class="container">
         <div class="heading-ig text-center">
             <h4>Follow us on Instagram</h4><!-- End .title -->
