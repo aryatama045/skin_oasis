@@ -23789,7 +23789,6 @@ body {
 .category-dropdown-menu li a {
     display: block;
     color: #5d6374;
-    font-weight: 500;
     font-size: 14px;
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
@@ -23813,7 +23812,6 @@ body {
 .gshop-navmenu ul li a {
     display: inline-block;
     padding: 24px 15px;
-    font-weight: 500;
     color: #5d6374;
     font-size: 15px;
 }
@@ -23945,7 +23943,6 @@ body {
     display: block;
     color: #5d6374;
     font-size: 15px;
-    font-weight: 500;
     padding: 12px 15px;
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
@@ -24001,7 +23998,6 @@ body {
 }
 .apt_cart_box ul li .items-content .products_meta .count {
     font-size: 13px;
-    font-weight: 500;
 }
 .apt_cart_box ul li .remove_cart_btn {
     color: rgba(255, 4, 6, 0.5);
@@ -24286,7 +24282,6 @@ body {
 }
 .btn-secondary {
     color: #fff;
-    font-weight: 500;
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
 }
@@ -25466,7 +25461,6 @@ body {
 }
 .sidebar-table td {
     padding: 8px 0;
-    font-weight: 500;
 }
 .sidebar-spacer {
     border: 1px solid #e2e2e2;
@@ -25531,7 +25525,6 @@ body {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
-    font-weight: 500;
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
 }
@@ -25551,7 +25544,6 @@ body {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
-    font-weight: 500;
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
 }
@@ -25652,7 +25644,6 @@ body {
     display: block;
     padding: 10px 0;
     color: #5d6374;
-    font-weight: 500;
     font-family: "Inter", sans-serif;
     border-bottom: 1px solid rgba(233, 233, 233, 0.3);
 }
@@ -26612,7 +26603,6 @@ body {
     border-radius: 3px;
     color: #5d6374;
     font-size: 14px;
-    font-weight: 500;
     max-width: 56px;
 }
 .product-qty {
@@ -26775,7 +26765,6 @@ body {
 }
 .checkout-radio-link {
     color: #4f46e5;
-    font-weight: 500;
 }
 .checkout-radio-link.border-left {
     position: relative;
@@ -27061,7 +27050,6 @@ blockquote::before {
     border-radius: 3px;
     display: inline-block;
     font-size: 14px;
-    font-weight: 500;
     color: #5d6374;
 }
 .tags-list a:hover {
@@ -27143,7 +27131,6 @@ blockquote::before {
     right: 0;
     top: 0;
     font-size: 12px;
-    font-weight: 500;
 }
 .comments_list li .reply-btn {
     color: #191d28;
