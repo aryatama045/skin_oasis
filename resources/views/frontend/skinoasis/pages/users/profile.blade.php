@@ -111,7 +111,7 @@
     <div class="container mt-8">
         <div class="row">
 
-            <div class="col-lg-12">
+            <div class="col-10 d-flex justify-content-center">
                 
                 <div class="update-profile bg-white py-5 px-4">
                     <h6 class="mb-4">{{ localize('Update Profile') }}</h6>
