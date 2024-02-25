@@ -114,7 +114,7 @@
             <div class="col-md-8 offset-md-2 rounded shadow-box bg-white p-4">
                 
                 <div class="update-profile bg-white py-5 px-4">
-                    <h6 class="mb-4">{{ localize('Update Profile') }}</h6>
+                    <h3 class="mb-4">{{ localize('Update Profile') }}</h3>
                     <form class="profile-form" action="{{ route('customers.updateProfile') }}" method="POST"
                         enctype="multipart/form-data">
                         @csrf
@@ -149,12 +149,12 @@
                                 </div>
                             </div>
                         </div>
-                        <button type="submit" class="btn btn-primary mt-6">{{ localize('Update Profile') }}</button>
+                        <button type="submit" class="btn btn-rounded btn-sm text-uppercase btn-outline-green-dark mt-6">{{ localize('Update Profile') }}</button>
                     </form>
                 </div>
 
                 <div class="change-password bg-white py-5 px-4 mt-4 rounded">
-                    <h6 class="mb-4">{{ localize('Change Password') }}</h6>
+                    <h3 class="mb-4">{{ localize('Change Password') }}</h3>
                     <form class="password-reset-form" action="{{ route('customers.updateProfile') }}" method="POST">
                         @csrf
                         <input type="hidden" name="type" value="password">
@@ -172,7 +172,7 @@
                                 </div>
                             </div>
                         </div>
-                        <button type="submit" class="btn btn-primary mt-6">{{ localize('Change Password') }}</button>
+                        <button type="submit" class="btn btn-rounded btn-sm text-uppercase btn-outline-green-dark mt-6">{{ localize('Change Password') }}</button>
                     </form>
                 </div>
             
