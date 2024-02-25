@@ -135,10 +135,12 @@
 
                             <div class="tab-pane fade" id="tab-22" role="tabpanel" aria-labelledby="tab-22-tab">
                                 <!-- Video -->
+                                @include('frontend.skinoasis.pages.users.content.feedVideo')
                             </div>
 
                             <div class="tab-pane fade" id="tab-23" role="tabpanel" aria-labelledby="tab-23-tab">
                                 <!-- Review -->
+                                @include('frontend.skinoasis.pages.users.content.reviewList')
                             </div>
 
                             <div class="tab-pane fade" id="tab-24" role="tabpanel" aria-labelledby="tab-24-tab">
