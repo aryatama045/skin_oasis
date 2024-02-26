@@ -22,7 +22,7 @@
     <div class="d-flex justify-content-end text-center py-1">
         <div>
             <a href="{{ route('customers.profile') }}"
-                class="btn btn-sm text-capitalize btn-outline-green-skin d-xs-none btn-block">
+                class="btn btn-sm text-capitalize btn-outline-green-skin btn-block">
                 Edit profile</a>
         </div>
     </div>
