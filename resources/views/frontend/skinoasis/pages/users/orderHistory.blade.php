@@ -23,7 +23,7 @@
                     <div class="container">
 
                     @forelse ($orders as $order)
-                        <article class="entry entry-list mb-2">
+                        <article class="entry entry-list mb-5 border-down">
                             <div class="row border-down align-items-center">
                                 <div class="col-md-6">
                                 {{ getSetting('order_code_prefix') }}{{ $order->orderGroup->order_code }} <span>{{ date('d M Y', strtotime($order->created_at)) }}</span> <br>
