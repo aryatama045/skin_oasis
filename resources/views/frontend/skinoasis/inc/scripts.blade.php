@@ -29,7 +29,6 @@
 <!-- Main JS File -->
 
 <script src="{{ staticAsset('frontend/skinoasis/assets/main.js') }}"></script>
-
 <script src="{{ staticAsset('frontend/skinoasis/assets/js/main.js') }}"></script>
 <script src="{{ staticAsset('frontend/skinoasis/assets/js/main.min.js') }}"></script>
 
@@ -40,7 +39,6 @@
 <script src="{{ staticAsset('frontend/common/js/toastr.min.js') }}"></script>
 <script src="{{ staticAsset('frontend/common/js/select2.js') }}"></script>
 <script src="{{ staticAsset('frontend/default/assets/js/app.js') }}"></script>
-
 <script src="{{ staticAsset('frontend/skinoasis/assets/js/demos/demo-18.js') }}"></script>
 
 
@@ -105,6 +103,77 @@
                 }
             });
         }
+
+        // Masonry / Grid layout fnction
+        var layoutInit = function( container, selector, space ) {
+            $(container).each(function () {
+                var $this = $(this);
+
+                $this.isotope({
+                    itemSelector: selector,
+                    layoutMode: ( $this.data('layout') ? $this.data('layout'): 'masonry' ),
+                    masonry: {
+                        columnWidth: space
+                    }
+                });
+            });
+        }
+
+        var isotopeFilter = function( filterNav, container) {
+            $(filterNav).find('a').on('click', function(e) {
+                var $this = $(this),
+                    filter = $this.attr('data-filter');
+
+                // Remove active class
+                $(filterNav).find('.active').removeClass('active');
+
+                // Init filter
+                $(container).isotope({
+                    filter: filter,
+                    transitionDuration: '0.7s'
+                });
+
+                // Add active class
+                $this.closest('li').addClass('active');
+                e.preventDefault();
+            });
+        }
+
+        /* Masonry / Grid Layout & Isotope Filter for blog/portfolio etc... */
+        if ( typeof imagesLoaded === 'function' && $.fn.isotope) {
+            // Portfolio
+            $('.portfolio-container').imagesLoaded(function () {
+                // Portfolio Grid/Masonry
+                layoutInit( '.portfolio-container', '.portfolio-item' ); // container - selector
+                // Portfolio Filter
+                isotopeFilter( '.portfolio-filter',  '.portfolio-container'); //filterNav - .container
+            });
+
+            // Blog
+            $('.entry-container').imagesLoaded(function () {
+                // Blog Grid/Masonry
+                layoutInit( '.entry-container', '.entry-item' ); // container - selector
+                // Blog Filter
+                isotopeFilter( '.entry-filter',  '.entry-container'); //filterNav - .container
+            });
+
+            // Product masonry product-masonry.html
+            $('.product-gallery-masonry').imagesLoaded(function () {
+                // Products Grid/Masonry
+                layoutInit( '.product-gallery-masonry', '.product-gallery-item' ); // container - selector
+            });
+
+            // Products - Demo 11
+            $('.products-container').imagesLoaded(function () {
+                // Products Grid/Masonry
+                layoutInit( '.products-container', '.product-item' ); // container - selector
+                // Product Filter
+                isotopeFilter( '.product-filter',  '.products-container'); //filterNav - .container
+            });
+
+            layoutInit('.grid', '.grid-item', '.grid-space');
+        }
+
     });
 
     // tooltip
@@ -112,7 +181,7 @@
         $('[data-bs-toggle="tooltip"]').tooltip();
     });
 
-    //isotop filter grid 
+    //isotop filter grid
     function initIsotop() {
         var $filter_grid = $(".filter_group").isotope({});
         $(".filter-btns").on("click", "button", function() {
@@ -125,75 +194,6 @@
         });
     }
 
-    // Masonry / Grid layout fnction
-	var layoutInit = function( container, selector, space ) {
-		$(container).each(function () {
-            var $this = $(this);
-
-            $this.isotope({
-                itemSelector: selector,
-                layoutMode: ( $this.data('layout') ? $this.data('layout'): 'masonry' ),
-                masonry: {
-                    columnWidth: space
-                }
-            });
-        });
-	}
-
-	var isotopeFilter = function( filterNav, container) {
-		$(filterNav).find('a').on('click', function(e) {
-			var $this = $(this),
-				filter = $this.attr('data-filter');
-
-			// Remove active class
-			$(filterNav).find('.active').removeClass('active');
-
-			// Init filter
-			$(container).isotope({
-				filter: filter,
-				transitionDuration: '0.7s'
-			});
-
-			// Add active class
-			$this.closest('li').addClass('active');
-			e.preventDefault();
-		});
-	}
-
-    /* Masonry / Grid Layout & Isotope Filter for blog/portfolio etc... */
-    if ( typeof imagesLoaded === 'function' && $.fn.isotope) {
-        // Portfolio
-        $('.portfolio-container').imagesLoaded(function () {
-            // Portfolio Grid/Masonry
-            layoutInit( '.portfolio-container', '.portfolio-item' ); // container - selector
-            // Portfolio Filter
-            isotopeFilter( '.portfolio-filter',  '.portfolio-container'); //filterNav - .container
-        });
-
-        // Blog
-        $('.entry-container').imagesLoaded(function () {
-            // Blog Grid/Masonry
-            layoutInit( '.entry-container', '.entry-item' ); // container - selector
-            // Blog Filter
-            isotopeFilter( '.entry-filter',  '.entry-container'); //filterNav - .container
-        });
-
-        // Product masonry product-masonry.html
-        $('.product-gallery-masonry').imagesLoaded(function () {
-            // Products Grid/Masonry
-            layoutInit( '.product-gallery-masonry', '.product-gallery-item' ); // container - selector
-        });
-
-        // Products - Demo 11
-        $('.products-container').imagesLoaded(function () {
-            // Products Grid/Masonry
-            layoutInit( '.products-container', '.product-item' ); // container - selector
-            // Product Filter
-            isotopeFilter( '.product-filter',  '.products-container'); //filterNav - .container
-        });
-
-        layoutInit('.grid', '.grid-item', '.grid-space');
-    }
 
     // copy coupon code
     $(function() {
