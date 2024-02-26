@@ -29,11 +29,11 @@
                                     AUSEGZZNL <span>29 Des 2023</span> <br>
                                     <span>1 item purchased</span>
                                 </div>
-                                <div class="col-md-4">
+                                <div class="col-md-3">
                                     Order Status <br>
                                     <span>Cancelled</span>
                                 </div>
-                                <div class="col-md-4">
+                                <div class="col-md-3">
                                     Total Price <br>
                                     <h3 class="text-dark">Rp. 528.750</h3>
                                 </div>
@@ -76,7 +76,7 @@
                                     </div><!-- End .entry-body -->
                                 </div><!-- End .col-md-8 -->
 
-                                <div class="col-md-4">
+                                <div class="col-md-3">
                                     <div class="entry-body">
                                         <h2 class="entry-title">
                                             <a href="single.html">Cras ornare tristique elit.</a>
@@ -93,6 +93,8 @@
                                         </div><!-- End .entry-content -->
                                     </div>
                                 </div>
+
+                                <div class="com-md-3"></div>
 
                             </div><!-- End .row -->
                         </article>
