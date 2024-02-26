@@ -13,7 +13,7 @@
         <img src="{{$avatar}}" alt="Generic placeholder image" class="rounded-circle mb-2 img-profile img-fluid img-thumbnail mt-4 mb-2" style="z-index: 1;">
     </div>
 
-    <div class="profile-name d-none">
+    <div class="profile-name d-none d-sm-block">
         <h5 class="text-capitalize mt-0 mb-0">{{ $user->name }}</h5>
         <p class="text-capitalize mt-0 mb-0">Sahabat Skin Oasis</p>
     </div>
