@@ -34,6 +34,7 @@
                             <div class="col-sm-12">
                                 <div class="label-input-field">
                                     <label>{{ localize('Jenis Kelamin') }}</label>
+                                </div>
 
                                     <div class="form-check form-check-inline">
                                         <input class="form-check-input" type="radio" name="jenis_kelamin" id="inlineRadio1" value="P" checked>
@@ -43,7 +44,6 @@
                                         <input class="form-check-input" type="radio" name="jenis_kelamin" id="inlineRadio2" value="L">
                                         <label class="form-check-label" for="inlineRadio2"><span class="text-dark fw-bold">Laki-Laki</span></label>
                                     </div>
-                                </div>
                             </div>
                             <div class="col-sm-12">
                                 <div class="label-input-field">
