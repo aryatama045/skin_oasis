@@ -1,7 +1,7 @@
 <div class="icon-boxes-container">
     <div class="container">
         <div class="row">
-            <div class="col-4 col-sm-4 col-lg-4">
+            <div class="col-12 col-sm-4 col-lg-4">
                 <div class="icon-box-hb icon-box-side">
                     <span class="icon-box-icon text-dark">
                         <i class="icon-rocket"></i>
@@ -13,7 +13,7 @@
                 </div><!-- End .icon-box -->
             </div><!-- End .col-4 col-sm-4 col-lg-4 -->
 
-            <div class="col-4 col-sm-4 col-lg-4">
+            <div class="col-12 col-sm-4 col-lg-4">
                 <div class="icon-box-hb icon-box-side">
                     <span class="icon-box-icon text-dark">
                         <i class="icon-rotate-left"></i>
@@ -26,7 +26,7 @@
                 </div><!-- End .icon-box -->
             </div><!-- End .col-4 col-sm-4 col-lg-4 -->
 
-            <div class="col-4 col-sm-4 col-lg-4">
+            <div class="col-12 col-sm-4 col-lg-4">
                 <div class="icon-box-hb icon-box-side">
                     <span class="icon-box-icon text-dark">
                         <i class="icon-info-circle"></i>
