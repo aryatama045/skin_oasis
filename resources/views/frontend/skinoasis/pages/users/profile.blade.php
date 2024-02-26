@@ -34,8 +34,15 @@
                             <div class="col-sm-12">
                                 <div class="label-input-field">
                                     <label>{{ localize('Jenis Kelamin') }}</label>
-                                    <input type="text" name="jenis_kelamin" placeholder="{{ localize('Jenis Kelamin') }}"
-                                        value="{{ $user->jenis_kelamin }}" required>
+
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="jenis_kelamin" id="inlineRadio1" value="P" checked>
+                                        <label class="form-check-label" for="inlineRadio1"><span class="text-dark fw-bold">Perempuan</span> </label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="jenis_kelamin" id="inlineRadio2" value="L">
+                                        <label class="form-check-label" for="inlineRadio2"><span class="text-dark fw-bold">Laki-Laki</span></label>
+                                    </div>
                                 </div>
                             </div>
                             <div class="col-sm-12">
