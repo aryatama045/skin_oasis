@@ -76,8 +76,15 @@ class CustomerController extends Controller
                 $user->avatar = $mediaFile->id;
             }
 
-            $user->name = $request->name;
-            $user->phone = validatePhone($request->phone);
+            $user->name             = $request->name;
+            $user->phone            = validatePhone($request->phone);
+            $user->nama_depan       = $request->nama_depan;
+            $user->nama_belakang    = $request->nama_belakang;
+            $user->jenis_kelamin    = $request->jenis_kelamin;
+            $user->tanggal_lahir    = $request->tanggal_lahir;
+            $user->biodata          = $request->biodata;
+            $user->negara           = $request->negara;
+            $user->kab_kota         = $request->kab_kota;
             $user->save();
             flash(localize('Profile updated successfully'))->success();
             return back();
