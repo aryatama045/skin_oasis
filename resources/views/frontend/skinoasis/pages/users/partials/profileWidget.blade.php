@@ -21,11 +21,10 @@
 <div class="p-4 text-black bg-white" >
     <div class="d-flex justify-content-end text-center py-1">
         <div>
-            <button type="button" class="btn btn-outline-dark" style="z-index: 1;">
-                Edit profile
-            </button>
+            <a href="{{ route('customers.profile') }}"
+                class="btn btn-sm text-capitalize btn-outline-green-skin d-xs-none btn-block">
+                Edit profile</a>
         </div>
     </div>
 </div>
 
-<!-- End profile widget -->
