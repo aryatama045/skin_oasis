@@ -13,7 +13,12 @@
     .profile {
         position: relative;
         margin-left: 8rem;
-        top: 4rem;
+        top: 6rem;
+    }
+    .profile-name {
+        position: relative;
+        margin-left: 2rem;
+        top: 19rem;
     }
     .media-body {
         top: 6rem !important;
