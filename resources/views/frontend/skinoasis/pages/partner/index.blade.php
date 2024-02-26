@@ -86,7 +86,7 @@
 
                             <div class="tab-pane fade" id="partner-join-our-community" role="tabpanel" aria-labelledby="partner-join-our-community">
                                 <div class="product-desc-content">
-                                    <h3 class="text-center">Join Our Community</h3>
+                                    <h3 class="text-center">LET'S BECOME OUR COMMUNITY</h3>
                                     <!-- form Community -->
                                     @include('frontend.skinoasis.pages.partner.inc.joinOurCommunity')
                                     <!-- form Community -->
