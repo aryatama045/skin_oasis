@@ -25,9 +25,18 @@
 
                         <article class="entry entry-list mb-2">
                             <div class="row border-down align-items-center">
-                                <div class="col-md-6">AUSEGZZNL <span>29 Des 2023</span></div>
-                                <div class="col-md-4">Order Status</div>
-                                <div class="col-md-4">Total Price</div>
+                                <div class="col-md-6">
+                                    AUSEGZZNL <span>29 Des 2023</span> <br>
+                                    <span>1 item purchased</span>
+                                </div>
+                                <div class="col-md-4">
+                                    Order Status <br>
+                                    <span>Cancelled</span>
+                                </div>
+                                <div class="col-md-4">
+                                    Total Price <br>
+                                    <h3 class="text-dark">Rp. 528.750</h3>
+                                </div>
                             </div>
 
                             <div class="row align-items-center">
