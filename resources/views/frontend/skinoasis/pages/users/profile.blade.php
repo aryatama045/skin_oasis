@@ -32,7 +32,7 @@
                         </div>
                         <div class="row g-4">
                             <div class="col-sm-12">
-                                <div class="label-input-field">
+                                <div class="mb-2 text-dark fw-bold">
                                     <label>{{ localize('Jenis Kelamin') }}</label>
                                 </div>
 
