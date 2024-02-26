@@ -33,25 +33,80 @@
                         <div class="row g-4">
                             <div class="col-sm-12">
                                 <div class="label-input-field">
-                                    <label>{{ localize('Name') }}</label>
-                                    <input type="text" name="name" placeholder="{{ localize('Your Name') }}"
+                                    <label>{{ localize('Jenis Kelamin') }}</label>
+                                    <input type="text" name="jenis_kelamin" placeholder="{{ localize('Jenis Kelamin') }}"
+                                        value="{{ $user->jenis_kelamin }}" required>
+                                </div>
+                            </div>
+                            <div class="col-sm-12">
+                                <div class="label-input-field">
+                                    <label>{{ localize('Username') }}</label>
+                                    <input type="text" name="name" placeholder="{{ localize('Username') }}"
                                         value="{{ $user->name }}" required>
                                 </div>
                             </div>
+
                             <div class="col-sm-6">
                                 <div class="label-input-field">
-                                    <label>{{ localize('Email Address') }}</label>
-                                    <input type="email" name="email" placeholder="{{ localize('Your Email') }}"
+                                    <label>{{ localize('Nama Depan') }}</label>
+                                    <input type="text" name="nama_depan" placeholder="{{ localize('Nama Depan') }}"
+                                        value="{{ $user->nama_depan }}" required>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="label-input-field">
+                                    <label>{{ localize('Nama Belakang') }}</label>
+                                    <input type="text" name="nama_belakang" placeholder="{{ localize('Nama Belakang') }}"
+                                        value="{{ $user->nama_belakang }}" required>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-12">
+                                <div class="label-input-field">
+                                    <label>{{ localize('Biodata') }}</label>
+                                    <textarea type="text" name="bioadata" required>{{ $user->biodata }}</textarea>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-12">
+                                <div class="label-input-field">
+                                    <label>{{ localize('Tanggal Lahir') }}</label>
+                                    <input type="date" name="tanggal_lahir" placeholder="{{ localize('Tanggal Lahir') }}"
+                                        value="{{ $user->tanggal_lahir }}">
+                                </div>
+                            </div>
+
+                            <div class="col-sm-12">
+                                <div class="label-input-field">
+                                    <label>{{ localize('Email') }}</label>
+                                    <input type="email" name="email" placeholder="{{ localize('Email') }}"
                                         value="{{ $user->email }}" disabled>
                                 </div>
                             </div>
-                            <div class="col-sm-6">
+
+                            <div class="col-sm-12">
                                 <div class="label-input-field">
-                                    <label>{{ localize('Phone') }}</label>
-                                    <input type="text" name="phone" placeholder="{{ localize('Your Phone') }}"
+                                    <label>{{ localize('Nomor Handphone') }}</label>
+                                    <input type="text" name="phone" placeholder="{{ localize('Nomor Handphone') }}"
                                         value="{{ $user->phone }}">
                                 </div>
                             </div>
+
+                            <div class="col-sm-6">
+                                <div class="label-input-field">
+                                    <label>{{ localize('Negara') }}</label>
+                                    <input type="text" name="negara" placeholder="{{ localize('Negara') }}"
+                                        value="{{ $user->negara }}">
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="label-input-field">
+                                    <label>{{ localize('Kab/Kota') }}</label>
+                                    <input type="text" name="kab_kota" placeholder="{{ localize('Kab/Kota') }}"
+                                        value="{{ $user->kab_kota }}">
+                                </div>
+                            </div>
+
                         </div>
                         <button type="submit" class="btn btn-rounded btn-sm text-uppercase btn-outline-green-dark mt-6">{{ localize('Update Profile') }}</button>
                     </form>
