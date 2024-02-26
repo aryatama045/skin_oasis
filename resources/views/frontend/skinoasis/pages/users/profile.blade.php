@@ -15,8 +15,8 @@
     <div class="container mt-8">
         <div class="row">
 
-            <div class="col-md-8 offset-md-2 rounded shadow-box bg-white p-4">
-                
+            <div class="col-md-8 col-10 offset-1 offset-md-2 rounded shadow-box bg-white p-4">
+
                 <div class="update-profile bg-white py-5 px-4">
                     <h3 class="mb-4">{{ localize('Update Profile') }}</h3>
                     <form class="profile-form" action="{{ route('customers.updateProfile') }}" method="POST"
@@ -79,7 +79,7 @@
                         <button type="submit" class="btn btn-rounded btn-sm text-uppercase btn-outline-green-dark mt-6">{{ localize('Change Password') }}</button>
                     </form>
                 </div>
-            
+
             </div>
 
         </div>
