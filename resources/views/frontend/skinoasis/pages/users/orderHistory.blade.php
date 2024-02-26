@@ -43,7 +43,7 @@
                                 <div class="col-md-2">
                                     <figure class="entry-media">
                                         <a href="single.html">
-                                            <img src="assets/images/blog/listing/post-1.jpg" alt="image desc">
+                                            <img src="{{ staticAsset('frontend/skinoasis/assets/images/blog/listing/post-1.jpg') }}" alt="image desc">
                                         </a>
                                     </figure><!-- End .entry-media -->
                                 </div><!-- End .col-md-4 -->
