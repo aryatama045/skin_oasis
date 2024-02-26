@@ -98,4 +98,10 @@
         color: rgba(93, 80, 5, 1);
     }
 
+    .border-down {
+        border: 0;
+        border-bottom: 2px solid black;
+        padding: 1rem;
+    }
+
 </style>

@@ -15,9 +15,10 @@
     <div class="container mt-8">
         <div class="row">
 
-            <div class="col-md-8 offset-md-2 rounded shadow-box bg-white p-4">
-                
-                <div class="recent-orders bg-white rounded py-5">
+            <div class="col-10 offset-1 bg-white p-4">
+                <h3 class="border-down">My Orders</h3>
+
+                <div class="recent-orders rounded shadow-box py-5">
                     <h6 class="mb-4 px-4">{{ localize('Your Orders') }}</h6>
                     <div class="table-responsive">
                         <table class="order-history-table table">
@@ -69,7 +70,7 @@
                         {{ $orders->appends(request()->input())->links() }}
                     </div>
                 </div>
-            
+
             </div>
 
         </div>
