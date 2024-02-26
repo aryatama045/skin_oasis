@@ -6,28 +6,26 @@
     }
 @endphp
 
+
 <!-- Profile widget -->
-<div class="bg-white overflow-hidden">
-    <div class="px-4 pt-0 pb-4 bg-dark">
-        <div class="media align-items-end profile-header">
-            <div class="profile mt-5 mr-8">
-                <img src="{{$avatar}}" alt="img-profile" width="180" class="rounded-circle mb-2 img-profile">
-            </div>
-            <div class="media-body ml-5 mb-5 ">
-                <h2 class="text-capitalize mt-0 mb-0">{{ $user->name }}</h2>
-                <h4 class="text-capitalize mt-2 mb-4">Sahabat Skin Oasis</h4>
-            </div>
+<div class="text-white d-flex flex-row" style="background-color: #000; height:200px;">
+    <div class="profile d-flex flex-column" >
+        <img src="{{$avatar}}" alt="Generic placeholder image" class="rounded-circle mb-2 img-profile img-fluid img-thumbnail mt-4 mb-2" style="z-index: 1;">
+    </div>
+
+    <div class="profile-name">
+        <h5 class="text-capitalize mt-0 mb-0">{{ $user->name }}</h5>
+        <p class="text-capitalize mt-0 mb-0">Sahabat Skin Oasis</p>
+    </div>
+</div>
+<div class="p-4 text-black bg-white" >
+    <div class="d-flex justify-content-end text-center py-1">
+        <div>
+            <button type="button" class="btn btn-outline-dark" style="z-index: 1;">
+                Edit profile
+            </button>
         </div>
     </div>
-
-    <div class="bg-light d-flex justify-content-end text-center">
-        <ul class="list-inline p-5">
-
-            <li class="list-inline-item">
-                <a href="{{ route('customers.profile') }}" class="btn btn-sm text-capitalize btn-outline-green-skin d-xs-none btn-block">Edit profile</a>
-            </li>
-        </ul>
-    </div>
-
 </div>
+
 <!-- End profile widget -->

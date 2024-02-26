@@ -22,10 +22,10 @@
                                 <a class="nav-link active" id="tab-21-tab" data-toggle="tab" href="#tab-21" role="tab" aria-controls="tab-21" aria-selected="true">ARTICLE</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" id="tab-22-tab" data-toggle="tab" href="#tab-22" role="tab" aria-controls="tab-22" aria-selected="false">VIDEO</a>
+                                <a class="nav-link" id="tab-23-tab" data-toggle="tab" href="#tab-23" role="tab" aria-controls="tab-23" aria-selected="false">REVIEW</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" id="tab-23-tab" data-toggle="tab" href="#tab-23" role="tab" aria-controls="tab-23" aria-selected="false">REVIEW</a>
+                                <a class="nav-link" id="tab-22-tab" data-toggle="tab" href="#tab-22" role="tab" aria-controls="tab-22" aria-selected="false">VIDEO</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" id="tab-24-tab" data-toggle="tab" href="#tab-24" role="tab" aria-controls="tab-24" aria-selected="false">PHOTO</a>
@@ -49,9 +49,7 @@
 
                             <div class="tab-pane fade" id="tab-24" role="tabpanel" aria-labelledby="tab-24-tab">
                                 <!-- Photo -->
-                                <div class="container">
-                                    @include('frontend.skinoasis.pages.users.content.feedPhoto')
-                                </div>
+                                @include('frontend.skinoasis.pages.users.content.feedPhoto')
                             </div>
 
                         </div><!-- End .tab-content -->
