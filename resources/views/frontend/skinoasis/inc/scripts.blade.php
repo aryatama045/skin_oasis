@@ -1,6 +1,6 @@
 <!-- Plugins JS File -->
 <script src="{{ staticAsset('frontend/default/assets/js/vendors/jquery-3.6.4.min.js') }}"></script>
-
+<!-- Plugins JS File -->
 <script src="{{ staticAsset('frontend/skinoasis/assets/js/jquery.min.js') }}"></script>
 <script src="{{ staticAsset('frontend/default/assets/js/vendors/jquery-ui.min.js') }}"></script>
 <script src="{{ staticAsset('frontend/skinoasis/assets/js/bootstrap.bundle.min.js') }}"></script>
@@ -25,11 +25,14 @@
 <script src="{{ staticAsset('frontend/default/assets/js/vendors/countdown.min.js') }}"></script>
 <script src="{{ staticAsset('frontend/default/assets/js/vendors/range-slider.js') }}"></script>
 
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
 <!-- Main JS File -->
 
+<script src="{{ staticAsset('frontend/skinoasis/assets/main.js') }}"></script>
 
-
+<script src="{{ staticAsset('frontend/skinoasis/assets/js/main.js') }}"></script>
+<script src="{{ staticAsset('frontend/skinoasis/assets/js/main.min.js') }}"></script>
 
 <script src="{{ staticAsset('frontend/default/assets/js/vendors/counterup.min.js') }}"></script>
 <script src="{{ staticAsset('frontend/default/assets/js/vendors/clipboard.min.js') }}"></script>
@@ -38,12 +41,9 @@
 <script src="{{ staticAsset('frontend/common/js/toastr.min.js') }}"></script>
 <script src="{{ staticAsset('frontend/common/js/select2.js') }}"></script>
 <script src="{{ staticAsset('frontend/default/assets/js/app.js') }}"></script>
+
 <script src="{{ staticAsset('frontend/skinoasis/assets/js/demos/demo-18.js') }}"></script>
 
-<script src="{{ staticAsset('frontend/skinoasis/assets/main.js') }}"></script>
-
-<script src="{{ staticAsset('frontend/skinoasis/assets/js/main.js') }}"></script>
-<script src="{{ staticAsset('frontend/skinoasis/assets/js/main.min.js') }}"></script>
 
 <!--Start of Tawk.to Script-->
 <!-- <script type="text/javascript">
@@ -65,6 +65,8 @@
     // runs when the document is ready
     $(document).ready(function() {
         initIsotop();
+
+        AOS.init();
 
         // zoom
         if ( $.fn.elevateZoom ) {
@@ -177,6 +179,7 @@
             layoutInit('.grid', '.grid-item', '.grid-space');
         }
 
+
     });
 
     // tooltip
@@ -184,7 +187,7 @@
         $('[data-bs-toggle="tooltip"]').tooltip();
     });
 
-    //isotop filter grid
+    //isotop filter grid 
     function initIsotop() {
         var $filter_grid = $(".filter_group").isotope({});
         $(".filter-btns").on("click", "button", function() {
