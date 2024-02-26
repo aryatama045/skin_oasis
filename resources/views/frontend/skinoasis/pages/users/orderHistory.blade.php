@@ -20,6 +20,75 @@
 
                 <div class="recent-orders rounded shadow-box py-5">
                     <h6 class="mb-4 px-4">{{ localize('Your Orders') }}</h6>
+
+                    <div class="container">
+
+                        <article class="entry entry-list mb-2">
+                            <div class="row border-down align-items-center">
+                                <div class="col-md-6">AUSEGZZNL <span>29 Des 2023</span></div>
+                                <div class="col-md-4">Order Status</div>
+                                <div class="col-md-4">Total Price</div>
+                            </div>
+
+                            <div class="row align-items-center">
+                                <div class="col-md-2">
+                                    <figure class="entry-media">
+                                        <a href="single.html">
+                                            <img src="assets/images/blog/listing/post-1.jpg" alt="image desc">
+                                        </a>
+                                    </figure><!-- End .entry-media -->
+                                </div><!-- End .col-md-4 -->
+
+                                <div class="col-md-4">
+                                    <div class="entry-body">
+                                        <div class="entry-meta">
+                                            <span class="entry-author">
+                                                by <a href="#">John Doe</a>
+                                            </span>
+                                            <span class="meta-separator">|</span>
+                                            <a href="#">Nov 22, 2018</a>
+                                            <span class="meta-separator">|</span>
+                                            <a href="#">2 Comments</a>
+                                        </div><!-- End .entry-meta -->
+
+                                        <h2 class="entry-title">
+                                            <a href="single.html">Cras ornare tristique elit.</a>
+                                        </h2><!-- End .entry-title -->
+
+                                        <div class="entry-cats">
+                                            in <a href="#">Lifestyle</a>,
+                                            <a href="#">Shopping</a>
+                                        </div><!-- End .entry-cats -->
+
+                                        <div class="entry-content">
+                                            <p>Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Suspendisse potenti. Sed egestas ... </p>
+                                            <a href="single.html" class="read-more">Continue Reading</a>
+                                        </div><!-- End .entry-content -->
+                                    </div><!-- End .entry-body -->
+                                </div><!-- End .col-md-8 -->
+
+                                <div class="col-md-4">
+                                    <div class="entry-body">
+                                        <h2 class="entry-title">
+                                            <a href="single.html">Cras ornare tristique elit.</a>
+                                        </h2><!-- End .entry-title -->
+
+                                        <div class="entry-cats">
+                                            in <a href="#">Lifestyle</a>,
+                                            <a href="#">Shopping</a>
+                                        </div><!-- End .entry-cats -->
+
+                                        <div class="entry-content">
+                                            <p>Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Suspendisse potenti. Sed egestas ... </p>
+                                            <a href="single.html" class="read-more">Continue Reading</a>
+                                        </div><!-- End .entry-content -->
+                                    </div>
+                                </div>
+
+                            </div><!-- End .row -->
+                        </article>
+                    </div>
+
                     <div class="table-responsive">
                         <table class="order-history-table table">
                             <tbody>
