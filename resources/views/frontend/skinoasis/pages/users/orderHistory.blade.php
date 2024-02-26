@@ -19,23 +19,23 @@
                 <h3 class="border-down">My Orders</h3>
 
                 <div class="recent-orders rounded shadow-box py-5">
-                    <h6 class="mb-4 px-4">{{ localize('Your Orders') }}</h6>
 
                     <div class="container">
 
+                    @forelse ($orders as $order)
                         <article class="entry entry-list mb-2">
                             <div class="row border-down align-items-center">
                                 <div class="col-md-6">
-                                    AUSEGZZNL <span>29 Des 2023</span> <br>
-                                    <span>1 item purchased</span>
+                                {{ getSetting('order_code_prefix') }}{{ $order->orderGroup->order_code }} <span>{{ date('d M Y', strtotime($order->created_at)) }}</span> <br>
+                                    <span>{{ $order->orderItems()->count() }} item purchased</span>
                                 </div>
                                 <div class="col-md-3">
                                     Order Status <br>
-                                    <span>Cancelled</span>
+                                    <span>{{ ucwords(str_replace('_', ' ', $order->delivery_status)) }}</span>
                                 </div>
                                 <div class="col-md-3">
                                     Total Price <br>
-                                    <h3 class="text-dark">Rp. 528.750</h3>
+                                    <h3 class="text-dark">{{ formatPrice($order->orderGroup->grand_total_amount) }}</h3>
                                 </div>
                             </div>
 
@@ -98,6 +98,8 @@
 
                             </div><!-- End .row -->
                         </article>
+                    @empty
+                    @endforelse
                     </div>
 
                     <div class="table-responsive">
