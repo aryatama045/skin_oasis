@@ -105,12 +105,12 @@
 
                                     <div class="entry-content">
                                         <h3>Payment Method</h3>
-                                        <p>Sed pretium</p>
+                                        <p class="mb-2">{{ ucwords(str_replace('_', ' ', $order->orderGroup->payment_method)) }}</p>
                                     </div>
 
                                     <div class="entry-content">
                                         <h3>Delivery Address</h3>
-                                        <p class="mb-0">{{ optional($shippingAddress)->address }},
+                                        <p class="mb-2">{{ optional($shippingAddress)->address }},
                                             {{ optional(optional($shippingAddress)->city)->name }},
                                             {{ optional(optional($shippingAddress)->state)->name }},
                                             {{ optional(optional($shippingAddress)->country)->name }}</p>
@@ -118,7 +118,12 @@
 
                                 </div>
 
-                                <div class="com-md-3"></div>
+                                <div class="com-md-3">
+                                    <div class="entry-content">
+                                        <h3>Subtotal</h3>
+                                        <p class="mb-2">{{ formatPrice($orderGroup->sub_total_amount) }}</p>
+                                    </div>
+                                </div>
 
                             </div>
                             @empty
