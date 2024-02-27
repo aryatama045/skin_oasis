@@ -56,8 +56,8 @@
                                             <img src="{{ uploadedAsset($product->thumbnail_image) }}"
                                             alt="{{ $product->collectLocalization('name') }}">
                                         </a>
-                                    </figure><!-- End .entry-media -->
-                                </div><!-- End .col-md-4 -->
+                                    </figure>
+                                </div>
 
                                 <div class="col-md-4">
                                     <div class="entry-body">
@@ -79,6 +79,8 @@
                                                 </span>
                                             @endforeach
                                         </div>
+
+                                        <h4 class="text-dark">{{ formatPrice($item->unit_price) }}</h4>
 
                                         <div class="entry-meta">
                                             <span class="entry-author">
