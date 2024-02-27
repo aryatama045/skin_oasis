@@ -96,6 +96,7 @@
                                 </div>
 
                                 <div class="col-md-3">
+                                    @if ($loop->last)
                                     <div class="entry-body">
                                         @php
                                             $shippingAddress = $order->orderGroup->shippingAddress;
@@ -115,10 +116,12 @@
                                                 {{ optional(optional($shippingAddress)->country)->name }}</p>
                                         </div>
                                     </div>
+                                    @endif
                                 </div>
 
                                 <div class="col-md-3">
                                     <div class="entry-body">
+                                        @if ($loop->last)
                                         <div class="entry-content">
                                             <h3>Shipping Cost</h3>
                                             <p class="mb-2">{{ formatPrice($order->orderGroup->total_shipping_cost) }}</p>
@@ -140,6 +143,7 @@
                                             <h3>Total</h3>
                                             <p class="mb-2">{{ formatPrice($order->orderGroup->grand_total_amount) }}</p>
                                         </div>
+                                        @endif
 
                                     </div>
                                 </div>
