@@ -38,7 +38,7 @@
                     <a href="{{ route('home.blogs.show', $blog->slug) }}">
                         <i class="icon-eye-o"></i> Read More</a>
                 </div>
-                <p class="text-dark fw-bolder"> {{ optional($blog->blog_category)->name }} </p>
+                <p class="text-dark fw-bolder mt-lg-2 p-3"> {{ optional($blog->blog_category)->name }} </p>
             </div>
             @endforeach
         </div><!-- End .owl-carousel -->
