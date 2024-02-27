@@ -24798,6 +24798,7 @@ body {
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
     font-family: 'avenir lt pro' !important;
+    font-size: 16px !important;
 }
 .vertical-product-card .card-content .card-title:hover {
     color: #546d53;
