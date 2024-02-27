@@ -28396,6 +28396,10 @@ img.col-md-8.float-md-end.mb-3.ms-md-3 {
     object-fit: cover;
 }
 
+.product-title{
+    font-family: 'avenit lt pro' !important;
+}
+
 /* width */
 ::-webkit-scrollbar {
     width: 10px;
