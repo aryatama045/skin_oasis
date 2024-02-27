@@ -19,7 +19,7 @@
     <!--Filter by Categories-->
     <div class="sidebar-widget category-widget bg-white py-5 px-4 border-top mobile-menu-wrapper scrollbar h-200px">
         <div class="widget-title d-flex">
-            <h4 class="mb-0 flex-shrink-0">{{ localize('Categories') }}</h4>
+            <h4 class="mb-0 flex-shrink-0 text-uppercase">{{ localize('Categories') }}</h4>
         </div>
         <ul class="widget-nav mt-4">
 
@@ -33,7 +33,7 @@
                 @endphp
                 <li>
                     <a href="{{ route('products.allproduct') }}?&category_id={{ $category->id }}"
-                        class="d-flex justify-content-between align-items-center">
+                        class="d-flex justify-content-between align-items-center text-capitalize">
                         {{ $category->collectLocalization('name') }}
                         <h5 class="fw-bold total-count">
                             {{ $productsCount }}
@@ -49,7 +49,7 @@
     <!--Filter by Brand-->
     <div class="sidebar-widget category-widget bg-white py-5 px-4 border-top mobile-menu-wrapper scrollbar h-200px">
         <div class="widget-title d-flex">
-            <h4 class="mb-0 flex-shrink-0">Brand</h4>
+            <h4 class="mb-0 flex-shrink-0 text-uppercase">Brand</h4>
         </div>
         <ul class="widget-nav mt-4">
 
@@ -59,7 +59,7 @@
             @foreach ($brands as $merk)
                 <li>
                     <a href="{{ route('products.index') }}?&brand_id={{ $merk->id }}"
-                        class="d-flex justify-content-between align-items-center">{{ $merk->collectLocalization('name') }}
+                        class="d-flex justify-content-between align-items-center text-capitalize">{{ $merk->collectLocalization('name') }}
                     </a>
                 </li>
             @endforeach
