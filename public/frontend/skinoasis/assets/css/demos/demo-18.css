@@ -11,6 +11,14 @@ p {
   color: black;
 }
 
+.ls-1px {
+  letter-spacing: 1px;
+}
+
+.ls-2px {
+  letter-spacing: 2px;
+}
+
 .mb-md-12 {
   margin-bottom: 5rem !important;
 }

@@ -25376,6 +25376,7 @@ body {
     font-size: 18px;
     font-weight: 600;
     font-family: 'avenir lt pro';
+    letter-spacing: 1px;
 }
 .widget-nav li a .total-count {
     min-width: 32px;
