@@ -10,7 +10,7 @@
             </h2><!-- End .entry-title -->
 
             <div class="entry-content mt-lg-6" data-aos="fade-up">
-                <p style="font-size:20px !important;">We present you the list of extremely powerful effect but also delicate products.</p>
+                <p style="font-size:22px !important;">We present you the list of extremely powerful effect but also delicate products.</p>
             </div><!-- End .entry-content -->
         </div>
 
