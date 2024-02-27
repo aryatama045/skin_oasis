@@ -28298,8 +28298,8 @@ img.col-md-8.float-md-end.mb-3.ms-md-3 {
     justify-content: left;
 }
 .btn-product.btn-cart:hover {
-    color: #fff;
-    background-color: #4c634675;
+    color: #cd2626;
+    /* background-color: #4c634675; */
 }
 
 
