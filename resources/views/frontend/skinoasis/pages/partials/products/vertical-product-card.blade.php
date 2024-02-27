@@ -30,7 +30,7 @@ animate__animated animate__fadeInUp animate__delay-2s">
     </div>
     <div class="card-content">
         @if (getSetting('enable_reward_points') == 1)
-            <span class="fs-xxs fw-bold" data-bs-toggle="tooltip" data-bs-placement="top"
+            <span class="fs-sm fw-bold" data-bs-toggle="tooltip" data-bs-placement="top"
                 data-bs-title="{{ localize('Reward Points') }}">
                 <i class="fas fa-medal"></i> {{ $product->reward_points }}
             </span>
@@ -40,7 +40,7 @@ animate__animated animate__fadeInUp animate__delay-2s">
             @if ($product->categories()->count() > 0)
                 @foreach ($product->categories as $category)
                     <a href="{{ route('products.index') }}?&category_id={{ $category->id }}"
-                        class="d-inline-block text-muted fs-xxs">{{ $category->collectLocalization('name') }}
+                        class="d-inline-block text-muted fs-sm">{{ $category->collectLocalization('name') }}
                         @if (!$loop->last)
                             ,
                         @endif
