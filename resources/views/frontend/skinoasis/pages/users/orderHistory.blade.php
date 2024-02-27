@@ -39,11 +39,22 @@
                                 </div>
                             </div>
 
+                            @php
+                                    $order_id = $order->id;
+                                    $detail_order = \App\Models\OrderItem::where('order_id', $order_id)->get();
+                            @endphp
+
+                            @forelse ($detail_order as $key => $item)
+
+                            @php
+                                $product = $item->product_variation->product;
+                            @endphp
                             <div class="row align-items-center">
                                 <div class="col-md-2">
                                     <figure class="entry-media">
                                         <a href="single.html">
-                                            <img src="{{ staticAsset('frontend/skinoasis/assets/images/blog/listing/post-1.jpg') }}" alt="image desc">
+                                            <img src="{{ uploadedAsset($product->thumbnail_image) }}"
+                                            alt="{{ $product->collectLocalization('name') }}">
                                         </a>
                                     </figure><!-- End .entry-media -->
                                 </div><!-- End .col-md-4 -->
@@ -61,7 +72,7 @@
                                         </div><!-- End .entry-meta -->
 
                                         <h2 class="entry-title">
-                                            <a href="single.html">Cras ornare tristique elit.</a>
+                                            <a href="single.html">{{ $product->collectLocalization('name') }}</a>
                                         </h2><!-- End .entry-title -->
 
                                         <div class="entry-cats">
@@ -97,6 +108,8 @@
                                 <div class="com-md-3"></div>
 
                             </div><!-- End .row -->
+                            @empty
+                            @endforelse
                         </article>
                     @empty
                     @endforelse
