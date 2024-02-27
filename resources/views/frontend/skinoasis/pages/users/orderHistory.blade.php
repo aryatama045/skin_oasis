@@ -60,9 +60,9 @@
                                 <div class="col-md-4">
                                     <div class="entry-body">
 
-                                        <h2 class="entry-title mt-2">
+                                        <h3 class="entry-title mt-2">
                                             <a href="single.html">{{ $product->collectLocalization('name') }}</a>
-                                        </h2>
+                                        </h3>
 
                                         <div class="entry-cats">
                                             @foreach (generateVariationOptions($item->product_variation->combinations) as $variation)
@@ -98,13 +98,29 @@
                                 </div>
 
                                 <div class="col-md-3">
+                                    @php
+                                        $shippingAddress = $order->orderGroup->shippingAddress;
+                                        $billingAddress = $order->orderGroup->billingAddress;
+                                    @endphp
+
+                                    <div class="entry-content">
+                                        <h3>Payment Method</h3>
+                                        <p>Sed pretium</p>
+                                    </div>
+
+                                    <div class="entry-content">
+                                        <h3>Delivery Address</h3>
+                                        <p class="mb-0">{{ optional($shippingAddress)->address }},
+                                            {{ optional(optional($shippingAddress)->city)->name }},
+                                            {{ optional(optional($shippingAddress)->state)->name }},
+                                            {{ optional(optional($shippingAddress)->country)->name }}</p>
+                                    </div>
 
                                 </div>
 
                                 <div class="com-md-3"></div>
 
                             </div>
-                            <hr>
                             @empty
                             @endforelse
                         </article>
