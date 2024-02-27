@@ -28409,6 +28409,10 @@ img.col-md-8.float-md-end.mb-3.ms-md-3 {
     font-family: 'avenit lt pro' !important;
 }
 
+li.nav-item {
+    border-right: 2px solid black;
+}
+
 /* width */
 ::-webkit-scrollbar {
     width: 10px;
