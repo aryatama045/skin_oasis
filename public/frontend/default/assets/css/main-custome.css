@@ -28421,6 +28421,12 @@ li.nav-item {
     font-family: "avenir lt pro" !important;
 }
 
+
+.footer-bottom .social-icon {
+    font-size: 2.4rem !important;
+}
+
+
 /* width */
 ::-webkit-scrollbar {
     width: 10px;
