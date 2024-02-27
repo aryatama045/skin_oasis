@@ -28411,6 +28411,9 @@ img.col-md-8.float-md-end.mb-3.ms-md-3 {
 
 li.nav-item {
     border-right: 2px solid black;
+    margin-left: 1rem !important;
+    margin-right: 1rem !important;
+
 }
 
 /* width */
