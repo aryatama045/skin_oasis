@@ -28295,11 +28295,11 @@ img.col-md-8.float-md-end.mb-3.ms-md-3 {
     padding-bottom: 1rem;
     margin: 5px;
     transition: all .35s ease;
+    justify-content: left;
 }
 .btn-product.btn-cart:hover {
     color: #fff;
     background-color: #4c634675;
-    justify-content: left;
 }
 
 
