@@ -58,7 +58,7 @@
                                 </div>
 
                                 <div class="col-md-4">
-                                    <div class="entry-body">
+                                    <div class="entry-body p-5">
                                         <h3 class="entry-title mt-2">
                                             <a href="single.html">{{ $product->collectLocalization('name') }}</a>
                                         </h3>
