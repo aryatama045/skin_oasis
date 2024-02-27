@@ -28316,6 +28316,7 @@ img.col-md-8.float-md-end.mb-3.ms-md-3 {
     font-size: 1.3rem !important;
     font-weight: 100;
     --bs-btn-border-radius: 0.6rem;
+    letter-spacing: 2px;
 }
 
 .btn-outline-green-dark:hover {

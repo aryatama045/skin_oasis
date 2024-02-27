@@ -533,6 +533,7 @@ p {
   max-width: 100%;
   padding: 3.5rem 0 2rem;
   font-family: "avenir lt pro", "avenir" !important;
+  letter-spacing: 2px;
 }
 .deal-content .btn {
   padding-top: 0.85rem;
@@ -1024,11 +1025,13 @@ p {
   width: 35%;
 }
 .gallery .content-right {
-  margin-left: -8rem;
+  margin-left: -4rem;
+  margin-top: 2.3rem;
 }
 @media screen and (min-width: 768px) {
   .gallery .content-right {
-    margin-left: -8rem;
+    margin-left: -4rem;
+    margin-top: 2.3rem;
   }
 }
 @media (max-width: 575.98px) {
@@ -1264,23 +1267,23 @@ p {
 
 .testimonial {
   padding: 37px;
-  margin-left: 4em;
+  margin-left: 1em;
   text-align: left !important;
-  font-size: 16px;
+  font-size: 20px;
   color: black;
 }
 .testimonial p {
   color: black;
 }
 
-.testimonial2 {
+.testimonial-two {
   padding: 10px;
   margin-left: 4em;
   text-align: left !important;
-  font-size: 16px;
+  font-size: 20px;
   color: black;
 }
-.testimonial2 p {
+.testimonial-two p {
   color: black;
 }
 

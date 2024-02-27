@@ -41,7 +41,7 @@
                     <div class="testimonial text-center bg-white">
                         <cite>
                             <span>
-                                <ul class="star-rating fs-sm d-inline-flex align-items-center text-warning">
+                                <ul class="star-rating d-inline-flex align-items-center text-warning">
                                     {{ renderStarRatingFront($feedback->rating) }}
                                 </ul>
                             </span>
