@@ -79,11 +79,11 @@
                                 </div>
                                 <div class="mb-4">
                                     <label for="description" class="form-label">{{ localize('Description') }}</label>
-                                    <textarea id="description" class="editor" name="description">{{ $product->collectLocalization('description', $lang_key) }}</textarea>
+                                    <textarea id="myTextarea" class="" name="description">{{ $product->collectLocalization('description', $lang_key) }}</textarea>
                                 </div>
                                 <div class="mb-4">
                                     <label for="additional_info" class="form-label">Informasi Tambahan (Cara Pakai, Komposisi atau Lainnya)</label>
-                                    <textarea id="additional_info" class="editor" name="additional_info">{{ $product->additional_info }}</textarea>
+                                    <textarea id="myTextarea" class="" name="additional_info">{{ $product->additional_info }}</textarea>
                                 </div>
                             </div>
                         </div>
