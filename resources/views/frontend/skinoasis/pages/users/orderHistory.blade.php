@@ -121,11 +121,25 @@
                                 <div class="com-md-3">
                                     <div class="entry-content">
                                         <h3>Shipping Cost</h3>
-                                        <p class="mb-2">{{ formatPrice($orderGroup->total_shipping_cost) }}</p>
+                                        <p class="mb-2">{{ formatPrice($order->orderGroup->total_shipping_cost) }}</p>
                                     </div>
+
+                                    @if ($order->orderGroup->total_coupon_discount_amount > 0)
+                                    <div class="entry-content">
+                                        <h3>{{ localize('Coupon Discount') }}</h3>
+                                        <p class="mb-2">{{ formatPrice($order->orderGroup->total_coupon_discount_amount) }}</p>
+                                    </div>
+                                    @endif
+
                                     <div class="entry-content">
                                         <h3>Subtotal</h3>
-                                        <p class="mb-2">{{ formatPrice($orderGroup->sub_total_amount) }}</p>
+                                        <p class="mb-2">{{ formatPrice($order->orderGroup->sub_total_amount) }}</p>
+                                    </div>
+
+
+                                    <div class="entry-content">
+                                        <h3>Total</h3>
+                                        <p class="mb-2">{{ formatPrice($order->orderGroup->grand_total_amount) }}</p>
                                     </div>
                                 </div>
 
