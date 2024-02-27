@@ -8,7 +8,7 @@
 }
 .header-search-extended .btn.btn-primary:hover, .header-search-extended .btn.btn-primary:focus, .header-search-extended .btn.btn-primary:active {
   background-color: transparent;
-  color: #cc9966;
+  color: #546d53;
 }
 .header-search-extended .form-control {
   padding-bottom: 0.5rem;
@@ -180,7 +180,7 @@
   display: none;
 }
 .product.product-4 .btn-product:hover, .product.product-4 .btn-product:focus {
-  background-color: #cc9966;
+  background-color: #546d53;
 }
 .product.product-4 .product-body {
   padding-bottom: 0;
@@ -448,7 +448,7 @@ blockquote cite span {
   max-width: 540px;
 }
 .footer .widget-about-info a {
-  color: #cc9966;
+  color: #546d53;
 }
 
 .footer-bottom .container,

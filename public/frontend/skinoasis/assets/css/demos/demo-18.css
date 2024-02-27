@@ -67,7 +67,7 @@ p {
 }
 .header.header-11 .header-search-extended .btn.btn-primary:hover, .header.header-11 .header-search-extended .btn.btn-primary:focus, .header.header-11 .header-search-extended .btn.btn-primary:active {
   background-color: transparent;
-  color: #cc9966;
+  color: #546d53;
 }
 .header.header-11 .header-search-extended .form-control {
   padding-left: 0.7rem;
@@ -128,7 +128,7 @@ p {
 }
 
 .btn-outline-white {
-  border-color: #cc9966;
+  border-color: #546d53;
 }
 
 .btn-outline-primary-2:not(:hover):not(:focus) {
@@ -194,7 +194,7 @@ p {
   text-transform: uppercase;
   border: none;
   font-size: 1.3rem;
-  color: #cc9966;
+  color: #546d53;
   letter-spacing: 0.1em;
   min-width: 0;
 }
@@ -256,7 +256,7 @@ p {
 }
 .banner-set-content h4 {
   text-transform: uppercase;
-  color: #cc9966;
+  color: #546d53;
   font-weight: 400;
   font-size: 1.6rem;
   margin-bottom: 1.6rem;
@@ -388,7 +388,7 @@ p {
   border: 0.2rem solid #fff;
 }
 .banner-set-image .btn.banner-link:hover, .banner-set-image .btn.banner-link:focus, .banner-set-image .btn.banner-link:active {
-  color: #cc9966;
+  color: #546d53;
   background-color: #fff;
   border-color: #fff;
 }
@@ -612,7 +612,7 @@ p {
   padding: 1.6rem 0;
   margin-left: 1rem;
   margin-right: 1rem;
-  background-color: #cc9966;
+  background-color: #546d53;
   border-radius: 0.3rem;
   border: 0.1rem solid #e1e1e1;
 }
@@ -730,6 +730,7 @@ p {
 .product-title {
   font-size: 16px;
   letter-spacing: 0;
+  font-family: "avenir lt pro" !important;
 }
 
 .product-price {
@@ -768,7 +769,7 @@ p {
   display: none;
 }
 .product.product-4 .btn-product:hover, .product.product-4 .btn-product:focus {
-  background-color: #cc9966;
+  background-color: #546d53;
 }
 
 .btn-product-icon:not(:hover):not(:focus) {
@@ -959,7 +960,7 @@ p {
 }
 .footer .icon-box-side .icon-box-icon {
   min-width: 7rem;
-  color: #cc9966;
+  color: #546d53;
   font-size: 4rem;
 }
 .footer .icon-box-side .icon-box-title {
@@ -1141,7 +1142,7 @@ p {
 }
 .instagram-feed a:hover,
 .instagram-feed a:focus {
-  color: #cc9966;
+  color: #546d53;
 }
 .owl-carousel .instagram-feed {
   margin-bottom: 0;
@@ -1203,7 +1204,7 @@ p {
   color: inherit;
 }
 .instagram-feed-content a:hover, .instagram-feed-content a:focus {
-  color: #cc9966;
+  color: #546d53;
 }
 .instagram-feed-content a + a {
   margin-left: 2rem;

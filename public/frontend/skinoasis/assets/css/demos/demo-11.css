@@ -75,7 +75,7 @@
   color: #666;
 }
 .header.header-7 .cart-dropdown:hover .cart-txt, .header.header-7 .cart-dropdown:focus .cart-txt, .header.header-7 .cart-dropdown.active .cart-txt {
-  color: #cc9966;
+  color: #546d53;
 }
 .header.header-7 .wishlist-txt,
 .header.header-7 .cart-txt {
@@ -192,7 +192,7 @@
   content: "\f191";
 }
 .filter-toggler:hover, .filter-toggler:focus {
-  color: #cc9966;
+  color: #546d53;
 }
 
 .widget-filter-area {
@@ -219,7 +219,7 @@
 
 .widget-filter-clear {
   display: block;
-  color: #cc9966;
+  color: #546d53;
   position: absolute;
   right: 0;
   bottom: 100%;
@@ -259,7 +259,7 @@
   margin-left: 1rem;
 }
 .filter-colors.filter-colors-vertical a:hover > span, .filter-colors.filter-colors-vertical a:focus > span, .filter-colors.filter-colors-vertical a.selected > span {
-  color: #cc9966;
+  color: #546d53;
 }
 
 .filter-price-text {
@@ -342,7 +342,7 @@
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  color: #cc9966;
+  color: #546d53;
   background-color: transparent !important;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
@@ -359,10 +359,10 @@
   font-size: 1.4rem;
 }
 .product.product-4 .product-body .btn-product:hover, .product.product-4 .product-body .btn-product:focus {
-  color: #cc9966;
+  color: #546d53;
   background-color: transparent;
-  -webkit-box-shadow: 0 0.1rem 0 0 #cc9966;
-          box-shadow: 0 0.1rem 0 0 #cc9966;
+  -webkit-box-shadow: 0 0.1rem 0 0 #546d53;
+          box-shadow: 0 0.1rem 0 0 #546d53;
 }
 .product.product-4 .btn-product {
   color: #666;
@@ -373,7 +373,7 @@
   display: none;
 }
 .product.product-4 .btn-product:hover, .product.product-4 .btn-product:focus {
-  background-color: #cc9966;
+  background-color: #546d53;
 }
 .product.product-4 .btn-product:not(:hover):not(:focus) {
   background-color: rgba(255, 255, 255, 0.9);
@@ -391,15 +391,15 @@
   font-size: 1.5rem;
 }
 .btn-more:hover, .btn-more:focus {
-  color: #cc9966;
+  color: #546d53;
   background-color: #fafafa;
   border-color: #d7d7d7;
 }
 
 .footer-menu a:hover,
 .footer-menu a:focus {
-  -webkit-box-shadow: 0 1px 0 #cc9966;
-          box-shadow: 0 1px 0 #cc9966;
+  -webkit-box-shadow: 0 1px 0 #546d53;
+          box-shadow: 0 1px 0 #546d53;
 }
 
 @media screen and (min-width: 576px) {
