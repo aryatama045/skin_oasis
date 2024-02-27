@@ -61,6 +61,25 @@
 
                                 <div class="col-md-4">
                                     <div class="entry-body">
+
+                                        <h2 class="entry-title">
+                                            <a href="single.html">{{ $product->collectLocalization('name') }}</a>
+                                        </h2>
+
+                                        <div class="entry-cats">
+                                            @foreach (generateVariationOptions($item->product_variation->combinations) as $variation)
+                                                <span class="fs-xs">
+                                                    {{ $variation['name'] }}:
+                                                    @foreach ($variation['values'] as $value)
+                                                        {{ $value['name'] }}
+                                                    @endforeach
+                                                    @if (!$loop->last)
+                                                        ,
+                                                    @endif
+                                                </span>
+                                            @endforeach
+                                        </div>
+
                                         <div class="entry-meta">
                                             <span class="entry-author">
                                                 by <a href="#">John Doe</a>
@@ -70,15 +89,6 @@
                                             <span class="meta-separator">|</span>
                                             <a href="#">2 Comments</a>
                                         </div><!-- End .entry-meta -->
-
-                                        <h2 class="entry-title">
-                                            <a href="single.html">{{ $product->collectLocalization('name') }}</a>
-                                        </h2><!-- End .entry-title -->
-
-                                        <div class="entry-cats">
-                                            in <a href="#">Lifestyle</a>,
-                                            <a href="#">Shopping</a>
-                                        </div><!-- End .entry-cats -->
 
                                         <div class="entry-content">
                                             <p>Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Suspendisse potenti. Sed egestas ... </p>
