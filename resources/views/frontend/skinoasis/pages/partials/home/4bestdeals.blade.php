@@ -13,7 +13,7 @@
             <div class="col-lg-12">
                 <div class="deal align-items-center">
                     <div class="deal-content" data-aos="fade-up">
-                        <h4>{{$campaigns->title}}</h4>
+                        <h4 class="mb-lg-4">{{$campaigns->title}}</h4>
                         <h2>{{ formatPrice($campaigns->harga_promo) }}</h2>
 
                         <h3 class="product-tanggal">
