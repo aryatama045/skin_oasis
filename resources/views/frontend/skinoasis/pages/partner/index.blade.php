@@ -14,10 +14,16 @@
 
 @section('contents')
 
-    <!--pageheader-->
-    @include('frontend.skinoasis.inc.pageHeader',
-            ['title'=> 'Partner'])
-    <!--pageheader-->
+    <br>
+    <center>
+        <div>
+            <img src="{{ staticAsset('frontend/skinoasis/assets/images/page-header-bg.png') }}" style="max-width: 83%">
+        </div>
+    </center><br><br>
+
+    <center class="container">
+        <h1 class="page-title">Popular Product</h1>
+    </center>
 
     <!--breadcrumb-->
     @include('frontend.skinoasis.inc.breadcrumb')
