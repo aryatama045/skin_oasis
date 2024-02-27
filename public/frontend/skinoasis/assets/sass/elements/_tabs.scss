@@ -78,6 +78,7 @@
 
 /* Nav Pills - Line Tabs */
 .nav.nav-pills {
+	font-family: 'avenir lt pro' !important;
 	.nav-link {
 		color: #777;
 		font-weight: 400;
@@ -113,6 +114,7 @@
 			color: $primary-color;
 			border-color: #d7d7d7;
 			border-bottom-color: $primary-color;
+
 		}
 	}
 }
