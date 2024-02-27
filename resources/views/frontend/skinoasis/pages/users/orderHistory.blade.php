@@ -40,15 +40,13 @@
                             </div>
 
                             @php
-                                    $order_id = $order->id;
-                                    $detail_order = \App\Models\OrderItem::where('order_id', $order_id)->get();
+                                $order_id = $order->id;
+                                $detail_order = \App\Models\OrderItem::where('order_id', $order_id)->get();
                             @endphp
 
                             @forelse ($detail_order as $key => $item)
 
-                            @php
-                                $product = $item->product_variation->product;
-                            @endphp
+                            @php $product = $item->product_variation->product; @endphp
                             <div class="row align-items-center">
                                 <div class="col-md-2">
                                     <figure class="entry-media">
@@ -62,7 +60,7 @@
                                 <div class="col-md-4">
                                     <div class="entry-body">
 
-                                        <h2 class="entry-title">
+                                        <h2 class="entry-title mt-2">
                                             <a href="single.html">{{ $product->collectLocalization('name') }}</a>
                                         </h2>
 
@@ -82,44 +80,31 @@
 
                                         <h4 class="text-dark">{{ formatPrice($item->unit_price) }}</h4>
 
+                                        <h5 class="text-dark">{{ $item->qty }}</h5>
+
                                         <div class="entry-meta">
                                             <span class="entry-author">
                                                 by <a href="#">John Doe</a>
                                             </span>
                                             <span class="meta-separator">|</span>
                                             <a href="#">Nov 22, 2018</a>
-                                            <span class="meta-separator">|</span>
-                                            <a href="#">2 Comments</a>
-                                        </div><!-- End .entry-meta -->
+                                        </div>
 
                                         <div class="entry-content">
-                                            <p>Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Suspendisse potenti. Sed egestas ... </p>
-                                            <a href="single.html" class="read-more">Continue Reading</a>
-                                        </div><!-- End .entry-content -->
-                                    </div><!-- End .entry-body -->
-                                </div><!-- End .col-md-8 -->
+                                            <p>Sed pretium</p>
+                                        </div>
+
+                                    </div>
+                                </div>
 
                                 <div class="col-md-3">
-                                    <div class="entry-body">
-                                        <h2 class="entry-title">
-                                            <a href="single.html">Cras ornare tristique elit.</a>
-                                        </h2><!-- End .entry-title -->
 
-                                        <div class="entry-cats">
-                                            in <a href="#">Lifestyle</a>,
-                                            <a href="#">Shopping</a>
-                                        </div><!-- End .entry-cats -->
-
-                                        <div class="entry-content">
-                                            <p>Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Suspendisse potenti. Sed egestas ... </p>
-                                            <a href="single.html" class="read-more">Continue Reading</a>
-                                        </div><!-- End .entry-content -->
-                                    </div>
                                 </div>
 
                                 <div class="com-md-3"></div>
 
-                            </div><!-- End .row -->
+                            </div>
+                            <hr>
                             @empty
                             @endforelse
                         </article>
