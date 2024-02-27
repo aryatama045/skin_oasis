@@ -117,7 +117,7 @@
                                     </div>
                                 </div>
 
-                                <div class="com-md-3">
+                                <div class="col-md-3">
                                     <div class="entry-body">
                                         <div class="entry-content">
                                             <h3>Shipping Cost</h3>
