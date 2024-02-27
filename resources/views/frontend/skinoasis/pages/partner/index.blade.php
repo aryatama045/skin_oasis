@@ -19,11 +19,7 @@
         <div>
             <img src="{{ staticAsset('frontend/skinoasis/assets/images/page-header-bg.png') }}" style="max-width: 83%">
         </div>
-    </center><br><br>
-
-    <center class="container">
-        <h1 class="page-title">Popular Product</h1>
-    </center>
+    </center><br>
 
     <!--breadcrumb-->
     @include('frontend.skinoasis.inc.breadcrumb')
