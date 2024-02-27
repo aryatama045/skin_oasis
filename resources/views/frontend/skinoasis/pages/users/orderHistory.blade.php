@@ -120,6 +120,10 @@
 
                                 <div class="com-md-3">
                                     <div class="entry-content">
+                                        <h3>Shipping Cost</h3>
+                                        <p class="mb-2">{{ formatPrice($orderGroup->total_shipping_cost) }}</p>
+                                    </div>
+                                    <div class="entry-content">
                                         <h3>Subtotal</h3>
                                         <p class="mb-2">{{ formatPrice($orderGroup->sub_total_amount) }}</p>
                                     </div>
