@@ -14779,6 +14779,7 @@ fieldset:disabled .btn {
     background-clip: border-box;
     border: var(--bs-card-border-width) solid var(--bs-card-border-color);
     border-radius: var(--bs-card-border-radius);
+    font-family: 'avenir lt pro' !important;
 }
 .card > hr {
     margin-right: 0;
@@ -14811,10 +14812,12 @@ fieldset:disabled .btn {
 }
 .card-title {
     margin-bottom: var(--bs-card-title-spacer-y);
+    font-family: 'avenir lt pro' !important;
 }
 .card-subtitle {
     margin-top: calc(-0.5 * var(--bs-card-title-spacer-y));
     margin-bottom: 0;
+    font-family: 'avenir lt pro' !important;
 }
 .card-text:last-child {
     margin-bottom: 0;
@@ -24794,9 +24797,11 @@ body {
     color: #191d28;
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
+    font-family: 'avenir lt pro' !important;
 }
 .vertical-product-card .card-content .card-title:hover {
     color: #546d53;
+    font-family: 'avenir lt pro' !important;
 }
 .vertical-product-card .card-content .price span.h4 {
     font-size: 1.0625rem;
