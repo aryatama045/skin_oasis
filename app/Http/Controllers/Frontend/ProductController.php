@@ -21,11 +21,11 @@ class ProductController extends Controller
         $searchKey = null;
         $limit = 8;
 
-        $kategori = Category::orderBy('sorting_order_level', 'desc')->get();
+        $product = Product::where('is_popular', 1)->get();
         // dd($kategori);
         $tags = Tag::all();
         return getView('pages.products.index', [
-            'kategori'      => $kategori,
+            'product'      => $product,
             'tags'          => $tags,
         ]);
     }

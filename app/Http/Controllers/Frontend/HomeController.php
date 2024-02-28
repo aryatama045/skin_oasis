@@ -9,6 +9,7 @@ use App\Models\Page;
 use App\Models\Partner;
 use App\Models\Brand;
 use Illuminate\Http\Request;
+use DB;
 
 class HomeController extends Controller
 {
@@ -42,8 +43,10 @@ class HomeController extends Controller
             $client_feedback = json_decode(getSetting('client_feedback'));
         }
 
+        $trending = DB::table('blogs')->get();
 
-        return getView('pages.home', ['blogs' => $blogs, 'sliders' => $sliders, 'brands' => $brands, 'banner_section_one_banners' => $banner_section_one_banners, 'client_feedback' => $client_feedback]);
+
+        return getView('pages.home', ['blogs' => $blogs, 'trending' => $trending, 'sliders' => $sliders, 'brands' => $brands, 'banner_section_one_banners' => $banner_section_one_banners, 'client_feedback' => $client_feedback]);
     }
 
     # all brands

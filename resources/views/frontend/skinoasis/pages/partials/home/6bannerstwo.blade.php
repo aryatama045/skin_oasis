@@ -65,7 +65,7 @@
             <div class="row align-items-center">
                 <div class="col-md-6 mb-3 mb-md-0">
                     <h3 class="video-banner-title fw-bold h3">
-                        <span class="fw-light">TRENDING</span>
+                        <span class="fw-light">TRENDING 1</span>
                         Always Make Room for a Little Beauty in Your Life
                     </h3><!-- End .video-banner-title -->
                     <p>Our beauty box is a set of best full-size products that are top sellers in out online shop.

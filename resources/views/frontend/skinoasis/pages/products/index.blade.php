@@ -21,14 +21,14 @@
         <div class="page-content gshop-gshop-grid bg-white">
             <div class="container">
                 <div class="row banner-group-1">
-                    @foreach ($kategori as $key => $category)
+                    @foreach ($product as $key => $produks)
                         <div class="col-md-3">
-                            <a href="{{ route('products.allproduct') }}?&category_id={{ $category->id }}">
+                            <a href="{{ route('products.show', $produks->slug) }}">
                                 <div class="banner banner-1">
-                                    <img src="{{ uploadedAsset($category->collectLocalization('thumbnail_image')) }}" alt="Banner" width="688" height="400" style="background-color: #fff; opacity: 0.7;">
+                                    <img src="{{ uploadedAsset($produks->collectLocalization('thumbnail_image')) }}" alt="Banner" width="688" height="400" style="background-color: #fff; opacity: 0.7;">
 
                                     <div class="banner-content banner-content-center">
-                                        <h1 class="banner-subtitle text-black fw-bold">{{$category->name}}</h1>
+                                        <h1 class="banner-subtitle text-black fw-bold" style="margin-left: 10px; margin-right: 10px">{{$produks->name}}</h1>
                                     </div><!-- End .banner-content -->
                                 </div><!-- End .banner -->
                             </a>
@@ -39,7 +39,7 @@
         </div><!-- End .page-content -->
     </form>
     <center>
-        <a href="{{ route('products.allproduct') }}" class="btn btn-rounded btn-sm text-uppercase btn-outline-green-dark"> OUR PRODUCT</a>
+        <a href="{{ route('products.allproduct') }}" class="btn btn-rounded btn-sm text-uppercase btn-outline-green-dark"> ALL PRODUCT</a>
     </center>
 @endsection
 

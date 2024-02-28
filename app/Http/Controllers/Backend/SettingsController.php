@@ -54,7 +54,7 @@ class SettingsController extends Controller
         try {
             Mail::to($request->email)->queue(new EmailManager($array));
         } catch (\Exception $e) {
-            dd($e);
+            // dd($e);
         }
 
         flash(localize('An email has been sent.'))->success();
