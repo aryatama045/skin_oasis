@@ -19,7 +19,7 @@
     <!--Filter by Categories-->
     <div class="sidebar-widget category-widget bg-white py-5 px-4 border-top mobile-menu-wrapper scrollbar h-200px">
         <div class="widget-title d-flex">
-            <h4 class="mb-0 flex-shrink-0 text-uppercase">{{ localize('Categories') }}</h4>
+            <h4 class="mb-0 flex-shrink-0 text-uppercase ls-1px">{{ localize('Categories') }}</h4>
         </div>
         <ul class="widget-nav mt-4">
 
@@ -49,7 +49,7 @@
     <!--Filter by Brand-->
     <div class="sidebar-widget category-widget bg-white py-5 px-4 border-top mobile-menu-wrapper scrollbar h-200px">
         <div class="widget-title d-flex">
-            <h4 class="mb-0 flex-shrink-0 text-uppercase">Brand</h4>
+            <h4 class="mb-0 flex-shrink-0 text-uppercase ls-1px">Brand</h4>
         </div>
         <ul class="widget-nav mt-4">
 
