@@ -28,11 +28,7 @@
                                     <img src="{{ uploadedAsset($produks->collectLocalization('thumbnail_image')) }}" alt="Banner" width="688" height="400" style="background-color: #fff; opacity: 0.7;">
 
                                     <div class="banner-content banner-content-center">
-<<<<<<< HEAD
                                         <h1 class="banner-subtitle text-black fw-bold" style="margin-left: 10px; margin-right: 10px">{{$produks->name}}</h1>
-=======
-                                        <h1 class="banner-subtitle text-black fw-bold text-capitalize">{{$category->name}}</h1>
->>>>>>> 5f6c2506c046a57810935f3e5a33a0aacc6722a3
                                     </div><!-- End .banner-content -->
                                 </div><!-- End .banner -->
                             </a>
