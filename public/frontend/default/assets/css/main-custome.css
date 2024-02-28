@@ -28426,6 +28426,7 @@ a#partner-program-tab {
 }
 
 .price-product{
+    color: #191d28 !important;
     font-size: 16px !important;
     font-family: "avenir lt pro" !important;
 }
