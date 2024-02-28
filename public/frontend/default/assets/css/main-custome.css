@@ -28410,14 +28410,19 @@ img.col-md-8.float-md-end.mb-3.ms-md-3 {
     font-family: 'avenit lt pro' !important;
 }
 
-li.nav-item.partner {
+/* li.nav-item.partner {
     border-right: 2px solid #00000066;
     margin-left: 0rem !important;
-}
+} */
 
 .nav.nav-pills .nav-item.show .nav-link, .nav.nav-pills .nav-item .nav-link.active {
     border-bottom-color: #fff0 !important;
     font-family: "avenir lt pro" !important;
+}
+
+a#partner-program-tab {
+    border-right: 1px solid #00000066;
+    margin-left: 0rem !important;
 }
 
 
