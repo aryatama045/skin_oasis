@@ -51,7 +51,7 @@ animate__animated animate__fadeInUp animate__delay-2s">
         <!--product category end-->
 
         <a href="{{ route('products.show', $product->slug) }}"
-            class="card-title fw-semibold mb-2 tt-line-clamp tt-clamp-1">{{ $product->collectLocalization('name') }}
+            class="card-title fw-semibold mb-4 tt-line-clamp tt-clamp-1">{{ $product->collectLocalization('name') }}
         </a>
 
         <h6 class="price">
