@@ -39,7 +39,7 @@
         </div><!-- End .page-content -->
     </form>
     <center>
-        <a href="{{ route('products.allproduct') }}" class="btn btn-rounded btn-sm text-uppercase btn-outline-green-dark"> ALL PRODUCT</a>
+        <a href="{{ route('products.allproduct') }}" style="width: 20%;" class="btn btn-rounded btn-md text-uppercase btn-outline-green-dark"> ALL PRODUCT</a>
     </center>
 @endsection
 
