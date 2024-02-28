@@ -17999,6 +17999,7 @@ fieldset:disabled .btn {
 }
 .d-inline-block {
     display: inline-block !important;
+    font-family: 'avenir lt pro' !important;
 }
 .d-block {
     display: block !important;
@@ -28409,11 +28410,9 @@ img.col-md-8.float-md-end.mb-3.ms-md-3 {
     font-family: 'avenit lt pro' !important;
 }
 
-li.nav-item {
-    border-right: 2px solid black;
+li.nav-item.partner {
+    border-right: 2px solid #00000066;
     margin-left: 0rem !important;
-    margin-right: 0rem !important;
-
 }
 
 .nav.nav-pills .nav-item.show .nav-link, .nav.nav-pills .nav-item .nav-link.active {

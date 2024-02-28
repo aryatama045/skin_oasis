@@ -32,7 +32,7 @@
                     <div class="product-details-tab">
                         <ul class="nav nav-pills justify-content-center" role="tablist">
                             @foreach ($pages as $page)
-                                <li class="nav-item">
+                                <li class="nav-item partner">
                                     <a class="text-uppercase nav-link <?php if($loop->first){ ?>active <?php } ?>"
                                     id="partner-{{ $page->slug }}-tab" data-toggle="tab" href="#partner-{{ $page->slug }}"
                                     role="tab" aria-controls="partner-{{ $page->slug }}" aria-selected="<?php if($loop->first){ ?>true<?php }else{ ?>false <?php } ?>">
@@ -40,11 +40,11 @@
                                 </li>
                             @endforeach
 
-                            <li class="nav-item">
+                            <li class="nav-item partner">
                                 <a class="nav-link" id="partner-join-our-influencer-tab" data-toggle="tab" href="#partner-join-our-influencer" role="tab" aria-controls="partner-join-our-influencer" aria-selected="false">
                                 JOIN OUR INFLUENCER</a>
                             </li>
-                            <li class="nav-item">
+                            <li class="nav-item partner">
                                 <a class="nav-link" id="partner-join-our-partner-tab" data-toggle="tab" href="#partner-join-our-partner" role="tab" aria-controls="partner-join-our-partner" aria-selected="false">
                                 JOIN OUR PARTNER</a>
                             </li>
