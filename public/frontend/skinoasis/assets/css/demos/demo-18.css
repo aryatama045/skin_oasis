@@ -54,7 +54,7 @@ p {
   font-weight: 100;
   letter-spacing: 0.16em;
   padding-right: 1.4rem;
-  font-size: 1.3rem;
+  font-size: 1.3rem !important;
 }
 .header.header-11 .wishlist-link .wishlist-count,
 .header.header-11 .cart-dropdown .cart-count {
