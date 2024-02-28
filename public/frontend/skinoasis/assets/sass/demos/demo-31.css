@@ -5,11 +5,15 @@
 }
 
 .owl-carousel:not(.owl-loaded) {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   overflow: hidden;
 }
 .owl-carousel:not(.owl-loaded).cols-1 > * {
-  flex: 0 0 100%;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 100%;
+          flex: 0 0 100%;
   max-width: 100%;
   position: relative;
 }
@@ -19,7 +23,7 @@
 }
 
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: "avenir lt pro";
   font-weight: 400;
 }
 
@@ -50,7 +54,8 @@ body {
 
 .intro-content {
   left: 50%;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   margin-top: -0.8rem;
   max-width: 370px;
   width: 90%;
@@ -59,13 +64,13 @@ body {
   min-width: 20rem;
   padding-top: 1.45rem;
   padding-bottom: 1.45rem;
-  font-family: "Roboto", sans-serif;
+  font-family: "avenir lt pro";
   font-size: 1.5rem;
 }
 
 .intro-title {
   margin-bottom: 0.7rem;
-  font-family: "Amatic SC", sans-serif;
+  font-family: "avenir lt pro";
   font-size: 8em;
   letter-spacing: 0;
 }
@@ -131,18 +136,19 @@ body {
 
 .banner-content {
   left: 50%;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   text-align: center;
   width: 90%;
 }
 .banner-content .btn {
-  font-family: "Roboto", sans-serif;
+  font-family: "avenir lt pro";
   font-size: 1.5rem;
   color: #fff;
 }
 
 .banner-title {
-  font-family: "Amatic SC", sans-serif;
+  font-family: "avenir lt pro";
   font-weight: 700;
   font-size: 4rem;
   letter-spacing: -0.025em;
@@ -160,6 +166,7 @@ body {
   padding: 0.75rem 1rem;
   min-width: 10rem;
   border-bottom: 2px solid #fff;
+  -webkit-transition: color 0.35s, background-color 0.35s, border-color 0.35s;
   transition: color 0.35s, background-color 0.35s, border-color 0.35s;
 }
 .banner-group .btn:hover, .banner-group .btn:not(:disabled):not(.disabled):active, .banner-group .btn:focus {
@@ -180,7 +187,7 @@ body {
 }
 .banner-group-1 .banner-1 p {
   margin-bottom: 0.5rem;
-  font-family: "Roboto", sans-serif;
+  font-family: "avenir lt pro";
   font-weight: inherit;
   font-size: 1.3rem;
 }
@@ -244,7 +251,7 @@ body {
   background-color: #c96;
 }
 .btn-product-icon span {
-  font-family: "Roboto", sans-serif;
+  font-family: "avenir lt pro";
 }
 
 .owl-products {
@@ -258,7 +265,7 @@ body {
 }
 .owl-products .product-action .btn-product span {
   margin-bottom: -0.3rem;
-  font-family: "Roboto", sans-serif;
+  font-family: "avenir lt pro";
   font-size: 1.5rem;
   color: inherit;
 }
@@ -325,7 +332,9 @@ body {
 }
 
 .testimonials {
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .testimonial {
@@ -487,7 +496,7 @@ body {
 
 .newsletter-heading .newsletter-title {
   margin: 0.1rem 0 0.2rem;
-  font-family: "Amatic SC", sans-serif;
+  font-family: "avenir lt pro";
   font-weight: 700;
   font-size: 5rem;
   letter-spacing: -0.025em;
@@ -514,7 +523,16 @@ body {
   overflow: hidden;
   text-overflow: ellipsis;
 }
+.newsletter .input-group .form-control::-webkit-input-placeholder {
+  color: #999999;
+}
 .newsletter .input-group .form-control::-moz-placeholder {
+  color: #999999;
+}
+.newsletter .input-group .form-control:-ms-input-placeholder {
+  color: #999999;
+}
+.newsletter .input-group .form-control::-ms-input-placeholder {
   color: #999999;
 }
 .newsletter .input-group .form-control::placeholder {
@@ -563,6 +581,7 @@ body {
   height: 4rem;
   border-radius: 50%;
   background-color: #fff;
+  -webkit-transition: color 0.35s;
   transition: color 0.35s;
   outline: none;
 }
@@ -608,7 +627,10 @@ body {
     padding-left: 0;
   }
   .banner-2-group {
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   .owl-testimonial.owl-simple.owl-carousel .owl-dots {
     margin-top: 4.4rem;
@@ -644,4 +666,4 @@ body {
     -o-object-fit: cover;
        object-fit: cover;
   }
-}/*# sourceMappingURL=demo-31.css.map */
+}

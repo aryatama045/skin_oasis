@@ -1,4 +1,5 @@
-<div class="vertical-product-card shadow-none rounded-2 position-relative swiper-slide {{ isset($bgClass) ? $bgClass : '' }}">
+<div class="vertical-product-card shadow-none rounded-2 position-relative swiper-slide {{ isset($bgClass) ? $bgClass : '' }}
+animate__animated animate__fadeInUp animate__delay-2s">
 
     @php
         $discountPercentage = discountPercentage($product);
@@ -29,7 +30,7 @@
     </div>
     <div class="card-content">
         @if (getSetting('enable_reward_points') == 1)
-            <span class="fs-xxs fw-bold" data-bs-toggle="tooltip" data-bs-placement="top"
+            <span class="fs-sm fw-bold" data-bs-toggle="tooltip" data-bs-placement="top"
                 data-bs-title="{{ localize('Reward Points') }}">
                 <i class="fas fa-medal"></i> {{ $product->reward_points }}
             </span>
@@ -39,7 +40,7 @@
             @if ($product->categories()->count() > 0)
                 @foreach ($product->categories as $category)
                     <a href="{{ route('products.index') }}?&category_id={{ $category->id }}"
-                        class="d-inline-block text-muted fs-xxs">{{ $category->collectLocalization('name') }}
+                        class="d-inline-block text-muted fs-sm">{{ $category->collectLocalization('name') }}
                         @if (!$loop->last)
                             ,
                         @endif
@@ -74,7 +75,7 @@
 
         @if ($isVariantProduct)
             <a href="javascript:void(0);" class="btn-product btn-cart mt-4"
-                onclick="showProductDetailsModal({{ $product->id }})" style="font-size: 1.2rem">
+                onclick="showProductDetailsModal({{ $product->id }})">
                 {{ localize('Add to Cart') }}</a>
         @else
             <form action="" class="direct-add-to-cart-form">
@@ -84,10 +85,10 @@
 
                 @if (!$isVariantProduct && $stock < 1)
                     <a href="javascript:void(0);"
-                        class="btn-product btn-cart mt-4 w-100" style="font-size: 1.2rem">{{ localize('Out of Stock') }}</a>
+                        class="btn-product btn-cart mt-4 w-100">{{ localize('Out of Stock') }}</a>
                 @else
                     <a href="javascript:void(0);"
-                        onclick="directAddToCartFormSubmit(this)"class="btn-product btn-cart mt-4 w-100 direct-add-to-cart-btn add-to-cart-text" style="font-size: 1.2rem">
+                        onclick="directAddToCartFormSubmit(this)"class="btn-product btn-cart mt-4 w-100 direct-add-to-cart-btn add-to-cart-text">
                         {{ localize('Add to Cart') }}</a>
                 @endif
             </form>

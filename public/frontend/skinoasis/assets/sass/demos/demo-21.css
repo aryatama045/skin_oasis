@@ -1,7 +1,7 @@
 /* Demo 21 Homepage 21 */
 /* Fonts */
-@import url("https://fonts.googleapis.com/css?family=Poppins:200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800");
-/* font-family: 'Poppins', sans-serif; */
+@import url("https://fonts.cdnfonts.com/css/avenir-lt-pro");
+@import url("https://fonts.cdnfonts.com/css/avenir");
 /* Header */
 .menu .megamenu.demo {
   height: 68vh;
@@ -55,14 +55,26 @@
 }
 
 .wishlist a {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .wishlist .wishlist-count {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   min-width: 2rem;
   height: 2rem;
   border-radius: 50%;
@@ -113,8 +125,12 @@
 }
 .notification {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding: 1.3rem 0;
 }
 .notification .notify-content h3 {
@@ -143,21 +159,30 @@
 }
 
 .intro-slide {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background-size: cover;
   background-position: center center;
 }
 .intro-slide .intro-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   position: static;
   left: auto;
   top: auto;
-  transform: translateY(0);
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
   -ms-transform: translateY(0);
 }
 .intro-slide .intro-content .row {
-  justify-content: flex-end;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   width: 142rem;
 }
 .intro-slide .intro-content .intro {
@@ -255,9 +280,14 @@
   position: relative;
   margin-bottom: 5rem;
   z-index: 100;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 .banner-container > div {
   background-position: center;
@@ -265,7 +295,8 @@
 }
 .banner-container::before {
   content: "";
-  box-shadow: 0 10px 20px #999;
+  -webkit-box-shadow: 0 10px 20px #999;
+          box-shadow: 0 10px 20px #999;
   margin-top: 2rem;
   width: 96%;
   height: 90%;
@@ -294,6 +325,7 @@
   position: absolute;
   background-color: #6666ff;
   opacity: 0;
+  -webkit-transition: all 0.3s;
   transition: all 0.3s;
   top: 0;
   left: 0;
@@ -357,7 +389,8 @@
   font-size: 1.4rem;
   background-color: #6666ff;
   border-color: #6666ff;
-  box-shadow: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 .banner-title a {
@@ -369,7 +402,9 @@
   font-size: 1.4rem;
   background-color: transparent;
   border-color: #fff;
-  box-shadow: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  -webkit-transition: all 0.3s;
   transition: all 0.3s;
   padding-top: 5px;
   padding-bottom: 5px;
@@ -382,6 +417,7 @@
 .btn-viewMore {
   color: #333333;
   border: 1px solid #333333;
+  -webkit-transition: all 0.3s;
   transition: all 0.3s;
   padding: 1.5rem 4rem 1.5rem 4rem;
   margin-bottom: 3rem;
@@ -419,30 +455,49 @@
 }
 
 .product-price {
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .ratings-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   font-size: 1.3rem;
   margin-bottom: 1.7rem;
   line-height: 1;
   white-space: nowrap;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .product-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .btn-addtolist {
   font-size: 1.4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   color: #777;
+  -webkit-transition: all 0.35s ease;
   transition: all 0.35s ease;
   opacity: 0;
   visibility: hidden;
@@ -462,17 +517,27 @@
 .btn-product {
   color: #6666ff;
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   font-size: 1.8rem;
   line-height: 1;
+  -webkit-transition: all 0.35s ease;
   transition: all 0.35s ease;
   padding-top: 0.7rem;
   padding-bottom: 0.7rem;
   margin: 1rem;
-  flex-grow: 1;
-  flex-basis: 0;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -ms-flex-preferred-size: 0;
+      flex-basis: 0;
   border: 1px solid #6666ff;
   transition: all 0.35s ease;
 }
@@ -481,6 +546,7 @@
   font-weight: 400;
   font-size: 1.3rem;
   letter-spacing: -0.01em;
+  -webkit-transition: all 0.35s ease;
   transition: all 0.35s ease;
 }
 .btn-product:hover, .btn-product:focus {
@@ -489,37 +555,48 @@
 }
 .btn-product:hover span, .btn-product:focus span {
   color: #fff;
-  box-shadow: 0 0px 0 0 white;
+  -webkit-box-shadow: 0 0px 0 0 white;
+          box-shadow: 0 0px 0 0 white;
 }
 
 .product-action {
   position: initial;
-  transform: unset;
+  -webkit-transform: unset;
+          transform: unset;
 }
 
 .product:hover .product-action,
 .product:focus .product-action {
   visibility: visible;
   opacity: 1;
-  transform: translateY(0);
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
 }
 .product:hover .btn-addtolist,
 .product:focus .btn-addtolist {
   visibility: visible;
   opacity: 1;
-  transform: translateY(0);
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
 }
 
 .btn-product-icon {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   width: 3rem;
   height: 3rem;
   padding: 0;
   font-size: 1.4rem;
   line-height: 1;
+  -webkit-transition: all 0.35s ease;
   transition: all 0.35s ease;
   padding: 0;
   border-radius: 0%;
@@ -540,8 +617,13 @@
   margin-top: -7rem;
 }
 .bestsellers .product-action {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 .bestsellers .btn-cart {
   width: 90%;
@@ -564,6 +646,8 @@
   background-repeat: no-repeat;
 }
 .choose-style .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   padding-top: 5rem;
   padding-bottom: 2.5rem;
@@ -669,7 +753,8 @@
   font-family: "molla";
   visibility: visible;
   opacity: 1;
-  transform: translateX(0px);
+  -webkit-transform: translateX(0px);
+          transform: translateX(0px);
 }
 .category-banner .banner-content {
   left: 5rem;
@@ -687,14 +772,17 @@
   letter-spacing: -0.01em;
   border-bottom: 0.1rem solid #6666ff;
   border-bottom-width: 0;
+  -webkit-transition: all 0.2s;
   transition: all 0.2s;
 }
 .category-banner .banner-content .action::after {
   content: "\f274";
   font-family: "molla";
-  transform: translateX(-25px);
+  -webkit-transform: translateX(-25px);
+          transform: translateX(-25px);
   opacity: 0;
   visibility: hidden;
+  -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
 
@@ -731,13 +819,18 @@
   padding-top: 4rem;
   padding-bottom: 8.5rem;
   margin-top: 4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   position: relative;
 }
 .newsletter .background::before {
   content: "";
-  box-shadow: 0 0 20px #666;
+  -webkit-box-shadow: 0 0 20px #666;
+          box-shadow: 0 0 20px #666;
   width: 98%;
   height: 80%;
   position: absolute;
@@ -773,7 +866,9 @@
 .newsletter input {
   padding: 0.6em 2.5rem 0.6rem 1.5rem;
   border: 3px solid white;
-  flex: 1 1 auto;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
   font-size: 1.4rem;
   font-weight: 300;
   color: #999;
@@ -803,8 +898,11 @@
 
 .service {
   padding-left: 0rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 .service .icon-box-side {
   padding-bottom: 1rem;
@@ -829,9 +927,14 @@
   padding-right: 0.5rem;
 }
 .instagram-store .banner-sm-div {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding: 0;
 }
 .instagram-store .banner-sm, .instagram-store .banner-lg {
@@ -878,7 +981,8 @@ footer.footer a:hover, footer.footer a:focus {
 
 .mmenu-active .mobile-menu-container {
   visibility: visible;
-  transform: translateX(83px);
+  -webkit-transform: translateX(83px);
+          transform: translateX(83px);
 }
 
 @media screen and (max-width: 991px) {
@@ -925,40 +1029,56 @@ footer.footer a:hover, footer.footer a:focus {
     margin-bottom: 0rem !important;
   }
   .instagram-store .banner-lg {
-    order: 1;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
   }
 }
 @media screen and (min-width: 1200px) {
   .col-2xl-5col {
-    flex: 0 0 40%;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 40%;
+            flex: 0 0 40%;
     max-width: 40%;
   }
 }
 @media screen and (min-width: 576px) {
   .banner-lg {
-    flex: 0 0 40%;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 40%;
+            flex: 0 0 40%;
     max-width: 40%;
   }
   .banner-sm-div {
-    flex: 0 0 20%;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 20%;
+            flex: 0 0 20%;
     max-width: 20%;
   }
   .banner-sm {
-    flex: 0 0 100%;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
     max-width: 100%;
   }
 }
 @media screen and (max-width: 575px) {
   .banner-lg {
-    flex: 0 0 50%;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 50%;
+            flex: 0 0 50%;
     max-width: 50%;
   }
   .banner-sm-div {
-    flex: 0 0 100%;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
     max-width: 100%;
   }
   .banner-sm {
-    flex: 0 0 50%;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 50%;
+            flex: 0 0 50%;
     max-width: 50%;
   }
 }
@@ -987,7 +1107,9 @@ footer.footer a:hover, footer.footer a:focus {
 }
 @media screen and (max-width: 576px) {
   .notification {
-    justify-content: flex-start;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
   }
   .notification .notify-content h3 {
     padding-left: 1rem;
@@ -1011,7 +1133,9 @@ footer.footer a:hover, footer.footer a:focus {
 }
 @media screen and (max-width: 400px) {
   .newsletter .input-group {
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   .newsletter .input-group-append {
     margin-top: 1rem;
@@ -1021,4 +1145,4 @@ footer.footer a:hover, footer.footer a:focus {
   .col-pd1 > a img {
     width: unset !important;
   }
-}/*# sourceMappingURL=demo-21.css.map */
+}

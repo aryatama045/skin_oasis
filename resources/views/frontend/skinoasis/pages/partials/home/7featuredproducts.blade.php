@@ -1,8 +1,8 @@
 <!-- Product Favorite -->
-<div class="arrival pt-8 pb-100 position-relative overflow-hidden z-1 featured-product-area">
+<div class="arrival pt-8 pb-100 position-relative overflow-hidden z-1 featured-product-area" data-aos="fade-up">
     <div class="container">
 
-        <div class="heading-fav heading-center mb-5">
+        <div class="heading-fav heading-center mb-5 ">
             <ul class="nav nav-pills justify-content-center" role="tablist">
                 <li class="nav-item">
                     <a href="#featured-all" class="nav-link font-size-normal letter-spacing-large active" data-toggle="tab" role="tab">All</a>

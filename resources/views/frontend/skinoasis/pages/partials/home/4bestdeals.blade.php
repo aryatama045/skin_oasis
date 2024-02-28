@@ -12,11 +12,11 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="deal align-items-center">
-                    <div class="deal-content">
-                        <h4>{{$campaigns->title}}</h4>
-                        <h2>Rp.{{$campaigns->harga_promo}}</h2>
+                    <div class="deal-content" data-aos="fade-up">
+                        <h4 class="mb-lg-4">{{$campaigns->title}}</h4>
+                        <h2>{{ formatPrice($campaigns->harga_promo) }}</h2>
 
-                        <h3 class="product-title">
+                        <h3 class="product-tanggal">
                             @php
                                 $start_date = date('d ', $campaigns->start_date);
                                 $end_date = date('d M Y', $campaigns->end_date);
@@ -33,7 +33,7 @@
                             class="btn btn-rounded btn-sm text-uppercase btn-outline-green-dark mt-5">{{ localize('Shop Now') }}</a>
 
                     </div><!-- End .deal-content -->
-                    <div class="deal-image">
+                    <div class="deal-image" data-aos="fade-left">
                             <img src="{{ uploadedAsset($campaigns->banner) }}" alt="image">
                     </div><!-- End .deal-image -->
                 </div><!-- End .deal -->

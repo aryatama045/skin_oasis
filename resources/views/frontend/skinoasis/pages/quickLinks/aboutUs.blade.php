@@ -32,7 +32,7 @@
                                 </div>
 
                                 <div class="col-md-6 mb-3  mb-md-0">
-                                    <h3 class="video-banner-title fw-bold h3">
+                                    <h3 class="title fw-bold ">
                                         {{ getSetting('about_intro_quote_by') }}
                                     </h3>
 

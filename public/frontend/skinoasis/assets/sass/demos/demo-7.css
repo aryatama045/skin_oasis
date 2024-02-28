@@ -1,7 +1,7 @@
 /* Demo 7 Homepage 7 */
 /* Fonts */
-@import url("https://fonts.googleapis.com/css?family=Poppins:200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800");
-/* font-family: 'Poppins', sans-serif; */
+@import url("https://fonts.cdnfonts.com/css/avenir-lt-pro");
+@import url("https://fonts.cdnfonts.com/css/avenir");
 .container,
 .container-fluid {
   width: 1800px;
@@ -54,9 +54,15 @@ blockquote cite span {
 }
 
 .testimonial-icon:before {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
   display: inline-flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   width: 7rem;
   height: 7rem;
   border-radius: 50%;
@@ -65,7 +71,8 @@ blockquote cite span {
   color: #fff;
   border: 0.7rem solid #f9f9f9;
   background-color: #cc6666;
-  box-shadow: 0 0 0 0.1rem #cc6666;
+  -webkit-box-shadow: 0 0 0 0.1rem #cc6666;
+          box-shadow: 0 0 0 0.1rem #cc6666;
   margin-bottom: 2.6rem;
 }
 
@@ -186,8 +193,11 @@ blockquote cite span {
 }
 
 .icon-boxes {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .icon-box-side {
@@ -297,7 +307,8 @@ blockquote cite span {
   max-width: 270px;
   position: absolute;
   left: 50%;
-  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
   width: 100%;
   bottom: 2rem;
 }
@@ -331,7 +342,8 @@ blockquote cite span {
   margin-left: 6px;
   margin-top: -1px;
   top: 50%;
-  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
   -ms-transform: translateY(-50%);
 }
 .deal-countdown .countdown-period {
@@ -402,6 +414,7 @@ blockquote cite span {
   z-index: 1;
   opacity: 0;
   visibility: hidden;
+  -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
 }
 .entry-media > a:hover:after, .entry-media > a:focus:after {
@@ -510,4 +523,4 @@ blockquote cite span {
   .owl-simple .owl-nav [class*=owl-] {
     display: none;
   }
-}/*# sourceMappingURL=demo-7.css.map */
+}

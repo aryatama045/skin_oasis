@@ -29,7 +29,6 @@
                                     <div class="col-2">
                                         <img src="{{staticAsset('frontend/skinoasis/assets/svg/lokasi.png')}}" style="width: 100px">
                                     </div>
-                                  
                                     <div class="col-10">
                                         Jl. Mesjid Bendungan 1 No.10, RW.7, Cawang, Kec. Kramat jati, Kota Jakarta Timur, DKI Jakarta 13630 
                                     </div>
@@ -40,7 +39,6 @@
                                     <div class="col-2">
                                         <img src="{{staticAsset('frontend/skinoasis/assets/svg/telpon.png')}}" style="width: 100px">
                                     </div>
-                                  
                                     <div class="col-10" style="padding-top: 8px;">081211801703, (021) 8091787</div>
                                 </div>
                             </li>
@@ -49,7 +47,6 @@
                                     <div class="col-2">
                                         <img src="{{staticAsset('frontend/skinoasis/assets/svg/fax.png')}}" style="width: 100px">
                                     </div>
-                                  
                                     <div class="col-10" style="padding-top: 8px;">(021) 8091787</div>
                                 </div>
                             </li>
@@ -58,7 +55,6 @@
                                     <div class="col-2">
                                         <img src="{{staticAsset('frontend/skinoasis/assets/svg/mail.png')}}" style="width: 100px">
                                     </div>
-                                  
                                     <div class="col-10" style="padding-top: 8px;">cs@stmorita.com</div>
                                 </div>
                             </li>

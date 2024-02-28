@@ -1,11 +1,15 @@
 @charset "UTF-8";
 /* Demo 17 Homepage 17 */
 /* Fonts */
-@import url("https://fonts.googleapis.com/css?family=Poppins:200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800");
-/* font-family: 'Poppins', sans-serif; */
+@import url("https://fonts.cdnfonts.com/css/avenir-lt-pro");
+@import url("https://fonts.cdnfonts.com/css/avenir");
 .header-middle .row > div:first-child {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .container,
@@ -121,10 +125,18 @@
   top: 10rem;
   bottom: 4rem;
   left: 50%;
-  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 .banner-content-stretch .banner-content .banner-link {
   background-color: rgba(153, 153, 153, 0.2);
@@ -170,7 +182,8 @@
 }
 .widget-banner .banner-content-top {
   top: 3.5rem;
-  transform: translateY(0);
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
 }
 
 .banner-subtitle {
@@ -207,6 +220,7 @@
   border-radius: 0.3rem;
   padding: 0.7rem 1rem 0.6rem;
   background-color: rgba(255, 255, 255, 0.2);
+  -webkit-transition: all 0.35s;
   transition: all 0.35s;
 }
 .banner-link i {
@@ -216,6 +230,7 @@
   overflow: hidden;
   margin-left: 0;
   margin-bottom: -1px;
+  -webkit-transition: width 0.35s, margin 0.35s, color 0s;
   transition: width 0.35s, margin 0.35s, color 0s;
 }
 .banner-link.banner-link-dark:not(:hover):not(:focus) {
@@ -285,10 +300,14 @@
 }
 
 .product.product-sm {
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .product.product-sm .product-media {
-  flex: 0 0 70px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 70px;
+          flex: 0 0 70px;
   max-width: 70px;
 }
 .product.product-sm .product-title {
@@ -302,8 +321,12 @@
   width: unset;
 }
 .widget-deals .product-media {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding-top: 2rem;
   background-color: #fff;
 }
@@ -328,7 +351,8 @@
 }
 
 .product-action-vertical {
-  transform: translateY(0);
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
 }
 
 .btn-product-icon {
@@ -354,7 +378,8 @@
 .product-action {
   left: 2rem;
   right: 2rem;
-  transform: translateY(0);
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
 }
 
 .btn-product {
@@ -383,7 +408,8 @@
 }
 .btn-product:hover span, .btn-product:focus span {
   color: #fcb941;
-  box-shadow: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 .product-body {
@@ -458,8 +484,12 @@
 }
 
 .cat-banner-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background-size: cover;
   background-position: center center;
   padding-top: 3rem;
@@ -493,7 +523,8 @@
   color: #fcb941;
 }
 .cat-banner-list .list-all-link a:hover, .cat-banner-list .list-all-link a:focus {
-  box-shadow: 0 1px 0 #fcb941;
+  -webkit-box-shadow: 0 1px 0 #fcb941;
+          box-shadow: 0 1px 0 #fcb941;
 }
 
 .banner-list-content {
@@ -511,19 +542,28 @@
   margin-bottom: 0;
 }
 .cat-banner .banner-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   padding-top: 0;
   top: 4.5rem;
   left: 4.5rem;
   bottom: 5rem;
-  transform: translateY(0);
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
 }
 .cat-banner .banner-title {
-  flex-grow: 1;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
 }
 .cat-banner .banner-link {
-  align-self: flex-start;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
 }
 
 .sidebar-home {
@@ -642,7 +682,9 @@
 }
 
 .icon-box-side {
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin-left: -1rem;
 }
 .icon-box-side .icon-box-title {
@@ -663,8 +705,12 @@
   padding-bottom: 3.6rem;
 }
 .cta-horizontal-box form {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: flex-end;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 .cta-horizontal-box .input-group {
   max-width: 670px;
@@ -710,7 +756,16 @@
 .footer .widget-newsletter form {
   padding-top: 2.3rem;
 }
+.footer .widget-newsletter form .form-control::-webkit-input-placeholder {
+  color: #ccc;
+}
 .footer .widget-newsletter form .form-control::-moz-placeholder {
+  color: #ccc;
+}
+.footer .widget-newsletter form .form-control:-ms-input-placeholder {
+  color: #ccc;
+}
+.footer .widget-newsletter form .form-control::-ms-input-placeholder {
   color: #ccc;
 }
 .footer .widget-newsletter form .form-control::placeholder {
@@ -837,11 +892,15 @@
 }
 @media screen and (min-width: 1920px) {
   .cat-banner-row .col-xxl-4 {
-    flex: 0 0 33.65%;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 33.65%;
+            flex: 0 0 33.65%;
     max-width: 33.65%;
   }
   .cat-banner-row .col-xxl-8 {
-    flex: 0 0 66.35%;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 66.35%;
+            flex: 0 0 66.35%;
     max-width: 66.35%;
   }
   .cat-banner-row .product {
@@ -853,6 +912,8 @@
     text-align: center;
   }
   .cta-horizontal-box form {
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
-}/*# sourceMappingURL=demo-14.css.map */
+}

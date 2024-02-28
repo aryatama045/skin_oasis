@@ -67,10 +67,10 @@
   color: #fff;
 }
 .header.header-9 .cart-dropdown:hover, .header.header-9 .cart-dropdown:focus {
-  color: #cc9966;
+  color: #546d53;
 }
 .header.header-9 .cart-dropdown:hover .cart-txt, .header.header-9 .cart-dropdown:focus .cart-txt {
-  color: #cc9966;
+  color: #546d53;
 }
 .header.header-9 .wishlist-txt,
 .header.header-9 .cart-txt {
@@ -144,7 +144,7 @@
   padding-top: 2rem;
 }
 .intro-content .btn {
-  border-color: #cc9966;
+  border-color: #546d53;
   letter-spacing: 0.01em;
 }
 .intro-content .btn i {
@@ -264,7 +264,7 @@
   transition: all 0.3s;
 }
 .product.product-4 .btn-product:hover, .product.product-4 .btn-product:focus {
-  background-color: #cc9966;
+  background-color: #546d53;
 }
 .product.product-4 .btn-product:hover::before, .product.product-4 .btn-product:focus::before {
   opacity: 1;
@@ -300,7 +300,7 @@
 
 .icon-box-icon {
   font-size: 3rem;
-  color: #cc9966;
+  color: #546d53;
 }
 
 .icon-box-content p {
@@ -319,8 +319,8 @@
 
 .footer-menu a:hover,
 .footer-menu a:focus {
-  -webkit-box-shadow: 0 1px 0 #cc9966;
-          box-shadow: 0 1px 0 #cc9966;
+  -webkit-box-shadow: 0 1px 0 #546d53;
+          box-shadow: 0 1px 0 #546d53;
 }
 
 @media screen and (min-width: 768px) {

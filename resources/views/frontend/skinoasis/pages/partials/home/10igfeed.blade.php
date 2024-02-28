@@ -1,5 +1,5 @@
 <!-- IG Feed -->
-<div class="bg-lighter pt-5 pb-5">
+<div class="bg-lighter pt-5 pb-5" data-aos="fade-up">
     <div class="container">
         <div class="heading-ig text-center">
             <h4>Follow us on Instagram</h4><!-- End .title -->

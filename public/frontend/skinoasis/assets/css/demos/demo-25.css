@@ -95,13 +95,13 @@
   text-decoration: none !important;
 }
 .btn-dark.btn-primary {
-  color: #cc9966;
-  border-bottom-color: #cc9966;
+  color: #546d53;
+  border-bottom-color: #546d53;
 }
 .btn-dark.btn-primary:hover {
   color: #fff;
-  background-color: #cc9966;
-  border-color: #cc9966;
+  background-color: #546d53;
+  border-color: #546d53;
 }
 
 .footer-newsletter .title {
@@ -317,7 +317,7 @@
   font-size: 1.2rem;
 }
 .instagram-container .btn:hover {
-  color: #cc9966;
+  color: #546d53;
 }
 
 .footer a {

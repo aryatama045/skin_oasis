@@ -3,14 +3,14 @@
         <div class="row">
             <div class="col-md-8">
                 <div class="clearfix">
-                    <div class="heading mt-3">
+                    <div class="heading mt-3" data-aos="fade-up">
                         <h2 class="title-banner-2 mb-2">The ultimate dream of
                             <img class="img-fluid text-left d-inline p-2 mb-2"
                                 src="https://skinoasis.solusiitkreasi.com/public/uploads/media/0szep88MhwsQEGt367sGBWvjDSTF99mm4XryAZAb.png" width="200" height="25"> is make people beauty, healthy and happy</h2>
                             <img class="col-md-8 float-md-end mb-3 ms-md-3"
                                 src="{{ staticAsset('frontend/skinoasis/assets/images/banners/banner2.png') }}"  alt="Banner">
                     </div>
-                    <div class="entry-content text-justify mt-lg-10 mb-6">
+                    <div class="entry-content text-justify mt-lg-10 mb-6" data-aos="fade-up">
                         <p>
                             skin is our asset, and skincare is our investment. Now, the dream of having a truly healthy skin is not just a wishful thinking, through science, collaboration with experts, and our love & burning enthusiasm to create a finely-effective product and be an oasis for people who search a right skincare products for their skin,   could bring us closer to our ultimate dream
                         </p>
@@ -18,7 +18,7 @@
                 </div>
             </div>
 
-            <div class="col-md-4 p-md-0">
+            <div class="col-md-4 p-md-0 wow animate__animated animate__fadeInLeft" data-aos="fade-up">
                 <div class="content-right">
                     <figure class="mb-md-12">
                         <img src="{{ staticAsset('frontend/skinoasis/assets/images/banners/banner3.png') }}" alt="Banner">
@@ -41,7 +41,7 @@
                     <div class="testimonial text-center bg-white">
                         <cite>
                             <span>
-                                <ul class="star-rating fs-sm d-inline-flex align-items-center text-warning">
+                                <ul class="star-rating d-inline-flex align-items-center text-warning">
                                     {{ renderStarRatingFront($feedback->rating) }}
                                 </ul>
                             </span>
@@ -60,7 +60,7 @@
         </div>
     </div>
 
-    <div class="video-banner video-banner-poster text-left mt-10">
+    <div class="video-banner video-banner-poster text-left mt-10" data-aos="fade-up">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-md-6 mb-3 mb-md-0">

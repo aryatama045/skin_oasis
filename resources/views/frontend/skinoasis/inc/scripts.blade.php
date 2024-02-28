@@ -1,12 +1,17 @@
 <!-- Plugins JS File -->
 <script src="{{ staticAsset('frontend/default/assets/js/vendors/jquery-3.6.4.min.js') }}"></script>
+<!-- Plugins JS File -->
 <script src="{{ staticAsset('frontend/skinoasis/assets/js/jquery.min.js') }}"></script>
 <script src="{{ staticAsset('frontend/default/assets/js/vendors/jquery-ui.min.js') }}"></script>
 <script src="{{ staticAsset('frontend/skinoasis/assets/js/bootstrap.bundle.min.js') }}"></script>
 <script src="{{ staticAsset('frontend/skinoasis/assets/js/jquery.hoverIntent.min.js') }}"></script>
+
+<script src="{{ staticAsset('frontend/skinoasis/assets/js/jquery.waypoints.min.js') }}"></script>
 <script src="{{ staticAsset('frontend/skinoasis/assets/js/superfish.min.js') }}"></script>
 <script src="{{ staticAsset('frontend/skinoasis/assets/js/owl.carousel.min.js') }}"></script>
-<script src="{{ staticAsset('frontend/skinoasis/assets/js/jquery.waypoints.min.js') }}"></script>
+<script src="{{ staticAsset('frontend/skinoasis/assets/js/imagesloaded.pkgd.min.js') }}"></script>
+<script src="{{ staticAsset('frontend/skinoasis/assets/js/isotope.pkgd.min.js') }}"></script>
+
 <script src="{{ staticAsset('frontend/skinoasis/assets/js/wNumb.js') }}"></script>
 <script src="{{ staticAsset('frontend/skinoasis/assets/js/nouislider.min.js') }}"></script>
 <script src="{{ staticAsset('frontend/skinoasis/assets/js/bootstrap-input-spinner.js') }}"></script>
@@ -20,6 +25,7 @@
 <script src="{{ staticAsset('frontend/default/assets/js/vendors/countdown.min.js') }}"></script>
 <script src="{{ staticAsset('frontend/default/assets/js/vendors/range-slider.js') }}"></script>
 
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
 <!-- Main JS File -->
 
@@ -59,6 +65,8 @@
     // runs when the document is ready
     $(document).ready(function() {
         initIsotop();
+
+        AOS.init();
 
         // zoom
         if ( $.fn.elevateZoom ) {
@@ -100,6 +108,78 @@
                 }
             });
         }
+
+        // Masonry / Grid layout fnction
+        var layoutInit = function( container, selector, space ) {
+            $(container).each(function () {
+                var $this = $(this);
+
+                $this.isotope({
+                    itemSelector: selector,
+                    layoutMode: ( $this.data('layout') ? $this.data('layout'): 'masonry' ),
+                    masonry: {
+                        columnWidth: space
+                    }
+                });
+            });
+        }
+
+        var isotopeFilter = function( filterNav, container) {
+            $(filterNav).find('a').on('click', function(e) {
+                var $this = $(this),
+                    filter = $this.attr('data-filter');
+
+                // Remove active class
+                $(filterNav).find('.active').removeClass('active');
+
+                // Init filter
+                $(container).isotope({
+                    filter: filter,
+                    transitionDuration: '0.7s'
+                });
+
+                // Add active class
+                $this.closest('li').addClass('active');
+                e.preventDefault();
+            });
+        }
+
+        /* Masonry / Grid Layout & Isotope Filter for blog/portfolio etc... */
+        if ( typeof imagesLoaded === 'function' && $.fn.isotope) {
+            // Portfolio
+            $('.portfolio-container').imagesLoaded(function () {
+                // Portfolio Grid/Masonry
+                layoutInit( '.portfolio-container', '.portfolio-item' ); // container - selector
+                // Portfolio Filter
+                isotopeFilter( '.portfolio-filter',  '.portfolio-container'); //filterNav - .container
+            });
+
+            // Blog
+            $('.entry-container').imagesLoaded(function () {
+                // Blog Grid/Masonry
+                layoutInit( '.entry-container', '.entry-item' ); // container - selector
+                // Blog Filter
+                isotopeFilter( '.entry-filter',  '.entry-container'); //filterNav - .container
+            });
+
+            // Product masonry product-masonry.html
+            $('.product-gallery-masonry').imagesLoaded(function () {
+                // Products Grid/Masonry
+                layoutInit( '.product-gallery-masonry', '.product-gallery-item' ); // container - selector
+            });
+
+            // Products - Demo 11
+            $('.products-container').imagesLoaded(function () {
+                // Products Grid/Masonry
+                layoutInit( '.products-container', '.product-item' ); // container - selector
+                // Product Filter
+                isotopeFilter( '.product-filter',  '.products-container'); //filterNav - .container
+            });
+
+            layoutInit('.grid', '.grid-item', '.grid-space');
+        }
+
+
     });
 
     // tooltip
@@ -119,6 +199,7 @@
             $(this).addClass("active");
         });
     }
+
 
     // copy coupon code
     $(function() {
@@ -569,3 +650,4 @@
         @endif
     }
 </script>
+

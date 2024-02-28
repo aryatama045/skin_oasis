@@ -12,7 +12,17 @@ body{
 }
 
 p {
-	font-family: 'avenir lt pro','avenir' !important;
+	font-family: "avenir lt pro", "avenir" !important;
+    font-size: 16px;
+    color: black;
+}
+
+.ls-1px {
+    letter-spacing: 1px;
+}
+
+.ls-2px {
+    letter-spacing: 2px;
 }
 
 .mb-md-12{
@@ -24,12 +34,14 @@ p {
 	font-size: 2.2rem;
 	letter-spacing: -.025em;
 	margin-bottom: 2.4rem;
+	font-family: 'avenir lt pro' !important;
 }
 
 .title.brands,
 .title.instagram {
 	font-size: 2rem;
 	margin-bottom: 4.5rem;
+	letter-spacing: 1.3px;
 }
 
 .header.header-11 {
@@ -43,7 +55,8 @@ p {
 		.menu > li > a {
 			font-weight: 100;
 			letter-spacing: 0.16em;
-			padding-right: 2rem;
+			padding-right: 1.4rem;
+			font-size: 1.3rem;
 		}
 	}
 	.wishlist-link .wishlist-count,
@@ -170,8 +183,8 @@ p {
 	background-size: cover;
 	background-position: center center;
 	.intro-content {
-		width: 740px;
-		max-width: 85%;
+		width: 800px;
+		max-width: 95%;
 		margin-left: auto;
 		margin-right: auto;
 		position: relative;
@@ -406,7 +419,7 @@ p {
 
 .intro-text {
 	font-weight: 400;
-	font-size: 1.7rem;
+	font-size: 24px;
 	line-height: 1.2;
 	letter-spacing: .01em;
 	text-transform: capitalize;
@@ -537,13 +550,15 @@ p {
 	flex: 0 0 100%;
 	max-width: 100%;
 	padding: 3.5rem 0 2rem;
-	font-family: 'avenir lt pro';
+	font-family: 'avenir lt pro','avenir' !important;
+	letter-spacing:  2px;
 	.btn {
 		padding-top: .85rem;
 		padding-bottom: .85rem;
 		color: #ffffff;
 		background-color: transparent;
 		border: .1rem solid #ebebeb;
+
 
 		&:hover,
 		&:focus {
@@ -553,7 +568,7 @@ p {
 	}
 
 	h4 {
-		font-size: 2rem;
+		font-size: 24px !important;
 		color: #ffffff;
 		font-weight: bold;
 		line-height: 1.3;
@@ -567,19 +582,30 @@ p {
 		line-height: 1.2em;
 		letter-spacing: 0.08em;
 		margin-bottom: 3.6rem;
+		margin-top: 3rem;
 	}
 
 	.product-title {
 		font-weight: 800;
-		font-size: 3rem !important;
+		font-size: 16px !important;
 		letter-spacing: .2em;
 		margin-bottom: 0.7rem;
 		color: white !important;
+		font-family: 'avenir lt pro';
+	}
+
+	.product-tanggal {
+		font-weight: 800;
+		font-size: 28px !important;
+		letter-spacing: .2em;
+		margin-bottom: 0.7rem;
+		color: white !important;
+		font-family: 'avenir lt pro';
 	}
 
 	.product-price {
 		font-weight: bold;
-		font-size: 3rem !important;
+		font-size: 18px !important;
 		margin-bottom: 2.4rem;
 		letter-spacing: .1rem;
 	}
@@ -587,6 +613,7 @@ p {
 	.new-price {
 		font-weight: 600;
 		color: #ffffff;
+		font-size: 26px !important;
 	}
 }
 
@@ -660,6 +687,8 @@ p {
 	}
 }
 
+
+
 @include mq('md') {
 	.deal {
 		flex-direction: row;
@@ -700,7 +729,7 @@ p {
 		}
 
 		.product-title {
-			font-size: 2.4rem;
+			font-size: 16px !important;
 			color: #ffffff;
 		}
 
@@ -745,8 +774,9 @@ p {
 }
 
 .product-title {
-	font-size: 1.4rem;
+	font-size: 16px;
 	letter-spacing: 0;
+	font-family: 'avenir lt pro' !important;
 }
 
 .product-price {
@@ -954,7 +984,7 @@ p {
 	.entry-content p {
 		margin-bottom: 1.3rem;
 		color: #3e3b3b;
-		font-size: 1.7rem;
+		font-size: 16px;
 
 	}
 
@@ -979,7 +1009,7 @@ p {
 .entry-content p {
 	margin-bottom: 1.3rem;
 	color: #1b1a1a;
-	font-size: 1.8rem;
+	font-size: 16px;
 
 }
 
@@ -1061,7 +1091,8 @@ p {
 .footer-about{
 	list-style: decimal;
 	text-align: justify;
-	margin: 3rem;
+	margin: 1rem;
+	margin-right: 3rem;
 }
 
 .social-icon {
@@ -1098,10 +1129,12 @@ p {
 	}
 
 	.content-right {
-		margin-left: -8rem;
+		margin-left: -4rem;
+		margin-top: 2.3rem;
 
 		@include mq('md') {
-			margin-left: -8rem;
+			margin-left: -4rem;
+			margin-top: 2.3rem;
 		}
 		@media (max-width: 575.98px){
 			margin-left: 0rem;
@@ -1348,6 +1381,28 @@ p {
 	display: none;
 }
 
+.testimonial {
+    padding: 37px;
+    margin-left: 1em;
+	text-align: left !important;
+	font-size: 20px;
+	color: black;
+	p{
+		color: black;
+	}
+}
+
+.testimonial-two {
+    padding: 10px;
+    margin-left: 4em;
+	text-align: left !important;
+	font-size: 20px;
+	color: black;
+	p{
+		color: black;
+	}
+}
+
 
 @include mq('sm') {
 	.intro-subtitle {
@@ -1361,7 +1416,7 @@ p {
 	}
 
 	.intro-text {
-		font-size: 1.6rem;
+		font-size: 20px;
 	}
 }
 
@@ -1394,7 +1449,7 @@ p {
 	}
 
 	.intro-text {
-		font-size: 1.8rem;
+		font-size: 24px !important;
 	}
 }
 
@@ -1462,7 +1517,7 @@ p {
 	}
 
 	.intro-text {
-		font-size: 1.5rem;
+		font-size: 24px !important;
 		font-weight: 200;
 	}
 
