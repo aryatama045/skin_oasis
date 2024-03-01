@@ -554,6 +554,19 @@ class ProductsController extends Controller
     # delete product
     public function delete($id)
     {
-        #
+        $product = Product::findOrFail($id);
+
+
+        if(!$product->carts->isEmpty()){
+            flash(localize('Product already is in customer cart'))->error();
+
+            return back();
+        }
+
+        $product->delete();
+
+        flash(localize('Product has been deleted successfully'))->success();
+
+        return back();
     }
 }
