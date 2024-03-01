@@ -557,11 +557,11 @@ class ProductsController extends Controller
         $product = Product::findOrFail($id);
 
 
-        if(!$product->carts->isEmpty()){
-            flash(localize('Product already is in customer cart'))->error();
+        // if(!$product->carts->isEmpty()){
+        //     flash(localize('Product already is in customer cart'))->error();
 
-            return back();
-        }
+        //     return back();
+        // }
 
         $product->delete();
 
