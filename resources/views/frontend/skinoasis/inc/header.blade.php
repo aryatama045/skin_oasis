@@ -25,7 +25,7 @@
         </div><!-- End .container -->
     </div><!-- End .header-middle -->
 
-    <div class="header-middle sticky-header">
+    <div class="header-middle sticky-header ff">
         <div class="container">
             <div class="header-left">
                 <nav class="main-nav">
