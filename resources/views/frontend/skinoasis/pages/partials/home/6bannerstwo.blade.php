@@ -62,6 +62,36 @@
 
     <div class="video-banner video-banner-poster text-left mt-10" data-aos="fade-up">
         <div class="container">
+
+            @forelse ($trending as $tr)
+
+                @if($tr->placement == 1)
+
+                <div class="row align-items-center">
+                    <div class="col-md-6 mb-3 mb-md-0">
+                        <h3 class="video-banner-title fw-bold h3">
+                            <span class="fw-light">TRENDING 1</span>
+                            {{$tr->collectLocalization('title')}}
+                        </h3><!-- End .video-banner-title -->
+                        <p>Our beauty box is a set of best full-size products that are top sellers in out online shop.
+                            We want you to be able to try everything at once and make sure that our selection of products is about quality.</p>
+                        <a href="#" class="btn btn-rounded btn-sm text-uppercase btn-outline-green-dark"> Shop Now</a>
+                    </div><!-- End .col-md-6 -->
+
+                    <div class="col-md-6">
+                        <div class="banner2-cover-bottom">
+                            <img src="{{ staticAsset('frontend/skinoasis/assets/images/banners/banner2.png') }}" alt="poster">
+
+                            <div class="video-poster-content">
+                                <a href="https://www.youtube.com/watch?v=vBPgmASQ1A0" class="btn-video btn-iframe"><i class="icon-play"></i></a>
+                            </div><!-- End .video-poster-content -->	
+                        </div><!-- End .video-poster -->
+                    </div><!-- End .col-md-6 -->
+                </div><!-- End .row -->
+                @endif
+
+            @empty
+
             <div class="row align-items-center">
                 <div class="col-md-6 mb-3 mb-md-0">
                     <h3 class="video-banner-title fw-bold h3">
@@ -83,6 +113,8 @@
                     </div><!-- End .video-poster -->
                 </div><!-- End .col-md-6 -->
             </div><!-- End .row -->
+            @endforelse
+
         </div><!-- End .container -->
     </div>
 </section>
