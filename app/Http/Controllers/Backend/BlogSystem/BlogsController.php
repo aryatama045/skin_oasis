@@ -74,6 +74,9 @@ class BlogsController extends Controller
         $blog->blog_category_id = $request->category_id;
         $blog->short_description = $request->short_description;
 
+        #Placement
+        $blog->placement = $request->placement;
+
         $blog->video_link = $request->video_link;
         $blog->description = $request->description;
 
@@ -120,6 +123,9 @@ class BlogsController extends Controller
             $blog->title = $request->title;
             $blog->slug = (!is_null($request->slug)) ? Str::slug($request->slug, '-') : Str::slug($request->name, '-') . '-' . strtolower(Str::random(5));
             $blog->blog_category_id = $request->category_id;
+
+            #Placement
+            $blog->placement = $request->placement;
 
             $blog->thumbnail_image = $request->image;
             $blog->banner = $request->banner;

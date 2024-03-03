@@ -97,6 +97,17 @@
                                         </select>
                                     </div>
 
+                                    <div class="mb-4">
+                                        <label for="placement" class="form-label">{{ localize('Placement') }}</label>
+                                        <select class="form-control select2" name="placement" data-toggle="select2" required>
+                                            <option value="">{{ localize('Select a Placement') }}</option>
+                                            
+                                            <option value="1"> Posisi 1</option>
+                                            <option value="2"> Posisi 2</option>
+                                            <option value="3"> Posisi 3</option>
+                                        </select>
+                                    </div>
+
 
                                     <div class="mb-4">
                                         <label for="video_link"
