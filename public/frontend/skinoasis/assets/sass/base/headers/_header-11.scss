@@ -6,6 +6,7 @@
 	top: 0;
 	z-index:1040;
 	background-color: transparent;
+	font-family: 'avenir lt pro' !important;
 
 	.header-middle {
 		border-bottom-color: rgba(#fafafa, .2);
@@ -53,6 +54,7 @@
 	.menu > li:not(:hover):not(.active):not(.show) > a,
 	.mobile-menu-toggler {
 		color: #fff;
+		font-family: 'avenir lt pro' !important;
 	}
 
 	.logo {
@@ -139,6 +141,7 @@
 	.menu > li:not(:hover):not(.active):not(.show) > a,
 	.mobile-menu-toggler {
 		color: #201e1e;
+		font-family: 'avenir lt pro' !important;
 	}
 
 	.logo {
