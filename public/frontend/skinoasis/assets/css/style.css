@@ -78,6 +78,7 @@ body {
 
 a {
   font-family: "avenir lt pro" !important;
+  font-weight: 100 !important;
 }
 
 ::-moz-selection {
