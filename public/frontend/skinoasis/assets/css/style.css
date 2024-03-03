@@ -72,6 +72,10 @@ body {
   overflow-x: hidden;
 }
 
+.ff {
+  font-family: "avenir lt pro" !important;
+}
+
 ::-moz-selection {
   color: #fff;
   background-color: #546d53;
