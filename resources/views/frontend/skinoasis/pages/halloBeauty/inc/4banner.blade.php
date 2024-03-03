@@ -6,6 +6,6 @@
             <img src="{{ staticAsset('frontend/skinoasis/assets/images/demos/demo-31/wave.png') }}" alt="Wave image" width="76" height="9">
         </figure>
         <p class="font-weight-normal mt-3">From mats, props, accessories, and everything in between, delivered direct to your door.</p>
-        <a href="#" class="btn btn-secondary ls-1">SHOP YOGA MATS</a>
+        <a href="#" class="btn btn-rounded btn-sm text-uppercase btn-outline-green-dark ls-1">SHOP YOGA MATS</a>
     </div><!--End .banner-content-->
 </div><!--End .banner-big-->
