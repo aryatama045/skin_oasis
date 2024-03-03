@@ -76,6 +76,8 @@ class BlogsController extends Controller
 
         #Placement
         $blog->placement = $request->placement;
+        #Button Shop
+        $blog->button_shop = $request->button_shop;
 
         $blog->video_link = $request->video_link;
         $blog->description = $request->description;
@@ -126,6 +128,8 @@ class BlogsController extends Controller
 
             #Placement
             $blog->placement = $request->placement;
+            #Button Shop
+            $blog->button_shop = $request->button_shop;
 
             $blog->thumbnail_image = $request->image;
             $blog->banner = $request->banner;

@@ -97,6 +97,7 @@
                                         </select>
                                     </div>
 
+                                    <!-- #Placement -->
                                     <div class="mb-4">
                                         <label for="placement" class="form-label">{{ localize('Placement') }}</label>
                                         <select class="form-control select2" name="placement" data-toggle="select2" required>
@@ -106,7 +107,6 @@
                                             @else
                                                 <option value="">{{ localize('Select a Placement') }}</option>
                                             @endif
-                                            
 
                                             <option value="1"> Posisi 1</option>
                                             <option value="2"> Posisi 2</option>
@@ -114,6 +114,12 @@
                                         </select>
                                     </div>
 
+                                    <!-- #Button Shop -->
+                                    <div class="mb-4">
+                                        <label for="botton_shop" class="form-label">{{ localize('Button Shop Link') }}</label>
+                                        <input type="url" name="botton_shop" id="botton_shop"
+                                            value="{{$blog->button_shop}}" class="form-control">
+                                    </div>
 
                                     <div class="mb-4">
                                         <label for="video_link"

@@ -61,6 +61,7 @@
                                     </select>
                                 </div>
 
+                                <!-- #Placement -->
                                 <div class="mb-4">
                                     <label for="placement" class="form-label">{{ localize('Placement') }}</label>
                                     <select class="form-control select2" name="placement" data-toggle="select2" required>
@@ -72,13 +73,12 @@
                                     </select>
                                 </div>
 
+                                <!-- #Button Shop -->
                                 <div class="mb-4">
                                     <label for="botton_shop" class="form-label">{{ localize('Button Shop Link') }}</label>
                                     <input type="url" name="botton_shop" id="botton_shop"
-                                        placeholder="https://www.youtube.com/watch?v=d_lz4kZ3YKI" class="form-control">
+                                        placeholder="https://skinoasis.solusiitkreasi.com/products/hd-skin-foundation-50-ml-orusn" class="form-control">
                                 </div>
-
-
 
                                 <div class="mb-4">
                                     <label for="video_link" class="form-label">{{ localize('Youtube Video Link') }}</label>
