@@ -4359,7 +4359,7 @@ p {
   padding-top: 2.95rem;
   padding-bottom: 2.95rem;
   padding-left: 0;
-  font-family: "avenir lt pro";
+  font-family: "avenir lt pro" !important;
 }
 .header-11 .sticky-header.fixed {
   background-color: #333;
@@ -4437,6 +4437,7 @@ p {
   padding-top: 2.95rem;
   padding-bottom: 2.95rem;
   padding-left: 0;
+  font-family: "avenir lt pro" !important;
 }
 .header-hallo-beauty .sticky-header.fixed {
   background-color: #ffffff;
