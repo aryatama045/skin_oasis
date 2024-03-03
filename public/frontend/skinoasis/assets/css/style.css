@@ -4423,7 +4423,7 @@ p {
 .header-hallo-beauty .mobile-menu-toggler {
   color: #201e1e;
   font-family: "avenir lt pro" !important;
-  font-weight: normal !important;
+  font-weight: 100 !important;
 }
 .header-hallo-beauty .logo {
   margin-top: 2.5rem;
@@ -4440,7 +4440,7 @@ p {
   padding-bottom: 2.95rem;
   padding-left: 0;
   font-family: "avenir lt pro" !important;
-  font-weight: normal !important;
+  font-weight: 100 !important;
 }
 .header-hallo-beauty .sticky-header.fixed {
   background-color: #ffffff;
