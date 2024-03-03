@@ -63,7 +63,7 @@
     <div class="video-banner video-banner-poster text-left mt-10" data-aos="fade-up">
         <div class="container">
 
-            @forelse ($trending as $tr)
+            @forelse ($trending1 as $tr)
 
                 @if($tr->placement == 1)
 
@@ -74,15 +74,15 @@
                             {{$tr->title}}
                         </h3><!-- End .video-banner-title -->
                         <p>{{$tr->short_description}}</p>
-                        <a href="#" class="btn btn-rounded btn-sm text-uppercase btn-outline-green-dark"> Shop Now</a>
+                        <a href="{{$tr->button_shop}}" class="btn btn-rounded btn-sm text-uppercase btn-outline-green-dark"> Shop Now</a>
                     </div><!-- End .col-md-6 -->
 
                     <div class="col-md-6">
                         <div class="banner2-cover-bottom">
-                            <img src="{{ staticAsset('frontend/skinoasis/assets/images/banners/banner2.png') }}" alt="poster">
+                            <img src="{{ uploadedAsset($tr->thumbnail_image) }}" alt="poster">
 
                             <div class="video-poster-content">
-                                <a href="https://www.youtube.com/watch?v=vBPgmASQ1A0" class="btn-video btn-iframe"><i class="icon-play"></i></a>
+                                <a href="{{$tr->video_link}}" class="btn-video btn-iframe"><i class="icon-play"></i></a>
                             </div><!-- End .video-poster-content -->	
                         </div><!-- End .video-poster -->
                     </div><!-- End .col-md-6 -->

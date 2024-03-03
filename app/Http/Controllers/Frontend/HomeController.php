@@ -43,10 +43,12 @@ class HomeController extends Controller
             $client_feedback = json_decode(getSetting('client_feedback'));
         }
 
-        $trending = DB::table('blogs')->get();
+        $trending1 = Blog::where('placement','1')->isActive()->latest()->take(1)->get();
+        $trending2 = Blog::where('placement','2')->isActive()->latest()->take(1)->get();
+        $trending3 = Blog::where('placement','3')->isActive()->latest()->take(1)->get();
 
 
-        return getView('pages.home', ['blogs' => $blogs, 'trending' => $trending, 'sliders' => $sliders, 'brands' => $brands, 'banner_section_one_banners' => $banner_section_one_banners, 'client_feedback' => $client_feedback]);
+        return getView('pages.home', ['blogs' => $blogs, 'trending1' => $trending1, 'trending2' => $trending2, 'trending3' => $trending3, 'sliders' => $sliders, 'brands' => $brands, 'banner_section_one_banners' => $banner_section_one_banners, 'client_feedback' => $client_feedback]);
     }
 
     # all brands
