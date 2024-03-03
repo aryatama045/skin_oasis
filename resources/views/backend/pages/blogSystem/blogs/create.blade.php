@@ -72,6 +72,13 @@
                                     </select>
                                 </div>
 
+                                <div class="mb-4">
+                                    <label for="botton_shop" class="form-label">{{ localize('Button Shop Link') }}</label>
+                                    <input type="url" name="botton_shop" id="botton_shop"
+                                        placeholder="https://www.youtube.com/watch?v=d_lz4kZ3YKI" class="form-control">
+                                </div>
+
+
 
                                 <div class="mb-4">
                                     <label for="video_link" class="form-label">{{ localize('Youtube Video Link') }}</label>
