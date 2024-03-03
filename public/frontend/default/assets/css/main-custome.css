@@ -28420,7 +28420,8 @@ img.col-md-8.float-md-end.mb-3.ms-md-3 {
     font-family: "avenir lt pro" !important;
 }
 
-a#partner-program-tab {
+
+li.nav-item.partner {
     border-right: 1px solid #00000066;
     margin-left: 0rem !important;
 }
