@@ -71,7 +71,7 @@
                     <div class="col-md-6 mb-3 mb-md-0">
                         <h3 class="video-banner-title fw-bold h3">
                             <span class="fw-light">TRENDING 1</span>
-                            {{$tr->collectLocalization('title')}}
+                            {{$tr->title}}
                         </h3><!-- End .video-banner-title -->
                         <p>Our beauty box is a set of best full-size products that are top sellers in out online shop.
                             We want you to be able to try everything at once and make sure that our selection of products is about quality.</p>
