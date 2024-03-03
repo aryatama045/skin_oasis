@@ -2,6 +2,7 @@
 .header {
 	width: 100%;
 	background-color: #fff;
+	font-family: 'avenir lt pro' !important;
 
 	.container,
 	.container-fluid {
@@ -260,6 +261,8 @@
 	border-bottom: .1rem solid #f4f4f4;
 	.menu > li > a {
 		letter-spacing: .01em;
+		font-family: 'avenir lt pro' !important;
+		font-weight: 100 !important;
 	}
 	.menu.sf-arrows > li > .sf-with-ul {
 	    padding-right: 1.5rem;
