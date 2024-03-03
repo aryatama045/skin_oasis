@@ -4376,6 +4376,7 @@ p {
   z-index: 1040;
   background-color: transparent;
   font-family: "avenir lt pro" !important;
+  font-weight: normal !important;
 }
 .header-hallo-beauty .header-middle {
   border-bottom-color: rgba(250, 250, 250, 0);
@@ -4422,6 +4423,7 @@ p {
 .header-hallo-beauty .mobile-menu-toggler {
   color: #201e1e;
   font-family: "avenir lt pro" !important;
+  font-weight: normal !important;
 }
 .header-hallo-beauty .logo {
   margin-top: 2.5rem;
@@ -4438,6 +4440,7 @@ p {
   padding-bottom: 2.95rem;
   padding-left: 0;
   font-family: "avenir lt pro" !important;
+  font-weight: normal !important;
 }
 .header-hallo-beauty .sticky-header.fixed {
   background-color: #ffffff;
