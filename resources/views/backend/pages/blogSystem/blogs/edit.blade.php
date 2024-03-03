@@ -116,8 +116,8 @@
 
                                     <!-- #Button Shop -->
                                     <div class="mb-4">
-                                        <label for="botton_shop" class="form-label">{{ localize('Button Shop Link') }}</label>
-                                        <input type="url" name="botton_shop" id="botton_shop"
+                                        <label for="button_shop" class="form-label">{{ localize('Button Shop Link') }}</label>
+                                        <input type="url" name="button_shop" id="button_shop"
                                             value="{{$blog->button_shop}}" class="form-control">
                                     </div>
 
