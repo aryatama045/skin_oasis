@@ -48,7 +48,7 @@
                     <div class="col-xl-5col col-lg-3 col-md-3 col-6">
                         <a href="elements-accordions.html" class="element-type">
                             <div class="element">
-                                <i class="element-img"></i>
+                                <img class="element-img" src="{{ staticAsset('frontend/skinoasis/assets/images/icons/icon-send.JPG') }}" alt="icon">
                                 <p>Cari Dokter</p>
                             </div>
                         </a>
