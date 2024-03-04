@@ -4071,7 +4071,7 @@ p {
 .btn-outline-yellow {
   border: 0.1rem solid #FBE18A !important;
 }
-.btn-outline-yellow :hover {
+.btn-outline-yellow .btn-outline-yellow:hover {
   color: black;
   background-color: #fbe18a !important;
 }
