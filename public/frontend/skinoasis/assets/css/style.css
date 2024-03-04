@@ -4092,7 +4092,7 @@ p {
   margin-top: 2rem !important;
   font-weight: 100 !important;
 }
-.hallo-beauty .element .element-img, .hallo-beauty .element .element-hover-img {
+.hallo-beauty .element .element-icon {
   width: 100px;
   height: 100px;
   transition: all 0.3s;
