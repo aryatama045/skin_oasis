@@ -4049,6 +4049,9 @@ p {
   font-size: 4rem;
   font-weight: 100;
 }
+.hallo-beauty .rounded {
+  border-radius: 2.25rem !important;
+}
 .hallo-beauty .search-key {
   border: 0.1rem solid #FBE18A !important;
   background: white;
