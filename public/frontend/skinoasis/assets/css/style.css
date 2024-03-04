@@ -4039,6 +4039,7 @@ p {
 }
 .hallo-beauty .heading {
   padding: 1rem;
+  margin-bottom: 1rem !important;
 }
 .hallo-beauty .heading .heading-title {
   font-size: 5rem;
@@ -4048,15 +4049,24 @@ p {
   font-size: 4rem;
   font-weight: 100;
 }
-.hallo-beauty .button-group {
+.hallo-beauty input.search-key {
+  border: 0.1rem solid #FBE18A;
+  background: white;
+  color: #857e7e !important;
+}
+
+.button-group {
   display: flex;
   align-items: center;
   margin-bottom: 0rem;
 }
-.hallo-beauty input.search-key {
+
+.btn-outline-yellow {
   border: 0.1rem solid #FBE18A;
-  background: white;
-  color: black !important;
+}
+.btn-outline-yellow :hover {
+  color: black;
+  background-color: #fbe18a;
 }
 
 .banner-big {

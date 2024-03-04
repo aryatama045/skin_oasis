@@ -18,21 +18,21 @@
                         <div class="button-group">
                             <div class="btn-wrap p-4">
                                 <span></span>
-                                <a href="#" class="btn btn-outline-primary btn-rounded btn-sm ls-1px text-uppercase">
+                                <a href="#" class="btn btn-outline-yellow btn-rounded btn-sm ls-1px text-uppercase">
                                     <span>Semua</span>
                                 </a>
                             </div>
 
                             <div class="btn-wrap p-4">
                                 <span></span>
-                                <a href="#" class="btn btn-outline-primary btn-rounded btn-sm ls-1px text-uppercase">
+                                <a href="#" class="btn btn-outline-yellow btn-rounded btn-sm ls-1px text-uppercase">
                                     <span>Dokter</span>
                                 </a>
                             </div>
 
                             <div class="btn-wrap p-4">
                                 <span></span>
-                                <a href="#" class="btn btn-outline-primary btn-rounded btn-sm ls-1px text-uppercase">
+                                <a href="#" class="btn btn-outline-yellow btn-rounded btn-sm ls-1px text-uppercase">
                                     <span>Lokasi</span>
                                 </a>
                             </div>
