@@ -1,6 +1,7 @@
 <!-- IG Feed -->
-<div class="hallo-beauty bg-lighter pt-5 pb-5" data-aos="fade-up">
-    <div class="container">
+<div class="hallo-beauty bg-white pt-5 pb-5" data-aos="fade-up">
+    <div class="container card">
+        .card-body
         <div class="hallo-beauty-heading text-left">
             <h4 class="heading-subtitle ls-1px ff">Selamat Datang di</h4>
             <h2 class="heading-title text-capitalize ls-1px ff"> Hallo Beauty</h2>
@@ -41,15 +42,12 @@
 
                     </div>
 
-                    <div class="input-group">
-                        <input type="text" class="form-control" placeholder="KETIK KATA KUNCI" aria-label="Ketik Kata Kunci" required="">
-                    </div>
                 </form>
             </div>
         </div>
 
         <div class="row elements">
-            <div class="col-xl-5col col-lg-4 col-md-3 col-6">
+            <div class="col-xl-5col col-lg-3 col-md-3 col-6">
                 <a href="elements-accordions.html" class="element-type">
                     <div class="element">
                         <i class="element-img"></i>
@@ -59,7 +57,7 @@
                 </a>
             </div>
 
-            <div class="col-xl-5col col-lg-4 col-md-3 col-6">
+            <div class="col-xl-5col col-lg-3 col-md-3 col-6">
                 <a href="elements-accordions.html" class="element-type">
                     <div class="element">
                         <i class="element-img"></i>
@@ -69,7 +67,7 @@
                 </a>
             </div>
 
-            <div class="col-xl-5col col-lg-4 col-md-3 col-6">
+            <div class="col-xl-5col col-lg-3 col-md-3 col-6">
                 <a href="elements-accordions.html" class="element-type">
                     <div class="element">
                         <i class="element-img"></i>
@@ -79,7 +77,7 @@
                 </a>
             </div>
 
-            <div class="col-xl-5col col-lg-4 col-md-3 col-6">
+            <div class="col-xl-5col col-lg-3 col-md-3 col-6">
                 <a href="elements-accordions.html" class="element-type">
                     <div class="element">
                         <i class="element-img"></i>
