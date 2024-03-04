@@ -12,7 +12,7 @@
                     <div class="col-lg-10 ">
                         <div class="shadow-content rounded">
 
-                            <h3 class="text-uppercase ls-2px ff">Temukan</h3>
+                            <h3 class="text-uppercase ls-2px fw-normal ff">Temukan</h3>
 
                             <!-- Button Group -->
                             <div class="button-group">

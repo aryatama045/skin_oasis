@@ -4050,28 +4050,27 @@ p {
   font-weight: 100;
 }
 .hallo-beauty input.search-key {
-  border: 0.1rem solid #FBE18A;
+  border: 0.1rem solid #FBE18A !important;
   background: white;
   color: #857e7e !important;
+  height: 5rem !important;
+  border-radius: 1.3rem;
 }
-
-.button-group {
+.hallo-beauty .button-group {
   margin-bottom: 0rem;
 }
-.button-group .btn-wrap {
+.hallo-beauty .button-group .btn-wrap {
   padding: 1.5px !important;
   display: inline-block;
   margin-bottom: 0rem !important;
 }
-
-.btn-rounded {
+.hallo-beauty .btn-rounded {
   border-radius: 0.6rem !important;
 }
-
-.btn-outline-yellow {
+.hallo-beauty .btn-outline-yellow {
   border: 0.1rem solid #FBE18A !important;
 }
-.btn-outline-yellow:hover, .btn-outline-yellow:focus, .btn-outline-yellow:active {
+.hallo-beauty .btn-outline-yellow:hover, .hallo-beauty .btn-outline-yellow:focus, .hallo-beauty .btn-outline-yellow:active {
   color: black !important;
   background-color: #fbe18a !important;
 }
