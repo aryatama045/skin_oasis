@@ -202,6 +202,15 @@
 		color: #857e7e !important;
 		height: 5rem !important;
 		border-radius: 1.3rem ;
+
+		::placeholder {
+			color: #857e7e !important;
+			opacity: 1; /* Firefox */
+		}
+
+		::-ms-input-placeholder { /* Edge 12 -18 */
+			color: #857e7e !important;
+		}
 	}
 
 	.button-group {
