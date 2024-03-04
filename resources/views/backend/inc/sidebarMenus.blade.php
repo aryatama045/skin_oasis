@@ -268,7 +268,7 @@
             class="side-nav-item nav-item {{ areActiveRoutes(['admin.staffs.index', 'admin.staffs.create', 'admin.staffs.edit'], 'tt-menu-item-active') }}">
             <a href="{{ route('admin.staffs.index') }}" class="side-nav-link">
                 <span class="tt-nav-link-icon"> <i data-feather="user-check"></i></span>
-                <span class="tt-nav-link-text">{{ localize('Employee Staffs') }}</span>
+                <span class="tt-nav-link-text">Person</span>
             </a>
         </li>
     @endcan

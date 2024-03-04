@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\StaffRequestForm;
 use Illuminate\Http\Request;
 use App\Models\User;
+use App\Models\City;
 use App\Models\SpatieRole;
 use Spatie\Permission\Models\Role;
 use Hash;
@@ -26,7 +27,8 @@ class StaffsController extends Controller
     {
         $searchKey = null;
         $ownOrAllStaff = auth()->user()->can('own_staff') && auth()->user()->user_type != 'admin' ? true : false;
-        $staffs = User::where('user_type', 'staff')->latest();
+        // $staffs = User::where('user_type', 'staff')->latest();
+        $staffs = User::latest();
         if ($request->search != null) {
             $staffs = $staffs->where('name', 'like', '%' . $request->search . '%')
                 ->orWhere('email', 'like', '%' . $request->search . '%')
@@ -45,22 +47,37 @@ class StaffsController extends Controller
     public function create()
     {
         $roles = SpatieRole::oldest()->where('id', '!=', 1)->isActive()->get();
-        return view('backend.pages.staffs.create', compact('roles'));
+        $cities = City::get();
+        return view('backend.pages.staffs.create', compact('roles', 'cities'));
     }
 
     # save new staff
     public function store(StaffRequestForm $request)
     {
+        if($request->role_id == 2){
+            $tipeuser = "mitra";
+        }else if($request->role_id == 3){
+            $tipeuser = "dokter";
+        }else if($request->role_id == 4){
+            $tipeuser = "klinik";
+        }else{
+            $tipeuser = "staff";
+        }
+
         if (User::where('email', $request->email)->first() == null) {
-            $user             = new User;
-            $user->name       = $request->name;
-            $user->email      = $request->email;
-            $user->shop_id    = auth()->user()->shop_id;
-            $user->phone      = validatePhone($request->phone);
-            $user->user_type  = "staff";
-            $user->password   = Hash::make($request->password);
-            $user->role_id    = $request->role_id;
-            $user->created_by        = auth()->user()->id;
+            $user                   = new User;
+            $user->name             = $request->name;
+            $user->email            = $request->email;
+            $user->shop_id          = auth()->user()->shop_id;
+            $user->phone            = validatePhone($request->phone);
+            $user->user_type        = $tipeuser;
+            $user->password         = Hash::make($request->password);
+            $user->role_id          = $request->role_id;
+            $user->avatar           = $request->image;
+            $user->created_by       = auth()->user()->id;
+            $user->address          = $request->alamat;
+            $user->infolain          = $request->infolain;
+            $user->zona              = $request->zona;
             $user->save();
             $user->assignRole(SpatieRole::findOrFail($request->role_id)->name);
 
