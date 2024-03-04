@@ -28432,6 +28432,13 @@ li.nav-item.partner {
     font-family: "avenir lt pro" !important;
 }
 
+.banner-content-hallo {
+    left: 8rem !important;
+    position: relative;
+    top: 4rem;
+    max-width: 50%;
+}
+
 
 .footer-bottom .social-icon {
     font-size: 2.4rem !important;
