@@ -15,30 +15,26 @@
 
                         <form action="#">
                             <div class="row">
-                                <div class="col-6 col-lg-4 col-xl-2">
                                     <div class="btn-wrap">
                                         <span></span>
-                                        <a href="#" class="btn btn-outline-primary btn-rounded">
+                                        <a href="#" class="btn btn-outline-primary btn-rounded btn-sm">
                                             <span>Semua</span>
                                         </a>
                                     </div>
-                                </div>
-                                <div class="col-6 col-lg-4 col-xl-2">
+
                                     <div class="btn-wrap">
                                         <span></span>
-                                        <a href="#" class="btn btn-outline-primary btn-rounded">
+                                        <a href="#" class="btn btn-outline-primary btn-rounded btn-sm">
                                             <span>Dokter</span>
                                         </a>
                                     </div>
-                                </div>
-                                <div class="col-6 col-lg-4 col-xl-2">
+
                                     <div class="btn-wrap">
                                         <span></span>
-                                        <a href="#" class="btn btn-outline-primary btn-rounded">
+                                        <a href="#" class="btn btn-outline-primary btn-rounded btn-sm">
                                             <span>Lokasi</span>
                                         </a>
                                     </div>
-                                </div>
 
                             </div>
 
