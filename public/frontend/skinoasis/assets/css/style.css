@@ -4080,6 +4080,19 @@ p {
   color: black !important;
   background-color: #fbe18a !important;
 }
+.hallo-beauty .element {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  border: 0.1rem solid #ffe298;
+  position: relative;
+  transition: all 0.3s;
+  padding-left: 1rem;
+}
+.hallo-beauty .element p {
+  margin-top: 2rem;
+  padding-bottom: 1rem;
+}
 
 .banner-big {
   position: relative;

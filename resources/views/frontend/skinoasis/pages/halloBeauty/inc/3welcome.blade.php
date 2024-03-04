@@ -17,21 +17,18 @@
                             <!-- Button Group -->
                             <div class="button-group">
                                 <div class="btn-wrap ">
-                                    <span></span>
                                     <a href="#" class="btn btn-outline-yellow btn-rounded btn-sm ls-1px text-uppercase">
                                         <span>Semua</span>
                                     </a>
                                 </div>
 
                                 <div class="btn-wrap ">
-                                    <span></span>
                                     <a href="#" class="btn btn-outline-yellow btn-rounded btn-sm ls-1px text-uppercase">
                                         <span>Dokter</span>
                                     </a>
                                 </div>
 
                                 <div class="btn-wrap ">
-                                    <span></span>
                                     <a href="#" class="btn btn-outline-yellow btn-rounded btn-sm ls-1px text-uppercase">
                                         <span>Lokasi</span>
                                     </a>
@@ -47,45 +44,43 @@
                     </div>
                 </div>
 
-                <div class="row elements">
-                    <div class="col-xl-5col col-lg-3 col-md-3 col-6">
-                        <a href="elements-accordions.html" class="element-type">
-                            <div class="element">
-                                <i class="element-img"></i>
-                                <i class="element-hover-img"></i>
-                                <p>Cari Dokter</p>
-                            </div>
-                        </a>
-                    </div>
+                <div class="row">
+                    <div class="elements">
+                        <div class="col-xl-5col col-lg-3 col-md-3 col-6">
+                            <a href="elements-accordions.html" class="element-type">
+                                <div class="element">
+                                    <i class="element-img"></i>
+                                    <p>Cari Dokter</p>
+                                </div>
+                            </a>
+                        </div>
 
-                    <div class="col-xl-5col col-lg-3 col-md-3 col-6">
-                        <a href="elements-accordions.html" class="element-type">
-                            <div class="element">
-                                <i class="element-img"></i>
-                                <i class="element-hover-img"></i>
-                                <p>List Dokter</p>
-                            </div>
-                        </a>
-                    </div>
+                        <div class="col-xl-5col col-lg-3 col-md-3 col-6">
+                            <a href="elements-accordions.html" class="element-type">
+                                <div class="element">
+                                    <i class="element-img"></i>
+                                    <p>List Dokter</p>
+                                </div>
+                            </a>
+                        </div>
 
-                    <div class="col-xl-5col col-lg-3 col-md-3 col-6">
-                        <a href="elements-accordions.html" class="element-type">
-                            <div class="element">
-                                <i class="element-img"></i>
-                                <i class="element-hover-img"></i>
-                                <p>List Klinik</p>
-                            </div>
-                        </a>
-                    </div>
+                        <div class="col-xl-5col col-lg-3 col-md-3 col-6">
+                            <a href="elements-accordions.html" class="element-type">
+                                <div class="element">
+                                    <i class="element-img"></i>
+                                    <p>List Klinik</p>
+                                </div>
+                            </a>
+                        </div>
 
-                    <div class="col-xl-5col col-lg-3 col-md-3 col-6">
-                        <a href="elements-accordions.html" class="element-type">
-                            <div class="element">
-                                <i class="element-img"></i>
-                                <i class="element-hover-img"></i>
-                                <p>PAKET KECANTIKAN &amp; PERAWATAN</p>
-                            </div>
-                        </a>
+                        <div class="col-xl-5col col-lg-3 col-md-3 col-6">
+                            <a href="elements-accordions.html" class="element-type">
+                                <div class="element">
+                                    <i class="element-img"></i>
+                                    <p>PAKET KECANTIKAN &amp; PERAWATAN</p>
+                                </div>
+                            </a>
+                        </div>
                     </div>
                 </div>
 
