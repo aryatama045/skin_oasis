@@ -2,8 +2,8 @@
 <div class="bg-lighter pt-5 pb-5" data-aos="fade-up">
     <div class="container">
         <div class="heading-ig text-left">
-            <h4>Follow us on Instagram</h4><!-- End .title -->
-            <img src="{{ staticAsset('frontend/skinoasis/assets/images/logo-hashtag.png') }}" alt="Logo Hastag" width="50" class="logo-hashtag">
+            <h4 class="ls-1px ff">Selamat Datang di</h4><!-- End .title -->
+            <h2 class="text-capitalize ls-1px ff"> Hallo Beauty</h2>
         </div><!-- End .heading -->
 
         <div class="row">
