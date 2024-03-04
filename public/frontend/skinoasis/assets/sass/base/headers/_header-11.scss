@@ -220,7 +220,9 @@
 .btn-outline-yellow {
 	border: 0.1rem solid #FBE18A !important;
 
-	.btn-outline-yellow:hover {
+	&:hover,
+	&:focus,
+	&:active  {
 		color: black;
 		background-color: #fbe18a !important;
 	}
