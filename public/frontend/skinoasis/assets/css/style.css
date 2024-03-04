@@ -4048,6 +4048,11 @@ p {
   font-size: 4rem;
   font-weight: 100;
 }
+.hallo-beauty input.search-key {
+  border: 0.1rem solid #FBE18A;
+  background: white;
+  color: black !important;
+}
 
 .banner-big {
   position: relative;
