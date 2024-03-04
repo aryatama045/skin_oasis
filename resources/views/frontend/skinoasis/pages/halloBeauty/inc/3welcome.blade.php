@@ -1,4 +1,4 @@
-<div class="hallo-beauty rounded shadow-box bg-white  bg-white p-14 pt-5 pb-5 " data-aos="fade-up">
+<div class="hallo-beauty rounded  bg-white  bg-white p-14 pt-5 pb-5 " data-aos="fade-up">
     <div class="row p-8">
         <div class="col-8 card">
             <div class="card-body">
@@ -8,7 +8,7 @@
                 </div>
 
                 <div class="row">
-                    <div class="col-lg-10 ">
+                    <div class="col-lg-10 shadow-content">
                         <div class="py-5">
                             <h3 class="text-green text-capitalize">Temukan</h3>
                         </div>
