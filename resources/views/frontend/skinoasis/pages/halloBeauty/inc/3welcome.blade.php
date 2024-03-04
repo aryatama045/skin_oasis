@@ -2,7 +2,7 @@
     <div class="row p-8">
         <div class="col-8 card">
             <div class="card-body">
-                <div class="hallo-beauty-heading text-left">
+                <div class="heading text-left">
                     <h4 class="heading-subtitle ls-1px ff">Selamat Datang di</h4>
                     <h2 class="heading-title text-capitalize ls-1px ff"> Hallo Beauty</h2>
                 </div>
