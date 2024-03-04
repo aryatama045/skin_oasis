@@ -214,15 +214,15 @@
 }
 
 .btn-rounded {
-    border-radius: 0.6rem;
+    border-radius: 0.6rem !important;
 }
 
 .btn-outline-yellow {
-	border: 0.1rem solid #FBE18A;
+	border: 0.1rem solid #FBE18A !important;
 
 	:hover {
 		color: black;
-		background-color: #fbe18a;
+		background-color: #fbe18a !important;
 	}
 }
 
