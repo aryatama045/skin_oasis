@@ -4034,6 +4034,21 @@ p {
   margin-left: 0;
 }
 
+.hallo-beauty {
+  padding: 4rem;
+}
+.hallo-beauty .heading {
+  padding: 1rem;
+}
+.hallo-beauty .heading .heading-title {
+  font-size: 5rem;
+  font-weight: 900;
+}
+.hallo-beauty .heading .heading-subtitle {
+  font-size: 4rem;
+  font-weight: 100;
+}
+
 .banner-big {
   position: relative;
   height: 700px;
