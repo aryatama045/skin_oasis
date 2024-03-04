@@ -76,7 +76,7 @@
                         <a href="elements-accordions.html" class="element-type">
                             <div class="element">
                                 <i class="element-img"></i>
-                                <p>PAKET KECANTIKAN &amp; PERAWATAN</p>
+                                <p>PAKET KECANTIKAN <br> & PERAWATAN</p>
                             </div>
                         </a>
                     </div>

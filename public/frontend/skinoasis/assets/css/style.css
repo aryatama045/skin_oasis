@@ -4083,6 +4083,12 @@ p {
   color: black !important;
   background-color: #fbe18a !important;
 }
+.hallo-beauty .element {
+  flex-direction: row !important;
+}
+.hallo-beauty .element p {
+  margin-top: 2rem !important;
+}
 
 .banner-big {
   position: relative;
