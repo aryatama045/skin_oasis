@@ -14,28 +14,28 @@
                         </div>
 
                         <form action="#">
+                            <!-- Button Group -->
                             <div class="product-details-action ">
-                                    <div class="btn-wrap p-4">
-                                        <span></span>
-                                        <a href="#" class="btn btn-outline-primary btn-rounded btn-sm">
-                                            <span>Semua</span>
-                                        </a>
-                                    </div>
+                                <div class="btn-wrap p-4">
+                                    <span></span>
+                                    <a href="#" class="btn btn-outline-primary btn-rounded btn-sm">
+                                        <span>Semua</span>
+                                    </a>
+                                </div>
 
-                                    <div class="btn-wrap p-4">
-                                        <span></span>
-                                        <a href="#" class="btn btn-outline-primary btn-rounded btn-sm">
-                                            <span>Dokter</span>
-                                        </a>
-                                    </div>
+                                <div class="btn-wrap p-4">
+                                    <span></span>
+                                    <a href="#" class="btn btn-outline-primary btn-rounded btn-sm">
+                                        <span>Dokter</span>
+                                    </a>
+                                </div>
 
-                                    <div class="btn-wrap p-4">
-                                        <span></span>
-                                        <a href="#" class="btn btn-outline-primary btn-rounded btn-sm">
-                                            <span>Lokasi</span>
-                                        </a>
-                                    </div>
-
+                                <div class="btn-wrap p-4">
+                                    <span></span>
+                                    <a href="#" class="btn btn-outline-primary btn-rounded btn-sm">
+                                        <span>Lokasi</span>
+                                    </a>
+                                </div>
                             </div>
 
                         </form>
