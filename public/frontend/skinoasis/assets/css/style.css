@@ -4085,9 +4085,12 @@ p {
 }
 .hallo-beauty .element {
   flex-direction: row !important;
+  border: 0.1rem solid #ffe091 !important;
+  border-radius: 2.25rem !important;
 }
 .hallo-beauty .element p {
   margin-top: 2rem !important;
+  font-weight: 600 !important;
 }
 
 .banner-big {
