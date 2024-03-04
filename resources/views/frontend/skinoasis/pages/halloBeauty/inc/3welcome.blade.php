@@ -16,25 +16,25 @@
                     <div class="row">
                         <div class="col-6 col-lg-4 col-xl-2">
                             <div class="btn-wrap">
+                                <span></span>
                                 <a href="#" class="btn btn-outline-primary btn-rounded">
                                     <span>Semua</span>
-                                    <i class="icon-long-arrow-right"></i>
                                 </a>
                             </div>
                         </div>
                         <div class="col-6 col-lg-4 col-xl-2">
                             <div class="btn-wrap">
+                                <span></span>
                                 <a href="#" class="btn btn-outline-primary btn-rounded">
                                     <span>Dokter</span>
-                                    <i class="icon-long-arrow-right"></i>
                                 </a>
                             </div>
                         </div>
                         <div class="col-6 col-lg-4 col-xl-2">
                             <div class="btn-wrap">
+                                <span></span>
                                 <a href="#" class="btn btn-outline-primary btn-rounded">
                                     <span>Lokasi</span>
-                                    <i class="icon-long-arrow-right"></i>
                                 </a>
                             </div>
                         </div>
