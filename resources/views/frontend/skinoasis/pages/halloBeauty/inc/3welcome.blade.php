@@ -15,7 +15,7 @@
                         </div>
 
                         <!-- Button Group -->
-                        <div class="product-details-action ">
+                        <div class="button-group">
                             <div class="btn-wrap p-4">
                                 <span></span>
                                 <a href="#" class="btn btn-outline-primary btn-rounded btn-sm ls-1px text-uppercase">

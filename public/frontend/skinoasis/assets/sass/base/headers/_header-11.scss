@@ -194,6 +194,12 @@
 		}
 	}
 
+	.button-group {
+		display: flex;
+		align-items: center;
+		margin-bottom: 0rem;
+	}
+
 	input.search-key {
 		border: 0.1rem solid #FBE18A;
 		background: white;
