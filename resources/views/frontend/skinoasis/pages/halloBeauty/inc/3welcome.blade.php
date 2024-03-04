@@ -10,8 +10,8 @@
                 <form action="#">
                 <div class="row shadow-content rounded">
                     <div class="col-lg-10 ">
-                        <div class="py-5">
-                            <h3 class="text-green text-capitalize">Temukan</h3>
+                        <div class="py-5 p-4">
+                            <h3 class="text-uppercase ls-2px ff">Temukan</h3>
                         </div>
 
                         <!-- Button Group -->
