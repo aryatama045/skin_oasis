@@ -8999,6 +8999,10 @@ a:focus {
   margin-bottom: 3rem;
 }
 
+.shadow-content {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+}
+
 .card {
   border-radius: 0;
   margin-bottom: 0;
