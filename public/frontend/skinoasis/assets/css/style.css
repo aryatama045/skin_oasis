@@ -4061,6 +4061,10 @@ p {
   margin-bottom: 0rem;
 }
 
+.btn-rounded {
+  border-radius: 0.6rem;
+}
+
 .btn-outline-yellow {
   border: 0.1rem solid #FBE18A;
 }
