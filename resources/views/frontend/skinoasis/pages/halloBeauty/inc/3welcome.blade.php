@@ -1,4 +1,4 @@
-<div class="hallo-beauty rounded bg-white bg-white pt-5 pb-5 " data-aos="fade-up">
+<div class="hallo-beauty rounded bg-white pt-5 pb-5 " data-aos="fade-up">
     <div class="row">
         <div class="col-12">
             <div class="heading text-left">
