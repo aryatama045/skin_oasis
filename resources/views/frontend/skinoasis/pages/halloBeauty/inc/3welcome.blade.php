@@ -7,8 +7,8 @@
                     <h2 class="heading-title text-capitalize ls-1px ff"> Hallo Beauty</h2>
                 </div>
 
-                <div class="row">
-                    <div class="col-lg-10 shadow-content">
+                <div class="row shadow-content rounded">
+                    <div class="col-lg-10 ">
                         <div class="py-5">
                             <h3 class="text-green text-capitalize">Temukan</h3>
                         </div>
