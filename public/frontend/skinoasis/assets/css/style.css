@@ -4065,6 +4065,7 @@ p {
 }
 .hallo-beauty .button-group {
   margin-bottom: 0rem;
+  padding: 1rem 0 3rem;
 }
 .hallo-beauty .button-group .btn-wrap {
   padding: 1.5px !important;
