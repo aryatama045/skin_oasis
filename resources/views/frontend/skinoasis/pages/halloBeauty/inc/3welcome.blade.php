@@ -44,43 +44,41 @@
                     </div>
                 </div>
 
-                <div class="row">
-                    <div class="elements">
-                        <div class="col-xl-5col col-lg-3 col-md-3 col-6">
-                            <a href="elements-accordions.html" class="element-type">
-                                <div class="element">
-                                    <i class="element-img"></i>
-                                    <p>Cari Dokter</p>
-                                </div>
-                            </a>
-                        </div>
+                <div class="row elements">
+                    <div class="col-xl-5col col-lg-3 col-md-3 col-6">
+                        <a href="elements-accordions.html" class="element-type">
+                            <div class="element">
+                                <i class="element-img"></i>
+                                <p>Cari Dokter</p>
+                            </div>
+                        </a>
+                    </div>
 
-                        <div class="col-xl-5col col-lg-3 col-md-3 col-6">
-                            <a href="elements-accordions.html" class="element-type">
-                                <div class="element">
-                                    <i class="element-img"></i>
-                                    <p>List Dokter</p>
-                                </div>
-                            </a>
-                        </div>
+                    <div class="col-xl-5col col-lg-3 col-md-3 col-6">
+                        <a href="elements-accordions.html" class="element-type">
+                            <div class="element">
+                                <i class="element-img"></i>
+                                <p>List Dokter</p>
+                            </div>
+                        </a>
+                    </div>
 
-                        <div class="col-xl-5col col-lg-3 col-md-3 col-6">
-                            <a href="elements-accordions.html" class="element-type">
-                                <div class="element">
-                                    <i class="element-img"></i>
-                                    <p>List Klinik</p>
-                                </div>
-                            </a>
-                        </div>
+                    <div class="col-xl-5col col-lg-3 col-md-3 col-6">
+                        <a href="elements-accordions.html" class="element-type">
+                            <div class="element">
+                                <i class="element-img"></i>
+                                <p>List Klinik</p>
+                            </div>
+                        </a>
+                    </div>
 
-                        <div class="col-xl-5col col-lg-3 col-md-3 col-6">
-                            <a href="elements-accordions.html" class="element-type">
-                                <div class="element">
-                                    <i class="element-img"></i>
-                                    <p>PAKET KECANTIKAN &amp; PERAWATAN</p>
-                                </div>
-                            </a>
-                        </div>
+                    <div class="col-xl-5col col-lg-3 col-md-3 col-6">
+                        <a href="elements-accordions.html" class="element-type">
+                            <div class="element">
+                                <i class="element-img"></i>
+                                <p>PAKET KECANTIKAN &amp; PERAWATAN</p>
+                            </div>
+                        </a>
                     </div>
                 </div>
 
