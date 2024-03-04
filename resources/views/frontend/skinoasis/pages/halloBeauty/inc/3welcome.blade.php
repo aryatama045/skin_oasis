@@ -8,7 +8,7 @@
                 </div>
 
                 <div class="row">
-                    <div class="col-sm-6 col-7">
+                    <div class="col-lg-10 ">
                         <div class="py-5">
                             <h3 class="text-green text-capitalize">Temukan</h3>
                         </div>
