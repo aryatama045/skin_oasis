@@ -12,7 +12,7 @@
                 <div class="card tt-page-header">
                     <div class="card-body d-lg-flex align-items-center justify-content-lg-between">
                         <div class="tt-page-title">
-                            <h2 class="h5 mb-lg-0">{{ localize('Add New Staff') }}</h2>
+                            <h2 class="h5 mb-lg-0">{{ localize('Add New Person') }}</h2>
                         </div>
 
                     </div>
@@ -62,13 +62,25 @@
                             </div>
 
                             <div class="mb-4">
+                                <label class="form-label">Zona (Hanya untuk Mitra/Klinik/Dokter)</label>
+                                <select class="select2 form-control" data-toggle="select2" name="zona">
+                                    <option value="0">-- Pilih Zona --</option>
+                                    @foreach ($cities as $kota)
+                                    <option value="{{ $kota->id }}">
+                                        {{ $kota->name }}
+                                    </option>
+                                    @endforeach
+                                </select>
+                            </div>
+
+                            <div class="mb-4">
                                 <label for="phone" class="form-label">Nomor Handphone</label>
-                                <input class="form-control" type="text" id="phone" placeholder="Nomor Handphone" name="phone" value="{{old('phone')}}">
+                                <input class="form-control" type="number" id="phone" placeholder="contoh : 08123456789" name="phone" value="{{old('phone')}}">
                             </div>
 
                             <div class="mb-4">
                                 <label for="name" class="form-label">Alamat Lengkap<span class="text-danger ms-1">*</span></label>
-                                <textarea class="form-control" type="text" id="alamat" placeholder="Masukan Alamat Lengkap" name="name"></textarea>
+                                <textarea class="form-control" type="text" id="alamat" placeholder="Masukan Alamat Lengkap" name="alamat"></textarea>
                             </div>
 
                             <div class="mb-4">
@@ -102,7 +114,7 @@
                             </div>
 
                             <div class="mb-4">
-                                <label for="name" class="form-label">Curriculum Vitae, Certificate, Education & Experience<span class="text-danger ms-1">*</span></label>
+                                <label for="name" class="form-label">Curriculum Vitae, Certificate, Education & Experience</label>
                                 <textarea class="editor" id="infolain" name="infolain"></textarea>
                             </div>
                         </div>
