@@ -1,4 +1,4 @@
-<div class="hallo-beauty rounded shadow-box bg-white  bg-white p-14 pt-5 pb-5 aos-init aos-animate" data-aos="fade-up">
+<div class="hallo-beauty rounded shadow-box bg-white  bg-white p-14 pt-5 pb-5 " data-aos="fade-up">
     <div class="row p-8">
         <div class="col-8 card">
             <div class="card-body">
