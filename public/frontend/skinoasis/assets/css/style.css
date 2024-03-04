@@ -4072,7 +4072,7 @@ p {
   border: 0.1rem solid #FBE18A !important;
 }
 .btn-outline-yellow:hover, .btn-outline-yellow:focus, .btn-outline-yellow:active {
-  color: black;
+  color: black !important;
   background-color: #fbe18a !important;
 }
 
