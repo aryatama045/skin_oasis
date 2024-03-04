@@ -77,6 +77,7 @@
                                 <tr>
                                     <th class="text-center">{{ localize('S/L') }}</th>
                                     <th>{{ localize('Title') }}</th>
+                                    <th data-breakpoints="xs sm">{{ localize('Placement') }}</th>
                                     <th data-breakpoints="xs sm">{{ localize('Category') }}</th>
                                     <th data-breakpoints="xs sm md">{{ localize('Tags') }}</th>
                                     <th data-breakpoints="xs sm">{{ localize('Active') }}</th>
@@ -101,6 +102,8 @@
                                                 </h6>
                                             </a>
                                         </td>
+
+                                        <td class="text-center"> {{ $blog->placement }}</td>
 
                                         <td>
                                             @if ($blog->blog_category != null)

@@ -62,6 +62,35 @@
 
     <div class="video-banner video-banner-poster text-left mt-10" data-aos="fade-up">
         <div class="container">
+
+            @forelse ($trending1 as $tr)
+
+                @if($tr->placement == 1)
+
+                <div class="row align-items-center">
+                    <div class="col-md-6 mb-3 mb-md-0">
+                        <h3 class="video-banner-title fw-bold h3">
+                            <span class="fw-light">TRENDING 1</span>
+                            {{$tr->title}}
+                        </h3><!-- End .video-banner-title -->
+                        <p>{{$tr->short_description}}</p>
+                        <a href="{{$tr->button_shop}}" class="btn btn-rounded btn-sm text-uppercase btn-outline-green-dark"> Shop Now</a>
+                    </div><!-- End .col-md-6 -->
+
+                    <div class="col-md-6">
+                        <div class="banner2-cover-bottom">
+                            <img src="{{ uploadedAsset($tr->thumbnail_image) }}" alt="poster">
+
+                            <div class="video-poster-content">
+                                <a href="{{$tr->video_link}}" class="btn-video btn-iframe"><i class="icon-play"></i></a>
+                            </div><!-- End .video-poster-content -->	
+                        </div><!-- End .video-poster -->
+                    </div><!-- End .col-md-6 -->
+                </div><!-- End .row -->
+                @endif
+
+            @empty
+
             <div class="row align-items-center">
                 <div class="col-md-6 mb-3 mb-md-0">
                     <h3 class="video-banner-title fw-bold h3">
@@ -83,6 +112,8 @@
                     </div><!-- End .video-poster -->
                 </div><!-- End .col-md-6 -->
             </div><!-- End .row -->
+            @endforelse
+
         </div><!-- End .container -->
     </div>
 </section>

@@ -6,6 +6,7 @@
 	top: 0;
 	z-index:1040;
 	background-color: transparent;
+	font-family: 'avenir lt pro' !important;
 
 	.header-middle {
 		border-bottom-color: rgba(#fafafa, .2);
@@ -53,6 +54,7 @@
 	.menu > li:not(:hover):not(.active):not(.show) > a,
 	.mobile-menu-toggler {
 		color: #fff;
+		font-family: 'avenir lt pro' !important;
 	}
 
 	.logo {
@@ -72,6 +74,7 @@
 		padding-top: 2.95rem;
 		padding-bottom: 2.95rem;
 		padding-left: 0;
+		font-family: 'avenir lt pro' !important;
 	}
 
 	.sticky-header.fixed {
@@ -90,6 +93,9 @@
 	top: 0;
 	z-index:1040;
 	background-color: transparent;
+	font-family: "avenir lt pro" !important;
+	font-weight: normal !important;
+
 
 	.header-middle {
 		border-bottom-color: rgb(250 250 250 / 0%);
@@ -137,6 +143,8 @@
 	.menu > li:not(:hover):not(.active):not(.show) > a,
 	.mobile-menu-toggler {
 		color: #201e1e;
+		font-family: 'avenir lt pro' !important;
+		font-weight: 100 !important;
 	}
 
 	.logo {
@@ -156,10 +164,12 @@
 		padding-top: 2.95rem;
 		padding-bottom: 2.95rem;
 		padding-left: 0;
+		font-family: 'avenir lt pro' !important;
+		font-weight: 100 !important;
 	}
 
 	.sticky-header.fixed {
-		background-color: #333;
+		background-color: #ffffff;
 	}
 
 	.mobile-menu-toggler {

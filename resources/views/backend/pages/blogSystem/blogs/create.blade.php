@@ -61,6 +61,24 @@
                                     </select>
                                 </div>
 
+                                <!-- #Placement -->
+                                <div class="mb-4">
+                                    <label for="placement" class="form-label">{{ localize('Placement') }}</label>
+                                    <select class="form-control select2" name="placement" data-toggle="select2" required>
+                                        <option value="">{{ localize('Select a Placement') }}</option>
+                                        
+                                        <option value="1"> Posisi 1</option>
+                                        <option value="2"> Posisi 2</option>
+                                        <option value="3"> Posisi 3</option>
+                                    </select>
+                                </div>
+
+                                <!-- #Button Shop -->
+                                <div class="mb-4">
+                                    <label for="botton_shop" class="form-label">{{ localize('Button Shop Link') }}</label>
+                                    <input type="url" name="botton_shop" id="botton_shop"
+                                        placeholder="https://skinoasis.solusiitkreasi.com/products/hd-skin-foundation-50-ml-orusn" class="form-control">
+                                </div>
 
                                 <div class="mb-4">
                                     <label for="video_link" class="form-label">{{ localize('Youtube Video Link') }}</label>

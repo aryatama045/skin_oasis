@@ -15,9 +15,9 @@
                 <a href="{{ route('home') }}" class="logo">
                     @if(!empty(Route::current()->getName()))
                         @if(Route::current()->getName() == 'home' || Route::current()->getName() == 'home.pages.aboutUs')
-                            <img src="{{ staticAsset('frontend/skinoasis/assets/images/logo.png') }}" alt="SKINOASIS Logo" width="300" height="25">
+                            <img src="{{ staticAsset('frontend/skinoasis/assets/images/logo.png') }}" alt="SKINOASIS Logo" width="250" height="25">
                         @else
-                        <img src="{{ staticAsset('frontend/skinoasis/assets/images/logo-black.png') }}" alt="SKINOASIS Logo" width="300" height="25">
+                            <img src="{{ staticAsset('frontend/skinoasis/assets/images/logo-black.png') }}" alt="SKINOASIS Logo" width="250" height="25">
                         @endif
                     @endif
                 </a>
@@ -25,7 +25,7 @@
         </div><!-- End .container -->
     </div><!-- End .header-middle -->
 
-    <div class="header-middle sticky-header">
+    <div class="header-middle sticky-header ff">
         <div class="container">
             <div class="header-left">
                 <nav class="main-nav">
