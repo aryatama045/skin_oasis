@@ -4056,8 +4056,7 @@ p {
 }
 
 .button-group {
-  display: flex;
-  align-items: center;
+  padding: 2rem;
   margin-bottom: 0rem;
 }
 .button-group .btn-wrap {
