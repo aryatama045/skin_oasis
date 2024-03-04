@@ -241,6 +241,7 @@
 	}
 
 	.element {
+		display: flex !important;
 		flex-direction: row !important;
 		border: 0.1rem solid #ffe091!important;
 		border-radius: 2.25rem!important;
