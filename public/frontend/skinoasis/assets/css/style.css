@@ -4060,6 +4060,10 @@ p {
   align-items: center;
   margin-bottom: 0rem;
 }
+.button-group .btn-wrap {
+  display: inline-block;
+  margin-bottom: 0rem !important;
+}
 
 .btn-rounded {
   border-radius: 0.6rem;

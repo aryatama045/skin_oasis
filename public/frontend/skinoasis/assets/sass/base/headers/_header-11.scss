@@ -207,6 +207,11 @@
 	display: flex;
 	align-items: center;
 	margin-bottom: 0rem;
+
+	.btn-wrap {
+		display: inline-block;
+		margin-bottom: 0rem !important;
+	}
 }
 
 .btn-rounded {
