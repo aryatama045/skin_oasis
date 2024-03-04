@@ -8,8 +8,9 @@
 
             <form action="#">
             <div class="row">
-                <div class="shadow-content rounded">
                 <div class="col-lg-10 ">
+                    <div class="shadow-content rounded">
+
                     <div class="py-5 p-4">
                         <h3 class="text-uppercase ls-2px ff">Temukan</h3>
                     </div>
@@ -43,7 +44,7 @@
                         <input type="text" class="form-control search-key" placeholder="KETIK KATA KUNCI" aria-label="Ketik Kata Kunci" >
                     </div>
 
-                </div>
+                    </div>
                 </div>
             </div>
 
