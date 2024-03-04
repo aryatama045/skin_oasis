@@ -4049,18 +4049,18 @@ p {
   font-size: 4rem;
   font-weight: 100;
 }
-.hallo-beauty input.search-key {
+.hallo-beauty .search-key {
   border: 0.1rem solid #FBE18A !important;
   background: white;
   color: #857e7e !important;
   height: 5rem !important;
   border-radius: 1.3rem;
 }
-.hallo-beauty input.search-key ::placeholder {
+.hallo-beauty .search-key ::placeholder {
   color: #857e7e !important;
   opacity: 1; /* Firefox */
 }
-.hallo-beauty input.search-key ::-ms-input-placeholder { /* Edge 12 -18 */
+.hallo-beauty .search-key ::-ms-input-placeholder { /* Edge 12 -18 */
   color: #857e7e !important;
 }
 .hallo-beauty .button-group {
