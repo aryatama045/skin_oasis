@@ -111,6 +111,8 @@ class StaffsController extends Controller
         $user->phone      = validatePhone($request->phone);
         $user->role_id    = $request->role_id;
 
+        $user->infolain          = $request->infolain;
+
         if ($request->filled('role_id')) {
             $user->role_id    = $request->role_id;
         }
