@@ -28,8 +28,8 @@
                                 </figure>
 
                                 <div>
-                                    <span>Nov 19, 2018</span>
-                                    <h4><a href="#">Cras ornare tristique elit.</a></h4>
+                                    <h4><a href="#">dr. Febby Hutomo</a></h4>
+                                    <span>Dokter Kulit - Dokter Estetika</span>
                                 </div>
                             </div>
                             <hr>
