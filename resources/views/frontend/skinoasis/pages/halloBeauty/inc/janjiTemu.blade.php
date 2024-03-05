@@ -28,12 +28,11 @@
                 </div>
 
                 <div class="resume-dokter">
-                    <ul class="lulusan">
+                    <ul>
                         <li>2010 • Universitas Atmajaya - Dokter Umum</li>
                         <li>2015 • Universitas Padjajaran - Spesialis Kedokteran Nuklir - SpKN</li>
                         <li>2019 • Seoul National University - International Fellowship</li>
                     </ul>
-
                 </div>
             </div>
 
