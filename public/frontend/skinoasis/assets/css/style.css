@@ -4115,7 +4115,7 @@ p {
   font-size: 1.8rem !important;
   color: #383636;
 }
-.resume-dokter li:marker {
+.resume-dokter li ::marker {
   font-size: 5rem;
 }
 
