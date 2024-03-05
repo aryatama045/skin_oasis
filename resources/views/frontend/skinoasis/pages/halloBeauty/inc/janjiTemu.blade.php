@@ -18,6 +18,12 @@
                     </div>
                 </div>
 
+                <div class="heading text-left">
+                    <h2 class="heading-title text-capitalize ls-1px font-weight-bolder ff"> Edukasi & Kualifikasi</h2>
+
+                    <p>Pendidikan</p>
+                </div>
+
 
                 <form action="#">
 
