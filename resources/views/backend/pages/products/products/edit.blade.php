@@ -83,7 +83,7 @@
                                 </div>
                                 <div class="mb-4">
                                     <label for="additional_info" class="form-label">Informasi Tambahan (Cara Pakai, Komposisi atau Lainnya)</label>
-                                    <textarea id="myTextarea" class="" name="additional_info">{{ $product->additional_info }}</textarea>
+                                    <textarea  class="editor" name="additional_info">{{ $product->additional_info }}</textarea>
                                 </div>
                             </div>
                         </div>
