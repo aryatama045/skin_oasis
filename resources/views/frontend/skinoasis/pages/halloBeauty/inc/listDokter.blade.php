@@ -18,18 +18,26 @@
             <form action="#">
 
                 <div class="row">
-                    <div class="col-lg-4 ">
-                        <div class="shadow-content rounded">
+                    <div class="col-lg-4 col-sm-6">
+                        <div class="dokter-content rounded">
+                            <div class="posts-list">
+                                <figure>
+                                    <a href="#">
+                                        <img src="{{ staticAsset('frontend/skinoasis/assets/images/blog/sidebar/post-2.jpg') }}" alt="post">
+                                    </a>
+                                </figure>
 
-                            <figure>
-                                <a href="#">
-                                    <img src="{{ staticAsset('frontend/skinoasis/assets/images/blog/sidebar/post-2.jpg') }}" alt="post">
-                                </a>
-                            </figure>
+                                <div>
+                                    <span>Nov 19, 2018</span>
+                                    <h4><a href="#">Cras ornare tristique elit.</a></h4>
+                                </div>
+                            </div>
+                            <hr>
 
-                            <div>
-                                <span>Nov 19, 2018</span>
-                                <h4><a href="#">Cras ornare tristique elit.</a></h4>
+                            <div class="card-content">
+                                <a href="javascript:void(0);" class="btn-product btn-cart mt-4"
+                                    onclick="showProductDetailsModal('1')">
+                                    {{ localize('Add to Cart') }}</a>
                             </div>
 
                         </div>
