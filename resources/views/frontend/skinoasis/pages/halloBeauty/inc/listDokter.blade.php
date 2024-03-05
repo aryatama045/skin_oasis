@@ -37,7 +37,7 @@
                             <div class="card-content">
                                 <a href="javascript:void(0);" class="btn-product btn-cart mt-4"
                                     onclick="showProductDetailsModal('1')">
-                                    {{ localize('Add to Cart') }}</a>
+                                    {{ localize('Konsultasi Online') }}</a>
                             </div>
 
                         </div>
