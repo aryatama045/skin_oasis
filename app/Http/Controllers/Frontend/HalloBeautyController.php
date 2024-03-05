@@ -42,16 +42,14 @@ class HalloBeautyController extends Controller
     }
 
     # janji temu
-    public function janjitemu(Request $request)
+    public function janjitemu($slug)
     {
         $sliders = [];
         if (getSetting('hero_sliders') != null) {
             $sliders = json_decode(getSetting('hero_sliders'));
         }
 
-        $searchKey  = null;
-
-        return getView('pages.halloBeauty.janjiTemu', ['sliders' => $sliders, 'searchKey' => $searchKey]);
+        return getView('pages.halloBeauty.janjiTemu', ['sliders' => $sliders]);
     }
 
     # all blogs
