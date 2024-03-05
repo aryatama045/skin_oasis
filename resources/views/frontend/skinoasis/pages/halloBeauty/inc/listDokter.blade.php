@@ -23,7 +23,7 @@
                             <div class="posts-list">
                                 <figure>
                                     <a href="#">
-                                        <img class="rounded-circle" src="{{ staticAsset('frontend/skinoasis/assets/images/blog/sidebar/post-2.jpg') }}" alt="post">
+                                        <img class="rounded-circle" src="{{ staticAsset('frontend/skinoasis/assets/images/dokter.png') }}" alt="post">
                                     </a>
                                 </figure>
 
