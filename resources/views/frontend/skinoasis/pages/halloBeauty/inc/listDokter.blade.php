@@ -23,7 +23,7 @@
 
                             <figure>
                                 <a href="#">
-                                    <img src="assets/images/blog/sidebar/post-2.jpg" alt="post">
+                                    <img src="{{ staticAsset('frontend/skinoasis/assets/images/blog/sidebar/post-2.jpg') }}" alt="post">
                                 </a>
                             </figure>
 
