@@ -34,7 +34,7 @@
                             </div>
                             <div class="separator"></div>
 
-                            <div class="text-left">
+                            <div class="text-left mb-2">
                                 <h3 class="font-weight-bold ff">dr. Febby Hutomo</h3>
                                 <span>Dokter Kulit - Dokter Estetika</span>
 
