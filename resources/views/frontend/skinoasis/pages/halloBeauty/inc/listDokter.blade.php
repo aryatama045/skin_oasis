@@ -42,9 +42,9 @@
                             </div>
 
                             <div class="card-content text-center">
-                                <a href="#" class="btn btn-outline-yellow btn-rounded btn-sm ls-1px text-uppercase mt-4">
+                                <a href="#" class="btn btn-outline-yellow btn-rounded btn-sm ls-1px text-uppercase mt-4 w-75">
                                     {{ localize('Konsultasi Online') }}</a> <br>
-                                <a href="#" class="btn btn-outline-yellow btn-rounded btn-sm ls-1px text-uppercase mt-4">
+                                <a href="#" class="btn btn-outline-yellow btn-rounded btn-sm ls-1px text-uppercase mt-4 w-75">
                                     {{ localize('Pesan Janji Temu') }}</a>
                             </div>
 
