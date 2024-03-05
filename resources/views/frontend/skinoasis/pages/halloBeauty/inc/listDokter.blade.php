@@ -23,12 +23,12 @@
                             <div class="posts-list">
                                 <figure>
                                     <a href="#">
-                                        <img src="{{ staticAsset('frontend/skinoasis/assets/images/blog/sidebar/post-2.jpg') }}" alt="post">
+                                        <img class="rounded-circle" src="{{ staticAsset('frontend/skinoasis/assets/images/blog/sidebar/post-2.jpg') }}" alt="post">
                                     </a>
                                 </figure>
 
                                 <div>
-                                    <h4><a href="#">dr. Febby Hutomo</a></h4>
+                                    <h3 class="font-weight-bold ff">dr. Febby Hutomo</h3>
                                     <span>Dokter Kulit - Dokter Estetika</span>
                                 </div>
                             </div>

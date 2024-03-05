@@ -9062,7 +9062,7 @@ a:focus {
 
 .dokter-content {
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
-  padding: 2rem 0rem 6rem 3rem;
+  padding: 2rem 3rem 6rem 3rem;
   margin-bottom: 4rem;
 }
 
@@ -15568,7 +15568,7 @@ button:focus {
 
 .posts-list {
   list-style: none;
-  padding: 0.4rem 0 0.2rem;
+  padding: 0.4rem 0 0.3rem;
   margin: 0;
 }
 .posts-list li {
@@ -15585,7 +15585,7 @@ button:focus {
 .posts-list figure {
   float: left;
   max-width: 80px;
-  margin-right: 2rem;
+  margin-right: 2.4rem;
   margin-bottom: 0;
 }
 .posts-list figure a {
