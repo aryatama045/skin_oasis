@@ -3,7 +3,7 @@
         <div class="col-12">
 
             <div class="row">
-                <div class="col-7">
+                <div class="col-12 col-lg-7 mb-5">
                     <div class="heading text-left">
                         <h3 class="text-uppercase ls-2px fw-normal ff">Cari Dokter</h3>
                         <!-- Search Key -->
