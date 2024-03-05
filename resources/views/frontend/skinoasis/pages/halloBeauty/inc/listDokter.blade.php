@@ -35,8 +35,8 @@
                             <div class="separator"></div>
 
                             <div class="text-left mb-2">
-                                <h3 class="font-weight-bold ff">dr. Febby Hutomo</h3>
-                                <span>Dokter Kulit - Dokter Estetika</span>
+                                <h3 class="font-weight-bold ff">KLINIK BEAUTY CENTRE</h3>
+                                <span>Tersedia : Tersedia hari ini</span>
 
                                 <h3 class="mt-4 font-weight-bold ff">Rp. 250.000</h3>
                             </div>
