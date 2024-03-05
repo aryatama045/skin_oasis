@@ -73,7 +73,7 @@ Route::post('/products/show-product-info', [ProductController::class, 'showInfo'
 
 # hallo beauty
 Route::get('/pages/hallo-beauty', [HomeController::class, 'halloBeauty'])->name('home.pages.halloBeauty');
-Route::get('/hallobeauty/listdokter', [HalobeautyController::class, 'listdokter'])->name('halloBeauty.listdokter');
+Route::get('/hallobeauty/listdokter', [HallobeautyController::class, 'listdokter'])->name('halloBeauty.listdokter');
 
 
 # carts
