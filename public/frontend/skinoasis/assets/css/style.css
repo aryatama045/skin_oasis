@@ -4129,6 +4129,9 @@ p {
   font-size: 1.8rem !important;
   color: #101010;
 }
+.resume-dokter li::marker {
+  font-size: 3.2rem;
+}
 
 .banner-big {
   position: relative;
