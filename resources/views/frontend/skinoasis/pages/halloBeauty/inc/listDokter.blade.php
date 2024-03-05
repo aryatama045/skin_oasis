@@ -18,7 +18,7 @@
             <form action="#">
 
                 <div class="row">
-                    <div class="col-lg-4 col-sm-6">
+                    <div class="col-lg-4 col-sm-6 p-5">
                         <div class="dokter-content rounded">
                             <div class="posts-list">
                                 <figure>
@@ -33,6 +33,13 @@
                                 </div>
                             </div>
                             <div class="separator"></div>
+
+                            <div class="text-left">
+                                <h3 class="font-weight-bold ff">dr. Febby Hutomo</h3>
+                                <span>Dokter Kulit - Dokter Estetika</span>
+
+                                <h3 class="mt-4 font-weight-bold ff">Rp. 250.000</h3>
+                            </div>
 
                             <div class="card-content text-center">
                                 <a href="#" class="btn btn-outline-yellow btn-rounded btn-sm ls-1px text-capitalize mt-4">
