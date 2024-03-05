@@ -22,17 +22,20 @@
 
         <div class="row">
             <div class="col-lg-7">
-                <div class="heading-resume text-left">
-                    <h2 class="title text-capitalize ls-1px font-weight-bolder ff"> Edukasi & Kualifikasi</h2>
-                    <p class="subtitle">Pendidikan</p>
-                </div>
-
                 <div class="resume-dokter">
+
+                    <div class="heading-resume text-left">
+                        <h2 class="title text-capitalize ls-1px font-weight-bolder ff"> Edukasi & Kualifikasi</h2>
+                        <p class="subtitle">Pendidikan</p>
+                    </div>
+
+
                     <ul>
                         <li>2010 • Universitas Atmajaya - Dokter Umum</li>
                         <li>2015 • Universitas Padjajaran - Spesialis Kedokteran Nuklir - SpKN</li>
                         <li>2019 • Seoul National University - International Fellowship</li>
                     </ul>
+
                 </div>
             </div>
 
