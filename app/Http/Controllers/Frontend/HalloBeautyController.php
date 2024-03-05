@@ -32,7 +32,7 @@ class HalloBeautyController extends Controller
     }
 
     # all dokter
-    public function listDokter()
+    public function listDokter(Request $request)
     {
         $sliders = [];
         if (getSetting('hero_sliders') != null) {
