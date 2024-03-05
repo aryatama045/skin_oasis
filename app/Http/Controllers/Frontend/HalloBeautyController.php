@@ -41,10 +41,17 @@ class HalloBeautyController extends Controller
         return getView('pages.halloBeauty.searchDokter', ['sliders' => $sliders,]);
     }
 
+    # janji temu
     public function janjitemu(Request $request)
     {
-        $product = Product::find($request->id);
-        return getView('pages.partials.products.product-view-box', ['product' => $product]);
+        $sliders = [];
+        if (getSetting('hero_sliders') != null) {
+            $sliders = json_decode(getSetting('hero_sliders'));
+        }
+
+        $searchKey  = null;
+
+        return getView('pages.halloBeauty.janjiTemu', ['sliders' => $sliders, 'searchKey' => $searchKey]);
     }
 
     # all blogs
