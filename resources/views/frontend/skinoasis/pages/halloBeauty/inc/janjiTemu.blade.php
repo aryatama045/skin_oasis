@@ -24,7 +24,7 @@
             <div class="col-lg-7">
                 <div class="resume-dokter">
 
-                    {! $dokter->infolain !}
+                    {!! $dokter->infolain !!}
 
                 </div>
             </div>
