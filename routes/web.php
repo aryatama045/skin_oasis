@@ -5,7 +5,7 @@ use App\Http\Controllers\Frontend\CheckoutController;
 use App\Http\Controllers\Frontend\CustomerController;
 use App\Http\Controllers\Frontend\SubscribersController;
 use App\Http\Controllers\Frontend\HomeController;
-use App\Http\Controllers\Frontend\HalobeautyController;
+use App\Http\Controllers\Frontend\HallobeautyController;
 use App\Http\Controllers\Frontend\ProductController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\VerificationController;
