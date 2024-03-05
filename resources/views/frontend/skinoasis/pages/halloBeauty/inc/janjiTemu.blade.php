@@ -22,9 +22,9 @@
 
         <div class="row">
             <div class="col-lg-7">
-                <div class="heading text-left">
-                    <h2 class="heading-title text-capitalize ls-1px font-weight-bolder ff"> Edukasi & Kualifikasi</h2>
-                    <p>Pendidikan</p>
+                <div class="heading-resume text-left">
+                    <h2 class="title text-capitalize ls-1px font-weight-bolder ff"> Edukasi & Kualifikasi</h2>
+                    <p class="subtitle">Pendidikan</p>
                 </div>
 
                 <div class="resume-dokter">

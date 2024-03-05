@@ -195,6 +195,21 @@
 		}
 	}
 
+	.heading-resume {
+		padding: 1rem;
+		margin-bottom: 1rem !important;
+
+		.title {
+			font-size: 2rem !important;
+			font-weight: 900 !important;
+		}
+
+		.subtitle {
+			font-size: 1.6rem !important;
+			font-weight: 100 !important;
+		}
+	}
+
 	.rounded{
 		border-radius: 2.25rem!important;
 	}
@@ -263,7 +278,7 @@
 }
 
 .resume-dokter {
-    padding: 2rem;
+    padding: 1rem;
 
 	ul {
 		border-left: 1px solid;

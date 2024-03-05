@@ -4049,6 +4049,18 @@ p {
   font-size: 4rem;
   font-weight: 100;
 }
+.hallo-beauty .heading-resume {
+  padding: 1rem;
+  margin-bottom: 1rem !important;
+}
+.hallo-beauty .heading-resume .title {
+  font-size: 2rem !important;
+  font-weight: 900 !important;
+}
+.hallo-beauty .heading-resume .subtitle {
+  font-size: 1.6rem !important;
+  font-weight: 100 !important;
+}
 .hallo-beauty .rounded {
   border-radius: 2.25rem !important;
 }
@@ -4101,7 +4113,7 @@ p {
 }
 
 .resume-dokter {
-  padding: 2rem;
+  padding: 1rem;
 }
 .resume-dokter ul {
   border-left: 1px solid;
