@@ -32,7 +32,7 @@
                                     <span>Dokter Kulit - Dokter Estetika</span>
                                 </div>
                             </div>
-                            <hr>
+                            <div class="separator"></div>
 
                             <div class="card-content text-center">
                                 <a href="#" class="btn btn-outline-yellow btn-rounded btn-sm ls-1px text-uppercase mt-4">
