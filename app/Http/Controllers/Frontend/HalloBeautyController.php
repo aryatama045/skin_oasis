@@ -50,7 +50,7 @@ class HalloBeautyController extends Controller
             $sliders = json_decode(getSetting('hero_sliders'));
         }
 
-        $dokter_resume = DB::table('users')->where('name', $slug)->get();
+        $dokter_resume = DB::table('users')->where('user_type', 'dokter')->where('name', $slug)->get();
 
         dd($dokter_resume);
 
