@@ -4130,10 +4130,6 @@ p {
   color: #101010;
 }
 
-::marker {
-  font-size: 3.2rem;
-}
-
 .banner-big {
   position: relative;
   height: 700px;
