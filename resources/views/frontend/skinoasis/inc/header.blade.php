@@ -5,7 +5,7 @@
             header-11
         @endif
 
-        @if(Route::current()->getName() == 'home.pages.halloBeauty' )
+        @if(Route::current()->getName() == 'home.pages.halloBeauty' || Route::current()->getName() == 'halloBeauty.listdokter' )
             header-hallo-beauty
         @endif
     @endif">
