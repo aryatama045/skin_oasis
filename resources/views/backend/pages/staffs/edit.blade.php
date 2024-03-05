@@ -65,6 +65,11 @@
                                 <label for="password" class="form-label">{{ localize('Password') }}</label>
                                 <input class="form-control" type="password" id="password" placeholder="{{ localize('Type password') }}" name="password">
                             </div>
+
+                            <div class="mb-4">
+                                <label for="name" class="form-label">Curriculum Vitae, Certificate, Education & Experience</label>
+                                <textarea class="" id="myTextarea" name="infolain">{!! $user->infolain !!}</textarea>
+                            </div>
                         </div>
                     </div>
                     <!--basic information end-->

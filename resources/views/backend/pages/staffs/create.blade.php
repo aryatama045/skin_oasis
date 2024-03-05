@@ -115,7 +115,7 @@
 
                             <div class="mb-4">
                                 <label for="name" class="form-label">Curriculum Vitae, Certificate, Education & Experience</label>
-                                <textarea class="editor" id="infolain" name="infolain"></textarea>
+                                <textarea class="" id="myTextarea" name="infolain"></textarea>
                             </div>
                         </div>
                     </div>
