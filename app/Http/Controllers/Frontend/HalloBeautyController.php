@@ -45,10 +45,10 @@ class HalloBeautyController extends Controller
         return getView('pages.home', ['blogs' => $blogs, 'sliders' => $sliders, 'brands' => $brands, 'banner_section_one_banners' => $banner_section_one_banners, 'client_feedback' => $client_feedback]);
     }
 
-    # all brands
-    public function allBrands()
+    # all dokter
+    public function listDokter()
     {
-        return getView('pages.brands');
+        return getView('pages.halloBeauty.searchDokter');
     }
 
     # all categories

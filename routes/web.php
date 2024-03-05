@@ -5,6 +5,7 @@ use App\Http\Controllers\Frontend\CheckoutController;
 use App\Http\Controllers\Frontend\CustomerController;
 use App\Http\Controllers\Frontend\SubscribersController;
 use App\Http\Controllers\Frontend\HomeController;
+use App\Http\Controllers\Frontend\HalobeautyController;
 use App\Http\Controllers\Frontend\ProductController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\VerificationController;
@@ -70,6 +71,11 @@ Route::get('/products/{slug}', [ProductController::class, 'show'])->name('produc
 Route::post('/products/get-variation-info', [ProductController::class, 'getVariationInfo'])->name('products.getVariationInfo');
 Route::post('/products/show-product-info', [ProductController::class, 'showInfo'])->name('products.showInfo');
 
+# hallo beauty
+Route::get('/pages/hallo-beauty', [HomeController::class, 'halloBeauty'])->name('home.pages.halloBeauty');
+Route::get('/hallobeauty/listdokter', [HalobeautyController::class, 'listdokter'])->name('halloBeauty.listdokter');
+
+
 # carts
 Route::get('/carts', [CartsController::class, 'index'])->name('carts.index');
 Route::post('/add-to-cart', [CartsController::class, 'store'])->name('carts.store');
@@ -91,7 +97,6 @@ Route::get('/coupons', [HomeController::class, 'allCoupons'])->name('home.coupon
 # pages
 Route::get('/pages/about-us', [HomeController::class, 'aboutUs'])->name('home.pages.aboutUs');
 Route::get('/pages/partner', [HomeController::class, 'partner'])->name('home.pages.partner');
-Route::get('/pages/hallo-beauty', [HomeController::class, 'halloBeauty'])->name('home.pages.halloBeauty');
 Route::get('/pages/euterria-nano-academy', [HomeController::class, 'euterriaNanoAcademy'])->name('home.pages.euterriaNanoAcademy');
 Route::get('/pages/contact-us', [HomeController::class, 'contactUs'])->name('home.pages.contactUs');
 Route::get('/pages/{slug}', [HomeController::class, 'showPage'])->name('home.pages.show');
