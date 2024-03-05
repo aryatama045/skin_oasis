@@ -21,25 +21,12 @@ class HalloBeautyController extends Controller
     # homepage
     public function index()
     {
-        $blogs = Blog::isActive()->latest()->take(3)->get();
 
         $sliders = [];
         if (getSetting('hero_sliders') != null) {
             $sliders = json_decode(getSetting('hero_sliders'));
         }
 
-        $brands = Brand::get();
-        // dd($brands);
-
-        $banner_section_one_banners = [];
-        if (getSetting('banner_section_one_banners') != null) {
-            $banner_section_one_banners = json_decode(getSetting('banner_section_one_banners'));
-        }
-
-        $client_feedback = [];
-        if (getSetting('client_feedback') != null) {
-            $client_feedback = json_decode(getSetting('client_feedback'));
-        }
 
 
         return getView('pages.home', ['blogs' => $blogs, 'sliders' => $sliders, 'brands' => $brands, 'banner_section_one_banners' => $banner_section_one_banners, 'client_feedback' => $client_feedback]);
@@ -48,7 +35,12 @@ class HalloBeautyController extends Controller
     # all dokter
     public function listDokter()
     {
-        return getView('pages.halloBeauty.searchDokter');
+        $sliders = [];
+        if (getSetting('hero_sliders') != null) {
+            $sliders = json_decode(getSetting('hero_sliders'));
+        }
+
+        return getView('pages.halloBeauty.searchDokter', ['sliders' => $sliders,]);
     }
 
     # all categories
