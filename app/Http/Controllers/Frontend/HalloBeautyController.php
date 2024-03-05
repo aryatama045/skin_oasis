@@ -8,6 +8,7 @@ use App\Models\Campaign;
 use App\Models\Page;
 use App\Models\Brand;
 use Illuminate\Http\Request;
+use DB;
 
 class HalloBeautyController extends Controller
 {
@@ -49,7 +50,9 @@ class HalloBeautyController extends Controller
             $sliders = json_decode(getSetting('hero_sliders'));
         }
 
-        return getView('pages.halloBeauty.janjiTemu', ['sliders' => $sliders]);
+        $dokter_resume = DB::table('users')->where('name', $slug)->get();
+
+        return getView('pages.halloBeauty.janjiTemu', ['sliders' => $sliders, 'dokter_resume' => $dokter_resume]);
     }
 
     # all blogs
