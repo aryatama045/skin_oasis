@@ -12,8 +12,8 @@
                         </figure>
 
                         <div>
-                            <h3 class="font-weight-bold ff">{{ $dokter->name }}</h3>
-                            <span>Dokter Kulit - Dokter Estetika</span>
+                            <h1 class="font-weight-bold ff">{{ $dokter->name }}</h1>
+                            <span class="text-black">Dokter Kulit - Dokter Estetika</span>
                         </div>
                     </div>
                 </div>
