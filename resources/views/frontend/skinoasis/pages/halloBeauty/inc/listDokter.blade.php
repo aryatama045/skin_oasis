@@ -34,9 +34,8 @@
                             </div>
                             <hr>
 
-                            <div class="card-content">
-                                <a href="javascript:void(0);" class="btn-product btn-cart mt-4"
-                                    onclick="showProductDetailsModal('1')">
+                            <div class="card-content text-center">
+                                <a href="#" class="btn btn-outline-yellow btn-rounded btn-sm ls-1px text-uppercase mt-4">
                                     {{ localize('Konsultasi Online') }}</a>
                             </div>
 
