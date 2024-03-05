@@ -1,19 +1,19 @@
 <div class="hallo-beauty rounded bg-white pt-5 pb-5 " data-aos="fade-up">
     <div class="row">
         <div class="col-12">
-            <div class="heading text-left">
-                <div class="shadow-content rounded">
 
-                    <h3 class="text-uppercase ls-2px fw-normal ff">Temukan</h3>
-
-                    <!-- Search Key -->
-                    <div class="input-group">
-                        <input type="text" class="form-control search-key" placeholder="KETIK KATA KUNCI" aria-label="Ketik Kata Kunci" >
+            <div class="row">
+                <div class="col-7">
+                    <div class="heading text-left">
+                        <h3 class="text-uppercase ls-2px fw-normal ff">Cari Dokter</h3>
+                        <!-- Search Key -->
+                        <div class="input-group">
+                            <input type="text" class="form-control search-key" placeholder="KETIK NAMA DOKTER" aria-label="Ketik Kata Kunci" >
+                        </div>
                     </div>
-
                 </div>
-
             </div>
+
 
             <form action="#">
 
