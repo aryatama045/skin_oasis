@@ -5,7 +5,7 @@ use App\Http\Controllers\Frontend\CheckoutController;
 use App\Http\Controllers\Frontend\CustomerController;
 use App\Http\Controllers\Frontend\SubscribersController;
 use App\Http\Controllers\Frontend\HomeController;
-use App\Http\Controllers\Frontend\HallobeautyController;
+use App\Http\Controllers\Frontend\HalloBeautyController;
 use App\Http\Controllers\Frontend\ProductController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\VerificationController;
@@ -73,7 +73,7 @@ Route::post('/products/show-product-info', [ProductController::class, 'showInfo'
 
 # hallo beauty
 Route::get('/pages/hallo-beauty', [HomeController::class, 'halloBeauty'])->name('home.pages.halloBeauty');
-Route::get('/hallobeauty/listdokter', [HallobeautyController::class, 'listdokter'])->name('halloBeauty.listdokter');
+Route::get('/hallobeauty/listdokter', [HalloBeautyController::class, 'listdokter'])->name('halloBeauty.listdokter');
 
 
 # carts
