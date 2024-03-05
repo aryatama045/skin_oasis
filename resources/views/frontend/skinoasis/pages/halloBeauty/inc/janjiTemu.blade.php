@@ -5,10 +5,17 @@
             <div class="row">
                 <div class="col-12 col-lg-7 mb-5">
                     <div class="heading text-left">
-                        <h3 class="text-uppercase ls-2px fw-normal ff">Cari Dokter</h3>
-                        <!-- Search Key -->
-                        <div class="input-group">
-                            <input type="text" class="form-control search-key" placeholder="KETIK NAMA DOKTER" aria-label="Ketik Kata Kunci" >
+                        <div class="posts-list">
+                            <figure>
+                                <a href="#">
+                                    <img class="rounded-circle" src="{{ staticAsset('frontend/skinoasis/assets/images/dokter.png') }}" alt="post">
+                                </a>
+                            </figure>
+
+                            <div>
+                                <h3 class="font-weight-bold ff">dr. Febby Hutomo</h3>
+                                <span>Dokter Kulit - Dokter Estetika</span>
+                            </div>
                         </div>
                     </div>
                 </div>
