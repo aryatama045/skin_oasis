@@ -1469,21 +1469,3 @@ p {
     color: #fff;
   }
 }
-.resume-dokter {
-  padding: 2rem;
-}
-.resume-dokter .lulusan ul {
-  border-left: 1px solid;
-  margin-left: 0rem;
-  padding-left: 2rem;
-}
-.resume-dokter .lulusan li {
-  list-style-type: square;
-  padding-left: 1rem;
-  margin-left: 0.87rem;
-  font-size: 1.8rem !important;
-  color: #383636;
-}
-.resume-dokter .lulusan li:marker {
-  font-size: 5rem;
-}
