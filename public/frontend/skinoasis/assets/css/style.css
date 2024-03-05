@@ -4056,6 +4056,9 @@ p {
 .hallo-beauty .heading-resume .title {
   font-size: 2rem !important;
   font-weight: 900 !important;
+  letter-spacing: -0.025em;
+  margin-bottom: 0.4rem;
+  font-family: "avenir lt pro" !important;
 }
 .hallo-beauty .heading-resume .subtitle {
   font-size: 1.6rem !important;
