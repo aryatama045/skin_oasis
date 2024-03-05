@@ -58,7 +58,7 @@
             @endphp
             @foreach ($brands as $merk)
                 <li>
-                    <a href="{{ route('products.index') }}?&brand_id={{ $merk->id }}"
+                    <a href="{{ route('products.allproduct') }}?&brand_id={{ $merk->id }}"
                         class="d-flex justify-content-between align-items-center text-capitalize">{{ $merk->collectLocalization('name') }}
                     </a>
                 </li>
