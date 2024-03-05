@@ -34,7 +34,7 @@
                             </div>
                             <div class="separator"></div>
 
-                            <div class="text-left mb-4">
+                            <div class="text-left mt-2 mb-4">
                                 <h3 class="font-weight-bold ff">KLINIK BEAUTY CENTRE</h3>
                                 <span>Tersedia : Tersedia hari ini</span>
 
