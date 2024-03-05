@@ -147,15 +147,6 @@ class HomeController extends Controller
         return getView('pages.partner.index', ['pages' => $pages, 'pagesContent' => $pagesContent ]);
     }
 
-    # halo beauty page
-    public function halloBeauty()
-    {
-        $sliders = [];
-        if (getSetting('hero_sliders') != null) {
-            $sliders = json_decode(getSetting('hero_sliders'));
-        }
-        return getView('pages.halloBeauty.index', ['sliders' => $sliders]);
-    }
 
     # euterria nano academy page
     public function euterriaNanoAcademy(Request $request)
