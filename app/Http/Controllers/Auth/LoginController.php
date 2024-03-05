@@ -150,7 +150,7 @@ class LoginController extends Controller
     # Where to redirect users after login.
     public function authenticated()
     {
-        if (auth()->user()->user_type == 'admin' || auth()->user()->user_type == 'staff') {
+        if (auth()->user()->user_type == 'admin' || auth()->user()->user_type == 'staff' || auth()->user()->user_type == 'mitra' || auth()->user()->user_type == 'dokter' || auth()->user()->user_type == 'klinik') {
             try {
                 return redirect()->route('admin.dashboard');
             } catch (\Throwable $th) {
