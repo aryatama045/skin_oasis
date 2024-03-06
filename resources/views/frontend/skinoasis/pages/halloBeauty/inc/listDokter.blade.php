@@ -35,7 +35,7 @@
 
                             <div>
                                 <h3 class="font-weight-bold ff">{{ $dokters->name }}</h3>
-                                <span>Dokter Kulit - Dokter Estetika</span>
+                                <span class="text-black">Dokter Kulit - Dokter Estetika</span>
                             </div>
                         </div>
                         <div class="separator"></div>
