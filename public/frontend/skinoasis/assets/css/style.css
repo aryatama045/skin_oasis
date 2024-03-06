@@ -9098,6 +9098,20 @@ a:focus {
   margin-bottom: 4rem;
   background-color: #FFF9E5;
 }
+.janjitemu-content .btn-outline-yellow {
+  border: 0.1rem solid #FBE18A !important;
+  color: black !important;
+  background-color: rgba(255, 255, 255, 0.7411764706);
+}
+.janjitemu-content .heading .title {
+  font-size: 2.3rem;
+  margin-left: 0;
+}
+.janjitemu-content .heading .subtitle {
+  font-size: 1.6rem;
+  font-weight: 100;
+  margin-left: 0;
+}
 
 .separator {
   border-bottom: 1px solid;

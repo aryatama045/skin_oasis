@@ -13,6 +13,26 @@
 	padding: 2rem;
     margin-bottom: 4rem;
 	background-color:#FFF9E5;
+
+	.btn-outline-yellow {
+		border: 0.1rem solid #FBE18A !important;
+		color: black !important;
+		background-color: #ffffffbd;
+
+
+	}
+
+	.heading{
+		.title{
+			font-size: 2.3rem;
+			margin-left: 0;
+		}
+		.subtitle{
+			font-size: 1.6rem;
+			font-weight: 100;
+			margin-left: 0;
+		}
+	}
 }
 
 .separator {
