@@ -9093,7 +9093,7 @@ a:focus {
 }
 
 .janjitemu-content {
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+  box-shadow: 0.5rem 0.4rem 0.5rem 0.6rem rgba(0, 0, 0, 0.4) !important;
   padding: 2rem;
   margin-bottom: 4rem;
   background-color: #FFF9E5;
