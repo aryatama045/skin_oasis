@@ -6,9 +6,7 @@
                 <div class="heading text-left">
                     <div class="posts-list">
                         <figure>
-                            <a href="#">
-                                <img class="rounded-circle" src="{{ staticAsset('frontend/skinoasis/assets/images/dokter.png') }}" alt="post">
-                            </a>
+                            <img class="rounded-circle" src="{{ staticAsset('frontend/skinoasis/assets/images/dokter.png') }}" alt="post">
                         </figure>
 
                         <div>
@@ -23,14 +21,12 @@
         <div class="row">
             <div class="col-lg-7">
                 <div class="resume-dokter">
-
+                    <!-- Resume -->
                     {!! $dokter->infolain !!}
-
                 </div>
             </div>
 
             <div class="col-lg-5">
-
                 <!-- Janji Temu -->
                 @include('frontend.skinoasis.pages.halloBeauty.inc.janjiTemu')
             </div>
