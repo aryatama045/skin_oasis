@@ -18,11 +18,11 @@
             <label class="btn btn-outline-yellow btn-rounded btn-sm ls-1px text-capitalize" for="jadwal1">Sabtu, 30 Des</label>
         </div>
 
-        <div class="btn-wrap ">
-            <a href="#" class="btn btn-outline-yellow btn-rounded btn-sm ls-1px text-capitalize">
-                <span>Sabtu, 30 Des</span>
-            </a>
+        <div class="btn-wrap">
+            <input type="radio" name="jadwal" class="btn-check" id="jadwal2" autocomplete="off">
+            <label class="btn btn-outline-yellow btn-rounded btn-sm ls-1px text-capitalize" for="jadwal2">Sabtu, 29 Des</label>
         </div>
+
 
     </div>
 
