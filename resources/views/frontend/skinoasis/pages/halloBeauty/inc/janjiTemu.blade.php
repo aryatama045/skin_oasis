@@ -7,15 +7,19 @@
     <!-- Button Group -->
     <div class="button-group mt-3 mb-3">
         <div class="btn-wrap ">
-            <a href="#" class="btn btn-outline-yellow btn-rounded btn-sm ls-1px text-capitalize">
+            <input type="radio" class="btn btn-outline-yellow btn-rounded btn-sm ls-1px text-capitalize">
                 <span>Kamis, 28 Des</span>
-            </a>
+            </input>
         </div>
 
-        <div class="btn-wrap ">
-            <a href="#" class="btn btn-outline-yellow btn-rounded btn-sm ls-1px text-capitalize">
-                <span>Jumat, 29 Des</span>
-            </a>
+        <div class="btn-wrap">
+            <input type="radio" class="btn-check" id="jadwal">
+            <label class="btn btn-outline-yellow btn-rounded btn-sm ls-1px text-capitalize">Kamis, 28 Des</label>
+        </div>
+
+        <div class="btn-wrap">
+            <input type="radio" class="btn-check" id="jadwal">
+            <label class="btn btn-outline-yellow btn-rounded btn-sm ls-1px text-capitalize">Sabtu, 30 Des</label>
         </div>
 
         <div class="btn-wrap ">
@@ -30,35 +34,6 @@
             </a>
         </div>
 
-        <div class="btn-wrap ">
-            <a href="#" class="btn btn-outline-yellow btn-rounded btn-sm ls-1px text-capitalize">
-                <span>Jumat, 29 Des</span>
-            </a>
-        </div>
-
-        <div class="btn-wrap ">
-            <a href="#" class="btn btn-outline-yellow btn-rounded btn-sm ls-1px text-capitalize">
-                <span>Sabtu, 30 Des</span>
-            </a>
-        </div>
-
-        <div class="btn-wrap ">
-            <a href="#" class="btn btn-outline-yellow btn-rounded btn-sm ls-1px text-capitalize">
-                <span>Kamis, 28 Des</span>
-            </a>
-        </div>
-
-        <div class="btn-wrap ">
-            <a href="#" class="btn btn-outline-yellow btn-rounded btn-sm ls-1px text-capitalize">
-                <span>Jumat, 29 Des</span>
-            </a>
-        </div>
-
-        <div class="btn-wrap ">
-            <a href="#" class="btn btn-outline-yellow btn-rounded btn-sm ls-1px text-capitalize">
-                <span>Sabtu, 30 Des</span>
-            </a>
-        </div>
     </div>
 
     <div class="heading text-left">
