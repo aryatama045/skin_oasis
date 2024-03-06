@@ -9109,6 +9109,7 @@ a:focus {
 .janjitemu-content .heading .element-icon {
   display: inline;
   padding-right: 1rem;
+  width: 3.1em;
 }
 .janjitemu-content .heading .title {
   font-size: 2.3rem;
