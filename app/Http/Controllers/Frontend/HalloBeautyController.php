@@ -54,7 +54,10 @@ class HalloBeautyController extends Controller
 
         $dokter_resume = DB::table('users')->where('user_type', 'dokter')->where('name', $slug)->first();
 
-        return getView('pages.halloBeauty.janjiTemu', ['sliders' => $sliders, 'dokter' => $dokter_resume]);
+        if(!$dokter_resume)
+            return getView('pages.halloBeauty.janjiTemu', ['sliders' => $sliders, 'dokter' => $dokter_resume]);
+        else
+            return abort(404);
     }
 
     # all blogs
