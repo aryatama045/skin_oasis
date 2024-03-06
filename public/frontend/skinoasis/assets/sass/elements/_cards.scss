@@ -20,6 +20,10 @@
 		background-color: #ffffffbd;
 	}
 
+	.btn-check:checked + .btn{
+		background-color: #fbe18a;
+	}
+
 	.heading{
 		.title{
 			font-size: 2.3rem;
