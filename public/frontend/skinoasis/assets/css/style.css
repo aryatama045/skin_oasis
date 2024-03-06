@@ -9106,9 +9106,14 @@ a:focus {
 .janjitemu-content .btn-check:checked + .btn {
   background-color: #FBE18A;
 }
+.janjitemu-content .heading .element-icon {
+  display: inline;
+  padding-right: 1rem;
+}
 .janjitemu-content .heading .title {
   font-size: 2.3rem;
   margin-left: 0;
+  display: contents;
 }
 .janjitemu-content .heading .title-two {
   font-size: 1.8rem;
