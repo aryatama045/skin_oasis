@@ -7,29 +7,29 @@
     <!-- Button Group -->
     <div class="button-group mt-3 mb-3">
         <div class="row">
-            <div class="col-sm-4 p-1">
-                <div class="btn-wrap">
+            <div class="col-sm-4 col-12 p-1">
+                <div class="btn-wrap w-100">
                     <input type="radio" name="jadwal" class="btn-check" id="jadwal1" autocomplete="off">
                     <label class="btn btn-outline-yellow btn-rounded btn-sm ls-1px text-capitalize" for="jadwal1">Sabtu, 30 Des</label>
                 </div>
             </div>
 
-            <div class="col-sm-4 p-1">
-                <div class="btn-wrap">
+            <div class="col-sm-4 col-12 p-1">
+                <div class="btn-wrap w-100">
                     <input type="radio" name="jadwal" class="btn-check" id="jadwal2" autocomplete="off">
                     <label class="btn btn-outline-yellow btn-rounded btn-sm ls-1px text-capitalize" for="jadwal2">Sabtu, 29 Des</label>
                 </div>
             </div>
 
-            <div class="col-sm-4 p-1">
-                <div class="btn-wrap">
+            <div class="col-sm-4 col-12 p-1">
+                <div class="btn-wrap w-100">
                     <input type="radio" name="jadwal" class="btn-check" id="jadwal3" autocomplete="off">
                     <label class="btn btn-outline-yellow btn-rounded btn-sm ls-1px text-capitalize" for="jadwal3">Sabtu, 29 Des</label>
                 </div>
             </div>
 
-            <div class="col-sm-4 p-1">
-                <div class="btn-wrap">
+            <div class="col-sm-4 col-12 p-1">
+                <div class="btn-wrap w-100">
                     <input type="radio" name="jadwal" class="btn-check" id="jadwal4" autocomplete="off">
                     <label class="btn btn-outline-yellow btn-rounded btn-sm ls-1px text-capitalize" for="jadwal4">Sabtu, 29 Des</label>
                 </div>
