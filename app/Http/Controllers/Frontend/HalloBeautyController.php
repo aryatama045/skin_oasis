@@ -42,7 +42,7 @@ class HalloBeautyController extends Controller
         return getView('pages.halloBeauty.searchDokter', ['sliders' => $sliders,]);
     }
 
-    # janji temu
+    # profile dokter
     public function dokter($slug)
     {
         $sliders = [];
@@ -55,7 +55,7 @@ class HalloBeautyController extends Controller
         $dokter_resume = DB::table('users')->where('user_type', 'dokter')->where('name', $slug)->first();
 
         if(!empty($dokter_resume)){
-            return getView('pages.halloBeauty.janjiTemu', ['sliders' => $sliders, 'dokter' => $dokter_resume]);
+            return getView('pages.halloBeauty.profileDokter', ['sliders' => $sliders, 'dokter' => $dokter_resume]);
         }else{
             return abort(404);
         }
