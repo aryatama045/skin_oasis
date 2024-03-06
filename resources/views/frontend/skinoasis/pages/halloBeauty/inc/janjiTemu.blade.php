@@ -6,20 +6,16 @@
 
     <!-- Button Group -->
     <div class="button-group mt-3 mb-3">
-        <div class="btn-wrap ">
-            <input type="radio" class="btn btn-outline-yellow btn-rounded btn-sm ls-1px text-capitalize">
-                <span>Kamis, 28 Des</span>
-            </input>
+
+        <div class="btn-wrap">
+            <input type="radio" class="btn-check" id="jadwal" autocomplete="off" checked>
+            <label class="btn btn-outline-yellow btn-rounded btn-sm ls-1px text-capitalize" for="jadwal">
+                Kamis, 28 Des</label>
         </div>
 
         <div class="btn-wrap">
-            <input type="radio" class="btn-check" id="jadwal">
-            <label class="btn btn-outline-yellow btn-rounded btn-sm ls-1px text-capitalize">Kamis, 28 Des</label>
-        </div>
-
-        <div class="btn-wrap">
-            <input type="radio" class="btn-check" id="jadwal">
-            <label class="btn btn-outline-yellow btn-rounded btn-sm ls-1px text-capitalize">Sabtu, 30 Des</label>
+            <input type="radio" class="btn-check" id="jadwal" autocomplete="off">
+            <label class="btn btn-outline-yellow btn-rounded btn-sm ls-1px text-capitalize" for="jadwal">Sabtu, 30 Des</label>
         </div>
 
         <div class="btn-wrap ">
