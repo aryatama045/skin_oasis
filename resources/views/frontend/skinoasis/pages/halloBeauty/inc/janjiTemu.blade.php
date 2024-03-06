@@ -24,12 +24,6 @@
             </a>
         </div>
 
-        <div class="btn-wrap ">
-            <a href="#" class="btn btn-outline-yellow btn-rounded btn-sm ls-1px text-capitalize">
-                <span>Kamis, 28 Des</span>
-            </a>
-        </div>
-
     </div>
 
     <div class="heading text-left">
