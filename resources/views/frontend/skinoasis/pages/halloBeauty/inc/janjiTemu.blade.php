@@ -5,7 +5,7 @@
     </div>
 
     <!-- Button Group -->
-    <div class="button-group">
+    <div class="button-group mt-3 mb-3">
         <div class="btn-wrap ">
             <a href="#" class="btn btn-outline-yellow btn-rounded btn-sm ls-1px text-capitalize">
                 <span>Kamis, 28 Des</span>
@@ -59,6 +59,15 @@
                 <span>Sabtu, 30 Des</span>
             </a>
         </div>
+    </div>
+
+    <div class="heading text-left">
+        <h4 class="title text-capitalize">waktu</h4>
+    </div>
+
+    <!-- Search Key -->
+    <div class="input-group">
+        <input type="datetime" class="form-control search-key" placeholder="Select Time">
     </div>
 
 </div>
