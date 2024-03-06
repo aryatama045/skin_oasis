@@ -8,14 +8,14 @@
     <div class="button-group mt-3 mb-3">
 
         <div class="btn-wrap">
-            <input type="radio" class="btn-check" id="jadwal" autocomplete="off" checked>
+            <input type="radio" name="jadwal" class="btn-check" id="jadwal" autocomplete="off" checked>
             <label class="btn btn-outline-yellow btn-rounded btn-sm ls-1px text-capitalize" for="jadwal">
                 Kamis, 28 Des</label>
         </div>
 
         <div class="btn-wrap">
-            <input type="radio" class="btn-check" id="jadwal" autocomplete="off">
-            <label class="btn btn-outline-yellow btn-rounded btn-sm ls-1px text-capitalize" for="jadwal">Sabtu, 30 Des</label>
+            <input type="radio" name="jadwal" class="btn-check" id="jadwal1" autocomplete="off">
+            <label class="btn btn-outline-yellow btn-rounded btn-sm ls-1px text-capitalize" for="jadwal1">Sabtu, 30 Des</label>
         </div>
 
         <div class="btn-wrap ">
