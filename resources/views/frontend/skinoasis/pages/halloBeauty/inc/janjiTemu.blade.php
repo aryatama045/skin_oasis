@@ -54,7 +54,7 @@
     <div class="heading text-left">
         <img class="element-icon" src="{{ staticAsset('frontend/skinoasis/assets/images/icons/hallo-icon/konsultasi.png') }}" alt="icon">
         <div class="title text-capitalize"> Konsultasi Online</div>
-        <div class="title-two mt-4 text-capitalize">
+        <div class="title-two mt-9 text-capitalize">
             28 Des 2023<br>
             Klinik Beauty Centre</div>
     </div>
