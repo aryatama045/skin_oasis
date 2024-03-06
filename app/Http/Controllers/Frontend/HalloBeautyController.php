@@ -75,30 +75,4 @@ class HalloBeautyController extends Controller
         }
     }
 
-    # all blogs
-    public function allBlogs(Request $request)
-    {
-        $searchKey  = null;
-        $blogs = Blog::isActive()->latest();
-
-        if ($request->search != null) {
-            $blogs = $blogs->where('title', 'like', '%' . $request->search . '%');
-            $searchKey = $request->search;
-        }
-
-        if ($request->category_id != null) {
-            $blogs = $blogs->where('blog_category_id', $request->category_id);
-        }
-
-        $blogs = $blogs->paginate(paginationNumber(5));
-        return getView('pages.blogs.index', ['blogs' => $blogs, 'searchKey' => $searchKey]);
-    }
-
-    # blog details
-    public function showBlog($slug)
-    {
-        $blog = Blog::where('slug', $slug)->first();
-        return getView('pages.blogs.blogDetails', ['blog' => $blog]);
-    }
-
 }
