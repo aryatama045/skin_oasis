@@ -9102,6 +9102,7 @@ a:focus {
   border: 0.1rem solid #FBE18A !important;
   color: black !important;
   background-color: rgba(255, 255, 255, 0.7411764706);
+  box-shadow: 0.3rem 0.3rem 0.2rem 0.2rem rgba(0, 0, 0, 0.38);
 }
 .janjitemu-content .btn-check:checked + .btn {
   background-color: #FBE18A;
