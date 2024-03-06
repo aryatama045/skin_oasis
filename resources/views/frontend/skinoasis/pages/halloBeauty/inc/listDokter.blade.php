@@ -44,7 +44,7 @@
                             <h3 class="font-weight-bold ff">KLINIK BEAUTY CENTRE</h3>
                             <span>Tersedia : Tersedia hari ini</span>
 
-                            <h2 class="mt-4 font-weight-bolder ff">Rp. 250.000</h2>
+                            <h2 class="mt-8 font-weight-bolder ff">Rp. 250.000</h2>
                         </div>
 
                         <div class="card-content text-center">
