@@ -23,7 +23,7 @@
 
             <div class="row">
 
-                @foreach ($blogs as $blog)
+                @foreach ($dokter as $dokters)
                 <div class="col-lg-4 col-sm-6 p-5">
                     <div class="dokter-content rounded">
                         <div class="posts-list">
