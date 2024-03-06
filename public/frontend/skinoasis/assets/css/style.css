@@ -9110,6 +9110,16 @@ a:focus {
   font-size: 2.3rem;
   margin-left: 0;
 }
+.janjitemu-content .heading .title-two {
+  font-size: 1.8rem;
+  font-weight: 800;
+  line-height: 1.2;
+  letter-spacing: 0.1em;
+  color: #222;
+  margin: 0;
+  margin-left: 0rem;
+  font-family: "avenir lt pro";
+}
 .janjitemu-content .heading .subtitle {
   font-size: 1.6rem;
   font-weight: 100;

@@ -39,11 +39,11 @@
     <div class="separator"></div>
 
     <div class="heading text-left">
-        
-        <h4 class="title text-capitalize"><img class="element-icon" src="{{ staticAsset('frontend/skinoasis/assets/images/icons/hallo-icon/konsultasi.png') }}" alt="icon"> Konsultasi Online</h4>
-        <h4 class="title mt-4 text-capitalize">
+        <img class="element-icon" src="{{ staticAsset('frontend/skinoasis/assets/images/icons/hallo-icon/konsultasi.png') }}" alt="icon">
+        <div class="title text-capitalize"> Konsultasi Online</div>
+        <div class="title-two mt-4 text-capitalize">
             28 Des 2023<br>
-            Klinik Beauty Centre</h4>
+            Klinik Beauty Centre</div>
     </div>
 
     <div class="btn-wrap mt-lg-4">
