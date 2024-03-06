@@ -43,7 +43,7 @@ class HalloBeautyController extends Controller
     }
 
     # janji temu
-    public function janjitemu($slug)
+    public function dokter($slug)
     {
         $sliders = [];
         if (getSetting('hero_sliders') != null) {
