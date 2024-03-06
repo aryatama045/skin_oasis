@@ -28,10 +28,13 @@
 
     <div class="heading text-left">
         <h4 class="title text-capitalize">waktu</h4>
-    </div>
+    
 
-    <div class="input-group">
-        <input type="datetime" class="form-control search-key" placeholder="Select Time">
+        <div class="input-group">
+            <input type="time" class="form-control search-key" placeholder="Select Time">
+        </div>
+
+        <p class="subtitle"> Waktu konsultasi dapat berubah bergantung pada konsultasi pasien sebelum anda</p>
     </div>
 
 </div>
