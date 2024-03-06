@@ -39,7 +39,21 @@ class HalloBeautyController extends Controller
             $sliders = json_decode(getSetting('hero_sliders'));
         }
 
-        return getView('pages.halloBeauty.searchDokter', ['sliders' => $sliders,]);
+        $searchKey  = null;
+        $dokter = DB::table('users')
+                    ->where('user_type', 'dokter')
+                    ->where('is_banned', 0)
+                    ->latest();
+
+        if ($request->search != null) {
+            $dokter = $dokter->where('name', 'like', '%' . $request->search . '%');
+            $searchKey = $request->search;
+        }
+
+        $dokter = $dokter->paginate(paginationNumber(5));
+
+        return getView('pages.halloBeauty.searchDokter',
+                        ['sliders' => $sliders , 'dokter' => $dokter , 'searchKey' => $searchKey]);
     }
 
     # profile dokter
@@ -52,10 +66,10 @@ class HalloBeautyController extends Controller
 
         $slug = str_replace('-', ' ', $slug);
 
-        $dokter_resume = DB::table('users')->where('user_type', 'dokter')->where('name', $slug)->first();
+        $dokter = DB::table('users')->where('user_type', 'dokter')->where('name', $slug)->first();
 
-        if(!empty($dokter_resume)){
-            return getView('pages.halloBeauty.profileDokter', ['sliders' => $sliders, 'dokter' => $dokter_resume]);
+        if(!empty($dokter)){
+            return getView('pages.halloBeauty.profileDokter', ['sliders' => $sliders, 'dokter' => $dokter]);
         }else{
             return abort(404);
         }
