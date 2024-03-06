@@ -42,7 +42,7 @@
 
                         <div class="text-left mt-2 mb-4">
                             <h3 class="font-weight-bold ff">KLINIK BEAUTY CENTRE</h3>
-                            <span>Tersedia : Tersedia hari ini</span>
+                            <span>Tersedia : <span class="text-black">Tersedia hari ini</span></span>
 
                             <h2 class="mt-8 font-weight-bolder ff">Rp. 250.000</h2>
                         </div>
