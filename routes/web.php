@@ -72,7 +72,7 @@ Route::post('/products/get-variation-info', [ProductController::class, 'getVaria
 Route::post('/products/show-product-info', [ProductController::class, 'showInfo'])->name('products.showInfo');
 
 # hallo beauty
-Route::get('/hallobeauty', [HomeController::class, 'index'])->name('halloBeauty.index');
+Route::get('/hallobeauty', [HalloBeautyController::class, 'index'])->name('halloBeauty.index');
 Route::get('/hallobeauty/listdokter', [HalloBeautyController::class, 'listdokter'])->name('halloBeauty.listdokter');
 Route::get('/hallobeauty/janjitemu/{slug}', [HalloBeautyController::class, 'janjitemu'])->name('halloBeauty.janjitemu');
 

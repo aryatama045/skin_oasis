@@ -4118,6 +4118,9 @@ p {
 .resume-dokter {
   padding: 1rem;
 }
+.resume-dokter strong {
+  font-weight: 900 !important;
+}
 .resume-dokter ul {
   border-left: 1px solid;
   padding-left: 1.25rem;
