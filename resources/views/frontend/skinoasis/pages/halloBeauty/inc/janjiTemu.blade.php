@@ -33,7 +33,7 @@
             <input type="time" class="form-control search-key" name="waktu" placeholder="Select Time">
         </div>
 
-        <p class="subtitle"> Waktu konsultasi dapat berubah bergantung pada konsultasi pasien sebelum anda</p>
+        <p class="kalimat"> Waktu konsultasi dapat berubah bergantung pada konsultasi pasien sebelum anda</p>
     </div>
 
     <div class="separator"></div>
