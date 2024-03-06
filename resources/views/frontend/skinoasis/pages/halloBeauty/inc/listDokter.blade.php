@@ -28,7 +28,7 @@
                     <div class="dokter-content rounded">
                         <div class="posts-list">
                             <figure>
-                                <a href="#">
+                                <a href="{{ route('halloBeauty.dokter', 'Nuryanto-Wahyudi') }}">
                                     <img class="rounded-circle" src="{{ staticAsset('frontend/skinoasis/assets/images/dokter.png') }}" alt="post">
                                 </a>
                             </figure>
@@ -48,7 +48,7 @@
                         </div>
 
                         <div class="card-content text-center">
-                            <a href="#" class="btn btn-outline-yellow btn-rounded btn-sm ls-1px text-uppercase mt-4 w-75">
+                            <a href="" class="btn btn-outline-yellow btn-rounded btn-sm ls-1px text-uppercase mt-4 w-75">
                                 {{ localize('Konsultasi Online') }}</a> <br>
                             <a href="{{ route('halloBeauty.dokter', 'Nuryanto-Wahyudi') }}" class="btn btn-outline-yellow btn-rounded btn-sm ls-1px text-uppercase mt-4 w-75">
                                 {{ localize('Pesan Janji Temu') }}</a>
