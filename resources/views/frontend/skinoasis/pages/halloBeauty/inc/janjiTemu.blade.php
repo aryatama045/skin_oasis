@@ -65,7 +65,6 @@
         <h4 class="title text-capitalize">waktu</h4>
     </div>
 
-    <!-- Search Key -->
     <div class="input-group">
         <input type="datetime" class="form-control search-key" placeholder="Select Time">
     </div>
