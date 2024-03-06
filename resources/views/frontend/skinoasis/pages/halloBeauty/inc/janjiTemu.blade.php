@@ -1,7 +1,7 @@
 <div class="janjitemu-content rounded bg-yellow mt-4">
     <div class="heading text-left">
         <h3 class="title text-capitalize">jadwal & buat janji temu</h3>
-        <p class="subtitle text-capitalize"> klinik beauty center</p>
+        <p class="subtitle text-capitalize"> klinik beauty centre</p>
     </div>
 
     <!-- Button Group -->
@@ -28,13 +28,26 @@
 
     <div class="heading text-left">
         <h4 class="title text-capitalize">waktu</h4>
-    
 
         <div class="input-group">
-            <input type="time" class="form-control search-key" placeholder="Select Time">
+            <input type="time" class="form-control search-key" name="waktu" placeholder="Select Time">
         </div>
 
         <p class="subtitle"> Waktu konsultasi dapat berubah bergantung pada konsultasi pasien sebelum anda</p>
+    </div>
+
+    <div class="separator"></div>
+
+    <div class="heading text-left">
+        <img class="element-icon" src="{{ staticAsset('frontend/skinoasis/assets/images/icons/hallo-icon/konsultasi.png') }}" alt="icon">
+        <h4 class="title text-capitalize">Konsultasi Online</h4>
+
+    </div>
+
+    <div class="btn-wrap mt-lg-4">
+        <a href="#" class="btn btn-outline-yellow btn-rounded btn-sm ls-1px text-uppercase">
+            Pesan
+        </a>
     </div>
 
 </div>
