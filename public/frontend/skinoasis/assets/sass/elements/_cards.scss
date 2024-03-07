@@ -14,15 +14,20 @@
     margin-bottom: 4rem;
 	background-color:#FFF9E5;
 
-	.btn-outline-yellow {
-		border: 0.1rem solid #FBE18A !important;
-		color: black !important;
-		background-color: #ffffffbd;
-		box-shadow: 0.1rem 0.4rem 0.3rem 0.1rem rgb(0 0 0 / 15%);
-	}
+	.btn {
 
-	.btn-check:checked + .btn{
-		background-color: #FBE18A;
+		min-width: 11em;
+
+		.btn-outline-yellow {
+			border: 0.1rem solid #FBE18A !important;
+			color: black !important;
+			background-color: #ffffffbd;
+			box-shadow: 0.1rem 0.4rem 0.3rem 0.1rem rgb(0 0 0 / 15%);
+		}
+
+		.btn-check:checked + .btn{
+			background-color: #FBE18A;
+		}
 	}
 
 	.heading{

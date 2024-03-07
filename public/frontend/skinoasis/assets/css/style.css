@@ -9098,13 +9098,16 @@ a:focus {
   margin-bottom: 4rem;
   background-color: #FFF9E5;
 }
-.janjitemu-content .btn-outline-yellow {
+.janjitemu-content .btn {
+  min-width: 11em;
+}
+.janjitemu-content .btn .btn-outline-yellow {
   border: 0.1rem solid #FBE18A !important;
   color: black !important;
   background-color: rgba(255, 255, 255, 0.7411764706);
   box-shadow: 0.1rem 0.4rem 0.3rem 0.1rem rgba(0, 0, 0, 0.15);
 }
-.janjitemu-content .btn-check:checked + .btn {
+.janjitemu-content .btn .btn-check:checked + .btn {
   background-color: #FBE18A;
 }
 .janjitemu-content .heading .element-icon {
