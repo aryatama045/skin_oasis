@@ -14,9 +14,10 @@
     margin-bottom: 4rem;
 	background-color:#FFF9E5;
 
-	.btn {
+	.btn{
 
-		min-width: 11em;
+		min-width: 11em !important;
+	}
 
 		.btn-outline-yellow {
 			border: 0.1rem solid #FBE18A !important;
@@ -28,7 +29,7 @@
 		.btn-check:checked + .btn{
 			background-color: #FBE18A;
 		}
-	}
+
 
 	.heading{
 
