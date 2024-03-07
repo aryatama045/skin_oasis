@@ -15,20 +15,22 @@
 	background-color:#FFF9E5;
 
 	.btn{
-
-		min-width: 11em !important;
+		min-width: 9rem !important;
+		line-height: .8;
+		font-size: 1.2rem;
+		font-weight: 400;;
 	}
 
-		.btn-outline-yellow {
-			border: 0.1rem solid #FBE18A !important;
-			color: black !important;
-			background-color: #ffffffbd;
-			box-shadow: 0.1rem 0.4rem 0.3rem 0.1rem rgb(0 0 0 / 15%);
-		}
+	.btn-outline-yellow {
+		border: 0.1rem solid #FBE18A !important;
+		color: black !important;
+		background-color: #ffffffbd;
+		box-shadow: 0.1rem 0.4rem 0.3rem 0.1rem rgb(0 0 0 / 15%);
+	}
 
-		.btn-check:checked + .btn{
-			background-color: #FBE18A;
-		}
+	.btn-check:checked + .btn{
+		background-color: #FBE18A;
+	}
 
 
 	.heading{

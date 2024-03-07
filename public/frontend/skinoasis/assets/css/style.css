@@ -9099,7 +9099,10 @@ a:focus {
   background-color: #FFF9E5;
 }
 .janjitemu-content .btn {
-  min-width: 11em !important;
+  min-width: 9rem !important;
+  line-height: 0.8;
+  font-size: 1.2rem;
+  font-weight: 400;
 }
 .janjitemu-content .btn-outline-yellow {
   border: 0.1rem solid #FBE18A !important;
