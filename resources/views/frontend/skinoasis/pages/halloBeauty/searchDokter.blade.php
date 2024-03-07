@@ -29,6 +29,7 @@
             @if (\App\Models\Location::where('is_published', 1)->count() > 1)
                 notifyMe('info', '{{ localize('Select your location if not selected') }}');
             @endif
+
         });
     </script>
 @endsection
