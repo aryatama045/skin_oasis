@@ -58,7 +58,6 @@
                                         value="{{ $blog->collectLocalization('title', $lang_key) }}">
                                 </div>
 
-
                                 @if (env('DEFAULT_LANGUAGE') == $lang_key)
                                     <div class="mb-4">
                                         <label for="slug" class="form-label">{{ localize('Blog Slug') }}</label>
