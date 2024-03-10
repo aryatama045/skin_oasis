@@ -1,7 +1,7 @@
 <div class="banner-big" style="background-image: url({{ staticAsset('frontend/skinoasis/assets/images/h-b-banner.png') }}); background-color: #f1f5f7;">
     <div class="banner-content-hallo">
         <div class="banner-subtitle text-black">Cerita</div>
-        <div class="banner-title ls-1px">#Halo Beauty</div>
+        <div class="banner-title text-black ls-1px">#Halo Beauty</div>
     </div><!--End .banner-content-->
 
     <div class="p-9 btn-bottom-c">
