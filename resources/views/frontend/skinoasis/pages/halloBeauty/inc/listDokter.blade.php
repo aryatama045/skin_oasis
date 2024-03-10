@@ -38,9 +38,9 @@
                                 <span class="text-black">Dokter Kulit - Dokter Estetika</span>
                             </div>
                         </div>
-                        <div class="separator"></div>
+                        <div class="separator mt-2 mb-2"></div>
 
-                        <div class="text-left mt-2 mb-4">
+                        <div class="text-left mt-4 mb-4">
                             <h3 class="font-weight-bold ff">KLINIK BEAUTY CENTRE</h3>
                             <span>Tersedia : <span class="text-black">Tersedia hari ini</span></span>
 
