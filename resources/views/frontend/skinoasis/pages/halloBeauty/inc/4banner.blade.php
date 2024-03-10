@@ -7,7 +7,7 @@
     <div class="p-9 btn-bottom-c">
         <div class="p-9">
             <p class="ls-1px" style="font-size:3rem !important; font-weight: 900 !important;width: 50%;">Perjuangan Hendra Melawan Jerawat Menahun.</p>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+            <p style="width: 50%;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
             <a href="#" class="btn btn-rounded btn-sm text-uppercase btn-outline-green-dark ls-1">Lihat Selengkapnya</a>
         </div>
     </div>
