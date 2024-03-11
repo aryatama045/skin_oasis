@@ -35,10 +35,6 @@
                                 </div>
                             </div>
 
-                            <!-- Search Key -->
-                            <div class="input-group">
-                                <input type="text" class="form-control search-key" placeholder="KETIK KATA KUNCI" aria-label="Ketik Kata Kunci" >
-                            </div>
 
 
                             <!-- Search Key -->
