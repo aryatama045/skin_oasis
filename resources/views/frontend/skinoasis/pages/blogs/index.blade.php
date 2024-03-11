@@ -39,7 +39,7 @@
                                 <div class="thumbnail overflow-hidden">
                                     <a href="{{ route('home.blogs.show', $blog->slug) }}">
                                         <img src="{{ uploadedAsset($blog->banner) }}"
-                                            alt="{{ $blog->collectLocalization('title') }}" class="img-fluid rounded-top">
+                                            alt="{{ $blog->collectLocalization('title') }}" class="img-fluid rounded-top blog-image">
                                     </a>
                                 </div>
                                 <div class="blog-card-content p-0 mt-4">
