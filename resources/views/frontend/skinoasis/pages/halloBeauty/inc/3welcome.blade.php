@@ -36,6 +36,12 @@
                             </div>
 
                             <!-- Search Key -->
+                            <div class="input-group">
+                                <input type="text" class="form-control search-key" placeholder="KETIK KATA KUNCI" aria-label="Ketik Kata Kunci" >
+                            </div>
+
+
+                            <!-- Search Key -->
                             <form class="search-form d-flex" action="{{ route('halloBeauty.listdokter') }}">
                                 <div class="input-group">
                                     <input type="text" name="search" class="form-control search-key" placeholder="KETIK KATA KUNCI"
