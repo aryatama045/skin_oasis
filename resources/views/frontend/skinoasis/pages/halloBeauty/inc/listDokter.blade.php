@@ -23,12 +23,12 @@
 
             <div class="row">
 
-                @foreach ($dokter as $dokters)
+                @foreach ($dokter as $dokters) $nmd = str_replace(' ', '-', $dokters->name);
                 <div class="col-lg-4 col-sm-6 p-5">
                     <div class="dokter-content rounded">
                         <div class="posts-list">
                             <figure>
-                                <a href="{{ route('halloBeauty.dokter', 'Nuryanto-Wahyudi') }}">
+                                <a href="{{ route('halloBeauty.dokter', $nmd ) }}">
                                     <img class="rounded-circle" src="{{ staticAsset('frontend/skinoasis/assets/images/dokter.png') }}" alt="post">
                                 </a>
                             </figure>
