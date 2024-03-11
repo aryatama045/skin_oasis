@@ -24,7 +24,7 @@
             <div class="row">
 
                 @foreach ($dokter as $dokters) 
-                    @php $nmd = str_replace(' ', '-', $dokters->name);
+                    <?php $nmd = str_replace(' ', '-', $dokters->name); ?>
                 <div class="col-lg-4 col-sm-6 p-5">
                     <div class="dokter-content rounded">
                         <div class="posts-list">
