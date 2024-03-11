@@ -14,7 +14,7 @@
     </div>
 
     <div class="profile-name d-none d-sm-block">
-        <h5 class="text-capitalize mt-0 mb-0">{{ $user->name }}</h5>
+        <h2 class="text-capitalize mt-0 mb-0">{{ $user->name }}</h2>
         <p class="text-capitalize mt-0 mb-0">Sahabat Skin Oasis</p>
     </div>
 </div>

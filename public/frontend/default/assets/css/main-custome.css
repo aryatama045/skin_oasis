@@ -28439,6 +28439,13 @@ li.nav-item.partner {
     max-width: 50%;
 }
 
+img.blog-image {
+    width: 907px;
+    height: 350px;
+    position: relative;
+    object-fit: cover;
+}
+
 
 .footer-bottom .social-icon {
     font-size: 2.4rem !important;
