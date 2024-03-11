@@ -24,11 +24,11 @@
             <div class="row">
 
                 @foreach ($dokter as $dokters) 
+                    @php $nmd = str_replace(' ', '-', $dokters->name);
                 <div class="col-lg-4 col-sm-6 p-5">
                     <div class="dokter-content rounded">
                         <div class="posts-list">
                             <figure>
-                                <?php $nmd = str_replace(' ', '-', $dokters->name); ?>
                                 <a href="{{ route('halloBeauty.dokter', $nmd ) }}">
                                     <img class="rounded-circle" src="{{ staticAsset('frontend/skinoasis/assets/images/dokter.png') }}" alt="post">
                                 </a>
@@ -51,7 +51,7 @@
                         <div class="card-content text-center">
                             <a href="" class="btn btn-outline-yellow btn-rounded btn-sm ls-1px text-uppercase mt-4 w-75">
                                 {{ localize('Konsultasi Online') }}</a> <br>
-                            <a href="{{ route('halloBeauty.dokter', 'Nuryanto-Wahyudi') }}" class="btn btn-outline-yellow btn-rounded btn-sm ls-1px text-uppercase mt-4 w-75">
+                            <a href="{{ route('halloBeauty.dokter', $nmd) }}" class="btn btn-outline-yellow btn-rounded btn-sm ls-1px text-uppercase mt-4 w-75">
                                 {{ localize('Pesan Janji Temu') }}</a>
                         </div>
 
