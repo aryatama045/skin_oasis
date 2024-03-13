@@ -74,6 +74,7 @@ Route::post('/products/show-product-info', [ProductController::class, 'showInfo'
 # hallo beauty
 Route::get('/hallobeauty', [HalloBeautyController::class, 'index'])->name('halloBeauty.index');
 Route::get('/hallobeauty/listdokter', [HalloBeautyController::class, 'listdokter'])->name('halloBeauty.listdokter');
+Route::get('/hallobeauty/listpaket', [HalloBeautyController::class, 'listpaket'])->name('halloBeauty.listpaket');
 Route::get('/hallobeauty/dokter/{slug}', [HalloBeautyController::class, 'dokter'])->name('halloBeauty.dokter');
 
 
