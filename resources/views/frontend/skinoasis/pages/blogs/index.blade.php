@@ -39,14 +39,14 @@
                                 <div class="thumbnail overflow-hidden">
                                     <a href="{{ route('home.blogs.show', $blog->slug) }}">
                                         <img src="{{ uploadedAsset($blog->banner) }}"
-                                            alt="{{ $blog->collectLocalization('title') }}" class="img-fluid rounded-top">
+                                            alt="{{ $blog->collectLocalization('title') }}" class="img-fluid rounded-top blog-image">
                                     </a>
                                 </div>
                                 <div class="blog-card-content p-0 mt-4">
                                     <div class="blog-meta d-flex align-items-center gap-3 mb-2">
-                                        <span class="fs-xs fw-medium"><i
+                                        <span class="fs-sm fw-medium text-black"><i
                                                 class="fa-solid fa-tags me-1"></i>{{ optional($blog->blog_category)->name }}</span>
-                                        <span class="fs-xs fw-medium"><i
+                                        <span class="fs-sm fw-medium text-black"><i
                                                 class="fa-regular fa-clock me-1"></i>{{ date('M d, Y', strtotime($blog->created_at)) }}</span>
                                     </div>
                                     <a href="{{ route('home.blogs.show', $blog->slug) }}">

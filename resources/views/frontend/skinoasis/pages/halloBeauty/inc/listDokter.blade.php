@@ -23,12 +23,13 @@
 
             <div class="row">
 
-                @foreach ($dokter as $dokters)
+                @foreach ($dokter as $dokters) 
+                    <?php $nmd = str_replace(' ', '-', $dokters->name); ?>
                 <div class="col-lg-4 col-sm-6 p-5">
                     <div class="dokter-content rounded">
                         <div class="posts-list">
                             <figure>
-                                <a href="{{ route('halloBeauty.dokter', 'Nuryanto-Wahyudi') }}">
+                                <a href="{{ route('halloBeauty.dokter', $nmd ) }}">
                                     <img class="rounded-circle" src="{{ staticAsset('frontend/skinoasis/assets/images/dokter.png') }}" alt="post">
                                 </a>
                             </figure>
@@ -38,9 +39,9 @@
                                 <span class="text-black">Dokter Kulit - Dokter Estetika</span>
                             </div>
                         </div>
-                        <div class="separator"></div>
+                        <div class="separator mt-2 mb-2"></div>
 
-                        <div class="text-left mt-2 mb-4">
+                        <div class="text-left mt-4 mb-4">
                             <h3 class="font-weight-bold ff">KLINIK BEAUTY CENTRE</h3>
                             <span>Tersedia : <span class="text-black">Tersedia hari ini</span></span>
 
@@ -50,7 +51,7 @@
                         <div class="card-content text-center">
                             <a href="" class="btn btn-outline-yellow btn-rounded btn-sm ls-1px text-uppercase mt-4 w-75">
                                 {{ localize('Konsultasi Online') }}</a> <br>
-                            <a href="{{ route('halloBeauty.dokter', 'Nuryanto-Wahyudi') }}" class="btn btn-outline-yellow btn-rounded btn-sm ls-1px text-uppercase mt-4 w-75">
+                            <a href="{{ route('halloBeauty.dokter', $nmd) }}" class="btn btn-outline-yellow btn-rounded btn-sm ls-1px text-uppercase mt-4 w-75">
                                 {{ localize('Pesan Janji Temu') }}</a>
                         </div>
 
@@ -63,43 +64,7 @@
                 </div>
             </div>
 
-            <div class="row elements">
-                <div class="col-xl-5col col-lg-3 col-md-3 col-6">
-                    <a href="elements-accordions.html" class="element-type">
-                        <div class="element">
-                            <img class="element-icon" src="{{ staticAsset('frontend/skinoasis/assets/images/icons/hallo-icon/cari-dokter.png') }}" alt="icon">
-                            <p>Cari Dokter</p>
-                        </div>
-                    </a>
-                </div>
-
-                <div class="col-xl-5col col-lg-3 col-md-3 col-6">
-                    <a href="elements-accordions.html" class="element-type">
-                        <div class="element">
-                            <img class="element-icon" src="{{ staticAsset('frontend/skinoasis/assets/images/icons/hallo-icon/list-dokter.png') }}" alt="icon">
-                            <p>List Dokter</p>
-                        </div>
-                    </a>
-                </div>
-
-                <div class="col-xl-5col col-lg-3 col-md-3 col-6">
-                    <a href="elements-accordions.html" class="element-type">
-                        <div class="element">
-                            <img class="element-icon" src="{{ staticAsset('frontend/skinoasis/assets/images/icons/hallo-icon/list-klinik.PNG') }}" alt="icon">
-                            <p>List Klinik</p>
-                        </div>
-                    </a>
-                </div>
-
-                <div class="col-xl-5col col-lg-3 col-md-3 col-6">
-                    <a href="elements-accordions.html" class="element-type">
-                        <div class="element">
-                            <img class="element-icon" src="{{ staticAsset('frontend/skinoasis/assets/images/icons/hallo-icon/paket.PNG') }}" alt="icon">
-                            <p>PAKET KECANTIKAN <br> & PERAWATAN</p>
-                        </div>
-                    </a>
-                </div>
-            </div>
+            @include('frontend.skinoasis.pages.halloBeauty.inc.navbarBottom')
 
 
         </div>

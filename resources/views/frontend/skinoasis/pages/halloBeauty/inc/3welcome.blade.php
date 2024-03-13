@@ -35,15 +35,23 @@
                                 </div>
                             </div>
 
+
+
                             <!-- Search Key -->
-                            <div class="input-group">
-                                <input type="text" class="form-control search-key" placeholder="KETIK KATA KUNCI" aria-label="Ketik Kata Kunci" >
-                            </div>
+                            <form class="search-form d-flex" action="{{ route('halloBeauty.listdokter') }}">
+                                <div class="input-group">
+                                    <input type="text" name="search" class="form-control search-key" placeholder="KETIK KATA KUNCI"
+                                        @isset($searchKey)
+                                        value="{{ $searchKey }}"
+                                        @endisset>
+                                </div>
+                            </form>
 
                         </div>
                     </div>
                 </div>
 
+<<<<<<< HEAD
                 <div class="row elements">
                     <div class="col-xl-5col col-lg-3 col-md-3 col-12">
                         <a href="{{ route('halloBeauty.listdokter')}}" class="element-type">
@@ -81,6 +89,9 @@
                         </a>
                     </div>
                 </div>
+=======
+                @include('frontend.skinoasis.pages.halloBeauty.inc.navbarBottom')
+>>>>>>> f289eaa09fc7a525644f9a47be523753dec8a3da
 
             </form>
 
