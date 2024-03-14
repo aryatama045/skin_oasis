@@ -8,6 +8,7 @@
         @if(Route::current()->getName() == 'halloBeauty.index' || Route::current()->getName() == 'halloBeauty.listdokter' || Route::current()->getName() == 'halloBeauty.listpaket' )
             header-hallo-beauty
         @endif
+    @else
     @endif">
     <div class="header-middle ">
         <div class="container">
