@@ -1,6 +1,5 @@
 <!-- Header -->
 <header class="header
-    @if (request()->route())
     @if(!empty(Route::current()->getName()))
         @if(Route::current()->getName() == 'home' || Route::current()->getName() == 'home.pages.aboutUs')
             header-11
@@ -9,7 +8,6 @@
         @if(Route::current()->getName() == 'halloBeauty.index' || Route::current()->getName() == 'halloBeauty.listdokter' || Route::current()->getName() == 'halloBeauty.listpaket' )
             header-hallo-beauty
         @endif
-    @endif
     @endif">
     <div class="header-middle ">
         <div class="container">
