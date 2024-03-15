@@ -191,7 +191,9 @@
                                         </button>
                                     </div>
 
+                                    @if (!$product->pdf)
                                     <a href="{{$product->pdf}}" target="_blank" class="btn btn-rounded btn-sm text-uppercase btn-outline-green-dark"> Shop Now</a>
+                                    @endif
 
                                     <div class="flex-grow-1"></div>
                                     @if (getSetting('enable_reward_points') == 1)
