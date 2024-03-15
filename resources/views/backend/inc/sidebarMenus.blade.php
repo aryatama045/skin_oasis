@@ -271,6 +271,27 @@
                 <span class="tt-nav-link-text">Person</span>
             </a>
         </li>
+        <li
+            class="side-nav-item nav-item {{ areActiveRoutes(['admin.staffs.mitra', 'admin.staffs.createmitra', 'admin.staffs.editmitra'], 'tt-menu-item-active') }}">
+            <a href="{{ route('admin.staffs.mitra') }}" class="side-nav-link">
+                <span class="tt-nav-link-icon"> <i data-feather="user-check"></i></span>
+                <span class="tt-nav-link-text">Mitra</span>
+            </a>
+        </li>
+        <li
+            class="side-nav-item nav-item {{ areActiveRoutes(['admin.staffs.dokter', 'admin.staffs.createdokter', 'admin.staffs.editdokter'], 'tt-menu-item-active') }}">
+            <a href="{{ route('admin.staffs.dokter') }}" class="side-nav-link">
+                <span class="tt-nav-link-icon"> <i data-feather="user-check"></i></span>
+                <span class="tt-nav-link-text">Dokter</span>
+            </a>
+        </li>
+        <li
+            class="side-nav-item nav-item {{ areActiveRoutes(['admin.staffs.klinik', 'admin.staffs.createklinik', 'admin.staffs.editklinik'], 'tt-menu-item-active') }}">
+            <a href="{{ route('admin.staffs.klinik') }}" class="side-nav-link">
+                <span class="tt-nav-link-icon"> <i data-feather="user-check"></i></span>
+                <span class="tt-nav-link-text">Klinik</span>
+            </a>
+        </li>
     @endcan
 
     @canany(['partner'])

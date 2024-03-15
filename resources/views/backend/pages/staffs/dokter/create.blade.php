@@ -12,7 +12,7 @@
                 <div class="card tt-page-header">
                     <div class="card-body d-lg-flex align-items-center justify-content-lg-between">
                         <div class="tt-page-title">
-                            <h2 class="h5 mb-lg-0">{{ localize('Add New Person') }}</h2>
+                            <h2 class="h5 mb-lg-0">Tambah Dokter Baru</h2>
                         </div>
 
                     </div>
@@ -29,7 +29,7 @@
                     <!--basic information start-->
                     <div class="card mb-4" id="section-1">
                         <div class="card-body">
-                            <h5 class="mb-4">{{ localize('Basic Information') }}</h5>
+                            <h5 class="mb-4">Informasi Dasar</h5>
 
                             <div class="mb-4">
                                 <label for="name" class="form-label">Nama Lengkap<span class="text-danger ms-1">*</span></label>
@@ -48,6 +48,7 @@
                                 @endif
                             </div>
 
+
                             <div class="mb-4">
                                 <label class="form-label">Role<span class="text-danger ms-1">*</span></label>
                                 <select class="select2 form-control" data-toggle="select2" name="role_id">
@@ -55,6 +56,18 @@
                                     @foreach ($roles as $role)
                                     <option value="{{ $role->id }}">
                                         {{ $role->name }}
+                                    </option>
+                                    @endforeach
+                                </select>
+                            </div>
+
+                            <div class="mb-4">
+                                <label class="form-label">Zona</label>
+                                <select class="select2 form-control" data-toggle="select2" name="zona">
+                                    <option value="0">-- Pilih Zona --</option>
+                                    @foreach ($cities as $kota)
+                                    <option value="{{ $kota->id }}">
+                                        {{ $kota->name }}
                                     </option>
                                     @endforeach
                                 </select>
@@ -98,6 +111,11 @@
                                     </div>
                                     <!-- choose media -->
                                 </div>
+                            </div>
+
+                            <div class="mb-4">
+                                <label for="name" class="form-label">Curriculum Vitae, Certificate, Education & Experience</label>
+                                <textarea class="" id="myTextarea" name="infolain"></textarea>
                             </div>
                         </div>
                     </div>

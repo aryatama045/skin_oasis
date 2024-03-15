@@ -39,7 +39,12 @@ class ProductsController extends Controller
         $is_published = null;
         $is_popular = null;
 
-        $products = Product::shop()->latest();
+        if(auth()->user()->user_type == 'admin' || auth()->user()->user_type == 'staff'){
+            $products = Product::shop()->latest();
+        }else{
+            $products = Product::where('userid', auth()->user()->id)->shop()->latest();
+        }
+        
         if ($request->search != null) {
             $products = $products->where('name', 'like', '%' . $request->search . '%');
             $searchKey = $request->search;
@@ -159,6 +164,7 @@ class ProductsController extends Controller
         $product                    = new Product;
         $product->shop_id           = auth()->user()->shop_id;
         $product->name              = $request->name;
+        $product->userid           = auth()->user()->id;
         $product->slug              = Str::slug($request->name, '-') . '-' . strtolower(Str::random(5));
         $product->brand_id          = $request->brand_id;
         $product->unit_id           = $request->unit_id;
@@ -329,6 +335,7 @@ class ProductsController extends Controller
 
         if ($request->lang_key == env("DEFAULT_LANGUAGE")) {
             $product->name              = $request->name;
+            $product->userid            = auth()->user()->id;
             $product->slug              = (!is_null($request->slug)) ? Str::slug($request->slug, '-') : Str::slug($request->name, '-') . '-' . strtolower(Str::random(5));
             $product->description       = $request->description;
             $product->additional_info       = $request->additional_info;

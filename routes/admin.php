@@ -548,10 +548,19 @@ Route::group(
         # staffs
         Route::group(['prefix' => 'staffs'], function () {
             Route::get('/', [StaffsController::class, 'index'])->name('admin.staffs.index');
+            Route::get('/dokter', [StaffsController::class, 'dokter'])->name('admin.staffs.dokter');
+            Route::get('/klinik', [StaffsController::class, 'klinik'])->name('admin.staffs.klinik');
+            Route::get('/mitra', [StaffsController::class, 'mitra'])->name('admin.staffs.mitra');
             Route::get('/add-staff', [StaffsController::class, 'create'])->name('admin.staffs.create');
+            Route::get('/add-dokter', [StaffsController::class, 'createdokter'])->name('admin.staffs.createdokter');
+            Route::get('/add-klinik', [StaffsController::class, 'createklinik'])->name('admin.staffs.createklinik');
+            Route::get('/add-mitra', [StaffsController::class, 'createmitra'])->name('admin.staffs.createmitra');
             Route::post('/add-staff', [StaffsController::class, 'store'])->name('admin.staffs.store');
             Route::get('/update-staff/{id}', [StaffsController::class, 'edit'])->name('admin.staffs.edit');
-            Route::post('/update-staff', [StaffsController::class, 'update'])->name('admin.staffs.update');
+            Route::get('/update-mitra/{id}', [StaffsController::class, 'editmitra'])->name('admin.staffs.editmitra');
+            Route::get('/update-dokter/{id}', [StaffsController::class, 'editdokter'])->name('admin.staffs.editdokter');
+            Route::get('/update-klinik/{id}', [StaffsController::class, 'editklinik'])->name('admin.staffs.editklinik');
+            Route::post('/update-data', [StaffsController::class, 'update'])->name('admin.staffs.update');
             Route::get('/delete-staff/{id}', [StaffsController::class, 'delete'])->name('admin.staffs.delete');
         });
     }

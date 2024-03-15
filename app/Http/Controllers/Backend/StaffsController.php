@@ -27,8 +27,7 @@ class StaffsController extends Controller
     {
         $searchKey = null;
         $ownOrAllStaff = auth()->user()->can('own_staff') && auth()->user()->user_type != 'admin' ? true : false;
-        // $staffs = User::where('user_type', 'staff')->latest();
-        $staffs = User::latest();
+        $staffs = User::where('user_type', 'staff')->latest();
         if ($request->search != null) {
             $staffs = $staffs->where('name', 'like', '%' . $request->search . '%')
                 ->orWhere('email', 'like', '%' . $request->search . '%')
@@ -43,12 +42,98 @@ class StaffsController extends Controller
         return view('backend.pages.staffs.index', compact('staffs', 'searchKey'));
     }
 
+    # Dokter list
+    public function dokter(Request $request)
+    {
+        $searchKey = null;
+        $ownOrAllStaff = auth()->user()->can('own_staff') && auth()->user()->user_type != 'admin' ? true : false;
+        $dokters = User::where('user_type', 'dokter')->latest();
+        if ($request->search != null) {
+            $dokters = $dokters->where('name', 'like', '%' . $request->search . '%')
+                ->orWhere('email', 'like', '%' . $request->search . '%')
+                ->orWhere('phone', 'like', '%' . $request->search . '%');
+            $searchKey = $request->search;
+        }
+        if ($ownOrAllStaff) {
+
+            $dokters = $dokters->where('created_by', auth()->user()->id);
+        }
+        $dokters = $dokters->where('id', '!=', auth()->user()->id)->paginate(paginationNumber());
+        return view('backend.pages.staffs.dokter.index', compact('dokters', 'searchKey'));
+    }
+
+    # Klinik list
+    public function klinik(Request $request)
+    {
+        $searchKey = null;
+        $ownOrAllStaff = auth()->user()->can('own_staff') && auth()->user()->user_type != 'admin' ? true : false;
+        // $staffs = User::where('user_type', 'staff')->latest();
+        $kliniks = User::where('user_type', 'klinik')->latest();
+        if ($request->search != null) {
+            $kliniks = $kliniks->where('name', 'like', '%' . $request->search . '%')
+                ->orWhere('email', 'like', '%' . $request->search . '%')
+                ->orWhere('phone', 'like', '%' . $request->search . '%');
+            $searchKey = $request->search;
+        }
+        if ($ownOrAllStaff) {
+
+            $kliniks = $kliniks->where('created_by', auth()->user()->id);
+        }
+        $kliniks = $kliniks->where('id', '!=', auth()->user()->id)->paginate(paginationNumber());
+        return view('backend.pages.staffs.klinik.index', compact('kliniks', 'searchKey'));
+    }
+
+    # Mitra list
+    public function mitra(Request $request)
+    {
+        $searchKey = null;
+        $ownOrAllStaff = auth()->user()->can('own_staff') && auth()->user()->user_type != 'admin' ? true : false;
+        // $staffs = User::where('user_type', 'staff')->latest();
+        $mitras = User::where('user_type', 'mitra')->latest();
+        if ($request->search != null) {
+            $mitras = $mitras->where('name', 'like', '%' . $request->search . '%')
+                ->orWhere('email', 'like', '%' . $request->search . '%')
+                ->orWhere('phone', 'like', '%' . $request->search . '%');
+            $searchKey = $request->search;
+        }
+        if ($ownOrAllStaff) {
+
+            $mitras = $mitras->where('created_by', auth()->user()->id);
+        }
+        $mitras = $mitras->where('id', '!=', auth()->user()->id)->paginate(paginationNumber());
+        return view('backend.pages.staffs.mitra.index', compact('mitras', 'searchKey'));
+    }
+
     # return create form
     public function create()
     {
-        $roles = SpatieRole::oldest()->where('id', '!=', 1)->isActive()->get();
+        $roles = SpatieRole::whereIn('id', array(1, 5))->get();
         $cities = City::get();
         return view('backend.pages.staffs.create', compact('roles', 'cities'));
+    }
+
+    # return create form
+    public function createmitra()
+    {
+        $roles = SpatieRole::oldest()->where('id', '=', 2)->isActive()->get();
+        $cities = City::get();
+        return view('backend.pages.staffs.mitra.create', compact('roles', 'cities'));
+    }
+
+    # return create form
+    public function createdokter()
+    {
+        $roles = SpatieRole::oldest()->where('id', '=', 3)->isActive()->get();
+        $cities = City::get();
+        return view('backend.pages.staffs.dokter.create', compact('roles', 'cities'));
+    }
+
+    # return create form
+    public function createklinik()
+    {
+        $roles = SpatieRole::oldest()->where('id', '=', 4)->isActive()->get();
+        $cities = City::get();
+        return view('backend.pages.staffs.klinik.create', compact('roles', 'cities'));
     }
 
     # save new staff
@@ -82,7 +167,16 @@ class StaffsController extends Controller
             $user->assignRole(SpatieRole::findOrFail($request->role_id)->name);
 
             flash(localize('Staff has been inserted successfully'))->success();
-            return redirect()->route('admin.staffs.index');
+
+            if($request->role_id == 1 || $request->role_id == 5){
+                return redirect()->route('admin.staffs.index');
+            }else if($request->role_id == 2){
+                return redirect()->route('admin.staffs.mitra');
+            }else if($request->role_id == 3){
+                return redirect()->route('admin.staffs.dokter');
+            }else if($request->role_id == 4){
+                return redirect()->route('admin.staffs.klinik');
+            }
         }
         flash(localize('Email already used'))->error();
         return back();
@@ -92,13 +186,38 @@ class StaffsController extends Controller
     public function edit($id)
     {
         $user  = User::findOrFail($id);
-        $roles = SpatieRole::latest()->where('id', '!=', 1)->isActive()->get();
+        $roles = SpatieRole::whereIn('id', array(1, 5))->get();
         return view('backend.pages.staffs.edit', compact('user', 'roles'));
+    }
+
+    # edit mitra
+    public function editmitra($id)
+    {
+        $user  = User::findOrFail($id);
+        $roles = SpatieRole::oldest()->where('id', '=', 2)->isActive()->get();
+        return view('backend.pages.staffs.mitra.edit', compact('user', 'roles'));
+    }
+
+    # edit dokter
+    public function editdokter($id)
+    {
+        $user  = User::findOrFail($id);
+        $roles = SpatieRole::oldest()->where('id', '=', 3)->isActive()->get();
+        return view('backend.pages.staffs.dokter.edit', compact('user', 'roles'));
+    }
+
+    # edit klinik
+    public function editklinik($id)
+    {
+        $user  = User::findOrFail($id);
+        $roles = SpatieRole::oldest()->where('id', '=', 4)->isActive()->get();
+        return view('backend.pages.staffs.klinik.edit', compact('user', 'roles'));
     }
 
     # update staff 
     public function update(Request $request)
     {
+        // dd($request);
         $exit_email = User::where('email', $request->email)->where('id', '!=', $request->id)->first();
         if ($exit_email) {
             flash(localize('This Email address already exit'))->warning();
@@ -131,7 +250,16 @@ class StaffsController extends Controller
             $user->assignRole(SpatieRole::findOrFail($request->role_id)->name);
         }
         flash(localize('Staff has been updated successfully'))->success();
-        return redirect()->route('admin.staffs.index');
+
+        if($request->role_id == 1 || $request->role_id == 5){
+            return redirect()->route('admin.staffs.index');
+        }else if($request->role_id == 2){
+            return redirect()->route('admin.staffs.mitra');
+        }else if($request->role_id == 3){
+            return redirect()->route('admin.staffs.dokter');
+        }else if($request->role_id == 4){
+            return redirect()->route('admin.staffs.klinik');
+        }
     }
 
     # delete staff  
