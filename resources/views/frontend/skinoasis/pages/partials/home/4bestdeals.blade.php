@@ -34,7 +34,7 @@
 
                     </div><!-- End .deal-content -->
                     <div class="deal-image" data-aos="fade-left">
-                            <img src="{{ uploadedAsset($campaigns->banner) }}" alt="image" class="deal-img">
+                            <img src="{{ uploadedAsset($campaigns->banner) }}" alt="image" class="deal-img rounded">
                     </div><!-- End .deal-image -->
                 </div><!-- End .deal -->
             </div><!-- End .col-lg-12 -->
