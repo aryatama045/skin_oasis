@@ -142,7 +142,7 @@
 
                             @if (!empty($product->pdf))
                                 <a href="{{ uploadedAsset($product->pdf) }}" target="_blank" class="btn btn-rounded btn-sm mb-1 text-uppercase btn-outline-green-dark"> Download PDF</a>
-                                <br>
+                                <div class="separator mt-4 mb-2"></div>
                             @endif
 
 
