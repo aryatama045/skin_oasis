@@ -28446,6 +28446,13 @@ img.blog-image {
     object-fit: cover;
 }
 
+img.deal-img {
+    position: relative;
+    width: 907px;
+    height: 445px;
+    object-fit: cover;
+}
+
 
 .footer-bottom .social-icon {
     font-size: 2.4rem !important;

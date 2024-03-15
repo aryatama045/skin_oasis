@@ -189,14 +189,9 @@
                                             onclick="addToWishlist({{ $product->id }})">
                                             Add to Wishlist
                                         </button>
-
-                                        <br>
-                                        <a href="" target="_blank" class="mt-3 btn btn-rounded btn-sm text-uppercase btn-outline-green-dark btn-product btn-cart add-to-cart-btn">
-                                            <span class="add-to-cart-text">
-                                                {{ localize('Download PDF') }}
-                                            </span>
-                                        </a>
                                     </div>
+
+                                    <a href="{{$product->pdf}}" target="_blank" class="btn btn-rounded btn-sm text-uppercase btn-outline-green-dark"> Shop Now</a>
 
                                     <div class="flex-grow-1"></div>
                                     @if (getSetting('enable_reward_points') == 1)
