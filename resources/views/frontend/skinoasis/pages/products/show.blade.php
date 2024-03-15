@@ -191,8 +191,9 @@
                                         </button>
                                     </div>
 
-                                    @if (!$product->pdf)
+                                    @if (!empty($product->pdf))
                                     <a href="{{ uploadedAsset($product->pdf) }}" target="_blank" class="btn btn-rounded btn-sm mb-1 text-uppercase btn-outline-green-dark"> Download PDF</a>
+                                    <br>
                                     @endif
 
                                     <div class="flex-grow-1"></div>
