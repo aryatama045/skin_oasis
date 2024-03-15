@@ -192,7 +192,7 @@
                                     </div>
 
                                     @if (!$product->pdf)
-                                    <a href="{{$product->pdf}}" target="_blank" class="btn btn-rounded btn-sm text-uppercase btn-outline-green-dark"> Shop Now</a>
+                                    <a href="{{ uploadedAsset($product->pdf) }}" target="_blank" class="btn btn-rounded btn-sm mb-1 text-uppercase btn-outline-green-dark"> Download PDF</a>
                                     @endif
 
                                     <div class="flex-grow-1"></div>
