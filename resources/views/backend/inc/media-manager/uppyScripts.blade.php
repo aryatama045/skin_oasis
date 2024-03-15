@@ -44,6 +44,7 @@
         ".gif",
         ".jpg",
         ".jpeg",
+        ".pdf",
         ".webp"
     ];
     TT.uploadQty = "single";

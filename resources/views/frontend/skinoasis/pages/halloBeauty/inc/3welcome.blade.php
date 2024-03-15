@@ -50,6 +50,10 @@
                         </div>
                     </div>
                 </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4f8bc14f2f4114762bb789e186be25457a8de414
                 @include('frontend.skinoasis.pages.halloBeauty.inc.navbarBottom')
 
             </form>

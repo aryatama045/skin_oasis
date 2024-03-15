@@ -172,6 +172,7 @@ class ProductsController extends Controller
 
         $product->thumbnail_image   = $request->image;
         $product->gallery_images    = $request->images;
+        $product->pdf               = $request->pdf;
         $product->size_guide        = $request->size_guide;
 
         $product->description       = $request->description;
@@ -346,6 +347,7 @@ class ProductsController extends Controller
 
             $product->thumbnail_image   = $request->image;
             $product->gallery_images   = $request->images;
+            $product->pdf               = $request->pdf;
             $product->size_guide        = $request->size_guide;
 
             # min-max price

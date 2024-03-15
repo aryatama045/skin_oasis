@@ -126,12 +126,6 @@
                         <div class="product-details">
                             <h1 class="product-title mt-xs-3">{{ $product->collectLocalization('name') }}</h1><!-- End .product-title -->
 
-                            <!-- <div class="ratings-container">
-                                <div class="ratings">
-                                    <div class="ratings-val" style="width: 80%;"></div>
-                                </div>
-                                <a class="ratings-text" href="#product-review-link" id="review-link">( 2 Reviews )</a>
-                            </div> -->
 
                             <div class="product-price">
                                 @include('frontend.default.pages.partials.products.pricing', compact('product'))
@@ -145,6 +139,11 @@
                             <div class="product-content">
                                 <p>{{ $product->collectLocalization('short_description') }}</p>
                             </div><!-- End .product-content -->
+
+                            @if (!empty($product->pdf))
+                                <a href="{{ uploadedAsset($product->pdf) }}" target="_blank" class="btn btn-rounded btn-sm mb-1 text-uppercase btn-outline-green-dark"> Download PDF</a>
+                                <div class="separator mt-4 mb-2"></div>
+                            @endif
 
 
                             <form action="" class="add-to-cart-form">
@@ -196,6 +195,7 @@
                                             Add to Wishlist
                                         </button>
                                     </div>
+
 
                                     <div class="flex-grow-1"></div>
                                     @if (getSetting('enable_reward_points') == 1)
