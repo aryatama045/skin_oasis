@@ -126,12 +126,6 @@
                         <div class="product-details">
                             <h1 class="product-title mt-xs-3">{{ $product->collectLocalization('name') }}</h1><!-- End .product-title -->
 
-                            <!-- <div class="ratings-container">
-                                <div class="ratings">
-                                    <div class="ratings-val" style="width: 80%;"></div>
-                                </div>
-                                <a class="ratings-text" href="#product-review-link" id="review-link">( 2 Reviews )</a>
-                            </div> -->
 
                             <div class="product-price">
                                 @include('frontend.default.pages.partials.products.pricing', compact('product'))
@@ -195,6 +189,13 @@
                                             onclick="addToWishlist({{ $product->id }})">
                                             Add to Wishlist
                                         </button>
+
+                                        <br>
+                                        <a href="" target="_blank" class="mt-3 btn btn-rounded btn-sm text-uppercase btn-outline-green-dark btn-product btn-cart add-to-cart-btn">
+                                            <span class="add-to-cart-text">
+                                                {{ localize('Download PDF') }}
+                                            </span>
+                                        </a>
                                     </div>
 
                                     <div class="flex-grow-1"></div>
