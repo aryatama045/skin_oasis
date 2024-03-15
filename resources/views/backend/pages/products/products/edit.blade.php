@@ -133,6 +133,27 @@
                                             <!-- choose media -->
                                         </div>
                                     </div>
+
+                                    <div class="mb-4">
+                                        <label class="form-label">{{ localize('Upload File PDF') }}</label>
+                                        <div class="tt-image-drop rounded">
+                                            <span class="fw-semibold">{{ localize('Choose PDF') }}</span>
+
+                                            <!-- choose media -->
+                                            <div class="tt-product-thumb show-selected-files mt-3">
+                                                <div class="avatar avatar-xl cursor-pointer choose-media"
+                                                    data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom"
+                                                    onclick="showMediaManager(this)" data-selection="multiple">
+                                                    <input type="hidden" name="pdf"
+                                                        value="{{ $product->pdf }}">
+                                                    <div class="no-avatar rounded-circle">
+                                                        <span><i data-feather="plus"></i></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- choose media -->
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <!--product image and gallery end-->
