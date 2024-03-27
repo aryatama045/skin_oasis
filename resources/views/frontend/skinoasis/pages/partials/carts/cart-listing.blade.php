@@ -1,5 +1,8 @@
 @forelse ($carts as $cart)
     <tr>
+        <td>
+            <input type="checkbox" name="">
+        </td>
         <td class="h-100px">
             <img src="{{ uploadedAsset($cart->product_variation->product->thumbnail_image) }}"
                 alt="{{ $cart->product_variation->product->collectLocalization('name') }}" class="img-fluid"

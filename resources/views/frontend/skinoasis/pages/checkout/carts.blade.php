@@ -15,16 +15,9 @@
 
 @section('contents')
 
-    <div class="page-header text-center" style="background-image: url('{{ staticAsset('frontend/default/assets/images/page-header-bg.jpg') }}')">
-        <div class="container">
-            <h1 class="page-title">Shopping Cart<span>Shop</span></h1>
-        </div><!-- End .container -->
+    <div class="text-center mt-9 mb-9">
+        <h1 class="page-title">SHOPPING BAG</h1>
     </div><!-- End .page-header -->
-
-    <!--breadcrumb-->
-    @include('frontend.skinoasis.inc.breadcrumb')
-    <!--breadcrumb-->
-
 
     <div class="page-content">
         <div class="cart">
@@ -32,12 +25,13 @@
                 <div class="rounded-2 overflow-hidden">
                     <table class="cart-table w-100 bg-white">
                         <thead>
-                            <th>{{ localize('Image') }}</th>
-                            <th>{{ localize('Product Name') }}</th>
-                            <th>{{ localize('U. Price') }}</th>
-                            <th>{{ localize('Quantity') }}</th>
-                            <th>{{ localize('T. Price') }}</th>
-                            <th>{{ localize('Action') }}</th>
+                            <th><input type="checkbox" name=""></th>
+                            <th></th>
+                            <th>Nama Produk</th>
+                            <th>Harga</th>
+                            <th>Qty</th>
+                            <th>Total</th>
+                            <th></th>
                         </thead>
                         <tbody class="cart-listing">
                             <!--cart listing-->
@@ -49,8 +43,8 @@
                 <div class="row g-4">
                     <div class="col-xl-7">
                         <div class="voucher-box py-7 px-5 position-relative z-1 overflow-hidden bg-white rounded mt-4">
-                            <img src="{{ staticAsset('frontend/default/assets/img/shapes/circle-half.png') }}"
-                                alt="circle shape" class="position-absolute end-0 top-0 z--1">
+                            <!-- <img src="{{ staticAsset('frontend/default/assets/img/shapes/circle-half.png') }}"
+                                alt="circle shape" class="position-absolute end-0 top-0 z--1"> -->
                             <h4 class="mb-4">{{ localize('Have a coupon?') }}</h4>
                             <div class="font-bold mb-2">{{ localize('Apply coupon to get discount.') }}</div>
 
