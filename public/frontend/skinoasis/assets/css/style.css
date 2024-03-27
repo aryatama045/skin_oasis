@@ -15119,6 +15119,9 @@ button:focus {
     max-width: 20%;
     margin-left: 0;
     margin-right: 0;
+    height: 508px !important;
+    overflow: auto;
+    direction: rtl;
   }
   .product-gallery-vertical .product-gallery-item {
     flex: 0 0 100%;
