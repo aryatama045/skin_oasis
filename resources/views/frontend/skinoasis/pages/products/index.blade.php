@@ -27,12 +27,12 @@
                                 <div class="banner banner-1">
                                     <img src="{{ uploadedAsset($produks->collectLocalization('thumbnail_image')) }}" alt="Banner" width="688" height="400" style="background-color: #fff; opacity: 0.7;">
                                 </div><!-- End .banner -->
+                                <div class="mt-3 mb-3">
+                                    <center>
+                                        <h1 class="banner-subtitle text-black fw-bold" style="margin-left: 10px; margin-right: 10px">{{$produks->name}}</h1>
+                                    </center>
+                                </div>
                             </a>
-                            <div class="mt-3 mb-3">
-                                <center>
-                                    <h1 class="banner-subtitle text-black fw-bold" style="margin-left: 10px; margin-right: 10px">{{$produks->name}}</h1>
-                                </center>
-                            </div>
                         </div>
                     @endforeach
                 </div>
