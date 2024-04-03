@@ -6,6 +6,16 @@
         top: 0; right: 0; bottom: 0; left: 0;
         z-index: 1;
         }
+        .video-foreground:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            z-index: 1;
+            background: linear-gradient(to right, rgb(193 172 88 / 52%), rgb(37 35 25 / 73%));
+        }
         .video-foreground,
         .video-background iframe {
         position: absolute;
@@ -15,6 +25,7 @@
         height: 100%;
         pointer-events: none;
         }
+
         #vidtop-content {
             top: 0;
             color: #fff;
