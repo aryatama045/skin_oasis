@@ -39,7 +39,7 @@
 
 <!-- Slider -->
 <div class="intro-slider-container ">
-    <div class="intro-slider owl-carousel owl-theme owl-nav-inside owl-light" data-toggle="owl" data-owl-options='{"dots": true, "nav": true, "video":true}'>
+    <div class="intro-slider owl-carousel owl-theme owl-nav-inside owl-light" data-toggle="owl" data-owl-options='{"dots": true, "nav": false, "video":true}'>
 
     @foreach ($sliders as $slider)
         @if ($slider->display_on == 1)
