@@ -71,11 +71,11 @@
                     <div class="intro-text text-white">{{ $slider->text }}</div><!-- End .intro-text -->
 
 
-                    <div class="intro-action cross-txt">
+                    <!-- <div class="intro-action cross-txt">
                         <a href="{{ $slider->link }}" class="text-white">
                             <span>Discover More</span>
                         </a>
-                    </div>
+                    </div> -->
                 </div>
             </div><!-- End .intro-content -->
         </div><!-- End .intro-slide -->
