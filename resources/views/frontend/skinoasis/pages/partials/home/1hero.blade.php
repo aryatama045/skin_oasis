@@ -1,10 +1,10 @@
 <style>
         * { box-sizing: border-box; }
         .video-background {
-        background: #000;
-        position: fixed;
-        top: 0; right: 0; bottom: 0; left: 0;
-        z-index: 1;
+            background: #000;
+            position: fixed;
+            top: 0; right: 0; bottom: 0; left: 0;
+            z-index: 1;
         }
         .video-foreground:before {
             content: "";
@@ -18,12 +18,12 @@
         }
         .video-foreground,
         .video-background iframe {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        pointer-events: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
         }
 
         #vidtop-content {
