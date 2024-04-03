@@ -60,7 +60,7 @@
 
 
                     <div class="intro-action cross-txt">
-                        <a href="{{ $slider->link }}" class="btn btn-outline-white">
+                        <a href="{{ $slider->link }}" class="text-white">
                             <span>Discover More</span>
                         </a>
                     </div>
