@@ -48,8 +48,8 @@
             @if (!empty($slider->link))
             <div class="video-background">
                 <div class="video-foreground">
-                    <?php $id_vd = str_replace('https://www.youtube.com/embed/', '', $slider->link); ?>
-                    <iframe src="{{$slider->link}}?enablejsapi=1&amp;controls=0&amp;showinfo=0&amp;rel=0&amp;autoplay=1&amp;mute=1&amp;loop=1&amp;playlist=<?= $id_vid ?>" frameborder="0" allowfullscreen=""></iframe>
+                    <?php $id_vid = str_replace('https://www.youtube.com/embed/', '', $slider->link); ?>
+                    <iframe src="{{$slider->link}}?enablejsapi=1&amp;controls=0&amp;showinfo=0&amp;rel=0&amp;autoplay=1&amp;mute=1&amp;loop=1&amp;playlist={{$id_vid}}" frameborder="0" allowfullscreen=""></iframe>
                 </div>
             </div>
             @endif
