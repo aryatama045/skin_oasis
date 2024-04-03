@@ -4,7 +4,7 @@
         background: #000;
         position: fixed;
         top: 0; right: 0; bottom: 0; left: 0;
-        z-index: -99;
+        z-index: 1;
         }
         .video-foreground,
         .video-background iframe {
@@ -48,7 +48,7 @@
             @if (!empty($slider->link))
             <div class="video-background">
                 <div class="video-foreground">
-                    <iframe src="https://www.youtube.com/embed/{{$slider->link}}?enablejsapi=1&amp;controls=0&amp;showinfo=0&amp;rel=0&amp;autoplay=1&amp;mute=1&amp;loop=1&amp;" frameborder="0" allowfullscreen="" autoplay="true"></iframe>
+                    <iframe src="https://www.youtube.com/embed/{{$slider->link}}?enablejsapi=1&amp;controls=0&amp;showinfo=0&amp;rel=0&amp;autoplay=1&amp;mute=1&amp;loop=1" frameborder="0" allowfullscreen="" autoplay="true"></iframe>
                 </div>
             </div>
             @endif
