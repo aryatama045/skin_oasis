@@ -1,4 +1,5 @@
-/* Demo 18 Homepage 18 */ /* Fonts */
+/* Demo 18 Homepage 18 */
+/* Fonts */
 @import url("https://fonts.cdnfonts.com/css/avenir-lt-pro");
 @import url("https://fonts.cdnfonts.com/css/avenir");
 body {
@@ -39,12 +40,8 @@ p {
 }
 
 .header.header-11 .logo {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
 .header.header-11 .header-middle {
   border-bottom: none;
@@ -86,18 +83,6 @@ p {
   padding-bottom: 0.5rem;
   background-color: transparent;
   font-size: 1.3rem;
-}
-.header.header-11 .header-search-extended .form-control::-webkit-input-placeholder {
-  color: #fff;
-}
-.header.header-11 .header-search-extended .form-control::-moz-placeholder {
-  color: #fff;
-}
-.header.header-11 .header-search-extended .form-control:-ms-input-placeholder {
-  color: #fff;
-}
-.header.header-11 .header-search-extended .form-control::-ms-input-placeholder {
-  color: #fff;
 }
 .header.header-11 .header-search-extended .form-control::placeholder {
   color: #fff;
@@ -177,12 +162,8 @@ p {
 }
 
 .intro-slide {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   background-size: cover;
   background-position: center center;
 }
@@ -194,8 +175,7 @@ p {
   position: relative;
   left: auto;
   top: auto;
-  -webkit-transform: translateY(0);
-          transform: translateY(0);
+  transform: translateY(0);
   -ms-transform: translateY(0);
   border-top-width: 0;
   border-bottom-width: 0;
@@ -229,8 +209,7 @@ p {
 
 .intro-content .intro-action.cross-txt {
   bottom: 0;
-  -webkit-transform: translateY(50%);
-          transform: translateY(50%);
+  transform: translateY(50%);
 }
 .intro-content .intro-action.cross-txt .btn {
   padding: 0;
@@ -243,22 +222,11 @@ p {
 }
 
 .banner-set-content {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-item-align: stretch;
-      -ms-grid-row-align: stretch;
-      align-self: stretch;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-self: stretch;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   color: #777;
   font-weight: 400;
   font-size: 1.6rem;
@@ -293,8 +261,7 @@ p {
 }
 
 .product.product-2:hover, .product.product-2:focus {
-  -webkit-box-shadow: none;
-          box-shadow: none;
+  box-shadow: none;
 }
 
 .banner-set-products {
@@ -308,25 +275,17 @@ p {
   margin-right: auto;
 }
 .banner-set-products .product.product-2 {
-  -webkit-box-shadow: none;
-          box-shadow: none;
+  box-shadow: none;
   margin-bottom: 0;
 }
 .banner-set-products .row {
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
 }
 .banner-set-products .row .products {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 83%;
-          flex: 0 0 83%;
+  flex: 0 0 83%;
   max-width: 83%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 .banner-set-products .row .products > div {
   padding-left: 0.5rem;
@@ -338,9 +297,7 @@ p {
   background-color: #fff !important;
 }
 .banner-set-products .product-price {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
 .banner-set-products .product-title {
   letter-spacing: -0.01eml;
@@ -363,8 +320,7 @@ p {
 .banner-set-image .banner-content {
   left: 5rem;
   top: initial;
-  -webkit-transform: none;
-          transform: none;
+  transform: none;
   bottom: 8rem;
 }
 .banner-set-image .banner-title span,
@@ -459,8 +415,7 @@ p {
   top: 50%;
   left: 0;
   right: 0;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  transform: translateY(-50%);
 }
 .banner-hover .banner-title {
   font-weight: 600;
@@ -468,22 +423,18 @@ p {
   line-height: 1.25;
   margin-bottom: 0.6rem;
   letter-spacing: -0.025em;
-  -webkit-transition: all 0.35s ease;
   transition: all 0.35s ease;
   opacity: 0;
-  -webkit-transform: translateY(50px);
-          transform: translateY(50px);
+  transform: translateY(50px);
 }
 .banner-hover .banner-link {
   opacity: 0;
-  -webkit-transform: translateY(50px);
-          transform: translateY(50px);
+  transform: translateY(50px);
 }
 .banner-hover:hover .banner-title,
 .banner-hover:hover .banner-link {
   opacity: 1;
-  -webkit-transform: translateY(0);
-          transform: translateY(0);
+  transform: translateY(0);
 }
 
 .banner-link {
@@ -493,7 +444,6 @@ p {
   letter-spacing: 0.1em;
   color: #ebebeb;
   text-transform: uppercase;
-  -webkit-transition: all 0.35s ease;
   transition: all 0.35s ease;
 }
 .banner-link i {
@@ -502,8 +452,7 @@ p {
 .banner-link:hover, .banner-link:focus {
   color: #ebebeb;
   text-decoration: none !important;
-  -webkit-box-shadow: 0 1px 0 0 #ffF;
-          box-shadow: 0 1px 0 0 #ffF;
+  box-shadow: 0 1px 0 0 #ffF;
 }
 
 .deal-container .banner-subtitle {
@@ -527,21 +476,15 @@ p {
 }
 
 .deal {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: reverse;
-      -ms-flex-direction: column-reverse;
-          flex-direction: column-reverse;
+  flex-direction: column-reverse;
   padding: 2rem;
   margin-bottom: 2rem;
 }
 
 .deal-content {
   -ms-flex: 0 0 100%;
-  -webkit-box-flex: 0;
-          flex: 0 0 100%;
+  flex: 0 0 100%;
   max-width: 100%;
   padding: 3.5rem 0 2rem;
   font-family: "avenir lt pro", "avenir" !important;
@@ -604,8 +547,7 @@ p {
 
 .deal-image {
   -ms-flex: 0 0 100%;
-  -webkit-box-flex: 0;
-          flex: 0 0 100%;
+  flex: 0 0 100%;
   max-width: 100%;
 }
 .deal-image > a {
@@ -642,8 +584,7 @@ p {
   margin-left: 9px;
   margin-top: -1px;
   top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  transform: translateY(-50%);
   -ms-transform: translateY(-50%);
 }
 .deal-countdown .countdown-period {
@@ -670,23 +611,18 @@ p {
 
 @media screen and (min-width: 768px) {
   .deal {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    flex-direction: row;
   }
   .deal-content {
     -ms-flex: 0 0 36%;
-    -webkit-box-flex: 0;
-            flex: 0 0 36%;
+    flex: 0 0 36%;
     max-width: 36%;
     padding-top: 1rem;
     padding-bottom: 1rem;
   }
   .deal-image {
     -ms-flex: 0 0 70%;
-    -webkit-box-flex: 0;
-            flex: 0 0 70%;
+    flex: 0 0 70%;
     max-width: 70%;
   }
 }
@@ -726,8 +662,7 @@ p {
   margin-bottom: 3rem;
 }
 .product:hover {
-  -webkit-box-shadow: none;
-          box-shadow: none;
+  box-shadow: none;
 }
 .product .product-body {
   padding-left: 0;
@@ -756,13 +691,8 @@ p {
   top: 2rem;
 }
 .product.product-4 .product-price {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  flex-direction: column;
+  align-items: flex-start;
 }
 .product.product-4 .product-price .old-price {
   margin-left: 0;
@@ -846,8 +776,7 @@ p {
   height: 46px;
   padding: 1.15rem 2rem;
   margin-bottom: 1rem;
-  -webkit-box-shadow: none;
-          box-shadow: none;
+  box-shadow: none;
   font-size: 1.3rem;
 }
 .widget-subscribe .form-control:not(:focus) {
@@ -1129,14 +1058,9 @@ p {
   padding-right: 0.5rem;
 }
 .instagram-store .banner-sm-div {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-wrap: wrap;
+  justify-content: center;
   padding: 0;
 }
 .instagram-store .banner-sm, .instagram-store .banner-lg {
@@ -1172,7 +1096,6 @@ p {
   top: 0;
   bottom: 0;
   background-color: rgba(51, 51, 51, 0.4);
-  -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
   opacity: 0;
   visibility: hidden;
@@ -1190,15 +1113,9 @@ p {
 
 .instagram-feed-content {
   position: absolute;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   z-index: 2;
   width: 100%;
   left: 0;
@@ -1207,7 +1124,6 @@ p {
   color: #fff;
   font-weight: 400;
   font-size: 1.6rem;
-  -webkit-transition: all 0.45s ease;
   transition: all 0.45s ease;
   opacity: 0;
   visibility: hidden;
@@ -1339,41 +1255,29 @@ p {
 }
 @media screen and (min-width: 576px) {
   .banner-lg {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 40%;
-            flex: 0 0 40%;
+    flex: 0 0 40%;
     max-width: 40%;
   }
   .banner-sm-div {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 25%;
-            flex: 0 0 25%;
+    flex: 0 0 25%;
     max-width: 25%;
   }
   .banner-sm {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 100%;
-            flex: 0 0 100%;
+    flex: 0 0 100%;
     max-width: 100%;
   }
 }
 @media screen and (max-width: 575px) {
   .banner-lg {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 50%;
-            flex: 0 0 50%;
+    flex: 0 0 50%;
     max-width: 50%;
   }
   .banner-sm-div {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 100%;
-            flex: 0 0 100%;
+    flex: 0 0 100%;
     max-width: 100%;
   }
   .banner-sm {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 50%;
-            flex: 0 0 50%;
+    flex: 0 0 50%;
     max-width: 50%;
   }
 }
@@ -1410,9 +1314,7 @@ p {
 }
 @media screen and (max-width: 1200px) {
   .instagram-store .banner-lg {
-    -webkit-box-ordinal-group: 2;
-        -ms-flex-order: 1;
-            order: 1;
+    order: 1;
   }
 }
 @media screen and (max-width: 991px) {
@@ -1454,6 +1356,8 @@ p {
   }
   .footer-fix-nav span.count {
     background: #ff253a;
+    background: -moz-linear-gradient(-45deg, #ff253a 0%, #ff8453 100%);
+    background: -webkit-linear-gradient(-45deg, #ff253a 0%, #ff8453 100%);
     background: linear-gradient(135deg, #ff253a 0%, #ff8453 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ff253a",endColorstr="#ff8453",GradientType=1);
     border-radius: 50px;
