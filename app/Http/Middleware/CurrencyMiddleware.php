@@ -24,9 +24,9 @@ class CurrencyMiddleware
             $request->session()->put('currency_symbol',  env('DEFAULT_CURRENCY_SYMBOL'));
             $request->session()->put('currency_symbol_alignment', env('DEFAULT_CURRENCY_SYMBOL_ALIGNMENT'));
         } else {
-            $request->session()->put('currency_code',  "usd");
+            $request->session()->put('currency_code',  "idr");
             $request->session()->put('local_currency_rate', 1);
-            $request->session()->put('currency_symbol', '$');
+            $request->session()->put('currency_symbol', 'Rp ');
             $request->session()->put('currency_symbol_alignment', 0);
         }
         return $next($request);
