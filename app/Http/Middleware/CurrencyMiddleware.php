@@ -17,7 +17,10 @@ class CurrencyMiddleware
     public function handle($request, Closure $next)
     {
         if (Session::has('currency_code')) {
-            // do nothing
+            $request->session()->put('currency_code',  "idr");
+            $request->session()->put('local_currency_rate', 1);
+            $request->session()->put('currency_symbol', 'Rp');
+            $request->session()->put('currency_symbol_alignment', 0);
         } elseif (env('DEFAULT_CURRENCY') != null) {
             $request->session()->put('currency_code',  env('DEFAULT_CURRENCY'));
             $request->session()->put('local_currency_rate',  env('DEFAULT_CURRENCY_RATE'));
@@ -26,7 +29,7 @@ class CurrencyMiddleware
         } else {
             $request->session()->put('currency_code',  "idr");
             $request->session()->put('local_currency_rate', 1);
-            $request->session()->put('currency_symbol', 'Rp ');
+            $request->session()->put('currency_symbol', 'Rp');
             $request->session()->put('currency_symbol_alignment', 0);
         }
         return $next($request);
