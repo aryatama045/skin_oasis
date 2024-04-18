@@ -1,12 +1,13 @@
 @forelse ($carts as $cart)
     <li class="d-flex align-items-center pb-3 @if (!$loop->first) pt-3 @endif">
         <div class="thumb-wrapper">
-            <a href="{{ route('products.show', $cart->product_variation->product->slug) }}"><img
+            <a href="#">
+                <img
                     src="{{ uploadedAsset($cart->product_variation->product->thumbnail_image) }}" alt="products"
                     class="img-fluid rounded-circle"></a>
         </div>
         <div class="items-content ms-3">
-            <a href="{{ route('products.show', $cart->product_variation->product->slug) }}">
+            <a href="#">
                 <h6 class="mb-0">{{ $cart->product_variation->product->collectLocalization('name') }}</h6>
             </a>
 
