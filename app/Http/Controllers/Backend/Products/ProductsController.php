@@ -301,9 +301,9 @@ class ProductsController extends Controller
         $request->session()->put('stock_location_id',  $location->id);
 
         $lang_key = $request->lang_key;
-        $language = Language::where('is_active', 1)->where('code', $lang_key)->first();
+        $language = Language::where('is_active', 1)->where('code', 'en')->first();
 
-        dd($lang_key, $language);
+        // dd($lang_key, $language);
         if (!$language) {
             flash(localize('Language you are trying to translate is not available or not active'))->error();
             return redirect()->route('admin.products.index');
