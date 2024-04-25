@@ -576,7 +576,7 @@ class ProductsController extends Controller
 
         $cek = count($carts);
 
-        if($carts > 0){
+        if($cek > 0){
             flash(localize('Product already is in customer cart'))->error();
 
             return back();
