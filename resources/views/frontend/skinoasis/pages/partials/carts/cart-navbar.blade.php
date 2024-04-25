@@ -1,4 +1,4 @@
-@forelse ($carts as $cart) dd($carts);
+@forelse ($carts as $cart)
     <li class="d-flex align-items-center pb-3 @if (!$loop->first) pt-3 @endif">
         <div class="thumb-wrapper">
             <a href="{{ route('products.show', $cart->product_variation->product->slug) }}"><img
