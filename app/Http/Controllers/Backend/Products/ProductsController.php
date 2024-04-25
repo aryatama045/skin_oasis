@@ -566,7 +566,8 @@ class ProductsController extends Controller
     {
         $product = Product::findOrFail($id);
 
-        dd($product);
+        $id_v = $product->variations();
+        dd($id_v);
 
         $carts =  DB::table('carts')->select('product_variation_id')
         ->where('product_variation_id', $id)->get();
