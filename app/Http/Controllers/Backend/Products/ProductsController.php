@@ -582,7 +582,6 @@ class ProductsController extends Controller
             return back();
         }
 
-        dd('oke');
         $product->delete();
 
         flash(localize('Product has been deleted successfully'))->success();
