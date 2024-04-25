@@ -570,7 +570,7 @@ class ProductsController extends Controller
         ->where('product_id', $id)->get();
 
         $carts =  DB::table('carts')->select('product_variation_id')
-        ->where('product_variation_id', $variation['id'])->get();
+        ->where('product_variation_id', $variation->id)->get();
 
 
         if(!$carts){
