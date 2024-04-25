@@ -569,7 +569,7 @@ class ProductsController extends Controller
         $variation =  DB::table('product_variations')->select('id')
         ->where('product_id', $id)->get();
 
-        $id_v = $variation->id;
+        $id_v = $variation;
 
         tesx($id_v);
 
