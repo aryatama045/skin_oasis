@@ -19,6 +19,7 @@ use App\Models\ProductVariationCombination;
 use App\Models\Tag;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
+use DB;
 
 class ProductsController extends Controller
 {
@@ -565,6 +566,13 @@ class ProductsController extends Controller
     {
         $product = Product::findOrFail($id);
 
+        dd($product);
+
+        $carts =  DB::table('carts')
+        ->leftJoin('tbl_barang', 'tbl_barang_log.barang_id' , '=','tbl_barang.barang_id' )
+        ->leftJoin('tbl_user', 'tbl_barang_log.user_id' , '=',  'tbl_user.user_id')
+        ->select('tbl_barang_log.keterangan','tbl_barang_log.created_at', 'tbl_user.user_nmlengkap', 'tbl_barang.barang_kode','tbl_barang.barang_nama')
+        ->orderBy('tanggal', 'DESC')->get();
 
         if(!$product->carts->isEmpty()){
             flash(localize('Product already is in customer cart'))->error();
