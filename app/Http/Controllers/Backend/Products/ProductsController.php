@@ -574,14 +574,14 @@ class ProductsController extends Controller
         $carts =  DB::table('carts')->select('product_variation_id')
         ->where('product_variation_id', $id_v)->get();
 
-        dd($carts);
 
-        if(!empty($carts)){
+        if($carts = TRUE){
             flash(localize('Product already is in customer cart'))->error();
 
             return back();
         }
 
+        dd('oke');
         $product->delete();
 
         flash(localize('Product has been deleted successfully'))->success();
