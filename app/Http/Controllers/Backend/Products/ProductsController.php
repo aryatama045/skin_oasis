@@ -571,8 +571,6 @@ class ProductsController extends Controller
 
         $id_v = $variation[0]->id;
 
-        dd($id_v);
-
         $carts =  DB::table('carts')->select('product_variation_id')
         ->where('product_variation_id', $id_v)->get();
 
