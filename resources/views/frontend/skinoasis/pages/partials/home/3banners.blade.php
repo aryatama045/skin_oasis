@@ -6,7 +6,7 @@
             <div class="col-md-5">
                 <div class="content-right" data-aos="fade-right">
                     <figure class="mb-md-12">
-                        <img src="{{ uploadedAsset($banner_section_one_banners) }}" alt="Banner">
+                        <img src="{{ uploadedAsset($banner_section_one_banners->image) }}" alt="Banner">
                     </figure>
                 </div>
             </div>
