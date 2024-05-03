@@ -6,7 +6,9 @@
             <div class="col-md-5">
                 <div class="content-right" data-aos="fade-right">
                     <figure class="mb-md-12">
-                        <img src="{{ uploadedAsset($banner_section_one_banners->image) }}" alt="Banner">
+                        @php foreach($banner_section_one_banners as $val)
+                        <img src="{{ uploadedAsset($val->image) }}" alt="Banner">
+                        @endforeach
                     </figure>
                 </div>
             </div>
