@@ -27,6 +27,7 @@
                 @endif
 
             @empty
+            @endforelse
 
 
             </div><!-- End .row -->
