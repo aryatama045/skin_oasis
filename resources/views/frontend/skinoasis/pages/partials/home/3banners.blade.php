@@ -7,7 +7,7 @@
                 <div class="content-right" data-aos="fade-right">
                     <figure class="mb-md-12">
                         @foreach ($banner_section_one_banners as $key => $val)
-                            @if ($val->link == "banner") 
+                            @if ($val->image == "242") 
                                 <img src="{{ uploadedAsset($val->image) }}" alt="Banner">
                             @endif
                         @endforeach
@@ -24,7 +24,7 @@
                             Scan Here
                         </p>
                         @foreach ($banner_section_one_banners as $key => $val)
-                            @if ($val->link == "barcode")
+                            @if ($val->image == "243")
                                 <img class="barcode" src="{{ uploadedAsset($val->image) }}" alt="Banner" width="50" height="20">
                             @endif
                         @endforeach
