@@ -9,6 +9,7 @@
                         @foreach ($banner_section_one_banners as $val)
                             @if ($val->posisi == 'banner')
                                 <img src="{{ uploadedAsset($val->image) }}" alt="Banner">
+                            @endif
                         @endforeach
                     </figure>
                 </div>
@@ -24,7 +25,8 @@
                         </p>
                         @foreach ($banner_section_one_banners as $val)
                             @if ($val->posisi == 'barcode')
-                            <img class="barcode" src="{{ uploadedAsset($val->image) }}" alt="Banner" width="50" height="20">
+                                <img class="barcode" src="{{ uploadedAsset($val->image) }}" alt="Banner" width="50" height="20">
+                            @endif
                         @endforeach
 
                     </div>
