@@ -6,13 +6,12 @@
                     <div class="heading mt-3" data-aos="fade-up">
                         <h2 class="title-banner-2 mb-2">The ultimate dream of
 
-                            <?php $banner_1 = getSetting('banner_section_two_banner_one'); ?>
                             <img class="img-fluid text-left d-inline p-2 mb-2"
-                                src="{{ uploadedAsset($banner_1) }}" width="200" height="25"> is make people beauty, healthy and happy</h2>
+                                src="{{ uploadedAsset($banner_section_two_banner_one) }}" width="200" height="25"> is make people beauty, healthy and happy</h2>
                             <img class="col-md-8 float-md-end mb-3 ms-md-3"
-                                src="{{ uploadedAsset($banner_1) }}"  alt="Banner">
-                                
-                                
+                                src="{{ uploadedAsset($banner_section_two_banner_one) }}"  alt="Banner">
+
+
                     </div>
                     <div class="entry-content text-justify mt-lg-10 mb-6" data-aos="fade-up">
                         <p>
@@ -25,7 +24,7 @@
             <div class="col-md-4 p-md-0 wow animate__animated animate__fadeInLeft" data-aos="fade-up">
                 <div class="content-right">
                     <figure class="mb-md-12">
-                        <img src="{{ staticAsset('frontend/skinoasis/assets/images/banners/banner3.png') }}" alt="Banner">
+                        <img src="{{ uploadedAsset($banner_section_two_banner_two) }}" alt="Banner">
                     </figure>
                 </div>
                 <div class="owl-carousel owl-theme owl-testimonials" data-toggle="owl"
