@@ -38,6 +38,19 @@ class HomeController extends Controller
             $banner_section_one_banners = json_decode(getSetting('banner_section_one_banners'));
         }
 
+        $banner_section_two_banner_one = [];
+        if (getSetting('banner_section_two_banner_one') != null) {
+            $banner_section_two_banner_one = json_decode(getSetting('banner_section_two_banner_one'));
+        }
+
+        $banner_section_two_banner_two = [];
+        if (getSetting('banner_section_two_banner_two') != null) {
+            $banner_section_two_banner_two = json_decode(getSetting('banner_section_one_banner_two'));
+        }
+
+        dd($banner_section_two_banner_one , $banner_section_two_banner_two);
+
+
         $client_feedback = [];
         if (getSetting('client_feedback') != null) {
             $client_feedback = json_decode(getSetting('client_feedback'));
