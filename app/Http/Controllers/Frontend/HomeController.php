@@ -48,7 +48,7 @@ class HomeController extends Controller
             $banner_section_two_banner_two = json_decode(getSetting('banner_section_two_banner_two'));
         }
 
-        dd($banner_section_two_banner_one , $banner_section_two_banner_two);
+        // dd($banner_section_two_banner_one , $banner_section_two_banner_two);
 
 
         $client_feedback = [];

@@ -5,10 +5,14 @@
                 <div class="clearfix">
                     <div class="heading mt-3" data-aos="fade-up">
                         <h2 class="title-banner-2 mb-2">The ultimate dream of
+
+                            <?php $banner_1 = getSetting('banner_section_two_banner_one'); ?>
                             <img class="img-fluid text-left d-inline p-2 mb-2"
-                                src="https://skinoasis.solusiitkreasi.com/public/uploads/media/0szep88MhwsQEGt367sGBWvjDSTF99mm4XryAZAb.png" width="200" height="25"> is make people beauty, healthy and happy</h2>
+                                src="{{ uploadedAsset($banner_1) }}" width="200" height="25"> is make people beauty, healthy and happy</h2>
                             <img class="col-md-8 float-md-end mb-3 ms-md-3"
-                                src="{{ staticAsset('frontend/skinoasis/assets/images/banners/banner2.png') }}"  alt="Banner">
+                                src="{{ uploadedAsset($banner_1) }}"  alt="Banner">
+                                
+                                
                     </div>
                     <div class="entry-content text-justify mt-lg-10 mb-6" data-aos="fade-up">
                         <p>
