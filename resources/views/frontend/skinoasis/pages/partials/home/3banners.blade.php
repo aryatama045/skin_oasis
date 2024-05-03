@@ -6,7 +6,7 @@
             <div class="col-md-5">
                 <div class="content-right" data-aos="fade-right">
                     <figure class="mb-md-12">
-                        <img src="{{ staticAsset('frontend/skinoasis/assets/images/banner1.png') }}" alt="Banner">
+                        <img src="{{ uploadedAsset($banner_section_one_banners) }}" alt="Banner">
                     </figure>
                 </div>
             </div>
