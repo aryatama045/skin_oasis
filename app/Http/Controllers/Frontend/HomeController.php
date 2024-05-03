@@ -61,7 +61,9 @@ class HomeController extends Controller
         $trending3 = Blog::where('placement','3')->isActive()->latest()->take(1)->get();
 
 
-        return getView('pages.home', ['blogs' => $blogs, 'trending1' => $trending1, 'trending2' => $trending2, 'trending3' => $trending3, 'sliders' => $sliders, 'brands' => $brands,
+        return getView('pages.home', ['blogs' => $blogs,
+            'trending1' => $trending1, 'trending2' => $trending2, 'trending3' => $trending3,
+            'sliders' => $sliders, 'brands' => $brands,
             'banner_section_one_banners' => $banner_section_one_banners,
             'banner_section_two_banner_one' => $banner_section_two_banner_one,
             'banner_section_two_banner_two' => $banner_section_two_banner_two,

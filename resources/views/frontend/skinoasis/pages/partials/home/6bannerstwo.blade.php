@@ -83,7 +83,7 @@
 
                             <div class="video-poster-content">
                                 <a href="{{$tr->video_link}}" class="btn-video btn-iframe"><i class="icon-play"></i></a>
-                            </div><!-- End .video-poster-content -->	
+                            </div><!-- End .video-poster-content -->
                         </div><!-- End .video-poster -->
                     </div><!-- End .col-md-6 -->
                 </div><!-- End .row -->
