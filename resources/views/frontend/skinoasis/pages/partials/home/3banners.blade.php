@@ -7,7 +7,7 @@
                 <div class="content-right" data-aos="fade-right">
                     <figure class="mb-md-12">
                         @foreach ($banner_section_one_banners as $key => $val)
-                            @if ($val->link == "banner")
+                            @if ($val->link == "banner") 
                                 <img src="{{ uploadedAsset($val->image) }}" alt="Banner">
                             @endif
                         @endforeach
