@@ -6,8 +6,9 @@
             <div class="col-md-5">
                 <div class="content-right" data-aos="fade-right">
                     <figure class="mb-md-12">
-                        @foreach($banner_section_one_banners as $val)
-                        <img src="{{ uploadedAsset($val->image) }}" alt="Banner">
+                        @foreach ($banner_section_one_banners as $val)
+                            @if ($val->posisi == 'banner')
+                                <img src="{{ uploadedAsset($val->image) }}" alt="Banner">
                         @endforeach
                     </figure>
                 </div>
@@ -21,7 +22,10 @@
                         <p class="scan-here mt-lg-10 mb-2">
                             Scan Here
                         </p>
-                        <img class="barcode" src="{{ staticAsset('frontend/skinoasis/assets/images/barcode.png') }}" alt="Banner" width="50" height="20">
+                        @foreach ($banner_section_one_banners as $val)
+                            @if ($val->posisi == 'barcode')
+                            <img class="barcode" src="{{ uploadedAsset($val->image) }}" alt="Banner" width="50" height="20">
+                        @endforeach
 
                     </div>
                 </div>
