@@ -62,37 +62,10 @@
             </div>
 
             <div class="text-left d-block mt-lg-5">
-                @php
-                    $isVariantProduct = 0;
-                    $stock = 0;
-                    if ($product->variations()->count() > 1) {
-                        $isVariantProductSS = 1;
-
-                        $isVariantProduct = 0;
-
-                    } else {
-                        $stock = 1;
-                    }
-                @endphp
-                @if ($isVariantProduct)
+                
                     <a href="javascript:void(0);" class="font-size-normal fw-bold add-to-cart-text-fav text-uppercase letter-spacing-large w-100"
                         onclick="showProductDetailsModal({{ $product->id }})">{{ localize('Add to Cart') }}</a>
-                @else
-                    <form action="" class="direct-add-to-cart-form">
-                        <input type="hidden" name="_token" value="{{ csrf_token() }}">
-                        <input type="hidden" name="product_variation_id" value="1">
-                        <input type="hidden" value="1" name="quantity">
 
-                        @if (!$isVariantProduct && $stock < 1)
-                            <a href="javascript:void(0);" class="font-size-normal fw-bold add-to-cart-text-fav text-uppercase letter-spacing-large w-100">
-                                {{ localize('Out of Stock') }}</a>
-                        @else
-                            <a href="javascript:void(0);" onclick="directAddToCartFormSubmit(this)"
-                                class="font-size-normal fw-bold add-to-cart-text-fav text-uppercase letter-spacing-large w-100 direct-add-to-cart-btn add-to-cart-text">
-                                {{ localize('Add to Cart') }}</a>
-                        @endif
-                    </form>
-                @endif
             </div>
         </div>
     </div>
