@@ -44,6 +44,8 @@
                     }'>
                     @php
                         $products = \App\Models\Product::whereIn('id', $product_list)->get();
+
+                        dd($products );
                     @endphp
 
                     @foreach ($products as $product)
