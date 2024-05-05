@@ -40,6 +40,9 @@ class HomeController extends Controller
             $product_cat[$key] = $val->id;
         }
 
+        $products = Product::whereIn('id', $product_val)->get();
+
+                        dd($products );
         // dd($trending_products, $product_val);
 
         $blogs = Blog::isActive()->latest()->take(3)->get();
