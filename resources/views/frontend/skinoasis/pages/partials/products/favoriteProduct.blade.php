@@ -68,7 +68,7 @@
                     if ($product->variations()->count() > 1) {
                         $isVariantProduct = 1;
                     } else {
-                        $stock = $product->variations[0]->product_variation_stock ? $product->variations[0]->product_variation_stock->stock_qty : 0;
+                        $stock = $product->variations->product_variation_stock ? $product->variations->product_variation_stock->stock_qty : 0;
                     }
                 @endphp
                 @if ($isVariantProduct)
@@ -77,7 +77,7 @@
                 @else
                     <form action="" class="direct-add-to-cart-form">
                         <input type="hidden" name="_token" value="{{ csrf_token() }}">
-                        <input type="hidden" name="product_variation_id" value="{{ $product->variations[0]->id }}">
+                        <input type="hidden" name="product_variation_id" value="{{ $product->variations->id }}">
                         <input type="hidden" value="1" name="quantity">
 
                         @if (!$isVariantProduct && $stock < 1)
