@@ -51,6 +51,7 @@
                             @include('frontend.skinoasis.pages.partials.products.favoriteProduct', [
                                 'product' => $product,
                             ])
+                        @endif
                     @endforeach
                 </div>
             </div>

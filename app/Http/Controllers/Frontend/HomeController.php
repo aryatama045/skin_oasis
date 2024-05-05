@@ -40,7 +40,7 @@ class HomeController extends Controller
             $product_cat[$key] = $val->id;
         }
 
-
+        // $product->variations[0]->product_variation_stock ? $product->variations[0]->product_variation_stock->stock_qty : 0;
 
         $blogs = Blog::isActive()->latest()->take(3)->get();
 
