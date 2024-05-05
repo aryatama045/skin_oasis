@@ -42,7 +42,11 @@ class HomeController extends Controller
 
         $products = Product::whereIn('id', $product_val)->get();
 
-                        dd($products );
+        foreach($products as $key => $p){
+            $pv[$key] = $p->variations;
+        }
+
+                        dd($products, $pv );
         // dd($trending_products, $product_val);
 
         $blogs = Blog::isActive()->latest()->take(3)->get();
