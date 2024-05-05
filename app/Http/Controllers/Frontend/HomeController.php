@@ -31,11 +31,16 @@ class HomeController extends Controller
 
         $categori = DB::table('categories')->select('id')->get();
 
-        dd($categori);
 
         foreach($product as $key => $val){
             $product_val[$key] = $val->id;
         }
+
+        foreach($categori as $key => $val){
+            $product_cat[$key] = $val->id;
+        }
+
+        dd($product_cat);
 
         $blogs = Blog::isActive()->latest()->take(3)->get();
 
@@ -72,6 +77,7 @@ class HomeController extends Controller
 
         return getView('pages.home', ['blogs' => $blogs,
             'product_list' => $product_val,
+            'product_cat' => $product_cat,
             'trending1' => $trending1, 'trending2' => $trending2, 'trending3' => $trending3,
             'sliders' => $sliders, 'brands' => $brands,
             'banner_section_one_banners' => $banner_section_one_banners,
