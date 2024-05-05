@@ -47,6 +47,7 @@
                     @endphp
 
                     @foreach ($products as $product)
+                        @if ($product->has_variation == 0)
                             @include('frontend.skinoasis.pages.partials.products.favoriteProduct', [
                                 'product' => $product,
                             ])
