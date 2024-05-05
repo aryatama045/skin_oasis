@@ -7,10 +7,10 @@
                 <li class="nav-item">
                     <a href="#featured-all" class="nav-link font-size-normal letter-spacing-large active" data-toggle="tab" role="tab">All</a>
                 </li>
-
+                
 
                 @php
-                    $categories = \App\Models\Category::get();
+                    $categories = \App\Models\Category::whereIn('id', $product_cat)->get();
                 @endphp
                 @foreach ($categories as $category)
                 <li class="nav-item">
