@@ -40,7 +40,6 @@ class HomeController extends Controller
             $product_cat[$key] = $val->id;
         }
 
-        dd($product_cat);
 
         $blogs = Blog::isActive()->latest()->take(3)->get();
 
