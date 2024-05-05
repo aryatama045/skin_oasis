@@ -66,7 +66,10 @@
                     $isVariantProduct = 0;
                     $stock = 0;
                     if ($product->variations()->count() > 1) {
-                        $isVariantProduct = 1;
+                        $isVariantProductSS = 1;
+
+                        $isVariantProduct = 0;
+
                     } else {
                         $stock = 1;
                     }
