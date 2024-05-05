@@ -44,8 +44,6 @@ class HomeController extends Controller
 
         $products = json_decode($products);
 
-        dd($products);
-
         foreach($products as $key => $p){
             $pv[$key] = $p->variations[0]->product_variation_stock->stock_qty;
         }
