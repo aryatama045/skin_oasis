@@ -27,7 +27,7 @@ class HomeController extends Controller
 
         
 
-        $product = Product::isPublished()->get();
+        $product = Product::select('id')->isPublished()->get();
         $trending_product_categories = getSetting('trending_product_categories') != null ? json_decode(getSetting('trending_product_categories')) : [];
         dd($product, $trending_product_categories);
 
