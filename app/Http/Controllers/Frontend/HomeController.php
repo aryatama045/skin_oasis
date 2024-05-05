@@ -25,7 +25,7 @@ class HomeController extends Controller
     public function index()
     {
 
-        
+        $trending_products = getSetting('top_trending_products') != null ? json_decode(getSetting('top_trending_products')) : []; 
 
         $product = DB::table('products')->select('id')->where('is_published', '1')->get();
         $trending_product_categories = getSetting('trending_product_categories') != null ? json_decode(getSetting('trending_product_categories')) : [];
