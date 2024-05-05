@@ -27,7 +27,7 @@ class HomeController extends Controller
 
         
 
-        $trending_product_categories = Product::isPublished();
+        $trending_product_categories = Product::isPublished()->get();
         dd($trending_product_categories);
 
         $blogs = Blog::isActive()->latest()->take(3)->get();
