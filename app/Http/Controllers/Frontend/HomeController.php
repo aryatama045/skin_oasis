@@ -43,7 +43,7 @@ class HomeController extends Controller
         $products = Product::whereIn('id', $product_val)->get();
 
         foreach($products as $key => $p){
-            $pv[$key] = $p->variations;
+            $pv[$key] = $p->variations->product_variation_stock->stock_qty;
         }
 
                         dd($products, $pv );
