@@ -10,11 +10,8 @@
 
                 @php
                     <!-- $trending_product_categories = getSetting('trending_product_categories') != null ? json_decode(getSetting('trending_product_categories')) : []; -->
-                    use App\Models\Product;
 
-                    $trending_product_categories = Product::isPublished();
-                    
-                    $categories = \App\Models\Category::whereIn('id', $trending_product_categories)->get();
+                    $categories = \App\Models\Category::whereIn('id', $product_list)->get();
                 @endphp
                 @foreach ($categories as $category)
                 <li class="nav-item">
@@ -47,8 +44,8 @@
                         }
                     }'>
                     @php
-                        $trending_products = getSetting('top_trending_products') != null ? json_decode(getSetting('top_trending_products')) : [];
-                        $products = \App\Models\Product::whereIn('id', $trending_products)->get();
+                        <!-- $trending_products = getSetting('top_trending_products') != null ? json_decode(getSetting('top_trending_products')) : []; -->
+                        $products = \App\Models\Product::whereIn('id', $product_list)->get();
                     @endphp
 
                     @foreach ($products as $product)
@@ -82,9 +79,9 @@
                         }'>
                         @php
                             $cat_id =$category->id;
-                            $trending_products = getSetting('top_trending_products') != null ? json_decode(getSetting('top_trending_products')) : [];
+                            <!-- $trending_products = getSetting('top_trending_products') != null ? json_decode(getSetting('top_trending_products')) : []; -->
                             $products = \App\Models\Product::leftJoin('product_categories','products.id','=','product_categories.product_id')
-                                        ->where('product_categories.category_id',$cat_id)->whereIn('products.id', $trending_products)->get();
+                                        ->where('product_categories.category_id',$cat_id)->whereIn('products.id', $product_list)->get();
                         @endphp
 
                         @foreach ($products as $product)

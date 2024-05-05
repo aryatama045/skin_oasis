@@ -29,14 +29,10 @@ class HomeController extends Controller
 
         $product = DB::table('products')->select('id')->where('is_published', '1')->get();
         $trending_product_categories = getSetting('trending_product_categories') != null ? json_decode(getSetting('trending_product_categories')) : [];
-        
-        // $product = json_decode($product);
 
-        // $product_val = [];
         foreach($product as $key => $val){
             $product_val[$key] = $val->id;
         }
-        dd($product_val,  $trending_product_categories);
 
         $blogs = Blog::isActive()->latest()->take(3)->get();
 
@@ -46,8 +42,6 @@ class HomeController extends Controller
         }
 
         $brands = Brand::get();
-        // dd($brands);
-
         $banner_section_one_banners = [];
         if (getSetting('banner_section_one_banners') != null) {
             $banner_section_one_banners = json_decode(getSetting('banner_section_one_banners'));
@@ -63,9 +57,6 @@ class HomeController extends Controller
             $banner_section_two_banner_two = json_decode(getSetting('banner_section_two_banner_two'));
         }
 
-        // dd($banner_section_one_banners);
-
-
         $client_feedback = [];
         if (getSetting('client_feedback') != null) {
             $client_feedback = json_decode(getSetting('client_feedback'));
@@ -77,6 +68,7 @@ class HomeController extends Controller
 
 
         return getView('pages.home', ['blogs' => $blogs,
+            'pproduct_list' => $product_val,
             'trending1' => $trending1, 'trending2' => $trending2, 'trending3' => $trending3,
             'sliders' => $sliders, 'brands' => $brands,
             'banner_section_one_banners' => $banner_section_one_banners,
