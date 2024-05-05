@@ -36,7 +36,7 @@ class HomeController extends Controller
         foreach($product as $key => $val){
             $product_val[$key] = $val['id'];
         }
-        dd($product_val, $trending_product_categories);
+        dd($product_val,  $trending_product_categories);
 
         $blogs = Blog::isActive()->latest()->take(3)->get();
 
