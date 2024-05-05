@@ -68,7 +68,7 @@ class HomeController extends Controller
 
 
         return getView('pages.home', ['blogs' => $blogs,
-            'pproduct_list' => $product_val,
+            'product_list' => $product_val,
             'trending1' => $trending1, 'trending2' => $trending2, 'trending3' => $trending3,
             'sliders' => $sliders, 'brands' => $brands,
             'banner_section_one_banners' => $banner_section_one_banners,
