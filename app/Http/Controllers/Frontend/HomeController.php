@@ -40,16 +40,7 @@ class HomeController extends Controller
             $product_cat[$key] = $val->id;
         }
 
-        $products = Product::whereIn('id', $product_val)->get();
 
-        $products = json_decode($products);
-
-        foreach($products as $key => $p){
-            $pv[$key] = $p->variations[0]->product_variation_stock->stock_qty;
-        }
-
-                        dd($products, $pv );
-        // dd($trending_products, $product_val);
 
         $blogs = Blog::isActive()->latest()->take(3)->get();
 
