@@ -31,7 +31,12 @@ class HomeController extends Controller
         $trending_product_categories = getSetting('trending_product_categories') != null ? json_decode(getSetting('trending_product_categories')) : [];
         
         $product = json_decode($product);
-        dd($product, $trending_product_categories);
+
+        // $product_val = [];
+        foreach($product as $key => $val){
+            $product_val[$key] = $val['id'];
+        }
+        dd($product_val, $trending_product_categories);
 
         $blogs = Blog::isActive()->latest()->take(3)->get();
 
