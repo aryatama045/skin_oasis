@@ -30,7 +30,7 @@ class HomeController extends Controller
         $product = DB::table('products')->select('id')->where('is_published', '1')->get();
         $trending_product_categories = getSetting('trending_product_categories') != null ? json_decode(getSetting('trending_product_categories')) : [];
         
-        $product = json_decode($product);
+        // $product = json_decode($product);
 
         // $product_val = [];
         foreach($product as $key => $val){
