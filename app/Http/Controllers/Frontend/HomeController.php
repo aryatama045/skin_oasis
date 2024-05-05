@@ -34,7 +34,7 @@ class HomeController extends Controller
 
         // $product_val = [];
         foreach($product as $key => $val){
-            $product_val[$key] = $val['id'];
+            $product_val[$key] = $val->id;
         }
         dd($product_val,  $trending_product_categories);
 
