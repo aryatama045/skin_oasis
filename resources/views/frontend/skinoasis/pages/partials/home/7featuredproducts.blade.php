@@ -9,7 +9,11 @@
                 </li>
 
                 @php
-                    $trending_product_categories = getSetting('trending_product_categories') != null ? json_decode(getSetting('trending_product_categories')) : [];
+                    <!-- $trending_product_categories = getSetting('trending_product_categories') != null ? json_decode(getSetting('trending_product_categories')) : []; -->
+                    use App\Models\Product;
+
+                    $trending_product_categories = Product::isPublished();
+                    
                     $categories = \App\Models\Category::whereIn('id', $trending_product_categories)->get();
                 @endphp
                 @foreach ($categories as $category)
@@ -79,7 +83,8 @@
                         @php
                             $cat_id =$category->id;
                             $trending_products = getSetting('top_trending_products') != null ? json_decode(getSetting('top_trending_products')) : [];
-                            $products = \App\Models\Product::leftJoin('product_categories','products.id','=','product_categories.product_id')->where('product_categories.category_id',$cat_id)->whereIn('products.id', $trending_products)->get();
+                            $products = \App\Models\Product::leftJoin('product_categories','products.id','=','product_categories.product_id')
+                                        ->where('product_categories.category_id',$cat_id)->whereIn('products.id', $trending_products)->get();
                         @endphp
 
                         @foreach ($products as $product)

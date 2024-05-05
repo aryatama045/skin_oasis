@@ -8,6 +8,7 @@ use App\Models\Campaign;
 use App\Models\Page;
 use App\Models\Partner;
 use App\Models\Brand;
+use App\Models\Product;
 use Illuminate\Http\Request;
 use DB;
 
@@ -23,6 +24,12 @@ class HomeController extends Controller
     # homepage
     public function index()
     {
+
+        
+
+        $trending_product_categories = Product::isPublished();
+        dd($trending_product_categories);
+
         $blogs = Blog::isActive()->latest()->take(3)->get();
 
         $sliders = [];
