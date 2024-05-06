@@ -75,9 +75,11 @@ class HomeController extends Controller
         $trending3 = Blog::where('placement','3')->isActive()->latest()->take(1)->get();
 
         #Instagram Feed
-        $feed = \Dymantic\InstagramFeed\Profile::where('username', 'kayo_xlv')->first()->feed();
+        // $feed = \Dymantic\InstagramFeed\Profile::where('username', 'kayo_xlv')->first()->feed();
 
-        // dd($feed);
+        $feed = \Dymantic\InstagramFeed\InstagramFeed::for('kayo_xlv');
+
+        dd($feed);
 
         return getView('pages.home', ['blogs' => $blogs,
             'product_list' => $product_val,
