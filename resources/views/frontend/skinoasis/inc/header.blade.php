@@ -8,8 +8,10 @@
             header-11
         @endif
     <?php } else{ ?>
-        @if(Route::current()->getName() == 'halloBeauty.index' || Route::current()->getName() == 'halloBeauty.listdokter' || Route::current()->getName() == 'halloBeauty.listpaket' )
-            header-hallo-beauty
+        @if(Route::current()->getName() != null)
+            @if(Route::current()->getName() == 'halloBeauty.index' || Route::current()->getName() == 'halloBeauty.listdokter' || Route::current()->getName() == 'halloBeauty.listpaket' )
+                header-hallo-beauty
+            @endif
         @endif
     <?php } ?>
     ">
