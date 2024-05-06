@@ -75,7 +75,8 @@ class HomeController extends Controller
         $trending3 = Blog::where('placement','3')->isActive()->latest()->take(1)->get();
 
         #Instagram Feed
-        $feed = \Dymantic\InstagramFeed\InstagramFeed::for('Skinoasis');
+        $profile = \Dymantic\InstagramFeed\Profile::for('my profile');
+        $feed = $profile?->refreshFeed();
 
         return getView('pages.home', ['blogs' => $blogs,
             'product_list' => $product_val,
