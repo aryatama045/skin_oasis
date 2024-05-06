@@ -10,6 +10,8 @@ use App\Models\Partner;
 use App\Models\Brand;
 use App\Models\Product;
 use Illuminate\Http\Request;
+use Dymantic\InstagramFeed\Profile;
+use Dymantic\InstagramFeed\InstagramFeed;
 use DB;
 
 class HomeController extends Controller
@@ -75,9 +77,9 @@ class HomeController extends Controller
         $trending3 = Blog::where('placement','3')->isActive()->latest()->take(1)->get();
 
         #Instagram Feed
-        // $feed = \Dymantic\InstagramFeed\Profile::where('username', 'kayo_xlv')->first()->feed();
+        $feed = Profile::where('username', 'kayo_xlv')->first()->feed(12);
 
-        $feed = \Dymantic\InstagramFeed\InstagramFeed::for('kayo_xlv');
+        // $feed = InstagramFeed::for('kayo_xlv');
 
         dd($feed);
 
