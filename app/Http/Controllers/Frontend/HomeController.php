@@ -78,7 +78,7 @@ class HomeController extends Controller
         $profile = \Dymantic\InstagramFeed\Profile::for('kayo_xlv');
         $feed = $profile?->refreshFeed();
 
-        dd($feed);
+        // dd($feed);
 
         return getView('pages.home', ['blogs' => $blogs,
             'product_list' => $product_val,
@@ -89,7 +89,7 @@ class HomeController extends Controller
             'banner_section_two_banner_one' => $banner_section_two_banner_one,
             'banner_section_two_banner_two' => $banner_section_two_banner_two,
             'client_feedback' => $client_feedback,
-            'instagram_feed' => $feed
+            // 'instagram_feed' => $feed
         ]);
     }
 
