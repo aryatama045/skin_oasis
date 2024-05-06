@@ -78,6 +78,8 @@ class HomeController extends Controller
         $profile = \Dymantic\InstagramFeed\Profile::for('my profile');
         $feed = $profile?->refreshFeed();
 
+        dd($feed);
+
         return getView('pages.home', ['blogs' => $blogs,
             'product_list' => $product_val,
             'product_cat' => $product_cat,
