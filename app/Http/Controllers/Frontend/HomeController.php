@@ -81,7 +81,6 @@ class HomeController extends Controller
 
         // $feed = InstagramFeed::for('kayo_xlv');
 
-        dd($feed);
 
         return getView('pages.home', ['blogs' => $blogs,
             'product_list' => $product_val,
