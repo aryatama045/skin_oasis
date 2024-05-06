@@ -8,7 +8,7 @@
 
         <div class="row">
 
-            <!-- @foreach($instagram_feed as $post)
+            @foreach($instagram_feed as $post)
             <div class="col-sm-3 col-6">
                 <div class="instagram-feed">
                     <img src="{{ $post->url }}" alt="A post from my instagram">
@@ -18,7 +18,7 @@
                     </div>
                 </div>
             </div>
-            @endforeach -->
+            @endforeach
 
 
         </div>
