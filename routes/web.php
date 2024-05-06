@@ -23,6 +23,8 @@ use App\Http\Controllers\Frontend\OrderTrackingController;
 use App\Http\Controllers\Frontend\RefundsController;
 use App\Http\Controllers\Frontend\RewardPointsController;
 use App\Http\Controllers\Frontend\WalletController;
+use App\Http\Controllers\InstagramAuthController;
+
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -189,4 +191,7 @@ Route::group(['prefix' => ''], function () {
 
     # iyzico
     Route::any('/iyzico/payment/callback', [IyZicoController::class, 'callback'])->name('iyzico.callback');
+
 });
+
+Route::get('instagram-auth-response', 'InstagramAuthController@complete');
