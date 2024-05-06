@@ -74,6 +74,8 @@ class HomeController extends Controller
         $trending2 = Blog::where('placement','2')->isActive()->latest()->take(1)->get();
         $trending3 = Blog::where('placement','3')->isActive()->latest()->take(1)->get();
 
+        #Instagram Feed
+        $feed = \Dymantic\InstagramFeed\InstagramFeed::for('Skinoasis');
 
         return getView('pages.home', ['blogs' => $blogs,
             'product_list' => $product_val,
@@ -83,7 +85,9 @@ class HomeController extends Controller
             'banner_section_one_banners' => $banner_section_one_banners,
             'banner_section_two_banner_one' => $banner_section_two_banner_one,
             'banner_section_two_banner_two' => $banner_section_two_banner_two,
-            'client_feedback' => $client_feedback]);
+            'client_feedback' => $client_feedback,
+            'instagram_feed' => $feed
+        ]);
     }
 
     # all brands
