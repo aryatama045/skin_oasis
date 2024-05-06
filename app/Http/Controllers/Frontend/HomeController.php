@@ -77,9 +77,11 @@ class HomeController extends Controller
         $trending3 = Blog::where('placement','3')->isActive()->latest()->take(1)->get();
 
         #Instagram Feed
-        $feed = Profile::where('username', 'kayo_xlv')->first()->feed(12);
+        // $feed = Profile::where('username', 'kayo_xlv')->first()->feed(12);
 
-        // $feed = InstagramFeed::for('kayo_xlv');
+
+
+        $feed = InstagramFeed::for('kayo_xlv', 15);
 
 
         return getView('pages.home', ['blogs' => $blogs,
