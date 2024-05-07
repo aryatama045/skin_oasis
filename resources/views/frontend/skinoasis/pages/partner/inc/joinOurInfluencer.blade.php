@@ -36,7 +36,7 @@
         <div class="col-sm-4">
             <div class="w-100 label-input-field">
                 <label>{{ localize('Country') }}</label>
-                <select class="select2" name="country_id1" required>
+                <select class="select2 select2Inf" name="country_id1" required>
                     <option value="">{{ localize('Select Country') }}</option>
                     @foreach ($country as $country)
                         <option value="{{ $country->id }}">{{ $country->name }}</option>
@@ -49,7 +49,7 @@
         <div class="col-sm-4">
             <div class="w-100 label-input-field">
                 <label>{{ localize('Province') }}</label>
-                <select class="select2Address" required name="state_id1">
+                <select class="select2 select2Inf" required name="state_id1">
                     <option value="">{{ localize('Select Province') }}</option>
                 </select>
             </div>
@@ -58,7 +58,7 @@
         <div class="col-sm-4">
             <div class="w-100 label-input-field">
                 <label>{{ localize('City') }}</label>
-                <select class="select2Address" required name="city_id1">
+                <select class="select2 select2Inf" required name="city_id1">
                     <option value="">{{ localize('Select City') }}</option>
 
                 </select>
@@ -109,6 +109,10 @@
 @section('scripts')
     <script>
         "use strict";
+
+        $('.select2Inf').select2({
+            dropdownParent: $(parent)
+        });
 
         //  get states on country change
         $(document).on('change', '[name=country_id1]', function() {
