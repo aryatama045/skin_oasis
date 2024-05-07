@@ -117,7 +117,7 @@
                 headers: {
                     'X-CSRF-TOKEN': '{{ csrf_token() }}'
                 },
-                url: "{{ route('partner.getState') }}",
+                url: "{{ route('address.getStates') }}",
                 type: 'POST',
                 data: {
                     country_id: country_id
@@ -141,7 +141,7 @@
                 headers: {
                     'X-CSRF-TOKEN': '{{ csrf_token() }}'
                 },
-                url: "{{ route('partner.getCity') }}",
+                url: "{{ route('address.getCities') }}",
                 type: 'POST',
                 data: {
                     state_id: state_id
