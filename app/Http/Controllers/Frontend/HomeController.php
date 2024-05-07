@@ -271,7 +271,7 @@ class HomeController extends Controller
             'score.min' => localize('Google recaptcha validation error, seems like you are not a human.')
         ]);
 
-        $cek_mail = DB::table('partner_join')->where('email', $request->email)->get();
+        $cek_mail = DB::table('partner_join')->select('email')->where('email', $request->email)->first();
 
         if ($cek_mail[0]){
             $mail = 'ok';
