@@ -36,7 +36,7 @@
         <div class="col-sm-4">
             <div class="w-100 label-input-field">
                 <label>{{ localize('Country') }}</label>
-                <select class="select2 select2Comm" name="country_id3" required>
+                <select class="select2Comm" name="country_id3" required>
                     <option value="">{{ localize('Select Country') }}</option>
                     @foreach ($country3 as $country)
                         <option value="{{ $country->id }}">{{ $country->name }}</option>
@@ -49,7 +49,7 @@
         <div class="col-sm-4">
             <div class="w-100 label-input-field">
                 <label>{{ localize('Province') }}</label>
-                <select class="select2 select2Comm" required name="state_id3">
+                <select class="select2Comm" required name="state_id3">
                     <option value="">{{ localize('Select Province') }}</option>
                 </select>
             </div>
@@ -58,7 +58,7 @@
         <div class="col-sm-4">
             <div class="w-100 label-input-field">
                 <label>{{ localize('City') }}</label>
-                <select class="select2 select2Comm" required name="city_id3">
+                <select class="select2Comm" required name="city_id3">
                     <option value="">{{ localize('Select City') }}</option>
 
                 </select>
@@ -110,17 +110,19 @@
     <script>
         "use strict";
 
-        
+        // runs when the document is ready
+        $(document).ready(function() {
+            var parent = '.formCommunity';
+            $('.select2Comm').select2({
+                dropdownParent: $(parent)
+            });
+        });
 
         //  get states on country change
         $(document).on('change', '[name=country_id3]', function() {
             var country_id3 = $(this).val();
             getStates3(country_id3);
 
-            var parent = '.formCommunity';
-            $('.select2Comm').select2({
-                dropdownParent: $(parent)
-            });
         });
 
         //  get states
