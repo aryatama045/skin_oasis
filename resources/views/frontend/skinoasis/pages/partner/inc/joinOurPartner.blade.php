@@ -34,24 +34,22 @@
         <hr>
 
         <div class="col-sm-4">
-            <div class="label-input-field">
+            <div class="w-100 label-input-field">
                 <label>{{ localize('Country') }}</label>
-                <select class="form-control select2" name="country_id" class="w-100" id="country_id"
-                    data-toggle="select2" data-placeholder="{{ localize('Select Country') }}" required>
+                <select class="select2Address" name="country_id" required>
                     <option value="">{{ localize('Select Country') }}</option>
-                    @foreach ($country as $country)
+                    @foreach ($countries as $country)
                         <option value="{{ $country->id }}">{{ $country->name }}</option>
                     @endforeach
                 </select>
-
             </div>
 
         </div>
 
         <div class="col-sm-4">
-            <div class="label-input-field">
+            <div class="w-100 label-input-field">
                 <label>{{ localize('Province') }}</label>
-                <select class="form-control select2" name="state_id" class="w-100" id="state_id"
+                <select class="form-control select2" name="state_id"
                     data-toggle="select2" data-placeholder="{{ localize('Select cities') }}" required>
                 </select>
             </div>
@@ -60,7 +58,7 @@
         <div class="col-sm-4">
             <div class="label-input-field">
                 <label>{{ localize('City') }}</label>
-                <select class="form-control select2" name="city_id" class="w-100" id="city_id"
+                <select class="form-control select2" name="city_id"
                     data-toggle="select2" data-placeholder="{{ localize('Select cities') }}" required>
                 </select>
             </div>
