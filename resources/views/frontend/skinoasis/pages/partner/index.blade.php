@@ -86,7 +86,7 @@
                                     <h3 class="text-center">LET'S BECOME OUR PARTNER</h3>
                                     <!-- form Partner -->
                                     @include('frontend.skinoasis.pages.partner.inc.joinOurPartner', [
-                                        'country' => $country,
+                                        'country2' => $country,
                                     ])
                                     <!-- form Partner -->
                                 </div>
@@ -97,7 +97,7 @@
                                     <h3 class="text-center">LET'S BECOME OUR COMMUNITY</h3>
                                     <!-- form Community -->
                                     @include('frontend.skinoasis.pages.partner.inc.joinOurCommunity', [
-                                        'country' => $country,
+                                        'country3' => $country,
                                     ])
                                     <!-- form Community -->
                                 </div>
