@@ -1,5 +1,5 @@
 <form class="contact-form ps-4 ps-xl-0 py-8 pe-5 contact-form ps-5 ps-xl-4 py-6 pe-6"
-    action="{{ route('contactUs.store') }}" method="POST" id="contact-form">
+    action="{{ route('Partner.store') }}" method="POST" id="contact-form">
     @csrf
 
     {!! RecaptchaV3::field('recaptcha_token') !!}
@@ -77,7 +77,7 @@
         <div class="col-sm-4">
             <div class="label-input-field">
                 <label>Blok</label>
-                <input type="text" name="regency" placeholder="{{ localize('You regency') }}"
+                <input type="text" name="blok" placeholder="{{ localize('You blok') }}"
                     required>
             </div>
         </div>
@@ -85,7 +85,7 @@
         <div class="col-sm-4">
             <div class="label-input-field">
                 <label>Kode Pos</label>
-                <input type="text" name="district" placeholder="{{ localize('You district') }}"
+                <input type="text" name="kode_pos" placeholder="{{ localize('You kode_pos') }}"
                     required>
             </div>
         </div>

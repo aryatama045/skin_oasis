@@ -108,6 +108,15 @@ Route::get('/pages/{slug}', [HomeController::class, 'showPage'])->name('home.pag
 # contact us message
 Route::post('/contact-us', [ContactUsController::class, 'store'])->name('contactUs.store');
 
+#partner Join
+Route::post('/partner-join', [HomeController::class, 'partner_store'])->name('Partner.store');
+
+#influencer Join
+Route::post('/influencer-join', [HomeController::class, 'influencer_store'])->name('Influencer.store');
+
+#community Join
+Route::post('/community-join', [HomeController::class, 'community_store'])->name('Community.store');
+
 # Subscribed Users
 Route::post('/subscribers', [SubscribersController::class, 'store'])->name('subscribe.store');
 

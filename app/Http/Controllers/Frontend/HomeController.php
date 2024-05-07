@@ -7,6 +7,7 @@ use App\Models\Blog;
 use App\Models\Campaign;
 use App\Models\Page;
 use App\Models\Partner;
+use App\Models\PartnerJoin;
 use App\Models\Brand;
 use App\Models\Product;
 use Illuminate\Http\Request;
@@ -183,16 +184,6 @@ class HomeController extends Controller
         return getView('pages.quickLinks.aboutUs', ['features' => $features, 'why_choose_us' => $why_choose_us, 'sliders' => $sliders]);
     }
 
-    # partner page
-    public function partner()
-    {
-        $pages = Partner::orderBy('id','ASC')->groupBy('title')->get();
-
-        $pagesContent = Partner::orderBy('id','ASC')->groupBy('title')->get();
-
-        return getView('pages.partner.index', ['pages' => $pages, 'pagesContent' => $pagesContent ]);
-    }
-
 
     # euterria nano academy page
     public function euterriaNanoAcademy(Request $request)
@@ -243,4 +234,44 @@ class HomeController extends Controller
             return abort(404);
         }
     }
+
+
+    # partner page
+    public function partner()
+    {
+        $pages = Partner::orderBy('id','ASC')->groupBy('title')->get();
+
+        $pagesContent = Partner::orderBy('id','ASC')->groupBy('title')->get();
+
+        return getView('pages.partner.index', ['pages' => $pages, 'pagesContent' => $pagesContent ]);
+    }
+
+
+    #partner store
+    public function partner_store(Request $request)
+    {
+        $score = recaptchaValidation($request);
+        $request->request->add([
+            'score' => $score
+        ]);
+        $data['score'] = 'required|numeric|min:0.9';
+
+        $request->validate($data,[
+            'score.min' => localize('Google recaptcha validation error, seems like you are not a human.')
+        ]);
+
+        $msg = new PartnerJoin;
+        $msg->user_id       = '';
+        $msg->name          = $request->name;
+        $msg->email         = $request->email;
+        $msg->phone         = $request->phone;
+        $msg->type_join     = $request->type_join;
+        $msg->message       = $request->message;
+        // $msg->save();
+
+        dd($msg);
+        flash(localize('Your message has been sent'))->success();
+        return back();
+    }
+
 }
