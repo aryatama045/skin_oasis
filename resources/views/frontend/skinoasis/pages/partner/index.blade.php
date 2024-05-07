@@ -136,6 +136,7 @@
             });
         });
 
+    //# Influencer
         //  get states on country change
         $(document).on('change', '[name=country_id1]', function() {
             var country_id1 = $(this).val();
@@ -183,8 +184,9 @@
                 }
             });
         }
+    //#End Influencer
 
-
+    //# Partner
         //  get states on country change
         $(document).on('change', '[name=country_id2]', function() {
             var country_id2 = $(this).val();
@@ -233,8 +235,9 @@
                 }
             });
         }
+    //#End Partner
 
-
+    //# Community
         //  get states on country change
         $(document).on('change', '[name=country_id3]', function() {
             var country_id3 = $(this).val();
@@ -283,5 +286,8 @@
                 }
             });
         }
+    
+    //# End Community
+
     </script>
 @endsection
