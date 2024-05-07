@@ -305,6 +305,9 @@ class HomeController extends Controller
             'score.min' => localize('Google recaptcha validation error, seems like you are not a human.')
         ]);
 
+        $cek_mail = PartnerJoin::where('email', $request->email)->get();
+
+        dd($cek_mail);
         $msg = new PartnerJoin;
         $msg->user_id       = '';
         $msg->name          = $request->name;
@@ -315,6 +318,8 @@ class HomeController extends Controller
         // $msg->save();
 
         dd($msg);
+
+
         flash(localize('Your message has been sent'))->success();
         return back();
     }
