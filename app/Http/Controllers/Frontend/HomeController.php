@@ -274,4 +274,58 @@ class HomeController extends Controller
         return back();
     }
 
+    #influencer store
+    public function influencer_store(Request $request)
+    {
+        $score = recaptchaValidation($request);
+        $request->request->add([
+            'score' => $score
+        ]);
+        $data['score'] = 'required|numeric|min:0.9';
+
+        $request->validate($data,[
+            'score.min' => localize('Google recaptcha validation error, seems like you are not a human.')
+        ]);
+
+        $msg = new PartnerJoin;
+        $msg->user_id       = '';
+        $msg->name          = $request->name;
+        $msg->email         = $request->email;
+        $msg->phone         = $request->phone;
+        $msg->type_join     = $request->type_join;
+        $msg->message       = $request->message;
+        // $msg->save();
+
+        dd($msg);
+        flash(localize('Your message has been sent'))->success();
+        return back();
+    }
+
+    #community store
+    public function community_store(Request $request)
+    {
+        $score = recaptchaValidation($request);
+        $request->request->add([
+            'score' => $score
+        ]);
+        $data['score'] = 'required|numeric|min:0.9';
+
+        $request->validate($data,[
+            'score.min' => localize('Google recaptcha validation error, seems like you are not a human.')
+        ]);
+
+        $msg = new PartnerJoin;
+        $msg->user_id       = '';
+        $msg->name          = $request->name;
+        $msg->email         = $request->email;
+        $msg->phone         = $request->phone;
+        $msg->type_join     = $request->type_join;
+        $msg->message       = $request->message;
+        // $msg->save();
+
+        dd($msg);
+        flash(localize('Your message has been sent'))->success();
+        return back();
+    }
+
 }

@@ -5,6 +5,8 @@
     {!! RecaptchaV3::field('recaptcha_token') !!}
     <div class="row g-4">
 
+        <input type="hidden" name="type_join" value="partner" required>
+
         <div class="col-sm-12">
             <div class="label-input-field">
                 <label>{{ localize('Name') }}</label>
