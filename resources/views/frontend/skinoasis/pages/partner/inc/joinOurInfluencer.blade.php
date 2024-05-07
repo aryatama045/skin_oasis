@@ -49,7 +49,7 @@
         <div class="col-sm-4">
             <div class="w-100 label-input-field">
                 <label>{{ localize('Province') }}</label>
-                <select class="select2" required name="state_id1">
+                <select class="select2Address" required name="state_id1">
                     <option value="">{{ localize('Select Province') }}</option>
                 </select>
             </div>
@@ -58,7 +58,7 @@
         <div class="col-sm-4">
             <div class="w-100 label-input-field">
                 <label>{{ localize('City') }}</label>
-                <select class="select2" required name="city_id1">
+                <select class="select2Address" required name="city_id1">
                     <option value="">{{ localize('Select City') }}</option>
 
                 </select>
