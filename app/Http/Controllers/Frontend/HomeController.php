@@ -10,8 +10,10 @@ use App\Models\Partner;
 use App\Models\PartnerJoin;
 use App\Models\Brand;
 use App\Models\Product;
-use App\Models\City;
+
 use App\Models\Country;
+use App\Models\City;
+use App\Models\State;
 
 use Illuminate\Http\Request;
 use Dymantic\InstagramFeed\Profile;
@@ -247,14 +249,17 @@ class HomeController extends Controller
 
         $pagesContent = Partner::orderBy('id','ASC')->groupBy('title')->get();
 
-        $cities = City::get();
-
         $country = Country::get();
+
+        $city = City::get();
+
+        $state = State::get();
 
         return getView('pages.partner.index', ['pages' => $pages,
                 'pagesContent' => $pagesContent,
-                'cities' => $cities,
-                'country' => $country
+                'country' => $country,
+                'city' => $city,
+                'state'    => $state
             ]);
     }
 
