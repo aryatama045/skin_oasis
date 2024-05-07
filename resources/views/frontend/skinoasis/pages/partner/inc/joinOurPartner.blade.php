@@ -26,7 +26,7 @@
         <div class="col-sm-6">
             <div class="label-input-field">
                 <label>{{ localize('Phone') }}</label>
-                <input type="text" name="phone" placeholder="{{ localize('You phone') }}"
+                <input type="number" name="phone" placeholder="{{ localize('You phone') }}"
                     required>
             </div>
         </div>
