@@ -278,18 +278,25 @@ class HomeController extends Controller
             return back();
         }
 
-        dd($cek_mail);
-        $msg = new PartnerJoin;
-        $msg->user_id       = '';
-        $msg->name          = $request->name;
-        $msg->email         = $request->email;
-        $msg->phone         = $request->phone;
-        $msg->type_join     = $request->type_join;
-        $msg->status        = '0';
-        // $msg->save();
+        $partner = new PartnerJoin;
+        $partner->user_id       = '';
+        $partner->name          = $request->name;
+        $partner->email         = $request->email;
+        $partner->phone         = $request->phone;
+        $partner->type_join     = $request->type_join;
+        $partner->status        = '0';
 
-        dd($msg);
 
+        $address->country_id    = $request->country_id2;
+        $address->state_id      = $request->state_id2;
+        $address->city_id      = $request->city_id2;
+        $address->address      = $request->address;
+        $address->kodepos      = $request->kodepos;
+
+
+        dd($partner, $address);
+
+        // $partner->save();
 
         flash(localize('Your message has been sent'))->success();
         return back();
