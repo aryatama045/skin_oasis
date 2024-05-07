@@ -71,7 +71,9 @@
                                 <div class="product-desc-content">
                                     <h3 class="text-center mt-6 mb-5">LET'S BECOME OUR INFLUENCER</h3>
                                     <!-- form influencer -->
-                                    @include('frontend.skinoasis.pages.partner.inc.joinOurInfluencer')
+                                    @include('frontend.skinoasis.pages.partner.inc.joinOurInfluencer', [
+                                        'cities' => $cities,
+                                    ])
                                     <!-- form influencer -->
 
                                 </div>
@@ -81,7 +83,9 @@
                                 <div class="product-desc-content">
                                     <h3 class="text-center">LET'S BECOME OUR PARTNER</h3>
                                     <!-- form Partner -->
-                                    @include('frontend.skinoasis.pages.partner.inc.joinOurPartner')
+                                    @include('frontend.skinoasis.pages.partner.inc.joinOurPartner', [
+                                        'cities' => $cities,
+                                    ])
                                     <!-- form Partner -->
                                 </div>
                             </div><!-- .End .tab-pane -->
@@ -90,7 +94,9 @@
                                 <div class="product-desc-content">
                                     <h3 class="text-center">LET'S BECOME OUR COMMUNITY</h3>
                                     <!-- form Community -->
-                                    @include('frontend.skinoasis.pages.partner.inc.joinOurCommunity')
+                                    @include('frontend.skinoasis.pages.partner.inc.joinOurCommunity', [
+                                        'cities' => $cities,
+                                    ])
                                     <!-- form Community -->
                                 </div>
                             </div><!-- .End .tab-pane -->

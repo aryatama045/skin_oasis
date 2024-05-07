@@ -10,9 +10,13 @@ use App\Models\Partner;
 use App\Models\PartnerJoin;
 use App\Models\Brand;
 use App\Models\Product;
+use App\Models\City;
+use App\Models\Country;
+
 use Illuminate\Http\Request;
 use Dymantic\InstagramFeed\Profile;
 use Dymantic\InstagramFeed\InstagramFeed;
+
 use DB;
 
 class HomeController extends Controller
@@ -243,7 +247,15 @@ class HomeController extends Controller
 
         $pagesContent = Partner::orderBy('id','ASC')->groupBy('title')->get();
 
-        return getView('pages.partner.index', ['pages' => $pages, 'pagesContent' => $pagesContent ]);
+        $cities = City::get();
+
+        $country = Country::get();
+
+        return getView('pages.partner.index', ['pages' => $pages,
+                'pagesContent' => $pagesContent,
+                'cities' => $cities,
+                'country' => $country
+            ]);
     }
 
 
@@ -266,7 +278,7 @@ class HomeController extends Controller
         $msg->email         = $request->email;
         $msg->phone         = $request->phone;
         $msg->type_join     = $request->type_join;
-        $msg->message       = $request->message;
+        $msg->status        = '0';
         // $msg->save();
 
         dd($msg);
@@ -293,7 +305,7 @@ class HomeController extends Controller
         $msg->email         = $request->email;
         $msg->phone         = $request->phone;
         $msg->type_join     = $request->type_join;
-        $msg->message       = $request->message;
+        $msg->status        = '0';
         // $msg->save();
 
         dd($msg);
@@ -320,7 +332,7 @@ class HomeController extends Controller
         $msg->email         = $request->email;
         $msg->phone         = $request->phone;
         $msg->type_join     = $request->type_join;
-        $msg->message       = $request->message;
+        $msg->status        = '0';
         // $msg->save();
 
         dd($msg);

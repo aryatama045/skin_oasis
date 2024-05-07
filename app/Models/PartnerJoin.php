@@ -16,6 +16,7 @@ class PartnerJoin extends Model
         'name',
         'email',
         'phone',
-        'type_join'
+        'type_join',
+        'status'
     ];
 }

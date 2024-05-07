@@ -5,6 +5,7 @@ use App\Http\Controllers\Backend\Affiliate\WithdrawRequestsController;
 use App\Http\Controllers\Backend\Appearance\AboutUsPageController;
 use App\Http\Controllers\Backend\Appearance\BannerSectionOneController;
 use App\Http\Controllers\Backend\Appearance\BannerSectionTwoController;
+use App\Http\Controllers\Backend\Appearance\BannerHeaderController;
 use App\Http\Controllers\Backend\Appearance\BestDealProductsController;
 use App\Http\Controllers\Backend\Appearance\BestSellingProductsController;
 use App\Http\Controllers\Backend\Appearance\ClientFeedbackController;
@@ -494,6 +495,9 @@ Route::group(
 
             # homepage - banner section two
             Route::get('/homepage/banner-section-two', [BannerSectionTwoController::class, 'index'])->name('admin.appearance.homepage.bannerTwo');
+
+            # homepage - banner header
+            Route::get('/homepage/banner-header', [BannerHeaderController::class, 'index'])->name('admin.appearance.homepage.bannerHeader');
 
             # client feedback
             Route::get('/homepage/client-feedback', [ClientFeedbackController::class, 'index'])->name('admin.appearance.homepage.clientFeedback');

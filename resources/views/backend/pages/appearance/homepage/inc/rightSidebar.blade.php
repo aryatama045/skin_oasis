@@ -24,6 +24,11 @@
 </li>
 
 <li>
+    <a href="{{ route('admin.appearance.homepage.bannerHeader') }}"
+        class="{{ areActiveRoutes(['admin.appearance.homepage.bannerHeader']) }}">{{ localize('Banner Header') }}</a>
+</li>
+
+<li>
     <a href="{{ route('admin.appearance.homepage.bannerOne') }}"
         class="{{ areActiveRoutes(['admin.appearance.homepage.bannerOne']) }}">{{ localize('Banner Section One') }}</a>
 </li>
