@@ -273,17 +273,8 @@ class HomeController extends Controller
 
         $cek_mail = DB::table('partner_join')->select('email')->where('email', $request->email)->first();
 
-        if ($cek_mail){
-            $mail = 'ok';
-        }else{
-            $mail = 'kosong';
-        }
 
-
-        dd($request->email , $mail, $cek_mail );
-
-
-        if($cek_mail->email == TRUE){
+        if($cek_mail){
             flash(localize('Your Email has register'))->error();
             return back();
         }
