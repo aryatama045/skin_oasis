@@ -287,7 +287,10 @@ class HomeController extends Controller
         $partner->phone         = $request->phone;
         $partner->type_join     = $request->type_join;
         $partner->status        = '0';
+        $partner->save();
 
+        $partner->lastFirst();
+        dd($partner);
 
         $userId = auth()->user()->id;
         $address                = new UserAddress;
