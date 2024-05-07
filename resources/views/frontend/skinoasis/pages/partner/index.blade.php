@@ -56,7 +56,7 @@
                             </li>
                         </ul>
 
-                        <div class="tab-content addAddressModal" id="addAddressModal">
+                        <div class="tab-content">
 
                             @foreach ($pagesContent as $pageC)
 
@@ -70,7 +70,7 @@
 
 
                             <div class="tab-pane fade" id="partner-join-our-influencer" role="tabpanel" aria-labelledby="partner-join-our-influencer">
-                                <div >
+                                <div class="addAddressModal" id="formInfluencer">
                                     <h3 class="text-center mt-6 mb-5">LET'S BECOME OUR INFLUENCER</h3>
                                     <!-- form influencer -->
                                     @include('frontend.skinoasis.pages.partner.inc.joinOurInfluencer', [
@@ -82,7 +82,7 @@
                             </div><!-- .End .tab-pane -->
 
                             <div class="tab-pane fade" id="partner-join-our-partner" role="tabpanel" aria-labelledby="partner-join-our-partner">
-                                <div >
+                                <div class="addAddressModal" id="formPartner">
                                     <h3 class="text-center">LET'S BECOME OUR PARTNER</h3>
                                     <!-- form Partner -->
                                     @include('frontend.skinoasis.pages.partner.inc.joinOurPartner', [
@@ -93,7 +93,7 @@
                             </div><!-- .End .tab-pane -->
 
                             <div class="tab-pane fade" id="partner-join-our-community" role="tabpanel" aria-labelledby="partner-join-our-community">
-                                <div >
+                                <div class="addAddressModal" id="formCommunity">
                                     <h3 class="text-center">LET'S BECOME OUR COMMUNITY</h3>
                                     <!-- form Community -->
                                     @include('frontend.skinoasis.pages.partner.inc.joinOurCommunity', [

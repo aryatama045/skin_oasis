@@ -110,6 +110,7 @@
     <script>
         "use strict";
 
+        var parent = '.formInfluencer';
         $('.select2Inf').select2({
             dropdownParent: $(parent)
         });
