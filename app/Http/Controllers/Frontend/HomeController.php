@@ -293,18 +293,15 @@ class HomeController extends Controller
 
 
         $userId = auth()->user()->id;
-        $address                = new UserAddress;
-        $address->partner_join_id = $partner_id;
-        $address->country_id    = $request->country_id2;
-        $address->state_id      = $request->state_id2;
-        $address->city_id       = $request->city_id2;
-        $address->address       = $request->address;
-        $address->kodepos       = $request->kodepos;
+        $address                    = new UserAddress;
+        $address->partner_join_id   = $partner_id;
+        $address->country_id        = $request->country_id2;
+        $address->state_id          = $request->state_id2;
+        $address->city_id           = $request->city_id2;
+        $address->address           = $request->address;
+        $address->kodepos           = $request->kodepos;
+        $address->save();
 
-
-        dd($address);
-
-        // $partner->save();
 
         flash(localize('Your message has been sent'))->success();
         return back();

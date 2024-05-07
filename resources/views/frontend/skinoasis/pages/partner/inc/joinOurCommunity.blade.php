@@ -79,7 +79,7 @@
         <div class="col-sm-4">
             <div class="label-input-field">
                 <label> RT/RW</label>
-                <input type="text" name="city" placeholder="{{ localize('You RT/RW') }}"
+                <input type="text" name="rtrw" placeholder="{{ localize('You RT/RW') }}"
                     required>
             </div>
         </div>
