@@ -1,4 +1,4 @@
-<form class="contact-form ps-4 ps-xl-0 py-8 pe-5 contact-form ps-5 ps-xl-4 py-6 pe-6"
+<form class="contact-form ps-4 ps-xl-0 py-8 pe-5 contact-form ps-5 ps-xl-4 py-6 pe-6 addAddressModal" id="addAddressModal"
     action="{{ route('Influencer.store') }}" method="POST" >
     @csrf
 
