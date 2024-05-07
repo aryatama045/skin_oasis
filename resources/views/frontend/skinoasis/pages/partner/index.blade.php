@@ -74,7 +74,7 @@
                                     <h3 class="text-center mt-6 mb-5">LET'S BECOME OUR INFLUENCER</h3>
                                     <!-- form influencer -->
                                     @include('frontend.skinoasis.pages.partner.inc.joinOurInfluencer', [
-                                        'cities' => $cities,
+                                        'country' => $country,
                                     ])
                                     <!-- form influencer -->
 
@@ -86,7 +86,7 @@
                                     <h3 class="text-center">LET'S BECOME OUR PARTNER</h3>
                                     <!-- form Partner -->
                                     @include('frontend.skinoasis.pages.partner.inc.joinOurPartner', [
-                                        'cities' => $cities,
+                                        'country' => $country,
                                     ])
                                     <!-- form Partner -->
                                 </div>
@@ -97,7 +97,7 @@
                                     <h3 class="text-center">LET'S BECOME OUR COMMUNITY</h3>
                                     <!-- form Community -->
                                     @include('frontend.skinoasis.pages.partner.inc.joinOurCommunity', [
-                                        'cities' => $cities,
+                                        'country' => $country,
                                     ])
                                     <!-- form Community -->
                                 </div>
