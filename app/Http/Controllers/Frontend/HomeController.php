@@ -14,6 +14,7 @@ use App\Models\Product;
 use App\Models\Country;
 use App\Models\City;
 use App\Models\State;
+use App\Models\UserAddress;
 
 use Illuminate\Http\Request;
 use Dymantic\InstagramFeed\Profile;
@@ -288,11 +289,13 @@ class HomeController extends Controller
         $partner->status        = '0';
 
 
+        $userId = auth()->user()->id;
+        $address                = new UserAddress;
         $address->country_id    = $request->country_id2;
         $address->state_id      = $request->state_id2;
-        $address->city_id      = $request->city_id2;
-        $address->address      = $request->address;
-        $address->kodepos      = $request->kodepos;
+        $address->city_id       = $request->city_id2;
+        $address->address       = $request->address;
+        $address->kodepos       = $request->kodepos;
 
 
         dd($partner, $address);
