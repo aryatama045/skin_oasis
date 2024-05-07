@@ -280,7 +280,7 @@ class HomeController extends Controller
         }
 
 
-        dd($mail, $cek_mail );
+        dd($request->email , $mail, $cek_mail );
 
 
         if($cek_mail->email == TRUE){
