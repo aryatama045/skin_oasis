@@ -36,7 +36,7 @@
         <div class="col-sm-4">
             <div class="w-100 label-input-field">
                 <label>{{ localize('Country') }}</label>
-                <select class="select2Address" name="country_id" required>
+                <select class="select2Address" name="country_id1" required>
                     <option value="">{{ localize('Select Country') }}</option>
                     @foreach ($country as $country)
                         <option value="{{ $country->id }}">{{ $country->name }}</option>
@@ -49,7 +49,7 @@
         <div class="col-sm-4">
             <div class="w-100 label-input-field">
                 <label>{{ localize('Province') }}</label>
-                <select class="select2Address" required name="state_id">
+                <select class="select2Address" required name="state_id1">
                     <option value="">{{ localize('Select Province') }}</option>
                 </select>
             </div>
@@ -58,7 +58,7 @@
         <div class="col-sm-4">
             <div class="w-100 label-input-field">
                 <label>{{ localize('City') }}</label>
-                <select class="select2Address" required name="city_id">
+                <select class="select2Address" required name="city_id1">
                     <option value="">{{ localize('Select City') }}</option>
 
                 </select>
@@ -111,13 +111,13 @@
         "use strict";
 
         //  get states on country change
-        $(document).on('change', '[name=country_id]', function() {
-            var country_id = $(this).val();
-            getStates(country_id);
+        $(document).on('change', '[name=country_id1]', function() {
+            var country_id1 = $(this).val();
+            getStates1(country_id1);
         });
 
         //  get states
-        function getStates(country_id) {
+        function getStates1(country_id1) {
             $.ajax({
                 headers: {
                     'X-CSRF-TOKEN': '{{ csrf_token() }}'
@@ -125,23 +125,23 @@
                 url: "{{ route('address.getStates') }}",
                 type: 'POST',
                 data: {
-                    country_id: country_id
+                    country_id: country_id1
                 },
                 success: function(response) {
-                    $('[name="state_id"]').html("");
-                    $('[name="state_id"]').html(JSON.parse(response));
+                    $('[name="state_id1"]').html("");
+                    $('[name="state_id1"]').html(JSON.parse(response));
                 }
             });
         }
 
         ///  get cities on state change
-        $(document).on('change', '[name=state_id]', function() {
-            var state_id = $(this).val();
-            getCities(state_id);
+        $(document).on('change', '[name=state_id1]', function() {
+            var state_id1 = $(this).val();
+            getCities1(state_id1);
         });
 
         //  get cities
-        function getCities(state_id) {
+        function getCities1(state_id1) {
             $.ajax({
                 headers: {
                     'X-CSRF-TOKEN': '{{ csrf_token() }}'
@@ -149,11 +149,11 @@
                 url: "{{ route('address.getCities') }}",
                 type: 'POST',
                 data: {
-                    state_id: state_id
+                    state_id: state_id1
                 },
                 success: function(response) {
-                    $('[name="city_id"]').html("");
-                    $('[name="city_id"]').html(JSON.parse(response));
+                    $('[name="city_id1"]').html("");
+                    $('[name="city_id1"]').html(JSON.parse(response));
                 }
             });
         }
