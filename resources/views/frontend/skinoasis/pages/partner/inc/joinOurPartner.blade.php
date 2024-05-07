@@ -36,24 +36,28 @@
         <div class="col-sm-4">
             <div class="label-input-field">
                 <label>{{ localize('Country') }}</label>
-                <input type="text" name="country" placeholder="{{ localize('You country') }}"
-                    required>
+                <select class="form-control select2" name="country_ids" class="w-100" id="country_ids"
+                    data-toggle="select2" data-placeholder="{{ localize('Select Country') }}" required>
+                </select>
             </div>
         </div>
 
         <div class="col-sm-4">
             <div class="label-input-field">
                 <label>{{ localize('Province') }}</label>
-                <input type="text" name="province" placeholder="{{ localize('You province') }}"
-                    required>
+                <select class="form-control select2" name="state_ids" class="w-100" id="state_ids"
+                    data-toggle="select2" data-placeholder="{{ localize('Select cities') }}" required>
+                </select>
             </div>
         </div>
 
         <div class="col-sm-4">
             <div class="label-input-field">
                 <label>{{ localize('City') }}</label>
-                <input type="text" name="city" placeholder="{{ localize('You city') }}"
+                <select class="form-control select2" name="city_ids" class="w-100" id="city_ids"
+                    data-toggle="select2" data-placeholder="{{ localize('Select cities') }}" multiple
                     required>
+                </select>
             </div>
         </div>
 
