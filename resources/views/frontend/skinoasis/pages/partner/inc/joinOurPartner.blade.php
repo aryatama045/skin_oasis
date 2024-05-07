@@ -38,7 +38,7 @@
                 <label>{{ localize('Country') }}</label>
                 <select class="select2Address" name="country_id" required>
                     <option value="">{{ localize('Select Country') }}</option>
-                    @foreach ($countries as $country)
+                    @foreach ($country as $country)
                         <option value="{{ $country->id }}">{{ $country->name }}</option>
                     @endforeach
                 </select>
