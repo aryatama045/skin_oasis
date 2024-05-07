@@ -241,40 +241,6 @@ class HomeController extends Controller
         }
     }
 
-    #Get State
-    public function getState(Request $request)
-    {
-        $country = $request->country_id;
-        $html = '<option value="">' . localize("Select State") . '</option>';
-
-        if (!is_null($country)) {
-            $state =    State::isActive()->where('country_id', $country)->latest()->get();
-
-            foreach ($state as $states) {
-                $html .= '<option value="' . $states->id . '">' . $states->name . '</option>';
-            }
-        }
-
-        echo json_encode($html);
-    }
-
-    #Get City
-    public function getCity(Request $request)
-    {
-        $state = $request->state_id;
-        $html = '<option value="">' . localize("Select City") . '</option>';
-
-        if (!is_null($state)) {
-            $city =    City::isActive()->where('state_id', $state)->order_by('name', 'ASC')->get();
-
-            foreach ($city as $citys) {
-                $html .= '<option value="' . $citys->id . '">' . $citys->name . '</option>';
-            }
-        }
-
-        echo json_encode($html);
-    }
-
 
     # partner page
     public function partner()
@@ -306,6 +272,11 @@ class HomeController extends Controller
         ]);
 
         $cek_mail = PartnerJoin::where('email', $request->email)->get();
+
+        if($cek_mail){
+            flash(localize('Your Email has register'))->success();
+            return back();
+        }
 
         dd($cek_mail);
         $msg = new PartnerJoin;
