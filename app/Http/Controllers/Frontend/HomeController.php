@@ -273,7 +273,7 @@ class HomeController extends Controller
 
         $cek_mail = DB::table('partner_join')->where('email', $request->email)->get();
 
-        if (!empty($cek_mail)){
+        if ($cek_mail == TRUE){
             $mail = $cek_mail;
         }else{
             $mail = 'empty';
