@@ -273,7 +273,7 @@ class HomeController extends Controller
 
         $cek_mail = DB::table('partner_join')->select('email')->where('email', $request->email)->first();
 
-        if ($cek_mail[0]){
+        if ($cek_mail){
             $mail = 'ok';
         }else{
             $mail = 'kosong';
