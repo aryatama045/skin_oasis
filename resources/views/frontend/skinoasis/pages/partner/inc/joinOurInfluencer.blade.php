@@ -110,15 +110,17 @@
     <script>
         "use strict";
 
-        var parent = '.formInfluencer';
-        $('.select2Inf').select2({
-            dropdownParent: $(parent)
-        });
+        
 
         //  get states on country change
         $(document).on('change', '[name=country_id1]', function() {
             var country_id1 = $(this).val();
             getStates1(country_id1);
+
+            var parent = '.formInfluencer';
+            $('.select2Inf').select2({
+                dropdownParent: $(parent)
+            });
         });
 
         //  get states

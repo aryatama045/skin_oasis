@@ -110,15 +110,17 @@
     <script>
         "use strict";
 
-        var parent = '.formCommunity';
-        $('.select2Comm').select2({
-            dropdownParent: $(parent)
-        });
+        
 
         //  get states on country change
         $(document).on('change', '[name=country_id3]', function() {
             var country_id3 = $(this).val();
             getStates3(country_id3);
+
+            var parent = '.formCommunity';
+            $('.select2Comm').select2({
+                dropdownParent: $(parent)
+            });
         });
 
         //  get states

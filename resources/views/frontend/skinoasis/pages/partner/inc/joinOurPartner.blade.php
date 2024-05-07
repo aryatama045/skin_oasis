@@ -110,15 +110,17 @@
     <script>
         "use strict";
 
-        var parent = '.formPartner';
-        $('.select2Part').select2({
-            dropdownParent: $(parent)
-        });
+        
 
         //  get states on country change
         $(document).on('change', '[name=country_id2]', function() {
             var country_id2 = $(this).val();
             getStates2(country_id2);
+
+            var parent = '.formPartner';
+            $('.select2Part').select2({
+                dropdownParent: $(parent)
+            });
         });
 
         //  get states
