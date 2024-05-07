@@ -39,7 +39,7 @@
                 <select class="form-control select2 w-100" name="country_id"
                 data-toggle="select2" data-placeholder="{{ localize('Select Country') }}"
                 required>
-                    <option value="">{{ localize('Country') }}</option>
+                    <option>{{ localize('Country') }}</option>
                     @foreach ($country as $country)
                         <option value="{{ $country->id }}">{{ $country->name }}</option>
                     @endforeach
