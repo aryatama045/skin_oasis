@@ -5,7 +5,7 @@
     {!! RecaptchaV3::field('recaptcha_token') !!}
     <div class="row g-4">
 
-        <input type="hidden" name="type_join" value="partner" required>
+        <input type="hidden" name="type_join" value="influencer" required>
 
         <div class="col-sm-12">
             <div class="label-input-field">
@@ -36,10 +36,8 @@
         <div class="col-sm-4">
             <div class="w-100 label-input-field">
                 <label>{{ localize('Country') }}</label>
-                <select class="form-control select2 w-100" name="country_id"
-                data-toggle="select2" data-placeholder="{{ localize('Select Country') }}"
-                required style="height: 52px !important;">
-                    <option>{{ localize('Country') }}</option>
+                <select class="select2Address" name="country_id" required>
+                    <option value="">{{ localize('Select Country') }}</option>
                     @foreach ($country as $country)
                         <option value="{{ $country->id }}">{{ $country->name }}</option>
                     @endforeach
@@ -51,9 +49,8 @@
         <div class="col-sm-4">
             <div class="w-100 label-input-field">
                 <label>{{ localize('Province') }}</label>
-                <select class="form-control select2" name="state_id"
-                    style="height: 52px !important;"
-                    data-toggle="select2" data-placeholder="{{ localize('Select cities') }}" required>
+                <select class="select2Address" required name="state_id">
+                    <option value="">{{ localize('Select Province') }}</option>
                 </select>
             </div>
         </div>
@@ -61,9 +58,9 @@
         <div class="col-sm-4">
             <div class="w-100 label-input-field">
                 <label>{{ localize('City') }}</label>
-                <select class="form-control select2 w-100" name="city_id"
-                style="height: 52px !important;"
-                    data-toggle="select2" data-placeholder="{{ localize('Select cities') }}" required>
+                <select class="select2Address" required name="city_id">
+                    <option value="">{{ localize('Select City') }}</option>
+
                 </select>
             </div>
         </div>
