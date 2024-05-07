@@ -273,7 +273,7 @@ class HomeController extends Controller
 
         $cek_mail = PartnerJoin::where('email', $request->email)->get();
 
-        if($cek_mail){
+        if($cek_mail->email == TRUE){
             flash(localize('Your Email has register'))->error();
             return back();
         }
