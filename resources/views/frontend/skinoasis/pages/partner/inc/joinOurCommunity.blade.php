@@ -112,7 +112,7 @@
 
         // runs when the document is ready
         $(document).ready(function() {
-            var parent = '.formCommunity';
+            var parent = '#formCommunity';
             $('.select2Comm').select2({
                 dropdownParent: $(parent)
             });

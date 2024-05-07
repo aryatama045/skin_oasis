@@ -112,7 +112,7 @@
 
         // runs when the document is ready
         $(document).ready(function() {
-            var parent = '.formInfluencer';
+            var parent = '#formInfluencer';
             $('.select2Inf').select2({
                 dropdownParent: $(parent)
             });
