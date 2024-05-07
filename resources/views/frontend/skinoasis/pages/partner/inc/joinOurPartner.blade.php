@@ -98,7 +98,7 @@
         <div class="col-sm-4">
             <div class="label-input-field">
                 <label>Kode Pos</label>
-                <input type="text" name="kode_pos" placeholder="{{ localize('You kode_pos') }}"
+                <input type="text" name="kode_pos" placeholder="{{ localize('You kode pos') }}"
                     required>
             </div>
         </div>
