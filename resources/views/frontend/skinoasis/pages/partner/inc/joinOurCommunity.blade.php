@@ -36,7 +36,7 @@
         <div class="col-sm-4">
             <div class="w-100 label-input-field">
                 <label>{{ localize('Country') }}</label>
-                <select class="select2Address" name="country_id3" required>
+                <select class="select2" name="country_id3" required>
                     <option value="">{{ localize('Select Country') }}</option>
                     @foreach ($country3 as $country)
                         <option value="{{ $country->id }}">{{ $country->name }}</option>
