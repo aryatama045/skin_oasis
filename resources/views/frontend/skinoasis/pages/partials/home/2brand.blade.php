@@ -22,13 +22,14 @@
                 },
                 "900": {
                     "items":5
-                },
-                "1024": {
-                    "items":6
                 }
             }
         }'>
-
+<!-- 
+        ,
+                "1024": {
+                    "items":6
+                } -->
         @foreach($brands as $brandPrd)
             <a class="brand" href="{{ route('products.index') }}?&brand_id={{ $brandPrd->id }}">
                 <img src="{{ uploadedAsset($brandPrd->brand_image) }}" alt="Brand Name">
