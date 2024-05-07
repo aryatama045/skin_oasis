@@ -265,10 +265,10 @@ class HomeController extends Controller
         $html = '<option value="">' . localize("Select City") . '</option>';
 
         if (!is_null($state)) {
-            $state =    City::isActive()->where('state_id', $state)->order_by('name', 'ASC')->get();
+            $city =    City::isActive()->where('state_id', $state)->order_by('name', 'ASC')->get();
 
-            foreach ($state as $states) {
-                $html .= '<option value="' . $states->id . '">' . $states->name . '</option>';
+            foreach ($city as $citys) {
+                $html .= '<option value="' . $citys->id . '">' . $citys->name . '</option>';
             }
         }
 
