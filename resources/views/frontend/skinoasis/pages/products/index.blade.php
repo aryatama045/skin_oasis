@@ -5,7 +5,8 @@
 @endsection
 
 @section('contents')
-<br>
+
+    <br>
     <center>
         <?php $banner = getSetting('banner_header'); ?>
         <div>

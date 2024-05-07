@@ -62,15 +62,11 @@
 
 @section('contents')
 
-    <!-- <div class="page-header text-center" style="background-image: url('{{ staticAsset('frontend/skinoasis/assets/images/page-header-bg.jpg') }}')">
-        <div class="container">
-            <h1 class="page-title"> <span> @yield('title', getSetting('system_title'))</span></h1>
-        </div>
-    </div> -->
     <br>
     <center>
+        <?php $banner = getSetting('banner_header'); ?>
         <div>
-            <img src="{{ staticAsset('frontend/skinoasis/assets/images/page-header-bg.png') }}" style="max-width: 83%">
+            <img  src="{{ uploadedAsset($banner) }}" style="max-width: 90%">
         </div>
     </center><br><br>
 
