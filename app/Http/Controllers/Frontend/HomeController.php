@@ -289,8 +289,8 @@ class HomeController extends Controller
         $partner->status        = '0';
         $partner->save();
 
-        $partner->last();
-        dd($partner);
+        $partner_id = $partner->id;
+        dd($partner_id);
 
         $userId = auth()->user()->id;
         $address                = new UserAddress;
