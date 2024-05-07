@@ -283,17 +283,11 @@ class HomeController extends Controller
 
         $pagesContent = Partner::orderBy('id','ASC')->groupBy('title')->get();
 
-        $country = Country::get();
-
-        $city = City::get();
-
-        $state = State::get();
+        $country = Country::isActive()->get();
 
         return getView('pages.partner.index', ['pages' => $pages,
                 'pagesContent' => $pagesContent,
-                'country' => $country,
-                'city' => $city,
-                'state'    => $state
+                'country' => $country
             ]);
     }
 
