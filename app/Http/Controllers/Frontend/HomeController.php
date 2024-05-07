@@ -290,10 +290,11 @@ class HomeController extends Controller
         $partner->save();
 
         $partner_id = $partner->id;
-        dd($partner_id);
+
 
         $userId = auth()->user()->id;
         $address                = new UserAddress;
+        $address->partner_join_id = $request->partner_id;
         $address->country_id    = $request->country_id2;
         $address->state_id      = $request->state_id2;
         $address->city_id       = $request->city_id2;
@@ -301,7 +302,7 @@ class HomeController extends Controller
         $address->kodepos       = $request->kodepos;
 
 
-        dd($partner, $address);
+        dd($address);
 
         // $partner->save();
 
