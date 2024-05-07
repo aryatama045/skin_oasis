@@ -274,13 +274,15 @@ class HomeController extends Controller
         $cek_mail = DB::table('partner_join')->where('email', $request->email)->get();
 
         if ($cek_mail == TRUE){
-            $mail = $cek_mail;
+            $mail = 'empty';
         }else{
             $mail = 'empty';
         }
 
 
-        dd($mail);
+        dd($mail, $cek_mail );
+
+
         if($cek_mail->email == TRUE){
             flash(localize('Your Email has register'))->error();
             return back();
