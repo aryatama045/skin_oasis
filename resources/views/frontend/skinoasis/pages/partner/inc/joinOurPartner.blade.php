@@ -36,7 +36,7 @@
         <div class="col-sm-4">
             <div class="label-input-field">
                 <label>{{ localize('Country') }}</label>
-                <select class="form-control select2" name="country_ids" class="w-100" id="country_ids"
+                <select class="form-control select2" name="country_id" class="w-100" id="country_id"
                     data-toggle="select2" data-placeholder="{{ localize('Select Country') }}" required>
                 </select>
             </div>
@@ -45,7 +45,7 @@
         <div class="col-sm-4">
             <div class="label-input-field">
                 <label>{{ localize('Province') }}</label>
-                <select class="form-control select2" name="state_ids" class="w-100" id="state_ids"
+                <select class="form-control select2" name="state_id" class="w-100" id="state_id"
                     data-toggle="select2" data-placeholder="{{ localize('Select cities') }}" required>
                 </select>
             </div>
@@ -54,9 +54,8 @@
         <div class="col-sm-4">
             <div class="label-input-field">
                 <label>{{ localize('City') }}</label>
-                <select class="form-control select2" name="city_ids" class="w-100" id="city_ids"
-                    data-toggle="select2" data-placeholder="{{ localize('Select cities') }}" multiple
-                    required>
+                <select class="form-control select2" name="city_id" class="w-100" id="city_id"
+                    data-toggle="select2" data-placeholder="{{ localize('Select cities') }}" required>
                 </select>
             </div>
         </div>
@@ -100,3 +99,58 @@
     <button type="submit"
         class="btn btn-primary btn-md rounded-1 mt-6">{{ localize('Gabung Sekarang') }}</button>
 </form>
+
+
+@section('scripts')
+    <script>
+        "use strict";
+
+        //  get states on country change
+        $(document).on('change', '[name=country_id]', function() {
+            var country_id = $(this).val();
+            getState(country_id);
+        });
+
+        //  get state
+        function getState(country_id) {
+            $.ajax({
+                headers: {
+                    'X-CSRF-TOKEN': '{{ csrf_token() }}'
+                },
+                url: "{{ route('partner.getState') }}",
+                type: 'POST',
+                data: {
+                    country_id: country_id
+                },
+                success: function(response) {
+                    $('[name="state_id"]').html("");
+                    $('[name="state_id"]').html(JSON.parse(response));
+                }
+            });
+        }
+
+        //  get states on country change
+        $(document).on('change', '[name=state_id]', function() {
+            var state_id = $(this).val();
+            getCity(state_id);
+        });
+
+        //  get state
+        function getCity(state_id) {
+            $.ajax({
+                headers: {
+                    'X-CSRF-TOKEN': '{{ csrf_token() }}'
+                },
+                url: "{{ route('partner.getCity') }}",
+                type: 'POST',
+                data: {
+                    state_id: state_id
+                },
+                success: function(response) {
+                    $('[name="city_id"]').html("");
+                    $('[name="city_id"]').html(JSON.parse(response));
+                }
+            });
+        }
+    </script>
+@endsection

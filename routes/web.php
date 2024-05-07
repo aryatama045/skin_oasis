@@ -117,6 +117,9 @@ Route::post('/influencer-join', [HomeController::class, 'influencer_store'])->na
 #community Join
 Route::post('/community-join', [HomeController::class, 'community_store'])->name('Community.store');
 
+#get Country, State, City
+Route::post('/state', [HomeController::class, 'getState'])->name('partner.getState');
+
 # Subscribed Users
 Route::post('/subscribers', [SubscribersController::class, 'store'])->name('subscribe.store');
 
