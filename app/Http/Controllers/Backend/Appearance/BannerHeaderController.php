@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Backend\Appearance;
 use App\Http\Controllers\Controller;
 use App\Models\Product;
 
-class BannerSectionTwoController extends Controller
+class BannerHeaderController extends Controller
 {
     # construct
     public function __construct()
