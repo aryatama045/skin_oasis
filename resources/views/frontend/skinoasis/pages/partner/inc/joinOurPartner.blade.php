@@ -40,6 +40,16 @@
                     data-toggle="select2" data-placeholder="{{ localize('Select Country') }}" required>
                 </select>
             </div>
+
+            <div class="w-100 label-input-field">
+                <label>{{ localize('Country') }}</label>
+                <select class="select2Address" name="country_id" required>
+                    <option value="">{{ localize('Select Country') }}</option>
+                    @foreach ($country as $country)
+                        <option value="{{ $country->id }}">{{ $country->name }}</option>
+                    @endforeach
+                </select>
+            </div>
         </div>
 
         <div class="col-sm-4">
@@ -108,11 +118,11 @@
         //  get states on country change
         $(document).on('change', '[name=country_id]', function() {
             var country_id = $(this).val();
-            getState(country_id);
+            getStates(country_id);
         });
 
-        //  get state
-        function getState(country_id) {
+        //  get states
+        function getStates(country_id) {
             $.ajax({
                 headers: {
                     'X-CSRF-TOKEN': '{{ csrf_token() }}'
@@ -129,14 +139,14 @@
             });
         }
 
-        //  get states on country change
+        ///  get cities on state change
         $(document).on('change', '[name=state_id]', function() {
             var state_id = $(this).val();
-            getCity(state_id);
+            getCities(state_id);
         });
 
-        //  get state
-        function getCity(state_id) {
+        //  get cities
+        function getCities(state_id) {
             $.ajax({
                 headers: {
                     'X-CSRF-TOKEN': '{{ csrf_token() }}'
