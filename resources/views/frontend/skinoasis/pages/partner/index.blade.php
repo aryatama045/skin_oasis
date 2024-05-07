@@ -110,4 +110,178 @@
             </div>
         </div>
     <!--page section end-->
+  
+@endsection
+
+
+@section('scripts')
+    <script>
+        "use strict";
+
+        // runs when the document is ready
+        $(document).ready(function() {
+            var parent = '#formInfluencer';
+            $('.select2Inf').select2({
+                dropdownParent: $(parent)
+            });
+
+            var parent2 = '#formPartner';
+            $('.select2Part').select2({
+                dropdownParent: $(parent2)
+            });
+
+            var parent3 = '#formCommunity';
+            $('.select2Comm').select2({
+                dropdownParent: $(parent3)
+            });
+        });
+
+        //  get states on country change
+        $(document).on('change', '[name=country_id1]', function() {
+            var country_id1 = $(this).val();
+            getStates1(country_id1);
+        });
+
+        //  get states
+        function getStates1(country_id1) {
+            $.ajax({
+                headers: {
+                    'X-CSRF-TOKEN': '{{ csrf_token() }}'
+                },
+                url: "{{ route('address.getStates') }}",
+                type: 'POST',
+                data: {
+                    country_id: country_id1
+                },
+                success: function(response) {
+                    $('[name="state_id1"]').html("");
+                    $('[name="state_id1"]').html(JSON.parse(response));
+                }
+            });
+        }
+
+        ///  get cities on state change
+        $(document).on('change', '[name=state_id1]', function() {
+            var state_id1 = $(this).val();
+            getCities1(state_id1);
+        });
+
+        //  get cities
+        function getCities1(state_id1) {
+            $.ajax({
+                headers: {
+                    'X-CSRF-TOKEN': '{{ csrf_token() }}'
+                },
+                url: "{{ route('address.getCities') }}",
+                type: 'POST',
+                data: {
+                    state_id: state_id1
+                },
+                success: function(response) {
+                    $('[name="city_id1"]').html("");
+                    $('[name="city_id1"]').html(JSON.parse(response));
+                }
+            });
+        }
+
+
+        //  get states on country change
+        $(document).on('change', '[name=country_id2]', function() {
+            var country_id2 = $(this).val();
+            getStates2(country_id2);
+
+        });
+
+        //  get states
+        function getStates2(country_id2) {
+            $.ajax({
+                headers: {
+                    'X-CSRF-TOKEN': '{{ csrf_token() }}'
+                },
+                url: "{{ route('address.getStates') }}",
+                type: 'POST',
+                data: {
+                    country_id: country_id2
+                },
+                success: function(response) {
+                    $('[name="state_id2"]').html("");
+                    $('[name="state_id2"]').html(JSON.parse(response));
+                }
+            });
+        }
+
+        ///  get cities on state change
+        $(document).on('change', '[name=state_id2]', function() {
+            var state_id2 = $(this).val();
+            getCities2(state_id2);
+        });
+
+        //  get cities
+        function getCities2(state_id2) {
+            $.ajax({
+                headers: {
+                    'X-CSRF-TOKEN': '{{ csrf_token() }}'
+                },
+                url: "{{ route('address.getCities') }}",
+                type: 'POST',
+                data: {
+                    state_id: state_id2
+                },
+                success: function(response) {
+                    $('[name="city_id2"]').html("");
+                    $('[name="city_id2"]').html(JSON.parse(response));
+                }
+            });
+        }
+
+
+        //  get states on country change
+        $(document).on('change', '[name=country_id3]', function() {
+            var country_id3 = $(this).val();
+            getStates3(country_id3);
+
+        });
+
+        //  get states
+        function getStates3(country_id3) {
+            $.ajax({
+                headers: {
+                    'X-CSRF-TOKEN': '{{ csrf_token() }}'
+                },
+                url: "{{ route('address.getStates') }}",
+                type: 'POST',
+                data: {
+                    country_id: country_id3
+                },
+                success: function(response) {
+                    $('[name="state_id3"]').html("");
+                    $('[name="state_id3"]').html(JSON.parse(response));
+                }
+            });
+        }
+
+        ///  get cities on state change
+        $(document).on('change', '[name=state_id3]', function() {
+            var state_id3 = $(this).val();
+            getCities3(state_id3);
+        });
+
+        //  get cities
+        function getCities(state_id3) {
+            $.ajax({
+                headers: {
+                    'X-CSRF-TOKEN': '{{ csrf_token() }}'
+                },
+                url: "{{ route('address.getCities') }}",
+                type: 'POST',
+                data: {
+                    state_id: state_id3
+                },
+                success: function(response) {
+                    $('[name="city_id3"]').html("");
+                    $('[name="city_id3"]').html(JSON.parse(response));
+                }
+            });
+        }
+    </script>
 @endsection
