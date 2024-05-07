@@ -112,9 +112,9 @@
 
         // runs when the document is ready
         $(document).ready(function() {
-            var parent = '#formPartner';
+            var parent2 = '#formPartner';
             $('.select2Part').select2({
-                dropdownParent: $(parent)
+                dropdownParent: $(parent2)
             });
         });
 
@@ -150,7 +150,7 @@
         });
 
         //  get cities
-        function getCities2(state_id) {
+        function getCities2(state_id2) {
             $.ajax({
                 headers: {
                     'X-CSRF-TOKEN': '{{ csrf_token() }}'
