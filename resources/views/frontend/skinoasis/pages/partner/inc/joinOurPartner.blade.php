@@ -36,8 +36,9 @@
         <div class="col-sm-4">
             <div class="w-100 label-input-field">
                 <label>{{ localize('Country') }}</label>
-                <select class="form-control select2 w-100" name="country_id" required>
-                    <option value="">{{ localize('Select Country') }}</option>
+                <select class="form-control select2 w-100" name="country_id"
+                data-toggle="select2" data-placeholder="{{ localize('Select cities') }}"
+                required>
                     @foreach ($country as $country)
                         <option value="{{ $country->id }}">{{ $country->name }}</option>
                     @endforeach
@@ -56,9 +57,9 @@
         </div>
 
         <div class="col-sm-4">
-            <div class="label-input-field">
+            <div class="w-100 label-input-field">
                 <label>{{ localize('City') }}</label>
-                <select class="form-control select2" name="city_id"
+                <select class="form-control select2 w-100" name="city_id"
                     data-toggle="select2" data-placeholder="{{ localize('Select cities') }}" required>
                 </select>
             </div>

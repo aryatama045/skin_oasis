@@ -82,7 +82,7 @@
                             </div><!-- .End .tab-pane -->
 
                             <div class="tab-pane fade" id="partner-join-our-partner" role="tabpanel" aria-labelledby="partner-join-our-partner">
-                                <div class="product-desc-content">
+                                <div class="product-desc-content gstore-product-quick-view">
                                     <h3 class="text-center">LET'S BECOME OUR PARTNER</h3>
                                     <!-- form Partner -->
                                     @include('frontend.skinoasis.pages.partner.inc.joinOurPartner', [
