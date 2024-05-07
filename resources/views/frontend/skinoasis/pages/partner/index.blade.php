@@ -267,7 +267,7 @@
         });
 
         //  get cities
-        function getCities(state_id3) {
+        function getCities3(state_id3) {
             $.ajax({
                 headers: {
                     'X-CSRF-TOKEN': '{{ csrf_token() }}'
