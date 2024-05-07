@@ -9,7 +9,7 @@
     <center>
         <?php $banner = getSetting('banner_header'); ?>
         <div>
-            <img  src="{{ uploadedAsset($banner) }}" style="max-width: 83%">
+            <img  src="{{ uploadedAsset($banner) }}" style="max-width: 90%">
         </div>
     </center><br><br>
 
