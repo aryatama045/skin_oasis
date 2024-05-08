@@ -52,7 +52,7 @@
                                     <figure class="entry-media">
                                         <a href="single.html">
                                             <img src=""
-                                            alt="{{ $product->collectLocalization('name') }}">
+                                            alt="">
                                         </a>
                                     </figure>
                                 </div>
