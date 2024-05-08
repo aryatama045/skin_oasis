@@ -320,16 +320,37 @@ class HomeController extends Controller
             'score.min' => localize('Google recaptcha validation error, seems like you are not a human.')
         ]);
 
-        $msg = new PartnerJoin;
-        $msg->user_id       = '';
-        $msg->name          = $request->name;
-        $msg->email         = $request->email;
-        $msg->phone         = $request->phone;
-        $msg->type_join     = $request->type_join;
-        $msg->status        = '0';
-        // $msg->save();
+        $cek_mail = DB::table('partner_join')->select('email')->where('email', $request->email)->first();
 
-        dd($msg);
+
+        if($cek_mail){
+            flash(localize('Your Email has register'))->error();
+            return back();
+        }
+
+        $partner = new PartnerJoin;
+        $partner->user_id       = '';
+        $partner->name          = $request->name;
+        $partner->email         = $request->email;
+        $partner->phone         = $request->phone;
+        $partner->type_join     = $request->type_join;
+        $partner->status        = '0';
+        $partner->save();
+
+        $partner_id = $partner->id;
+
+
+        $userId = auth()->user()->id;
+        $address                    = new UserAddress;
+        $address->partner_join_id   = $partner_id;
+        $address->country_id        = $request->country_id1;
+        $address->state_id          = $request->state_id1;
+        $address->city_id           = $request->city_id1;
+        $address->address           = $request->address;
+        $address->kodepos           = $request->kodepos;
+        $address->save();
+
+
         flash(localize('Your message has been sent'))->success();
         return back();
     }
@@ -347,16 +368,37 @@ class HomeController extends Controller
             'score.min' => localize('Google recaptcha validation error, seems like you are not a human.')
         ]);
 
-        $msg = new PartnerJoin;
-        $msg->user_id       = '';
-        $msg->name          = $request->name;
-        $msg->email         = $request->email;
-        $msg->phone         = $request->phone;
-        $msg->type_join     = $request->type_join;
-        $msg->status        = '0';
-        // $msg->save();
+        $cek_mail = DB::table('partner_join')->select('email')->where('email', $request->email)->first();
 
-        dd($msg);
+
+        if($cek_mail){
+            flash(localize('Your Email has register'))->error();
+            return back();
+        }
+
+        $partner = new PartnerJoin;
+        $partner->user_id       = '';
+        $partner->name          = $request->name;
+        $partner->email         = $request->email;
+        $partner->phone         = $request->phone;
+        $partner->type_join     = $request->type_join;
+        $partner->status        = '0';
+        $partner->save();
+
+        $partner_id = $partner->id;
+
+
+        $userId = auth()->user()->id;
+        $address                    = new UserAddress;
+        $address->partner_join_id   = $partner_id;
+        $address->country_id        = $request->country_id3;
+        $address->state_id          = $request->state_id3;
+        $address->city_id           = $request->city_id3;
+        $address->address           = $request->address;
+        $address->kodepos           = $request->kodepos;
+        $address->save();
+
+
         flash(localize('Your message has been sent'))->success();
         return back();
     }
