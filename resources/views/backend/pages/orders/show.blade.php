@@ -81,6 +81,18 @@
                                         </select>
                                     </div>
                                 </div>
+                                <div class="col-auto col-lg-4">
+                                    Transfer Pesanan ke Mitra : 
+                                    <div class="input-group">
+                                        <select class="form-select select2" name="payment_status"
+                                            data-minimum-results-for-search="Infinity" id="update_payment_status">
+                                            <option value="0">-- Pilih Mitra --</option>
+                                            @foreach ($mitra as $key)
+                                                <option value="$key->id">{{$key->name}}</option>
+                                            @endforeach
+                                        </select>
+                                    </div>
+                                </div>
                                 <div class="col-auto">
                                     <a href="{{ route('admin.orders.downloadInvoice', $order->id) }}"
                                         class="btn btn-primary">

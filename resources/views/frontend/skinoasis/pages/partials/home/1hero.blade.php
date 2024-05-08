@@ -4,22 +4,42 @@
 
     @foreach ($sliders as $slider)
         @if ($slider->display_on == 1)
-        <div class="intro-slide " style="background-image: url({{ uploadedAsset($slider->image) }});">
-            <div class="container">
-                <div class="intro-content text-center" data-aos="fade-up">
-                    <!-- <h3 class="intro-subtitle cross-txt text-primary">{{ $slider->sub_title }}</h3> -->
-                    <h1 class="intro-title text-white">{{ $slider->title }}</h1><!-- End .intro-title -->
-                    <div class="intro-text text-white">{{ $slider->text }}</div><!-- End .intro-text -->
+            @if($slider->link != "")
+                <iframe src="https://www.youtube.com/embed/GWlxTdSM8I4?autoplay=1" frameborder="0" allow="autoplay">
+                    <div class="container">
+                        <div class="intro-content text-center" data-aos="fade-up">
+                            <!-- <h3 class="intro-subtitle cross-txt text-primary">{{ $slider->sub_title }}</h3> -->
+                            <h1 class="intro-title text-white">{{ $slider->title }}</h1><!-- End .intro-title -->
+                            <div class="intro-text text-white">{{ $slider->text }}</div><!-- End .intro-text -->
 
 
-                    <div class="intro-action cross-txt">
-                        <a href="{{ $slider->link }}" class="btn btn-outline-white">
-                            <span>Discover More</span>
-                        </a>
+                            <div class="intro-action cross-txt">
+                                <a href="{{ $slider->link }}" class="btn btn-outline-white">
+                                    <span>Discover More</span>
+                                </a>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div><!-- End .intro-content -->
-        </div><!-- End .intro-slide -->
+                </iframe>
+            @else
+                <div class="intro-slide " style="background-image: url({{ uploadedAsset($slider->image) }});">
+                    <div class="container">
+                        <div class="intro-content text-center" data-aos="fade-up">
+                            <!-- <h3 class="intro-subtitle cross-txt text-primary">{{ $slider->sub_title }}</h3> -->
+                            <h1 class="intro-title text-white">{{ $slider->title }}</h1><!-- End .intro-title -->
+                            <div class="intro-text text-white">{{ $slider->text }}</div><!-- End .intro-text -->
+
+
+                            <div class="intro-action cross-txt">
+                                <a href="{{ $slider->link }}" class="btn btn-outline-white">
+                                    <span>Discover More</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div><!-- End .intro-content -->
+                </div><!-- End .intro-slide -->
+            @endif
+        
         @endif
     @endforeach
     </div><!-- End .intro-slider owl-carousel owl-simple -->
