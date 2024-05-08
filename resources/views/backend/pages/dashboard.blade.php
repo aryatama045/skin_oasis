@@ -683,6 +683,35 @@
             </div>
         </section>
     @endcan
+
+    <section class="tt-section pt-4">
+        <div class="container">
+            <div class="row mb-4">
+                <div class="col-12">
+                    <div class="card tt-page-header">
+                        <div class="card-body d-lg-flex align-items-center justify-content-lg-between">
+                            <div class="tt-page-title">
+                                <h2 class="h5 mb-lg-0">{{ localize('Dokter Dashboard') }}</h2>
+                            </div>
+                            <div class="tt-action">
+
+                                @can('manage_orders')
+                                    <a href="{{ route('admin.orders.index') }}" class="btn btn-secondary"><i
+                                            data-feather="shopping-cart" class="me-2"></i>{{ localize('Manage Sales') }}</a>
+                                @endcan
+
+                                @can('add_products')
+                                    <a href="{{ route('admin.products.create') }}" class="btn btn-primary ms-2"><i
+                                            data-feather="plus" class="me-2"></i>
+                                        {{ localize('Add Product') }}</a>
+                                @endcan
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 @endsection
 
 @section('scripts')
