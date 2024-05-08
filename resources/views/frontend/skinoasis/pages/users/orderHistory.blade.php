@@ -51,7 +51,7 @@
                                 <div class="col-md-2">
                                     <figure class="entry-media">
                                         <a href="single.html">
-                                            <img src="{{ uploadedAsset($product->thumbnail_image) }}"
+                                            <img src=""
                                             alt="{{ $product->collectLocalization('name') }}">
                                         </a>
                                     </figure>
