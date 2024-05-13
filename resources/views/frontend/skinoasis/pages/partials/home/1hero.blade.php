@@ -54,7 +54,7 @@
 
     @foreach ($sliders as $slider)
         @if ($slider->display_on == 1)
-<<<<<<< HEAD
+
             @if($slider->link != "")
                 <iframe src="https://www.youtube.com/embed/GWlxTdSM8I4?autoplay=1" frameborder="0" allow="autoplay">
                     <div class="container">
@@ -90,8 +90,7 @@
                     </div><!-- End .intro-content -->
                 </div><!-- End .intro-slide -->
             @endif
-        
-=======
+
         <div class="intro-slide " style="background-image: url({{ uploadedAsset($slider->image) }});">
 
             @if (!empty($slider->link))
@@ -117,7 +116,6 @@
                 </div>
             </div><!-- End .intro-content -->
         </div><!-- End .intro-slide -->
->>>>>>> 0319a97270abc663222d5ef788676a10b6a160d1
         @endif
     @endforeach
     </div><!-- End .intro-slider owl-carousel owl-simple -->
