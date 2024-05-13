@@ -70,12 +70,12 @@
                                                                     class="me-2"></i>{{ localize('Edit') }}
                                                             </a>
 
-                                                            <a href="#" class="dropdown-item confirm-delete"
+                                                            <!-- <a href="#" class="dropdown-item confirm-delete"
                                                                 data-href="{{ route('admin.appearance.homepage.deleteBannerOne', $banner->id) }}"
                                                                 title="{{ localize('Delete') }}">
                                                                 <i data-feather="trash-2" class="me-2"></i>
                                                                 {{ localize('Delete') }}
-                                                            </a>
+                                                            </a> -->
                                                         </div>
                                                     </div>
                                                 </td>
@@ -87,10 +87,9 @@
                         </div>
                     </div>
 
-                    <form action="{{ route('admin.appearance.homepage.storeBannerOne') }}" method="POST"
+                    <!-- <form action="{{ route('admin.appearance.homepage.storeBannerOne') }}" method="POST"
                         enctype="multipart/form-data">
                         @csrf
-                        <!--slider info start-->
                         <div class="card mb-4">
                             <div class="card-body">
                                 <h5 class="mb-4">{{ localize('Add New Banner') }}</h5>
@@ -105,7 +104,7 @@
                                     <label class="form-label">{{ localize('Image') }}</label>
                                     <div class="tt-image-drop rounded">
                                         <span class="fw-semibold">{{ localize('Choose Banner Image') }}</span>
-                                        <!-- choose media -->
+
                                         <div class="tt-product-thumb show-selected-files mt-3">
                                             <div class="avatar avatar-xl cursor-pointer choose-media"
                                                 data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom"
@@ -116,12 +115,11 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <!-- choose media -->
+
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <!--slider info end-->
 
 
                         <div class="row">
@@ -133,7 +131,7 @@
                                 </div>
                             </div>
                         </div>
-                    </form>
+                    </form> -->
                 </div>
 
                 <!--right sidebar-->

@@ -14,12 +14,14 @@
 
 @section('contents')
 
-    <br>
+<br>
     <center>
+        <?php $banner = getSetting('banner_header'); ?>
         <div>
-            <img src="{{ staticAsset('frontend/skinoasis/assets/images/page-header-bg.png') }}" style="max-width: 83%">
+            <img  src="{{ uploadedAsset($banner) }}" style="max-width: 83%">
         </div>
-    </center><br>
+    </center><br><br>
+
 
     <!--breadcrumb-->
     @include('frontend.skinoasis.inc.breadcrumb')
@@ -68,29 +70,35 @@
 
 
                             <div class="tab-pane fade" id="partner-join-our-influencer" role="tabpanel" aria-labelledby="partner-join-our-influencer">
-                                <div class="product-desc-content">
+                                <div class="addAddressModal" id="formInfluencer">
                                     <h3 class="text-center mt-6 mb-5">LET'S BECOME OUR INFLUENCER</h3>
                                     <!-- form influencer -->
-                                    @include('frontend.skinoasis.pages.partner.inc.joinOurInfluencer')
+                                    @include('frontend.skinoasis.pages.partner.inc.joinOurInfluencer', [
+                                        'country' => $country,
+                                    ])
                                     <!-- form influencer -->
 
                                 </div>
                             </div><!-- .End .tab-pane -->
 
                             <div class="tab-pane fade" id="partner-join-our-partner" role="tabpanel" aria-labelledby="partner-join-our-partner">
-                                <div class="product-desc-content">
+                                <div class="addAddressModal" id="formPartner">
                                     <h3 class="text-center">LET'S BECOME OUR PARTNER</h3>
                                     <!-- form Partner -->
-                                    @include('frontend.skinoasis.pages.partner.inc.joinOurPartner')
+                                    @include('frontend.skinoasis.pages.partner.inc.joinOurPartner', [
+                                        'country2' => $country,
+                                    ])
                                     <!-- form Partner -->
                                 </div>
                             </div><!-- .End .tab-pane -->
 
                             <div class="tab-pane fade" id="partner-join-our-community" role="tabpanel" aria-labelledby="partner-join-our-community">
-                                <div class="product-desc-content">
+                                <div class="addAddressModal" id="formCommunity">
                                     <h3 class="text-center">LET'S BECOME OUR COMMUNITY</h3>
                                     <!-- form Community -->
-                                    @include('frontend.skinoasis.pages.partner.inc.joinOurCommunity')
+                                    @include('frontend.skinoasis.pages.partner.inc.joinOurCommunity', [
+                                        'country3' => $country,
+                                    ])
                                     <!-- form Community -->
                                 </div>
                             </div><!-- .End .tab-pane -->
@@ -102,4 +110,184 @@
             </div>
         </div>
     <!--page section end-->
+  
+@endsection
+
+
+@section('scripts')
+    <script>
+        "use strict";
+
+        // runs when the document is ready
+        $(document).ready(function() {
+            var parent = '#formInfluencer';
+            $('.select2Inf').select2({
+                dropdownParent: $(parent)
+            });
+
+            var parent2 = '#formPartner';
+            $('.select2Part').select2({
+                dropdownParent: $(parent2)
+            });
+
+            var parent3 = '#formCommunity';
+            $('.select2Comm').select2({
+                dropdownParent: $(parent3)
+            });
+        });
+
+    //# Influencer
+        //  get states on country change
+        $(document).on('change', '[name=country_id1]', function() {
+            var country_id1 = $(this).val();
+            getStates1(country_id1);
+        });
+
+        //  get states
+        function getStates1(country_id1) {
+            $.ajax({
+                headers: {
+                    'X-CSRF-TOKEN': '{{ csrf_token() }}'
+                },
+                url: "{{ route('address.getStates') }}",
+                type: 'POST',
+                data: {
+                    country_id: country_id1
+                },
+                success: function(response) {
+                    $('[name="state_id1"]').html("");
+                    $('[name="state_id1"]').html(JSON.parse(response));
+                }
+            });
+        }
+
+        ///  get cities on state change
+        $(document).on('change', '[name=state_id1]', function() {
+            var state_id1 = $(this).val();
+            getCities1(state_id1);
+        });
+
+        //  get cities
+        function getCities1(state_id1) {
+            $.ajax({
+                headers: {
+                    'X-CSRF-TOKEN': '{{ csrf_token() }}'
+                },
+                url: "{{ route('address.getCities') }}",
+                type: 'POST',
+                data: {
+                    state_id: state_id1
+                },
+                success: function(response) {
+                    $('[name="city_id1"]').html("");
+                    $('[name="city_id1"]').html(JSON.parse(response));
+                }
+            });
+        }
+    //#End Influencer
+
+    //# Partner
+        //  get states on country change
+        $(document).on('change', '[name=country_id2]', function() {
+            var country_id2 = $(this).val();
+            getStates2(country_id2);
+
+        });
+
+        //  get states
+        function getStates2(country_id2) {
+            $.ajax({
+                headers: {
+                    'X-CSRF-TOKEN': '{{ csrf_token() }}'
+                },
+                url: "{{ route('address.getStates') }}",
+                type: 'POST',
+                data: {
+                    country_id: country_id2
+                },
+                success: function(response) {
+                    $('[name="state_id2"]').html("");
+                    $('[name="state_id2"]').html(JSON.parse(response));
+                }
+            });
+        }
+
+        ///  get cities on state change
+        $(document).on('change', '[name=state_id2]', function() {
+            var state_id2 = $(this).val();
+            getCities2(state_id2);
+        });
+
+        //  get cities
+        function getCities2(state_id2) {
+            $.ajax({
+                headers: {
+                    'X-CSRF-TOKEN': '{{ csrf_token() }}'
+                },
+                url: "{{ route('address.getCities') }}",
+                type: 'POST',
+                data: {
+                    state_id: state_id2
+                },
+                success: function(response) {
+                    $('[name="city_id2"]').html("");
+                    $('[name="city_id2"]').html(JSON.parse(response));
+                }
+            });
+        }
+    //#End Partner
+
+    //# Community
+        //  get states on country change
+        $(document).on('change', '[name=country_id3]', function() {
+            var country_id3 = $(this).val();
+            getStates3(country_id3);
+
+        });
+
+        //  get states
+        function getStates3(country_id3) {
+            $.ajax({
+                headers: {
+                    'X-CSRF-TOKEN': '{{ csrf_token() }}'
+                },
+                url: "{{ route('address.getStates') }}",
+                type: 'POST',
+                data: {
+                    country_id: country_id3
+                },
+                success: function(response) {
+                    $('[name="state_id3"]').html("");
+                    $('[name="state_id3"]').html(JSON.parse(response));
+                }
+            });
+        }
+
+        ///  get cities on state change
+        $(document).on('change', '[name=state_id3]', function() {
+            var state_id3 = $(this).val();
+            getCities3(state_id3);
+        });
+
+        //  get cities
+        function getCities3(state_id3) {
+            $.ajax({
+                headers: {
+                    'X-CSRF-TOKEN': '{{ csrf_token() }}'
+                },
+                url: "{{ route('address.getCities') }}",
+                type: 'POST',
+                data: {
+                    state_id: state_id3
+                },
+                success: function(response) {
+                    $('[name="city_id3"]').html("");
+                    $('[name="city_id3"]').html(JSON.parse(response));
+                }
+            });
+        }
+    
+    //# End Community
+
+    </script>
 @endsection

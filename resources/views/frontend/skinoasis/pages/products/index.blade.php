@@ -5,10 +5,12 @@
 @endsection
 
 @section('contents')
+
     <br>
     <center>
+        <?php $banner = getSetting('banner_header'); ?>
         <div>
-            <img src="{{ staticAsset('frontend/skinoasis/assets/images/page-header-bg.png') }}" style="max-width: 83%">
+            <img  src="{{ uploadedAsset($banner) }}" style="max-width: 90%">
         </div>
     </center><br><br>
 

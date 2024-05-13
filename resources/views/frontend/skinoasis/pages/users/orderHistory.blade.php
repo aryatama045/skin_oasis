@@ -47,108 +47,110 @@
                             @forelse ($detail_order as $key => $item)
 
                             @php $product = $item->product_variation->product; @endphp
-                            <div class="row align-items-center">
-                                <div class="col-md-2">
-                                    <figure class="entry-media">
-                                        <a href="single.html">
-                                            <img src="{{ uploadedAsset($product->thumbnail_image) }}"
-                                            alt="{{ $product->collectLocalization('name') }}">
-                                        </a>
-                                    </figure>
-                                </div>
+                                @if ($product)
+                                <div class="row align-items-center">
+                                    <div class="col-md-2">
+                                        <figure class="entry-media">
+                                            <a href="single.html">
+                                                <img src="{{ uploadedAsset($product->thumbnail_image) }}"
+                                                alt="{{ $product->collectLocalization('name') }}">
+                                            </a>
+                                        </figure>
+                                    </div>
 
-                                <div class="col-md-4">
-                                    <div class="entry-body p-5">
-                                        <h3 class="entry-title mt-2">
-                                            <a href="{{ route('products.show', $product->slug) }}">{{ $product->collectLocalization('name') }}</a>
-                                        </h3>
+                                    <div class="col-md-4">
+                                        <div class="entry-body p-5">
+                                            <h3 class="entry-title mt-2">
+                                                <a href="{{ route('products.show', $product->slug) }}">{{ $product->collectLocalization('name') }}</a>
+                                            </h3>
 
-                                        <div class="entry-cats">
-                                            @foreach (generateVariationOptions($item->product_variation->combinations) as $variation)
-                                                <span class="fs-xs">
-                                                    {{ $variation['name'] }}:
-                                                    @foreach ($variation['values'] as $value)
-                                                        {{ $value['name'] }}
-                                                    @endforeach
-                                                    @if (!$loop->last)
-                                                        ,
-                                                    @endif
+                                            <div class="entry-cats">
+                                                @foreach (generateVariationOptions($item->product_variation->combinations) as $variation)
+                                                    <span class="fs-xs">
+                                                        {{ $variation['name'] }}:
+                                                        @foreach ($variation['values'] as $value)
+                                                            {{ $value['name'] }}
+                                                        @endforeach
+                                                        @if (!$loop->last)
+                                                            ,
+                                                        @endif
+                                                    </span>
+                                                @endforeach
+                                            </div>
+
+                                            <h4 class="text-dark">{{ formatPrice($item->unit_price) }}</h4>
+
+                                            <h5 class="text-dark">{{ $item->qty }}</h5>
+
+                                            <div class="entry-meta">
+                                                <span class="entry-author">
+                                                    by <a href="#">John Doe</a>
                                                 </span>
-                                            @endforeach
-                                        </div>
+                                                <span class="meta-separator">|</span>
+                                                <a href="#">Nov 22, 2018</a>
+                                            </div>
 
-                                        <h4 class="text-dark">{{ formatPrice($item->unit_price) }}</h4>
-
-                                        <h5 class="text-dark">{{ $item->qty }}</h5>
-
-                                        <div class="entry-meta">
-                                            <span class="entry-author">
-                                                by <a href="#">John Doe</a>
-                                            </span>
-                                            <span class="meta-separator">|</span>
-                                            <a href="#">Nov 22, 2018</a>
-                                        </div>
-
-                                        <div class="entry-content">
-                                            <p>Sed pretium</p>
+                                            <div class="entry-content">
+                                                <p>Sed pretium</p>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
 
-                                <div class="col-md-3">
-                                    @if ($loop->last)
-                                    <div class="entry-body">
-                                        @php
-                                            $shippingAddress = $order->orderGroup->shippingAddress;
-                                            $billingAddress = $order->orderGroup->billingAddress;
-                                        @endphp
-
-                                        <div class="entry-content">
-                                            <h3>Payment Method</h3>
-                                            <p class="mb-2">{{ ucwords(str_replace('_', ' ', $order->orderGroup->payment_method)) }}</p>
-                                        </div>
-
-                                        <div class="entry-content">
-                                            <h3>Delivery Address</h3>
-                                            <p class="mb-2">{{ optional($shippingAddress)->address }},
-                                                {{ optional(optional($shippingAddress)->city)->name }},
-                                                {{ optional(optional($shippingAddress)->state)->name }},
-                                                {{ optional(optional($shippingAddress)->country)->name }}</p>
-                                        </div>
-                                    </div>
-                                    @endif
-                                </div>
-
-                                <div class="col-md-3">
-                                    <div class="entry-body">
+                                    <div class="col-md-3">
                                         @if ($loop->last)
-                                        <div class="entry-content">
-                                            <h3>Shipping Cost</h3>
-                                            <p class="mb-2">{{ formatPrice($order->orderGroup->total_shipping_cost) }}</p>
-                                        </div>
+                                        <div class="entry-body">
+                                            @php
+                                                $shippingAddress = $order->orderGroup->shippingAddress;
+                                                $billingAddress = $order->orderGroup->billingAddress;
+                                            @endphp
 
-                                        @if ($order->orderGroup->total_coupon_discount_amount > 0)
-                                        <div class="entry-content">
-                                            <h3>{{ localize('Coupon Discount') }}</h3>
-                                            <p class="mb-2">{{ formatPrice($order->orderGroup->total_coupon_discount_amount) }}</p>
-                                        </div>
-                                        @endif
+                                            <div class="entry-content">
+                                                <h3>Payment Method</h3>
+                                                <p class="mb-2">{{ ucwords(str_replace('_', ' ', $order->orderGroup->payment_method)) }}</p>
+                                            </div>
 
-                                        <div class="entry-content">
-                                            <h3>Subtotal</h3>
-                                            <p class="mb-2">{{ formatPrice($order->orderGroup->sub_total_amount) }}</p>
-                                        </div>
-
-                                        <div class="entry-content">
-                                            <h3>Total</h3>
-                                            <p class="mb-2">{{ formatPrice($order->orderGroup->grand_total_amount) }}</p>
+                                            <div class="entry-content">
+                                                <h3>Delivery Address</h3>
+                                                <p class="mb-2">{{ optional($shippingAddress)->address }},
+                                                    {{ optional(optional($shippingAddress)->city)->name }},
+                                                    {{ optional(optional($shippingAddress)->state)->name }},
+                                                    {{ optional(optional($shippingAddress)->country)->name }}</p>
+                                            </div>
                                         </div>
                                         @endif
-
                                     </div>
-                                </div>
 
-                            </div>
+                                    <div class="col-md-3">
+                                        <div class="entry-body">
+                                            @if ($loop->last)
+                                            <div class="entry-content">
+                                                <h3>Shipping Cost</h3>
+                                                <p class="mb-2">{{ formatPrice($order->orderGroup->total_shipping_cost) }}</p>
+                                            </div>
+
+                                            @if ($order->orderGroup->total_coupon_discount_amount > 0)
+                                            <div class="entry-content">
+                                                <h3>{{ localize('Coupon Discount') }}</h3>
+                                                <p class="mb-2">{{ formatPrice($order->orderGroup->total_coupon_discount_amount) }}</p>
+                                            </div>
+                                            @endif
+
+                                            <div class="entry-content">
+                                                <h3>Subtotal</h3>
+                                                <p class="mb-2">{{ formatPrice($order->orderGroup->sub_total_amount) }}</p>
+                                            </div>
+
+                                            <div class="entry-content">
+                                                <h3>Total</h3>
+                                                <p class="mb-2">{{ formatPrice($order->orderGroup->grand_total_amount) }}</p>
+                                            </div>
+                                            @endif
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                                @endif
                             @empty
                             @endforelse
                         </article>

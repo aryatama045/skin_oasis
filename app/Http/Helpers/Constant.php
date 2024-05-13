@@ -681,7 +681,7 @@ if (!function_exists('variationDiscountedPrice')) {
         $discount_applicable = false;
 
 
-        if ($product->discount_start_date == null || $product->discount_end_date == null) {
+        if (optional($product)->discount_start_date == null || $product->discount_end_date == null) {
             $discount_applicable = false;
         } elseif (
             strtotime(date('d-m-Y H:i:s')) >= $product->discount_start_date &&

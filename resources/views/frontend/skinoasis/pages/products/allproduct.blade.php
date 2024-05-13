@@ -15,10 +15,12 @@
 
     <br>
     <center>
+        <?php $banner = getSetting('banner_header'); ?>
         <div>
-            <img src="{{ staticAsset('frontend/skinoasis/assets/images/page-header-bg.png') }}" style="max-width: 83%">
+            <img  src="{{ uploadedAsset($banner) }}" style="max-width: 83%">
         </div>
     </center><br><br>
+
 
 
     <form class="filter-form" action="{{ Request::fullUrl() }}" method="GET">

@@ -19,6 +19,7 @@ use App\Models\ProductVariationCombination;
 use App\Models\Tag;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
+use DB;
 
 class ProductsController extends Controller
 {
@@ -565,12 +566,21 @@ class ProductsController extends Controller
     {
         $product = Product::findOrFail($id);
 
+        $variation =  DB::table('product_variations')->select('id')
+        ->where('product_id', $id)->get();
 
-        // if(!$product->carts->isEmpty()){
-        //     flash(localize('Product already is in customer cart'))->error();
+        $id_v = $variation[0]->id;
 
-        //     return back();
-        // }
+        $carts =  DB::table('carts')->select('product_variation_id')
+        ->where('product_variation_id', $id_v)->get();
+
+        $cek = count($carts);
+
+        if($cek > 0){
+            flash(localize('Product already is in customer cart'))->error();
+
+            return back();
+        }
 
         $product->delete();
 

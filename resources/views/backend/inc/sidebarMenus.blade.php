@@ -624,7 +624,7 @@
 
 
     <!-- affiliateSystem -->
-    @php
+    <!-- @php
         $affiliateSystemActiveRoutes = ['affiliate'];
     @endphp
 
@@ -658,7 +658,7 @@
                 </li>
             </ul>
         </div>
-    </li>
+    </li> -->
 
 
     <!-- Appearance -->

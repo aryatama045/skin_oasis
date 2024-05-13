@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Frontend;
 use App\Http\Controllers\Controller;
 use App\Models\City;
 use App\Models\Country;
+use App\Models\Kabupaten;
 use App\Models\State;
 use App\Models\UserAddress;
 use Illuminate\Http\Request;
@@ -29,6 +30,23 @@ class AddressController extends Controller
     {
         $cities = City::isActive()->where('state_id', $request->state_id)->get();
         $html = '<option value="">' . localize("Select City") . '</option>';
+
+        foreach ($cities as $city) {
+            $html .= '<option value="' . $city->id . '">' . $city->name . '</option>';
+        }
+        echo json_encode($html);
+    }
+
+    # get cities based on state
+    public function getKabupaten(Request $request)
+    {
+        $cities = City::isActive()->where('state_id', $request->state_id)->get();
+
+        
+
+        $kab    = Kabupaten::isActive()->where('kabupaten', $cities->name)->get();
+
+        $html   = '<option value="">' . localize("Select Kab") . '</option>';
 
         foreach ($cities as $city) {
             $html .= '<option value="' . $city->id . '">' . $city->name . '</option>';

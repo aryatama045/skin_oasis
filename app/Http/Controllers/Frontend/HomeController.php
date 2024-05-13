@@ -7,8 +7,19 @@ use App\Models\Blog;
 use App\Models\Campaign;
 use App\Models\Page;
 use App\Models\Partner;
+use App\Models\PartnerJoin;
 use App\Models\Brand;
+use App\Models\Product;
+
+use App\Models\Country;
+use App\Models\City;
+use App\Models\State;
+use App\Models\UserAddress;
+
 use Illuminate\Http\Request;
+use Dymantic\InstagramFeed\Profile;
+use Dymantic\InstagramFeed\InstagramFeed;
+
 use DB;
 
 class HomeController extends Controller
@@ -23,6 +34,24 @@ class HomeController extends Controller
     # homepage
     public function index()
     {
+
+        $trending_products = getSetting('top_trending_products') != null ? json_decode(getSetting('top_trending_products')) : []; 
+
+        $product = DB::table('products')->select('id')->where('is_published', '1')->get();
+
+        $categori = DB::table('categories')->select('id')->get();
+
+
+        foreach($product as $key => $val){
+            $product_val[$key] = $val->id;
+        }
+
+        foreach($categori as $key => $val){
+            $product_cat[$key] = $val->id;
+        }
+
+        // $product->variations[0]->product_variation_stock ? $product->variations[0]->product_variation_stock->stock_qty : 0;
+
         $blogs = Blog::isActive()->latest()->take(3)->get();
 
         $sliders = [];
@@ -31,11 +60,19 @@ class HomeController extends Controller
         }
 
         $brands = Brand::get();
-        // dd($brands);
-
         $banner_section_one_banners = [];
         if (getSetting('banner_section_one_banners') != null) {
             $banner_section_one_banners = json_decode(getSetting('banner_section_one_banners'));
+        }
+
+        $banner_section_two_banner_one = [];
+        if (getSetting('banner_section_two_banner_one') != null) {
+            $banner_section_two_banner_one = json_decode(getSetting('banner_section_two_banner_one'));
+        }
+
+        $banner_section_two_banner_two = [];
+        if (getSetting('banner_section_two_banner_two') != null) {
+            $banner_section_two_banner_two = json_decode(getSetting('banner_section_two_banner_two'));
         }
 
         $client_feedback = [];
@@ -47,8 +84,25 @@ class HomeController extends Controller
         $trending2 = Blog::where('placement','2')->isActive()->latest()->take(1)->get();
         $trending3 = Blog::where('placement','3')->isActive()->latest()->take(1)->get();
 
+        #Instagram Feed
+        // $feed = Profile::where('username', 'kayo_xlv')->first()->feed(12);
 
-        return getView('pages.home', ['blogs' => $blogs, 'trending1' => $trending1, 'trending2' => $trending2, 'trending3' => $trending3, 'sliders' => $sliders, 'brands' => $brands, 'banner_section_one_banners' => $banner_section_one_banners, 'client_feedback' => $client_feedback]);
+
+
+        $feed = InstagramFeed::for('kayo_xlv', 15);
+
+
+        return getView('pages.home', ['blogs' => $blogs,
+            'product_list' => $product_val,
+            'product_cat' => $product_cat,
+            'trending1' => $trending1, 'trending2' => $trending2, 'trending3' => $trending3,
+            'sliders' => $sliders, 'brands' => $brands,
+            'banner_section_one_banners' => $banner_section_one_banners,
+            'banner_section_two_banner_one' => $banner_section_two_banner_one,
+            'banner_section_two_banner_two' => $banner_section_two_banner_two,
+            'client_feedback' => $client_feedback,
+            'instagram_feed' => $feed
+        ]);
     }
 
     # all brands
@@ -137,16 +191,6 @@ class HomeController extends Controller
         return getView('pages.quickLinks.aboutUs', ['features' => $features, 'why_choose_us' => $why_choose_us, 'sliders' => $sliders]);
     }
 
-    # partner page
-    public function partner()
-    {
-        $pages = Partner::orderBy('id','ASC')->groupBy('title')->get();
-
-        $pagesContent = Partner::orderBy('id','ASC')->groupBy('title')->get();
-
-        return getView('pages.partner.index', ['pages' => $pages, 'pagesContent' => $pagesContent ]);
-    }
-
 
     # euterria nano academy page
     public function euterriaNanoAcademy(Request $request)
@@ -197,4 +241,124 @@ class HomeController extends Controller
             return abort(404);
         }
     }
+
+
+    # partner page
+    public function partner()
+    {
+        $pages = Partner::orderBy('id','ASC')->groupBy('title')->get();
+
+        $pagesContent = Partner::orderBy('id','ASC')->groupBy('title')->get();
+
+        $country = Country::isActive()->get();
+
+        return getView('pages.partner.index', ['pages' => $pages,
+                'pagesContent' => $pagesContent,
+                'country' => $country
+            ]);
+    }
+
+
+    #partner store
+    public function partner_store(Request $request)
+    {
+        $score = recaptchaValidation($request);
+        $request->request->add([
+            'score' => $score
+        ]);
+        $data['score'] = 'required|numeric|min:0.9';
+
+        $request->validate($data,[
+            'score.min' => localize('Google recaptcha validation error, seems like you are not a human.')
+        ]);
+
+        $cek_mail = DB::table('partner_join')->select('email')->where('email', $request->email)->first();
+
+
+        if($cek_mail){
+            flash(localize('Your Email has register'))->error();
+            return back();
+        }
+
+        $partner = new PartnerJoin;
+        $partner->user_id       = '';
+        $partner->name          = $request->name;
+        $partner->email         = $request->email;
+        $partner->phone         = $request->phone;
+        $partner->type_join     = $request->type_join;
+        $partner->status        = '0';
+        $partner->save();
+
+        $partner_id = $partner->id;
+
+
+        $userId = auth()->user()->id;
+        $address                    = new UserAddress;
+        $address->partner_join_id   = $partner_id;
+        $address->country_id        = $request->country_id2;
+        $address->state_id          = $request->state_id2;
+        $address->city_id           = $request->city_id2;
+        $address->address           = $request->address;
+        $address->kodepos           = $request->kodepos;
+        $address->save();
+
+
+        flash(localize('Your message has been sent'))->success();
+        return back();
+    }
+
+    #influencer store
+    public function influencer_store(Request $request)
+    {
+        $score = recaptchaValidation($request);
+        $request->request->add([
+            'score' => $score
+        ]);
+        $data['score'] = 'required|numeric|min:0.9';
+
+        $request->validate($data,[
+            'score.min' => localize('Google recaptcha validation error, seems like you are not a human.')
+        ]);
+
+        $msg = new PartnerJoin;
+        $msg->user_id       = '';
+        $msg->name          = $request->name;
+        $msg->email         = $request->email;
+        $msg->phone         = $request->phone;
+        $msg->type_join     = $request->type_join;
+        $msg->status        = '0';
+        // $msg->save();
+
+        dd($msg);
+        flash(localize('Your message has been sent'))->success();
+        return back();
+    }
+
+    #community store
+    public function community_store(Request $request)
+    {
+        $score = recaptchaValidation($request);
+        $request->request->add([
+            'score' => $score
+        ]);
+        $data['score'] = 'required|numeric|min:0.9';
+
+        $request->validate($data,[
+            'score.min' => localize('Google recaptcha validation error, seems like you are not a human.')
+        ]);
+
+        $msg = new PartnerJoin;
+        $msg->user_id       = '';
+        $msg->name          = $request->name;
+        $msg->email         = $request->email;
+        $msg->phone         = $request->phone;
+        $msg->type_join     = $request->type_join;
+        $msg->status        = '0';
+        // $msg->save();
+
+        dd($msg);
+        flash(localize('Your message has been sent'))->success();
+        return back();
+    }
+
 }

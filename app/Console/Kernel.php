@@ -16,6 +16,17 @@ class Kernel extends ConsoleKernel
     protected function schedule(Schedule $schedule)
     {
         // $schedule->command('inspire')->hourly();
+
+        $schedule->call(function () {
+            try {
+                Profile::where('username', 'kayo_xlv')->first()->refreshFeed(12);
+            } catch (Exception $e) {
+                Log::error('Failed retrieving Instagram feed', ['message' => $e->getMessage()]);
+            }
+        })->twiceDaily();
+        $schedule->command("instagram-feed:refresh-tokens")->monthlyOn(15, '03:00');
+
+
     }
 
     /**
