@@ -13,7 +13,7 @@
                         <div class="card tt-page-header">
                             <div class="card-body d-lg-flex align-items-center justify-content-lg-between">
                                 <div class="tt-page-title">
-                                    <h2 class="h5 mb-lg-0">{{ localize('Admin Dashboard') }}</h2>
+                                    <h2 class="h5 mb-lg-0">{{ localize('Dashboard') }}</h2>
                                 </div>
                                 <div class="tt-action">
 
@@ -683,6 +683,8 @@
             </div>
         </section>
     @endcan
+
+
 @endsection
 
 @section('scripts')
