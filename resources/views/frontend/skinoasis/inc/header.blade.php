@@ -109,7 +109,7 @@
                                     <a href="{{ route('carts.index') }}"
                                         class="btn btn-rounded btn-sm btn-outline-green-dark btn-md mt-4 w-100"><span
                                             class="me-2"><i
-                                                class="fa-solid fa-eye"></i></span>Lihat Keranjang</a>
+                                                class="fa-solid fa-eye"></i></span>View Cart</a>
                                 </div>
                                 <div class="col-6">
                                     <a href="{{ route('checkout.proceed') }}"

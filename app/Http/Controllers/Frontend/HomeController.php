@@ -89,7 +89,7 @@ class HomeController extends Controller
 
 
 
-        $feed = InstagramFeed::for('kayo_xlv', 15);
+        $feed = array(); //InstagramFeed::for('kayo_xlv', 15);
 
 
         return getView('pages.home', ['blogs' => $blogs,
