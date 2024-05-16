@@ -203,8 +203,9 @@ class HomeController extends Controller
             $searchKey = $request->search;
         }
 
-        if ($request->category_id != null) {
-            $blogs = $blogs->where('blog_category_id', $request->category_id);
+        $category_id = '3';
+        if ($category_id != null) {
+            $blogs = $blogs->where('blog_category_id', $category_id);
         }
 
         $blogs = $blogs->paginate(paginationNumber(5));
