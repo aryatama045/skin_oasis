@@ -361,6 +361,12 @@
     </li>
     @endcan
 
+    @canany(['tags', 'pages', 'blogs', 'blog_categories', 'media_manager'])
+    <li class="side-nav-title side-nav-item nav-item mt-3">
+        <span class="tt-nav-title-text">Nano Academy</span>
+    </li>
+    @endcan
+
     <!-- tags -->
     @php
         $tagsActiveRoutes = ['admin.tags.index', 'admin.tags.edit'];
