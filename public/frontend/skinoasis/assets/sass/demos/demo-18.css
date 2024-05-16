@@ -1092,9 +1092,6 @@ p {
   font-family: "avenir lt pro" !important;
   margin-top: 17rem !important;
 }
-.heading .title .desc {
-  font-size: 3.4rem !important;
-}
 @media (max-width: 575.98px) {
   .heading .title {
     margin-left: 0rem;
@@ -1103,6 +1100,16 @@ p {
     margin-bottom: 3rem;
     margin-top: 0em !important;
   }
+}
+.heading span.desc {
+  font-size: 2.9rem;
+  font-weight: 800;
+  line-height: 1.2;
+  letter-spacing: 0em;
+  color: #222;
+  margin: 0;
+  margin-left: 0;
+  font-family: "avenir lt pro" !important;
 }
 .heading .title-banner-2 {
   font-size: 4rem;

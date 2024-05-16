@@ -19,10 +19,8 @@
                 <div class="col-md-7 p-md-0">
                     <div class="content-left" data-aos="fade-left">
                         <div class="heading mt-14">
-                            <h3 class="title mt-lg-6">
-                                Coming soon<br>
-                                <span class="desc">Discover all your skin needs through time-efficient skin check system. Try it now!</span>
-                            </h3>
+                            <h3 class="title mt-lg-6">Coming soon</h3>
+                            <span class="desc">Discover all your skin needs through time-efficient skin check system. Try it now!</span>
 
                             @foreach ($banner_section_one_banners as $key => $val)
                                 @if ($val->id == "809781")
