@@ -1176,7 +1176,8 @@ p {
 		color: #222;
 		margin: 0;
 		margin-left: -13rem;
-		font-family: "avenir lt pro";
+		font-family: "avenir lt pro" !important;
+		margin-top: 17rem !important;
 
 		@media (max-width: 575.98px){
 			margin-left: 0rem;
