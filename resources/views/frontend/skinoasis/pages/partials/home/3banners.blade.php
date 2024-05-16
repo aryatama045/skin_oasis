@@ -19,7 +19,8 @@
                 <div class="col-md-7 p-md-0">
                     <div class="content-left" data-aos="fade-left">
                         <div class="heading mt-14">
-                            <h4 class="title mt-lg-6">Coming soon<br>Discover all your skin needs through time-efficient skin check system. Try it now!</h4>
+                            <h3 class="title mt-lg-6">Coming soon<br>
+                            <span class="h4">Discover all your skin needs through time-efficient skin check system. Try it now!</span></h3>
 
                             <!-- <p class="scan-here mt-lg-10 mb-2">
                                 Scan Here
