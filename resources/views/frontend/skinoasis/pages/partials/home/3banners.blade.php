@@ -24,14 +24,14 @@
                                 <span class="desc">Discover all your skin needs through time-efficient skin check system. Try it now!</span>
                             </h3>
 
-                            <!-- <p class="scan-here mt-lg-10 mb-2">
-                                Scan Here
-                            </p>
                             @foreach ($banner_section_one_banners as $key => $val)
-                                @if ($val->id == "809780")
+                                @if ($val->id == "809781")
+                                    <p class="scan-here mt-lg-10 mb-2">
+                                        Scan Here
+                                    </p>
                                     <img class="barcode" src="{{ uploadedAsset($val->image) }}" alt="Banner" width="50" height="20">
                                 @endif
-                            @endforeach -->
+                            @endforeach
 
                         </div>
                     </div>
