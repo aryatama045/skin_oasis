@@ -192,11 +192,7 @@
                             <tr>
                                 <td>
                                     <strong class="text-dark d-block text-nowrap">{{ localize('Payment Method') }}</strong>
-                                    <span>
-                                        @if ($orderGroup->payment_method == "Cod")
-                                            Bank Transfer Mandiri
-                                        @endif
-                                    </span>
+                                    <span>Bank Transfer Mandiri</span>
                                 </td>
 
                                 <td>
