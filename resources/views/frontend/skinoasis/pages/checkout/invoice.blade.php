@@ -192,7 +192,13 @@
                             <tr>
                                 <td>
                                     <strong class="text-dark d-block text-nowrap">{{ localize('Payment Method') }}</strong>
-                                    <span>Bank Transfer Mandiri</span>
+                                    <span>
+                                        <b>
+                                            BANK MANDIRI <br>
+                                            No. Rek : 1660003456803 <br>
+                                            Atas Nama : MORITA MITRA BERSAMA
+                                        </b>
+                                    </span>
                                 </td>
 
                                 <td>
