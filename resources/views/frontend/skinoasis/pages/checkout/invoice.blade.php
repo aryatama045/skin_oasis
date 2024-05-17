@@ -195,6 +195,7 @@
                                     <span>
                                         @if ($orderGroup->payment_method == "Cod")
                                             Bank Transfer Mandiri
+                                        @endif
                                     </span>
                                 </td>
 
