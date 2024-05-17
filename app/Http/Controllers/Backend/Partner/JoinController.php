@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Backend\Partner;
 use App\Http\Controllers\Controller;
 use App\Models\Language;
 use App\Models\Partner;
+use App\Models\PartnerJoin;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 use DB;
@@ -20,9 +21,9 @@ class JoinController extends Controller
         $searchKey = null;
         $is_published = null;
 
-        $pages = Partner::orderBy('id','ASC');
+        $pages = PartnerJoin::orderBy('id','ASC');
         if ($request->search != null) {
-            $pages = $pages->where('title', 'like', '%' . $request->search . '%');
+            $pages = $pages->where('name', 'like', '%' . $request->search . '%');
             $searchKey = $request->search;
         }
 
@@ -35,7 +36,7 @@ class JoinController extends Controller
         $searchKey = null;
         $is_published = null;
 
-        $pages = Partner::orderBy('id','ASC');
+        $pages = PartnerJoin::orderBy('id','ASC');
         if ($request->search != null) {
             $pages = $pages->where('title', 'like', '%' . $request->search . '%');
             $searchKey = $request->search;
