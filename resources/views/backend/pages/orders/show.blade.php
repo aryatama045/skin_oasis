@@ -46,22 +46,26 @@
                                     @endif
 
                                 </div>
-
-                                <div class="col-auto col-lg-3">
-                                    <div class="input-group">
-                                        <select class="form-select select2" name="payment_status"
-                                            data-minimum-results-for-search="Infinity" id="update_payment_status">
-                                            <option value="" disabled>
-                                                {{ localize('Payment Status') }}
-                                            </option>
-                                            <option value="paid" @if ($order->payment_status == 'paid') selected @endif>
-                                                {{ localize('Paid') }}</option>
-                                            <option value="unpaid" @if ($order->payment_status == 'unpaid') selected @endif>
-                                                {{ localize('Unpaid') }}
-                                            </option>
-                                        </select>
+                                @if (auth()->user()->user_type == "mitra")
+                                    
+                                @else
+                                    <div class="col-auto col-lg-3">
+                                        <div class="input-group">
+                                            <select class="form-select select2" name="payment_status"
+                                                data-minimum-results-for-search="Infinity" id="update_payment_status">
+                                                <option value="" disabled>
+                                                    {{ localize('Payment Status') }}
+                                                </option>
+                                                <option value="paid" @if ($order->payment_status == 'paid') selected @endif>
+                                                    {{ localize('Paid') }}</option>
+                                                <option value="unpaid" @if ($order->payment_status == 'unpaid') selected @endif>
+                                                    {{ localize('Unpaid') }}
+                                                </option>
+                                            </select>
+                                        </div>
                                     </div>
-                                </div>
+                                @endif
+
                                 <div class="col-auto col-lg-3">
                                     <div class="input-group">
                                         <select class="form-select select2" name="delivery_status"
@@ -81,18 +85,25 @@
                                         </select>
                                     </div>
                                 </div>
-                                <div class="col-auto col-lg-4">
-                                    Transfer Pesanan ke Mitra : 
-                                    <div class="input-group">
-                                        <select class="form-select select2" name="payment_status"
-                                            data-minimum-results-for-search="Infinity" id="update_payment_status">
-                                            <option value="0">-- Pilih Mitra --</option>
-                                            @foreach ($mitra as $key)
-                                                <option value="$key->id">{{$key->name}}</option>
-                                            @endforeach
-                                        </select>
+
+
+                                @if (auth()->user()->user_type == "mitra")
+                                    
+                                @else
+                                    <div class="cl-auto col-lg-4">
+                                        Transfer Pesanan ke Mitra : 
+                                        <div class="input-group">
+                                            <select class="form-select select2" name="transfer_ke_mitra"
+                                                data-minimum-results-for-search="Infinity" id="transfer_ke_mitra">
+                                                <option value="0">-- Pilih Mitra --</option>
+                                                @foreach ($mitra as $key)
+                                                    <option value="{{$key->id}}">{{$key->name}}</option>
+                                                @endforeach
+                                            </select>
+                                        </div>
                                     </div>
-                                </div>
+                                @endif
+                                
                                 <div class="col-auto">
                                     <a href="{{ route('admin.orders.downloadInvoice', $order->id) }}"
                                         class="btn btn-primary">
@@ -345,6 +356,22 @@
                 _token: '{{ @csrf_token() }}',
                 order_id: order_id,
                 status: status
+            }, function(data) {
+                notifyMe('success', '{{ localize('Delivery status has been updated') }}');
+                window.location.reload();
+            });
+        });
+
+        // transfer ke mitra 
+        $('#transfer_ke_mitra').on('change', function() {
+            var order_id = {{ $order->id }};
+            var transfer_id = $('#transfer_ke_mitra').val();
+            var text = $("#transfer_ke_mitra option:selected").text();
+            $.post('{{ route('admin.orders.transfer_ke_mitra') }}', {
+                _token: '{{ @csrf_token() }}',
+                order_id: order_id,
+                transfer_id: transfer_id,
+                nama_mitra: text
             }, function(data) {
                 notifyMe('success', '{{ localize('Delivery status has been updated') }}');
                 window.location.reload();

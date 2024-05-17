@@ -133,6 +133,7 @@
                                     <th data-breakpoints="xs sm">{{ localize('Payment') }}</th>
                                     <th data-breakpoints="xs sm">{{ localize('Status') }}</th>
                                     <th data-breakpoints="xs sm">{{ localize('Type') }}</th>
+                                    <th data-breakpoints="xs sm">Mitra</th>
                                     @if (count($locations) > 0)
                                         <th data-breakpoints="xs sm">{{ localize('Location') }}</th>
                                     @endif
@@ -209,6 +210,14 @@
                                                 class="badge rounded-pill text-capitalize {{ $order->shipping_delivery_type == getScheduledDeliveryType() ? 'bg-soft-warning' : 'bg-secondary' }}">
                                                 {{ Str::title(Str::replace('_', ' ', $order->shipping_delivery_type)) }}
                                             </span>
+                                        </td>
+
+                                        <td align="center">
+                                            @if ($order->nama_mitra == null)
+                                                -
+                                            @else
+                                                {{ $order->nama_mitra }}
+                                            @endif
                                         </td>
 
                                         @if (count($locations) > 0)

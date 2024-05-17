@@ -20,7 +20,7 @@ class OrdersController extends Controller
     public function __construct()
     {
         $this->middleware(['permission:orders'])->only('index');
-        $this->middleware(['permission:manage_orders'])->only(['show', 'updatePaymentStatus', 'updateDeliveryStatus', 'downloadInvoice']);
+        $this->middleware(['permission:manage_orders'])->only(['show', 'updatePaymentStatus', 'updateDeliveryStatus', 'downloadInvoice', 'transferKeMitra']);
     }
 
     # get all orders
@@ -74,10 +74,15 @@ class OrdersController extends Controller
             $posOrder = $request->is_pos_order;
         }
 
-        $orders = $orders->where(function ($q) use ($posOrder) {
-            $orderGroup = OrderGroup::where('is_pos_order', $posOrder)->pluck('id');
-            $q->orWhereIn('order_group_id', $orderGroup);
-        });
+        if(auth()->user()->user_type == "mitra"){
+            $orders = $orders->where('transfer_id', auth()->user()->id)->latest();
+        }else{
+            $orders = $orders->where(function ($q) use ($posOrder) {
+                $orderGroup = OrderGroup::where('is_pos_order', $posOrder)->pluck('id');
+                $q->orWhereIn('order_group_id', $orderGroup);
+            });
+        }
+        
 
         $orders = $orders->paginate(paginationNumber());
         $locations = Location::where('is_published', 1)->latest()->get();
@@ -130,6 +135,25 @@ class OrdersController extends Controller
             'order_id' => $order->id,
             'user_id' => auth()->user()->id,
             'note' => 'Delivery status updated to ' . ucwords(str_replace('_', ' ', $request->status)) . '.',
+        ]);
+
+        // todo::['mail notification'] 
+        return true;
+    }
+
+    # update transfer ke mitra
+    public function transferKeMitra(Request $request)
+    {
+        $order = Order::findOrFail((int)$request->order_id);
+        // dd($request->transfer_id);
+        $order->transfer_id = $request->transfer_id;
+        $order->nama_mitra = $request->nama_mitra;
+        $order->save();
+
+        OrderUpdate::create([
+            'order_id' => $order->id,
+            'user_id' => auth()->user()->id,
+            'note' => 'Sudah ditransfer ke mitra : ' . $request->nama_mitra . '.',
         ]);
 
         // todo::['mail notification'] 

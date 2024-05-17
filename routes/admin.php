@@ -234,6 +234,7 @@ Route::group(
             Route::get('/{id}', [OrdersController::class, 'show'])->name('admin.orders.show');
             Route::post('/update-payment-status', [OrdersController::class, 'updatePaymentStatus'])->name('admin.orders.update_payment_status');
             Route::post('/update-delivery-status', [OrdersController::class, 'updateDeliveryStatus'])->name('admin.orders.update_delivery_status');
+            Route::post('/transfer-ke-mitra', [OrdersController::class, 'transferKeMitra'])->name('admin.orders.transfer_ke_mitra');
             Route::get('/invoice-download/{id}', [OrdersController::class, 'downloadInvoice'])->name('admin.orders.downloadInvoice');
         });
 
