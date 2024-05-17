@@ -17,7 +17,7 @@
     <div class="checkout-radio d-flex align-items-center justify-content-between gap-3 bg-white rounded p-4 mt-3">
         <div class="radio-left d-inline-flex align-items-center">
             <div class="theme-radio">
-                <input type="radio" name="payment_method" id="wallet" value="wallet" required="">
+                <input type="radio" name="payment_method" id="cod" value="cod" required="">
                 <span class="custom-radio"></span>
             </div>
             <label for="wallet" class="ms-2 h6 mb-0">
