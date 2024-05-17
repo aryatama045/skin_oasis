@@ -192,7 +192,10 @@
                             <tr>
                                 <td>
                                     <strong class="text-dark d-block text-nowrap">{{ localize('Payment Method') }}</strong>
-                                    <span> {{ ucwords(str_replace('_', ' ', $orderGroup->payment_method)) }}</span>
+                                    <span>
+                                        @if ($orderGroup->payment_method == "Cod")
+                                            Bank Transfer Mandiri
+                                    </span>
                                 </td>
 
                                 <td>
