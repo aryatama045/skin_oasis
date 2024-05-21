@@ -34,6 +34,11 @@
                                     <td><strong>{{ localize('Date') }}</strong></td>
                                     <td>{{ date('d M, Y', strtotime($orderGroup->created_at)) }}</td>
                                 </tr>
+                                <tr>
+                                    <td>
+                                        <a class="badge bg-primary" target="_blank" style="padding: 10px" href="https://api.whatsapp.com/send/?phone=6285218265680&text=Halo+saya+ingin+konfirmasi+pembayaran+dengan+nomor+SKINOASIS-{{$orderGroup->order_code}}&type=phone_number">Saya Sudah Bayar</a>
+                                    </td>
+                                </tr>
                             </table>
                         </div>
                         <div class="col-lg-5 col-md-8">
