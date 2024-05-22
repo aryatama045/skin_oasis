@@ -230,12 +230,14 @@
                                             </span>
                                         </td>
 
-                                        <td align="center"><?php if($order->nama_mitra == null): ?>
+                                        <td align="center">
+                                            <?php if($order->nama_mitra == null): ?>
                                                 -
                                             <?php else: ?>
                                                 <?php echo e($order->nama_mitra); ?>
 
-                                            <?php endif; ?></td>
+                                            <?php endif; ?>
+                                        </td>
 
                                         <?php if(count($locations) > 0): ?>
                                             <td>

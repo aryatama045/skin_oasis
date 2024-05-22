@@ -1,1 +1,0 @@
-<?php /**PATH C:\xampp\htdocs\skin_oasis\resources\views/frontend/skinoasis/pages/users/content/reviewList.blade.php ENDPATH**/ ?>

@@ -78,7 +78,7 @@
             </td>
             <td colspan="4" align="right"
                 style="width: 300px; text-align: right; padding-left: 50px; line-height: 1.5; color: #323232;">
-                <img src="{{ uploadedAsset(getSetting('favicon')) }}" alt="logo" border="0" />
+                <img src="https://skinoasis.solusiitkreasi.com/public/frontend/skinoasis/assets/images/logo-black.png?v=v1.0.0" alt="logo" border="0" style="width: 100px; float: right" /><br>
                 <p style="font-size: 12px;font-weight: bold; color: #5b5b5b; line-height: 1; vertical-align: top; ">
                     {{ getSetting('system_title') }}</p>
                 <p style="font-size: 12px; color: #5b5b5b; line-height: 24px; vertical-align: top;">
