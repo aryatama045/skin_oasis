@@ -196,20 +196,12 @@ class HomeController extends Controller
     public function euterriaNanoAcademy(Request $request)
     {
         $searchKey  = null;
-        $blogs = Blog::isActive()->latest();
-
-        if ($request->search != null) {
-            $blogs = $blogs->where('title', 'like', '%' . $request->search . '%');
-            $searchKey = $request->search;
-        }
 
         $category_id = '3';
-        if ($category_id != null) {
-            $blogs = $blogs->where('blog_category_id', $category_id);
-        }
+        $blogss = Blog::where('blog_category_id', $category_id)->first();
+        // dd($blogss);
 
-        $blogs = $blogs->paginate(paginationNumber(5));
-        return getView('pages.euterria-nano-academy.index', ['blogs' => $blogs, 'searchKey' => $searchKey]);
+        return getView('pages.euterria-nano-academy.index', ['blogs' => $blogss, 'searchKey' => $searchKey]);
     }
 
     # contact us page

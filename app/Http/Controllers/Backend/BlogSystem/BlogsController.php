@@ -63,6 +63,7 @@ class BlogsController extends Controller
         $blog->title = $request->title;
         $blog->thumbnail_image = $request->image;
         $blog->banner = $request->banner;
+        $blog->banner1 = $request->banner1;
         $blog->meta_img = $request->meta_image;
 
         if ($request->slug != null) {
@@ -133,6 +134,7 @@ class BlogsController extends Controller
 
             $blog->thumbnail_image = $request->image;
             $blog->banner = $request->banner;
+            $blog->banner1 = $request->banner1;
             $blog->meta_img = $request->meta_image;
 
             $blog->short_description = $request->short_description;
