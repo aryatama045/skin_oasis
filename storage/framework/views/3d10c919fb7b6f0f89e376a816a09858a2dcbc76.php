@@ -753,10 +753,10 @@
 
     <!-- system settings -->
     <?php
-        $settingsActiveRoutes = ['admin.generalSettings', 'admin.orderSettings', 'admin.timeslot.edit', 'admin.languages.index', 'admin.languages.edit', 'admin.currencies.index', 'admin.currencies.edit', 'admin.languages.localizations', 'admin.smtpSettings.index'];
+        $settingsActiveRoutes = ['admin.generalSettings', 'admin.orderSettings', 'admin.timeslot.edit', 'admin.languages.index', 'admin.languages.edit', 'admin.currencies.index', 'admin.currencies.edit', 'admin.languages.localizations', 'admin.jadwalDokter.index'];
     ?>
 
-    <?php if (app(\Illuminate\Contracts\Auth\Access\Gate::class)->any(['smtp_settings', 'general_settings', 'currency_settings', 'language_settings'])): ?>
+    <?php if (app(\Illuminate\Contracts\Auth\Access\Gate::class)->any(['smtp_settings', 'general_settings', 'currency_settings', 'language_settings', 'jadwal_dokter'])): ?>
         <li class="side-nav-item nav-item <?php echo e(areActiveRoutes($settingsActiveRoutes, 'tt-menu-item-active')); ?>">
             <a data-bs-toggle="collapse" href="#systemSetting"
                 aria-expanded="<?php echo e(areActiveRoutes($settingsActiveRoutes, 'true')); ?>" aria-controls="systemSetting"
@@ -786,6 +786,13 @@
                             class="<?php echo e(areActiveRoutes(['admin.orderSettings', 'admin.timeslot.edit'], 'tt-menu-item-active')); ?>">
                             <a href="<?php echo e(route('admin.orderSettings')); ?>"
                                 class="<?php echo e(areActiveRoutes(['admin.generalSettings'])); ?>"><?php echo e(localize('Order Settings')); ?></a>
+                        </li>
+                    <?php endif; ?>
+
+                    <?php if (app(\Illuminate\Contracts\Auth\Access\Gate::class)->check('jadwal_dokter')): ?>
+                        <li class="<?php echo e(areActiveRoutes(['admin.jadwalDokter.index'], 'tt-menu-item-active')); ?>">
+                            <a href="<?php echo e(route('admin.jadwalDokter.index')); ?>"
+                                class="<?php echo e(areActiveRoutes(['admin.jadwalDokter.index'])); ?>">Jadwal Dokter</a>
                         </li>
                     <?php endif; ?>
 

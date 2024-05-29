@@ -111,6 +111,8 @@ Route::group(
         Route::post('/settings/env-key-update', [SettingsController::class, 'envKeyUpdate'])->name('admin.envKey.update');
         Route::get('/settings/general-settings', [SettingsController::class, 'index'])->name('admin.generalSettings');
         Route::get('/settings/smtp-settings', [SettingsController::class, 'smtpSettings'])->name('admin.smtpSettings.index');
+        Route::get('/settings/jadwaldokter', [SettingsController::class, 'jadwalDokter'])->name('admin.jadwalDokter.index');
+        Route::post('/settings/updatejadwaldokter', [SettingsController::class, 'updateJadwalDokter'])->name('admin.settings.updateJadwalDokter');
         Route::post('/settings/test/smtp', [SettingsController::class, 'testEmail'])->name('admin.test.smtp');
         Route::post('/settings/update', [SettingsController::class, 'update'])->name('admin.settings.update');
 

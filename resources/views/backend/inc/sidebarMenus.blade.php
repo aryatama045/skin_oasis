@@ -753,10 +753,10 @@
 
     <!-- system settings -->
     @php
-        $settingsActiveRoutes = ['admin.generalSettings', 'admin.orderSettings', 'admin.timeslot.edit', 'admin.languages.index', 'admin.languages.edit', 'admin.currencies.index', 'admin.currencies.edit', 'admin.languages.localizations', 'admin.smtpSettings.index'];
+        $settingsActiveRoutes = ['admin.generalSettings', 'admin.orderSettings', 'admin.timeslot.edit', 'admin.languages.index', 'admin.languages.edit', 'admin.currencies.index', 'admin.currencies.edit', 'admin.languages.localizations', 'admin.jadwalDokter.index'];
     @endphp
 
-    @canany(['smtp_settings', 'general_settings', 'currency_settings', 'language_settings'])
+    @canany(['smtp_settings', 'general_settings', 'currency_settings', 'language_settings', 'jadwal_dokter'])
         <li class="side-nav-item nav-item {{ areActiveRoutes($settingsActiveRoutes, 'tt-menu-item-active') }}">
             <a data-bs-toggle="collapse" href="#systemSetting"
                 aria-expanded="{{ areActiveRoutes($settingsActiveRoutes, 'true') }}" aria-controls="systemSetting"
@@ -786,6 +786,13 @@
                             class="{{ areActiveRoutes(['admin.orderSettings', 'admin.timeslot.edit'], 'tt-menu-item-active') }}">
                             <a href="{{ route('admin.orderSettings') }}"
                                 class="{{ areActiveRoutes(['admin.generalSettings']) }}">{{ localize('Order Settings') }}</a>
+                        </li>
+                    @endcan
+
+                    @can('jadwal_dokter')
+                        <li class="{{ areActiveRoutes(['admin.jadwalDokter.index'], 'tt-menu-item-active') }}">
+                            <a href="{{ route('admin.jadwalDokter.index') }}"
+                                class="{{ areActiveRoutes(['admin.jadwalDokter.index']) }}">Jadwal Dokter</a>
                         </li>
                     @endcan
 

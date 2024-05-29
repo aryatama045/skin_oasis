@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Backend;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\SystemSetting;
+use App\Models\JadwalDokter;
 use App\Mail\EmailManager;
 use App\Models\Currency;
 use Artisan;
@@ -32,6 +33,29 @@ class SettingsController extends Controller
     public function smtpSettings()
     {
         return view('backend.pages.systemSettings.smtp');
+    }
+
+    # smtp settings
+    public function jadwalDokter()
+    {
+        return view('backend.pages.systemSettings.jadwaldokter');
+    }
+
+    public function updateJadwalDokter(Request $request){
+        // dd($request);
+        $jd = new JadwalDokter;
+        $jd->id_dokter = auth()->user()->id;
+        $jd->senin  = $request->seninbuka == null ? null : $request->seninbuka. ' s/d ' .$request->senintutup;
+        $jd->selasa = $request->selasabuka == null ? null : $request->selasabuka. ' s/d ' .$request->selasatutup;
+        $jd->rabu   = $request->rabubuka == null ? null : $request->rabubuka. ' s/d ' .$request->rabututup;
+        $jd->kamis  = $request->kamisbuka == null ? null : $request->kamisbuka. ' s/d ' .$request->kamistutup;
+        $jd->jumat  = $request->jumatbuka == null ? null : $request->jumatbuka. ' s/d ' .$request->jumattutup;
+        $jd->sabtu  = $request->sabtubuka == null ? null : $request->sabtubuka. ' s/d ' .$request->sabtututup;
+        $jd->minggu = $request->minggubuka == null ? null : $request->minggubuka. ' s/d ' .$request->minggututup;
+        $jd->save();
+
+        flash(localize('Doctor`s Schedule has been inserted successfully'))->success();
+        return back();
     }
 
     # update env values
