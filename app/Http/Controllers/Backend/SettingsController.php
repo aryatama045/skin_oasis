@@ -38,7 +38,10 @@ class SettingsController extends Controller
     # smtp settings
     public function jadwalDokter()
     {
-        return view('backend.pages.systemSettings.jadwaldokter');
+        $jd = JadwalDokter::join('users','users.id','=','jadwal_dokters.id_dokter')
+            ->where('jadwal_dokters.id_dokter', '=', auth()->user()->id)->get();
+        // dd($jd);
+        return view('backend.pages.systemSettings.jadwaldokter', compact('jd'));
     }
 
     public function updateJadwalDokter(Request $request){

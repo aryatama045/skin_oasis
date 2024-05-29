@@ -20,6 +20,49 @@
                 </div>
             </div>
 
+            <div class="row mb-3">
+                <div class="col-12">
+                    <div class="card tt-page-header">
+                        <div class="card-body d-lg-flex align-items-center justify-content-lg-between">
+                            <table class="table tt-footable table-hover border-top" data-use-parent-width="true"
+                                id="localization-table">
+                                <thead class="py-3">
+                                    <tr>
+                                        <th class="text-center py-3" width="5%">#
+                                        </th>
+                                        <th class="text-center">Nama Dokter</th>
+                                        <th class="text-center">Senin</th>
+                                        <th class="text-center">Selasa</th>
+                                        <th class="text-center">Rabu</th>
+                                        <th class="text-center">Kami</th>
+                                        <th class="text-center">Jum'at</th>
+                                        <th class="text-center">Sabtu</th>
+                                        <th class="text-center">Minggu</th>
+                                        <th class="text-center">Tgl. Input</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach ($jd as $jadwal)
+                                        <tr>
+                                            <td class="text-center align-middle"></td>
+                                            <td align="center">{{ $jadwal->name }}</td>
+                                            <td align="center">{{ $jadwal->senin == null ? '-' : $jadwal->senin }}</td>
+                                            <td align="center">{{ $jadwal->selasa == null ? '-' : $jadwal->selasa }}</td>
+                                            <td align="center">{{ $jadwal->rabu == null ? '-' : $jadwal->rabu }}</td>
+                                            <td align="center">{{ $jadwal->kamis == null ? '-' : $jadwal->kamis }}</td>
+                                            <td align="center">{{ $jadwal->jumat == null ? '-' : $jadwal->jumat }}</td>
+                                            <td align="center">{{ $jadwal->sabtu == null ? '-' : $jadwal->sabtu }}</td>
+                                            <td align="center">{{ $jadwal->minggu == null ? '-' : $jadwal->minggu }}</td>
+                                            <td align="center">{{ $jadwal->created_at }}</td>
+                                        </tr>
+                                    @endforeach
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <div class="row g-4">
                 <!--left sidebar-->
                 <div class="col-xl-12 order-2 order-md-2 order-lg-2 order-xl-1">
