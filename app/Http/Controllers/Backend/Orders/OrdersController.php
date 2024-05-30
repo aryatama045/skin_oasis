@@ -74,7 +74,7 @@ class OrdersController extends Controller
             $posOrder = $request->is_pos_order;
         }
 
-        if(auth()->user()->user_type == "mitra"){
+        if(auth()->user()->user_type == "mitra" || auth()->user()->user_type == "dokter"){
             $orders = $orders->where('transfer_id', auth()->user()->id)->latest();
         }else{
             $orders = $orders->where(function ($q) use ($posOrder) {
