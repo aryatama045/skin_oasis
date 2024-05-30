@@ -37,6 +37,10 @@
                                 <input class="form-control" type="text" id="name" placeholder="{{ localize('Type staff name') }}" name="name" required value="{{ $user->name }}">
                             </div>
 
+                            <div class="mb-4">
+                                <label for="spesialis" class="form-label">Spesialis</label>
+                                <input class="form-control" type="text" id="spesialis" placeholder="Masukan Spesialis (contoh: Spesialis Kulit)" name="spesialis" required value="{{ $user->spesialis }}">
+                            </div>
 
                             <div class="mb-4">
                                 <label for="email" class="form-label">{{ localize('Staff Email') }}</label>

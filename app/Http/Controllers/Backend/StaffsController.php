@@ -161,8 +161,9 @@ class StaffsController extends Controller
             $user->avatar           = $request->image;
             $user->created_by       = auth()->user()->id;
             $user->address          = $request->alamat;
-            $user->infolain          = $request->infolain;
-            $user->zona              = $request->zona;
+            $user->infolain         = $request->infolain;
+            $user->zona             = $request->zona;
+            $user->spesialis        = $request->spesialis;
             $user->save();
             $user->assignRole(SpatieRole::findOrFail($request->role_id)->name);
 
@@ -229,6 +230,7 @@ class StaffsController extends Controller
         $user->email      = $request->email;
         $user->phone      = validatePhone($request->phone);
         $user->role_id    = $request->role_id;
+        $user->spesialis    = $request->spesialis;
 
         $user->infolain          = $request->infolain;
 

@@ -39,6 +39,14 @@
                                 @endif
                             </div>
 
+                            <div class="mb-4">
+                                <label for="spesialis" class="form-label">Spesialis<span class="text-danger ms-1">*</span></label>
+                                <input class="form-control" type="text" id="spesialis" placeholder="Masukan Spesialis (contoh: Spesialis Kulit)" name="spesialis" value="{{old('spesialis')}}">
+                                @if ($errors->has('spesialis'))
+                                <span class="text-danger">{{ $errors->first('spesialis') }}</span>
+                                @endif
+                            </div>
+
 
                             <div class="mb-4">
                                 <label for="email" class="form-label">Email<span class="text-danger ms-1">*</span></label>

@@ -6,12 +6,12 @@
                 <div class="heading text-left">
                     <div class="posts-list">
                         <figure>
-                            <img class="rounded-circle" src="{{ staticAsset('frontend/skinoasis/assets/images/dokter.png') }}" alt="post">
+                            <img class="rounded-circle" src="{{ uploadedAsset($dokter->avatar) }}" alt="post">
                         </figure>
 
                         <div>
                             <h1 class="font-weight-bold ff">{{ $dokter->name }}</h1>
-                            <span class="text-black">Dokter Kulit - Dokter Estetika</span>
+                            <span class="text-black">{{ $dokter->spesialis }}</span>
                         </div>
                     </div>
                 </div>

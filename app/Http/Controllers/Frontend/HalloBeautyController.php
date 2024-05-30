@@ -9,6 +9,7 @@ use App\Models\Page;
 use App\Models\Brand;
 use Illuminate\Http\Request;
 use App\Models\Product;
+use App\Models\JadwalDokter;
 use App\Models\ProductCategory;
 use DB;
 
@@ -143,11 +144,15 @@ class HalloBeautyController extends Controller
         }
 
         $slug = str_replace('-', ' ', $slug);
-
         $dokter = DB::table('users')->where('user_type', 'dokter')->where('name', $slug)->first();
 
+        $jd = JadwalDokter::join('users','users.id','=','jadwal_dokters.id_dokter')
+            ->where('users.name', '=',  $dokter->name)->get();
+        
+        // dd($dokter->name);
+
         if(!empty($dokter)){
-            return getView('pages.halloBeauty.profileDokter', ['sliders' => $sliders, 'dokter' => $dokter]);
+            return getView('pages.halloBeauty.profileDokter', ['sliders' => $sliders, 'dokter' => $dokter, 'jd' => $jd]);
         }else{
             return abort(404);
         }

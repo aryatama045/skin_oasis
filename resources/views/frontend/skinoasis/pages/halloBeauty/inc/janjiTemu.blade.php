@@ -7,34 +7,78 @@
     <!-- Button Group -->
     <div class="button-group mt-3 mb-3">
         <div class="row">
-            <div class="col-sm-4 col-12 p-1">
-                <div class="btn-wrap w-100">
-                    <input type="radio" name="jadwal" class="btn-check" id="jadwal1" autocomplete="off">
-                    <label class="btn btn-outline-yellow btn-rounded btn-sm ls-1px text-capitalize w-100" for="jadwal1">Sabtu, 30 Des</label>
-                </div>
-            </div>
-
-            <div class="col-sm-4 col-12 p-1">
-                <div class="btn-wrap w-100">
-                    <input type="radio" name="jadwal" class="btn-check" id="jadwal2" autocomplete="off">
-                    <label class="btn btn-outline-yellow btn-rounded btn-sm ls-1px text-capitalize w-100" for="jadwal2">Sabtu, 29 Des</label>
-                </div>
-            </div>
-
-            <div class="col-sm-4 col-12 p-1">
-                <div class="btn-wrap w-100">
-                    <input type="radio" name="jadwal" class="btn-check" id="jadwal3" autocomplete="off">
-                    <label class="btn btn-outline-yellow btn-rounded btn-sm ls-1px text-capitalize w-100" for="jadwal3">Sabtu, 29 Des</label>
-                </div>
-            </div>
-
-            <div class="col-sm-4 col-12 p-1">
-                <div class="btn-wrap w-100">
-                    <input type="radio" name="jadwal" class="btn-check" id="jadwal4" autocomplete="off">
-                    <label class="btn btn-outline-yellow btn-rounded btn-sm ls-1px text-capitalize w-100" for="jadwal4">Sabtu, 29 Des</label>
-                </div>
-            </div>
-
+            @foreach($jd as $jadwaldokter)
+                @if($jadwaldokter->senin == null)
+                    
+                @else
+                    <div class="col-sm-4 col-12 p-1">
+                        <div class="btn-wrap w-100">
+                            <input type="radio" name="jadwal" class="btn-check" id="senin" autocomplete="off">
+                            <label class="btn btn-outline-yellow btn-rounded btn-sm ls-1px w-100" for="senin">{{ $jadwaldokter->senin }}</label>
+                        </div>
+                    </div>
+                @endif
+                @if($jadwaldokter->selasa == null)
+                    
+                @else
+                    <div class="col-sm-4 col-12 p-1">
+                        <div class="btn-wrap w-100">
+                            <input type="radio" name="jadwal" class="btn-check" id="selasa" autocomplete="off">
+                            <label class="btn btn-outline-yellow btn-rounded btn-sm ls-1px w-100" for="selasa">{{ $jadwaldokter->selasa }}</label>
+                        </div>
+                    </div>
+                @endif
+                @if($jadwaldokter->rabu == null)
+                    
+                @else
+                    <div class="col-sm-4 col-12 p-1">
+                        <div class="btn-wrap w-100">
+                            <input type="radio" name="jadwal" class="btn-check" id="rabu" autocomplete="off">
+                            <label class="btn btn-outline-yellow btn-rounded btn-sm ls-1px w-100" for="rabu">{{ $jadwaldokter->rabu }}</label>
+                        </div>
+                    </div>
+                @endif
+                @if($jadwaldokter->kamis == null)
+                    
+                @else
+                    <div class="col-sm-4 col-12 p-1">
+                        <div class="btn-wrap w-100">
+                            <input type="radio" name="jadwal" class="btn-check" id="kamis" autocomplete="off">
+                            <label class="btn btn-outline-yellow btn-rounded btn-sm ls-1px w-100" for="kamis">{{ $jadwaldokter->kamis }}</label>
+                        </div>
+                    </div>
+                @endif
+                @if($jadwaldokter->jumat == null)
+                    
+                @else
+                    <div class="col-sm-4 col-12 p-1">
+                        <div class="btn-wrap w-100">
+                            <input type="radio" name="jadwal" class="btn-check" id="jumat" autocomplete="off">
+                            <label class="btn btn-outline-yellow btn-rounded btn-sm ls-1px w-100" for="jumat">{{ $jadwaldokter->jumat }}</label>
+                        </div>
+                    </div>
+                @endif
+                @if($jadwaldokter->sabtu == null)
+                    
+                @else
+                    <div class="col-sm-4 col-12 p-1">
+                        <div class="btn-wrap w-100">
+                            <input type="radio" name="jadwal" class="btn-check" id="sabtu" autocomplete="off">
+                            <label class="btn btn-outline-yellow btn-rounded btn-sm ls-1px w-100" for="sabtu">{{ $jadwaldokter->sabtu }}</label>
+                        </div>
+                    </div>
+                @endif
+                @if($jadwaldokter->minggu == null)
+                    
+                @else
+                    <div class="col-sm-4 col-12 p-1">
+                        <div class="btn-wrap w-100">
+                            <input type="radio" name="jadwal" class="btn-check" id="minggu" autocomplete="off">
+                            <label class="btn btn-outline-yellow btn-rounded btn-sm ls-1px w-100" for="minggu">{{ $jadwaldokter->minggu }}</label>
+                        </div>
+                    </div>
+                @endif
+            @endforeach
         </div>
 
     </div>

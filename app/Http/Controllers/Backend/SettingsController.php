@@ -48,13 +48,13 @@ class SettingsController extends Controller
         // dd($request);
         $jd = new JadwalDokter;
         $jd->id_dokter = auth()->user()->id;
-        $jd->senin  = $request->seninbuka == null ? null : $request->seninbuka. ' s/d ' .$request->senintutup;
-        $jd->selasa = $request->selasabuka == null ? null : $request->selasabuka. ' s/d ' .$request->selasatutup;
-        $jd->rabu   = $request->rabubuka == null ? null : $request->rabubuka. ' s/d ' .$request->rabututup;
-        $jd->kamis  = $request->kamisbuka == null ? null : $request->kamisbuka. ' s/d ' .$request->kamistutup;
-        $jd->jumat  = $request->jumatbuka == null ? null : $request->jumatbuka. ' s/d ' .$request->jumattutup;
-        $jd->sabtu  = $request->sabtubuka == null ? null : $request->sabtubuka. ' s/d ' .$request->sabtututup;
-        $jd->minggu = $request->minggubuka == null ? null : $request->minggubuka. ' s/d ' .$request->minggututup;
+        $jd->senin  = $request->seninbuka == null ? null : 'Senin : '.$request->seninbuka. ' s/d ' .$request->senintutup;
+        $jd->selasa = $request->selasabuka == null ? null : 'Selasa : '.$request->selasabuka. ' s/d ' .$request->selasatutup;
+        $jd->rabu   = $request->rabubuka == null ? null : 'Rabu : '.$request->rabubuka. ' s/d ' .$request->rabututup;
+        $jd->kamis  = $request->kamisbuka == null ? null : 'Kamis : '.$request->kamisbuka. ' s/d ' .$request->kamistutup;
+        $jd->jumat  = $request->jumatbuka == null ? null : 'Jum`at : '.$request->jumatbuka. ' s/d ' .$request->jumattutup;
+        $jd->sabtu  = $request->sabtubuka == null ? null : 'Sabtu : '.$request->sabtubuka. ' s/d ' .$request->sabtututup;
+        $jd->minggu = $request->minggubuka == null ? null : 'Minggu : '.$request->minggubuka. ' s/d ' .$request->minggututup;
         $jd->save();
 
         flash(localize('Doctor`s Schedule has been inserted successfully'))->success();
