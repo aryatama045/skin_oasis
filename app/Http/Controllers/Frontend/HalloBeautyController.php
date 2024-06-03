@@ -46,8 +46,7 @@ class HalloBeautyController extends Controller
         $dokter = DB::table('users')
                     ->leftJoin('jadwal_dokters', 'jadwal_dokters.id_dokter', '=', 'users.id')
                     ->where('users.user_type', 'dokter')
-                    ->where('users.is_banned', 0)
-                    ->latest();
+                    ->where('users.is_banned', 0);
 
         if ($request->search != null) {
             $dokter = $dokter->where('name', 'like', '%' . $request->search . '%');
