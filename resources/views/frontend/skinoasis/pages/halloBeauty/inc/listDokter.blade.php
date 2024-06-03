@@ -30,7 +30,7 @@
                         <div class="posts-list">
                             <figure>
                                 <a href="{{ route('halloBeauty.dokter', $nmd ) }}">
-                                    <img class="rounded-circle" src="{{ staticAsset('frontend/skinoasis/assets/images/dokter.png') }}" alt="post">
+                                    <img class="rounded-circle" src="{{ uploadedAsset($dokters->avatar) }}" alt="post">
                                 </a>
                             </figure>
 
