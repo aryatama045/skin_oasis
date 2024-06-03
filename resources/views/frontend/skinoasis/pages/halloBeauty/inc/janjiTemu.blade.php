@@ -90,18 +90,19 @@
             <input type="time" class="form-control search-key" name="waktu" placeholder="Select Time">
         </div>
 
-        <p class="kalimat"> Waktu konsultasi dapat berubah bergantung pada konsultasi pasien sebelum anda</p>
+        <p class="kalimat"> Waktu konsultasi dapat berubah bergantung pada konsultasi pasien sebelum Anda</p>
     </div>
 
     <div class="separator"></div>
 
     <div class="heading text-left">
         <img class="element-icon" src="{{ staticAsset('frontend/skinoasis/assets/images/icons/hallo-icon/konsultasi.png') }}" alt="icon">
-        <div class="title text-capitalize"> Konsultasi Online</div>
+        <div class="title text-capitalize"> Konsultasi Offline</div>
         <div class="title-two mt-9 text-capitalize">
-            28 Des 2023<br>
-            Klinik Beauty Centre</div>
+            Lokasi : <br>{{ $dokter->klinik_name }}</div>
     </div>
+
+    <i>Setelah melakukan pesanan, kami akan informasikan jadwal sesuai dengan hari dan jam yang Anda pilih diatas melalui pesan WhatsApp.</i><br>
 
     <div class="btn-wrap mt-lg-4">
         <a href="#" class="btn btn-outline-yellow btn-rounded btn-sm ls-1px text-uppercase">

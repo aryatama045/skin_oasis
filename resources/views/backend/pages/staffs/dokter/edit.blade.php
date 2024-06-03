@@ -38,8 +38,18 @@
                             </div>
 
                             <div class="mb-4">
+                                <label for="klinik_name" class="form-label">Nama Klinik</label>
+                                <input class="form-control" type="text" id="klinik_name" placeholder="Masukan Nama Klinik" name="klinik_name" required value="{{ $user->klinik_name }}">
+                            </div>
+
+                            <div class="mb-4">
                                 <label for="spesialis" class="form-label">Spesialis</label>
                                 <input class="form-control" type="text" id="spesialis" placeholder="Masukan Spesialis (contoh: Spesialis Kulit)" name="spesialis" required value="{{ $user->spesialis }}">
+                            </div>
+
+                            <div class="mb-4">
+                                <label for="tarif" class="form-label">Tarif Konsultasi</label>
+                                <input class="form-control" type="number" id="tarif" placeholder="Masukan Tarif" name="tarif" required value="{{ $user->tarif }}">
                             </div>
 
                             <div class="mb-4">

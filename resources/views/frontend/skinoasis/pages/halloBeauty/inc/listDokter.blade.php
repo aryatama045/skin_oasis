@@ -42,10 +42,46 @@
                         <div class="separator mt-2 mb-2"></div>
 
                         <div class="text-left mt-4 mb-4">
-                            <h3 class="font-weight-bold ff">KLINIK BEAUTY CENTRE</h3>
-                            <span>Tersedia : <span class="text-black">Tersedia hari ini</span></span>
+                            <h3 class="font-weight-bold ff">{{ $dokters->klinik_name }}</h3>
+                            <span>Tersedia pada hari <br>
+                                @if($dokters->senin == null)
 
-                            <h2 class="mt-8 font-weight-bolder ff">Rp. 250.000</h2>
+                                @else
+                                    <span class="text-black">{{ $dokters->senin }}</span><br>
+                                @endif
+                                @if($dokters->selasa == null)
+
+                                @else
+                                    <span class="text-black">{{ $dokters->selasa }}</span><br>
+                                @endif
+                                @if($dokters->rabu == null)
+
+                                @else
+                                    <span class="text-black">{{ $dokters->rabu }}</span><br>
+                                @endif
+                                @if($dokters->kamis == null)
+
+                                @else
+                                    <span class="text-black">{{ $dokters->kamis }}</span><br>
+                                @endif
+                                @if($dokters->jumat == null)
+
+                                @else
+                                    <span class="text-black">{{ $dokters->jumat }}</span><br>
+                                @endif
+                                @if($dokters->sabtu == null)
+
+                                @else
+                                    <span class="text-black">{{ $dokters->sabtu }}</span><br>
+                                @endif
+                                @if($dokters->minggu == null)
+
+                                @else
+                                    <span class="text-black">{{ $dokters->minggu }}</span><br>
+                                @endif
+                            </span>
+
+                            <h2 class="mt-8 font-weight-bolder ff">{{ formatPrice($dokters->tarif) }}</h2>
                         </div>
 
                         <div class="card-content text-center">

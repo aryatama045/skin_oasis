@@ -164,6 +164,9 @@ class StaffsController extends Controller
             $user->infolain         = $request->infolain;
             $user->zona             = $request->zona;
             $user->spesialis        = $request->spesialis;
+            $user->klinik_name      = $request->klinik_name;
+            $user->tarif      = $request->tarif;
+
             $user->save();
             $user->assignRole(SpatieRole::findOrFail($request->role_id)->name);
 
@@ -231,6 +234,8 @@ class StaffsController extends Controller
         $user->phone      = validatePhone($request->phone);
         $user->role_id    = $request->role_id;
         $user->spesialis    = $request->spesialis;
+        $user->klinik_name      = $request->klinik_name;
+        $user->tarif      = $request->tarif;
 
         $user->infolain          = $request->infolain;
 

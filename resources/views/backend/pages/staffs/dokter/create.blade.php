@@ -40,10 +40,26 @@
                             </div>
 
                             <div class="mb-4">
+                                <label for="klinik_name" class="form-label">Nama Klinik<span class="text-danger ms-1">*</span></label>
+                                <input class="form-control" type="text" id="klinik_name" placeholder="Masukan Nama Klinik" name="klinik_name" value="{{old('klinik_name')}}">
+                                @if ($errors->has('klinik_name'))
+                                <span class="text-danger">{{ $errors->first('klinik_name') }}</span>
+                                @endif
+                            </div>
+
+                            <div class="mb-4">
                                 <label for="spesialis" class="form-label">Spesialis<span class="text-danger ms-1">*</span></label>
                                 <input class="form-control" type="text" id="spesialis" placeholder="Masukan Spesialis (contoh: Spesialis Kulit)" name="spesialis" value="{{old('spesialis')}}">
                                 @if ($errors->has('spesialis'))
                                 <span class="text-danger">{{ $errors->first('spesialis') }}</span>
+                                @endif
+                            </div>
+
+                            <div class="mb-4">
+                                <label for="tarif" class="form-label">Tarif Konsultasi<span class="text-danger ms-1">*</span></label>
+                                <input class="form-control" type="number" id="tarif" placeholder="Masukan Tarif" name="tarif" value="{{old('tarif')}}">
+                                @if ($errors->has('tarif'))
+                                <span class="text-danger">{{ $errors->first('tarif') }}</span>
                                 @endif
                             </div>
 

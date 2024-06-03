@@ -60,6 +60,8 @@
                                 <tr>
                                     <th class="text-center">{{ localize('S/L') }}</th>
                                     <th>{{ localize('Name') }}</th>
+                                    <th data-breakpoints="xs sm">Nama Klinik</th>
+                                    <th data-breakpoints="xs sm">Tarif</th>
                                     <th data-breakpoints="xs sm">Spesialis</th>
                                     <th data-breakpoints="xs sm">{{ localize('Role') }}</th>
                                     <th data-breakpoints="xs sm">{{ localize('Email') }}</th>
@@ -76,6 +78,16 @@
                                         <td>
                                             <span class="fw-semibold">
                                                 {{ $dokter->name }}
+                                            </span>
+                                        </td>
+                                        <td>
+                                            <span class="fw-semibold">
+                                                {{ $dokter->klinik_name }}
+                                            </span>
+                                        </td>
+                                        <td>
+                                            <span class="fw-semibold">
+                                                {{ formatPrice($dokter->tarif) }}
                                             </span>
                                         </td>
                                         <td>
