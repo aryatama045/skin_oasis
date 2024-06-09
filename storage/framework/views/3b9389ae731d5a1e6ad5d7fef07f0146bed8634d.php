@@ -32,4 +32,4 @@
                 <a href="<?php echo e(getSetting('linkedin_link')); ?>" class="social-icon" target="_blank" title="Instagram"><i class="icon-instagram"></i></a>
                 <a href="<?php echo e(getSetting('youtube_link')); ?>" class="social-icon" target="_blank" title="Youtube"><i class="icon-youtube"></i></a>
             </div><!-- End .social-icons -->
-        </div><!-- End .mobile-menu-wrapper --><?php /**PATH C:\xampp\htdocs\skin_oasis\resources\views/frontend/skinoasis/inc/navMobile.blade.php ENDPATH**/ ?>
+        </div><!-- End .mobile-menu-wrapper --><?php /**PATH D:\xampp\htdocs\skin_oasis\resources\views/frontend/skinoasis/inc/navMobile.blade.php ENDPATH**/ ?>

@@ -17,4 +17,4 @@
         </div>
     </div>
 </div>
-<?php /**PATH C:\xampp\htdocs\skin_oasis\resources\views/frontend/skinoasis/pages/partials/products/quickViewModal.blade.php ENDPATH**/ ?>
+<?php /**PATH D:\xampp\htdocs\skin_oasis\resources\views/frontend/skinoasis/pages/partials/products/quickViewModal.blade.php ENDPATH**/ ?>

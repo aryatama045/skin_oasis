@@ -12,4 +12,4 @@
 </div><!-- End .error-content text-center -->
 <?php $__env->stopSection(); ?>
 
-<?php echo $__env->make('frontend.skinoasis.layouts.master', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\xampp\htdocs\skin_oasis\resources\views/errors/404.blade.php ENDPATH**/ ?>
+<?php echo $__env->make('frontend.skinoasis.layouts.master', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH D:\xampp\htdocs\skin_oasis\resources\views/errors/404.blade.php ENDPATH**/ ?>

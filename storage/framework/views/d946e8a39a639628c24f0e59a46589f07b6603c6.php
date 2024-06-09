@@ -23,4 +23,4 @@
 <link rel="stylesheet" href="<?php echo e(staticAsset('frontend/skinoasis/assets/css/demos/demo-18.css')); ?>">
 
 
-<?php /**PATH C:\xampp\htdocs\skin_oasis\resources\views/frontend/skinoasis/inc/css.blade.php ENDPATH**/ ?>
+<?php /**PATH D:\xampp\htdocs\skin_oasis\resources\views/frontend/skinoasis/inc/css.blade.php ENDPATH**/ ?>

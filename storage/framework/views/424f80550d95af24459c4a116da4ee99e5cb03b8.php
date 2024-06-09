@@ -323,4 +323,4 @@
     <!--for pwa-->
 </body>
 
-</html><?php /**PATH C:\xampp\htdocs\skin_oasis\resources\views/frontend/skinoasis/layouts/master.blade.php ENDPATH**/ ?>
+</html><?php /**PATH D:\xampp\htdocs\skin_oasis\resources\views/frontend/skinoasis/layouts/master.blade.php ENDPATH**/ ?>

@@ -44,4 +44,4 @@
         </center>
     </li>
 <?php endif; ?>
-<?php /**PATH C:\xampp\htdocs\skin_oasis\resources\views/frontend/skinoasis/pages/partials/carts/cart-navbar.blade.php ENDPATH**/ ?>
+<?php /**PATH D:\xampp\htdocs\skin_oasis\resources\views/frontend/skinoasis/pages/partials/carts/cart-navbar.blade.php ENDPATH**/ ?>

@@ -136,4 +136,4 @@
             </div><!-- End .soial-icons -->
         </div><!-- End .container -->
     </div><!-- End .footer-bottom -->
-</footer><!-- End .footer --><?php /**PATH C:\xampp\htdocs\skin_oasis\resources\views/frontend/skinoasis/inc/footer.blade.php ENDPATH**/ ?>
+</footer><!-- End .footer --><?php /**PATH D:\xampp\htdocs\skin_oasis\resources\views/frontend/skinoasis/inc/footer.blade.php ENDPATH**/ ?>

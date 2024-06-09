@@ -208,4 +208,4 @@
             </div><!-- End .header-right -->
         </div><!-- End .container -->
     </div><!-- End .header-middle -->
-</header><!-- End .header --><?php /**PATH C:\xampp\htdocs\skin_oasis\resources\views/frontend/skinoasis/inc/header.blade.php ENDPATH**/ ?>
+</header><!-- End .header --><?php /**PATH D:\xampp\htdocs\skin_oasis\resources\views/frontend/skinoasis/inc/header.blade.php ENDPATH**/ ?>
