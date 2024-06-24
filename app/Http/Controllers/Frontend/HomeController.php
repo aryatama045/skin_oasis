@@ -314,7 +314,7 @@ class HomeController extends Controller
             try {
                 Mail::to($partner->email)->queue(new EmailManager($array));
             } catch (\Exception $e) {
-                dd($e, $emailData);
+                // dd($e, $emailData);
             }
 
         } else {
@@ -322,7 +322,6 @@ class HomeController extends Controller
             return back();
         }
 
-        dd('berhasil');
         flash(localize('Your message has been sent , check your mail for login !!!'))->success();
         return back();
     }
