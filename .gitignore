@@ -25,3 +25,4 @@ public/frontend/skinoasis/assets/prepros.config
 public/frontend/skinoasis/assets/sass/prepros.config
 /public/uploads
 /vendor
+/storage
