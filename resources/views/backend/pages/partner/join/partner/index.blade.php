@@ -57,7 +57,7 @@
                                 <tr>
                                     <th class="text-center">{{ localize('S/L') }}</th>
                                     <th>{{ localize('Title') }}</th>
-                                    <th data-breakpoints="xs sm">{{ localize('Category') }}</th>
+                                    <th data-breakpoints="xs sm">{{ localize('Email') }}</th>
                                     <th data-breakpoints="xs sm" class="text-end">{{ localize('Action') }}
                                     </th>
                                 </tr>
@@ -71,20 +71,14 @@
 
                                         <td>
                                             <h6 class="fs-sm mb-0 ms-2">
-                                                {{ $page->title }}
+                                                {{ $page->name }}
                                             </h6>
                                         </td>
-
                                         <td>
-                                            @if ($page->category != null)
-                                                <span
-                                                    class="badge bg-secondary  rounded-pill">{{ $page->category }}
-                                                </span>
-                                            @else
-                                                {{ localize('n/a') }}
-                                            @endif
+                                            <h6 class="fs-sm mb-0 ms-2">
+                                                {{ $page->email }}
+                                            </h6>
                                         </td>
-
                                         <td class="text-end">
                                             <div class="dropdown tt-tb-dropdown">
                                                 <button type="button" class="btn p-0" data-bs-toggle="dropdown"

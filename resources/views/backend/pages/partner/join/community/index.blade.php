@@ -12,7 +12,7 @@
                     <div class="card tt-page-header">
                         <div class="card-body d-lg-flex align-items-center justify-content-lg-between">
                             <div class="tt-page-title">
-                                <h2 class="h5 mb-lg-0">{{ localize('Partner') }}</h2>
+                                <h2 class="h5 mb-lg-0">{{ localize('Community') }}</h2>
                             </div>
                             <div class="tt-action">
                                 <a href="{{ route('admin.partner.create') }}" class="btn btn-primary"><i
@@ -57,7 +57,9 @@
                                 <tr>
                                     <th class="text-center">{{ localize('S/L') }}</th>
                                     <th>{{ localize('Title') }}</th>
-                                    <th data-breakpoints="xs sm">{{ localize('Category') }}</th>
+                                    <th data-breakpoints="xs sm">{{ localize('Email') }}</th>
+                                    <!-- <th data-breakpoints="xs sm">{{ localize('Category') }}</th> -->
+
                                     <th data-breakpoints="xs sm" class="text-end">{{ localize('Action') }}
                                     </th>
                                 </tr>
@@ -71,19 +73,24 @@
 
                                         <td>
                                             <h6 class="fs-sm mb-0 ms-2">
-                                                {{ $page->title }}
+                                                {{ $page->name }}
+                                            </h6>
+                                        </td>
+                                        <td>
+                                            <h6 class="fs-sm mb-0 ms-2">
+                                                {{ $page->email }}
                                             </h6>
                                         </td>
 
-                                        <td>
-                                            @if ($page->category != null)
+                                        <!-- <td>
+                                            @if ($page->type_join != null)
                                                 <span
-                                                    class="badge bg-secondary  rounded-pill">{{ $page->category }}
+                                                    class="badge bg-secondary  rounded-pill">{{ $page->type_join }}
                                                 </span>
                                             @else
                                                 {{ localize('n/a') }}
                                             @endif
-                                        </td>
+                                        </td> -->
 
                                         <td class="text-end">
                                             <div class="dropdown tt-tb-dropdown">
