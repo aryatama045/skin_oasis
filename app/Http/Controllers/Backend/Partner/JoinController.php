@@ -21,7 +21,7 @@ class JoinController extends Controller
         $searchKey = null;
         $is_published = null;
 
-        $pages = PartnerJoin::orderBy('id','ASC');
+        $pages = PartnerJoin::where('type_join', 'influencer')->orderBy('name','ASC');
         if ($request->search != null) {
             $pages = $pages->where('name', 'like', '%' . $request->search . '%');
             $searchKey = $request->search;
@@ -36,9 +36,9 @@ class JoinController extends Controller
         $searchKey = null;
         $is_published = null;
 
-        $pages = PartnerJoin::orderBy('id','ASC');
+        $pages = PartnerJoin::where('type_join', 'partner')->orderBy('name','ASC');
         if ($request->search != null) {
-            $pages = $pages->where('title', 'like', '%' . $request->search . '%');
+            $pages = $pages->where('name', 'like', '%' . $request->search . '%');
             $searchKey = $request->search;
         }
 
@@ -51,9 +51,9 @@ class JoinController extends Controller
         $searchKey = null;
         $is_published = null;
 
-        $pages = Partner::orderBy('id','ASC');
+        $pages = PartnerJoin::where('type_join', 'community')->orderBy('name','ASC');
         if ($request->search != null) {
-            $pages = $pages->where('title', 'like', '%' . $request->search . '%');
+            $pages = $pages->where('name', 'like', '%' . $request->search . '%');
             $searchKey = $request->search;
         }
 

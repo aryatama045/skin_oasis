@@ -87,7 +87,7 @@
         <div class="col-sm-4">
             <div class="label-input-field">
                 <label>Blok</label>
-                <input type="text" name="blok" placeholder="{{ localize('You Blok') }}"
+                <input type="text" name="blok" placeholder="You Blok"
                     required>
             </div>
         </div>
@@ -95,7 +95,7 @@
         <div class="col-sm-4">
             <div class="label-input-field">
                 <label>Kode Pos</label>
-                <input type="text" name="kodepos" placeholder="{{ localize('You Kode Pos') }}"
+                <input type="text" name="kodepos" placeholder="You Kode Pos"
                     required>
             </div>
         </div>

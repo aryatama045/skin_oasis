@@ -53,7 +53,7 @@ class HalloBeautyController extends Controller
             $searchKey = $request->search;
         }
 
-        $dokter = $dokter->paginate(paginationNumber(1));
+        $dokter = $dokter->paginate(paginationNumber(9));
 
         return getView('pages.halloBeauty.searchDokter',
                         ['sliders' => $sliders , 'dokter' => $dokter , 'searchKey' => $searchKey]);

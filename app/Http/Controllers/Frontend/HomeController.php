@@ -16,6 +16,9 @@ use App\Models\City;
 use App\Models\State;
 use App\Models\UserAddress;
 
+use Mail;
+use App\Mail\EmailManager;
+
 use Illuminate\Http\Request;
 use Dymantic\InstagramFeed\Profile;
 use Dymantic\InstagramFeed\InstagramFeed;
@@ -295,8 +298,31 @@ class HomeController extends Controller
         $address->kodepos           = $request->kodepos;
         $address->save();
 
+        $emailData   = array(
+            'email' => $partner->email,
+            'mail_from' => env('MAIL_FROM_ADDRESS'),
+            'content' => 'Parner Join To Access Login',
+        );
 
-        flash(localize('Your message has been sent'))->success();
+        if (env('MAIL_USERNAME') != null) {
+            //sends newsletter to subscribed users
+            $array['view'] = 'emails.newAccount';
+            $array['subject'] = 'Partner Join';
+            $array['from'] = env('MAIL_FROM_ADDRESS');
+            $array['email'] = $partner->email;
+            $array['content'] = 'Parner Join To Access Login';
+            try {
+                Mail::to($partner->email)->queue(new EmailManager($array));
+            } catch (\Exception $e) {
+                // dd($e, $emailData);
+            }
+
+        } else {
+            flash(localize('Please configure SMTP first'))->error();
+            return back();
+        }
+
+        flash(localize('Your message has been sent , check your mail for login !!!'))->success();
         return back();
     }
 
