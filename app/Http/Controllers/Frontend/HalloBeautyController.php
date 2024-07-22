@@ -158,4 +158,11 @@ class HalloBeautyController extends Controller
         }
     }
 
+    #simpan janji temu dokter by user id
+    public function saveJanjiTemu()
+    {
+
+    }
+
+
 }
