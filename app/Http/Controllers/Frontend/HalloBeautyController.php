@@ -207,6 +207,7 @@ class HalloBeautyController extends Controller
         $order = new Order;
         $order->order_group_id  = $orderGroup->id;
         $order->janjitemu_id    = $janjiTemu->id;
+        $order->transfer_id     = $request->id_dokter;
         $order->shop_id         = 1;
         $order->user_id         = $userId;
         $order->location_id     = session('stock_location_id');
