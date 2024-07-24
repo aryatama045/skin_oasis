@@ -182,6 +182,7 @@
                         </div>
 
                         <!--order details-->
+                        @if ($order->shipping_delivery_type != "Janji Temu")
                         <table class="table tt-footable border-top" data-use-parent-width="true">
                             <thead>
                                 <tr>
@@ -248,6 +249,27 @@
                                 @endforeach
                             </tbody>
                         </table>
+                        @else
+
+                        <table class="table tt-footable border-top" data-use-parent-width="true">
+                            <thead>
+                                <tr>
+                                    <th class="text-center" width="35%">Jam</th>
+                                    <th data-breakpoints="xs sm">Hari</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                @foreach ($jadwal as $key => $val)
+                                    <tr>
+                                        <td class="text-center">{{ $val->jam }}</td>
+                                        <td >{{ $val->hari }}</td>
+                                    </tr>
+                                @endforeach
+                            </tbody>
+                        </table>
+
+                        @endif
 
                         <!--grand total-->
                         <div class="card-body">

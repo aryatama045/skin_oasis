@@ -188,7 +188,6 @@
                                             @endif
                                         </td>
 
-
                                         <td>
                                             @if ($order->delivery_status == orderDeliveredStatus())
                                                 <span class="badge bg-soft-primary rounded-pill text-capitalize">

@@ -11,6 +11,14 @@ use Illuminate\Http\Request;
 use App\Models\Product;
 use App\Models\JadwalDokter;
 use App\Models\ProductCategory;
+
+use App\Models\JanjiTemu;
+use App\Models\Order;
+use App\Models\OrderGroup;
+
+
+use Mail;
+use App\Mail\EmailManager;
 use DB;
 
 class HalloBeautyController extends Controller
@@ -148,7 +156,7 @@ class HalloBeautyController extends Controller
 
         $jd = JadwalDokter::join('users','users.id','=','jadwal_dokters.id_dokter')
             ->where('users.name', '=',  $dokter->name)->get();
-        
+
         // dd($dokter->name);
 
         if(!empty($dokter)){
@@ -159,9 +167,83 @@ class HalloBeautyController extends Controller
     }
 
     #simpan janji temu dokter by user id
-    public function saveJanjiTemu()
+    public function saveJanjiTemu(Request $request)
     {
+        $user = auth()->user();
 
+        // dd($request);
+        if($user == null){
+            flash(localize('Please Sign In'))->success();
+            return redirect()->route('login');
+        }
+
+        $userId = auth()->user()->id;
+        # create new order group
+        $orderGroup                                     = new OrderGroup;
+        $orderGroup->user_id                            = $userId;
+        $orderGroup->shipping_address_id                = '-';
+        $orderGroup->billing_address_id                 = '-';
+        $orderGroup->location_id                        = session('stock_location_id');
+        $orderGroup->phone_no                           = 0;
+        $orderGroup->alternative_phone_no               = 0;
+        $orderGroup->sub_total_amount                   = 0;
+        $orderGroup->total_tax_amount                   = 0;
+        $orderGroup->total_coupon_discount_amount       = 0;
+        $orderGroup->total_shipping_cost                = 0;
+        $orderGroup->total_tips_amount                  = 0; // convert to base price;
+        $orderGroup->grand_total_amount                 = 0;
+        $orderGroup->payment_status                     = "unpaid";
+        $orderGroup->save();
+
+        # janji temu
+        $janjiTemu = new JanjiTemu;
+        $janjiTemu->id_dokter           = $request->id_dokter;
+        $janjiTemu->user_id             = $userId;
+        $janjiTemu->jam                 = $request->jam;
+        $janjiTemu->hari                = $request->jadwal;
+        $janjiTemu->save();
+
+        # order -> todo::[update version] make array for each vendor, create order in loop
+        $order = new Order;
+        $order->order_group_id  = $orderGroup->id;
+        $order->janjitemu_id    = $janjiTemu->id;
+        $order->shop_id         = 1;
+        $order->user_id         = $userId;
+        $order->location_id     = session('stock_location_id');
+
+        $order->total_admin_earnings            = 0;
+        $order->logistic_id                     = '';
+        $order->logistic_name                   = '-';
+        $order->shipping_delivery_type          = 'Janji Temu';
+        $order->scheduled_delivery_info         = 0;
+
+        $order->shipping_cost                   = 0; // todo::[update version] calculate for each vendors
+        $order->tips_amount                     = 0; // todo::[update version] calculate for each vendors
+
+        $order->reward_points = 0;
+        $order->save();
+
+        $userEmail = auth()->user()->email;
+        if (env('MAIL_USERNAME') != null) {
+            //sends newsletter to subscribed users
+            $array['view'] = 'emails.newAccount';
+            $array['subject'] = 'Community Join';
+            $array['from'] = env('MAIL_FROM_ADDRESS');
+            $array['email'] = $userEmail;
+            $array['content'] = 'Pesan janji temu';
+            try {
+                Mail::to($userEmail)->queue(new EmailManager($array));
+            } catch (\Exception $e) {
+                // dd($e, $emailData);
+            }
+
+        } else {
+            flash(localize('Please configure SMTP first'))->error();
+            return back();
+        }
+
+        flash(localize('Your appointment has been sent'))->success();
+        return back();
     }
 
 

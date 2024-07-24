@@ -301,7 +301,7 @@ class HomeController extends Controller
         $emailData   = array(
             'email' => $partner->email,
             'mail_from' => env('MAIL_FROM_ADDRESS'),
-            'content' => 'Parner Join To Access Login',
+            'content' => 'Partner Join To Access Login',
         );
 
         if (env('MAIL_USERNAME') != null) {
@@ -310,7 +310,7 @@ class HomeController extends Controller
             $array['subject'] = 'Partner Join';
             $array['from'] = env('MAIL_FROM_ADDRESS');
             $array['email'] = $partner->email;
-            $array['content'] = 'Parner Join To Access Login';
+            $array['content'] = 'Partner Join To Access Login';
             try {
                 Mail::to($partner->email)->queue(new EmailManager($array));
             } catch (\Exception $e) {
@@ -369,6 +369,30 @@ class HomeController extends Controller
         $address->kodepos           = $request->kodepos;
         $address->save();
 
+        $emailData   = array(
+            'email' => $partner->email,
+            'mail_from' => env('MAIL_FROM_ADDRESS'),
+            'content' => 'Influencer Join To Access Login',
+        );
+
+        if (env('MAIL_USERNAME') != null) {
+            //sends newsletter to subscribed users
+            $array['view'] = 'emails.newAccount';
+            $array['subject'] = 'Influencer Join';
+            $array['from'] = env('MAIL_FROM_ADDRESS');
+            $array['email'] = $partner->email;
+            $array['content'] = 'Influencer Join To Access Login';
+            try {
+                Mail::to($partner->email)->queue(new EmailManager($array));
+            } catch (\Exception $e) {
+                // dd($e, $emailData);
+            }
+
+        } else {
+            flash(localize('Please configure SMTP first'))->error();
+            return back();
+        }
+
 
         flash(localize('Your message has been sent'))->success();
         return back();
@@ -416,6 +440,30 @@ class HomeController extends Controller
         $address->address           = $request->address;
         $address->kodepos           = $request->kodepos;
         $address->save();
+
+        $emailData   = array(
+            'email' => $partner->email,
+            'mail_from' => env('MAIL_FROM_ADDRESS'),
+            'content' => 'Community Join To Access Login',
+        );
+
+        if (env('MAIL_USERNAME') != null) {
+            //sends newsletter to subscribed users
+            $array['view'] = 'emails.newAccount';
+            $array['subject'] = 'Community Join';
+            $array['from'] = env('MAIL_FROM_ADDRESS');
+            $array['email'] = $partner->email;
+            $array['content'] = 'Community Join To Access Login';
+            try {
+                Mail::to($partner->email)->queue(new EmailManager($array));
+            } catch (\Exception $e) {
+                // dd($e, $emailData);
+            }
+
+        } else {
+            flash(localize('Please configure SMTP first'))->error();
+            return back();
+        }
 
 
         flash(localize('Your message has been sent'))->success();

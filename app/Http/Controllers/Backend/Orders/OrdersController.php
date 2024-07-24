@@ -10,6 +10,7 @@ use App\Models\OrderGroup;
 use App\Models\OrderItem;
 use App\Models\OrderUpdate;
 use App\Models\User;
+use App\Models\JanjiTemu;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Config;
 use PDF;
@@ -82,7 +83,6 @@ class OrdersController extends Controller
                 $q->orWhereIn('order_group_id', $orderGroup);
             });
         }
-        
 
         $orders = $orders->paginate(paginationNumber());
         $locations = Location::where('is_published', 1)->latest()->get();
@@ -94,8 +94,8 @@ class OrdersController extends Controller
     {
         $order = Order::find($id);
         $mitra = User::where('user_type','mitra')->get();
-        // dd($mitra);
-        return view('backend.pages.orders.show', compact('order', 'mitra'));
+        $jadwal = JanjiTemu::where('id', $order->janjitemu_id)->get();
+        return view('backend.pages.orders.show', compact('order', 'mitra','jadwal'));
     }
 
     # update payment status 

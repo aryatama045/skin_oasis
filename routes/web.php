@@ -79,6 +79,8 @@ Route::get('/hallobeauty/listdokter', [HalloBeautyController::class, 'listdokter
 Route::get('/hallobeauty/listpaket', [HalloBeautyController::class, 'listpaket'])->name('halloBeauty.listpaket');
 Route::get('/hallobeauty/dokter/{slug}', [HalloBeautyController::class, 'dokter'])->name('halloBeauty.dokter');
 
+Route::post('/janjitemu-save', [HalloBeautyController::class, 'saveJanjiTemu'])->name('Janjitemu.save');
+
 
 # carts
 Route::get('/carts', [CartsController::class, 'index'])->name('carts.index');

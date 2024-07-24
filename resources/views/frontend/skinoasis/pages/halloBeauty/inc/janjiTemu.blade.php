@@ -4,76 +4,68 @@
         <p class="subtitle text-capitalize"> klinik beauty centre</p>
     </div>
 
+    <form class=""
+    action="{{ route('Janjitemu.save') }}" method="POST" >
+    @csrf
+
+    <input type="hidden" name="id_dokter" value="{{ $dokter->id }}" required>
+
     <!-- Button Group -->
     <div class="button-group mt-3 mb-3">
         <div class="row">
             @foreach($jd as $jadwaldokter)
-                @if($jadwaldokter->senin == null)
-                    
-                @else
+                @if($jadwaldokter->senin != null)
                     <div class="col-sm-4 col-12 p-1">
                         <div class="btn-wrap w-100">
-                            <input type="radio" name="jadwal" class="btn-check" id="senin" autocomplete="off">
+                            <input type="radio" name="jadwal" value="{{ $jadwaldokter->senin }}" required class="btn-check" id="senin" autocomplete="off">
                             <label class="btn btn-outline-yellow btn-rounded btn-sm ls-1px w-100" for="senin">{{ $jadwaldokter->senin }}</label>
                         </div>
                     </div>
                 @endif
-                @if($jadwaldokter->selasa == null)
-                    
-                @else
+                @if($jadwaldokter->selasa != null)
                     <div class="col-sm-4 col-12 p-1">
                         <div class="btn-wrap w-100">
-                            <input type="radio" name="jadwal" class="btn-check" id="selasa" autocomplete="off">
+                            <input type="radio" name="jadwal" value="{{ $jadwaldokter->selasa }}" required class="btn-check" id="selasa" autocomplete="off">
                             <label class="btn btn-outline-yellow btn-rounded btn-sm ls-1px w-100" for="selasa">{{ $jadwaldokter->selasa }}</label>
                         </div>
                     </div>
                 @endif
-                @if($jadwaldokter->rabu == null)
-                    
-                @else
+                @if($jadwaldokter->rabu != null)
                     <div class="col-sm-4 col-12 p-1">
                         <div class="btn-wrap w-100">
-                            <input type="radio" name="jadwal" class="btn-check" id="rabu" autocomplete="off">
+                            <input type="radio" name="jadwal" value="{{ $jadwaldokter->rabu }}" required class="btn-check" id="rabu" autocomplete="off">
                             <label class="btn btn-outline-yellow btn-rounded btn-sm ls-1px w-100" for="rabu">{{ $jadwaldokter->rabu }}</label>
                         </div>
                     </div>
                 @endif
-                @if($jadwaldokter->kamis == null)
-                    
-                @else
+                @if($jadwaldokter->kamis != null)
                     <div class="col-sm-4 col-12 p-1">
                         <div class="btn-wrap w-100">
-                            <input type="radio" name="jadwal" class="btn-check" id="kamis" autocomplete="off">
+                            <input type="radio" name="jadwal" value="{{ $jadwaldokter->kamis }}" required class="btn-check" id="kamis" autocomplete="off">
                             <label class="btn btn-outline-yellow btn-rounded btn-sm ls-1px w-100" for="kamis">{{ $jadwaldokter->kamis }}</label>
                         </div>
                     </div>
                 @endif
-                @if($jadwaldokter->jumat == null)
-                    
-                @else
+                @if($jadwaldokter->jumat != null)
                     <div class="col-sm-4 col-12 p-1">
                         <div class="btn-wrap w-100">
-                            <input type="radio" name="jadwal" class="btn-check" id="jumat" autocomplete="off">
+                            <input type="radio" name="jadwal" value="{{ $jadwaldokter->jumat }}" required class="btn-check" id="jumat" autocomplete="off">
                             <label class="btn btn-outline-yellow btn-rounded btn-sm ls-1px w-100" for="jumat">{{ $jadwaldokter->jumat }}</label>
                         </div>
                     </div>
                 @endif
-                @if($jadwaldokter->sabtu == null)
-                    
-                @else
+                @if($jadwaldokter->sabtu != null)
                     <div class="col-sm-4 col-12 p-1">
                         <div class="btn-wrap w-100">
-                            <input type="radio" name="jadwal" class="btn-check" id="sabtu" autocomplete="off">
+                            <input type="radio" name="jadwal" value="{{ $jadwaldokter->sabtu }}" required class="btn-check" id="sabtu" autocomplete="off">
                             <label class="btn btn-outline-yellow btn-rounded btn-sm ls-1px w-100" for="sabtu">{{ $jadwaldokter->sabtu }}</label>
                         </div>
                     </div>
                 @endif
-                @if($jadwaldokter->minggu == null)
-                    
-                @else
+                @if($jadwaldokter->minggu != null)
                     <div class="col-sm-4 col-12 p-1">
                         <div class="btn-wrap w-100">
-                            <input type="radio" name="jadwal" class="btn-check" id="minggu" autocomplete="off">
+                            <input type="radio" name="jadwal" value="{{ $jadwaldokter->minggu }}" required class="btn-check" id="minggu" autocomplete="off">
                             <label class="btn btn-outline-yellow btn-rounded btn-sm ls-1px w-100" for="minggu">{{ $jadwaldokter->minggu }}</label>
                         </div>
                     </div>
@@ -83,11 +75,12 @@
 
     </div>
 
+    <!-- Pilih Waktu -->
     <div class="heading text-left">
         <h4 class="title text-capitalize">waktu</h4>
 
         <div class="input-group mt-3" id="dtJadwal">
-            <input type="time" class="form-control search-key" name="waktu" placeholder="Select Time">
+            <input type="time" required class="form-control search-key" name="jam" placeholder="Select Time">
         </div>
 
         <p class="kalimat"> Waktu konsultasi dapat berubah bergantung pada konsultasi pasien sebelum Anda</p>
@@ -105,9 +98,11 @@
     <i>Setelah melakukan pesanan, kami akan informasikan jadwal sesuai dengan hari dan jam yang Anda pilih diatas melalui pesan WhatsApp.</i><br>
 
     <div class="btn-wrap mt-lg-4">
-        <a href="#" class="btn btn-outline-yellow btn-rounded btn-sm ls-1px text-uppercase">
+        <button type="submit"  class="btn btn-outline-yellow btn-rounded btn-sm ls-1px text-uppercase">
             Pesan
-        </a>
+        </button>
     </div>
+
+    </form>
 
 </div>
