@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2323a89a6da32d99a89cb049dca5ce2e",
+    "content-hash": "3b379679b95c713c30779f4888f27abf",
     "packages": [
         {
             "name": "anandsiddharth/laravel-paytm-wallet",
@@ -61,6 +61,83 @@
                 "source": "https://github.com/anandsiddharth/laravel-paytm-wallet/tree/v2.0.0"
             },
             "time": "2020-10-28T06:22:20+00:00"
+        },
+        {
+            "name": "apility/laravel-fcm",
+            "version": "v1.5.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/apility/Laravel-FCM.git",
+                "reference": "23b8feab8372b53d620edf7b94794b8e28ed0271"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/apility/Laravel-FCM/zipball/23b8feab8372b53d620edf7b94794b8e28ed0271",
+                "reference": "23b8feab8372b53d620edf7b94794b8e28ed0271",
+                "shasum": ""
+            },
+            "require": {
+                "guzzlehttp/guzzle": "^6.0|^7.0",
+                "illuminate/support": "^5.0|^6.0|^7.0|^8.0|^9.0",
+                "monolog/monolog": "^1.0|^2.0",
+                "php": ">=5.5.9"
+            },
+            "replace": {
+                "brozot/laravel-fcm": "*"
+            },
+            "require-dev": {
+                "laravel/laravel": "5.2.*",
+                "mockery/mockery": "0.9.*",
+                "phpunit/phpunit": "4.7.*",
+                "satooshi/php-coveralls": "dev-master"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "LaravelFCM\\FCMServiceProvider"
+                    ],
+                    "aliases": {
+                        "FCM": "LaravelFCM\\Facades\\FCM",
+                        "FCMGroup": "LaravelFCM\\Facades\\FCMGroup"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "LaravelFCM\\": "src/",
+                    "LaravelFCM\\Mocks\\": "tests/mocks"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nicolas Brosy",
+                    "email": "nicolas.brosy@gmail.com"
+                },
+                {
+                    "name": "Thomas Alrek",
+                    "email": "thomas@apility.no"
+                }
+            ],
+            "description": "Laravel / Lumen package for Firebase Cloud Messaging ",
+            "keywords": [
+                "FCM",
+                "Firebase Cloud Messaging",
+                "firebase",
+                "laravel",
+                "lumen",
+                "notification",
+                "push"
+            ],
+            "support": {
+                "source": "https://github.com/apility/Laravel-FCM/tree/v1.5.0"
+            },
+            "abandoned": true,
+            "time": "2022-10-06T11:25:51+00:00"
         },
         {
             "name": "asm89/stack-cors",
@@ -1616,6 +1693,72 @@
             "time": "2022-12-08T15:28:55+00:00"
         },
         {
+            "name": "laravel/pint",
+            "version": "v1.17.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/laravel/pint.git",
+                "reference": "e8a88130a25e3f9d4d5785e6a1afca98268ab110"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/laravel/pint/zipball/e8a88130a25e3f9d4d5785e6a1afca98268ab110",
+                "reference": "e8a88130a25e3f9d4d5785e6a1afca98268ab110",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "ext-mbstring": "*",
+                "ext-tokenizer": "*",
+                "ext-xml": "*",
+                "php": "^8.1.0"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^3.61.1",
+                "illuminate/view": "^10.48.18",
+                "larastan/larastan": "^2.9.8",
+                "laravel-zero/framework": "^10.4.0",
+                "mockery/mockery": "^1.6.12",
+                "nunomaduro/termwind": "^1.15.1",
+                "pestphp/pest": "^2.35.0"
+            },
+            "bin": [
+                "builds/pint"
+            ],
+            "type": "project",
+            "autoload": {
+                "psr-4": {
+                    "App\\": "app/",
+                    "Database\\Seeders\\": "database/seeders/",
+                    "Database\\Factories\\": "database/factories/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nuno Maduro",
+                    "email": "enunomaduro@gmail.com"
+                }
+            ],
+            "description": "An opinionated code formatter for PHP.",
+            "homepage": "https://laravel.com",
+            "keywords": [
+                "format",
+                "formatter",
+                "lint",
+                "linter",
+                "php"
+            ],
+            "support": {
+                "issues": "https://github.com/laravel/pint/issues",
+                "source": "https://github.com/laravel/pint"
+            },
+            "time": "2024-08-06T15:11:54+00:00"
+        },
+        {
             "name": "laravel/sanctum",
             "version": "v2.15.1",
             "source": {
@@ -3058,30 +3201,32 @@
         },
         {
             "name": "nwidart/laravel-modules",
-            "version": "8.6.0",
+            "version": "v11.0.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nWidart/laravel-modules.git",
-                "reference": "8f0d90d9f7ba986a98f9be20ae2d2487cb6a0119"
+                "reference": "9d50adcbf8d11c9ec01e48a5b7adbf320653185c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nWidart/laravel-modules/zipball/8f0d90d9f7ba986a98f9be20ae2d2487cb6a0119",
-                "reference": "8f0d90d9f7ba986a98f9be20ae2d2487cb6a0119",
+                "url": "https://api.github.com/repos/nWidart/laravel-modules/zipball/9d50adcbf8d11c9ec01e48a5b7adbf320653185c",
+                "reference": "9d50adcbf8d11c9ec01e48a5b7adbf320653185c",
                 "shasum": ""
             },
             "require": {
                 "ext-json": "*",
-                "php": ">=7.3"
+                "laravel/pint": "^1.16",
+                "php": ">=8.2",
+                "wikimedia/composer-merge-plugin": "^2.1"
             },
             "require-dev": {
-                "friendsofphp/php-cs-fixer": "^2.16",
-                "laravel/framework": "^8.0",
-                "mockery/mockery": "~1.0",
-                "orchestra/testbench": "^6.2",
-                "phpstan/phpstan": "^0.12.14",
-                "phpunit/phpunit": "^8.5",
-                "spatie/phpunit-snapshot-assertions": "^2.1.0|^4.2"
+                "friendsofphp/php-cs-fixer": "^v3.52",
+                "laravel/framework": "^v11.0",
+                "mockery/mockery": "^1.6",
+                "orchestra/testbench": "^v9.0",
+                "phpstan/phpstan": "^1.4",
+                "phpunit/phpunit": "^11.0",
+                "spatie/phpunit-snapshot-assertions": "^5.0"
             },
             "type": "library",
             "extra": {
@@ -3094,7 +3239,7 @@
                     }
                 },
                 "branch-alias": {
-                    "dev-master": "8.0-dev"
+                    "dev-master": "11.0-dev"
                 }
             },
             "autoload": {
@@ -3127,7 +3272,7 @@
             ],
             "support": {
                 "issues": "https://github.com/nWidart/laravel-modules/issues",
-                "source": "https://github.com/nWidart/laravel-modules/tree/8.6.0"
+                "source": "https://github.com/nWidart/laravel-modules/tree/v11.0.11"
             },
             "funding": [
                 {
@@ -3139,7 +3284,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-02-02T15:32:19+00:00"
+            "time": "2024-06-16T16:26:29+00:00"
         },
         {
             "name": "opis/closure",
@@ -7115,6 +7260,62 @@
                 "source": "https://github.com/webmozarts/assert/tree/1.11.0"
             },
             "time": "2022-06-03T18:03:27+00:00"
+        },
+        {
+            "name": "wikimedia/composer-merge-plugin",
+            "version": "v2.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/wikimedia/composer-merge-plugin.git",
+                "reference": "a03d426c8e9fb2c9c569d9deeb31a083292788bc"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/wikimedia/composer-merge-plugin/zipball/a03d426c8e9fb2c9c569d9deeb31a083292788bc",
+                "reference": "a03d426c8e9fb2c9c569d9deeb31a083292788bc",
+                "shasum": ""
+            },
+            "require": {
+                "composer-plugin-api": "^1.1||^2.0",
+                "php": ">=7.2.0"
+            },
+            "require-dev": {
+                "composer/composer": "^1.1||^2.0",
+                "ext-json": "*",
+                "mediawiki/mediawiki-phan-config": "0.11.1",
+                "php-parallel-lint/php-parallel-lint": "~1.3.1",
+                "phpspec/prophecy": "~1.15.0",
+                "phpunit/phpunit": "^8.5||^9.0",
+                "squizlabs/php_codesniffer": "~3.7.1"
+            },
+            "type": "composer-plugin",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.x-dev"
+                },
+                "class": "Wikimedia\\Composer\\Merge\\V2\\MergePlugin"
+            },
+            "autoload": {
+                "psr-4": {
+                    "Wikimedia\\Composer\\Merge\\V2\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Bryan Davis",
+                    "email": "bd808@wikimedia.org"
+                }
+            ],
+            "description": "Composer plugin to merge multiple composer.json files",
+            "support": {
+                "issues": "https://github.com/wikimedia/composer-merge-plugin/issues",
+                "source": "https://github.com/wikimedia/composer-merge-plugin/tree/v2.1.0"
+            },
+            "time": "2023-04-15T19:07:00+00:00"
         }
     ],
     "packages-dev": [
@@ -9588,7 +9789,7 @@
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
-        "php": "^7.3|^8.0"
+        "php": "^8.1.0"
     },
     "platform-dev": [],
     "plugin-api-version": "2.2.0"

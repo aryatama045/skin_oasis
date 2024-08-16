@@ -1,3 +1,6 @@
 {
-    "Vendor": false
+    "Vendor" :false,
+    "Chat": true,
+    "Support": true,
+    "PaymentGateway": true
 }

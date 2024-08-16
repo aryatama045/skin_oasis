@@ -8,8 +8,9 @@
     ],
     "license": "MIT",
     "require": {
-        "php": "^7.3|^8.0",
+        "php": "^8.1.0",
         "anandsiddharth/laravel-paytm-wallet": "^2.0",
+        "apility/laravel-fcm": "^1.5",
         "dymantic/laravel-instagram-feed": "^2.6",
         "fruitcake/laravel-cors": "^2.0",
         "guzzlehttp/guzzle": "^7.0.1",
@@ -23,7 +24,7 @@
         "laravel/tinker": "^2.5",
         "laravel/ui": "^3.4",
         "niklasravnsborg/laravel-pdf": "^4.1",
-        "nwidart/laravel-modules": "^8.3",
+        "nwidart/laravel-modules": "^11.0",
         "paypal/paypal-checkout-sdk": "^1.0",
         "razorpay/razorpay": "^2.8",
         "spatie/laravel-permission": "^5.7",
@@ -77,7 +78,10 @@
     "config": {
         "optimize-autoloader": true,
         "preferred-install": "dist",
-        "sort-packages": true
+        "sort-packages": true,
+        "allow-plugins": {
+            "wikimedia/composer-merge-plugin": false
+        }
     },
     "minimum-stability": "dev",
     "prefer-stable": true

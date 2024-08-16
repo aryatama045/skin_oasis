@@ -181,7 +181,7 @@
             $this.flatpickr(options);
         });
 
-        // summernote
+         // summernote
         $(".editor").each(function(el) {
             var $this = $(this);
             var buttons = $this.data("buttons");

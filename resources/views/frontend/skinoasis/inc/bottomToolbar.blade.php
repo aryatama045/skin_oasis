@@ -7,7 +7,7 @@
             </span>
         </a>
         <div class="gshop-header-search dropdown d-table-cell mobile-toolbar-item">
-            <button class="header-icon" type="button" data-bs-toggle="dropdown">
+            <button class="header-icon" type="button" data-toggle="dropdown">
                 <span class="mobile-toolbar-icon">
                     <svg width="18" height="23" viewBox="0 0 22 23" fill="none"
                         xmlns="http://www.w3.org/2000/svg">

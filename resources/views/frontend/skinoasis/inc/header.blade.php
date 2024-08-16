@@ -1,17 +1,20 @@
 <!-- Header -->
 <header class="header
-        
+
     <?php $url1 = Request::segment(1); ?>
 
     <?php if($url1 != true){ ?>
         @if(Route::current()->getName() == 'home' || Route::current()->getName() == 'home.pages.aboutUs')
             header-11
+        @else
         @endif
     <?php } else{ ?>
-        @if(!empty(Route::current()->getName() == 'halloBeauty.index' || Route::current()->getName() == 'halloBeauty.listdokter' || Route::current()->getName() == 'halloBeauty.listpaket' ))
-            @if(Route::current()->getName() == 'halloBeauty.index' || Route::current()->getName() == 'halloBeauty.listdokter' || Route::current()->getName() == 'halloBeauty.listpaket' )
+        @if($url1 == 'halloBeauty.index' || $url1 == 'halloBeauty.listdokter' || $url1 == 'halloBeauty.listpaket' )
+            @if($url1 == 'halloBeauty.index' || $url1 == 'halloBeauty.listdokter' || $url1 == 'halloBeauty.listpaket' )
                 header-hallo-beauty
+            @else
             @endif
+        @else
         @endif
     <?php } ?>
     ">
@@ -19,12 +22,14 @@
         <div class="container">
             <div class="header-center">
                 <a href="{{ route('home') }}" class="logo">
-                    @if(!empty(Route::current()->getName()))
-                        @if(Route::current()->getName() == 'home')
+                    @if($url1)
+                        @if($url1 == 'home')
                             <img src="{{ staticAsset('frontend/skinoasis/assets/images/logo.png') }}" alt="SKINOASIS Logo" width="250" height="25">
                         @else
                             <img src="{{ staticAsset('frontend/skinoasis/assets/images/logo-black.png') }}" alt="SKINOASIS Logo" width="250" height="25">
                         @endif
+                    @else
+
                     @endif
                 </a>
             </div><!-- End .header-center -->
