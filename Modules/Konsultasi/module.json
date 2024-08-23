@@ -1,0 +1,13 @@
+{
+    "name": "Konsultasi",
+    "alias": "konsultasi",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\Konsultasi\\Providers\\KonsultasiServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}

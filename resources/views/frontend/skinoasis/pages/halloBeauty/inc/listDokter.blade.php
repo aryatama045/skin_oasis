@@ -85,6 +85,10 @@
                         </div>
 
                         <div class="card-content text-center">
+
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                                Add Employee
+                            </button><br>
                             <a href="" class="btn btn-outline-yellow btn-rounded btn-sm ls-1px text-uppercase mt-4 w-75">
                                 {{ localize('Konsultasi Online') }}</a> <br>
                             <a href="{{ route('halloBeauty.dokter', $nmd) }}" class="btn btn-outline-yellow btn-rounded btn-sm ls-1px text-uppercase mt-4 w-75">
@@ -106,3 +110,51 @@
         </div>
     </div>
 </div>
+
+{{-- model start here  --}}
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Add Employee Detail</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <form action="" method="POST">
+                {{ csrf_field() }}
+            <div class="modal-body">
+                
+                    <div class="form-group">
+                    <label>First Name</label>
+                    <input type="text" name="fname" class="form-control" placeholder="Enter first name">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Last Name</label>
+                        <input type="text" name="lname" class="form-control" placeholder="Enter last name">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="text" name="email" class="form-control" placeholder="Enter email">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Address</label>
+                        <input type="text" name="address" class="form-control" placeholder="Enter address">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Mobile</label>
+                        <input type="text" name="mobile" class="form-control" placeholder="Enter mobile">
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Submit</button>
+
+            </div>
+        </form>
+    </div>
+    </div>
+</div>
+{{-- model end here  --}}
